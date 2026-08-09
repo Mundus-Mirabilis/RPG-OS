@@ -14,6 +14,5 @@ var searchData=
   ['preparefood_11',['prepareFood',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a8d236e0c9d26d9eef784a7916154ddcc',1,'rpg_os::generated::tde5e::Character']]],
   ['processid_12',['processId',['../namespacerpg__os_1_1detail.html#a858c36e0d13cf3dd47daaceafb63b2e4',1,'rpg_os::detail']]],
   ['proficiencybonus_13',['proficiencyBonus',['../classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#af89bdf6c914b9e0e7a52b2899a0953a8',1,'rpg_os::generated::dnd5e::Character']]],
-  ['project_14',['Project',['../md_AGENTS.html#autotoc_md11',1,'']]],
-  ['project_20layout_15',['project layout',['../index.html#autotoc_md7',1,'Project layout'],['../md_AGENTS.html#autotoc_md14',1,'Project layout']]]
+  ['project_20layout_14',['Project layout',['../index.html#autotoc_md7',1,'']]]
 ];

@@ -32,18 +32,7 @@ var NAVTREE =
     [ "Ranges and variance (weakest … strongest)", "index.html#autotoc_md6", null ],
     [ "Project layout", "index.html#autotoc_md7", null ],
     [ "Combat simulation & Monte Carlo ELO ranking", "index.html#autotoc_md8", null ],
-    [ "Code style & workflow", "index.html#autotoc_md9", null ],
     [ "Examples", "md_examples_2README.html", null ],
-    [ "AGENTS.md", "md_AGENTS.html", [
-      [ "Project", "md_AGENTS.html#autotoc_md11", null ],
-      [ "Ground rules", "md_AGENTS.html#autotoc_md12", null ],
-      [ "Build & test", "md_AGENTS.html#autotoc_md13", null ],
-      [ "Project layout", "md_AGENTS.html#autotoc_md14", null ],
-      [ "Shared template core", "md_AGENTS.html#autotoc_md15", null ],
-      [ "Ruleset JSON conventions", "md_AGENTS.html#autotoc_md16", null ],
-      [ "Code conventions", "md_AGENTS.html#autotoc_md17", null ],
-      [ "Definition of done", "md_AGENTS.html#autotoc_md18", null ]
-    ] ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -82,8 +71,8 @@ var NAVTREEINDEX =
 "annotated.html",
 "classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#a370eb83e5314f950892337814f439118",
 "classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a8d097e9055d6726563a86d80cf5ca28e",
-"math_8hpp.html#aff1d290ebfeafea29783c813e35faafb",
-"structrpg__os_1_1FightOutcome.html"
+"math_8hpp_source.html",
+"structrpg__os_1_1Modifier.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

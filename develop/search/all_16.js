@@ -8,6 +8,5 @@ var searchData=
   ['winnerindex_5',['winnerIndex',['../structrpg__os_1_1FightOutcome.html#a4a3e8f408ed28dd9c542715ea0d87ce4',1,'rpg_os::FightOutcome']]],
   ['wisdom_6',['wisdom',['../classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#a17396ce8a0f8f6c40ebd58249caf2f00',1,'rpg_os::generated::dnd5e::Character']]],
   ['wisdommodifier_7',['wisdomModifier',['../classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#aa6f6a95543809cc9c69b947e7f16b82a',1,'rpg_os::generated::dnd5e::Character']]],
-  ['woodworking_8',['woodworking',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a1128596aa3f92c508dc88b3f987fc6f1',1,'rpg_os::generated::tde5e::Character']]],
-  ['workflow_9',['Code style &amp; workflow',['../index.html#autotoc_md9',1,'']]]
+  ['woodworking_8',['woodworking',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a1128596aa3f92c508dc88b3f987fc6f1',1,'rpg_os::generated::tde5e::Character']]]
 ];

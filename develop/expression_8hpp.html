@@ -5,6 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- Browser tab icon — copied into the output via HTML_EXTRA_FILES (favicon.png). -->
+<link rel="icon" type="image/png" href="favicon.png"/>
 <!-- BEGIN opengraph metadata -->
 <meta property="og:title" content="RPG-OS" />
 <meta property="og:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
@@ -51,6 +53,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="mundus-mirabilis_512.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">RPG-OS
    &#160;<span id="projectnumber">0.1.0</span>
@@ -164,7 +167,7 @@ Namespaces</h2></td></tr>
 <p>Parses the restricted formula grammar used by ruleset JSON derived stats, check conditions, and event conditions, and evaluates it against an <code>EvalContext</code> that resolves identifiers (bare ids, <code>actor</code>.*, <code>target</code>.*, <code>env</code>.*, <code>event</code>.*, <code>action</code>.*).</p>
 <p>This is the <em>universal-only</em> runtime evaluator: specific mode compiles the same grammar to C++ instead, so generated code never includes this header.</p>
 <dl class="section user"><dt>Why a restricted grammar?</dt><dd>Derived-stat formulas must be translatable to C++ by the code generator (see <code>codegen/rpg_os_codegen.py</code>). Restricting the grammar to a small, well-defined set — arithmetic, comparisons, boolean operators, and the <code>min/<code>max/<code>floor/<code>ceil/<code>round/<code>clamp</code> functions</code> —</code> is</code> what</code> makes</code> that translation possible and safe. It also keeps rulesets predictable: no loops, no side effects, no arbitrary function calls in a stat formula.</dd></dl>
-<p>Grammar (see <a class="el" href="AGENTS_8md.html">AGENTS.md</a> "Ruleset JSON conventions"): numbers, identifiers (dotted allowed), + - * / % ^, comparisons, &amp;&amp; || !, functions min max floor ceil round clamp, parentheses, commas. </p>
+<p>Grammar (see <code>rulesets/ruleset.schema.json</code> for the ruleset format): numbers, identifiers (dotted allowed), + - * / % ^, comparisons, &amp;&amp; || !, functions min max floor ceil round clamp, parentheses, commas. </p>
 
 <p class="definition">Definition in file <a class="el" href="expression_8hpp_source.html">expression.hpp</a>.</p>
 </div></div><!-- contents -->

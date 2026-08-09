@@ -23,7 +23,7 @@ var searchData=
   ['resolvehitpointpool_20',['resolveHitPointPool',['../namespacerpg__os.html#af34d585416afebd7167fec0777cf8390',1,'rpg_os']]],
   ['resolverollunderd20_21',['resolveRollUnderD20',['../namespacerpg__os.html#a138152104cbde2e9655fb564a8dd405c',1,'rpg_os']]],
   ['resolvetriplerollunderpool_22',['resolveTripleRollUnderPool',['../namespacerpg__os.html#a67cec6e58ce0e92bc143ec58e6a5fb9f',1,'rpg_os']]],
-  ['resource_23',['resource',['../structrpg__os_1_1EventActionDef.html#ac71af0ca343d7c1527418a634343788d',1,'rpg_os::EventActionDef::resource'],['../classrpg__os_1_1DynamicEntity.html#adcfda1f77bef92daa69a53c3f6f6eb61',1,'rpg_os::DynamicEntity::resource()']]],
+  ['resource_23',['resource',['../classrpg__os_1_1DynamicEntity.html#adcfda1f77bef92daa69a53c3f6f6eb61',1,'rpg_os::DynamicEntity::resource()'],['../structrpg__os_1_1EventActionDef.html#ac71af0ca343d7c1527418a634343788d',1,'rpg_os::EventActionDef::resource']]],
   ['resourcepool_24',['ResourcePool',['../structrpg__os_1_1ResourcePool.html',1,'rpg_os']]],
   ['resourcepooldef_25',['ResourcePoolDef',['../structrpg__os_1_1ResourcePoolDef.html',1,'rpg_os']]],
   ['resourcepools_26',['resourcePools',['../classrpg__os_1_1Ruleset.html#ac6d7b06fb3418d0fef60e9caa9fe1fcb',1,'rpg_os::Ruleset']]],
@@ -45,12 +45,10 @@ var searchData=
   ['rpg_5fos_3a_3amath_42',['math',['../namespacerpg__os_1_1math.html',1,'rpg_os']]],
   ['rpg_5fos_3a_3arandomnumbergenerator_43',['RandomNumberGenerator',['../conceptrpg__os_1_1RandomNumberGenerator.html',1,'rpg_os']]],
   ['rpg_5fos_3a_3astatprovider_44',['StatProvider',['../conceptrpg__os_1_1StatProvider.html',1,'rpg_os']]],
-  ['rules_45',['Ground rules',['../md_AGENTS.html#autotoc_md12',1,'']]],
-  ['ruleset_46',['ruleset',['../classrpg__os_1_1RulesetEngine.html#a808ef8aa9e054db1979e3e6acb48e07c',1,'rpg_os::RulesetEngine::ruleset()'],['../classrpg__os_1_1Ruleset.html',1,'rpg_os::Ruleset']]],
-  ['ruleset_20format_20licence_20and_20schema_47',['Ruleset format, licence, and schema',['../index.html#autotoc_md5',1,'']]],
-  ['ruleset_20json_20conventions_48',['Ruleset JSON conventions',['../md_AGENTS.html#autotoc_md16',1,'']]],
-  ['ruleset_5floader_2ehpp_49',['ruleset_loader.hpp',['../ruleset__loader_8hpp.html',1,'']]],
-  ['rulesetengine_50',['RulesetEngine',['../classrpg__os_1_1RulesetEngine.html',1,'rpg_os']]],
-  ['rulesetloader_51',['RulesetLoader',['../classrpg__os_1_1RulesetLoader.html',1,'rpg_os']]],
-  ['runfight_52',['runFight',['../namespacerpg__os.html#a4a210e0aabb993a0723ab42ee2760ed2',1,'rpg_os']]]
+  ['ruleset_45',['ruleset',['../classrpg__os_1_1RulesetEngine.html#a808ef8aa9e054db1979e3e6acb48e07c',1,'rpg_os::RulesetEngine::ruleset()'],['../classrpg__os_1_1Ruleset.html',1,'rpg_os::Ruleset']]],
+  ['ruleset_20format_20licence_20and_20schema_46',['Ruleset format, licence, and schema',['../index.html#autotoc_md5',1,'']]],
+  ['ruleset_5floader_2ehpp_47',['ruleset_loader.hpp',['../ruleset__loader_8hpp.html',1,'']]],
+  ['rulesetengine_48',['RulesetEngine',['../classrpg__os_1_1RulesetEngine.html',1,'rpg_os']]],
+  ['rulesetloader_49',['RulesetLoader',['../classrpg__os_1_1RulesetLoader.html',1,'rpg_os']]],
+  ['runfight_50',['runFight',['../namespacerpg__os.html#a4a210e0aabb993a0723ab42ee2760ed2',1,'rpg_os']]]
 ];
