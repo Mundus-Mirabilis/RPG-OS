@@ -1,0 +1,44 @@
+/*!
+ * RPG-OS customisations on top of the Doxygen Awesome theme.
+ *
+ * Kept deliberately small: everything structural comes from
+ * doxygen-awesome.css; this file only tunes branding (the GitHub corner) and
+ * a couple of visual details so the docs feel like part of the RPG-OS
+ * repository rather than a stock Doxygen export.
+ */
+
+/* --- GitHub corner (links back to the RPG-OS repository) --- */
+.github-corner svg {
+    fill: var(--primary-light-color);
+    color: var(--page-background-color);
+    width: 72px;
+    height: 72px;
+}
+
+@media screen and (max-width: 767px) {
+    .github-corner svg {
+        width: 50px;
+        height: 50px;
+    }
+    #projectnumber {
+        margin-right: 22px;
+    }
+}
+
+/* Make the title area's project brief a little less prominent than the
+   project name, so the header reads as a single line. */
+#projectbrief {
+    color: var(--page-foreground-color);
+    font-size: 0.8em;
+}
+
+/* --- Optional hero screenshot on the front page (used by main page markdown) --- */
+.title_screenshot {
+    filter: drop-shadow(0px 3px 10px rgba(0, 0, 0, 0.22));
+    max-width: 500px;
+    margin: var(--spacing-large) 0;
+}
+
+.title_screenshot .caption {
+    display: none;
+}

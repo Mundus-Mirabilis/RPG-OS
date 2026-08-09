@@ -1,0 +1,59 @@
+<map id="math.hpp" name="math.hpp">
+<area shape="rect" id="Node000001" title="Shared math helpers for formula evaluation and stat arithmetic." alt="" coords="686,5,770,31"/>
+<area shape="rect" id="Node000002" href="$dnd5e__srd__static_8hpp.html" title=" " alt="" coords="195,79,355,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="673,31,348,81,347,76,672,25"/>
+<area shape="rect" id="Node000005" href="$engine_8hpp.html" title="RulesetEngine facade (universal mode)." alt="" coords="513,372,607,397"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="760,37,787,59,815,88,837,123,843,143,845,163,845,240,838,276,819,306,791,330,757,348,718,362,679,372,608,383,608,378,678,367,717,357,754,343,788,325,815,302,833,274,840,239,840,163,838,144,832,126,811,92,784,63,756,41"/>
+<area shape="rect" id="Node000013" href="$entity_8hpp.html" title="Shared entity value semantics." alt="" coords="685,79,771,104"/>
+<area shape="poly" id="edge14_Node000001_Node000013" title=" " alt="" coords="731,44,731,79,725,79,725,44"/>
+<area shape="rect" id="Node000017" href="$expression_8hpp.html" title="AST formula evaluator (universal / dynamic mode)." alt="" coords="447,79,569,104"/>
+<area shape="poly" id="edge20_Node000001_Node000017" title=" " alt="" coords="680,37,544,81,543,76,679,32"/>
+<area shape="rect" id="Node000021" href="$modifier_8hpp.html" title="Modifier stack pipeline." alt="" coords="881,79,983,104"/>
+<area shape="poly" id="edge28_Node000001_Node000021" title=" " alt="" coords="774,33,900,76,898,81,773,38"/>
+<area shape="rect" id="Node000023" href="$tde5e__core__static_8hpp.html" title=" " alt="" coords="5,79,171,104"/>
+<area shape="poly" id="edge30_Node000001_Node000023" title=" " alt="" coords="672,28,183,81,171,83,171,77,182,76,672,23"/>
+<area shape="rect" id="Node000024" href="$test__math_8cpp.html" title="Tests for the shared math helpers (rpg_os::math)." alt="" coords="1008,79,1123,104"/>
+<area shape="poly" id="edge33_Node000001_Node000024" title=" " alt="" coords="784,28,1012,76,1010,81,783,34"/>
+<area shape="rect" id="Node000003" href="$specific__mode_2main_8cpp.html" title="Specific mode demo: use the code&#45;generated, strongly typed headers." alt="" coords="85,152,168,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="240,112,152,154,150,149,238,107"/>
+<area shape="rect" id="Node000004" href="$test__codegen__output_8cpp.html" title="Tests for the generated &quot;specific mode&quot; headers in generated/." alt="" coords="58,445,243,471"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="258,116,233,153,214,194,209,212,208,237,208,313,203,353,190,391,161,447,156,444,185,389,197,352,203,312,203,237,204,211,209,192,228,151,253,113"/>
+<area shape="poly" id="edge10_Node000005_Node000004" title=" " alt="" coords="500,399,217,448,216,443,499,394"/>
+<area shape="rect" id="Node000006" href="$combat_8hpp.html" title="Combat simulation helpers (universal mode)." alt="" coords="268,445,367,471"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="509,404,357,448,356,443,507,399"/>
+<area shape="rect" id="Node000007" href="$fight_2main_8cpp.html" title="Fight&#45;to&#45;the&#45;end demo (universal mode)." alt="" coords="672,519,755,544"/>
+<area shape="poly" id="edge8_Node000005_Node000007" title=" " alt="" coords="621,383,710,386,810,395,899,413,934,426,957,443,965,456,969,468,967,478,961,488,940,503,908,514,830,527,755,532,755,526,829,521,907,508,937,498,957,484,962,477,963,468,960,458,953,447,931,431,898,418,809,400,709,391,621,389"/>
+<area shape="rect" id="Node000009" href="$universal__mode_2main_8cpp.html" title="Universal mode demo: load any ruleset JSON at runtime and resolve rules generically." alt="" coords="391,445,473,471"/>
+<area shape="poly" id="edge9_Node000005_Node000009" title=" " alt="" coords="529,406,454,447,452,443,526,402"/>
+<area shape="rect" id="Node000010" href="$test__engine_8cpp.html" title="Integration tests for the universal engine facade (rpg_os::RulesetEngine)." alt="" coords="497,445,623,471"/>
+<area shape="poly" id="edge11_Node000005_Node000010" title=" " alt="" coords="563,411,563,445,557,445,557,411"/>
+<area shape="rect" id="Node000011" href="$test__rulesets_8cpp.html" title="Tests that load the real shipped rulesets (the rulesets/ JSON files)." alt="" coords="647,445,780,471"/>
+<area shape="poly" id="edge12_Node000005_Node000011" title=" " alt="" coords="598,401,689,443,687,448,596,405"/>
+<area shape="rect" id="Node000012" href="$test__variance_8cpp.html" title="Tests for variance / range selection (rpg_os::Variance, rpg_os::readVariantValue)." alt="" coords="805,445,942,471"/>
+<area shape="poly" id="edge13_Node000005_Node000012" title=" " alt="" coords="621,397,823,443,822,448,620,402"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="381,468,672,520,671,525,380,474"/>
+<area shape="rect" id="Node000008" href="$test__combat_8cpp.html" title="Tests for the combat simulation helpers (include/rpg_os/universal/combat.hpp)." alt="" coords="252,519,383,544"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="320,484,320,519,315,519,315,484"/>
+<area shape="rect" id="Node000014" href="$dynamic__entity_8hpp.html" title="Dynamic entity (universal mode)." alt="" coords="541,225,691,251"/>
+<area shape="poly" id="edge15_Node000013_Node000014" title=" " alt="" coords="752,113,771,144,775,162,769,179,753,196,734,210,692,228,690,223,732,205,750,192,764,176,769,161,766,146,747,116"/>
+<area shape="rect" id="Node000016" href="$test__entity_8cpp.html" title="Tests for the shared entity helpers (rpg_os::ResourcePool)." alt="" coords="637,152,755,177"/>
+<area shape="poly" id="edge19_Node000013_Node000016" title=" " alt="" coords="720,118,704,153,699,151,715,116"/>
+<area shape="poly" id="edge18_Node000014_Node000005" title=" " alt="" coords="612,265,593,325,569,373,564,371,588,323,607,264"/>
+<area shape="rect" id="Node000015" href="$check__resolver_8hpp.html" title="Check resolver (universal mode)." alt="" coords="432,299,579,324"/>
+<area shape="poly" id="edge16_Node000014_Node000015" title=" " alt="" coords="588,260,525,301,522,296,585,256"/>
+<area shape="poly" id="edge17_Node000015_Node000005" title=" " alt="" coords="525,333,553,370,549,374,521,337"/>
+<area shape="poly" id="edge21_Node000017_Node000014" title=" " alt="" coords="481,114,465,128,452,144,447,160,452,176,469,195,492,209,542,227,540,232,489,214,466,199,447,179,442,160,448,142,461,125,477,110"/>
+<area shape="rect" id="Node000018" href="$ruleset__loader_8hpp.html" title="Ruleset loading and validation (universal / dynamic mode)." alt="" coords="243,152,386,177"/>
+<area shape="poly" id="edge22_Node000017_Node000018" title=" " alt="" coords="465,111,347,154,345,149,463,106"/>
+<area shape="rect" id="Node000020" href="$test__expression_8cpp.html" title="Tests for the universal AST formula evaluator (rpg_os::Expression)." alt="" coords="461,152,613,177"/>
+<area shape="poly" id="edge27_Node000017_Node000020" title=" " alt="" coords="521,116,535,151,530,153,516,118"/>
+<area shape="poly" id="edge25_Node000018_Node000005" title=" " alt="" coords="298,189,281,219,279,235,284,249,305,277,331,301,360,321,392,337,456,361,513,374,512,379,455,366,390,342,357,326,327,305,301,281,279,252,274,235,276,218,293,187"/>
+<area shape="poly" id="edge24_Node000018_Node000014" title=" " alt="" coords="377,178,568,223,567,228,376,183"/>
+<area shape="poly" id="edge23_Node000018_Node000015" title=" " alt="" coords="400,178,443,196,481,223,493,242,501,262,507,298,502,299,496,264,488,244,477,227,440,200,398,183"/>
+<area shape="rect" id="Node000019" href="$test__ruleset__loader_8cpp.html" title="Tests for the ruleset loader and model (rpg_os::RulesetLoader, rpg_os::Ruleset)." alt="" coords="293,225,467,251"/>
+<area shape="poly" id="edge26_Node000018_Node000019" title=" " alt="" coords="337,186,371,223,367,227,333,189"/>
+<area shape="rect" id="Node000022" href="$test__modifier_8cpp.html" title="Tests for the shared modifier pipeline (rpg_os::applyModifierPipeline)." alt="" coords="881,152,1015,177"/>
+<area shape="poly" id="edge29_Node000021_Node000022" title=" " alt="" coords="940,117,948,151,943,152,935,118"/>
+<area shape="poly" id="edge31_Node000023_Node000003" title=" " alt="" coords="103,115,123,151,118,153,99,118"/>
+<area shape="poly" id="edge32_Node000023_Node000004" title=" " alt="" coords="80,118,61,172,54,204,51,237,51,313,53,334,60,354,83,391,111,422,136,443,133,447,107,425,78,394,55,356,48,335,45,313,45,237,48,203,55,170,74,116"/>
+</map>
