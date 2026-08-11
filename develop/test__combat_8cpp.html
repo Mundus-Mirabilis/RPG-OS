@@ -130,6 +130,8 @@ $(document).ready(function(){initNavTree('test__combat_8cpp.html',''); initResiz
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="test__util_8hpp_source.html">test_util.hpp</a>&quot;</code><br />
 <code>#include &lt;doctest/doctest.h&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;iterator&gt;</code><br />
 <code>#include &lt;<a class="el" href="combat_8hpp_source.html">rpg_os/universal/combat.hpp</a>&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -148,6 +150,8 @@ Functions</h2></td></tr>
 <tr class="separator:a2951d941c1fcf8890ab386d05b963ad8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0755e6a7379f062f99c42d7ecc39086" id="r_ac0755e6a7379f062f99c42d7ecc39086"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__combat_8cpp.html#ac0755e6a7379f062f99c42d7ecc39086">TEST_CASE</a> (&quot;combat: archetype spec uses derived attack/parry and a weapon&quot;)</td></tr>
 <tr class="separator:ac0755e6a7379f062f99c42d7ecc39086"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08b3b3683c19d94c3fb0b1805bc44ac0" id="r_a08b3b3683c19d94c3fb0b1805bc44ac0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__combat_8cpp.html#a08b3b3683c19d94c3fb0b1805bc44ac0">TEST_CASE</a> (&quot;combat: a bestiary entry with attacks uses its best attack&quot;)</td></tr>
+<tr class="separator:a08b3b3683c19d94c3fb0b1805bc44ac0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad929a60ddcd2a7ccd893e68bd91c74e1" id="r_ad929a60ddcd2a7ccd893e68bd91c74e1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__combat_8cpp.html#ad929a60ddcd2a7ccd893e68bd91c74e1">TEST_CASE</a> (&quot;combat: a bestiary entry without attacks falls back to derived values&quot;)</td></tr>
 <tr class="separator:ad929a60ddcd2a7ccd893e68bd91c74e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d5a76b144c7938d30f5ac3ae2ed85cc" id="r_a7d5a76b144c7938d30f5ac3ae2ed85cc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__combat_8cpp.html#a7d5a76b144c7938d30f5ac3ae2ed85cc">TEST_CASE</a> (&quot;combat: bestiary armour rating is applied through the damage pipeline&quot;)</td></tr>
@@ -158,6 +162,8 @@ Functions</h2></td></tr>
 <tr class="separator:acd690909b26e1d837ef397961f519a35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a341e4588c7e0747dc90ad7e0e0ec83c6" id="r_a341e4588c7e0747dc90ad7e0e0ec83c6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__combat_8cpp.html#a341e4588c7e0747dc90ad7e0e0ec83c6">TEST_CASE</a> (&quot;combat: unknown combatant id is rejected&quot;)</td></tr>
 <tr class="separator:a341e4588c7e0747dc90ad7e0e0ec83c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36a1b5d065ffe96e86237caa2fb06f98" id="r_a36a1b5d065ffe96e86237caa2fb06f98"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__combat_8cpp.html#a36a1b5d065ffe96e86237caa2fb06f98">TEST_CASE</a> (&quot;combat: brp_ugc opposed percentile combat runs to the end&quot;)</td></tr>
+<tr class="separator:a36a1b5d065ffe96e86237caa2fb06f98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Tests for the combat simulation helpers (<code><a class="el" href="combat_8hpp.html" title="Combat simulation helpers (universal mode).">include/rpg_os/universal/combat.hpp</a></code>). </p>
@@ -165,8 +171,30 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition in file <a class="el" href="test__combat_8cpp_source.html">test_combat.cpp</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a id="a08b3b3683c19d94c3fb0b1805bc44ac0" name="a08b3b3683c19d94c3fb0b1805bc44ac0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08b3b3683c19d94c3fb0b1805bc44ac0">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[1/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;combat: a bestiary entry with attacks uses its best attack&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="test__combat_8cpp_source.html#l00067">67</a> of file <a class="el" href="test__combat_8cpp_source.html">test_combat.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="combat_8hpp_source.html#l00050">rpg_os::CombatantSpec::attackValue</a>, <a class="el" href="combat_8hpp_source.html#l00053">rpg_os::CombatantSpec::damageExpression</a>, <a class="el" href="combat_8hpp_source.html#l00051">rpg_os::CombatantSpec::defenseValue</a>, <a class="el" href="combat_8hpp_source.html#l00049">rpg_os::CombatantSpec::isArchetype</a>, <a class="el" href="engine_8hpp_source.html#l00068">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, and <a class="el" href="combat_8hpp_source.html#l00116">rpg_os::makeCombatantSpec()</a>.</p>
+
+</div>
+</div>
 <a id="ad929a60ddcd2a7ccd893e68bd91c74e1" name="ad929a60ddcd2a7ccd893e68bd91c74e1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad929a60ddcd2a7ccd893e68bd91c74e1">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[1/8]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad929a60ddcd2a7ccd893e68bd91c74e1">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[2/10]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -181,14 +209,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__combat_8cpp_source.html#l00065">65</a> of file <a class="el" href="test__combat_8cpp_source.html">test_combat.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__combat_8cpp_source.html#l00078">78</a> of file <a class="el" href="test__combat_8cpp_source.html">test_combat.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="combat_8hpp_source.html#l00050">rpg_os::CombatantSpec::attackValue</a>, <a class="el" href="combat_8hpp_source.html#l00053">rpg_os::CombatantSpec::damageExpression</a>, <a class="el" href="combat_8hpp_source.html#l00051">rpg_os::CombatantSpec::defenseValue</a>, <a class="el" href="combat_8hpp_source.html#l00049">rpg_os::CombatantSpec::isArchetype</a>, <a class="el" href="engine_8hpp_source.html#l00068">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, and <a class="el" href="combat_8hpp_source.html#l00115">rpg_os::makeCombatantSpec()</a>.</p>
+<p class="reference">References <a class="el" href="combat_8hpp_source.html#l00050">rpg_os::CombatantSpec::attackValue</a>, <a class="el" href="combat_8hpp_source.html#l00053">rpg_os::CombatantSpec::damageExpression</a>, <a class="el" href="combat_8hpp_source.html#l00051">rpg_os::CombatantSpec::defenseValue</a>, <a class="el" href="combat_8hpp_source.html#l00049">rpg_os::CombatantSpec::isArchetype</a>, <a class="el" href="engine_8hpp_source.html#l00053">rpg_os::RulesetEngine::loadRulesetFromJson()</a>, and <a class="el" href="combat_8hpp_source.html#l00116">rpg_os::makeCombatantSpec()</a>.</p>
 
 </div>
 </div>
 <a id="ac0755e6a7379f062f99c42d7ecc39086" name="ac0755e6a7379f062f99c42d7ecc39086"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac0755e6a7379f062f99c42d7ecc39086">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[2/8]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0755e6a7379f062f99c42d7ecc39086">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[3/10]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -203,14 +231,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__combat_8cpp_source.html#l00049">49</a> of file <a class="el" href="test__combat_8cpp_source.html">test_combat.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__combat_8cpp_source.html#l00051">51</a> of file <a class="el" href="test__combat_8cpp_source.html">test_combat.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="combat_8hpp_source.html#l00052">rpg_os::CombatantSpec::armorRating</a>, <a class="el" href="combat_8hpp_source.html#l00050">rpg_os::CombatantSpec::attackValue</a>, <a class="el" href="combat_8hpp_source.html#l00053">rpg_os::CombatantSpec::damageExpression</a>, <a class="el" href="combat_8hpp_source.html#l00051">rpg_os::CombatantSpec::defenseValue</a>, <a class="el" href="combat_8hpp_source.html#l00049">rpg_os::CombatantSpec::isArchetype</a>, <a class="el" href="engine_8hpp_source.html#l00068">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, and <a class="el" href="combat_8hpp_source.html#l00115">rpg_os::makeCombatantSpec()</a>.</p>
+<p class="reference">References <a class="el" href="combat_8hpp_source.html#l00052">rpg_os::CombatantSpec::armorRating</a>, <a class="el" href="combat_8hpp_source.html#l00050">rpg_os::CombatantSpec::attackValue</a>, <a class="el" href="combat_8hpp_source.html#l00053">rpg_os::CombatantSpec::damageExpression</a>, <a class="el" href="combat_8hpp_source.html#l00051">rpg_os::CombatantSpec::defenseValue</a>, <a class="el" href="combat_8hpp_source.html#l00049">rpg_os::CombatantSpec::isArchetype</a>, <a class="el" href="engine_8hpp_source.html#l00068">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, and <a class="el" href="combat_8hpp_source.html#l00116">rpg_os::makeCombatantSpec()</a>.</p>
 
 </div>
 </div>
 <a id="a30aacd696176d4ff598861ed5e7d6a74" name="a30aacd696176d4ff598861ed5e7d6a74"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a30aacd696176d4ff598861ed5e7d6a74">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[3/8]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a30aacd696176d4ff598861ed5e7d6a74">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[4/10]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -225,14 +253,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__combat_8cpp_source.html#l00029">29</a> of file <a class="el" href="test__combat_8cpp_source.html">test_combat.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__combat_8cpp_source.html#l00031">31</a> of file <a class="el" href="test__combat_8cpp_source.html">test_combat.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00068">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="combat_8hpp_source.html#l00074">rpg_os::resolveAttackCheckType()</a>, <a class="el" href="combat_8hpp_source.html#l00096">rpg_os::resolveHitPointPool()</a>, and <a class="el" href="engine_8hpp_source.html#l00277">rpg_os::RulesetEngine::ruleset()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00068">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="combat_8hpp_source.html#l00074">rpg_os::resolveAttackCheckType()</a>, <a class="el" href="combat_8hpp_source.html#l00097">rpg_os::resolveHitPointPool()</a>, and <a class="el" href="engine_8hpp_source.html#l00277">rpg_os::RulesetEngine::ruleset()</a>.</p>
 
 </div>
 </div>
 <a id="a7d5a76b144c7938d30f5ac3ae2ed85cc" name="a7d5a76b144c7938d30f5ac3ae2ed85cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7d5a76b144c7938d30f5ac3ae2ed85cc">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[4/8]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d5a76b144c7938d30f5ac3ae2ed85cc">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[5/10]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -247,14 +275,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__combat_8cpp_source.html#l00076">76</a> of file <a class="el" href="test__combat_8cpp_source.html">test_combat.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__combat_8cpp_source.html#l00101">101</a> of file <a class="el" href="test__combat_8cpp_source.html">test_combat.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00246">rpg_os::RulesetEngine::applyDamage()</a>, <a class="el" href="combat_8hpp_source.html#l00195">rpg_os::createFighter()</a>, <a class="el" href="engine_8hpp_source.html#l00068">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="combat_8hpp_source.html#l00115">rpg_os::makeCombatantSpec()</a>, and <a class="el" href="engine_8hpp_source.html#l00277">rpg_os::RulesetEngine::ruleset()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00246">rpg_os::RulesetEngine::applyDamage()</a>, <a class="el" href="combat_8hpp_source.html#l00196">rpg_os::createFighter()</a>, <a class="el" href="engine_8hpp_source.html#l00068">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="combat_8hpp_source.html#l00116">rpg_os::makeCombatantSpec()</a>, and <a class="el" href="engine_8hpp_source.html#l00277">rpg_os::RulesetEngine::ruleset()</a>.</p>
 
 </div>
 </div>
 <a id="a2951d941c1fcf8890ab386d05b963ad8" name="a2951d941c1fcf8890ab386d05b963ad8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2951d941c1fcf8890ab386d05b963ad8">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[5/8]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2951d941c1fcf8890ab386d05b963ad8">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[6/10]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -269,14 +297,36 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__combat_8cpp_source.html#l00036">36</a> of file <a class="el" href="test__combat_8cpp_source.html">test_combat.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__combat_8cpp_source.html#l00038">38</a> of file <a class="el" href="test__combat_8cpp_source.html">test_combat.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="combat_8hpp_source.html#l00052">rpg_os::CombatantSpec::armorRating</a>, <a class="el" href="combat_8hpp_source.html#l00050">rpg_os::CombatantSpec::attackValue</a>, <a class="el" href="combat_8hpp_source.html#l00053">rpg_os::CombatantSpec::damageExpression</a>, <a class="el" href="combat_8hpp_source.html#l00051">rpg_os::CombatantSpec::defenseValue</a>, <a class="el" href="combat_8hpp_source.html#l00049">rpg_os::CombatantSpec::isArchetype</a>, <a class="el" href="engine_8hpp_source.html#l00068">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="combat_8hpp_source.html#l00115">rpg_os::makeCombatantSpec()</a>, and <a class="el" href="combat_8hpp_source.html#l00048">rpg_os::CombatantSpec::name</a>.</p>
+<p class="reference">References <a class="el" href="combat_8hpp_source.html#l00052">rpg_os::CombatantSpec::armorRating</a>, <a class="el" href="combat_8hpp_source.html#l00050">rpg_os::CombatantSpec::attackValue</a>, <a class="el" href="combat_8hpp_source.html#l00053">rpg_os::CombatantSpec::damageExpression</a>, <a class="el" href="combat_8hpp_source.html#l00051">rpg_os::CombatantSpec::defenseValue</a>, <a class="el" href="combat_8hpp_source.html#l00049">rpg_os::CombatantSpec::isArchetype</a>, <a class="el" href="engine_8hpp_source.html#l00068">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="combat_8hpp_source.html#l00116">rpg_os::makeCombatantSpec()</a>, and <a class="el" href="combat_8hpp_source.html#l00048">rpg_os::CombatantSpec::name</a>.</p>
+
+</div>
+</div>
+<a id="a36a1b5d065ffe96e86237caa2fb06f98" name="a36a1b5d065ffe96e86237caa2fb06f98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36a1b5d065ffe96e86237caa2fb06f98">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[7/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;combat: brp_ugc opposed percentile combat runs to the end&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="test__combat_8cpp_source.html#l00157">157</a> of file <a class="el" href="test__combat_8cpp_source.html">test_combat.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="combat_8hpp_source.html#l00050">rpg_os::CombatantSpec::attackValue</a>, <a class="el" href="combat_8hpp_source.html#l00051">rpg_os::CombatantSpec::defenseValue</a>, <a class="el" href="combat_8hpp_source.html#l00049">rpg_os::CombatantSpec::isArchetype</a>, <a class="el" href="engine_8hpp_source.html#l00068">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="combat_8hpp_source.html#l00116">rpg_os::makeCombatantSpec()</a>, <a class="el" href="combat_8hpp_source.html#l00074">rpg_os::resolveAttackCheckType()</a>, <a class="el" href="combat_8hpp_source.html#l00097">rpg_os::resolveHitPointPool()</a>, <a class="el" href="engine_8hpp_source.html#l00277">rpg_os::RulesetEngine::ruleset()</a>, <a class="el" href="combat_8hpp_source.html#l00247">rpg_os::runFight()</a>, and <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>.</p>
 
 </div>
 </div>
 <a id="acd690909b26e1d837ef397961f519a35" name="acd690909b26e1d837ef397961f519a35"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acd690909b26e1d837ef397961f519a35">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[6/8]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#acd690909b26e1d837ef397961f519a35">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[8/10]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -291,14 +341,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__combat_8cpp_source.html#l00111">111</a> of file <a class="el" href="test__combat_8cpp_source.html">test_combat.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__combat_8cpp_source.html#l00136">136</a> of file <a class="el" href="test__combat_8cpp_source.html">test_combat.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00068">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="combat_8hpp_source.html#l00115">rpg_os::makeCombatantSpec()</a>, <a class="el" href="combat_8hpp_source.html#l00061">rpg_os::FightOutcome::remainingLp</a>, <a class="el" href="combat_8hpp_source.html#l00059">rpg_os::FightOutcome::rounds</a>, <a class="el" href="combat_8hpp_source.html#l00246">rpg_os::runFight()</a>, and <a class="el" href="combat_8hpp_source.html#l00058">rpg_os::FightOutcome::winnerIndex</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00068">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="combat_8hpp_source.html#l00116">rpg_os::makeCombatantSpec()</a>, <a class="el" href="combat_8hpp_source.html#l00061">rpg_os::FightOutcome::remainingLp</a>, <a class="el" href="combat_8hpp_source.html#l00059">rpg_os::FightOutcome::rounds</a>, <a class="el" href="combat_8hpp_source.html#l00247">rpg_os::runFight()</a>, and <a class="el" href="combat_8hpp_source.html#l00058">rpg_os::FightOutcome::winnerIndex</a>.</p>
 
 </div>
 </div>
 <a id="a5a09ec6321ca75173fa3de659d9fb5f8" name="a5a09ec6321ca75173fa3de659d9fb5f8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5a09ec6321ca75173fa3de659d9fb5f8">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[7/8]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a09ec6321ca75173fa3de659d9fb5f8">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[9/10]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -313,14 +363,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__combat_8cpp_source.html#l00091">91</a> of file <a class="el" href="test__combat_8cpp_source.html">test_combat.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__combat_8cpp_source.html#l00116">116</a> of file <a class="el" href="test__combat_8cpp_source.html">test_combat.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00068">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="combat_8hpp_source.html#l00115">rpg_os::makeCombatantSpec()</a>, <a class="el" href="combat_8hpp_source.html#l00246">rpg_os::runFight()</a>, and <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00068">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="combat_8hpp_source.html#l00116">rpg_os::makeCombatantSpec()</a>, <a class="el" href="combat_8hpp_source.html#l00247">rpg_os::runFight()</a>, and <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>.</p>
 
 </div>
 </div>
 <a id="a341e4588c7e0747dc90ad7e0e0ec83c6" name="a341e4588c7e0747dc90ad7e0e0ec83c6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a341e4588c7e0747dc90ad7e0e0ec83c6">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[8/8]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a341e4588c7e0747dc90ad7e0e0ec83c6">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[10/10]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -335,9 +385,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__combat_8cpp_source.html#l00125">125</a> of file <a class="el" href="test__combat_8cpp_source.html">test_combat.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__combat_8cpp_source.html#l00150">150</a> of file <a class="el" href="test__combat_8cpp_source.html">test_combat.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00068">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, and <a class="el" href="combat_8hpp_source.html#l00115">rpg_os::makeCombatantSpec()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00068">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, and <a class="el" href="combat_8hpp_source.html#l00116">rpg_os::makeCombatantSpec()</a>.</p>
 
 </div>
 </div>

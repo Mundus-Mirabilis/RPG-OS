@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['eventtype_0',['EventType',['../namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18',1,'rpg_os']]]
+  ['difficultymode_0',['DifficultyMode',['../namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753d',1,'rpg_os']]]
 ];

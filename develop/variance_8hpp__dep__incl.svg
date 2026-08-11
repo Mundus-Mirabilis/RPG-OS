@@ -46,7 +46,7 @@
   </g>
 </defs>
 <script type="application/ecmascript">
-var viewWidth = 721;
+var viewWidth = 765;
 var viewHeight = 302;
 var sectionId = 'dynsection-1';
 </script>
@@ -58,17 +58,17 @@ var sectionId = 'dynsection-1';
 <g id="Node000001" class="node">
 <title>Node1</title>
 <g id="a_Node000001"><a xlink:title="Variance / range selection for stat values.">
-<polygon fill="#999999" stroke="#666666" points="405,-294 325,-294 325,-275 405,-275 405,-294"/>
-<text text-anchor="middle" x="365" y="-282" font-family="Helvetica,sans-Serif" font-size="10.00">variance.hpp</text>
+<polygon fill="#999999" stroke="#666666" points="410,-294 330,-294 330,-275 410,-275 410,-294"/>
+<text text-anchor="middle" x="370" y="-282" font-family="Helvetica,sans-Serif" font-size="10.00">variance.hpp</text>
 </a>
 </g>
 </g>
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="combat_8hpp.html" target="_top" xlink:title="Combat simulation helpers (universal mode).">
-<polygon fill="white" stroke="#666666" points="86,-74 12,-74 12,-55 86,-55 86,-74"/>
-<text text-anchor="middle" x="49" y="-62" font-family="Helvetica,sans-Serif" font-size="10.00">combat.hpp</text>
+<g id="a_Node000002"><a xlink:href="brp__ugc__static_8hpp.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="108,-129 0,-129 0,-110 108,-110 108,-129"/>
+<text text-anchor="middle" x="54" y="-117" font-family="Helvetica,sans-Serif" font-size="10.00">brp_ugc_static.hpp</text>
 </a>
 </g>
 </g>
@@ -76,107 +76,125 @@ var sectionId = 'dynsection-1';
 <g id="edge1_Node000001_Node000002" class="edge">
 <title>Node1&#45;&gt;Node2</title>
 <g id="a_edge1_Node000001_Node000002"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M314.55,-274.81C284.9,-268.15 247.55,-256.97 218,-239 141.11,-192.25 74.67,-102.42 54.95,-74.2"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="314.18,-278.31 324.69,-276.98 315.64,-271.47 314.18,-278.31"/>
+<path fill="none" stroke="#63b8ff" d="M319.66,-283.02C243.67,-281.19 104.94,-273.11 71,-239 40.95,-208.79 48.13,-150.98 52.18,-129.14"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="319.87,-286.53 329.94,-283.24 320.02,-279.53 319.87,-286.53"/>
 </a>
 </g>
 </g>
-<!-- Node5 -->
-<g id="Node000005" class="node">
-<title>Node5</title>
-<g id="a_Node000005"><a xlink:href="dnd5e__srd__static_8hpp.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="633,-239 513,-239 513,-220 633,-220 633,-239"/>
-<text text-anchor="middle" x="573" y="-227" font-family="Helvetica,sans-Serif" font-size="10.00">dnd5e_srd_static.hpp</text>
+<!-- Node4 -->
+<g id="Node000004" class="node">
+<title>Node4</title>
+<g id="a_Node000004"><a xlink:href="combat_8hpp.html" target="_top" xlink:title="Combat simulation helpers (universal mode).">
+<polygon fill="white" stroke="#666666" points="635,-74 561,-74 561,-55 635,-55 635,-74"/>
+<text text-anchor="middle" x="598" y="-62" font-family="Helvetica,sans-Serif" font-size="10.00">combat.hpp</text>
 </a>
 </g>
 </g>
-<!-- Node1&#45;&gt;Node5 -->
-<g id="edge4_Node000001_Node000005" class="edge">
-<title>Node1&#45;&gt;Node5</title>
-<g id="a_edge4_Node000001_Node000005"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M408.41,-272.44C447.35,-262.52 503.69,-248.16 539.32,-239.08"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="407.24,-269.12 398.42,-274.98 408.97,-275.91 407.24,-269.12"/>
+<!-- Node1&#45;&gt;Node4 -->
+<g id="edge3_Node000001_Node000004" class="edge">
+<title>Node1&#45;&gt;Node4</title>
+<g id="a_edge3_Node000001_Node000004"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M420.05,-279.11C451.65,-274 491.54,-262.93 519,-239 572.39,-192.46 591.72,-102.49 596.63,-74.22"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="419.49,-275.66 410.11,-280.57 420.51,-282.58 419.49,-275.66"/>
 </a>
 </g>
 </g>
-<!-- Node8 -->
-<g id="Node000008" class="node">
-<title>Node8</title>
-<g id="a_Node000008"><a xlink:href="dynamic__entity_8hpp.html" target="_top" xlink:title="Dynamic entity (universal mode).">
-<polygon fill="white" stroke="#666666" points="353,-239 241,-239 241,-220 353,-220 353,-239"/>
-<text text-anchor="middle" x="297" y="-227" font-family="Helvetica,sans-Serif" font-size="10.00">dynamic_entity.hpp</text>
+<!-- Node7 -->
+<g id="Node000007" class="node">
+<title>Node7</title>
+<g id="a_Node000007"><a xlink:href="dnd5e__srd__static_8hpp.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="200,-239 80,-239 80,-220 200,-220 200,-239"/>
+<text text-anchor="middle" x="140" y="-227" font-family="Helvetica,sans-Serif" font-size="10.00">dnd5e_srd_static.hpp</text>
 </a>
 </g>
 </g>
-<!-- Node1&#45;&gt;Node8 -->
-<g id="edge7_Node000001_Node000008" class="edge">
-<title>Node1&#45;&gt;Node8</title>
-<g id="a_edge7_Node000001_Node000008"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M345.88,-268.6C333.7,-259.11 318.34,-247.13 308.12,-239.17"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="344.04,-271.6 354.07,-274.98 348.34,-266.08 344.04,-271.6"/>
+<!-- Node1&#45;&gt;Node7 -->
+<g id="edge6_Node000001_Node000007" class="edge">
+<title>Node1&#45;&gt;Node7</title>
+<g id="a_edge6_Node000001_Node000007"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M323.09,-272.69C280,-262.76 216.97,-248.24 177.24,-239.08"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="322.52,-276.15 333.05,-274.98 324.09,-269.33 322.52,-276.15"/>
 </a>
 </g>
 </g>
-<!-- Node10 -->
-<g id="Node000010" class="node">
-<title>Node10</title>
-<g id="a_Node000010"><a xlink:href="engine_8hpp.html" target="_top" xlink:title="RulesetEngine facade (universal mode).">
-<polygon fill="white" stroke="#666666" points="356.5,-129 285.5,-129 285.5,-110 356.5,-110 356.5,-129"/>
-<text text-anchor="middle" x="321" y="-117" font-family="Helvetica,sans-Serif" font-size="10.00">engine.hpp</text>
+<!-- Node9 -->
+<g id="Node000009" class="node">
+<title>Node9</title>
+<g id="a_Node000009"><a xlink:href="dynamic__entity_8hpp.html" target="_top" xlink:title="Dynamic entity (universal mode).">
+<polygon fill="white" stroke="#666666" points="510,-239 398,-239 398,-220 510,-220 510,-239"/>
+<text text-anchor="middle" x="454" y="-227" font-family="Helvetica,sans-Serif" font-size="10.00">dynamic_entity.hpp</text>
 </a>
 </g>
 </g>
-<!-- Node1&#45;&gt;Node10 -->
-<g id="edge18_Node000001_Node000010" class="edge">
-<title>Node1&#45;&gt;Node10</title>
-<g id="a_edge18_Node000001_Node000010"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M314.8,-280.65C285.52,-276.09 250.77,-265.07 232,-239 212.78,-212.31 214.71,-192.98 232,-165 243.63,-146.19 265.88,-135.07 285.22,-128.64"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="314.51,-284.14 324.89,-282 315.44,-277.2 314.51,-284.14"/>
+<!-- Node1&#45;&gt;Node9 -->
+<g id="edge9_Node000001_Node000009" class="edge">
+<title>Node1&#45;&gt;Node9</title>
+<g id="a_edge9_Node000001_Node000009"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M392.31,-269.42C407.55,-259.81 427.27,-247.37 440.26,-239.17"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="390.09,-266.69 383.5,-274.98 393.82,-272.61 390.09,-266.69"/>
 </a>
 </g>
 </g>
-<!-- Node14 -->
-<g id="Node000014" class="node">
-<title>Node14</title>
-<g id="a_Node000014"><a xlink:href="test__variance_8cpp.html" target="_top" xlink:title="Tests for variance / range selection (rpg_os::Variance, rpg_os::readVariantValue).">
-<polygon fill="white" stroke="#666666" points="712.5,-74 609.5,-74 609.5,-55 712.5,-55 712.5,-74"/>
-<text text-anchor="middle" x="661" y="-62" font-family="Helvetica,sans-Serif" font-size="10.00">test_variance.cpp</text>
+<!-- Node11 -->
+<g id="Node000011" class="node">
+<title>Node11</title>
+<g id="a_Node000011"><a xlink:href="engine_8hpp.html" target="_top" xlink:title="RulesetEngine facade (universal mode).">
+<polygon fill="white" stroke="#666666" points="417.5,-129 346.5,-129 346.5,-110 417.5,-110 417.5,-129"/>
+<text text-anchor="middle" x="382" y="-117" font-family="Helvetica,sans-Serif" font-size="10.00">engine.hpp</text>
 </a>
 </g>
 </g>
-<!-- Node1&#45;&gt;Node14 -->
-<g id="edge22_Node000001_Node000014" class="edge">
-<title>Node1&#45;&gt;Node14</title>
-<g id="a_edge22_Node000001_Node000014"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M415.31,-282.48C486.59,-279.9 611.73,-270.83 642,-239 686.69,-192.01 669.94,-102.34 663.24,-74.18"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="415.08,-278.98 405.2,-282.81 415.31,-285.98 415.08,-278.98"/>
+<!-- Node1&#45;&gt;Node11 -->
+<g id="edge20_Node000001_Node000011" class="edge">
+<title>Node1&#45;&gt;Node11</title>
+<g id="a_edge20_Node000001_Node000011"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M371.41,-264.37C374.01,-229.03 379.48,-154.79 381.35,-129.31"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="367.89,-264.51 370.65,-274.74 374.87,-265.02 367.89,-264.51"/>
 </a>
 </g>
 </g>
 <!-- Node15 -->
 <g id="Node000015" class="node">
 <title>Node15</title>
-<g id="a_Node000015"><a xlink:href="tde5e__core__static_8hpp.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="495,-239 371,-239 371,-220 495,-220 495,-239"/>
-<text text-anchor="middle" x="433" y="-227" font-family="Helvetica,sans-Serif" font-size="10.00">tde5e_core_static.hpp</text>
+<g id="a_Node000015"><a xlink:href="test__variance_8cpp.html" target="_top" xlink:title="Tests for variance / range selection (rpg_os::Variance, rpg_os::readVariantValue).">
+<polygon fill="white" stroke="#666666" points="756.5,-74 653.5,-74 653.5,-55 756.5,-55 756.5,-74"/>
+<text text-anchor="middle" x="705" y="-62" font-family="Helvetica,sans-Serif" font-size="10.00">test_variance.cpp</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node15 -->
-<g id="edge19_Node000001_Node000015" class="edge">
+<g id="edge24_Node000001_Node000015" class="edge">
 <title>Node1&#45;&gt;Node15</title>
-<g id="a_edge19_Node000001_Node000015"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M384.12,-268.6C396.3,-259.11 411.66,-247.13 421.88,-239.17"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="381.66,-266.08 375.93,-274.98 385.96,-271.6 381.66,-266.08"/>
+<g id="a_edge24_Node000001_Node000015"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M420.58,-278C456.47,-272.36 504.68,-261.11 542,-239 618.09,-193.92 680.87,-102.97 699.42,-74.34"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="419.72,-274.59 410.34,-279.52 420.74,-281.52 419.72,-274.59"/>
+</a>
+</g>
+</g>
+<!-- Node16 -->
+<g id="Node000016" class="node">
+<title>Node16</title>
+<g id="a_Node000016"><a xlink:href="tde5e__core__static_8hpp.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="342,-239 218,-239 218,-220 342,-220 342,-239"/>
+<text text-anchor="middle" x="280" y="-227" font-family="Helvetica,sans-Serif" font-size="10.00">tde5e_core_static.hpp</text>
+</a>
+</g>
+</g>
+<!-- Node1&#45;&gt;Node16 -->
+<g id="edge21_Node000001_Node000016" class="edge">
+<title>Node1&#45;&gt;Node16</title>
+<g id="a_edge21_Node000001_Node000016"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M346.56,-269.7C330.16,-260.04 308.77,-247.44 294.72,-239.17"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="345.15,-272.93 355.54,-274.98 348.7,-266.89 345.15,-272.93"/>
 </a>
 </g>
 </g>
 <!-- Node3 -->
 <g id="Node000003" class="node">
 <title>Node3</title>
-<g id="a_Node000003"><a xlink:href="fight_2main_8cpp.html" target="_top" xlink:title="Fight&#45;to&#45;the&#45;end demo (universal mode).">
-<polygon fill="white" stroke="#666666" points="316,-19 254,-19 254,0 316,0 316,-19"/>
-<text text-anchor="middle" x="285" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">main.cpp</text>
+<g id="a_Node000003"><a xlink:href="test__codegen__output_8cpp.html" target="_top" xlink:title="Tests for the generated &quot;specific mode&quot; headers in generated/.">
+<polygon fill="white" stroke="#666666" points="194.5,-74 55.5,-74 55.5,-55 194.5,-55 194.5,-74"/>
+<text text-anchor="middle" x="125" y="-62" font-family="Helvetica,sans-Serif" font-size="10.00">test_codegen_output.cpp</text>
 </a>
 </g>
 </g>
@@ -184,206 +202,215 @@ var sectionId = 'dynsection-1';
 <g id="edge2_Node000002_Node000003" class="edge">
 <title>Node2&#45;&gt;Node3</title>
 <g id="a_edge2_Node000002_Node000003"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M96.04,-52.94C142.86,-42.42 213.4,-26.58 253.74,-17.52"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="95.12,-49.55 86.13,-55.16 96.66,-56.38 95.12,-49.55"/>
+<path fill="none" stroke="#63b8ff" d="M73.59,-103.88C86.37,-94.34 102.61,-82.21 113.39,-74.17"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="71.33,-101.2 65.41,-109.98 75.51,-106.81 71.33,-101.2"/>
 </a>
 </g>
 </g>
-<!-- Node4 -->
-<g id="Node000004" class="node">
-<title>Node4</title>
-<g id="a_Node000004"><a xlink:href="test__combat_8cpp.html" target="_top" xlink:title="Tests for the combat simulation helpers (include/rpg_os/universal/combat.hpp).">
-<polygon fill="white" stroke="#666666" points="98,-19 0,-19 0,0 98,0 98,-19"/>
-<text text-anchor="middle" x="49" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">test_combat.cpp</text>
+<!-- Node5 -->
+<g id="Node000005" class="node">
+<title>Node5</title>
+<g id="a_Node000005"><a xlink:href="fight_2main_8cpp.html" target="_top" xlink:title="Fight&#45;to&#45;the&#45;end demo (universal mode).">
+<polygon fill="white" stroke="#666666" points="393,-19 331,-19 331,0 393,0 393,-19"/>
+<text text-anchor="middle" x="362" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">main.cpp</text>
 </a>
 </g>
 </g>
-<!-- Node2&#45;&gt;Node4 -->
-<g id="edge3_Node000002_Node000004" class="edge">
-<title>Node2&#45;&gt;Node4</title>
-<g id="a_edge3_Node000002_Node000004"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M49,-44.66C49,-35.93 49,-25.99 49,-19.09"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="45.5,-44.75 49,-54.75 52.5,-44.75 45.5,-44.75"/>
+<!-- Node4&#45;&gt;Node5 -->
+<g id="edge4_Node000004_Node000005" class="edge">
+<title>Node4&#45;&gt;Node5</title>
+<g id="a_edge4_Node000004_Node000005"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M550.96,-52.94C504.14,-42.42 433.6,-26.58 393.26,-17.52"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="550.34,-56.38 560.87,-55.16 551.88,-49.55 550.34,-56.38"/>
 </a>
 </g>
 </g>
 <!-- Node6 -->
 <g id="Node000006" class="node">
 <title>Node6</title>
-<g id="a_Node000006"><a xlink:href="specific__mode_2main_8cpp.html" target="_top" xlink:title="Specific mode demo: use the code&#45;generated, strongly typed headers.">
-<polygon fill="white" stroke="#666666" points="537,-184 475,-184 475,-165 537,-165 537,-184"/>
-<text text-anchor="middle" x="506" y="-172" font-family="Helvetica,sans-Serif" font-size="10.00">main.cpp</text>
+<g id="a_Node000006"><a xlink:href="test__combat_8cpp.html" target="_top" xlink:title="Tests for the combat simulation helpers (include/rpg_os/universal/combat.hpp).">
+<polygon fill="white" stroke="#666666" points="647,-19 549,-19 549,0 647,0 647,-19"/>
+<text text-anchor="middle" x="598" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">test_combat.cpp</text>
 </a>
 </g>
 </g>
-<!-- Node5&#45;&gt;Node6 -->
-<g id="edge5_Node000005_Node000006" class="edge">
-<title>Node5&#45;&gt;Node6</title>
-<g id="a_edge5_Node000005_Node000006"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M554.17,-213.6C542.16,-204.11 527.03,-192.13 516.96,-184.17"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="552.22,-216.53 562.24,-219.98 556.56,-211.04 552.22,-216.53"/>
+<!-- Node4&#45;&gt;Node6 -->
+<g id="edge5_Node000004_Node000006" class="edge">
+<title>Node4&#45;&gt;Node6</title>
+<g id="a_edge5_Node000004_Node000006"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M598,-44.66C598,-35.93 598,-25.99 598,-19.09"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="594.5,-44.75 598,-54.75 601.5,-44.75 594.5,-44.75"/>
 </a>
 </g>
 </g>
-<!-- Node7 -->
-<g id="Node000007" class="node">
-<title>Node7</title>
-<g id="a_Node000007"><a xlink:href="test__codegen__output_8cpp.html" target="_top" xlink:title="Tests for the generated &quot;specific mode&quot; headers in generated/.">
-<polygon fill="white" stroke="#666666" points="591.5,-74 452.5,-74 452.5,-55 591.5,-55 591.5,-74"/>
-<text text-anchor="middle" x="522" y="-62" font-family="Helvetica,sans-Serif" font-size="10.00">test_codegen_output.cpp</text>
+<!-- Node7&#45;&gt;Node3 -->
+<g id="edge8_Node000007_Node000003" class="edge">
+<title>Node7&#45;&gt;Node3</title>
+<g id="a_edge8_Node000007_Node000003"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M138.24,-209.37C134.99,-174.03 128.16,-99.79 125.81,-74.31"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="134.79,-210.1 139.19,-219.74 141.76,-209.46 134.79,-210.1"/>
 </a>
 </g>
 </g>
-<!-- Node5&#45;&gt;Node7 -->
-<g id="edge6_Node000005_Node000007" class="edge">
-<title>Node5&#45;&gt;Node7</title>
-<g id="a_edge6_Node000005_Node000007"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M567.16,-209.83C556.16,-174.67 532.76,-99.9 524.76,-74.31"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="563.93,-211.24 570.26,-219.74 570.61,-209.15 563.93,-211.24"/>
+<!-- Node8 -->
+<g id="Node000008" class="node">
+<title>Node8</title>
+<g id="a_Node000008"><a xlink:href="specific__mode_2main_8cpp.html" target="_top" xlink:title="Specific mode demo: use the code&#45;generated, strongly typed headers.">
+<polygon fill="white" stroke="#666666" points="234,-184 172,-184 172,-165 234,-165 234,-184"/>
+<text text-anchor="middle" x="203" y="-172" font-family="Helvetica,sans-Serif" font-size="10.00">main.cpp</text>
 </a>
 </g>
 </g>
-<!-- Node9 -->
-<g id="Node000009" class="node">
-<title>Node9</title>
-<g id="a_Node000009"><a xlink:href="check__resolver_8hpp.html" target="_top" xlink:title="Check resolver (universal mode).">
-<polygon fill="white" stroke="#666666" points="351,-184 241,-184 241,-165 351,-165 351,-184"/>
-<text text-anchor="middle" x="296" y="-172" font-family="Helvetica,sans-Serif" font-size="10.00">check_resolver.hpp</text>
+<!-- Node7&#45;&gt;Node8 -->
+<g id="edge7_Node000007_Node000008" class="edge">
+<title>Node7&#45;&gt;Node8</title>
+<g id="a_edge7_Node000007_Node000008"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M158.04,-213.32C169.27,-203.87 183.32,-192.06 192.69,-184.17"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="155.52,-210.87 150.12,-219.98 160.03,-216.23 155.52,-210.87"/>
 </a>
 </g>
 </g>
-<!-- Node8&#45;&gt;Node9 -->
-<g id="edge8_Node000008_Node000009" class="edge">
-<title>Node8&#45;&gt;Node9</title>
-<g id="a_edge8_Node000008_Node000009"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M296.64,-209.66C296.48,-200.93 296.29,-190.99 296.16,-184.09"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="293.15,-209.82 296.83,-219.75 300.15,-209.68 293.15,-209.82"/>
-</a>
-</g>
-</g>
-<!-- Node8&#45;&gt;Node10 -->
-<g id="edge17_Node000008_Node000010" class="edge">
-<title>Node8&#45;&gt;Node10</title>
-<g id="a_edge17_Node000008_Node000010"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M327.08,-215.18C339.66,-207.91 352.96,-197.59 360,-184 370.53,-163.67 347.86,-141.09 332.86,-129.1"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="325.33,-212.14 318.15,-219.93 328.62,-218.32 325.33,-212.14"/>
+<!-- Node10 -->
+<g id="Node000010" class="node">
+<title>Node10</title>
+<g id="a_Node000010"><a xlink:href="check__resolver_8hpp.html" target="_top" xlink:title="Check resolver (universal mode).">
+<polygon fill="white" stroke="#666666" points="508,-184 398,-184 398,-165 508,-165 508,-184"/>
+<text text-anchor="middle" x="453" y="-172" font-family="Helvetica,sans-Serif" font-size="10.00">check_resolver.hpp</text>
 </a>
 </g>
 </g>
 <!-- Node9&#45;&gt;Node10 -->
-<g id="edge9_Node000009_Node000010" class="edge">
+<g id="edge10_Node000009_Node000010" class="edge">
 <title>Node9&#45;&gt;Node10</title>
-<g id="a_edge9_Node000009_Node000010"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M304.48,-155.53C308.69,-146.6 313.59,-136.22 316.95,-129.09"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="301.23,-154.21 300.13,-164.75 307.56,-157.2 301.23,-154.21"/>
+<g id="a_edge10_Node000009_Node000010"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M453.64,-209.66C453.48,-200.93 453.29,-190.99 453.16,-184.09"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="450.15,-209.82 453.83,-219.75 457.15,-209.68 450.15,-209.82"/>
 </a>
 </g>
 </g>
-<!-- Node10&#45;&gt;Node2 -->
-<g id="edge10_Node000010_Node000002" class="edge">
-<title>Node10&#45;&gt;Node2</title>
-<g id="a_edge10_Node000010_Node000002"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M275.62,-109.66C222.53,-99.31 135.65,-82.38 86.31,-72.77"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="274.96,-113.09 285.44,-111.57 276.29,-106.22 274.96,-113.09"/>
-</a>
-</g>
-</g>
-<!-- Node10&#45;&gt;Node3 -->
-<g id="edge11_Node000010_Node000003" class="edge">
-<title>Node10&#45;&gt;Node3</title>
-<g id="a_edge11_Node000010_Node000003"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M360.05,-106.54C388.92,-95.56 420.71,-77.58 405,-55 385.08,-26.36 344.46,-16.11 316.02,-12.47"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="358.67,-103.32 350.45,-109.99 361.04,-109.9 358.67,-103.32"/>
-</a>
-</g>
-</g>
-<!-- Node10&#45;&gt;Node7 -->
-<g id="edge13_Node000010_Node000007" class="edge">
-<title>Node10&#45;&gt;Node7</title>
-<g id="a_edge13_Node000010_Node000007"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M363.43,-107.31C401.04,-97.39 455.17,-83.12 489.45,-74.08"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="362.07,-104.05 353.29,-109.98 363.86,-110.82 362.07,-104.05"/>
-</a>
-</g>
-</g>
-<!-- Node11 -->
-<g id="Node000011" class="node">
-<title>Node11</title>
-<g id="a_Node000011"><a xlink:href="universal__mode_2main_8cpp.html" target="_top" xlink:title="Universal mode demo: load any ruleset JSON at runtime and resolve rules generically.">
-<polygon fill="white" stroke="#666666" points="166,-74 104,-74 104,-55 166,-55 166,-74"/>
-<text text-anchor="middle" x="135" y="-62" font-family="Helvetica,sans-Serif" font-size="10.00">main.cpp</text>
+<!-- Node9&#45;&gt;Node11 -->
+<g id="edge19_Node000009_Node000011" class="edge">
+<title>Node9&#45;&gt;Node11</title>
+<g id="a_edge19_Node000009_Node000011"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M483.18,-215.27C505.73,-203.16 530.92,-184.24 517,-165 494.51,-133.91 449.53,-124.17 417.68,-121.31"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="481.46,-212.22 474.12,-219.87 484.63,-218.46 481.46,-212.22"/>
 </a>
 </g>
 </g>
 <!-- Node10&#45;&gt;Node11 -->
-<g id="edge12_Node000010_Node000011" class="edge">
+<g id="edge11_Node000010_Node000011" class="edge">
 <title>Node10&#45;&gt;Node11</title>
-<g id="a_edge12_Node000010_Node000011"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M281.29,-107.18C246.5,-97.27 196.71,-83.08 165.12,-74.08"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="280.54,-110.61 291.12,-109.98 282.46,-103.88 280.54,-110.61"/>
+<g id="a_edge11_Node000010_Node000011"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M433.41,-158.88C420.63,-149.34 404.39,-137.21 393.61,-129.17"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="431.49,-161.81 441.59,-164.98 435.67,-156.2 431.49,-161.81"/>
+</a>
+</g>
+</g>
+<!-- Node11&#45;&gt;Node3 -->
+<g id="edge15_Node000011_Node000003" class="edge">
+<title>Node11&#45;&gt;Node3</title>
+<g id="a_edge15_Node000011_Node000003"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M336.42,-109.1C288.23,-99.16 212.91,-83.63 166.38,-74.03"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="335.76,-112.54 346.27,-111.13 337.18,-105.68 335.76,-112.54"/>
+</a>
+</g>
+</g>
+<!-- Node11&#45;&gt;Node4 -->
+<g id="edge12_Node000011_Node000004" class="edge">
+<title>Node11&#45;&gt;Node4</title>
+<g id="a_edge12_Node000011_Node000004"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M426.57,-107.56C467.02,-97.64 525.87,-83.2 563.02,-74.08"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="425.58,-104.2 416.7,-109.98 427.25,-111 425.58,-104.2"/>
+</a>
+</g>
+</g>
+<!-- Node11&#45;&gt;Node5 -->
+<g id="edge13_Node000011_Node000005" class="edge">
+<title>Node11&#45;&gt;Node5</title>
+<g id="a_edge13_Node000011_Node000005"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M336.24,-117.28C304.19,-113.74 263.4,-103.26 242,-74 216.81,-39.57 287.23,-22.08 330.65,-14.79"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="336.03,-120.78 346.3,-118.21 336.66,-113.81 336.03,-120.78"/>
 </a>
 </g>
 </g>
 <!-- Node12 -->
 <g id="Node000012" class="node">
 <title>Node12</title>
-<g id="a_Node000012"><a xlink:href="test__engine_8cpp.html" target="_top" xlink:title="Integration tests for the universal engine facade (rpg_os::RulesetEngine).">
-<polygon fill="white" stroke="#666666" points="278,-74 184,-74 184,-55 278,-55 278,-74"/>
-<text text-anchor="middle" x="231" y="-62" font-family="Helvetica,sans-Serif" font-size="10.00">test_engine.cpp</text>
+<g id="a_Node000012"><a xlink:href="universal__mode_2main_8cpp.html" target="_top" xlink:title="Universal mode demo: load any ruleset JSON at runtime and resolve rules generically.">
+<polygon fill="white" stroke="#666666" points="313,-74 251,-74 251,-55 313,-55 313,-74"/>
+<text text-anchor="middle" x="282" y="-62" font-family="Helvetica,sans-Serif" font-size="10.00">main.cpp</text>
 </a>
 </g>
 </g>
-<!-- Node10&#45;&gt;Node12 -->
-<g id="edge14_Node000010_Node000012" class="edge">
-<title>Node10&#45;&gt;Node12</title>
-<g id="a_edge14_Node000010_Node000012"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M297.56,-104.7C281.16,-95.04 259.77,-82.44 245.72,-74.17"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="296.15,-107.93 306.54,-109.98 299.7,-101.89 296.15,-107.93"/>
+<!-- Node11&#45;&gt;Node12 -->
+<g id="edge14_Node000011_Node000012" class="edge">
+<title>Node11&#45;&gt;Node12</title>
+<g id="a_edge14_Node000011_Node000012"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M356.97,-105.23C338.63,-95.51 314.26,-82.6 298.36,-74.17"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="355.46,-108.39 365.93,-109.98 358.74,-102.21 355.46,-108.39"/>
 </a>
 </g>
 </g>
 <!-- Node13 -->
 <g id="Node000013" class="node">
 <title>Node13</title>
-<g id="a_Node000013"><a xlink:href="test__rulesets_8cpp.html" target="_top" xlink:title="Tests that load the real shipped rulesets (the rulesets/ JSON files).">
-<polygon fill="white" stroke="#666666" points="396,-74 296,-74 296,-55 396,-55 396,-74"/>
-<text text-anchor="middle" x="346" y="-62" font-family="Helvetica,sans-Serif" font-size="10.00">test_rulesets.cpp</text>
+<g id="a_Node000013"><a xlink:href="test__engine_8cpp.html" target="_top" xlink:title="Integration tests for the universal engine facade (rpg_os::RulesetEngine).">
+<polygon fill="white" stroke="#666666" points="425,-74 331,-74 331,-55 425,-55 425,-74"/>
+<text text-anchor="middle" x="378" y="-62" font-family="Helvetica,sans-Serif" font-size="10.00">test_engine.cpp</text>
 </a>
 </g>
 </g>
-<!-- Node10&#45;&gt;Node13 -->
-<g id="edge15_Node000010_Node000013" class="edge">
-<title>Node10&#45;&gt;Node13</title>
-<g id="a_edge15_Node000010_Node000013"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M329.48,-100.53C333.69,-91.6 338.59,-81.22 341.95,-74.09"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="326.23,-99.21 325.13,-109.75 332.56,-102.2 326.23,-99.21"/>
+<!-- Node11&#45;&gt;Node13 -->
+<g id="edge16_Node000011_Node000013" class="edge">
+<title>Node11&#45;&gt;Node13</title>
+<g id="a_edge16_Node000011_Node000013"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M380.58,-99.66C379.92,-90.93 379.17,-80.99 378.65,-74.09"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="377.1,-100.04 381.34,-109.75 384.08,-99.51 377.1,-100.04"/>
 </a>
 </g>
 </g>
-<!-- Node10&#45;&gt;Node14 -->
-<g id="edge16_Node000010_Node000014" class="edge">
-<title>Node10&#45;&gt;Node14</title>
-<g id="a_edge16_Node000010_Node000014"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M366.81,-111.36C429.97,-101.51 543.46,-83.82 609.5,-73.53"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="366.08,-107.93 356.74,-112.93 367.16,-114.85 366.08,-107.93"/>
+<!-- Node14 -->
+<g id="Node000014" class="node">
+<title>Node14</title>
+<g id="a_Node000014"><a xlink:href="test__rulesets_8cpp.html" target="_top" xlink:title="Tests that load the real shipped rulesets (the rulesets/ JSON files).">
+<polygon fill="white" stroke="#666666" points="543,-74 443,-74 443,-55 543,-55 543,-74"/>
+<text text-anchor="middle" x="493" y="-62" font-family="Helvetica,sans-Serif" font-size="10.00">test_rulesets.cpp</text>
 </a>
 </g>
 </g>
-<!-- Node15&#45;&gt;Node6 -->
-<g id="edge20_Node000015_Node000006" class="edge">
-<title>Node15&#45;&gt;Node6</title>
-<g id="a_edge20_Node000015_Node000006"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M453.14,-213.88C466.28,-204.34 482.98,-192.21 494.06,-184.17"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="450.76,-211.28 444.73,-219.98 454.88,-216.94 450.76,-211.28"/>
+<!-- Node11&#45;&gt;Node14 -->
+<g id="edge17_Node000011_Node000014" class="edge">
+<title>Node11&#45;&gt;Node14</title>
+<g id="a_edge17_Node000011_Node000014"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M408.95,-105.63C429.39,-95.87 456.95,-82.71 474.84,-74.17"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="407.35,-102.52 399.83,-109.98 410.37,-108.83 407.35,-102.52"/>
 </a>
 </g>
 </g>
-<!-- Node15&#45;&gt;Node7 -->
-<g id="edge21_Node000015_Node000007" class="edge">
-<title>Node15&#45;&gt;Node7</title>
-<g id="a_edge21_Node000015_Node000007"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M442.02,-210.75C448.57,-197.97 457.7,-180.35 466,-165 484.3,-131.18 507.02,-91.48 516.96,-74.23"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="438.82,-209.33 437.39,-219.82 445.06,-212.51 438.82,-209.33"/>
+<!-- Node11&#45;&gt;Node15 -->
+<g id="edge18_Node000011_Node000015" class="edge">
+<title>Node11&#45;&gt;Node15</title>
+<g id="a_edge18_Node000011_Node000015"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M427.67,-111.01C487.19,-101.24 591.03,-84.2 653.35,-73.97"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="427.1,-107.55 417.8,-112.63 428.24,-114.46 427.1,-107.55"/>
+</a>
+</g>
+</g>
+<!-- Node16&#45;&gt;Node3 -->
+<g id="edge23_Node000016_Node000003" class="edge">
+<title>Node16&#45;&gt;Node3</title>
+<g id="a_edge23_Node000016_Node000003"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M271.66,-210.59C264.97,-197.26 254.78,-179.01 243,-165 210.24,-126.02 161.11,-90.09 137.95,-74.16"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="268.55,-212.21 276.06,-219.68 274.85,-209.16 268.55,-212.21"/>
+</a>
+</g>
+</g>
+<!-- Node16&#45;&gt;Node8 -->
+<g id="edge22_Node000016_Node000008" class="edge">
+<title>Node16&#45;&gt;Node8</title>
+<g id="a_edge22_Node000016_Node000008"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M259.15,-214.15C245.24,-204.57 227.39,-192.29 215.6,-184.17"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="257.41,-217.2 267.63,-219.98 261.38,-211.43 257.41,-217.2"/>
 </a>
 </g>
 </g>

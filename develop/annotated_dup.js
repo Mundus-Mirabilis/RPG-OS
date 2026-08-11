@@ -2,6 +2,9 @@ var annotated_dup =
 [
     [ "rpg_os", "namespacerpg__os.html", [
       [ "generated", "namespacerpg__os_1_1generated.html", [
+        [ "brp_ugc", "namespacerpg__os_1_1generated_1_1brp__ugc.html", [
+          [ "Character", "classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html", "classrpg__os_1_1generated_1_1brp__ugc_1_1Character" ]
+        ] ],
         [ "dnd5e", "namespacerpg__os_1_1generated_1_1dnd5e.html", [
           [ "Character", "classrpg__os_1_1generated_1_1dnd5e_1_1Character.html", "classrpg__os_1_1generated_1_1dnd5e_1_1Character" ]
         ] ],

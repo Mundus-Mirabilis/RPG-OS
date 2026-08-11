@@ -55,7 +55,15 @@ var namespacerpg__os =
       [ "AdditiveD20", "namespacerpg__os.html#a588e72e855deaf1543a7331fc9706b84a4879fbe38b10f2627894a2bd19b129cc", null ],
       [ "RollUnderD20", "namespacerpg__os.html#a588e72e855deaf1543a7331fc9706b84ac0b61f4c5712ae9efcb75350544517b0", null ],
       [ "TripleRollUnderPool", "namespacerpg__os.html#a588e72e855deaf1543a7331fc9706b84a34ca41df64b6d7bfcc8544f372c0d2e2", null ],
-      [ "AttackVsDefense", "namespacerpg__os.html#a588e72e855deaf1543a7331fc9706b84a05de50aa3c40bf047396759a987eb395", null ]
+      [ "AttackVsDefense", "namespacerpg__os.html#a588e72e855deaf1543a7331fc9706b84a05de50aa3c40bf047396759a987eb395", null ],
+      [ "RollUnderD100", "namespacerpg__os.html#a588e72e855deaf1543a7331fc9706b84a01dbfdaa798f8a1eb112235c920e30c1", null ],
+      [ "OpposedRollUnderD100", "namespacerpg__os.html#a588e72e855deaf1543a7331fc9706b84ad263b757c382910a48bceae4f4b25fb8", null ],
+      [ "ResistanceRoll", "namespacerpg__os.html#a588e72e855deaf1543a7331fc9706b84a3dc68444b1fa4c3c821be15a324b36c4", null ]
+    ] ],
+    [ "DifficultyMode", "namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753d", [
+      [ "Average", "namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753dab1897515d548a960afe49ecf66a29021", null ],
+      [ "Easy", "namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753da7f943921724d63dc0ac9c6febf99fa88", null ],
+      [ "Difficult", "namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753da429ee94cd13d541a0d434e93c798ac4c", null ]
     ] ],
     [ "EventType", "namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18", [
       [ "OnBeforeCheckRoll", "namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18ab4bda534e9935d6126740b9d38997e0f", null ],
@@ -70,6 +78,13 @@ var namespacerpg__os =
       [ "Add", "namespacerpg__os.html#aab9c315b59a58b0733ac5a30a02da3f2aec211f7c20af43e742bf2570c3cb84f9", null ],
       [ "Multiply", "namespacerpg__os.html#aab9c315b59a58b0733ac5a30a02da3f2ae257376d913f3b53cbb4a9b19d770648", null ],
       [ "Clamp", "namespacerpg__os.html#aab9c315b59a58b0733ac5a30a02da3f2a08825280e3f8137556325061ba67ff8c", null ]
+    ] ],
+    [ "SuccessLevel", "namespacerpg__os.html#a0dc66a7ae36ef58a210fec7c99826700", [
+      [ "Fumble", "namespacerpg__os.html#a0dc66a7ae36ef58a210fec7c99826700a697c0f6712edee06e7cc9e3aba782ea0", null ],
+      [ "Failure", "namespacerpg__os.html#a0dc66a7ae36ef58a210fec7c99826700ae139a585510a502bbf1841cf589f5086", null ],
+      [ "Success", "namespacerpg__os.html#a0dc66a7ae36ef58a210fec7c99826700a505a83f220c02df2f85c3810cd9ceb38", null ],
+      [ "Special", "namespacerpg__os.html#a0dc66a7ae36ef58a210fec7c99826700ab4c2b550635fe54fd29f2b64dfaca55d", null ],
+      [ "Critical", "namespacerpg__os.html#a0dc66a7ae36ef58a210fec7c99826700a278d01e5af56273bae1bb99a98b370cd", null ]
     ] ],
     [ "Variance", "namespacerpg__os.html#ab870da3d65c79d59dad5920efc43dc65", [
       [ "Random", "namespacerpg__os.html#ab870da3d65c79d59dad5920efc43dc65a64663f4646781c9c0110838b905daa23", null ],
@@ -93,7 +108,11 @@ var namespacerpg__os =
     [ "resolveAttackVsDefense", "namespacerpg__os.html#a7ef034f2b27d47dfec3241d25c8677c5", null ],
     [ "resolveCheck", "namespacerpg__os.html#a1dd7326c980a88cf098c9b9706f0fc87", null ],
     [ "resolveHitPointPool", "namespacerpg__os.html#af34d585416afebd7167fec0777cf8390", null ],
+    [ "resolveOpposedRollUnderD100", "namespacerpg__os.html#ae17c63b87985c6cfcba7199fe43c3981", null ],
+    [ "resolveResistanceRoll", "namespacerpg__os.html#a8b8472bc5b027cb0cb3feecfbcf2bb86", null ],
+    [ "resolveRollUnderD100", "namespacerpg__os.html#a2ff1a4815cbc06e6ca9c115bcecbd205", null ],
     [ "resolveRollUnderD20", "namespacerpg__os.html#a138152104cbde2e9655fb564a8dd405c", null ],
     [ "resolveTripleRollUnderPool", "namespacerpg__os.html#a67cec6e58ce0e92bc143ec58e6a5fb9f", null ],
-    [ "runFight", "namespacerpg__os.html#a4a210e0aabb993a0723ab42ee2760ed2", null ]
+    [ "runFight", "namespacerpg__os.html#a4a210e0aabb993a0723ab42ee2760ed2", null ],
+    [ "successLevelFor", "namespacerpg__os.html#ac38fd72e232b89754c8431c1d1e5a041", null ]
 ];

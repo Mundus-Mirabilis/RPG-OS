@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['multiplier_0',['Multiplier',['../classrpg__os_1_1CostTable.html#aa3019c91e18a440b7b275be56cbb4aaeaee34a21131a5636ee8dcf521e2369bee',1,'rpg_os::CostTable']]],
-  ['multiply_1',['Multiply',['../namespacerpg__os.html#aab9c315b59a58b0733ac5a30a02da3f2ae257376d913f3b53cbb4a9b19d770648',1,'rpg_os']]]
+  ['difficult_0',['Difficult',['../namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753da429ee94cd13d541a0d434e93c798ac4c',1,'rpg_os']]]
 ];

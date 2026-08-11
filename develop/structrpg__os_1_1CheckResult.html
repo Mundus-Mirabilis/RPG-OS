@@ -150,13 +150,12 @@ Public Attributes</h2></td></tr>
 <tr class="separator:ae8bd7c84e5def307a1c8f70f72bb8f19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8b969dc33b1f30235c1afa229cd8891" id="r_ad8b969dc33b1f30235c1afa229cd8891"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrpg__os_1_1CheckResult.html#ad8b969dc33b1f30235c1afa229cd8891">qualityLevel</a> {0}</td></tr>
 <tr class="separator:ad8b969dc33b1f30235c1afa229cd8891"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ce854b3b26d5ab727550b2f732293b4" id="r_a1ce854b3b26d5ab727550b2f732293b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacerpg__os.html#a0dc66a7ae36ef58a210fec7c99826700">SuccessLevel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrpg__os_1_1CheckResult.html#a1ce854b3b26d5ab727550b2f732293b4">successLevel</a> {<a class="el" href="namespacerpg__os.html#a0dc66a7ae36ef58a210fec7c99826700ae139a585510a502bbf1841cf589f5086">SuccessLevel::Failure</a>}</td></tr>
+<tr class="separator:a1ce854b3b26d5ab727550b2f732293b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Result of resolving a single check.</p>
-<dl class="section user"><dt>Why one shared struct?</dt><dd>This is deliberately a single, mode-independent value type. The universal engine's generic resolver fills it through a runtime <code>switch</code> over the check kind, while generated code fills the very same struct from compiled check methods. Because both modes write into identical fields, a caller (or the parity test) never has to know which mode produced the result — the <em>result</em> is the contract, not the code path that created it.</dd></dl>
-<p>The struct is also the natural place to expose every piece of information a rules author or a tabletop app needs to render a check: not just pass/fail, but the criticals that the underlying games treat specially, the margin used for opposed rolls, and the pool/quality information that The Dark Eye's 3d20 talent checks produce. Bundling them avoids spreading check bookkeeping across several ad-hoc return values. </p>
-
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00060">60</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00078">78</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="a26a65f8669ccc0f3717b96f036b5a17f" name="a26a65f8669ccc0f3717b96f036b5a17f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a26a65f8669ccc0f3717b96f036b5a17f">&#9670;&#160;</a></span>isCriticalFailure</h2>
@@ -172,9 +171,9 @@ Public Attributes</h2></td></tr>
 
 <p>Natural critical failure (e.g. natural 1, or double-20 on a 3d20 check). </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00066">66</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00084">84</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="checks_8hpp_source.html#l00156">rpg_os::resolveAdditiveD20()</a>, <a class="el" href="checks_8hpp_source.html#l00305">rpg_os::resolveAttackVsDefense()</a>, <a class="el" href="checks_8hpp_source.html#l00194">rpg_os::resolveRollUnderD20()</a>, and <a class="el" href="checks_8hpp_source.html#l00246">rpg_os::resolveTripleRollUnderPool()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="checks_8hpp_source.html#l00207">rpg_os::resolveAdditiveD20()</a>, <a class="el" href="checks_8hpp_source.html#l00356">rpg_os::resolveAttackVsDefense()</a>, <a class="el" href="checks_8hpp_source.html#l00434">rpg_os::resolveOpposedRollUnderD100()</a>, <a class="el" href="checks_8hpp_source.html#l00399">rpg_os::resolveRollUnderD100()</a>, <a class="el" href="checks_8hpp_source.html#l00245">rpg_os::resolveRollUnderD20()</a>, and <a class="el" href="checks_8hpp_source.html#l00297">rpg_os::resolveTripleRollUnderPool()</a>.</p>
 
 </div>
 </div>
@@ -192,9 +191,9 @@ Public Attributes</h2></td></tr>
 
 <p>Natural critical success (e.g. natural 20, or double-1 on a 3d20 check). </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00064">64</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00082">82</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="checks_8hpp_source.html#l00156">rpg_os::resolveAdditiveD20()</a>, <a class="el" href="checks_8hpp_source.html#l00305">rpg_os::resolveAttackVsDefense()</a>, <a class="el" href="checks_8hpp_source.html#l00194">rpg_os::resolveRollUnderD20()</a>, and <a class="el" href="checks_8hpp_source.html#l00246">rpg_os::resolveTripleRollUnderPool()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="checks_8hpp_source.html#l00207">rpg_os::resolveAdditiveD20()</a>, <a class="el" href="checks_8hpp_source.html#l00356">rpg_os::resolveAttackVsDefense()</a>, <a class="el" href="checks_8hpp_source.html#l00434">rpg_os::resolveOpposedRollUnderD100()</a>, <a class="el" href="checks_8hpp_source.html#l00399">rpg_os::resolveRollUnderD100()</a>, <a class="el" href="checks_8hpp_source.html#l00245">rpg_os::resolveRollUnderD20()</a>, and <a class="el" href="checks_8hpp_source.html#l00297">rpg_os::resolveTripleRollUnderPool()</a>.</p>
 
 </div>
 </div>
@@ -212,9 +211,9 @@ Public Attributes</h2></td></tr>
 
 <p>Whether the check succeeded. Criticals override the raw comparison. </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00062">62</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00080">80</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00220">rpg_os::detail::attackOnce()</a>, <a class="el" href="specific__mode_2main_8cpp_source.html#l00053">main()</a>, <a class="el" href="checks_8hpp_source.html#l00156">rpg_os::resolveAdditiveD20()</a>, <a class="el" href="checks_8hpp_source.html#l00305">rpg_os::resolveAttackVsDefense()</a>, <a class="el" href="checks_8hpp_source.html#l00194">rpg_os::resolveRollUnderD20()</a>, and <a class="el" href="checks_8hpp_source.html#l00246">rpg_os::resolveTripleRollUnderPool()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00221">rpg_os::detail::attackOnce()</a>, <a class="el" href="specific__mode_2main_8cpp_source.html#l00053">main()</a>, <a class="el" href="checks_8hpp_source.html#l00207">rpg_os::resolveAdditiveD20()</a>, <a class="el" href="checks_8hpp_source.html#l00356">rpg_os::resolveAttackVsDefense()</a>, <a class="el" href="checks_8hpp_source.html#l00434">rpg_os::resolveOpposedRollUnderD100()</a>, <a class="el" href="checks_8hpp_source.html#l00468">rpg_os::resolveResistanceRoll()</a>, <a class="el" href="checks_8hpp_source.html#l00399">rpg_os::resolveRollUnderD100()</a>, <a class="el" href="checks_8hpp_source.html#l00245">rpg_os::resolveRollUnderD20()</a>, and <a class="el" href="checks_8hpp_source.html#l00297">rpg_os::resolveTripleRollUnderPool()</a>.</p>
 
 </div>
 </div>
@@ -231,7 +230,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Human-readable summary of what happened (logs / debugging). Produced lazily by callers that want it; always empty by default so the hot path never pays for string formatting it does not need. </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00079">79</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00097">97</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -248,9 +247,9 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Signed margin: &gt;= 0 on success (higher is better), &lt; 0 on failure. Kept separate from the raw dice so game logic can grade the check without having to re-derive the total from the dice themselves. </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00070">70</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00088">88</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="checks_8hpp_source.html#l00156">rpg_os::resolveAdditiveD20()</a>, <a class="el" href="checks_8hpp_source.html#l00305">rpg_os::resolveAttackVsDefense()</a>, <a class="el" href="checks_8hpp_source.html#l00194">rpg_os::resolveRollUnderD20()</a>, and <a class="el" href="checks_8hpp_source.html#l00246">rpg_os::resolveTripleRollUnderPool()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="checks_8hpp_source.html#l00207">rpg_os::resolveAdditiveD20()</a>, <a class="el" href="checks_8hpp_source.html#l00356">rpg_os::resolveAttackVsDefense()</a>, <a class="el" href="checks_8hpp_source.html#l00434">rpg_os::resolveOpposedRollUnderD100()</a>, <a class="el" href="checks_8hpp_source.html#l00468">rpg_os::resolveResistanceRoll()</a>, <a class="el" href="checks_8hpp_source.html#l00399">rpg_os::resolveRollUnderD100()</a>, <a class="el" href="checks_8hpp_source.html#l00245">rpg_os::resolveRollUnderD20()</a>, and <a class="el" href="checks_8hpp_source.html#l00297">rpg_os::resolveTripleRollUnderPool()</a>.</p>
 
 </div>
 </div>
@@ -267,9 +266,9 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Quality level of a skill check (DSA): 0 means none was computed. Kept in the shared struct so universal and specific mode report the same quality bands for the same remaining pool. </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00086">86</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00104">104</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="specific__mode_2main_8cpp_source.html#l00053">main()</a>, and <a class="el" href="checks_8hpp_source.html#l00246">rpg_os::resolveTripleRollUnderPool()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="specific__mode_2main_8cpp_source.html#l00053">main()</a>, and <a class="el" href="checks_8hpp_source.html#l00297">rpg_os::resolveTripleRollUnderPool()</a>.</p>
 
 </div>
 </div>
@@ -286,9 +285,9 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>The raw die results, in roll order. Checks that need individual dice (e.g. a confirmation roll, or a D&amp;D natural-20 detection) read this; keeping them lets callers verify the outcome independently of the engine's own interpretation. </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00075">75</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00093">93</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="specific__mode_2main_8cpp_source.html#l00053">main()</a>, <a class="el" href="checks_8hpp_source.html#l00156">rpg_os::resolveAdditiveD20()</a>, <a class="el" href="checks_8hpp_source.html#l00305">rpg_os::resolveAttackVsDefense()</a>, <a class="el" href="checks_8hpp_source.html#l00194">rpg_os::resolveRollUnderD20()</a>, and <a class="el" href="checks_8hpp_source.html#l00246">rpg_os::resolveTripleRollUnderPool()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="specific__mode_2main_8cpp_source.html#l00053">main()</a>, <a class="el" href="checks_8hpp_source.html#l00207">rpg_os::resolveAdditiveD20()</a>, <a class="el" href="checks_8hpp_source.html#l00356">rpg_os::resolveAttackVsDefense()</a>, <a class="el" href="checks_8hpp_source.html#l00434">rpg_os::resolveOpposedRollUnderD100()</a>, <a class="el" href="checks_8hpp_source.html#l00468">rpg_os::resolveResistanceRoll()</a>, <a class="el" href="checks_8hpp_source.html#l00399">rpg_os::resolveRollUnderD100()</a>, <a class="el" href="checks_8hpp_source.html#l00245">rpg_os::resolveRollUnderD20()</a>, and <a class="el" href="checks_8hpp_source.html#l00297">rpg_os::resolveTripleRollUnderPool()</a>.</p>
 
 </div>
 </div>
@@ -305,9 +304,28 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>For pool checks (e.g. DSA 3d20 talent checks): points left over after compensating attribute overshoots. Zero for non-pool checks. </p>
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00082">82</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00100">100</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="specific__mode_2main_8cpp_source.html#l00053">main()</a>, and <a class="el" href="checks_8hpp_source.html#l00246">rpg_os::resolveTripleRollUnderPool()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="specific__mode_2main_8cpp_source.html#l00053">main()</a>, and <a class="el" href="checks_8hpp_source.html#l00297">rpg_os::resolveTripleRollUnderPool()</a>.</p>
+
+</div>
+</div>
+<a id="a1ce854b3b26d5ab727550b2f732293b4" name="a1ce854b3b26d5ab727550b2f732293b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ce854b3b26d5ab727550b2f732293b4">&#9670;&#160;</a></span>successLevel</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacerpg__os.html#a0dc66a7ae36ef58a210fec7c99826700">SuccessLevel</a> rpg_os::CheckResult::successLevel {<a class="el" href="namespacerpg__os.html#a0dc66a7ae36ef58a210fec7c99826700ae139a585510a502bbf1841cf589f5086">SuccessLevel::Failure</a>}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Level of success of a percentile (d100) roll-under check (BRP). Fail for every other mechanism; only <code>RollUnderD100</code>, <code>OpposedRollUnderD100</code> and <code>ResistanceRoll</code> fill it in. </p>
+
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00108">108</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="checks_8hpp_source.html#l00434">rpg_os::resolveOpposedRollUnderD100()</a>, <a class="el" href="checks_8hpp_source.html#l00468">rpg_os::resolveResistanceRoll()</a>, and <a class="el" href="checks_8hpp_source.html#l00399">rpg_os::resolveRollUnderD100()</a>.</p>
 
 </div>
 </div>

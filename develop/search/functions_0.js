@@ -8,9 +8,11 @@ var searchData=
   ['apcolumnc_5',['apColumnC',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#aefa885c44f09219e15dfaeebeae686d3',1,'rpg_os::generated::tde5e::Character']]],
   ['apcolumnd_6',['apColumnD',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a330ca8c94867725b90ac9bd3951b6cc5',1,'rpg_os::generated::tde5e::Character']]],
   ['apcolumne_7',['apColumnE',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#ae723e53a6beb6555f91317800619f762',1,'rpg_os::generated::tde5e::Character']]],
-  ['applydamage_8',['applyDamage',['../classrpg__os_1_1RulesetEngine.html#abaf7d31b22c7e134079d1c03aa20be2e',1,'rpg_os::RulesetEngine']]],
-  ['applymodifierpipeline_9',['applyModifierPipeline',['../namespacerpg__os.html#a87ad4f8cf7886eca2e27591884ef2bb9',1,'rpg_os']]],
-  ['armorclass_10',['armorClass',['../classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#a2ca7e51091ecf76196cf510d625f052b',1,'rpg_os::generated::dnd5e::Character']]],
-  ['attackonce_11',['attackOnce',['../namespacerpg__os_1_1detail.html#a49b71459ad1cd47e7238a85092c6163f',1,'rpg_os::detail']]],
-  ['attackswordssr6_12',['attackSwordsSr6',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a80275e13d05f747681a3256f3f784395',1,'rpg_os::generated::tde5e::Character']]]
+  ['appearancex5_8',['appearanceX5',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#ae8c2104cec4db21d2c80f597e89e56e9',1,'rpg_os::generated::brp_ugc::Character']]],
+  ['applydamage_9',['applyDamage',['../classrpg__os_1_1RulesetEngine.html#abaf7d31b22c7e134079d1c03aa20be2e',1,'rpg_os::RulesetEngine']]],
+  ['applymodifierpipeline_10',['applyModifierPipeline',['../namespacerpg__os.html#a87ad4f8cf7886eca2e27591884ef2bb9',1,'rpg_os']]],
+  ['armorclass_11',['armorClass',['../classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#a2ca7e51091ecf76196cf510d625f052b',1,'rpg_os::generated::dnd5e::Character']]],
+  ['attack_12',['attack',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a33351f1f684178ff743fb790761a3ac4',1,'rpg_os::generated::brp_ugc::Character']]],
+  ['attackonce_13',['attackOnce',['../namespacerpg__os_1_1detail.html#a49b71459ad1cd47e7238a85092c6163f',1,'rpg_os::detail']]],
+  ['attackswordssr6_14',['attackSwordsSr6',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a80275e13d05f747681a3256f3f784395',1,'rpg_os::generated::tde5e::Character']]]
 ];

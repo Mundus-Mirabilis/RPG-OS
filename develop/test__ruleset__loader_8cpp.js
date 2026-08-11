@@ -16,6 +16,7 @@ var test__ruleset__loader_8cpp =
     [ "TEST_CASE", "test__ruleset__loader_8cpp.html#a682a4ea161d0f89b2dbf118f5d077fc4", null ],
     [ "TEST_CASE", "test__ruleset__loader_8cpp.html#a0b7753e069bcd1682ea93b96ecb1f702", null ],
     [ "TEST_CASE", "test__ruleset__loader_8cpp.html#a8fadc3d1a8321d063a6c77f92cd546d2", null ],
+    [ "TEST_CASE", "test__ruleset__loader_8cpp.html#ab2d46b52814f048e6c974e97fa160f42", null ],
     [ "TEST_CASE", "test__ruleset__loader_8cpp.html#acb283d4516ef44327a979b514660a7f8", null ],
     [ "TEST_CASE", "test__ruleset__loader_8cpp.html#a1a8c326d820165135102f322671182d7", null ],
     [ "TEST_CASE", "test__ruleset__loader_8cpp.html#af83151dd484b937bd62f158adfc78515", null ]

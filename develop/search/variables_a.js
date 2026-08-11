@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['law_0',['law',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a92b3a22a09fec9c3229aa600f3bab769',1,'rpg_os::generated::tde5e::Character']]],
-  ['level_1',['level',['../classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#af8e055b2a983c16ef2ad6a81004393d3',1,'rpg_os::generated::dnd5e::Character']]],
-  ['licence_2',['licence',['../classrpg__os_1_1Ruleset.html#a4ce985e69e7f8e09d68b6f1c1d556412',1,'rpg_os::Ruleset']]],
-  ['lifepoints_3',['lifePoints',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a0a7cbefc410619b13e6b3f38d8d43dc6',1,'rpg_os::generated::tde5e::Character']]],
-  ['logdescription_4',['logDescription',['../structrpg__os_1_1CheckResult.html#a831ae9f7244cdba1785d2034fbd7be8b',1,'rpg_os::CheckResult']]]
+  ['karmapoints_0',['karmaPoints',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#af5e97d8981c6800c6e49bff5d885decb',1,'rpg_os::generated::tde5e::Character']]],
+  ['key_1',['key',['../structrpg__os_1_1CostTable_1_1Entry.html#a93293292280a3462f2189e4d21acdcce',1,'rpg_os::CostTable::Entry']]],
+  ['kind_2',['kind',['../structrpg__os_1_1CheckConfig.html#acc0103cff9a53b18a828f62586f39adb',1,'rpg_os::CheckConfig']]],
+  ['knowledge_3',['knowledge',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a96a0eacd7bf96e8a6441bfd7db0039b9',1,'rpg_os::generated::brp_ugc::Character']]]
 ];

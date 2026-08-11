@@ -49,8 +49,8 @@ var NAVTREE =
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", "functions_dup" ],
-        [ "Functions", "functions_func.html", null ],
-        [ "Variables", "functions_vars.html", null ],
+        [ "Functions", "functions_func.html", "functions_func" ],
+        [ "Variables", "functions_vars.html", "functions_vars" ],
         [ "Typedefs", "functions_type.html", null ],
         [ "Enumerations", "functions_enum.html", null ]
       ] ]
@@ -69,10 +69,12 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#a370eb83e5314f950892337814f439118",
-"classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a8d097e9055d6726563a86d80cf5ca28e",
-"math_8hpp_source.html",
-"structrpg__os_1_1Modifier.html"
+"classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a0f0642af1f0fbad83e14b9ac46f0810c",
+"classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#abb4f70a9a3d3aa6b26b7d918b2d4fc3a",
+"classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a18f4ab5144d951b10f0c17b2964f2b71",
+"classrpg__os_1_1generated_1_1tde5e_1_1Character.html#ae620a299152872c050d537de22998e8b",
+"namespacerpg__os.html#ab870da3d65c79d59dad5920efc43dc65ada1d569c5bad0cd874e498597871cbef",
+"structrpg__os_1_1SkillDef.html#a0ede916a2b7d233fb3a9ab814468671c"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

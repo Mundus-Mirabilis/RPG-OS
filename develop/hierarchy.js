@@ -1,6 +1,7 @@
 var hierarchy =
 [
     [ "rpg_os::AttributeDef", "structrpg__os_1_1AttributeDef.html", null ],
+    [ "rpg_os::generated::brp_ugc::Character", "classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html", null ],
     [ "rpg_os::generated::dnd5e::Character", "classrpg__os_1_1generated_1_1dnd5e_1_1Character.html", null ],
     [ "rpg_os::generated::tde5e::Character", "classrpg__os_1_1generated_1_1tde5e_1_1Character.html", null ],
     [ "rpg_os::CheckConfig", "structrpg__os_1_1CheckConfig.html", null ],

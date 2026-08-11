@@ -6,10 +6,14 @@ var searchData=
   ['deception_3',['deception',['../classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#a21a2ab5e5327c45d40ba543338746001',1,'rpg_os::generated::dnd5e::Character']]],
   ['defaultvalue_4',['defaultvalue',['../structrpg__os_1_1AttributeDef.html#aa47acfcdcafd10d470847108a5e13666',1,'rpg_os::AttributeDef::defaultValue'],['../structrpg__os_1_1SkillDef.html#a83e250eabe550b521de93f193e54d11b',1,'rpg_os::SkillDef::defaultValue']]],
   ['defensevalue_5',['defenseValue',['../structrpg__os_1_1CombatantSpec.html#a6ecdb0a342701fc5388f40503729e69e',1,'rpg_os::CombatantSpec']]],
-  ['derivedstats_6',['derivedStats',['../classrpg__os_1_1Ruleset.html#a1656677e20c57e3f6f8c5182e757e0f1',1,'rpg_os::Ruleset']]],
-  ['dexterity_7',['dexterity',['../classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#a90c5a3fd31beb57ed9f10e1419c6a61d',1,'rpg_os::generated::dnd5e::Character::dexterity'],['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a96acff8550e4d76d3d17e605b2ddf682',1,'rpg_os::generated::tde5e::Character::dexterity']]],
-  ['diceexpression_8',['diceExpression',['../structrpg__os_1_1CheckConfig.html#a8fbead5ff84d507659b57a31ef83ac2f',1,'rpg_os::CheckConfig']]],
-  ['difficulty_9',['difficulty',['../structrpg__os_1_1CheckParams.html#add4b5afa3e596f195192a05f52080124',1,'rpg_os::CheckParams']]],
-  ['disguise_10',['disguise',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a8678ba0aea81ddf131b584b4e758792d',1,'rpg_os::generated::tde5e::Character']]],
-  ['driving_11',['driving',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a28d17144822653fedb0d901df1987574',1,'rpg_os::generated::tde5e::Character']]]
+  ['demolition_6',['demolition',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a61145c700397444746f50954fbde9895',1,'rpg_os::generated::brp_ugc::Character']]],
+  ['derivedstats_7',['derivedStats',['../classrpg__os_1_1Ruleset.html#a1656677e20c57e3f6f8c5182e757e0f1',1,'rpg_os::Ruleset']]],
+  ['dexterity_8',['dexterity',['../classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#a90c5a3fd31beb57ed9f10e1419c6a61d',1,'rpg_os::generated::dnd5e::Character::dexterity'],['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a96acff8550e4d76d3d17e605b2ddf682',1,'rpg_os::generated::tde5e::Character::dexterity'],['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#aec5e70e4e09d3ccf1946d2fbbead3057',1,'rpg_os::generated::brp_ugc::Character::dexterity']]],
+  ['diceexpression_9',['diceExpression',['../structrpg__os_1_1CheckConfig.html#a8fbead5ff84d507659b57a31ef83ac2f',1,'rpg_os::CheckConfig']]],
+  ['difficulty_10',['difficulty',['../structrpg__os_1_1CheckParams.html#add4b5afa3e596f195192a05f52080124',1,'rpg_os::CheckParams']]],
+  ['difficultymode_11',['difficultyMode',['../structrpg__os_1_1CheckParams.html#a83e050b3af93b1966e23b981196b386b',1,'rpg_os::CheckParams']]],
+  ['disguise_12',['disguise',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#ad53258e9f3d6c822ffad897c56dfc28e',1,'rpg_os::generated::brp_ugc::Character::disguise'],['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a8678ba0aea81ddf131b584b4e758792d',1,'rpg_os::generated::tde5e::Character::disguise']]],
+  ['dodge_13',['dodge',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#ae634658dc62bc7d4dad02c179486d0cd',1,'rpg_os::generated::brp_ugc::Character']]],
+  ['drive_14',['drive',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a50c495677073f7c4ff4b17b865ade155',1,'rpg_os::generated::brp_ugc::Character']]],
+  ['driving_15',['driving',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a28d17144822653fedb0d901df1987574',1,'rpg_os::generated::tde5e::Character']]]
 ];

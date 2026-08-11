@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['variance_0',['Variance',['../namespacerpg__os.html#ab870da3d65c79d59dad5920efc43dc65',1,'rpg_os']]]
+  ['modifiertype_0',['ModifierType',['../namespacerpg__os.html#aab9c315b59a58b0733ac5a30a02da3f2',1,'rpg_os']]]
 ];

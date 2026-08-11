@@ -136,12 +136,14 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a8f829df8b235f701820b970834c21a3d" id="r_a8f829df8b235f701820b970834c21a3d"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrpg__os_1_1CheckParams.html#a8f829df8b235f701820b970834c21a3d">situationalModifier</a> {0}</td></tr>
 <tr class="memdesc:a8f829df8b235f701820b970834c21a3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extra flat modifier added to the d20 total (AdditiveD20) or the pool.  <br /></td></tr>
 <tr class="separator:a8f829df8b235f701820b970834c21a3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83e050b3af93b1966e23b981196b386b" id="r_a83e050b3af93b1966e23b981196b386b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753d">DifficultyMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrpg__os_1_1CheckParams.html#a83e050b3af93b1966e23b981196b386b">difficultyMode</a> {<a class="el" href="namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753dab1897515d548a960afe49ecf66a29021">DifficultyMode::Average</a>}</td></tr>
+<tr class="separator:a83e050b3af93b1966e23b981196b386b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Per-call inputs shared by both modes.</p>
-<dl class="section user"><dt>Why separate per-call inputs from the config?</dt><dd>The config says <em>how</em> a check is resolved (which mechanism, which stats); this struct carries the values that change <em>per</em> invocation — the difficulty imposed by the situation, and situational modifiers such as cover or a bonus die. Keeping them apart means the config can be built once and reused across many checks with different difficulties. </dd></dl>
+<dl class="section user"><dt>Why separate per-call inputs from the config?</dt><dd>The config says <em>how</em> a check is resolved (which mechanism, which stats); this struct carries the values that change <em>per</em> invocation — the difficulty imposed by the situation, and situational modifiers. Keeping them apart means the config can be built once and reused across many checks with different difficulties. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="checks_8hpp_source.html#l00114">114</a> of file <a class="el" href="checks_8hpp_source.html">checks.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="checks_8hpp_source.html#l00134">134</a> of file <a class="el" href="checks_8hpp_source.html">checks.hpp</a>.</p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="add4b5afa3e596f195192a05f52080124" name="add4b5afa3e596f195192a05f52080124"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#add4b5afa3e596f195192a05f52080124">&#9670;&#160;</a></span>difficulty</h2>
@@ -156,9 +158,28 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>AdditiveD20: the DC when config.targetStat is empty; RollUnderD20: the attribute modifier; TripleRollUnderPool / AttackVsDefense: the modifier subtracted from the pool / attack value. </p>
 
-<p class="definition">Definition at line <a class="el" href="checks_8hpp_source.html#l00118">118</a> of file <a class="el" href="checks_8hpp_source.html">checks.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="checks_8hpp_source.html#l00138">138</a> of file <a class="el" href="checks_8hpp_source.html">checks.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="checks_8hpp_source.html#l00156">rpg_os::resolveAdditiveD20()</a>, <a class="el" href="checks_8hpp_source.html#l00305">rpg_os::resolveAttackVsDefense()</a>, <a class="el" href="checks_8hpp_source.html#l00194">rpg_os::resolveRollUnderD20()</a>, <a class="el" href="checks_8hpp_source.html#l00246">rpg_os::resolveTripleRollUnderPool()</a>, <a class="el" href="test__checks_8cpp_source.html#l00114">TEST_CASE()</a>, <a class="el" href="test__engine_8cpp_source.html#l00129">TEST_CASE()</a>, <a class="el" href="test__checks_8cpp_source.html#l00224">TEST_CASE()</a>, <a class="el" href="test__checks_8cpp_source.html#l00241">TEST_CASE()</a>, <a class="el" href="test__checks_8cpp_source.html#l00154">TEST_CASE()</a>, and <a class="el" href="test__checks_8cpp_source.html#l00178">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="checks_8hpp_source.html#l00207">rpg_os::resolveAdditiveD20()</a>, <a class="el" href="checks_8hpp_source.html#l00356">rpg_os::resolveAttackVsDefense()</a>, <a class="el" href="checks_8hpp_source.html#l00434">rpg_os::resolveOpposedRollUnderD100()</a>, <a class="el" href="checks_8hpp_source.html#l00468">rpg_os::resolveResistanceRoll()</a>, <a class="el" href="checks_8hpp_source.html#l00399">rpg_os::resolveRollUnderD100()</a>, <a class="el" href="checks_8hpp_source.html#l00245">rpg_os::resolveRollUnderD20()</a>, <a class="el" href="checks_8hpp_source.html#l00297">rpg_os::resolveTripleRollUnderPool()</a>, <a class="el" href="test__checks_8cpp_source.html#l00138">TEST_CASE()</a>, <a class="el" href="test__engine_8cpp_source.html#l00129">TEST_CASE()</a>, <a class="el" href="test__checks_8cpp_source.html#l00437">TEST_CASE()</a>, <a class="el" href="test__checks_8cpp_source.html#l00248">TEST_CASE()</a>, <a class="el" href="test__checks_8cpp_source.html#l00265">TEST_CASE()</a>, <a class="el" href="test__checks_8cpp_source.html#l00178">TEST_CASE()</a>, and <a class="el" href="test__checks_8cpp_source.html#l00202">TEST_CASE()</a>.</p>
+
+</div>
+</div>
+<a id="a83e050b3af93b1966e23b981196b386b" name="a83e050b3af93b1966e23b981196b386b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83e050b3af93b1966e23b981196b386b">&#9670;&#160;</a></span>difficultyMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753d">DifficultyMode</a> rpg_os::CheckParams::difficultyMode {<a class="el" href="namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753dab1897515d548a960afe49ecf66a29021">DifficultyMode::Average</a>}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>BRP difficulty level (Easy doubles the stat, Difficult halves it). Only the d100 roll-under kind uses it; see <a class="el" href="namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753d">DifficultyMode</a>. </p>
+
+<p class="definition">Definition at line <a class="el" href="checks_8hpp_source.html#l00143">143</a> of file <a class="el" href="checks_8hpp_source.html">checks.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="checks_8hpp_source.html#l00399">rpg_os::resolveRollUnderD100()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00242">TEST_CASE()</a>, and <a class="el" href="test__checks_8cpp_source.html#l00457">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -176,9 +197,9 @@ Public Attributes</h2></td></tr>
 
 <p>Extra flat modifier added to the d20 total (AdditiveD20) or the pool. </p>
 
-<p class="definition">Definition at line <a class="el" href="checks_8hpp_source.html#l00120">120</a> of file <a class="el" href="checks_8hpp_source.html">checks.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="checks_8hpp_source.html#l00140">140</a> of file <a class="el" href="checks_8hpp_source.html">checks.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="checks_8hpp_source.html#l00156">rpg_os::resolveAdditiveD20()</a>, and <a class="el" href="checks_8hpp_source.html#l00246">rpg_os::resolveTripleRollUnderPool()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="checks_8hpp_source.html#l00207">rpg_os::resolveAdditiveD20()</a>, and <a class="el" href="checks_8hpp_source.html#l00297">rpg_os::resolveTripleRollUnderPool()</a>.</p>
 
 </div>
 </div>
