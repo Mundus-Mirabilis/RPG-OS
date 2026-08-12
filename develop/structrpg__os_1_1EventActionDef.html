@@ -137,14 +137,17 @@ Collaboration diagram for rpg_os::EventActionDef:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a2f5d07757f5b90d4c9da4324607ee5d3" id="r_a2f5d07757f5b90d4c9da4324607ee5d3"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrpg__os_1_1EventActionDef.html#a2f5d07757f5b90d4c9da4324607ee5d3">type</a></td></tr>
-<tr class="memdesc:a2f5d07757f5b90d4c9da4324607ee5d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">"modify_event_damage" | "consume_resource" | "apply_condition"  <br /></td></tr>
+<tr class="memdesc:a2f5d07757f5b90d4c9da4324607ee5d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">the action kind (see the file doc comment)  <br /></td></tr>
 <tr class="separator:a2f5d07757f5b90d4c9da4324607ee5d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac71af0ca343d7c1527418a634343788d" id="r_ac71af0ca343d7c1527418a634343788d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrpg__os_1_1EventActionDef.html#ac71af0ca343d7c1527418a634343788d">resource</a></td></tr>
 <tr class="memdesc:ac71af0ca343d7c1527418a634343788d"><td class="mdescLeft">&#160;</td><td class="mdescRight">consume_resource: which resource  <br /></td></tr>
 <tr class="separator:ac71af0ca343d7c1527418a634343788d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a891457979528b9f2be0ef37d7cf0939e" id="r_a891457979528b9f2be0ef37d7cf0939e"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrpg__os_1_1EventActionDef.html#a891457979528b9f2be0ef37d7cf0939e">amount</a> {0}</td></tr>
-<tr class="memdesc:a891457979528b9f2be0ef37d7cf0939e"><td class="mdescLeft">&#160;</td><td class="mdescRight">consume_resource: constant amount  <br /></td></tr>
+<tr class="memdesc:a891457979528b9f2be0ef37d7cf0939e"><td class="mdescLeft">&#160;</td><td class="mdescRight">amount: consumed/currency/XP amount, or item quantity  <br /></td></tr>
 <tr class="separator:a891457979528b9f2be0ef37d7cf0939e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb08e2b86993119d4f7631c2aab916fa" id="r_afb08e2b86993119d4f7631c2aab916fa"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrpg__os_1_1EventActionDef.html#afb08e2b86993119d4f7631c2aab916fa">item</a></td></tr>
+<tr class="memdesc:afb08e2b86993119d4f7631c2aab916fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">gain_item / remove_item: the item id  <br /></td></tr>
+<tr class="separator:afb08e2b86993119d4f7631c2aab916fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6105d859a55d696af442db901e1cd84e" id="r_a6105d859a55d696af442db901e1cd84e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrpg__os_1_1EventActionDef.html#a6105d859a55d696af442db901e1cd84e">formulaText</a></td></tr>
 <tr class="memdesc:a6105d859a55d696af442db901e1cd84e"><td class="mdescLeft">&#160;</td><td class="mdescRight">modify_event_damage: damage expression  <br /></td></tr>
 <tr class="separator:a6105d859a55d696af442db901e1cd84e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -163,9 +166,9 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>One action inside an event trigger.</p>
-<dl class="section user"><dt>Why one struct with all fields instead of per-type structs?</dt><dd>The action types are few ("modify_event_damage", "consume_resource", "apply_condition") and each uses only a couple of fields. One struct with the union of fields keeps the loader, the engine's executor, and the code generator reading from the same shape — at the cost of a few unused fields per action, which is negligible for ruleset-sized data. </dd></dl>
+<dl class="section user"><dt>Why one struct with all fields instead of per-type structs?</dt><dd>The action types are few ("modify_event_damage", "consume_resource", "apply_condition", plus the bookkeeping actions "gain_item", "remove_item", "gain_currency", "spend_currency", "gain_xp") and each uses only a couple of fields. One struct with the union of fields keeps the loader, the engine's executor, and the code generator reading from the same shape — at the cost of a few unused fields per action, which is negligible for ruleset-sized data. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00134">134</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00138">138</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="a891457979528b9f2be0ef37d7cf0939e" name="a891457979528b9f2be0ef37d7cf0939e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a891457979528b9f2be0ef37d7cf0939e">&#9670;&#160;</a></span>amount</h2>
@@ -179,9 +182,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>consume_resource: constant amount </p>
+<p>amount: consumed/currency/XP amount, or item quantity </p>
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00137">137</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00141">141</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
 </div>
 </div>
@@ -199,7 +202,7 @@ Public Attributes</h2></td></tr>
 
 <p>apply_condition: condition id </p>
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00140">140</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00145">145</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
 </div>
 </div>
@@ -217,7 +220,7 @@ Public Attributes</h2></td></tr>
 
 <p>parsed damage expression </p>
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00139">139</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00144">144</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
 </div>
 </div>
@@ -235,7 +238,25 @@ Public Attributes</h2></td></tr>
 
 <p>modify_event_damage: damage expression </p>
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00138">138</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00143">143</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+
+</div>
+</div>
+<a id="afb08e2b86993119d4f7631c2aab916fa" name="afb08e2b86993119d4f7631c2aab916fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb08e2b86993119d4f7631c2aab916fa">&#9670;&#160;</a></span>item</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string rpg_os::EventActionDef::item</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>gain_item / remove_item: the item id </p>
+
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00142">142</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
 </div>
 </div>
@@ -253,7 +274,7 @@ Public Attributes</h2></td></tr>
 
 <p>consume_resource: which resource </p>
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00136">136</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00140">140</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
 </div>
 </div>
@@ -271,7 +292,7 @@ Public Attributes</h2></td></tr>
 
 <p>parsed stack count expression </p>
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00142">142</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00147">147</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
 </div>
 </div>
@@ -289,7 +310,7 @@ Public Attributes</h2></td></tr>
 
 <p>apply_condition: stack count expression </p>
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00141">141</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00146">146</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
 </div>
 </div>
@@ -305,9 +326,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>"modify_event_damage" | "consume_resource" | "apply_condition" </p>
+<p>the action kind (see the file doc comment) </p>
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00135">135</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00139">139</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
 </div>
 </div>

@@ -1,6 +1,9 @@
 var hierarchy =
 [
+    [ "rpg_os::ActiveEffect", "structrpg__os_1_1ActiveEffect.html", null ],
+    [ "rpg_os::Advancement", "classrpg__os_1_1Advancement.html", null ],
     [ "rpg_os::RulesetEngine::AfflictionResult", "structrpg__os_1_1RulesetEngine_1_1AfflictionResult.html", null ],
+    [ "rpg_os::DynamicEntity::AppliedAffliction", "structrpg__os_1_1DynamicEntity_1_1AppliedAffliction.html", null ],
     [ "rpg_os::AttributeDef", "structrpg__os_1_1AttributeDef.html", null ],
     [ "rpg_os::generated::brp_ugc::Character", "classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html", null ],
     [ "rpg_os::generated::dnd5e::Character", "classrpg__os_1_1generated_1_1dnd5e_1_1Character.html", null ],
@@ -13,12 +16,20 @@ var hierarchy =
     [ "rpg_os::CombatantSpec", "structrpg__os_1_1CombatantSpec.html", null ],
     [ "rpg_os::CostTable", "classrpg__os_1_1CostTable.html", null ],
     [ "rpg_os::CostTableDef", "structrpg__os_1_1CostTableDef.html", null ],
+    [ "rpg_os::CurrencySystem", "structrpg__os_1_1CurrencySystem.html", null ],
     [ "rpg_os::DefaultRandom", "classrpg__os_1_1DefaultRandom.html", null ],
+    [ "rpg_os::Denomination", "structrpg__os_1_1Denomination.html", null ],
     [ "rpg_os::DerivedStatDef", "structrpg__os_1_1DerivedStatDef.html", null ],
     [ "rpg_os::DiceExpression", "classrpg__os_1_1DiceExpression.html", null ],
     [ "rpg_os::DieSpec", "structrpg__os_1_1DieSpec.html", null ],
     [ "rpg_os::DynamicEntity", "classrpg__os_1_1DynamicEntity.html", null ],
+    [ "rpg_os::EffectiveStatProvider", "structrpg__os_1_1EffectiveStatProvider.html", null ],
+    [ "rpg_os::RulesetEngine::EffectsResult", "structrpg__os_1_1RulesetEngine_1_1EffectsResult.html", null ],
+    [ "rpg_os::EffectTimeline", "classrpg__os_1_1EffectTimeline.html", null ],
+    [ "rpg_os::EncumbranceConfig", "structrpg__os_1_1EncumbranceConfig.html", null ],
     [ "rpg_os::CostTable::Entry", "structrpg__os_1_1CostTable_1_1Entry.html", null ],
+    [ "rpg_os::Equipment", "classrpg__os_1_1Equipment.html", null ],
+    [ "rpg_os::RulesetEngine::EquipResult", "structrpg__os_1_1RulesetEngine_1_1EquipResult.html", null ],
     [ "rpg_os::EvalContext", "classrpg__os_1_1EvalContext.html", [
       [ "rpg_os::EntityContext", "classrpg__os_1_1EntityContext.html", null ]
     ] ],
@@ -28,8 +39,14 @@ var hierarchy =
     [ "rpg_os::EventTriggerDef", "structrpg__os_1_1EventTriggerDef.html", null ],
     [ "rpg_os::Expression", "classrpg__os_1_1Expression.html", null ],
     [ "rpg_os::FightOutcome", "structrpg__os_1_1FightOutcome.html", null ],
+    [ "rpg_os::GameSession", "classrpg__os_1_1GameSession.html", null ],
+    [ "rpg_os::Inventory", "classrpg__os_1_1Inventory.html", null ],
+    [ "rpg_os::ItemInstance", "structrpg__os_1_1ItemInstance.html", null ],
+    [ "rpg_os::EncumbranceConfig::Level", "structrpg__os_1_1EncumbranceConfig_1_1Level.html", null ],
+    [ "rpg_os::LevelUp", "structrpg__os_1_1LevelUp.html", null ],
     [ "MockStats", "structMockStats.html", null ],
     [ "rpg_os::Modifier", "structrpg__os_1_1Modifier.html", null ],
+    [ "rpg_os::Money", "classrpg__os_1_1Money.html", null ],
     [ "rpg_os::NullStatProvider", "structrpg__os_1_1NullStatProvider.html", null ],
     [ "rpg_os::ResourcePool", "structrpg__os_1_1ResourcePool.html", null ],
     [ "rpg_os::ResourcePoolDef", "structrpg__os_1_1ResourcePoolDef.html", null ],
@@ -38,5 +55,9 @@ var hierarchy =
     [ "rpg_os::RulesetLoader", "classrpg__os_1_1RulesetLoader.html", null ],
     [ "ScriptedRng", "structScriptedRng.html", null ],
     [ "rpg_os::SkillDef", "structrpg__os_1_1SkillDef.html", null ],
-    [ "rpg_os::RulesetEngine::SpellResult", "structrpg__os_1_1RulesetEngine_1_1SpellResult.html", null ]
+    [ "rpg_os::Spellbook", "classrpg__os_1_1Spellbook.html", null ],
+    [ "rpg_os::SpellcastingConfig", "structrpg__os_1_1SpellcastingConfig.html", null ],
+    [ "rpg_os::RulesetEngine::SpellResult", "structrpg__os_1_1RulesetEngine_1_1SpellResult.html", null ],
+    [ "rpg_os::Weight", "structrpg__os_1_1Weight.html", null ],
+    [ "rpg_os::WorldState", "classrpg__os_1_1WorldState.html", null ]
 ];

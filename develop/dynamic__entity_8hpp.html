@@ -130,16 +130,26 @@ $(document).ready(function(){initNavTree('dynamic__entity_8hpp.html',''); initRe
 
 <p>Dynamic entity (universal mode).  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;cstdint&gt;</code><br />
+<div class="textblock"><code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;cstdint&gt;</code><br />
 <code>#include &lt;<a class="el" href="json_8hpp_source.html">rpg_os/common/json.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="advancement_8hpp_source.html">rpg_os/core/advancement.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="effects_8hpp_source.html">rpg_os/core/effects.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="entity_8hpp_source.html">rpg_os/core/entity.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="equipment_8hpp_source.html">rpg_os/core/equipment.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="inventory_8hpp_source.html">rpg_os/core/inventory.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="modifier_8hpp_source.html">rpg_os/core/modifier.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="money_8hpp_source.html">rpg_os/core/money.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="spellbook_8hpp_source.html">rpg_os/core/spellbook.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="variance_8hpp_source.html">rpg_os/core/variance.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="expression_8hpp_source.html">rpg_os/universal/expression.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="ruleset__loader_8hpp_source.html">rpg_os/universal/ruleset_loader.hpp</a>&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;string_view&gt;</code><br />
 <code>#include &lt;unordered_map&gt;</code><br />
+<code>#include &lt;unordered_set&gt;</code><br />
 <code>#include &lt;utility&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for dynamic_entity.hpp:</div>
 <div class="dyncontent">
@@ -159,6 +169,11 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1DynamicEntity.html">rpg_os::DynamicEntity</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrpg__os_1_1DynamicEntity_1_1AppliedAffliction.html">rpg_os::DynamicEntity::AppliedAffliction</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Active afflictions (poisons / diseases / curses) applied to the sheet.  <a href="structrpg__os_1_1DynamicEntity_1_1AppliedAffliction.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrpg__os_1_1EffectiveStatProvider.html">rpg_os::EffectiveStatProvider</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
@@ -169,6 +184,8 @@ Namespaces</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:a18570347f6206c4d0f43d8f95a4a035e" id="r_a18570347f6206c4d0f43d8f95a4a035e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerpg__os.html#a18570347f6206c4d0f43d8f95a4a035e">rpg_os::readJsonNumber</a> (const <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &amp;obj, std::string_view key, double &amp;out)</td></tr>
 <tr class="separator:a18570347f6206c4d0f43d8f95a4a035e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a551c859ce00abc9a5aad74eb0e5035" id="r_a1a551c859ce00abc9a5aad74eb0e5035"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structrpg__os_1_1Modifier.html">Modifier</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerpg__os.html#a1a551c859ce00abc9a5aad74eb0e5035">rpg_os::parseModifierJson</a> (const <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &amp;mod)</td></tr>
+<tr class="separator:a1a551c859ce00abc9a5aad74eb0e5035"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Dynamic entity (universal mode). </p>

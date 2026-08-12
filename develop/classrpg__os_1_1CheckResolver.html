@@ -134,22 +134,22 @@ $(document).ready(function(){initNavTree('classrpg__os_1_1CheckResolver.html',''
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:af052f5ecbaec717f62d187749939d296" id="r_af052f5ecbaec717f62d187749939d296"><td class="memTemplParams" colspan="2">template&lt;StatProvider Target, RandomNumberGenerator Rng&gt; </td></tr>
-<tr class="memitem:af052f5ecbaec717f62d187749939d296"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="structrpg__os_1_1CheckResult.html">CheckResult</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1CheckResolver.html#af052f5ecbaec717f62d187749939d296">resolve</a> (const <a class="el" href="classrpg__os_1_1Ruleset.html">Ruleset</a> &amp;ruleset, const <a class="el" href="classrpg__os_1_1DynamicEntity.html">DynamicEntity</a> &amp;actor, const Target &amp;target, std::string_view checkTypeId, const <a class="el" href="structrpg__os_1_1CheckParams.html">CheckParams</a> &amp;params, Rng &amp;rng)</td></tr>
-<tr class="separator:af052f5ecbaec717f62d187749939d296"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a748e3814be7e220c7fd87f746b4113c9" id="r_a748e3814be7e220c7fd87f746b4113c9"><td class="memTemplParams" colspan="2">template&lt;StatProvider Actor, StatProvider Target, RandomNumberGenerator Rng&gt; </td></tr>
+<tr class="memitem:a748e3814be7e220c7fd87f746b4113c9"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="structrpg__os_1_1CheckResult.html">CheckResult</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1CheckResolver.html#a748e3814be7e220c7fd87f746b4113c9">resolve</a> (const <a class="el" href="classrpg__os_1_1Ruleset.html">Ruleset</a> &amp;ruleset, const Actor &amp;actor, const Target &amp;target, std::string_view checkTypeId, const <a class="el" href="structrpg__os_1_1CheckParams.html">CheckParams</a> &amp;params, Rng &amp;rng)</td></tr>
+<tr class="separator:a748e3814be7e220c7fd87f746b4113c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Resolves checks by ruleset-declared name. </p>
 
 <p class="definition">Definition at line <a class="el" href="check__resolver_8hpp_source.html#l00032">32</a> of file <a class="el" href="check__resolver_8hpp_source.html">check_resolver.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="af052f5ecbaec717f62d187749939d296" name="af052f5ecbaec717f62d187749939d296"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af052f5ecbaec717f62d187749939d296">&#9670;&#160;</a></span>resolve()</h2>
+<a id="a748e3814be7e220c7fd87f746b4113c9" name="a748e3814be7e220c7fd87f746b4113c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a748e3814be7e220c7fd87f746b4113c9">&#9670;&#160;</a></span>resolve()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;StatProvider Target, RandomNumberGenerator Rng&gt; </div>
+template&lt;StatProvider Actor, StatProvider Target, RandomNumberGenerator Rng&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -163,7 +163,7 @@ template&lt;StatProvider Target, RandomNumberGenerator Rng&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classrpg__os_1_1DynamicEntity.html">DynamicEntity</a> &amp;&#160;</td>
+          <td class="paramtype">const Actor &amp;&#160;</td>
           <td class="paramname"><em>actor</em>, </td>
         </tr>
         <tr>
@@ -207,9 +207,9 @@ template&lt;StatProvider Target, RandomNumberGenerator Rng&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="check__resolver_8hpp_source.html#l00043">43</a> of file <a class="el" href="check__resolver_8hpp_source.html">check_resolver.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ruleset__loader_8hpp_source.html#l00243">rpg_os::Ruleset::findCheckType()</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00117">rpg_os::CheckTypeDef::recipe</a>, and <a class="el" href="checks_8hpp_source.html#l00523">rpg_os::resolveCheck()</a>.</p>
+<p class="reference">References <a class="el" href="ruleset__loader_8hpp_source.html#l00294">rpg_os::Ruleset::findCheckType()</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00119">rpg_os::CheckTypeDef::recipe</a>, and <a class="el" href="checks_8hpp_source.html#l00523">rpg_os::resolveCheck()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00356">rpg_os::RulesetEngine::castSpell()</a>, and <a class="el" href="engine_8hpp_source.html#l00182">rpg_os::RulesetEngine::executeCheck()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00394">rpg_os::RulesetEngine::castSpell()</a>, <a class="el" href="engine_8hpp_source.html#l00188">rpg_os::RulesetEngine::executeCheck()</a>, and <a class="el" href="engine_8hpp_source.html#l00211">rpg_os::RulesetEngine::executeCheckEffective()</a>.</p>
 
 </div>
 </div>

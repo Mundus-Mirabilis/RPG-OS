@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['resolution_0',['Resolution',['../namespacerpg__os.html#a95eaa793f5aa7a7b28d2851594d614dc',1,'rpg_os']]]
+  ['modifiertype_0',['ModifierType',['../namespacerpg__os.html#aab9c315b59a58b0733ac5a30a02da3f2',1,'rpg_os']]]
 ];

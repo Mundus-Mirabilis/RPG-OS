@@ -153,7 +153,7 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p>A simple observer: listeners register against an <code>EventType</code> and are invoked in registration order on dispatch. Removal is by a stable handle.</p>
 <dl class="section user"><dt>Why this shape?</dt><dd>It is intentionally the smallest thing that satisfies both consumers. The universal engine needs to <em>interleave</em> its JSON-driven rule triggers with user listeners (triggers first, so user callbacks observe the final, mutated payload), and application code needs to add/remove callbacks without coupling to the engine internals. Registration-order dispatch gives predictable semantics for rules that stack (e.g. two resistances), and the handle-based removal avoids the dangling-iterator pitfalls of removing by callback identity. The implementation is header-only and allocation-light so the bus can be embedded in <a class="el" href="classrpg__os_1_1RulesetEngine.html">RulesetEngine</a> without extra plumbing. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="event__system_8hpp_source.html#l00116">116</a> of file <a class="el" href="event__system_8hpp_source.html">event_system.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event__system_8hpp_source.html#l00137">137</a> of file <a class="el" href="event__system_8hpp_source.html">event_system.hpp</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a083cdf91b0b9ea319a958c2760532b4f" name="a083cdf91b0b9ea319a958c2760532b4f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a083cdf91b0b9ea319a958c2760532b4f">&#9670;&#160;</a></span>Callback</h2>
@@ -169,7 +169,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Listener callback signature. </p>
 
-<p class="definition">Definition at line <a class="el" href="event__system_8hpp_source.html#l00119">119</a> of file <a class="el" href="event__system_8hpp_source.html">event_system.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event__system_8hpp_source.html#l00140">140</a> of file <a class="el" href="event__system_8hpp_source.html">event_system.hpp</a>.</p>
 
 </div>
 </div>
@@ -209,9 +209,9 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Registers a listener for <code>type</code> and returns a stable handle for removal. The handle is monotonically increasing, so a listener can never be mistaken for a different one — even after others were removed. </p>
 
-<p class="definition">Definition at line <a class="el" href="event__system_8hpp_source.html#l00124">124</a> of file <a class="el" href="event__system_8hpp_source.html">event_system.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event__system_8hpp_source.html#l00145">145</a> of file <a class="el" href="event__system_8hpp_source.html">event_system.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00495">rpg_os::RulesetEngine::registerEventListener()</a>, <a class="el" href="test__event__system_8cpp_source.html#l00018">TEST_CASE()</a>, <a class="el" href="test__event__system_8cpp_source.html#l00029">TEST_CASE()</a>, <a class="el" href="test__event__system_8cpp_source.html#l00047">TEST_CASE()</a>, and <a class="el" href="test__event__system_8cpp_source.html#l00059">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="test__event__system_8cpp_source.html#l00018">TEST_CASE()</a>, <a class="el" href="test__event__system_8cpp_source.html#l00029">TEST_CASE()</a>, <a class="el" href="test__event__system_8cpp_source.html#l00047">TEST_CASE()</a>, and <a class="el" href="test__event__system_8cpp_source.html#l00059">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -250,7 +250,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Invokes all listeners registered for <code>type</code> in registration order. Dispatch is <code>const:</code> firing an event must not be able to modify the bus itself, only the payload, so concurrent readers of the listener set stay well-defined. </p>
 
-<p class="definition">Definition at line <a class="el" href="event__system_8hpp_source.html#l00150">150</a> of file <a class="el" href="event__system_8hpp_source.html">event_system.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event__system_8hpp_source.html#l00171">171</a> of file <a class="el" href="event__system_8hpp_source.html">event_system.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="test__event__system_8cpp_source.html#l00070">TEST_CASE()</a>, <a class="el" href="test__event__system_8cpp_source.html#l00018">TEST_CASE()</a>, <a class="el" href="test__event__system_8cpp_source.html#l00029">TEST_CASE()</a>, <a class="el" href="test__event__system_8cpp_source.html#l00047">TEST_CASE()</a>, and <a class="el" href="test__event__system_8cpp_source.html#l00059">TEST_CASE()</a>.</p>
 
@@ -282,7 +282,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Number of listeners for a type (diagnostics / tests). </p>
 
-<p class="definition">Definition at line <a class="el" href="event__system_8hpp_source.html#l00161">161</a> of file <a class="el" href="event__system_8hpp_source.html">event_system.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event__system_8hpp_source.html#l00182">182</a> of file <a class="el" href="event__system_8hpp_source.html">event_system.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="test__event__system_8cpp_source.html#l00018">TEST_CASE()</a>.</p>
 
@@ -313,9 +313,9 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Removes a previously registered listener; returns false if not found. Removal is linear by handle; the listener sets are small in practice (a handful per event type), so simplicity wins over a map-of-maps. </p>
 
-<p class="definition">Definition at line <a class="el" href="event__system_8hpp_source.html#l00133">133</a> of file <a class="el" href="event__system_8hpp_source.html">event_system.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event__system_8hpp_source.html#l00154">154</a> of file <a class="el" href="event__system_8hpp_source.html">event_system.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="test__event__system_8cpp_source.html#l00029">TEST_CASE()</a>, <a class="el" href="test__event__system_8cpp_source.html#l00059">TEST_CASE()</a>, and <a class="el" href="engine_8hpp_source.html#l00500">rpg_os::RulesetEngine::unregisterEventListener()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="test__event__system_8cpp_source.html#l00029">TEST_CASE()</a>, and <a class="el" href="test__event__system_8cpp_source.html#l00059">TEST_CASE()</a>.</p>
 
 </div>
 </div>

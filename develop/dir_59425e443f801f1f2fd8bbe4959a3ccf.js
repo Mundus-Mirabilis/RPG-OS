@@ -1,5 +1,6 @@
 var dir_59425e443f801f1f2fd8bbe4959a3ccf =
 [
+    [ "test_bookkeeping.cpp", "test__bookkeeping_8cpp.html", "test__bookkeeping_8cpp" ],
     [ "test_checks.cpp", "test__checks_8cpp.html", "test__checks_8cpp" ],
     [ "test_codegen_output.cpp", "test__codegen__output_8cpp.html", "test__codegen__output_8cpp" ],
     [ "test_combat.cpp", "test__combat_8cpp.html", "test__combat_8cpp" ],

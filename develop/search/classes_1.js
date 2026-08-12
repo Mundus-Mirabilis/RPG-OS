@@ -8,5 +8,6 @@ var searchData=
   ['checktypedef_5',['CheckTypeDef',['../structrpg__os_1_1CheckTypeDef.html',1,'rpg_os']]],
   ['combatantspec_6',['CombatantSpec',['../structrpg__os_1_1CombatantSpec.html',1,'rpg_os']]],
   ['costtable_7',['CostTable',['../classrpg__os_1_1CostTable.html',1,'rpg_os']]],
-  ['costtabledef_8',['CostTableDef',['../structrpg__os_1_1CostTableDef.html',1,'rpg_os']]]
+  ['costtabledef_8',['CostTableDef',['../structrpg__os_1_1CostTableDef.html',1,'rpg_os']]],
+  ['currencysystem_9',['CurrencySystem',['../structrpg__os_1_1CurrencySystem.html',1,'rpg_os']]]
 ];

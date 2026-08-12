@@ -129,7 +129,11 @@ $(document).ready(function(){initNavTree('engine_8hpp.html',''); initResizable()
 
 <p>RulesetEngine facade (universal mode).  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;cstdint&gt;</code><br />
+<div class="textblock"><code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;cmath&gt;</code><br />
+<code>#include &lt;cstdint&gt;</code><br />
+<code>#include &lt;cstdlib&gt;</code><br />
+<code>#include &lt;expected&gt;</code><br />
 <code>#include &lt;fstream&gt;</code><br />
 <code>#include &lt;memory&gt;</code><br />
 <code>#include &lt;<a class="el" href="event__system_8hpp_source.html">rpg_os/common/event_system.hpp</a>&gt;</code><br />
@@ -137,6 +141,7 @@ $(document).ready(function(){initNavTree('engine_8hpp.html',''); initResizable()
 <code>#include &lt;<a class="el" href="types_8hpp_source.html">rpg_os/common/types.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="checks_8hpp_source.html">rpg_os/core/checks.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="dice__engine_8hpp_source.html">rpg_os/core/dice_engine.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="errors_8hpp_source.html">rpg_os/core/errors.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="math_8hpp_source.html">rpg_os/core/math.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="variance_8hpp_source.html">rpg_os/core/variance.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="check__resolver_8hpp_source.html">rpg_os/universal/check_resolver.hpp</a>&gt;</code><br />
@@ -145,6 +150,7 @@ $(document).ready(function(){initNavTree('engine_8hpp.html',''); initResizable()
 <code>#include &lt;sstream&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;string_view&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for engine.hpp:</div>
 <div class="dyncontent">
@@ -168,6 +174,11 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrpg__os_1_1RulesetEngine_1_1AfflictionResult.html">rpg_os::RulesetEngine::AfflictionResult</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The outcome of applying an affliction through <a class="el" href="classrpg__os_1_1RulesetEngine.html#a0fb7f5650c7dd2c9d886b7a41374cc0e">applyAffliction</a>.  <a href="structrpg__os_1_1RulesetEngine_1_1AfflictionResult.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrpg__os_1_1RulesetEngine_1_1EquipResult.html">rpg_os::RulesetEngine::EquipResult</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The outcome of equipping an item.  <a href="structrpg__os_1_1RulesetEngine_1_1EquipResult.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrpg__os_1_1RulesetEngine_1_1EffectsResult.html">rpg_os::RulesetEngine::EffectsResult</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['nullstatprovider_0',['NullStatProvider',['../structrpg__os_1_1NullStatProvider.html',1,'rpg_os']]]
+  ['inventory_0',['Inventory',['../classrpg__os_1_1Inventory.html',1,'rpg_os']]],
+  ['iteminstance_1',['ItemInstance',['../structrpg__os_1_1ItemInstance.html',1,'rpg_os']]]
 ];

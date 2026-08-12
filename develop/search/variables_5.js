@@ -11,7 +11,8 @@ var searchData=
   ['flying_8',['flying',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a04e51e3aaafd5089903efa0f51f06782',1,'rpg_os::generated::tde5e::Character']]],
   ['formula_9',['formula',['../structrpg__os_1_1EventActionDef.html#a243cc4830fbcb6e875fc869ba57e7ca7',1,'rpg_os::EventActionDef']]],
   ['formulatext_10',['formulatext',['../structrpg__os_1_1DerivedStatDef.html#a3c7983002f0c2ee6546cbb2b0d27d605',1,'rpg_os::DerivedStatDef::formulaText'],['../structrpg__os_1_1EventActionDef.html#a6105d859a55d696af442db901e1cd84e',1,'rpg_os::EventActionDef::formulaText']]],
-  ['fumbleconfirm_11',['fumbleConfirm',['../structrpg__os_1_1CheckRecipe.html#a0101e8c6f8c358ac9a29d8af5cc06723',1,'rpg_os::CheckRecipe']]],
-  ['fumbleface_12',['fumbleFace',['../structrpg__os_1_1CheckRecipe.html#a6765de8e03767d05f956b98612f8c9e2',1,'rpg_os::CheckRecipe']]],
-  ['fumblestyle_13',['fumbleStyle',['../structrpg__os_1_1CheckRecipe.html#a8196127d2716672e7cf63e9ead6a7382',1,'rpg_os::CheckRecipe']]]
+  ['fromlevel_11',['fromLevel',['../structrpg__os_1_1LevelUp.html#a478925c52dad49f0ce7b2f1a5b1ca9ea',1,'rpg_os::LevelUp']]],
+  ['fumbleconfirm_12',['fumbleConfirm',['../structrpg__os_1_1CheckRecipe.html#a0101e8c6f8c358ac9a29d8af5cc06723',1,'rpg_os::CheckRecipe']]],
+  ['fumbleface_13',['fumbleFace',['../structrpg__os_1_1CheckRecipe.html#a6765de8e03767d05f956b98612f8c9e2',1,'rpg_os::CheckRecipe']]],
+  ['fumblestyle_14',['fumbleStyle',['../structrpg__os_1_1CheckRecipe.html#a8196127d2716672e7cf63e9ead6a7382',1,'rpg_os::CheckRecipe']]]
 ];

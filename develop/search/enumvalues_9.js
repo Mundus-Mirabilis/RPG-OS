@@ -1,11 +1,9 @@
 var searchData=
 [
-  ['onaftercheckroll_0',['OnAfterCheckRoll',['../namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18a0b3c086f0b5060681307c116985c6a56',1,'rpg_os']]],
-  ['onbeforecheckroll_1',['OnBeforeCheckRoll',['../namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18ab4bda534e9935d6126740b9d38997e0f',1,'rpg_os']]],
-  ['ondamagecalculated_2',['OnDamageCalculated',['../namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18aa577a19f9f98a0d17bb8eec3c1d10102',1,'rpg_os']]],
-  ['ondamagetaken_3',['OnDamageTaken',['../namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18a95ce917c466f63f718bd35fe03fca558',1,'rpg_os']]],
-  ['onturnend_4',['OnTurnEnd',['../namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18ad9d09877492c9df8ba92e5dba5b3caad',1,'rpg_os']]],
-  ['onturnstart_5',['OnTurnStart',['../namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18adaf718659527e949aad66f1c860bbb5f',1,'rpg_os']]],
-  ['opposed_6',['Opposed',['../namespacerpg__os.html#a95eaa793f5aa7a7b28d2851594d614dca4426b14cf40eb77915f04b0a4701c0b3',1,'rpg_os']]],
-  ['override_7',['Override',['../namespacerpg__os.html#aab9c315b59a58b0733ac5a30a02da3f2a6da8e67225fdcfa78c3ea5dc3154b849',1,'rpg_os']]]
+  ['noencumbrance_0',['NoEncumbrance',['../namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766a8e035c9eac2ef52493607d738b571317',1,'rpg_os']]],
+  ['none_1',['none',['../namespacerpg__os.html#a475606cc248fcbc80000a0ceb3b8c448a6adf97f83acf6453d4a6a4b1070f3754',1,'rpg_os::None'],['../namespacerpg__os.html#a77f98d725fb2409a3e02d40f5772f3bca6adf97f83acf6453d4a6a4b1070f3754',1,'rpg_os::None'],['../namespacerpg__os.html#ab545c7c57f9754a6d5b040f83bedaf52a6adf97f83acf6453d4a6a4b1070f3754',1,'rpg_os::None'],['../namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766a6adf97f83acf6453d4a6a4b1070f3754',1,'rpg_os::None']]],
+  ['noruleset_2',['NoRuleset',['../namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766a143bbdad2c2cf2dd5ba6e537edd822c9',1,'rpg_os']]],
+  ['nospellslot_3',['NoSpellSlot',['../namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766a7cde3b18e13aa9cb5addf7e0ff1f9f0d',1,'rpg_os']]],
+  ['notenoughmoney_4',['NotEnoughMoney',['../namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766a261cca2ac483068d987c38cfa8fd6094',1,'rpg_os']]],
+  ['notequipped_5',['NotEquipped',['../namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766ae4f167d7fb73c6592711f327d3d7f8f6',1,'rpg_os']]]
 ];

@@ -58,8 +58,8 @@ var NAVTREE =
     [ "Files", "files.html", [
       [ "File List", "files.html", "files_dup" ],
       [ "File Members", "globals.html", [
-        [ "All", "globals.html", null ],
-        [ "Functions", "globals_func.html", null ],
+        [ "All", "globals.html", "globals_dup" ],
+        [ "Functions", "globals_func.html", "globals_func" ],
         [ "Macros", "globals_defs.html", null ]
       ] ]
     ] ]
@@ -68,14 +68,17 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"annotated.html",
-"classrpg__os_1_1RulesetEngine.html#a6728a565334609cc331da78d96304db0",
-"classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a7d431049bd3ec1d4f5f120b38ceed93b",
-"classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#aadcfc36d19c693f081ded52e48595ae6",
-"classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a9041ffb029cccb8330e36b4201583a5b",
-"functions_vars_i.html",
-"structrpg__os_1_1CheckResult.html",
-"test__cost__table_8cpp.html#aa34520bc338b7ec63265b6bd9e0dbc6b"
+"advancement_8hpp.html",
+"classrpg__os_1_1EvalContext.html",
+"classrpg__os_1_1RulesetEngine.html#a0920db85f567f3b6aff10a5db2c9141f",
+"classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a335b06df6d070a95d7d7019815b40db7",
+"classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#ada11e130f333292877d9d9c6be3f3ff2",
+"classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a1719292de7e8fef8b24fa0039cead38f",
+"classrpg__os_1_1generated_1_1tde5e_1_1Character.html#acaa5db3c7de96eec9521656294e1b9ce",
+"index.html",
+"structrpg__os_1_1CheckRecipe.html#a51323a689fbe6c243673328a208aea6f",
+"structrpg__os_1_1ResourcePool.html#a37ac4610e87b26e8b039dfe35751a8e8",
+"test__event__system_8cpp.html#a547b2271e64d868b3036067fd72262a8"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

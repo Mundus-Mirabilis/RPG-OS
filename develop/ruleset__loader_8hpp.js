@@ -8,6 +8,9 @@ var ruleset__loader_8hpp =
     [ "rpg_os::CostTableDef", "structrpg__os_1_1CostTableDef.html", "structrpg__os_1_1CostTableDef" ],
     [ "rpg_os::EventActionDef", "structrpg__os_1_1EventActionDef.html", "structrpg__os_1_1EventActionDef" ],
     [ "rpg_os::EventTriggerDef", "structrpg__os_1_1EventTriggerDef.html", "structrpg__os_1_1EventTriggerDef" ],
+    [ "rpg_os::EncumbranceConfig", "structrpg__os_1_1EncumbranceConfig.html", "structrpg__os_1_1EncumbranceConfig" ],
+    [ "rpg_os::EncumbranceConfig::Level", "structrpg__os_1_1EncumbranceConfig_1_1Level.html", "structrpg__os_1_1EncumbranceConfig_1_1Level" ],
+    [ "rpg_os::SpellcastingConfig", "structrpg__os_1_1SpellcastingConfig.html", "structrpg__os_1_1SpellcastingConfig" ],
     [ "rpg_os::Ruleset", "classrpg__os_1_1Ruleset.html", "classrpg__os_1_1Ruleset" ],
     [ "rpg_os::RulesetLoader", "classrpg__os_1_1RulesetLoader.html", "classrpg__os_1_1RulesetLoader" ]
 ];

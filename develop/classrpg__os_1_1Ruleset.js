@@ -5,6 +5,7 @@ var classrpg__os_1_1Ruleset =
     [ "findCostTable", "classrpg__os_1_1Ruleset.html#aa960d4ebf09c9e594ec8d0bc0de718d4", null ],
     [ "findDerivedStat", "classrpg__os_1_1Ruleset.html#a8cb17af1583cd349543ffd1cd809bf0a", null ],
     [ "findSkill", "classrpg__os_1_1Ruleset.html#a30a91a49f1512caa5f7572e019e67750", null ],
+    [ "hasCurrency", "classrpg__os_1_1Ruleset.html#a809f113fa9885cd537e4eeb1e6647c0e", null ],
     [ "hasStat", "classrpg__os_1_1Ruleset.html#a9f26155d3756c67feb9fb7b47e97efbd", null ],
     [ "isCondition", "classrpg__os_1_1Ruleset.html#a08c80acda537e3a260512fc00e34e723", null ],
     [ "isResourcePool", "classrpg__os_1_1Ruleset.html#a9b7b919480aee8c24e79fa5648c4fa52", null ],
@@ -12,8 +13,10 @@ var classrpg__os_1_1Ruleset =
     [ "checkTypes", "classrpg__os_1_1Ruleset.html#a31c488bcc1568b4f7affbcc6aa3f045f", null ],
     [ "comment", "classrpg__os_1_1Ruleset.html#adba702cfb79e893ef7f199f3ab7be76a", null ],
     [ "costTables", "classrpg__os_1_1Ruleset.html#a213a0aa03b19a5737e27175c3cf53169", null ],
+    [ "currencySystem", "classrpg__os_1_1Ruleset.html#a8bff667589b37f9f44cc73391fbd139f", null ],
     [ "data", "classrpg__os_1_1Ruleset.html#aae40260fe242930ce65091de5e18bbb7", null ],
     [ "derivedStats", "classrpg__os_1_1Ruleset.html#a1656677e20c57e3f6f8c5182e757e0f1", null ],
+    [ "encumbrance", "classrpg__os_1_1Ruleset.html#a2dfa2d825a7289b216ad9bab3159f415", null ],
     [ "equipmentSlots", "classrpg__os_1_1Ruleset.html#aa8a2e2b5b9577994679d38a2de195750", null ],
     [ "eventTriggers", "classrpg__os_1_1Ruleset.html#a5114ac4867adcbe3712ff174ac63e090", null ],
     [ "id", "classrpg__os_1_1Ruleset.html#a40ed5c17b74737dbc7842223363d3b91", null ],
@@ -24,5 +27,6 @@ var classrpg__os_1_1Ruleset =
     [ "schemaVersion", "classrpg__os_1_1Ruleset.html#a69c1f61072069d159a74b90f00cd60ce", null ],
     [ "skills", "classrpg__os_1_1Ruleset.html#afa95030d4529acf1498aef09ca86f539", null ],
     [ "source", "classrpg__os_1_1Ruleset.html#ab17ece19ddc3158a5f26ce132d477a82", null ],
+    [ "spellcasting", "classrpg__os_1_1Ruleset.html#a899f7fae21c17be738920b45d391662c", null ],
     [ "spellResource", "classrpg__os_1_1Ruleset.html#a24728e74acc563deb82aea5a5ba2ddab", null ]
 ];
