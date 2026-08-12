@@ -9,13 +9,14 @@ var searchData=
   ['sizex5_6',['sizeX5',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a755416b95540e6e93854cc3b51a51b76',1,'rpg_os::generated::brp_ugc::Character']]],
   ['slots_7',['slots',['../classrpg__os_1_1Equipment.html#ae334d5e07f086f6af40a4521e4f93657',1,'rpg_os::Equipment']]],
   ['slotsused_8',['slotsUsed',['../classrpg__os_1_1Spellbook.html#a963e3d257e12ae29f9db57ec90206a11',1,'rpg_os::Spellbook']]],
-  ['spellbook_9',['spellbook',['../classrpg__os_1_1DynamicEntity.html#a8a44709ee787786fbdf26621cef692f0',1,'rpg_os::DynamicEntity::spellbook() noexcept'],['../classrpg__os_1_1DynamicEntity.html#addf6f1d7777d20a2ae1ff6396fdf84e4',1,'rpg_os::DynamicEntity::spellbook() const noexcept']]],
-  ['spellslotsremaining_10',['spellslotsremaining',['../classrpg__os_1_1RulesetEngine.html#aca87648bdd1f46ed745025af858e6757',1,'rpg_os::RulesetEngine::spellSlotsRemaining()'],['../classrpg__os_1_1GameSession.html#a70bf710d71487a7b1f1dcc81351b0d12',1,'rpg_os::GameSession::spellSlotsRemaining(const DynamicEntity &amp;sheet, int32_t level) const']]],
-  ['spendspellslot_11',['spendspellslot',['../classrpg__os_1_1GameSession.html#aacbd9fad6a69bf3308a146caa3bcaf73',1,'rpg_os::GameSession::spendSpellSlot()'],['../classrpg__os_1_1RulesetEngine.html#a94fd660843d879825bdfe0b8d6151679',1,'rpg_os::RulesetEngine::spendSpellSlot()']]],
-  ['spirit_12',['spirit',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#aeb1aad5a04abd6a640aa4b056bd830b2',1,'rpg_os::generated::tde5e::Character']]],
-  ['stacks_13',['stacks',['../classrpg__os_1_1EffectTimeline.html#afce45762aa7a97e766202c05a3550bd0',1,'rpg_os::EffectTimeline']]],
-  ['strengthbonus_14',['strengthBonus',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a89d2a575491d1800f42dc9f935e13138',1,'rpg_os::generated::tde5e::Character']]],
-  ['strengthmodifier_15',['strengthModifier',['../classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#a42d0eabd2b0e2f09748ca56087fc5f96',1,'rpg_os::generated::dnd5e::Character']]],
-  ['strengthx5_16',['strengthX5',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a1e1aad992e3e6945e844064d56198aea',1,'rpg_os::generated::brp_ugc::Character']]],
-  ['successlevelfor_17',['successLevelFor',['../namespacerpg__os.html#a7cc63c6411d33823547b72473c8ce523',1,'rpg_os']]]
+  ['spellaveragedamage_9',['spellAverageDamage',['../namespacerpg__os_1_1detail.html#af1de7148073c0aecc6138dda838414ed',1,'rpg_os::detail']]],
+  ['spellbook_10',['spellbook',['../classrpg__os_1_1DynamicEntity.html#a8a44709ee787786fbdf26621cef692f0',1,'rpg_os::DynamicEntity::spellbook() noexcept'],['../classrpg__os_1_1DynamicEntity.html#addf6f1d7777d20a2ae1ff6396fdf84e4',1,'rpg_os::DynamicEntity::spellbook() const noexcept']]],
+  ['spellslotsremaining_11',['spellslotsremaining',['../classrpg__os_1_1GameSession.html#a70bf710d71487a7b1f1dcc81351b0d12',1,'rpg_os::GameSession::spellSlotsRemaining()'],['../classrpg__os_1_1RulesetEngine.html#aca87648bdd1f46ed745025af858e6757',1,'rpg_os::RulesetEngine::spellSlotsRemaining()']]],
+  ['spendspellslot_12',['spendspellslot',['../classrpg__os_1_1GameSession.html#aacbd9fad6a69bf3308a146caa3bcaf73',1,'rpg_os::GameSession::spendSpellSlot()'],['../classrpg__os_1_1RulesetEngine.html#a94fd660843d879825bdfe0b8d6151679',1,'rpg_os::RulesetEngine::spendSpellSlot()']]],
+  ['spirit_13',['spirit',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#aeb1aad5a04abd6a640aa4b056bd830b2',1,'rpg_os::generated::tde5e::Character']]],
+  ['stacks_14',['stacks',['../classrpg__os_1_1EffectTimeline.html#afce45762aa7a97e766202c05a3550bd0',1,'rpg_os::EffectTimeline']]],
+  ['strengthbonus_15',['strengthBonus',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a89d2a575491d1800f42dc9f935e13138',1,'rpg_os::generated::tde5e::Character']]],
+  ['strengthmodifier_16',['strengthModifier',['../classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#a42d0eabd2b0e2f09748ca56087fc5f96',1,'rpg_os::generated::dnd5e::Character']]],
+  ['strengthx5_17',['strengthX5',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a1e1aad992e3e6945e844064d56198aea',1,'rpg_os::generated::brp_ugc::Character']]],
+  ['successlevelfor_18',['successLevelFor',['../namespacerpg__os.html#a7cc63c6411d33823547b72473c8ce523',1,'rpg_os']]]
 ];

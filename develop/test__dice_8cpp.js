@@ -11,6 +11,7 @@ var test__dice_8cpp =
     [ "TEST_CASE", "test__dice_8cpp.html#a5d5cb789fa9237dda30a4271daa10c39", null ],
     [ "TEST_CASE", "test__dice_8cpp.html#a79f1f3bf42fe7ded267cc64901eb1149", null ],
     [ "TEST_CASE", "test__dice_8cpp.html#a667fdf263e315865290e94edd1cde4b2", null ],
+    [ "TEST_CASE", "test__dice_8cpp.html#aa82dc40c16b13dd152c24bcf65696030", null ],
     [ "TEST_CASE", "test__dice_8cpp.html#a9b995e1c5ba95338d40077420eaa8994", null ],
     [ "TEST_CASE", "test__dice_8cpp.html#aa625ae6035e8e9b577e1d6b9913f0284", null ],
     [ "TEST_CASE", "test__dice_8cpp.html#a461cd5840baf61c61b09b66c8e9e7f74", null ],

@@ -1,9 +1,12 @@
 var namespacerpg__os =
 [
     [ "detail", "namespacerpg__os_1_1detail.html", [
+      [ "actOnce", "namespacerpg__os_1_1detail.html#a3644b285273b5714646eb1862c74a8c8", null ],
       [ "attackOnce", "namespacerpg__os_1_1detail.html#a49b71459ad1cd47e7238a85092c6163f", null ],
+      [ "pickSpell", "namespacerpg__os_1_1detail.html#a5c08ab552cdf7a80a7847daf84ac11d9", null ],
       [ "rollDie", "namespacerpg__os_1_1detail.html#a8e9f2d36f9bbe8af6826ca5b2a0a1932", null ],
-      [ "scaleByDifficulty", "namespacerpg__os_1_1detail.html#abe51285921020775936aeeed9cf1b57e", null ]
+      [ "scaleByDifficulty", "namespacerpg__os_1_1detail.html#abe51285921020775936aeeed9cf1b57e", null ],
+      [ "spellAverageDamage", "namespacerpg__os_1_1detail.html#af1de7148073c0aecc6138dda838414ed", null ]
     ] ],
     [ "dice_literals", "namespacerpg__os_1_1dice__literals.html", null ],
     [ "generated", "namespacerpg__os_1_1generated.html", "namespacerpg__os_1_1generated" ],
@@ -181,7 +184,7 @@ var namespacerpg__os =
     [ "resolvePoolCheck", "namespacerpg__os.html#a8dc70248cb410a26d27117eb3347042b", null ],
     [ "resolveResistanceCheck", "namespacerpg__os.html#aec022d03c5ed920153ee4dca70e7bb9d", null ],
     [ "resolveThresholdCheck", "namespacerpg__os.html#a6b46ef1cf31683f3c873e49ca842cab6", null ],
-    [ "runFight", "namespacerpg__os.html#a4a210e0aabb993a0723ab42ee2760ed2", null ],
+    [ "runFight", "namespacerpg__os.html#a3758c1ea47b844ed9ca1d0244a1f0e1d", null ],
     [ "successLevelFor", "namespacerpg__os.html#a7cc63c6411d33823547b72473c8ce523", null ],
     [ "trimWhitespace", "namespacerpg__os.html#a7fa123c0bde9f15013f8f154e1214d41", null ]
 ];

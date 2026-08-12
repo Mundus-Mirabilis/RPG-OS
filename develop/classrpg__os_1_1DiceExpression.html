@@ -146,6 +146,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7f6c3a6a89adb274693aedcbf9300d4a" id="r_a7f6c3a6a89adb274693aedcbf9300d4a"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1DiceExpression.html#a7f6c3a6a89adb274693aedcbf9300d4a">constant</a> () const noexcept</td></tr>
 <tr class="memdesc:a7f6c3a6a89adb274693aedcbf9300d4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The flat additive constant (already includes its sign).  <br /></td></tr>
 <tr class="separator:a7f6c3a6a89adb274693aedcbf9300d4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad841da226756ca9d67f2389b8c4f05d7" id="r_ad841da226756ca9d67f2389b8c4f05d7"><td class="memItemLeft" align="right" valign="top">constexpr double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1DiceExpression.html#ad841da226756ca9d67f2389b8c4f05d7">expectedValue</a> () const noexcept</td></tr>
+<tr class="separator:ad841da226756ca9d67f2389b8c4f05d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af86ee76d55c8a135295663ba541a5fb4" id="r_af86ee76d55c8a135295663ba541a5fb4"><td class="memTemplParams" colspan="2">template&lt;RandomNumberGenerator Rng&gt; </td></tr>
 <tr class="memitem:af86ee76d55c8a135295663ba541a5fb4"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::vector&lt; int &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1DiceExpression.html#af86ee76d55c8a135295663ba541a5fb4">roll</a> (Rng &amp;rng) const</td></tr>
 <tr class="separator:af86ee76d55c8a135295663ba541a5fb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -197,7 +199,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Parses <code>expression</code>; throws std::invalid_argument on malformed input. </p>
 
-<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00308">308</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00320">320</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -362,6 +364,36 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ad841da226756ca9d67f2389b8c4f05d7" name="ad841da226756ca9d67f2389b8c4f05d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad841da226756ca9d67f2389b8c4f05d7">&#9670;&#160;</a></span>expectedValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr double rpg_os::DiceExpression::expectedValue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The expected (average) total of the expression: the constant plus, per group, <code>sign * count * (sides + 1) / 2</code>. This is the flat mathematical mean of all outcomes — useful for ranking options (e.g. a mage picking the strongest spell to cast) without actually rolling dice. </p>
+
+<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00181">181</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00227">rpg_os::detail::spellAverageDamage()</a>.</p>
+
+</div>
+</div>
 <a id="a3d8a3b91b1c49a35724f8cd47343cfd9" name="a3d8a3b91b1c49a35724f8cd47343cfd9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3d8a3b91b1c49a35724f8cd47343cfd9">&#9670;&#160;</a></span>operator+() <span class="overload">[1/2]</span></h2>
 
@@ -387,7 +419,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Combines two expressions: their die groups are concatenated and their constants added, so <code>2_d6</code> + 1_d4 is one two-group expression. </p>
 
-<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00217">217</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00229">229</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -417,7 +449,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Adds a flat constant, e.g. <code>2_d6</code> + 2. </p>
 
-<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00230">230</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00242">242</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -445,7 +477,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Unary minus: negates the constant and every die group's sign, so <code>-</code>(2_d6) is the same expression as the "-2d6" term of a parsed string (raw rolls stay positive; only the sum is negated). </p>
 
-<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00207">207</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00219">219</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -474,7 +506,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Subtracts <code>rhs</code>: its die groups and constant are negated first, e.g. <code>3_d6</code> - 1_d4. </p>
 
-<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00225">225</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00237">237</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -504,7 +536,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Subtracts a flat constant, e.g. <code>1_d20</code> - 2. </p>
 
-<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00235">235</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00247">247</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -535,7 +567,7 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 </div><div class="memdoc">
 <p>Rolls every die with <code>rng</code>. The raw results are always positive and appear in roll order (checks that need individual dice use this). </p>
 
-<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00180">180</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00192">192</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="checks_8hpp_source.html#l00359">rpg_os::resolvePoolCheck()</a>, <a class="el" href="checks_8hpp_source.html#l00268">rpg_os::resolveThresholdCheck()</a>, <a class="el" href="test__dice_8cpp_source.html#l00083">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00067">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00092">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00100">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00037">TEST_CASE()</a>, and <a class="el" href="test__dice_8cpp_source.html#l00059">TEST_CASE()</a>.</p>
 
@@ -568,9 +600,9 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 </div><div class="memdoc">
 <p>Rolls every die and returns the signed total (constant + signed dice). This is the common "how much damage / how high did I roll" entry point; use <a class="el" href="classrpg__os_1_1DiceExpression.html#af86ee76d55c8a135295663ba541a5fb4">roll</a> instead when individual dice matter. </p>
 
-<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00194">194</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00206">206</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00220">rpg_os::detail::attackOnce()</a>, <a class="el" href="variance_8hpp_source.html#l00131">rpg_os::readVariantValue()</a>, <a class="el" href="checks_8hpp_source.html#l00422">rpg_os::resolveOpposedCheck()</a>, <a class="el" href="checks_8hpp_source.html#l00484">rpg_os::resolveResistanceCheck()</a>, <a class="el" href="checks_8hpp_source.html#l00268">rpg_os::resolveThresholdCheck()</a>, <a class="el" href="test__dice_8cpp_source.html#l00067">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00151">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00092">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00076">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00100">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00037">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00045">TEST_CASE()</a>, and <a class="el" href="test__dice_8cpp_source.html#l00059">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00298">rpg_os::detail::attackOnce()</a>, <a class="el" href="variance_8hpp_source.html#l00131">rpg_os::readVariantValue()</a>, <a class="el" href="checks_8hpp_source.html#l00422">rpg_os::resolveOpposedCheck()</a>, <a class="el" href="checks_8hpp_source.html#l00484">rpg_os::resolveResistanceCheck()</a>, <a class="el" href="checks_8hpp_source.html#l00268">rpg_os::resolveThresholdCheck()</a>, <a class="el" href="test__dice_8cpp_source.html#l00067">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00151">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00092">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00076">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00100">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00037">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00045">TEST_CASE()</a>, and <a class="el" href="test__dice_8cpp_source.html#l00059">TEST_CASE()</a>.</p>
 
 </div>
 </div>

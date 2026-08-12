@@ -127,7 +127,7 @@ $(document).ready(function(){initNavTree('md_examples_2README.html',''); initRes
 <ul>
 <li><code>universal_mode/</code> — the dynamic engine: loads any ruleset JSON at runtime and resolves rules generically (derived stats, named checks, DSA skill checks, D&amp;D attacks).</li>
 <li><code>specific_mode/</code> — the code-generated headers: named members, compiled derived-stat getters, and named check methods, while the character data is still read from the ruleset JSON at runtime.</li>
-<li><code>fight/</code> — fight two archetypes or bestiary entries to the end and announce the winner (CLI-selectable combatants, <code>--csv</code> output for scripts). Built on the combat helpers in <code><a class="el" href="combat_8hpp.html" title="Combat simulation helpers (universal mode).">include/rpg_os/universal/combat.hpp</a></code>; a Monte Carlo ELO ranking that runs many fights in parallel lives in <code>scripts/elo_ranking.py</code>.</li>
+<li><code>fight/</code> — fight two archetypes or bestiary entries to the end and announce the winner (CLI-selectable combatants, <code>--csv</code> output for scripts). Built on the combat helpers in <code><a class="el" href="combat_8hpp.html" title="Combat simulation helpers (universal mode).">include/rpg_os/universal/combat.hpp</a></code>; a Monte Carlo ELO ranking that runs many fights in parallel lives in <code>scripts/elo_ranking.py</code>. A spellcaster (e.g. the TDE Magister) fights with magic by default; <code>--no-magic</code> forces a pure weapon fight.</li>
 </ul>
 <p>Build:</p>
 <div class="fragment"><div class="line">cmake -S . -B build -G Ninja &amp;&amp; cmake --build build</div>
@@ -137,6 +137,7 @@ $(document).ready(function(){initNavTree('md_examples_2README.html',''); initRes
 <div class="line">./build/bin/rpg_os_example_fight . irrhalk dog     # named pair</div>
 <div class="line">./build/bin/rpg_os_example_fight . --list          # all combatants</div>
 <div class="line">./build/bin/rpg_os_example_fight . --csv --batch 20 irrhalk toad</div>
+<div class="line">./build/bin/rpg_os_example_fight . magister toad   # a mage fights with magic</div>
 </div><!-- fragment --><p>Not part of the library itself and not installed. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->

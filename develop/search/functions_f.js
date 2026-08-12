@@ -35,6 +35,6 @@ var searchData=
   ['rounddiv_32',['roundDiv',['../namespacerpg__os_1_1math.html#a8b5efe7f928f2f66905c652fd205299d',1,'rpg_os::math']]],
   ['rounddivn_33',['roundDivN',['../namespacerpg__os_1_1math.html#ace8edcd4fe29f2466df53253b4d6b8b7',1,'rpg_os::math']]],
   ['ruleset_34',['ruleset',['../classrpg__os_1_1RulesetEngine.html#a808ef8aa9e054db1979e3e6acb48e07c',1,'rpg_os::RulesetEngine']]],
-  ['runfight_35',['runFight',['../namespacerpg__os.html#a4a210e0aabb993a0723ab42ee2760ed2',1,'rpg_os']]],
+  ['runfight_35',['runFight',['../namespacerpg__os.html#a3758c1ea47b844ed9ca1d0244a1f0e1d',1,'rpg_os']]],
   ['runturn_36',['runturn',['../classrpg__os_1_1GameSession.html#aaee3646d67f17976f39f1f4fd00309ad',1,'rpg_os::GameSession::runTurn()'],['../classrpg__os_1_1RulesetEngine.html#a48d597bb233a0cc7b28bb6d8fecef0ec',1,'rpg_os::RulesetEngine::runTurn()']]]
 ];

@@ -6,5 +6,6 @@ var structrpg__os_1_1CombatantSpec =
     [ "defenseValue", "structrpg__os_1_1CombatantSpec.html#a6ecdb0a342701fc5388f40503729e69e", null ],
     [ "id", "structrpg__os_1_1CombatantSpec.html#a692efa03d92725b6d70b91a3c7ef6660", null ],
     [ "isArchetype", "structrpg__os_1_1CombatantSpec.html#ab268407362245eacf277e16a5b99eeb6", null ],
-    [ "name", "structrpg__os_1_1CombatantSpec.html#a3ecc093e0700183acc13acb58f2dd12b", null ]
+    [ "name", "structrpg__os_1_1CombatantSpec.html#a3ecc093e0700183acc13acb58f2dd12b", null ],
+    [ "spellIds", "structrpg__os_1_1CombatantSpec.html#aae01e6ff0f519a4d97eb977dfa005e6d", null ]
 ];

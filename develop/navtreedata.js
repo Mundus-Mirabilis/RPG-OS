@@ -69,16 +69,16 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "advancement_8hpp.html",
-"classrpg__os_1_1EvalContext.html",
-"classrpg__os_1_1RulesetEngine.html#a0920db85f567f3b6aff10a5db2c9141f",
-"classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a335b06df6d070a95d7d7019815b40db7",
-"classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#ada11e130f333292877d9d9c6be3f3ff2",
-"classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a1719292de7e8fef8b24fa0039cead38f",
-"classrpg__os_1_1generated_1_1tde5e_1_1Character.html#acaa5db3c7de96eec9521656294e1b9ce",
-"index.html",
-"structrpg__os_1_1CheckRecipe.html#a51323a689fbe6c243673328a208aea6f",
-"structrpg__os_1_1ResourcePool.html#a37ac4610e87b26e8b039dfe35751a8e8",
-"test__event__system_8cpp.html#a547b2271e64d868b3036067fd72262a8"
+"classrpg__os_1_1Equipment.html#af3cfe1ca6522275d2bcfaaff8723f36f",
+"classrpg__os_1_1RulesetEngine.html#a014e05ea3e09567557683e65ceaac616",
+"classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a33351f1f684178ff743fb790761a3ac4",
+"classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#ad91ff0228ed0da499d376c0359f0ca11",
+"classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a16c67ad57286d7e3aa0dff7cd4ce946a",
+"classrpg__os_1_1generated_1_1tde5e_1_1Character.html#ac78fd9742ffe2756f73ba4ccbc4ed5b0",
+"globals_func_t.html",
+"structrpg__os_1_1CheckRecipe.html#a0101e8c6f8c358ac9a29d8af5cc06723",
+"structrpg__os_1_1Modifier.html#afb714760f719b12e49f17732e8bb2e16",
+"test__engine_8cpp.html#a74c1d110696016b80d05303f84db56f3"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

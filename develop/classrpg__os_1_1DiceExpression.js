@@ -6,6 +6,7 @@ var classrpg__os_1_1DiceExpression =
     [ "constant", "classrpg__os_1_1DiceExpression.html#a7f6c3a6a89adb274693aedcbf9300d4a", null ],
     [ "dice", "classrpg__os_1_1DiceExpression.html#a32664e3b9bd0c33419731159d67001f7", null ],
     [ "dieCount", "classrpg__os_1_1DiceExpression.html#a002e9dd893589f9945e5ad493142ab89", null ],
+    [ "expectedValue", "classrpg__os_1_1DiceExpression.html#ad841da226756ca9d67f2389b8c4f05d7", null ],
     [ "operator+", "classrpg__os_1_1DiceExpression.html#a3d8a3b91b1c49a35724f8cd47343cfd9", null ],
     [ "operator+", "classrpg__os_1_1DiceExpression.html#ada8e6d6e26ddc8c68ff098e0cf3c2a5c", null ],
     [ "operator-", "classrpg__os_1_1DiceExpression.html#a31cd9e6e18d81a03739b9bc7e1b1b1f5", null ],

@@ -128,7 +128,8 @@ $(document).ready(function(){initNavTree('fight_2main_8cpp.html',''); initResiza
 
 <p>Fight-to-the-end demo (universal mode).  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;cstdint&gt;</code><br />
+<div class="textblock"><code>#include &lt;cstddef&gt;</code><br />
+<code>#include &lt;cstdint&gt;</code><br />
 <code>#include &lt;cstdlib&gt;</code><br />
 <code>#include &lt;filesystem&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
@@ -155,6 +156,7 @@ Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Fight-to-the-end demo (universal mode). </p>
 <p>Picks two combatants from the ruleset — archetypes or bestiary entries — and simulates a fight until one of them drops to 0 hit points, then announces the winner. Combatants can be named on the command line, or omitted to fall back to a default pair (Geron the Mercenary vs. a Gotongi).</p>
+<p>A spellcaster fights with magic by default: a combatant that knows spells (e.g. the Magister archetype) casts its strongest affordable damaging spell instead of swinging a weapon, falling back to a weapon only once it is out of usable magic. Pass <code>--no-magic</code> for a pure weapon-vs-weapon comparison, e.g. when ranking physical combat only.</p>
 <p>The <code>--csv</code> mode prints one tab-separated line per fight, which is what the Monte Carlo ELO ranking (<code>scripts/elo_ranking.py</code>) consumes — this demo is the executable engine behind that script.</p>
 <dl class="section user"><dt>Why a seedable demo?</dt><dd>The library's randomness contract — "explicitly seeded = exactly
 reproducible, unseeded = varied every run" — is demonstrated here: <code>--seed</code> replays a fight bit-for-bit, while omitting it draws fresh entropy each run (see <code><a class="el" href="classrpg__os_1_1DefaultRandom.html">rpg_os::DefaultRandom</a></code>).</dd></dl>
@@ -188,9 +190,9 @@ reproducible, unseeded = varied every run" — is demonstrated here: <code>--see
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fight_2main_8cpp_source.html#l00211">211</a> of file <a class="el" href="fight_2main_8cpp_source.html">fight/main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fight_2main_8cpp_source.html#l00240">240</a> of file <a class="el" href="fight_2main_8cpp_source.html">fight/main.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01366">rpg_os::RulesetEngine::lastError()</a>, <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="combat_8hpp_source.html#l00115">rpg_os::makeCombatantSpec()</a>, <a class="el" href="combat_8hpp_source.html#l00074">rpg_os::resolveAttackCheckType()</a>, <a class="el" href="combat_8hpp_source.html#l00096">rpg_os::resolveHitPointPool()</a>, <a class="el" href="engine_8hpp_source.html#l01355">rpg_os::RulesetEngine::ruleset()</a>, and <a class="el" href="combat_8hpp_source.html#l00250">rpg_os::runFight()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01366">rpg_os::RulesetEngine::lastError()</a>, <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="combat_8hpp_source.html#l00124">rpg_os::makeCombatantSpec()</a>, <a class="el" href="combat_8hpp_source.html#l00083">rpg_os::resolveAttackCheckType()</a>, <a class="el" href="combat_8hpp_source.html#l00105">rpg_os::resolveHitPointPool()</a>, <a class="el" href="engine_8hpp_source.html#l01355">rpg_os::RulesetEngine::ruleset()</a>, and <a class="el" href="combat_8hpp_source.html#l00362">rpg_os::runFight()</a>.</p>
 
 </div>
 </div>
