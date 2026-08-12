@@ -1,21 +1,21 @@
 var searchData=
 [
-  ['magicallore_0',['magicalLore',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a5a702d023260c21bfcffe8dcab301eb9',1,'rpg_os::generated::tde5e::Character']]],
+  ['magicallore_0',['magicalLore',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#afdf4f5a02801c2a55ff58e61542e84e9',1,'rpg_os::generated::tde5e::Character']]],
   ['marginofsuccess_1',['marginOfSuccess',['../structrpg__os_1_1CheckResult.html#a6c8304908ea1ae78358ee2061a1f1175',1,'rpg_os::CheckResult']]],
-  ['martialarts_2',['martialArts',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a4804eb0aad5afa05854f7d8fa58dd7c7',1,'rpg_os::generated::brp_ugc::Character']]],
-  ['math_3',['math',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#af95167e8e4e2155fd6b748832fba7728',1,'rpg_os::generated::tde5e::Character']]],
+  ['martialarts_2',['martialArts',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#adce1ba0f6d5962b8c2adc3c76305e3a5',1,'rpg_os::generated::brp_ugc::Character']]],
+  ['math_3',['math',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a09b9e95925d93356c028122775bdad85',1,'rpg_os::generated::tde5e::Character']]],
   ['max_4',['max',['../structrpg__os_1_1ResourcePool.html#a7bf368cc1d3af674ada0830abd202e32',1,'rpg_os::ResourcePool']]],
   ['maxhitpoints_5',['maxHitPoints',['../classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#a279902d07db099ea98007a3cb17d04ce',1,'rpg_os::generated::dnd5e::Character']]],
   ['maxlp_6',['maxLp',['../structrpg__os_1_1FightOutcome.html#a88c5e9b51d8f3a30ca0cde869cdebac5',1,'rpg_os::FightOutcome']]],
   ['maxstat_7',['maxStat',['../structrpg__os_1_1ResourcePoolDef.html#ad893c86301df3f0a28dfbb41f8f55f95',1,'rpg_os::ResourcePoolDef']]],
   ['maxvalue_8',['maxValue',['../structrpg__os_1_1AttributeDef.html#a08cb7b1c94730bc14ffbd56c7bb0e305',1,'rpg_os::AttributeDef']]],
-  ['mechanics_9',['mechanics',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a1f566a5da74c67dcc89eec1401da48e5',1,'rpg_os::generated::tde5e::Character']]],
-  ['medicine_10',['medicine',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#ab20bc359b75fd601cf0758ee78d8cf76',1,'rpg_os::generated::brp_ugc::Character::medicine'],['../classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#af72c6869439e3cb56c6d22929e83eae4',1,'rpg_os::generated::dnd5e::Character::medicine']]],
-  ['meleeweapon_11',['meleeWeapon',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a81070285c02416c40e1525491efe209e',1,'rpg_os::generated::brp_ugc::Character']]],
-  ['metalworking_12',['metalworking',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#acd815736da0fb5d360a03190dceefd05',1,'rpg_os::generated::tde5e::Character']]],
+  ['mechanics_9',['mechanics',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a19c55ce6d3651ed98a17a6b0effb441c',1,'rpg_os::generated::tde5e::Character']]],
+  ['medicine_10',['medicine',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a2200d98877c808284df01c0fd77fe767',1,'rpg_os::generated::brp_ugc::Character::medicine'],['../classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#a3a541367d27db9395892cbaac6239e75',1,'rpg_os::generated::dnd5e::Character::medicine']]],
+  ['meleeweapon_11',['meleeWeapon',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#ab76a25ad7893d8806ec9256bfc636952',1,'rpg_os::generated::brp_ugc::Character']]],
+  ['metalworking_12',['metalworking',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#aaf524d562201bf8b3250e98b8dd0acf3',1,'rpg_os::generated::tde5e::Character']]],
   ['min_13',['min',['../structrpg__os_1_1ResourcePool.html#a864391a687a468e50e12558b44df1327',1,'rpg_os::ResourcePool']]],
   ['minvalue_14',['minvalue',['../structrpg__os_1_1AttributeDef.html#a2ccc298dd35bfef6b43075742b1dd704',1,'rpg_os::AttributeDef::minValue'],['../structrpg__os_1_1ResourcePoolDef.html#af73f1d131c80e28bb3914845cc5d31a7',1,'rpg_os::ResourcePoolDef::minValue']]],
-  ['missileweapon_15',['missileWeapon',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a2701b4223c92ca2b247820775757f2d8',1,'rpg_os::generated::brp_ugc::Character']]],
-  ['music_16',['music',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a06996eb2e0a155b3a1233c3851ab71e1',1,'rpg_os::generated::tde5e::Character']]],
-  ['mythslegends_17',['mythsLegends',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a3bc3e4cd32d944369967094f10935f38',1,'rpg_os::generated::tde5e::Character']]]
+  ['missileweapon_15',['missileWeapon',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a60bc399cbffae13edcc5edf1c5d3f75f',1,'rpg_os::generated::brp_ugc::Character']]],
+  ['music_16',['music',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a3cbba4020786dd3a50918864f9d4d847',1,'rpg_os::generated::tde5e::Character']]],
+  ['mythslegends_17',['mythsLegends',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a9da1a5eb657be9cedc2a63806072b3a8',1,'rpg_os::generated::tde5e::Character']]]
 ];

@@ -8,7 +8,7 @@ var variance_8hpp =
       [ "Strong", "variance_8hpp.html#ab870da3d65c79d59dad5920efc43dc65ac43e0fd449c758dab8f891d8e19eb1a9", null ],
       [ "Strongest", "variance_8hpp.html#ab870da3d65c79d59dad5920efc43dc65ada1d569c5bad0cd874e498597871cbef", null ]
     ] ],
-    [ "diceBounds", "variance_8hpp.html#adb12c2d6e96f1f4520f3d48cf0929666", null ],
-    [ "pickVariant", "variance_8hpp.html#ae9fa928908ec9ef10b32476158e7fc38", null ],
-    [ "readVariantValue", "variance_8hpp.html#a5c864b02b70dac1070227f17d1567422", null ]
+    [ "diceBounds", "variance_8hpp.html#ae2d848f9064bfb4ac2a8bf655a01e135", null ],
+    [ "pickVariant", "variance_8hpp.html#aa55b58906fac846e9841f808de5c926e", null ],
+    [ "readVariantValue", "variance_8hpp.html#aec9d689bf0943cb314269cc0e629ddb1", null ]
 ];

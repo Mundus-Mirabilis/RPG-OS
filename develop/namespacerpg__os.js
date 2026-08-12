@@ -2,24 +2,15 @@ var namespacerpg__os =
 [
     [ "detail", "namespacerpg__os_1_1detail.html", [
       [ "attackOnce", "namespacerpg__os_1_1detail.html#a49b71459ad1cd47e7238a85092c6163f", null ],
-      [ "entropyWords", "namespacerpg__os_1_1detail.html#a769c90230e3850b1a2ae06b3f7be17a7", null ],
-      [ "processId", "namespacerpg__os_1_1detail.html#a858c36e0d13cf3dd47daaceafb63b2e4", null ],
-      [ "rollDie", "namespacerpg__os_1_1detail.html#a949169c3f54b5825c5cda5d545f8f6e9", null ]
+      [ "rollDie", "namespacerpg__os_1_1detail.html#a8e9f2d36f9bbe8af6826ca5b2a0a1932", null ],
+      [ "scaleByDifficulty", "namespacerpg__os_1_1detail.html#abe51285921020775936aeeed9cf1b57e", null ]
     ] ],
+    [ "dice_literals", "namespacerpg__os_1_1dice__literals.html", null ],
     [ "generated", "namespacerpg__os_1_1generated.html", "namespacerpg__os_1_1generated" ],
-    [ "math", "namespacerpg__os_1_1math.html", [
-      [ "ceil", "namespacerpg__os_1_1math.html#a250c6484dd880177bb890f6fb937e285", null ],
-      [ "clamp", "namespacerpg__os_1_1math.html#aa104df255620a73f718d4244c91ad2f4", null ],
-      [ "clampInt", "namespacerpg__os_1_1math.html#aad515bfebb229cc9d169ca6df71cfe0e", null ],
-      [ "floor", "namespacerpg__os_1_1math.html#a3c0163700521e1fccaa9b400c22b9a85", null ],
-      [ "max", "namespacerpg__os_1_1math.html#a95a4007a73d38edfe74b4ef6167bffda", null ],
-      [ "min", "namespacerpg__os_1_1math.html#a301072269058f8606363f2a82749cd6e", null ],
-      [ "round", "namespacerpg__os_1_1math.html#a231b27b0762b503c391f17d61fde0dfa", null ],
-      [ "toStat", "namespacerpg__os_1_1math.html#aff1d290ebfeafea29783c813e35faafb", null ]
-    ] ],
+    [ "math", "namespacerpg__os_1_1math.html", "namespacerpg__os_1_1math" ],
     [ "AttributeDef", "structrpg__os_1_1AttributeDef.html", "structrpg__os_1_1AttributeDef" ],
-    [ "CheckConfig", "structrpg__os_1_1CheckConfig.html", "structrpg__os_1_1CheckConfig" ],
     [ "CheckParams", "structrpg__os_1_1CheckParams.html", "structrpg__os_1_1CheckParams" ],
+    [ "CheckRecipe", "structrpg__os_1_1CheckRecipe.html", "structrpg__os_1_1CheckRecipe" ],
     [ "CheckResolver", "classrpg__os_1_1CheckResolver.html", "classrpg__os_1_1CheckResolver" ],
     [ "CheckResult", "structrpg__os_1_1CheckResult.html", "structrpg__os_1_1CheckResult" ],
     [ "CheckTypeDef", "structrpg__os_1_1CheckTypeDef.html", "structrpg__os_1_1CheckTypeDef" ],
@@ -51,19 +42,28 @@ var namespacerpg__os =
     [ "StatProvider", "conceptrpg__os_1_1StatProvider.html", null ],
     [ "Json", "namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d", null ],
     [ "StatValue", "namespacerpg__os.html#a98c75d246a11439b69f88a267eb1d82a", null ],
-    [ "CheckKind", "namespacerpg__os.html#a588e72e855deaf1543a7331fc9706b84", [
-      [ "AdditiveD20", "namespacerpg__os.html#a588e72e855deaf1543a7331fc9706b84a4879fbe38b10f2627894a2bd19b129cc", null ],
-      [ "RollUnderD20", "namespacerpg__os.html#a588e72e855deaf1543a7331fc9706b84ac0b61f4c5712ae9efcb75350544517b0", null ],
-      [ "TripleRollUnderPool", "namespacerpg__os.html#a588e72e855deaf1543a7331fc9706b84a34ca41df64b6d7bfcc8544f372c0d2e2", null ],
-      [ "AttackVsDefense", "namespacerpg__os.html#a588e72e855deaf1543a7331fc9706b84a05de50aa3c40bf047396759a987eb395", null ],
-      [ "RollUnderD100", "namespacerpg__os.html#a588e72e855deaf1543a7331fc9706b84a01dbfdaa798f8a1eb112235c920e30c1", null ],
-      [ "OpposedRollUnderD100", "namespacerpg__os.html#a588e72e855deaf1543a7331fc9706b84ad263b757c382910a48bceae4f4b25fb8", null ],
-      [ "ResistanceRoll", "namespacerpg__os.html#a588e72e855deaf1543a7331fc9706b84a3dc68444b1fa4c3c821be15a324b36c4", null ]
+    [ "Comparison", "namespacerpg__os.html#a4ede194e1af239829344bcfe6bf5791f", [
+      [ "GreaterEqual", "namespacerpg__os.html#a4ede194e1af239829344bcfe6bf5791fa758b05d899def79c9eb864ad4f96be1f", null ],
+      [ "LessEqual", "namespacerpg__os.html#a4ede194e1af239829344bcfe6bf5791fad3e6fdac55bb7b0edd7834c968ba1f38", null ]
+    ] ],
+    [ "CriticalStyle", "namespacerpg__os.html#a475606cc248fcbc80000a0ceb3b8c448", [
+      [ "None", "namespacerpg__os.html#a475606cc248fcbc80000a0ceb3b8c448a6adf97f83acf6453d4a6a4b1070f3754", null ],
+      [ "Face", "namespacerpg__os.html#a475606cc248fcbc80000a0ceb3b8c448a8af5861002f3c157f9ba842bba10aa3f", null ],
+      [ "DoubleRoll", "namespacerpg__os.html#a475606cc248fcbc80000a0ceb3b8c448a58a065c7f5b83923cce9c69323749f20", null ],
+      [ "PercentileBand", "namespacerpg__os.html#a475606cc248fcbc80000a0ceb3b8c448aa33a17ca6946e7e0ca35aa02201166eb", null ]
     ] ],
     [ "DifficultyMode", "namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753d", [
-      [ "Average", "namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753dab1897515d548a960afe49ecf66a29021", null ],
-      [ "Easy", "namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753da7f943921724d63dc0ac9c6febf99fa88", null ],
-      [ "Difficult", "namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753da429ee94cd13d541a0d434e93c798ac4c", null ]
+      [ "ToThreshold", "namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753daac18f68e8a52d0ae7da868601481627e", null ],
+      [ "ToStat", "namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753daedc924ddad3e72aa05c6d5b29250fe41", null ]
+    ] ],
+    [ "DifficultyMultiplier", "namespacerpg__os.html#ab545c7c57f9754a6d5b040f83bedaf52", [
+      [ "None", "namespacerpg__os.html#ab545c7c57f9754a6d5b040f83bedaf52a6adf97f83acf6453d4a6a4b1070f3754", null ],
+      [ "DoubleHalve", "namespacerpg__os.html#ab545c7c57f9754a6d5b040f83bedaf52aa2224aa958f41d288d9e97e986492b36", null ]
+    ] ],
+    [ "DifficultyScale", "namespacerpg__os.html#a5d0f76e637716d8f9bedca406ff39fe6", [
+      [ "Average", "namespacerpg__os.html#a5d0f76e637716d8f9bedca406ff39fe6ab1897515d548a960afe49ecf66a29021", null ],
+      [ "Easy", "namespacerpg__os.html#a5d0f76e637716d8f9bedca406ff39fe6a7f943921724d63dc0ac9c6febf99fa88", null ],
+      [ "Difficult", "namespacerpg__os.html#a5d0f76e637716d8f9bedca406ff39fe6a429ee94cd13d541a0d434e93c798ac4c", null ]
     ] ],
     [ "EventType", "namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18", [
       [ "OnBeforeCheckRoll", "namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18ab4bda534e9935d6126740b9d38997e0f", null ],
@@ -73,11 +73,22 @@ var namespacerpg__os =
       [ "OnTurnStart", "namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18adaf718659527e949aad66f1c860bbb5f", null ],
       [ "OnTurnEnd", "namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18ad9d09877492c9df8ba92e5dba5b3caad", null ]
     ] ],
+    [ "Grading", "namespacerpg__os.html#a77f98d725fb2409a3e02d40f5772f3bc", [
+      [ "None", "namespacerpg__os.html#a77f98d725fb2409a3e02d40f5772f3bca6adf97f83acf6453d4a6a4b1070f3754", null ],
+      [ "Percentile", "namespacerpg__os.html#a77f98d725fb2409a3e02d40f5772f3bca915b56c00229b328af95134410779d20", null ],
+      [ "PoolQuality", "namespacerpg__os.html#a77f98d725fb2409a3e02d40f5772f3bcafd05b06908768e6dd8c686b4d5a73429", null ]
+    ] ],
     [ "ModifierType", "namespacerpg__os.html#aab9c315b59a58b0733ac5a30a02da3f2", [
       [ "Override", "namespacerpg__os.html#aab9c315b59a58b0733ac5a30a02da3f2a6da8e67225fdcfa78c3ea5dc3154b849", null ],
       [ "Add", "namespacerpg__os.html#aab9c315b59a58b0733ac5a30a02da3f2aec211f7c20af43e742bf2570c3cb84f9", null ],
       [ "Multiply", "namespacerpg__os.html#aab9c315b59a58b0733ac5a30a02da3f2ae257376d913f3b53cbb4a9b19d770648", null ],
       [ "Clamp", "namespacerpg__os.html#aab9c315b59a58b0733ac5a30a02da3f2a08825280e3f8137556325061ba67ff8c", null ]
+    ] ],
+    [ "Resolution", "namespacerpg__os.html#a95eaa793f5aa7a7b28d2851594d614dc", [
+      [ "Threshold", "namespacerpg__os.html#a95eaa793f5aa7a7b28d2851594d614dca2a63f555989152ba866b43a1faacd680", null ],
+      [ "Pool", "namespacerpg__os.html#a95eaa793f5aa7a7b28d2851594d614dcadef36b726efed529b13ba240dd331a12", null ],
+      [ "Opposed", "namespacerpg__os.html#a95eaa793f5aa7a7b28d2851594d614dca4426b14cf40eb77915f04b0a4701c0b3", null ],
+      [ "Resistance", "namespacerpg__os.html#a95eaa793f5aa7a7b28d2851594d614dca9db444f7a3b8ba8f817647de53b7a6fe", null ]
     ] ],
     [ "SuccessLevel", "namespacerpg__os.html#a0dc66a7ae36ef58a210fec7c99826700", [
       [ "Fumble", "namespacerpg__os.html#a0dc66a7ae36ef58a210fec7c99826700a697c0f6712edee06e7cc9e3aba782ea0", null ],
@@ -85,6 +96,11 @@ var namespacerpg__os =
       [ "Success", "namespacerpg__os.html#a0dc66a7ae36ef58a210fec7c99826700a505a83f220c02df2f85c3810cd9ceb38", null ],
       [ "Special", "namespacerpg__os.html#a0dc66a7ae36ef58a210fec7c99826700ab4c2b550635fe54fd29f2b64dfaca55d", null ],
       [ "Critical", "namespacerpg__os.html#a0dc66a7ae36ef58a210fec7c99826700a278d01e5af56273bae1bb99a98b370cd", null ]
+    ] ],
+    [ "ThresholdSource", "namespacerpg__os.html#a031baa10011b869e066dd2a216ce55d4", [
+      [ "Difficulty", "namespacerpg__os.html#a031baa10011b869e066dd2a216ce55d4a7b29ca96ada2afa3aadbcf55cd61a1ed", null ],
+      [ "ActorStat", "namespacerpg__os.html#a031baa10011b869e066dd2a216ce55d4ae15941912a4c035ac473229ac6bf832a", null ],
+      [ "TargetStat", "namespacerpg__os.html#a031baa10011b869e066dd2a216ce55d4aa0fe624424aad8695f9a86a5f115b641", null ]
     ] ],
     [ "Variance", "namespacerpg__os.html#ab870da3d65c79d59dad5920efc43dc65", [
       [ "Random", "namespacerpg__os.html#ab870da3d65c79d59dad5920efc43dc65a64663f4646781c9c0110838b905daa23", null ],
@@ -96,23 +112,22 @@ var namespacerpg__os =
     ] ],
     [ "applyModifierPipeline", "namespacerpg__os.html#a87ad4f8cf7886eca2e27591884ef2bb9", null ],
     [ "createFighter", "namespacerpg__os.html#a2ffff45a6b10310d015dd0c1d6017bc5", null ],
-    [ "diceBounds", "namespacerpg__os.html#adb12c2d6e96f1f4520f3d48cf0929666", null ],
+    [ "diceBounds", "namespacerpg__os.html#ae2d848f9064bfb4ac2a8bf655a01e135", null ],
     [ "makeCombatantSpec", "namespacerpg__os.html#adacf6091542317212a714e913c4badb1", null ],
-    [ "pickVariant", "namespacerpg__os.html#ae9fa928908ec9ef10b32476158e7fc38", null ],
-    [ "qualityLevelFromRemaining", "namespacerpg__os.html#a7930cbc1013ee467e217a6579a529246", null ],
+    [ "operator+", "namespacerpg__os.html#a2c9ba73f667596b8ab089577bfed0ec6", null ],
+    [ "operator-", "namespacerpg__os.html#af141eb3e6be2d938ce2b9bac02b4f3a5", null ],
+    [ "pickVariant", "namespacerpg__os.html#aa55b58906fac846e9841f808de5c926e", null ],
+    [ "qualityLevelFromRemaining", "namespacerpg__os.html#a5202972feec1585019a7ab8a69a0ea3b", null ],
     [ "randomSeed", "namespacerpg__os.html#ae74c58efe66f2fe3d9cd970227f9b02e", null ],
     [ "readJsonNumber", "namespacerpg__os.html#a18570347f6206c4d0f43d8f95a4a035e", null ],
-    [ "readVariantValue", "namespacerpg__os.html#a5c864b02b70dac1070227f17d1567422", null ],
-    [ "resolveAdditiveD20", "namespacerpg__os.html#a01418601184a765bd5eaede47d5f9b34", null ],
+    [ "readVariantValue", "namespacerpg__os.html#aec9d689bf0943cb314269cc0e629ddb1", null ],
     [ "resolveAttackCheckType", "namespacerpg__os.html#a14ace88217b0f637fa8c11d7ae5bfe23", null ],
-    [ "resolveAttackVsDefense", "namespacerpg__os.html#a7ef034f2b27d47dfec3241d25c8677c5", null ],
-    [ "resolveCheck", "namespacerpg__os.html#a1dd7326c980a88cf098c9b9706f0fc87", null ],
+    [ "resolveCheck", "namespacerpg__os.html#ac882be2ad6ea807bb910557771569803", null ],
     [ "resolveHitPointPool", "namespacerpg__os.html#af34d585416afebd7167fec0777cf8390", null ],
-    [ "resolveOpposedRollUnderD100", "namespacerpg__os.html#ae17c63b87985c6cfcba7199fe43c3981", null ],
-    [ "resolveResistanceRoll", "namespacerpg__os.html#a8b8472bc5b027cb0cb3feecfbcf2bb86", null ],
-    [ "resolveRollUnderD100", "namespacerpg__os.html#a2ff1a4815cbc06e6ca9c115bcecbd205", null ],
-    [ "resolveRollUnderD20", "namespacerpg__os.html#a138152104cbde2e9655fb564a8dd405c", null ],
-    [ "resolveTripleRollUnderPool", "namespacerpg__os.html#a67cec6e58ce0e92bc143ec58e6a5fb9f", null ],
+    [ "resolveOpposedCheck", "namespacerpg__os.html#a35c81cc264d9a39fa0ae84a98e47cc45", null ],
+    [ "resolvePoolCheck", "namespacerpg__os.html#a8dc70248cb410a26d27117eb3347042b", null ],
+    [ "resolveResistanceCheck", "namespacerpg__os.html#aec022d03c5ed920153ee4dca70e7bb9d", null ],
+    [ "resolveThresholdCheck", "namespacerpg__os.html#a6b46ef1cf31683f3c873e49ca842cab6", null ],
     [ "runFight", "namespacerpg__os.html#a4a210e0aabb993a0723ab42ee2760ed2", null ],
-    [ "successLevelFor", "namespacerpg__os.html#ac38fd72e232b89754c8431c1d1e5a041", null ]
+    [ "successLevelFor", "namespacerpg__os.html#a7cc63c6411d33823547b72473c8ce523", null ]
 ];

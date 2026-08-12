@@ -131,242 +131,321 @@ $(document).ready(function(){initNavTree('dice__engine_8hpp_source.html',''); in
 <a href="dice__engine_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2026 Christian Mayer and the Mundus Mirabilis contributors.</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// SPDX-License-Identifier: Apache-2.0</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;array&gt;</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;chrono&gt;</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &lt;cstddef&gt;</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#include &lt;random&gt;</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#include &lt;<a class="code" href="concepts_8hpp.html">rpg_os/core/concepts.hpp</a>&gt;</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#include &lt;stdexcept&gt;</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#include &lt;string_view&gt;</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#if defined(_WIN32)</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#include &lt;process.h&gt;</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#elif defined(__unix__) || defined(__APPLE__)</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#include &lt;unistd.h&gt;</span></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacerpg__os.html">rpg_os</a> {</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="keyword">namespace </span>detail {</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="foldopen" id="foldopen00055" data-start="{" data-end="}">
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="namespacerpg__os_1_1detail.html#a858c36e0d13cf3dd47daaceafb63b2e4">   55</a></span>[[nodiscard]] <span class="keyword">inline</span> uint32_t <a class="code hl_function" href="namespacerpg__os_1_1detail.html#a858c36e0d13cf3dd47daaceafb63b2e4">processId</a>() noexcept {</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">#if defined(_WIN32)</span></div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(_getpid());</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">#elif defined(__unix__) || defined(__APPLE__)</span></div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(getpid());</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  <span class="keywordflow">return</span> 0u;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>}</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#include &lt;chrono&gt;</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#include &lt;cstddef&gt;</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#include &lt;random&gt;</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#include &lt;<a class="code" href="concepts_8hpp.html">rpg_os/core/concepts.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">#include &lt;stdexcept&gt;</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">#include &lt;string_view&gt;</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#include &lt;utility&gt;</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacerpg__os.html">rpg_os</a> {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="foldopen" id="foldopen00062" data-start="{" data-end="}">
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="namespacerpg__os.html#ae74c58efe66f2fe3d9cd970227f9b02e">   62</a></span>[[nodiscard]] <span class="keyword">inline</span> uint32_t <a class="code hl_function" href="namespacerpg__os.html#ae74c58efe66f2fe3d9cd970227f9b02e">randomSeed</a>() noexcept {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    std::random_device rd;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordflow">return</span> rd();</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  } <span class="keywordflow">catch</span> (...) {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="comment">// No OS entropy device: the high-resolution clock still differs between</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="comment">// runs, which is all an unseeded game run needs.</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        std::chrono::high_resolution_clock::now().time_since_epoch().count());</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  }</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>}</div>
 </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="foldopen" id="foldopen00076" data-start="{" data-end="}">
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="namespacerpg__os_1_1detail.html#a769c90230e3850b1a2ae06b3f7be17a7">   76</a></span>[[nodiscard]] <span class="keyword">inline</span> std::array&lt;uint32_t, 8&gt; <a class="code hl_function" href="namespacerpg__os_1_1detail.html#a769c90230e3850b1a2ae06b3f7be17a7">entropyWords</a>() noexcept {</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  std::array&lt;uint32_t, 8&gt; words{};</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  <span class="keywordflow">try</span> {</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    std::random_device rd;</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordflow">for</span> (std::size_t i = 0; i &lt; words.size(); ++i) {</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>      words[i] = rd();</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    }</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  } <span class="keywordflow">catch</span> (...) {</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="comment">// No OS entropy source available: the other sources mixed in below still</span></div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="comment">// provide enough variety between processes / runs.</span></div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  }</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  <span class="keyword">const</span> std::uint64_t now = <span class="keyword">static_cast&lt;</span>std::uint64_t<span class="keyword">&gt;</span>(</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>      std::chrono::high_resolution_clock::now().time_since_epoch().count());</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  <span class="keyword">const</span> std::uintptr_t stack = <span class="keyword">reinterpret_cast&lt;</span>std::uintptr_t<span class="keyword">&gt;</span>(&amp;now);</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>  words[0] ^= <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(now);</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  words[1] ^= <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(now &gt;&gt; 32);</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>  words[2] ^= <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(stack);</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  words[3] ^= <a class="code hl_function" href="namespacerpg__os_1_1detail.html#a858c36e0d13cf3dd47daaceafb63b2e4">processId</a>();</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  <span class="keywordflow">return</span> words;</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>}</div>
-</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>} <span class="comment">// namespace detail</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="foldopen" id="foldopen00090" data-start="{" data-end="};">
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="classrpg__os_1_1DefaultRandom.html">   90</a></span><span class="keyword">class </span><a class="code hl_class" href="classrpg__os_1_1DefaultRandom.html">DefaultRandom</a> {</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="classrpg__os_1_1DefaultRandom.html#a371ce0c7a03bf0d4f91a0e9bf7b3c398">   94</a></span>  <a class="code hl_function" href="classrpg__os_1_1DefaultRandom.html#a371ce0c7a03bf0d4f91a0e9bf7b3c398">DefaultRandom</a>() : m_engine(<a class="code hl_function" href="namespacerpg__os.html#ae74c58efe66f2fe3d9cd970227f9b02e">randomSeed</a>()) {}</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="classrpg__os_1_1DefaultRandom.html#ab388da26dbdab6e6cf3377ef662ccf53">   97</a></span>  <span class="keyword">explicit</span> <a class="code hl_function" href="classrpg__os_1_1DefaultRandom.html#ab388da26dbdab6e6cf3377ef662ccf53">DefaultRandom</a>(uint32_t seed) : m_engine(seed) {}</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
-<div class="foldopen" id="foldopen00108" data-start="{" data-end="}">
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="namespacerpg__os.html#ae74c58efe66f2fe3d9cd970227f9b02e">  108</a></span>[[nodiscard]] <span class="keyword">inline</span> uint32_t <a class="code hl_function" href="namespacerpg__os.html#ae74c58efe66f2fe3d9cd970227f9b02e">randomSeed</a>() noexcept {</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>  <span class="keyword">const</span> std::array&lt;uint32_t, 8&gt; words = <a class="code hl_function" href="namespacerpg__os_1_1detail.html#a769c90230e3850b1a2ae06b3f7be17a7">detail::entropyWords</a>();</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>  uint32_t result = 0;</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> uint32_t word : words) {</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    result ^= word;</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>  }</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>  <span class="keywordflow">return</span> result;</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>}</div>
+<div class="foldopen" id="foldopen00101" data-start="{" data-end="}">
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="classrpg__os_1_1DefaultRandom.html#a00afb530ac51d039350c39e6e5ec6168">  101</a></span>  <span class="keywordtype">int</span> <a class="code hl_function" href="classrpg__os_1_1DefaultRandom.html#a00afb530ac51d039350c39e6e5ec6168">operator()</a>(<span class="keywordtype">int</span> min, <span class="keywordtype">int</span> max) {</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    std::uniform_int_distribution&lt;int&gt; dist(min, max);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="keywordflow">return</span> dist(m_engine);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>  }</div>
 </div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
-<div class="foldopen" id="foldopen00135" data-start="{" data-end="};">
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="classrpg__os_1_1DefaultRandom.html">  135</a></span><span class="keyword">class </span><a class="code hl_class" href="classrpg__os_1_1DefaultRandom.html">DefaultRandom</a> {</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span><span class="keyword">public</span>:</div>
-<div class="foldopen" id="foldopen00138" data-start="{" data-end="}">
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno"><a class="line" href="classrpg__os_1_1DefaultRandom.html#a371ce0c7a03bf0d4f91a0e9bf7b3c398">  138</a></span>  <a class="code hl_function" href="classrpg__os_1_1DefaultRandom.html#a371ce0c7a03bf0d4f91a0e9bf7b3c398">DefaultRandom</a>() {</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    <span class="keyword">const</span> std::array&lt;uint32_t, 8&gt; words = <a class="code hl_function" href="namespacerpg__os_1_1detail.html#a769c90230e3850b1a2ae06b3f7be17a7">detail::entropyWords</a>();</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    std::seed_seq seq(words.begin(), words.end());</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    m_engine.seed(seq);</div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>  }</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>  std::mt19937 m_engine;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>};</div>
 </div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno"><a class="line" href="classrpg__os_1_1DefaultRandom.html#ab388da26dbdab6e6cf3377ef662ccf53">  145</a></span>  <span class="keyword">explicit</span> <a class="code hl_function" href="classrpg__os_1_1DefaultRandom.html#ab388da26dbdab6e6cf3377ef662ccf53">DefaultRandom</a>(uint32_t seed) : m_engine(seed) {}</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
-<div class="foldopen" id="foldopen00149" data-start="{" data-end="}">
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno"><a class="line" href="classrpg__os_1_1DefaultRandom.html#a00afb530ac51d039350c39e6e5ec6168">  149</a></span>  <span class="keywordtype">int</span> <a class="code hl_function" href="classrpg__os_1_1DefaultRandom.html#a00afb530ac51d039350c39e6e5ec6168">operator()</a>(<span class="keywordtype">int</span> min, <span class="keywordtype">int</span> max) {</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    std::uniform_int_distribution&lt;int&gt; dist(min, max);</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    <span class="keywordflow">return</span> dist(m_engine);</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>  }</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="foldopen" id="foldopen00121" data-start="{" data-end="};">
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="structrpg__os_1_1DieSpec.html">  121</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structrpg__os_1_1DieSpec.html">DieSpec</a> {</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="structrpg__os_1_1DieSpec.html#a6451d9adff7ed3753d7b0b58eb2ab41d">  122</a></span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="structrpg__os_1_1DieSpec.html#a6451d9adff7ed3753d7b0b58eb2ab41d">count</a>{1};</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="structrpg__os_1_1DieSpec.html#a3c2c9c470090156e13a8430e72508bc1">  123</a></span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="structrpg__os_1_1DieSpec.html#a3c2c9c470090156e13a8430e72508bc1">sides</a>{20};</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="structrpg__os_1_1DieSpec.html#a0c5e63052026a9c2806182dc330e60a7">  124</a></span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="structrpg__os_1_1DieSpec.html#a0c5e63052026a9c2806182dc330e60a7">sign</a>{1}; </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>};</div>
 </div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>  std::mt19937 m_engine;</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>};</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="foldopen" id="foldopen00137" data-start="{" data-end="};">
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno"><a class="line" href="classrpg__os_1_1DiceExpression.html">  137</a></span><span class="keyword">class </span><a class="code hl_class" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a> {</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>  <span class="keyword">constexpr</span> <span class="keyword">explicit</span> <a class="code hl_class" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a>(std::string_view expression);</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno"><a class="line" href="classrpg__os_1_1DiceExpression.html#a01d44e764178c4454ef8de41e7928b8f">  144</a></span>  <span class="keyword">constexpr</span> <span class="keyword">explicit</span> <a class="code hl_function" href="classrpg__os_1_1DiceExpression.html#a01d44e764178c4454ef8de41e7928b8f">DiceExpression</a>(<span class="keywordtype">int</span> <a class="code hl_function" href="classrpg__os_1_1DiceExpression.html#a7f6c3a6a89adb274693aedcbf9300d4a">constant</a>) : m_constant(<a class="code hl_function" href="classrpg__os_1_1DiceExpression.html#a7f6c3a6a89adb274693aedcbf9300d4a">constant</a>) {}</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+<div class="foldopen" id="foldopen00150" data-start="{" data-end="}">
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno"><a class="line" href="classrpg__os_1_1DiceExpression.html#aa51a70f0756cf2dd45c738c1f59e1fc2">  150</a></span>  <span class="keyword">constexpr</span> <span class="keyword">explicit</span> <a class="code hl_function" href="classrpg__os_1_1DiceExpression.html#aa51a70f0756cf2dd45c738c1f59e1fc2">DiceExpression</a>(<span class="keywordtype">int</span> count, <span class="keywordtype">int</span> sides) {</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    <span class="keywordflow">if</span> (count &lt; 1) {</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>      <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;die count must be positive&quot;</span>);</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    }</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    <span class="keywordflow">if</span> (sides &lt; 1) {</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>      <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;die sides must be positive&quot;</span>);</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    }</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    m_dice.push_back(<a class="code hl_struct" href="structrpg__os_1_1DieSpec.html">DieSpec</a>{count, sides});</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>  }</div>
 </div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
-<div class="foldopen" id="foldopen00169" data-start="{" data-end="};">
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno"><a class="line" href="structrpg__os_1_1DieSpec.html">  169</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structrpg__os_1_1DieSpec.html">DieSpec</a> {</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno"><a class="line" href="structrpg__os_1_1DieSpec.html#a6451d9adff7ed3753d7b0b58eb2ab41d">  170</a></span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="structrpg__os_1_1DieSpec.html#a6451d9adff7ed3753d7b0b58eb2ab41d">count</a>{1};</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno"><a class="line" href="structrpg__os_1_1DieSpec.html#a3c2c9c470090156e13a8430e72508bc1">  171</a></span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="structrpg__os_1_1DieSpec.html#a3c2c9c470090156e13a8430e72508bc1">sides</a>{20};</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno"><a class="line" href="structrpg__os_1_1DieSpec.html#a0c5e63052026a9c2806182dc330e60a7">  172</a></span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="structrpg__os_1_1DieSpec.html#a0c5e63052026a9c2806182dc330e60a7">sign</a>{1}; </div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>};</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
+<div class="foldopen" id="foldopen00161" data-start="{" data-end="}">
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno"><a class="line" href="classrpg__os_1_1DiceExpression.html#a32664e3b9bd0c33419731159d67001f7">  161</a></span>  [[nodiscard]] <span class="keyword">constexpr</span> <span class="keyword">const</span> std::vector&lt;DieSpec&gt; &amp;<a class="code hl_function" href="classrpg__os_1_1DiceExpression.html#a32664e3b9bd0c33419731159d67001f7">dice</a>() const noexcept {</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    <span class="keywordflow">return</span> m_dice;</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>  }</div>
 </div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
-<div class="foldopen" id="foldopen00185" data-start="{" data-end="};">
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno"><a class="line" href="classrpg__os_1_1DiceExpression.html">  185</a></span><span class="keyword">class </span><a class="code hl_class" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a> {</div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>  <span class="keyword">explicit</span> <a class="code hl_class" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a>(std::string_view expression);</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> </div>
-<div class="foldopen" id="foldopen00191" data-start="{" data-end="}">
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno"><a class="line" href="classrpg__os_1_1DiceExpression.html#a771b2077c31ff87337070cae03861721">  191</a></span>  [[nodiscard]] <span class="keyword">const</span> std::vector&lt;DieSpec&gt; &amp;<a class="code hl_function" href="classrpg__os_1_1DiceExpression.html#a771b2077c31ff87337070cae03861721">dice</a>() const noexcept {</div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    <span class="keywordflow">return</span> m_dice;</div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>  }</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
+<div class="foldopen" id="foldopen00168" data-start="{" data-end="}">
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno"><a class="line" href="classrpg__os_1_1DiceExpression.html#a002e9dd893589f9945e5ad493142ab89">  168</a></span>  [[nodiscard]] <span class="keyword">constexpr</span> std::size_t <a class="code hl_function" href="classrpg__os_1_1DiceExpression.html#a002e9dd893589f9945e5ad493142ab89">dieCount</a>() const noexcept {</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <span class="keywordflow">return</span> totalDieCount();</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>  }</div>
 </div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span> </div>
-<div class="foldopen" id="foldopen00196" data-start="{" data-end="}">
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno"><a class="line" href="classrpg__os_1_1DiceExpression.html#a60b255e5e826d28a7c39d113b2e5246a">  196</a></span>  [[nodiscard]] <span class="keywordtype">int</span> <a class="code hl_function" href="classrpg__os_1_1DiceExpression.html#a60b255e5e826d28a7c39d113b2e5246a">constant</a>() const noexcept {</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    <span class="keywordflow">return</span> m_constant;</div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>  }</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
+<div class="foldopen" id="foldopen00173" data-start="{" data-end="}">
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno"><a class="line" href="classrpg__os_1_1DiceExpression.html#a7f6c3a6a89adb274693aedcbf9300d4a">  173</a></span>  [[nodiscard]] <span class="keyword">constexpr</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classrpg__os_1_1DiceExpression.html#a7f6c3a6a89adb274693aedcbf9300d4a">constant</a>() const noexcept {</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    <span class="keywordflow">return</span> m_constant;</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>  }</div>
 </div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span> </div>
-<div class="foldopen" id="foldopen00202" data-start="{" data-end="}">
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno"><a class="line" href="classrpg__os_1_1DiceExpression.html#a466d525e6c1beb69a9710fb869277273">  202</a></span>  <span class="keyword">template</span> &lt;RandomNumberGenerator Rng&gt; [[nodiscard]] std::vector&lt;int&gt; <a class="code hl_function" href="classrpg__os_1_1DiceExpression.html#a466d525e6c1beb69a9710fb869277273">roll</a>(Rng &amp;rng)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    std::vector&lt;int&gt; results;</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    results.reserve(totalDieCount());</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_struct" href="structrpg__os_1_1DieSpec.html">DieSpec</a> &amp;die : m_dice) {</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; die.count; ++i) {</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        results.push_back(rng(1, die.sides));</div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>      }</div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    }</div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    <span class="keywordflow">return</span> results;</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>  }</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>  <span class="keyword">template</span> &lt;RandomNumberGenerator Rng&gt;</div>
+<div class="foldopen" id="foldopen00180" data-start="{" data-end="}">
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno"><a class="line" href="classrpg__os_1_1DiceExpression.html#af86ee76d55c8a135295663ba541a5fb4">  180</a></span>  [[nodiscard]] <span class="keyword">constexpr</span> std::vector&lt;int&gt; <a class="code hl_function" href="classrpg__os_1_1DiceExpression.html#af86ee76d55c8a135295663ba541a5fb4">roll</a>(Rng &amp;rng)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    std::vector&lt;int&gt; results;</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    results.reserve(totalDieCount());</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_struct" href="structrpg__os_1_1DieSpec.html">DieSpec</a> &amp;die : m_dice) {</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; die.count; ++i) {</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>        results.push_back(rng(1, die.sides));</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>      }</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    }</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    <span class="keywordflow">return</span> results;</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>  }</div>
 </div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span> </div>
-<div class="foldopen" id="foldopen00216" data-start="{" data-end="}">
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno"><a class="line" href="classrpg__os_1_1DiceExpression.html#a0575d692b1ef7e3b08cd23aeef9cd9c3">  216</a></span>  <span class="keyword">template</span> &lt;RandomNumberGenerator Rng&gt; [[nodiscard]] <span class="keywordtype">int</span> <a class="code hl_function" href="classrpg__os_1_1DiceExpression.html#a0575d692b1ef7e3b08cd23aeef9cd9c3">rollSum</a>(Rng &amp;rng)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>    <span class="keywordtype">int</span> sum = m_constant;</div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_struct" href="structrpg__os_1_1DieSpec.html">DieSpec</a> &amp;die : m_dice) {</div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; die.count; ++i) {</div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>        sum += die.sign * rng(1, die.sides);</div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>      }</div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>    }</div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>    <span class="keywordflow">return</span> sum;</div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>  }</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
+<div class="foldopen" id="foldopen00194" data-start="{" data-end="}">
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno"><a class="line" href="classrpg__os_1_1DiceExpression.html#a8dba528ae5c696fb6ae028605fc2e59e">  194</a></span>  <span class="keyword">template</span> &lt;RandomNumberGenerator Rng&gt; [[nodiscard]] <span class="keyword">constexpr</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classrpg__os_1_1DiceExpression.html#a8dba528ae5c696fb6ae028605fc2e59e">rollSum</a>(Rng &amp;rng)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    <span class="keywordtype">int</span> sum = m_constant;</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_struct" href="structrpg__os_1_1DieSpec.html">DieSpec</a> &amp;die : m_dice) {</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; die.count; ++i) {</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        sum += die.sign * rng(1, die.sides);</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>      }</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    }</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    <span class="keywordflow">return</span> sum;</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>  }</div>
 </div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span> </div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>  [[nodiscard]] std::size_t totalDieCount() const noexcept {</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    std::size_t n = 0;</div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_struct" href="structrpg__os_1_1DieSpec.html">DieSpec</a> &amp;die : m_dice) {</div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>      n += <span class="keyword">static_cast&lt;</span>std::size_t<span class="keyword">&gt;</span>(die.count);</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    }</div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    <span class="keywordflow">return</span> n;</div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>  }</div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span> </div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>  <span class="keywordtype">void</span> parse(std::string_view expression) {</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    <span class="keywordflow">if</span> (expression.empty()) {</div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>      <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;empty dice expression&quot;</span>);</div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>    }</div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    std::size_t i = 0;</div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>    <span class="keywordflow">while</span> (i &lt; expression.size()) {</div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>      <span class="keywordflow">if</span> (expression[i] == <span class="charliteral">&#39; &#39;</span>) {</div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>        ++i;</div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>        <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>      }</div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>      <span class="keywordtype">int</span> sign = 1;</div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>      <span class="keywordflow">if</span> (expression[i] == <span class="charliteral">&#39;+&#39;</span>) {</div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>        ++i;</div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (expression[i] == <span class="charliteral">&#39;-&#39;</span>) {</div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>        sign = -1;</div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>        ++i;</div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>      }</div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>      <span class="keywordtype">int</span> number = 0;</div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>      <span class="keywordtype">bool</span> hasNumber = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>      <span class="keywordflow">while</span> (i &lt; expression.size() &amp;&amp; expression[i] &gt;= <span class="charliteral">&#39;0&#39;</span> &amp;&amp; expression[i] &lt;= <span class="charliteral">&#39;9&#39;</span>) {</div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>        number = number * 10 + (expression[i] - <span class="charliteral">&#39;0&#39;</span>);</div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>        hasNumber = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>        ++i;</div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>      }</div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>      <span class="keywordflow">if</span> (i &lt; expression.size() &amp;&amp; (expression[i] == <span class="charliteral">&#39;d&#39;</span> || expression[i] == <span class="charliteral">&#39;D&#39;</span>)) {</div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>        ++i; <span class="comment">// consume &#39;d&#39;</span></div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>        <span class="keywordflow">if</span> (i &gt;= expression.size()) {</div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>          <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;missing die sides in dice expression&quot;</span>);</div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>        }</div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>        <span class="keywordtype">int</span> sides = 0;</div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>        <span class="keywordflow">while</span> (i &lt; expression.size() &amp;&amp; expression[i] &gt;= <span class="charliteral">&#39;0&#39;</span> &amp;&amp; expression[i] &lt;= <span class="charliteral">&#39;9&#39;</span>) {</div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>          sides = sides * 10 + (expression[i] - <span class="charliteral">&#39;0&#39;</span>);</div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>          ++i;</div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>        }</div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>        <span class="keywordflow">if</span> (sides &lt;= 0) {</div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>          <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;die sides must be positive&quot;</span>);</div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>        }</div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> count = hasNumber ? number : 1; <span class="comment">// &quot;d20&quot; == &quot;1d20&quot;</span></div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>        <span class="keywordflow">if</span> (count &lt;= 0) {</div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>          <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;die count must be positive&quot;</span>);</div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>        }</div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>        m_dice.push_back(DieSpec{count, sides, sign});</div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>      } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>        <span class="keywordflow">if</span> (!hasNumber) {</div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>          <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;unexpected character in dice expression&quot;</span>);</div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>        }</div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>        m_constant += sign * number;</div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>      }</div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>    }</div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>  }</div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span> </div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>  std::vector&lt;DieSpec&gt; m_dice;</div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>  <span class="keywordtype">int</span> m_constant{0};</div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>};</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span> </div>
+<div class="foldopen" id="foldopen00207" data-start="{" data-end="}">
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno"><a class="line" href="classrpg__os_1_1DiceExpression.html#a31cd9e6e18d81a03739b9bc7e1b1b1f5">  207</a></span>  [[nodiscard]] <span class="keyword">constexpr</span> <a class="code hl_class" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a> <a class="code hl_function" href="classrpg__os_1_1DiceExpression.html#a31cd9e6e18d81a03739b9bc7e1b1b1f5">operator-</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    std::vector&lt;DieSpec&gt; negated = m_dice;</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    <span class="keywordflow">for</span> (<a class="code hl_struct" href="structrpg__os_1_1DieSpec.html">DieSpec</a> &amp;die : negated) {</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>      die.sign = -die.sign;</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    }</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a>(std::move(negated), -m_constant);</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>  }</div>
 </div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span> </div>
-<div class="foldopen" id="foldopen00290" data-start="{" data-end="}">
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno"><a class="line" href="classrpg__os_1_1DiceExpression.html#a27d37b2e55165f789cbd718186b95590">  290</a></span><span class="keyword">inline</span> <a class="code hl_function" href="classrpg__os_1_1DiceExpression.html#a27d37b2e55165f789cbd718186b95590">DiceExpression::DiceExpression</a>(std::string_view expression) {</div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>  parse(expression);</div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>}</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span> </div>
+<div class="foldopen" id="foldopen00217" data-start="{" data-end="}">
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno"><a class="line" href="classrpg__os_1_1DiceExpression.html#a3d8a3b91b1c49a35724f8cd47343cfd9">  217</a></span>  [[nodiscard]] <span class="keyword">constexpr</span> <a class="code hl_class" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a> <a class="code hl_function" href="classrpg__os_1_1DiceExpression.html#a3d8a3b91b1c49a35724f8cd47343cfd9">operator+</a>(<span class="keyword">const</span> <a class="code hl_class" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a> &amp;rhs)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>    std::vector&lt;DieSpec&gt; combined = m_dice;</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>    combined.insert(combined.end(), rhs.m_dice.begin(), rhs.m_dice.end());</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a>(std::move(combined), m_constant + rhs.m_constant);</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>  }</div>
 </div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span> </div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>} <span class="comment">// namespace rpg_os</span></div>
-<div class="ttc" id="aclassrpg__os_1_1DefaultRandom_html"><div class="ttname"><a href="classrpg__os_1_1DefaultRandom.html">rpg_os::DefaultRandom</a></div><div class="ttdef"><b>Definition</b> <a href="dice__engine_8hpp_source.html#l00135">dice_engine.hpp:135</a></div></div>
-<div class="ttc" id="aclassrpg__os_1_1DefaultRandom_html_a00afb530ac51d039350c39e6e5ec6168"><div class="ttname"><a href="classrpg__os_1_1DefaultRandom.html#a00afb530ac51d039350c39e6e5ec6168">rpg_os::DefaultRandom::operator()</a></div><div class="ttdeci">int operator()(int min, int max)</div><div class="ttdef"><b>Definition</b> <a href="dice__engine_8hpp_source.html#l00149">dice_engine.hpp:149</a></div></div>
-<div class="ttc" id="aclassrpg__os_1_1DefaultRandom_html_a371ce0c7a03bf0d4f91a0e9bf7b3c398"><div class="ttname"><a href="classrpg__os_1_1DefaultRandom.html#a371ce0c7a03bf0d4f91a0e9bf7b3c398">rpg_os::DefaultRandom::DefaultRandom</a></div><div class="ttdeci">DefaultRandom()</div><div class="ttdoc">Truly random: seeds the engine from OS entropy (see randomSeed).</div><div class="ttdef"><b>Definition</b> <a href="dice__engine_8hpp_source.html#l00138">dice_engine.hpp:138</a></div></div>
-<div class="ttc" id="aclassrpg__os_1_1DefaultRandom_html_ab388da26dbdab6e6cf3377ef662ccf53"><div class="ttname"><a href="classrpg__os_1_1DefaultRandom.html#ab388da26dbdab6e6cf3377ef662ccf53">rpg_os::DefaultRandom::DefaultRandom</a></div><div class="ttdeci">DefaultRandom(uint32_t seed)</div><div class="ttdoc">Deterministic and reproducible for a fixed seed.</div><div class="ttdef"><b>Definition</b> <a href="dice__engine_8hpp_source.html#l00145">dice_engine.hpp:145</a></div></div>
-<div class="ttc" id="aclassrpg__os_1_1DiceExpression_html"><div class="ttname"><a href="classrpg__os_1_1DiceExpression.html">rpg_os::DiceExpression</a></div><div class="ttdef"><b>Definition</b> <a href="dice__engine_8hpp_source.html#l00185">dice_engine.hpp:185</a></div></div>
-<div class="ttc" id="aclassrpg__os_1_1DiceExpression_html_a0575d692b1ef7e3b08cd23aeef9cd9c3"><div class="ttname"><a href="classrpg__os_1_1DiceExpression.html#a0575d692b1ef7e3b08cd23aeef9cd9c3">rpg_os::DiceExpression::rollSum</a></div><div class="ttdeci">int rollSum(Rng &amp;rng) const</div><div class="ttdef"><b>Definition</b> <a href="dice__engine_8hpp_source.html#l00216">dice_engine.hpp:216</a></div></div>
-<div class="ttc" id="aclassrpg__os_1_1DiceExpression_html_a27d37b2e55165f789cbd718186b95590"><div class="ttname"><a href="classrpg__os_1_1DiceExpression.html#a27d37b2e55165f789cbd718186b95590">rpg_os::DiceExpression::DiceExpression</a></div><div class="ttdeci">DiceExpression(std::string_view expression)</div><div class="ttdoc">Parses expression; throws std::invalid_argument on malformed input.</div><div class="ttdef"><b>Definition</b> <a href="dice__engine_8hpp_source.html#l00290">dice_engine.hpp:290</a></div></div>
-<div class="ttc" id="aclassrpg__os_1_1DiceExpression_html_a466d525e6c1beb69a9710fb869277273"><div class="ttname"><a href="classrpg__os_1_1DiceExpression.html#a466d525e6c1beb69a9710fb869277273">rpg_os::DiceExpression::roll</a></div><div class="ttdeci">std::vector&lt; int &gt; roll(Rng &amp;rng) const</div><div class="ttdef"><b>Definition</b> <a href="dice__engine_8hpp_source.html#l00202">dice_engine.hpp:202</a></div></div>
-<div class="ttc" id="aclassrpg__os_1_1DiceExpression_html_a60b255e5e826d28a7c39d113b2e5246a"><div class="ttname"><a href="classrpg__os_1_1DiceExpression.html#a60b255e5e826d28a7c39d113b2e5246a">rpg_os::DiceExpression::constant</a></div><div class="ttdeci">int constant() const noexcept</div><div class="ttdoc">The flat additive constant (already includes its sign).</div><div class="ttdef"><b>Definition</b> <a href="dice__engine_8hpp_source.html#l00196">dice_engine.hpp:196</a></div></div>
-<div class="ttc" id="aclassrpg__os_1_1DiceExpression_html_a771b2077c31ff87337070cae03861721"><div class="ttname"><a href="classrpg__os_1_1DiceExpression.html#a771b2077c31ff87337070cae03861721">rpg_os::DiceExpression::dice</a></div><div class="ttdeci">const std::vector&lt; DieSpec &gt; &amp; dice() const noexcept</div><div class="ttdoc">The die groups in order of appearance.</div><div class="ttdef"><b>Definition</b> <a href="dice__engine_8hpp_source.html#l00191">dice_engine.hpp:191</a></div></div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span> </div>
+<div class="foldopen" id="foldopen00225" data-start="{" data-end="}">
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno"><a class="line" href="classrpg__os_1_1DiceExpression.html#ae60121548dec516c055d5dc6f9ff2f38">  225</a></span>  [[nodiscard]] <span class="keyword">constexpr</span> <a class="code hl_class" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a> <a class="code hl_function" href="classrpg__os_1_1DiceExpression.html#ae60121548dec516c055d5dc6f9ff2f38">operator-</a>(<span class="keyword">const</span> <a class="code hl_class" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a> &amp;rhs)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span> + (-rhs);</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>  }</div>
+</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span> </div>
+<div class="foldopen" id="foldopen00230" data-start="{" data-end="}">
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno"><a class="line" href="classrpg__os_1_1DiceExpression.html#ada8e6d6e26ddc8c68ff098e0cf3c2a5c">  230</a></span>  [[nodiscard]] <span class="keyword">constexpr</span> <a class="code hl_class" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a> <a class="code hl_function" href="classrpg__os_1_1DiceExpression.html#ada8e6d6e26ddc8c68ff098e0cf3c2a5c">operator+</a>(<span class="keywordtype">int</span> rhs)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a>(m_dice, m_constant + rhs);</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>  }</div>
+</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span> </div>
+<div class="foldopen" id="foldopen00235" data-start="{" data-end="}">
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno"><a class="line" href="classrpg__os_1_1DiceExpression.html#a9e5f872c743e13ff41563b43af0afca1">  235</a></span>  [[nodiscard]] <span class="keyword">constexpr</span> <a class="code hl_class" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a> <a class="code hl_function" href="classrpg__os_1_1DiceExpression.html#a9e5f872c743e13ff41563b43af0afca1">operator-</a>(<span class="keywordtype">int</span> rhs)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span> + (-rhs);</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>  }</div>
+</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span> </div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>  <span class="keyword">constexpr</span> <a class="code hl_class" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a>(std::vector&lt;DieSpec&gt; <a class="code hl_function" href="classrpg__os_1_1DiceExpression.html#a32664e3b9bd0c33419731159d67001f7">dice</a>, <span class="keywordtype">int</span> <a class="code hl_function" href="classrpg__os_1_1DiceExpression.html#a7f6c3a6a89adb274693aedcbf9300d4a">constant</a>)</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>      : m_dice(std::move(<a class="code hl_function" href="classrpg__os_1_1DiceExpression.html#a32664e3b9bd0c33419731159d67001f7">dice</a>)), m_constant(<a class="code hl_function" href="classrpg__os_1_1DiceExpression.html#a7f6c3a6a89adb274693aedcbf9300d4a">constant</a>) {}</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span> </div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>  [[nodiscard]] <span class="keyword">constexpr</span> std::size_t totalDieCount() const noexcept {</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>    std::size_t n = 0;</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> DieSpec &amp;die : m_dice) {</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>      n += <span class="keyword">static_cast&lt;</span>std::size_t<span class="keyword">&gt;</span>(die.count);</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>    }</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>    <span class="keywordflow">return</span> n;</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>  }</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span> </div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>  <span class="keyword">constexpr</span> <span class="keywordtype">void</span> parse(std::string_view expression) {</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>    <span class="keywordflow">if</span> (expression.empty()) {</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>      <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;empty dice expression&quot;</span>);</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>    }</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>    std::size_t i = 0;</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>    <span class="keywordflow">while</span> (i &lt; expression.size()) {</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>      <span class="keywordflow">if</span> (expression[i] == <span class="charliteral">&#39; &#39;</span>) {</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>        ++i;</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>        <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>      }</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>      <span class="keywordtype">int</span> sign = 1;</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>      <span class="keywordflow">if</span> (expression[i] == <span class="charliteral">&#39;+&#39;</span>) {</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>        ++i;</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (expression[i] == <span class="charliteral">&#39;-&#39;</span>) {</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>        sign = -1;</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>        ++i;</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>      }</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>      <span class="keywordtype">int</span> number = 0;</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>      <span class="keywordtype">bool</span> hasNumber = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>      <span class="keywordflow">while</span> (i &lt; expression.size() &amp;&amp; expression[i] &gt;= <span class="charliteral">&#39;0&#39;</span> &amp;&amp; expression[i] &lt;= <span class="charliteral">&#39;9&#39;</span>) {</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>        number = number * 10 + (expression[i] - <span class="charliteral">&#39;0&#39;</span>);</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>        hasNumber = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>        ++i;</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>      }</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>      <span class="keywordflow">if</span> (i &lt; expression.size() &amp;&amp; (expression[i] == <span class="charliteral">&#39;d&#39;</span> || expression[i] == <span class="charliteral">&#39;D&#39;</span>)) {</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>        ++i; <span class="comment">// consume &#39;d&#39;</span></div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>        <span class="keywordflow">if</span> (i &gt;= expression.size()) {</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>          <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;missing die sides in dice expression&quot;</span>);</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>        }</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>        <span class="keywordtype">int</span> sides = 0;</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>        <span class="keywordflow">while</span> (i &lt; expression.size() &amp;&amp; expression[i] &gt;= <span class="charliteral">&#39;0&#39;</span> &amp;&amp; expression[i] &lt;= <span class="charliteral">&#39;9&#39;</span>) {</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>          sides = sides * 10 + (expression[i] - <span class="charliteral">&#39;0&#39;</span>);</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>          ++i;</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>        }</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>        <span class="keywordflow">if</span> (sides &lt;= 0) {</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>          <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;die sides must be positive&quot;</span>);</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>        }</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> count = hasNumber ? number : 1; <span class="comment">// &quot;d20&quot; == &quot;1d20&quot;</span></div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>        <span class="keywordflow">if</span> (count &lt;= 0) {</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>          <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;die count must be positive&quot;</span>);</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>        }</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>        m_dice.push_back(DieSpec{count, sides, sign});</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>      } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>        <span class="keywordflow">if</span> (!hasNumber) {</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>          <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;unexpected character in dice expression&quot;</span>);</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>        }</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>        m_constant += sign * number;</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>      }</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>    }</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>  }</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span> </div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>  std::vector&lt;DieSpec&gt; m_dice;</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>  <span class="keywordtype">int</span> m_constant{0};</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>};</div>
+</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span> </div>
+<div class="foldopen" id="foldopen00308" data-start="{" data-end="}">
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno"><a class="line" href="classrpg__os_1_1DiceExpression.html#a028552cceafcc83a3fe5ff2b6bce1349">  308</a></span><span class="keyword">constexpr</span> <a class="code hl_function" href="classrpg__os_1_1DiceExpression.html#a028552cceafcc83a3fe5ff2b6bce1349">DiceExpression::DiceExpression</a>(std::string_view expression) {</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>  parse(expression);</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>}</div>
+</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span> </div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span> </div>
+<div class="foldopen" id="foldopen00317" data-start="{" data-end="}">
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno"><a class="line" href="namespacerpg__os.html#a2c9ba73f667596b8ab089577bfed0ec6">  317</a></span>[[nodiscard]] <span class="keyword">constexpr</span> <a class="code hl_class" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a> <a class="code hl_function" href="namespacerpg__os.html#a2c9ba73f667596b8ab089577bfed0ec6">operator+</a>(<span class="keywordtype">int</span> lhs, <span class="keyword">const</span> <a class="code hl_class" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a> &amp;rhs) {</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>  <span class="keywordflow">return</span> rhs + lhs;</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>}</div>
+</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span> </div>
+<div class="foldopen" id="foldopen00323" data-start="{" data-end="}">
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno"><a class="line" href="namespacerpg__os.html#af141eb3e6be2d938ce2b9bac02b4f3a5">  323</a></span>[[nodiscard]] <span class="keyword">constexpr</span> <a class="code hl_class" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a> <a class="code hl_function" href="namespacerpg__os.html#af141eb3e6be2d938ce2b9bac02b4f3a5">operator-</a>(<span class="keywordtype">int</span> lhs, <span class="keyword">const</span> <a class="code hl_class" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a> &amp;rhs) {</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>  <span class="keywordflow">return</span> (-rhs) + lhs;</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>}</div>
+</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span> </div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span> </div>
+<div class="foldopen" id="foldopen00353" data-start="{" data-end="}">
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno"><a class="line" href="namespacerpg__os_1_1dice__literals.html">  353</a></span><span class="keyword">inline</span> <span class="keyword">namespace </span>dice_literals {</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span> </div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>[[nodiscard]] <span class="keyword">constexpr</span> <a class="code hl_class" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a> <span class="keyword">operator</span><span class="stringliteral">&quot;&quot;</span>_dice(<span class="keyword">const</span> <span class="keywordtype">char</span> *str, std::size_t len) {</div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>  <span class="keywordflow">return</span> <a class="code hl_class" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a>(std::string_view(str, len));</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>}</div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span> </div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>[[nodiscard]] <span class="keyword">constexpr</span> <a class="code hl_class" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a> <span class="keyword">operator</span><span class="stringliteral">&quot;&quot;</span>_dice(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> value) {</div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>  <span class="keywordflow">return</span> <a class="code hl_class" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(value));</div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>}</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span> </div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>[[nodiscard]] <span class="keyword">constexpr</span> <a class="code hl_class" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a> <span class="keyword">operator</span><span class="stringliteral">&quot;&quot;</span>_d2(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> count) {</div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>  <span class="keywordflow">return</span> <a class="code hl_class" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(count), 2);</div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>}</div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>[[nodiscard]] <span class="keyword">constexpr</span> <a class="code hl_class" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a> <span class="keyword">operator</span><span class="stringliteral">&quot;&quot;</span>_d3(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> count) {</div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>  <span class="keywordflow">return</span> <a class="code hl_class" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(count), 3);</div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>}</div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>[[nodiscard]] <span class="keyword">constexpr</span> <a class="code hl_class" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a> <span class="keyword">operator</span><span class="stringliteral">&quot;&quot;</span>_d4(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> count) {</div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>  <span class="keywordflow">return</span> <a class="code hl_class" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(count), 4);</div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>}</div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>[[nodiscard]] <span class="keyword">constexpr</span> <a class="code hl_class" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a> <span class="keyword">operator</span><span class="stringliteral">&quot;&quot;</span>_d6(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> count) {</div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>  <span class="keywordflow">return</span> <a class="code hl_class" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(count), 6);</div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>}</div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>[[nodiscard]] <span class="keyword">constexpr</span> <a class="code hl_class" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a> <span class="keyword">operator</span><span class="stringliteral">&quot;&quot;</span>_d8(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> count) {</div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>  <span class="keywordflow">return</span> <a class="code hl_class" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(count), 8);</div>
+<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>}</div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>[[nodiscard]] <span class="keyword">constexpr</span> <a class="code hl_class" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a> <span class="keyword">operator</span><span class="stringliteral">&quot;&quot;</span>_d10(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> count) {</div>
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>  <span class="keywordflow">return</span> <a class="code hl_class" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(count), 10);</div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>}</div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>[[nodiscard]] <span class="keyword">constexpr</span> <a class="code hl_class" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a> <span class="keyword">operator</span><span class="stringliteral">&quot;&quot;</span>_d12(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> count) {</div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>  <span class="keywordflow">return</span> <a class="code hl_class" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(count), 12);</div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>}</div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>[[nodiscard]] <span class="keyword">constexpr</span> <a class="code hl_class" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a> <span class="keyword">operator</span><span class="stringliteral">&quot;&quot;</span>_d20(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> count) {</div>
+<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>  <span class="keywordflow">return</span> <a class="code hl_class" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(count), 20);</div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>}</div>
+<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>[[nodiscard]] <span class="keyword">constexpr</span> <a class="code hl_class" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a> <span class="keyword">operator</span><span class="stringliteral">&quot;&quot;</span>_d30(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> count) {</div>
+<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>  <span class="keywordflow">return</span> <a class="code hl_class" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(count), 30);</div>
+<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>}</div>
+<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>[[nodiscard]] <span class="keyword">constexpr</span> <a class="code hl_class" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a> <span class="keyword">operator</span><span class="stringliteral">&quot;&quot;</span>_d100(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> count) {</div>
+<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>  <span class="keywordflow">return</span> <a class="code hl_class" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(count), 100);</div>
+<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>}</div>
+<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span> </div>
+<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>} <span class="comment">// namespace dice_literals</span></div>
+</div>
+<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span> </div>
+<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>} <span class="comment">// namespace rpg_os</span></div>
+<div class="ttc" id="aclassrpg__os_1_1DefaultRandom_html"><div class="ttname"><a href="classrpg__os_1_1DefaultRandom.html">rpg_os::DefaultRandom</a></div><div class="ttdef"><b>Definition</b> <a href="dice__engine_8hpp_source.html#l00090">dice_engine.hpp:90</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1DefaultRandom_html_a00afb530ac51d039350c39e6e5ec6168"><div class="ttname"><a href="classrpg__os_1_1DefaultRandom.html#a00afb530ac51d039350c39e6e5ec6168">rpg_os::DefaultRandom::operator()</a></div><div class="ttdeci">int operator()(int min, int max)</div><div class="ttdef"><b>Definition</b> <a href="dice__engine_8hpp_source.html#l00101">dice_engine.hpp:101</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1DefaultRandom_html_a371ce0c7a03bf0d4f91a0e9bf7b3c398"><div class="ttname"><a href="classrpg__os_1_1DefaultRandom.html#a371ce0c7a03bf0d4f91a0e9bf7b3c398">rpg_os::DefaultRandom::DefaultRandom</a></div><div class="ttdeci">DefaultRandom()</div><div class="ttdef"><b>Definition</b> <a href="dice__engine_8hpp_source.html#l00094">dice_engine.hpp:94</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1DefaultRandom_html_ab388da26dbdab6e6cf3377ef662ccf53"><div class="ttname"><a href="classrpg__os_1_1DefaultRandom.html#ab388da26dbdab6e6cf3377ef662ccf53">rpg_os::DefaultRandom::DefaultRandom</a></div><div class="ttdeci">DefaultRandom(uint32_t seed)</div><div class="ttdoc">Deterministic and reproducible for a fixed seed.</div><div class="ttdef"><b>Definition</b> <a href="dice__engine_8hpp_source.html#l00097">dice_engine.hpp:97</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1DiceExpression_html"><div class="ttname"><a href="classrpg__os_1_1DiceExpression.html">rpg_os::DiceExpression</a></div><div class="ttdef"><b>Definition</b> <a href="dice__engine_8hpp_source.html#l00137">dice_engine.hpp:137</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1DiceExpression_html_a002e9dd893589f9945e5ad493142ab89"><div class="ttname"><a href="classrpg__os_1_1DiceExpression.html#a002e9dd893589f9945e5ad493142ab89">rpg_os::DiceExpression::dieCount</a></div><div class="ttdeci">constexpr std::size_t dieCount() const noexcept</div><div class="ttdef"><b>Definition</b> <a href="dice__engine_8hpp_source.html#l00168">dice_engine.hpp:168</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1DiceExpression_html_a01d44e764178c4454ef8de41e7928b8f"><div class="ttname"><a href="classrpg__os_1_1DiceExpression.html#a01d44e764178c4454ef8de41e7928b8f">rpg_os::DiceExpression::DiceExpression</a></div><div class="ttdeci">constexpr DiceExpression(int constant)</div><div class="ttdef"><b>Definition</b> <a href="dice__engine_8hpp_source.html#l00144">dice_engine.hpp:144</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1DiceExpression_html_a028552cceafcc83a3fe5ff2b6bce1349"><div class="ttname"><a href="classrpg__os_1_1DiceExpression.html#a028552cceafcc83a3fe5ff2b6bce1349">rpg_os::DiceExpression::DiceExpression</a></div><div class="ttdeci">constexpr DiceExpression(std::string_view expression)</div><div class="ttdoc">Parses expression; throws std::invalid_argument on malformed input.</div><div class="ttdef"><b>Definition</b> <a href="dice__engine_8hpp_source.html#l00308">dice_engine.hpp:308</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1DiceExpression_html_a31cd9e6e18d81a03739b9bc7e1b1b1f5"><div class="ttname"><a href="classrpg__os_1_1DiceExpression.html#a31cd9e6e18d81a03739b9bc7e1b1b1f5">rpg_os::DiceExpression::operator-</a></div><div class="ttdeci">constexpr DiceExpression operator-() const</div><div class="ttdef"><b>Definition</b> <a href="dice__engine_8hpp_source.html#l00207">dice_engine.hpp:207</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1DiceExpression_html_a32664e3b9bd0c33419731159d67001f7"><div class="ttname"><a href="classrpg__os_1_1DiceExpression.html#a32664e3b9bd0c33419731159d67001f7">rpg_os::DiceExpression::dice</a></div><div class="ttdeci">constexpr const std::vector&lt; DieSpec &gt; &amp; dice() const noexcept</div><div class="ttdoc">The die groups in order of appearance.</div><div class="ttdef"><b>Definition</b> <a href="dice__engine_8hpp_source.html#l00161">dice_engine.hpp:161</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1DiceExpression_html_a3d8a3b91b1c49a35724f8cd47343cfd9"><div class="ttname"><a href="classrpg__os_1_1DiceExpression.html#a3d8a3b91b1c49a35724f8cd47343cfd9">rpg_os::DiceExpression::operator+</a></div><div class="ttdeci">constexpr DiceExpression operator+(const DiceExpression &amp;rhs) const</div><div class="ttdef"><b>Definition</b> <a href="dice__engine_8hpp_source.html#l00217">dice_engine.hpp:217</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1DiceExpression_html_a7f6c3a6a89adb274693aedcbf9300d4a"><div class="ttname"><a href="classrpg__os_1_1DiceExpression.html#a7f6c3a6a89adb274693aedcbf9300d4a">rpg_os::DiceExpression::constant</a></div><div class="ttdeci">constexpr int constant() const noexcept</div><div class="ttdoc">The flat additive constant (already includes its sign).</div><div class="ttdef"><b>Definition</b> <a href="dice__engine_8hpp_source.html#l00173">dice_engine.hpp:173</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1DiceExpression_html_a8dba528ae5c696fb6ae028605fc2e59e"><div class="ttname"><a href="classrpg__os_1_1DiceExpression.html#a8dba528ae5c696fb6ae028605fc2e59e">rpg_os::DiceExpression::rollSum</a></div><div class="ttdeci">constexpr int rollSum(Rng &amp;rng) const</div><div class="ttdef"><b>Definition</b> <a href="dice__engine_8hpp_source.html#l00194">dice_engine.hpp:194</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1DiceExpression_html_a9e5f872c743e13ff41563b43af0afca1"><div class="ttname"><a href="classrpg__os_1_1DiceExpression.html#a9e5f872c743e13ff41563b43af0afca1">rpg_os::DiceExpression::operator-</a></div><div class="ttdeci">constexpr DiceExpression operator-(int rhs) const</div><div class="ttdoc">Subtracts a flat constant, e.g. 1_d20 - 2.</div><div class="ttdef"><b>Definition</b> <a href="dice__engine_8hpp_source.html#l00235">dice_engine.hpp:235</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1DiceExpression_html_aa51a70f0756cf2dd45c738c1f59e1fc2"><div class="ttname"><a href="classrpg__os_1_1DiceExpression.html#aa51a70f0756cf2dd45c738c1f59e1fc2">rpg_os::DiceExpression::DiceExpression</a></div><div class="ttdeci">constexpr DiceExpression(int count, int sides)</div><div class="ttdef"><b>Definition</b> <a href="dice__engine_8hpp_source.html#l00150">dice_engine.hpp:150</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1DiceExpression_html_ada8e6d6e26ddc8c68ff098e0cf3c2a5c"><div class="ttname"><a href="classrpg__os_1_1DiceExpression.html#ada8e6d6e26ddc8c68ff098e0cf3c2a5c">rpg_os::DiceExpression::operator+</a></div><div class="ttdeci">constexpr DiceExpression operator+(int rhs) const</div><div class="ttdoc">Adds a flat constant, e.g. 2_d6 + 2.</div><div class="ttdef"><b>Definition</b> <a href="dice__engine_8hpp_source.html#l00230">dice_engine.hpp:230</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1DiceExpression_html_ae60121548dec516c055d5dc6f9ff2f38"><div class="ttname"><a href="classrpg__os_1_1DiceExpression.html#ae60121548dec516c055d5dc6f9ff2f38">rpg_os::DiceExpression::operator-</a></div><div class="ttdeci">constexpr DiceExpression operator-(const DiceExpression &amp;rhs) const</div><div class="ttdef"><b>Definition</b> <a href="dice__engine_8hpp_source.html#l00225">dice_engine.hpp:225</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1DiceExpression_html_af86ee76d55c8a135295663ba541a5fb4"><div class="ttname"><a href="classrpg__os_1_1DiceExpression.html#af86ee76d55c8a135295663ba541a5fb4">rpg_os::DiceExpression::roll</a></div><div class="ttdeci">constexpr std::vector&lt; int &gt; roll(Rng &amp;rng) const</div><div class="ttdef"><b>Definition</b> <a href="dice__engine_8hpp_source.html#l00180">dice_engine.hpp:180</a></div></div>
 <div class="ttc" id="aconcepts_8hpp_html"><div class="ttname"><a href="concepts_8hpp.html">concepts.hpp</a></div><div class="ttdoc">Core concepts that both modes (universal + specific) satisfy.</div></div>
-<div class="ttc" id="anamespacerpg__os_1_1detail_html_a769c90230e3850b1a2ae06b3f7be17a7"><div class="ttname"><a href="namespacerpg__os_1_1detail.html#a769c90230e3850b1a2ae06b3f7be17a7">rpg_os::detail::entropyWords</a></div><div class="ttdeci">std::array&lt; uint32_t, 8 &gt; entropyWords() noexcept</div><div class="ttdef"><b>Definition</b> <a href="dice__engine_8hpp_source.html#l00076">dice_engine.hpp:76</a></div></div>
-<div class="ttc" id="anamespacerpg__os_1_1detail_html_a858c36e0d13cf3dd47daaceafb63b2e4"><div class="ttname"><a href="namespacerpg__os_1_1detail.html#a858c36e0d13cf3dd47daaceafb63b2e4">rpg_os::detail::processId</a></div><div class="ttdeci">uint32_t processId() noexcept</div><div class="ttdef"><b>Definition</b> <a href="dice__engine_8hpp_source.html#l00055">dice_engine.hpp:55</a></div></div>
 <div class="ttc" id="anamespacerpg__os_html"><div class="ttname"><a href="namespacerpg__os.html">rpg_os</a></div><div class="ttdef"><b>Definition</b> <a href="event__system_8hpp_source.html#l00041">event_system.hpp:41</a></div></div>
-<div class="ttc" id="anamespacerpg__os_html_ae74c58efe66f2fe3d9cd970227f9b02e"><div class="ttname"><a href="namespacerpg__os.html#ae74c58efe66f2fe3d9cd970227f9b02e">rpg_os::randomSeed</a></div><div class="ttdeci">uint32_t randomSeed() noexcept</div><div class="ttdef"><b>Definition</b> <a href="dice__engine_8hpp_source.html#l00108">dice_engine.hpp:108</a></div></div>
-<div class="ttc" id="astructrpg__os_1_1DieSpec_html"><div class="ttname"><a href="structrpg__os_1_1DieSpec.html">rpg_os::DieSpec</a></div><div class="ttdef"><b>Definition</b> <a href="dice__engine_8hpp_source.html#l00169">dice_engine.hpp:169</a></div></div>
-<div class="ttc" id="astructrpg__os_1_1DieSpec_html_a0c5e63052026a9c2806182dc330e60a7"><div class="ttname"><a href="structrpg__os_1_1DieSpec.html#a0c5e63052026a9c2806182dc330e60a7">rpg_os::DieSpec::sign</a></div><div class="ttdeci">int sign</div><div class="ttdoc">+1 or -1; a negative sign applies to the rolled sum only.</div><div class="ttdef"><b>Definition</b> <a href="dice__engine_8hpp_source.html#l00172">dice_engine.hpp:172</a></div></div>
-<div class="ttc" id="astructrpg__os_1_1DieSpec_html_a3c2c9c470090156e13a8430e72508bc1"><div class="ttname"><a href="structrpg__os_1_1DieSpec.html#a3c2c9c470090156e13a8430e72508bc1">rpg_os::DieSpec::sides</a></div><div class="ttdeci">int sides</div><div class="ttdef"><b>Definition</b> <a href="dice__engine_8hpp_source.html#l00171">dice_engine.hpp:171</a></div></div>
-<div class="ttc" id="astructrpg__os_1_1DieSpec_html_a6451d9adff7ed3753d7b0b58eb2ab41d"><div class="ttname"><a href="structrpg__os_1_1DieSpec.html#a6451d9adff7ed3753d7b0b58eb2ab41d">rpg_os::DieSpec::count</a></div><div class="ttdeci">int count</div><div class="ttdef"><b>Definition</b> <a href="dice__engine_8hpp_source.html#l00170">dice_engine.hpp:170</a></div></div>
+<div class="ttc" id="anamespacerpg__os_html_a2c9ba73f667596b8ab089577bfed0ec6"><div class="ttname"><a href="namespacerpg__os.html#a2c9ba73f667596b8ab089577bfed0ec6">rpg_os::operator+</a></div><div class="ttdeci">constexpr DiceExpression operator+(int lhs, const DiceExpression &amp;rhs)</div><div class="ttdoc">Adds a flat constant on the left: 2 + 2_d6 == 2_d6 + 2.</div><div class="ttdef"><b>Definition</b> <a href="dice__engine_8hpp_source.html#l00317">dice_engine.hpp:317</a></div></div>
+<div class="ttc" id="anamespacerpg__os_html_ae74c58efe66f2fe3d9cd970227f9b02e"><div class="ttname"><a href="namespacerpg__os.html#ae74c58efe66f2fe3d9cd970227f9b02e">rpg_os::randomSeed</a></div><div class="ttdeci">uint32_t randomSeed() noexcept</div><div class="ttdef"><b>Definition</b> <a href="dice__engine_8hpp_source.html#l00062">dice_engine.hpp:62</a></div></div>
+<div class="ttc" id="anamespacerpg__os_html_af141eb3e6be2d938ce2b9bac02b4f3a5"><div class="ttname"><a href="namespacerpg__os.html#af141eb3e6be2d938ce2b9bac02b4f3a5">rpg_os::operator-</a></div><div class="ttdeci">constexpr DiceExpression operator-(int lhs, const DiceExpression &amp;rhs)</div><div class="ttdef"><b>Definition</b> <a href="dice__engine_8hpp_source.html#l00323">dice_engine.hpp:323</a></div></div>
+<div class="ttc" id="astructrpg__os_1_1DieSpec_html"><div class="ttname"><a href="structrpg__os_1_1DieSpec.html">rpg_os::DieSpec</a></div><div class="ttdef"><b>Definition</b> <a href="dice__engine_8hpp_source.html#l00121">dice_engine.hpp:121</a></div></div>
+<div class="ttc" id="astructrpg__os_1_1DieSpec_html_a0c5e63052026a9c2806182dc330e60a7"><div class="ttname"><a href="structrpg__os_1_1DieSpec.html#a0c5e63052026a9c2806182dc330e60a7">rpg_os::DieSpec::sign</a></div><div class="ttdeci">int sign</div><div class="ttdoc">+1 or -1; a negative sign applies to the rolled sum only.</div><div class="ttdef"><b>Definition</b> <a href="dice__engine_8hpp_source.html#l00124">dice_engine.hpp:124</a></div></div>
+<div class="ttc" id="astructrpg__os_1_1DieSpec_html_a3c2c9c470090156e13a8430e72508bc1"><div class="ttname"><a href="structrpg__os_1_1DieSpec.html#a3c2c9c470090156e13a8430e72508bc1">rpg_os::DieSpec::sides</a></div><div class="ttdeci">int sides</div><div class="ttdef"><b>Definition</b> <a href="dice__engine_8hpp_source.html#l00123">dice_engine.hpp:123</a></div></div>
+<div class="ttc" id="astructrpg__os_1_1DieSpec_html_a6451d9adff7ed3753d7b0b58eb2ab41d"><div class="ttname"><a href="structrpg__os_1_1DieSpec.html#a6451d9adff7ed3753d7b0b58eb2ab41d">rpg_os::DieSpec::count</a></div><div class="ttdeci">int count</div><div class="ttdef"><b>Definition</b> <a href="dice__engine_8hpp_source.html#l00122">dice_engine.hpp:122</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

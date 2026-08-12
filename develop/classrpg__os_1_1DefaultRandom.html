@@ -132,7 +132,6 @@ $(document).ready(function(){initNavTree('classrpg__os_1_1DefaultRandom.html',''
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a371ce0c7a03bf0d4f91a0e9bf7b3c398" id="r_a371ce0c7a03bf0d4f91a0e9bf7b3c398"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1DefaultRandom.html#a371ce0c7a03bf0d4f91a0e9bf7b3c398">DefaultRandom</a> ()</td></tr>
-<tr class="memdesc:a371ce0c7a03bf0d4f91a0e9bf7b3c398"><td class="mdescLeft">&#160;</td><td class="mdescRight">Truly random: seeds the engine from OS entropy (see <a class="el" href="namespacerpg__os.html#ae74c58efe66f2fe3d9cd970227f9b02e">randomSeed</a>).  <br /></td></tr>
 <tr class="separator:a371ce0c7a03bf0d4f91a0e9bf7b3c398"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab388da26dbdab6e6cf3377ef662ccf53" id="r_ab388da26dbdab6e6cf3377ef662ccf53"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1DefaultRandom.html#ab388da26dbdab6e6cf3377ef662ccf53">DefaultRandom</a> (uint32_t seed)</td></tr>
 <tr class="memdesc:ab388da26dbdab6e6cf3377ef662ccf53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deterministic and reproducible for a fixed <code>seed</code>.  <br /></td></tr>
@@ -142,10 +141,10 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Default RNG: a std::mt19937 wrapped in a uniform [min, max] distribution. Satisfies the <code>RandomNumberGenerator</code> concept.</p>
-<dl class="section user"><dt>Why std::mt19937?</dt><dd>The Mersenne Twister is the standard "good enough" engine: fast, portable, and deterministic for a fixed seed, which is exactly the split this library needs — seeded instances replay a run bit-for-bit, unseeded instances draw from OS entropy.</dd></dl>
-<dl class="section user"><dt>Seeding strategy</dt><dd>Default-constructed instances seed from genuine OS entropy (see <a class="el" href="namespacerpg__os.html#ae74c58efe66f2fe3d9cd970227f9b02e">randomSeed</a>), so unseeded runs differ every time. Constructing with an explicit seed is deterministic and reproducible (tests, Monte Carlo simulations). The default constructor uses a full <code>std::seed_seq</code> over 8 words rather than a single 32-bit value to avoid the known poor seeding of mt19937 from one word. </dd></dl>
+<dl class="section user"><dt>Why std::mt19937?</dt><dd>The Mersenne Twister is the standard "good enough" engine: fast, portable, and deterministic for a fixed seed, which is exactly the split this library needs — seeded instances replay a run bit-for-bit, unseeded instances draw from easily available entropy.</dd></dl>
+<dl class="section user"><dt>Seeding strategy</dt><dd>Default-constructed instances seed from <a class="el" href="namespacerpg__os.html#ae74c58efe66f2fe3d9cd970227f9b02e">randomSeed</a> (the OS random device, falling back to the clock), so unseeded runs differ every time — good enough for a game, and trivially upgraded by passing an explicit seed for reproducible simulations or tests. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00135">135</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00090">90</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a371ce0c7a03bf0d4f91a0e9bf7b3c398" name="a371ce0c7a03bf0d4f91a0e9bf7b3c398"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a371ce0c7a03bf0d4f91a0e9bf7b3c398">&#9670;&#160;</a></span>DefaultRandom() <span class="overload">[1/2]</span></h2>
@@ -169,12 +168,9 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Unseeded: seeds the engine from easily available entropy (see <a class="el" href="namespacerpg__os.html#ae74c58efe66f2fe3d9cd970227f9b02e">randomSeed</a>), so every run differs. </p>
 
-<p>Truly random: seeds the engine from OS entropy (see <a class="el" href="namespacerpg__os.html#ae74c58efe66f2fe3d9cd970227f9b02e">randomSeed</a>). </p>
-
-<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00138">138</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
-
-<p class="reference">References <a class="el" href="dice__engine_8hpp_source.html#l00076">rpg_os::detail::entropyWords()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00094">94</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -204,7 +200,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Deterministic and reproducible for a fixed <code>seed</code>. </p>
 
-<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00145">145</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00097">97</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -244,7 +240,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Returns a uniform integer in [min, max] (inclusive). The operator form is what satisfies the <code>RandomNumberGenerator</code> concept. </p>
 
-<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00149">149</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00101">101</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
 
 </div>
 </div>

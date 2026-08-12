@@ -131,30 +131,48 @@ $(document).ready(function(){initNavTree('classrpg__os_1_1DiceExpression.html','
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a27d37b2e55165f789cbd718186b95590" id="r_a27d37b2e55165f789cbd718186b95590"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1DiceExpression.html#a27d37b2e55165f789cbd718186b95590">DiceExpression</a> (std::string_view expression)</td></tr>
-<tr class="memdesc:a27d37b2e55165f789cbd718186b95590"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses <code>expression</code>; throws std::invalid_argument on malformed input.  <br /></td></tr>
-<tr class="separator:a27d37b2e55165f789cbd718186b95590"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a771b2077c31ff87337070cae03861721" id="r_a771b2077c31ff87337070cae03861721"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="structrpg__os_1_1DieSpec.html">DieSpec</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1DiceExpression.html#a771b2077c31ff87337070cae03861721">dice</a> () const noexcept</td></tr>
-<tr class="memdesc:a771b2077c31ff87337070cae03861721"><td class="mdescLeft">&#160;</td><td class="mdescRight">The die groups in order of appearance.  <br /></td></tr>
-<tr class="separator:a771b2077c31ff87337070cae03861721"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60b255e5e826d28a7c39d113b2e5246a" id="r_a60b255e5e826d28a7c39d113b2e5246a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1DiceExpression.html#a60b255e5e826d28a7c39d113b2e5246a">constant</a> () const noexcept</td></tr>
-<tr class="memdesc:a60b255e5e826d28a7c39d113b2e5246a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The flat additive constant (already includes its sign).  <br /></td></tr>
-<tr class="separator:a60b255e5e826d28a7c39d113b2e5246a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a466d525e6c1beb69a9710fb869277273" id="r_a466d525e6c1beb69a9710fb869277273"><td class="memTemplParams" colspan="2">template&lt;RandomNumberGenerator Rng&gt; </td></tr>
-<tr class="memitem:a466d525e6c1beb69a9710fb869277273"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1DiceExpression.html#a466d525e6c1beb69a9710fb869277273">roll</a> (Rng &amp;rng) const</td></tr>
-<tr class="separator:a466d525e6c1beb69a9710fb869277273"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0575d692b1ef7e3b08cd23aeef9cd9c3" id="r_a0575d692b1ef7e3b08cd23aeef9cd9c3"><td class="memTemplParams" colspan="2">template&lt;RandomNumberGenerator Rng&gt; </td></tr>
-<tr class="memitem:a0575d692b1ef7e3b08cd23aeef9cd9c3"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1DiceExpression.html#a0575d692b1ef7e3b08cd23aeef9cd9c3">rollSum</a> (Rng &amp;rng) const</td></tr>
-<tr class="separator:a0575d692b1ef7e3b08cd23aeef9cd9c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a028552cceafcc83a3fe5ff2b6bce1349" id="r_a028552cceafcc83a3fe5ff2b6bce1349"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1DiceExpression.html#a028552cceafcc83a3fe5ff2b6bce1349">DiceExpression</a> (std::string_view expression)</td></tr>
+<tr class="memdesc:a028552cceafcc83a3fe5ff2b6bce1349"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses <code>expression</code>; throws std::invalid_argument on malformed input.  <br /></td></tr>
+<tr class="separator:a028552cceafcc83a3fe5ff2b6bce1349"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01d44e764178c4454ef8de41e7928b8f" id="r_a01d44e764178c4454ef8de41e7928b8f"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1DiceExpression.html#a01d44e764178c4454ef8de41e7928b8f">DiceExpression</a> (int <a class="el" href="classrpg__os_1_1DiceExpression.html#a7f6c3a6a89adb274693aedcbf9300d4a">constant</a>)</td></tr>
+<tr class="separator:a01d44e764178c4454ef8de41e7928b8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa51a70f0756cf2dd45c738c1f59e1fc2" id="r_aa51a70f0756cf2dd45c738c1f59e1fc2"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1DiceExpression.html#aa51a70f0756cf2dd45c738c1f59e1fc2">DiceExpression</a> (int count, int sides)</td></tr>
+<tr class="separator:aa51a70f0756cf2dd45c738c1f59e1fc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32664e3b9bd0c33419731159d67001f7" id="r_a32664e3b9bd0c33419731159d67001f7"><td class="memItemLeft" align="right" valign="top">constexpr const std::vector&lt; <a class="el" href="structrpg__os_1_1DieSpec.html">DieSpec</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1DiceExpression.html#a32664e3b9bd0c33419731159d67001f7">dice</a> () const noexcept</td></tr>
+<tr class="memdesc:a32664e3b9bd0c33419731159d67001f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The die groups in order of appearance.  <br /></td></tr>
+<tr class="separator:a32664e3b9bd0c33419731159d67001f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a002e9dd893589f9945e5ad493142ab89" id="r_a002e9dd893589f9945e5ad493142ab89"><td class="memItemLeft" align="right" valign="top">constexpr std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1DiceExpression.html#a002e9dd893589f9945e5ad493142ab89">dieCount</a> () const noexcept</td></tr>
+<tr class="separator:a002e9dd893589f9945e5ad493142ab89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f6c3a6a89adb274693aedcbf9300d4a" id="r_a7f6c3a6a89adb274693aedcbf9300d4a"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1DiceExpression.html#a7f6c3a6a89adb274693aedcbf9300d4a">constant</a> () const noexcept</td></tr>
+<tr class="memdesc:a7f6c3a6a89adb274693aedcbf9300d4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The flat additive constant (already includes its sign).  <br /></td></tr>
+<tr class="separator:a7f6c3a6a89adb274693aedcbf9300d4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af86ee76d55c8a135295663ba541a5fb4" id="r_af86ee76d55c8a135295663ba541a5fb4"><td class="memTemplParams" colspan="2">template&lt;RandomNumberGenerator Rng&gt; </td></tr>
+<tr class="memitem:af86ee76d55c8a135295663ba541a5fb4"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::vector&lt; int &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1DiceExpression.html#af86ee76d55c8a135295663ba541a5fb4">roll</a> (Rng &amp;rng) const</td></tr>
+<tr class="separator:af86ee76d55c8a135295663ba541a5fb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dba528ae5c696fb6ae028605fc2e59e" id="r_a8dba528ae5c696fb6ae028605fc2e59e"><td class="memTemplParams" colspan="2">template&lt;RandomNumberGenerator Rng&gt; </td></tr>
+<tr class="memitem:a8dba528ae5c696fb6ae028605fc2e59e"><td class="memTemplItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1DiceExpression.html#a8dba528ae5c696fb6ae028605fc2e59e">rollSum</a> (Rng &amp;rng) const</td></tr>
+<tr class="separator:a8dba528ae5c696fb6ae028605fc2e59e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31cd9e6e18d81a03739b9bc7e1b1b1f5" id="r_a31cd9e6e18d81a03739b9bc7e1b1b1f5"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1DiceExpression.html#a31cd9e6e18d81a03739b9bc7e1b1b1f5">operator-</a> () const</td></tr>
+<tr class="separator:a31cd9e6e18d81a03739b9bc7e1b1b1f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d8a3b91b1c49a35724f8cd47343cfd9" id="r_a3d8a3b91b1c49a35724f8cd47343cfd9"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1DiceExpression.html#a3d8a3b91b1c49a35724f8cd47343cfd9">operator+</a> (const <a class="el" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a> &amp;rhs) const</td></tr>
+<tr class="separator:a3d8a3b91b1c49a35724f8cd47343cfd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae60121548dec516c055d5dc6f9ff2f38" id="r_ae60121548dec516c055d5dc6f9ff2f38"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1DiceExpression.html#ae60121548dec516c055d5dc6f9ff2f38">operator-</a> (const <a class="el" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a> &amp;rhs) const</td></tr>
+<tr class="separator:ae60121548dec516c055d5dc6f9ff2f38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada8e6d6e26ddc8c68ff098e0cf3c2a5c" id="r_ada8e6d6e26ddc8c68ff098e0cf3c2a5c"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1DiceExpression.html#ada8e6d6e26ddc8c68ff098e0cf3c2a5c">operator+</a> (int rhs) const</td></tr>
+<tr class="memdesc:ada8e6d6e26ddc8c68ff098e0cf3c2a5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a flat constant, e.g. <code>2_d6</code> + 2.  <br /></td></tr>
+<tr class="separator:ada8e6d6e26ddc8c68ff098e0cf3c2a5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e5f872c743e13ff41563b43af0afca1" id="r_a9e5f872c743e13ff41563b43af0afca1"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1DiceExpression.html#a9e5f872c743e13ff41563b43af0afca1">operator-</a> (int rhs) const</td></tr>
+<tr class="memdesc:a9e5f872c743e13ff41563b43af0afca1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtracts a flat constant, e.g. <code>1_d20</code> - 2.  <br /></td></tr>
+<tr class="separator:a9e5f872c743e13ff41563b43af0afca1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A parsed dice expression. Immutable after construction.</p>
 <dl class="section user"><dt>Why immutable?</dt><dd>Once parsed, a dice expression is pure data; making it immutable lets it be safely shared (the combat loop holds one per combatant across many fights) and lets the compiler reason about it. Parsing happens eagerly in the constructor so a malformed expression from a ruleset fails fast at load time rather than mid-roll. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00185">185</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00137">137</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a27d37b2e55165f789cbd718186b95590" name="a27d37b2e55165f789cbd718186b95590"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a27d37b2e55165f789cbd718186b95590">&#9670;&#160;</a></span>DiceExpression()</h2>
+<a id="a028552cceafcc83a3fe5ff2b6bce1349" name="a028552cceafcc83a3fe5ff2b6bce1349"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a028552cceafcc83a3fe5ff2b6bce1349">&#9670;&#160;</a></span>DiceExpression() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -163,7 +181,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">rpg_os::DiceExpression::DiceExpression </td>
+          <td class="memname">constexpr rpg_os::DiceExpression::DiceExpression </td>
           <td>(</td>
           <td class="paramtype">std::string_view&#160;</td>
           <td class="paramname"><em>expression</em></td><td>)</td>
@@ -172,20 +190,19 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+<span class="mlabels"><span class="mlabel">explicit</span><span class="mlabel">constexpr</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Parses <code>expression</code>; throws std::invalid_argument on malformed input. </p>
 
-<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00290">290</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00308">308</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
 
 </div>
 </div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a60b255e5e826d28a7c39d113b2e5246a" name="a60b255e5e826d28a7c39d113b2e5246a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a60b255e5e826d28a7c39d113b2e5246a">&#9670;&#160;</a></span>constant()</h2>
+<a id="a01d44e764178c4454ef8de41e7928b8f" name="a01d44e764178c4454ef8de41e7928b8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01d44e764178c4454ef8de41e7928b8f">&#9670;&#160;</a></span>DiceExpression() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -194,7 +211,76 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int rpg_os::DiceExpression::constant </td>
+          <td class="memname">constexpr rpg_os::DiceExpression::DiceExpression </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>constant</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Builds a constant-only expression (no dice, a flat value), equivalent to <code><a class="el" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a></code>("7"). Used by the <code>7_dice</code> integer literal. </p>
+
+<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00144">144</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
+
+</div>
+</div>
+<a id="aa51a70f0756cf2dd45c738c1f59e1fc2" name="aa51a70f0756cf2dd45c738c1f59e1fc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa51a70f0756cf2dd45c738c1f59e1fc2">&#9670;&#160;</a></span>DiceExpression() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr rpg_os::DiceExpression::DiceExpression </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>count</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sides</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Builds a single group of <code>count</code> dice with <code>sides</code> faces (e.g. <code>DiceExpression(3, 20)</code> == <code><a class="el" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a></code>("3d20")). Used by the <code>3_d20</code> die-size literals; throws std::invalid_argument if either value is less than one. </p>
+
+<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00150">150</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a7f6c3a6a89adb274693aedcbf9300d4a" name="a7f6c3a6a89adb274693aedcbf9300d4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f6c3a6a89adb274693aedcbf9300d4a">&#9670;&#160;</a></span>constant()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr int rpg_os::DiceExpression::constant </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -202,21 +288,21 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>The flat additive constant (already includes its sign). </p>
 
-<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00196">196</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00173">173</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="variance_8hpp_source.html#l00102">rpg_os::diceBounds()</a>, <a class="el" href="test__dice_8cpp_source.html#l00053">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00094">TEST_CASE()</a>, and <a class="el" href="test__dice_8cpp_source.html#l00062">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="variance_8hpp_source.html#l00102">rpg_os::diceBounds()</a>, <a class="el" href="test__dice_8cpp_source.html#l00067">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00279">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00108">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00151">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00159">TEST_CASE()</a>, and <a class="el" href="test__dice_8cpp_source.html#l00076">TEST_CASE()</a>.</p>
 
 </div>
 </div>
-<a id="a771b2077c31ff87337070cae03861721" name="a771b2077c31ff87337070cae03861721"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a771b2077c31ff87337070cae03861721">&#9670;&#160;</a></span>dice()</h2>
+<a id="a32664e3b9bd0c33419731159d67001f7" name="a32664e3b9bd0c33419731159d67001f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32664e3b9bd0c33419731159d67001f7">&#9670;&#160;</a></span>dice()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -225,7 +311,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const std::vector&lt; <a class="el" href="structrpg__os_1_1DieSpec.html">DieSpec</a> &gt; &amp; rpg_os::DiceExpression::dice </td>
+          <td class="memname">constexpr const std::vector&lt; <a class="el" href="structrpg__os_1_1DieSpec.html">DieSpec</a> &gt; &amp; rpg_os::DiceExpression::dice </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -233,21 +319,197 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>The die groups in order of appearance. </p>
 
-<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00191">191</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00161">161</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="variance_8hpp_source.html#l00102">rpg_os::diceBounds()</a>, <a class="el" href="test__dice_8cpp_source.html#l00069">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00053">TEST_CASE()</a>, and <a class="el" href="test__dice_8cpp_source.html#l00094">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="variance_8hpp_source.html#l00102">rpg_os::diceBounds()</a>, <a class="el" href="test__dice_8cpp_source.html#l00083">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00067">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00279">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00108">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00151">TEST_CASE()</a>, and <a class="el" href="test__dice_8cpp_source.html#l00159">TEST_CASE()</a>.</p>
 
 </div>
 </div>
-<a id="a466d525e6c1beb69a9710fb869277273" name="a466d525e6c1beb69a9710fb869277273"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a466d525e6c1beb69a9710fb869277273">&#9670;&#160;</a></span>roll()</h2>
+<a id="a002e9dd893589f9945e5ad493142ab89" name="a002e9dd893589f9945e5ad493142ab89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a002e9dd893589f9945e5ad493142ab89">&#9670;&#160;</a></span>dieCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr std::size_t rpg_os::DiceExpression::dieCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The total number of individual dice rolled by the expression (the sum of every group's count). Used by the ruleset loader to validate that a pool check has exactly one die per attribute. </p>
+
+<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00168">168</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ruleset__loader_8hpp_source.html#l00709">rpg_os::RulesetLoader::validate()</a>.</p>
+
+</div>
+</div>
+<a id="a3d8a3b91b1c49a35724f8cd47343cfd9" name="a3d8a3b91b1c49a35724f8cd47343cfd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d8a3b91b1c49a35724f8cd47343cfd9">&#9670;&#160;</a></span>operator+() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a> rpg_os::DiceExpression::operator+ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Combines two expressions: their die groups are concatenated and their constants added, so <code>2_d6</code> + 1_d4 is one two-group expression. </p>
+
+<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00217">217</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ada8e6d6e26ddc8c68ff098e0cf3c2a5c" name="ada8e6d6e26ddc8c68ff098e0cf3c2a5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada8e6d6e26ddc8c68ff098e0cf3c2a5c">&#9670;&#160;</a></span>operator+() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a> rpg_os::DiceExpression::operator+ </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Adds a flat constant, e.g. <code>2_d6</code> + 2. </p>
+
+<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00230">230</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a31cd9e6e18d81a03739b9bc7e1b1b1f5" name="a31cd9e6e18d81a03739b9bc7e1b1b1f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31cd9e6e18d81a03739b9bc7e1b1b1f5">&#9670;&#160;</a></span>operator-() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a> rpg_os::DiceExpression::operator- </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Unary minus: negates the constant and every die group's sign, so <code>-</code>(2_d6) is the same expression as the "-2d6" term of a parsed string (raw rolls stay positive; only the sum is negated). </p>
+
+<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00207">207</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ae60121548dec516c055d5dc6f9ff2f38" name="ae60121548dec516c055d5dc6f9ff2f38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae60121548dec516c055d5dc6f9ff2f38">&#9670;&#160;</a></span>operator-() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a> rpg_os::DiceExpression::operator- </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Subtracts <code>rhs</code>: its die groups and constant are negated first, e.g. <code>3_d6</code> - 1_d4. </p>
+
+<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00225">225</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a9e5f872c743e13ff41563b43af0afca1" name="a9e5f872c743e13ff41563b43af0afca1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e5f872c743e13ff41563b43af0afca1">&#9670;&#160;</a></span>operator-() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a> rpg_os::DiceExpression::operator- </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Subtracts a flat constant, e.g. <code>1_d20</code> - 2. </p>
+
+<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00235">235</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
+
+</div>
+</div>
+<a id="af86ee76d55c8a135295663ba541a5fb4" name="af86ee76d55c8a135295663ba541a5fb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af86ee76d55c8a135295663ba541a5fb4">&#9670;&#160;</a></span>roll()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -258,7 +520,7 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; int &gt; rpg_os::DiceExpression::roll </td>
+          <td class="memname">constexpr std::vector&lt; int &gt; rpg_os::DiceExpression::roll </td>
           <td>(</td>
           <td class="paramtype">Rng &amp;&#160;</td>
           <td class="paramname"><em>rng</em></td><td>)</td>
@@ -267,20 +529,20 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 <p>Rolls every die with <code>rng</code>. The raw results are always positive and appear in roll order (checks that need individual dice use this). </p>
 
-<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00202">202</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00180">180</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="checks_8hpp_source.html#l00207">rpg_os::resolveAdditiveD20()</a>, <a class="el" href="test__dice_8cpp_source.html#l00069">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00053">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00078">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00086">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00023">TEST_CASE()</a>, and <a class="el" href="test__dice_8cpp_source.html#l00045">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="checks_8hpp_source.html#l00359">rpg_os::resolvePoolCheck()</a>, <a class="el" href="checks_8hpp_source.html#l00268">rpg_os::resolveThresholdCheck()</a>, <a class="el" href="test__dice_8cpp_source.html#l00083">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00067">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00092">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00100">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00037">TEST_CASE()</a>, and <a class="el" href="test__dice_8cpp_source.html#l00059">TEST_CASE()</a>.</p>
 
 </div>
 </div>
-<a id="a0575d692b1ef7e3b08cd23aeef9cd9c3" name="a0575d692b1ef7e3b08cd23aeef9cd9c3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0575d692b1ef7e3b08cd23aeef9cd9c3">&#9670;&#160;</a></span>rollSum()</h2>
+<a id="a8dba528ae5c696fb6ae028605fc2e59e" name="a8dba528ae5c696fb6ae028605fc2e59e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dba528ae5c696fb6ae028605fc2e59e">&#9670;&#160;</a></span>rollSum()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -291,7 +553,7 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int rpg_os::DiceExpression::rollSum </td>
+          <td class="memname">constexpr int rpg_os::DiceExpression::rollSum </td>
           <td>(</td>
           <td class="paramtype">Rng &amp;&#160;</td>
           <td class="paramname"><em>rng</em></td><td>)</td>
@@ -300,15 +562,15 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Rolls every die and returns the signed total (constant + signed dice). This is the common "how much damage / how high did I roll" entry point; use <a class="el" href="classrpg__os_1_1DiceExpression.html#a466d525e6c1beb69a9710fb869277273">roll</a> instead when individual dice matter. </p>
+<p>Rolls every die and returns the signed total (constant + signed dice). This is the common "how much damage / how high did I roll" entry point; use <a class="el" href="classrpg__os_1_1DiceExpression.html#af86ee76d55c8a135295663ba541a5fb4">roll</a> instead when individual dice matter. </p>
 
-<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00216">216</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00194">194</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00221">rpg_os::detail::attackOnce()</a>, <a class="el" href="variance_8hpp_source.html#l00131">rpg_os::readVariantValue()</a>, <a class="el" href="test__dice_8cpp_source.html#l00053">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00078">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00062">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00086">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00023">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00031">TEST_CASE()</a>, and <a class="el" href="test__dice_8cpp_source.html#l00045">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00220">rpg_os::detail::attackOnce()</a>, <a class="el" href="variance_8hpp_source.html#l00131">rpg_os::readVariantValue()</a>, <a class="el" href="checks_8hpp_source.html#l00422">rpg_os::resolveOpposedCheck()</a>, <a class="el" href="checks_8hpp_source.html#l00484">rpg_os::resolveResistanceCheck()</a>, <a class="el" href="checks_8hpp_source.html#l00268">rpg_os::resolveThresholdCheck()</a>, <a class="el" href="test__dice_8cpp_source.html#l00067">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00151">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00092">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00076">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00100">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00037">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00045">TEST_CASE()</a>, and <a class="el" href="test__dice_8cpp_source.html#l00059">TEST_CASE()</a>.</p>
 
 </div>
 </div>

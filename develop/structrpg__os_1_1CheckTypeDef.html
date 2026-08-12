@@ -131,40 +131,22 @@ $(document).ready(function(){initNavTree('structrpg__os_1_1CheckTypeDef.html',''
 <div class="dynheader">
 Collaboration diagram for rpg_os::CheckTypeDef:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="structrpg__os_1_1CheckTypeDef__coll__graph.svg" width="178" height="124"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="structrpg__os_1_1CheckTypeDef__coll__graph.svg" width="184" height="212"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a967ce50cdcb460c280397d1ddf55fdb8" id="r_a967ce50cdcb460c280397d1ddf55fdb8"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrpg__os_1_1CheckTypeDef.html#a967ce50cdcb460c280397d1ddf55fdb8">id</a></td></tr>
 <tr class="separator:a967ce50cdcb460c280397d1ddf55fdb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa04411c1e8ae69428c1a9091feafcfb6" id="r_aa04411c1e8ae69428c1a9091feafcfb6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structrpg__os_1_1CheckConfig.html">CheckConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrpg__os_1_1CheckTypeDef.html#aa04411c1e8ae69428c1a9091feafcfb6">config</a></td></tr>
-<tr class="separator:aa04411c1e8ae69428c1a9091feafcfb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a215f37b6634e92af13b6cde19e360186" id="r_a215f37b6634e92af13b6cde19e360186"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structrpg__os_1_1CheckRecipe.html">CheckRecipe</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrpg__os_1_1CheckTypeDef.html#a215f37b6634e92af13b6cde19e360186">recipe</a></td></tr>
+<tr class="separator:a215f37b6634e92af13b6cde19e360186"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A named check type: an id plus the configuration for the shared resolver.</p>
-<dl class="section user"><dt>Why name-check-types at all?</dt><dd>Rulesets reference checks by name (e.g. "dnd5e_attack_melee", "tde_attack"). Mapping a name to a <a class="el" href="structrpg__os_1_1CheckConfig.html">CheckConfig</a> lets the universal engine resolve checks without hard-coding any game — and gives the code generator the exact config it needs to emit named, compiled check methods. </dd></dl>
+<div class="textblock"><p>A named check type: an id plus the recipe for the generic resolver.</p>
+<dl class="section user"><dt>Why name-check-types at all?</dt><dd>Rulesets reference checks by name (e.g. "dnd5e_attack_melee", "tde_attack"). Mapping a name to a <a class="el" href="structrpg__os_1_1CheckRecipe.html">CheckRecipe</a> lets the universal engine resolve checks without hard-coding any game — and gives the code generator the exact recipe it needs to emit named, compiled check methods. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00115">115</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
-<a id="aa04411c1e8ae69428c1a9091feafcfb6" name="aa04411c1e8ae69428c1a9091feafcfb6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa04411c1e8ae69428c1a9091feafcfb6">&#9670;&#160;</a></span>config</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structrpg__os_1_1CheckConfig.html">CheckConfig</a> rpg_os::CheckTypeDef::config</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00117">117</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="check__resolver_8hpp_source.html#l00043">rpg_os::CheckResolver::resolve()</a>, <a class="el" href="test__ruleset__loader_8cpp_source.html#l00144">TEST_CASE()</a>, and <a class="el" href="test__ruleset__loader_8cpp_source.html#l00158">TEST_CASE()</a>.</p>
-
-</div>
-</div>
 <a id="a967ce50cdcb460c280397d1ddf55fdb8" name="a967ce50cdcb460c280397d1ddf55fdb8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a967ce50cdcb460c280397d1ddf55fdb8">&#9670;&#160;</a></span>id</h2>
 
@@ -178,6 +160,24 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00116">116</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a215f37b6634e92af13b6cde19e360186" name="a215f37b6634e92af13b6cde19e360186"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a215f37b6634e92af13b6cde19e360186">&#9670;&#160;</a></span>recipe</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structrpg__os_1_1CheckRecipe.html">CheckRecipe</a> rpg_os::CheckTypeDef::recipe</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00117">117</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="check__resolver_8hpp_source.html#l00043">rpg_os::CheckResolver::resolve()</a>, <a class="el" href="test__ruleset__loader_8cpp_source.html#l00159">TEST_CASE()</a>, and <a class="el" href="test__ruleset__loader_8cpp_source.html#l00176">TEST_CASE()</a>.</p>
 
 </div>
 </div>

@@ -1,31 +1,33 @@
 <map id="ruleset_loader.hpp" name="ruleset_loader.hpp">
-<area shape="rect" id="Node000001" title="Ruleset loading and validation (universal / dynamic mode)." alt="" coords="361,5,503,31"/>
-<area shape="rect" id="Node000002" href="$check__resolver_8hpp.html" title="Check resolver (universal mode)." alt="" coords="333,152,480,177"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="419,44,404,79,402,118,406,151,401,152,396,119,399,78,414,41"/>
-<area shape="rect" id="Node000003" href="$engine_8hpp.html" title="RulesetEngine facade (universal mode)." alt="" coords="359,225,454,251"/>
-<area shape="poly" id="edge15_Node000001_Node000003" title=" " alt="" coords="409,41,362,89,340,119,324,153,321,165,324,176,334,191,348,204,379,223,376,227,345,208,330,195,319,178,315,165,319,151,336,117,358,85,405,38"/>
-<area shape="rect" id="Node000012" href="$dynamic__entity_8hpp.html" title="Dynamic entity (universal mode)." alt="" coords="413,79,563,104"/>
-<area shape="poly" id="edge12_Node000001_Node000012" title=" " alt="" coords="452,40,481,77,477,80,448,43"/>
-<area shape="rect" id="Node000013" href="$test__ruleset__loader_8cpp.html" title="Tests for the ruleset loader and model (rpg_os::RulesetLoader, rpg_os::Ruleset)." alt="" coords="587,79,760,104"/>
-<area shape="poly" id="edge16_Node000001_Node000013" title=" " alt="" coords="485,32,635,76,634,81,483,37"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="409,191,409,225,404,225,404,191"/>
+<area shape="rect" id="Node000001" title="Ruleset loading and validation (universal / dynamic mode)." alt="" coords="453,5,595,31"/>
+<area shape="rect" id="Node000002" href="$check__resolver_8hpp.html" title="Check resolver (universal mode)." alt="" coords="425,152,572,177"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="511,44,496,79,494,118,498,151,493,152,488,119,491,78,506,41"/>
+<area shape="rect" id="Node000003" href="$engine_8hpp.html" title="RulesetEngine facade (universal mode)." alt="" coords="451,225,546,251"/>
+<area shape="poly" id="edge16_Node000001_Node000003" title=" " alt="" coords="501,41,454,89,432,119,416,153,413,165,416,176,426,191,440,204,471,223,468,227,437,208,422,195,411,178,407,165,411,151,428,117,450,85,497,38"/>
+<area shape="rect" id="Node000013" href="$dynamic__entity_8hpp.html" title="Dynamic entity (universal mode)." alt="" coords="505,79,655,104"/>
+<area shape="poly" id="edge13_Node000001_Node000013" title=" " alt="" coords="544,40,573,77,569,80,540,43"/>
+<area shape="rect" id="Node000014" href="$test__ruleset__loader_8cpp.html" title="Tests for the ruleset loader and model (rpg_os::RulesetLoader, rpg_os::Ruleset)." alt="" coords="679,79,852,104"/>
+<area shape="poly" id="edge17_Node000001_Node000014" title=" " alt="" coords="577,32,727,76,726,81,575,37"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="501,191,501,225,496,225,496,191"/>
 <area shape="rect" id="Node000004" href="$combat_8hpp.html" title="Combat simulation helpers (universal mode)." alt="" coords="84,299,183,324"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="350,257,178,301,177,296,349,252"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="439,254,183,303,182,298,438,248"/>
 <area shape="rect" id="Node000005" href="$fight_2main_8cpp.html" title="Fight&#45;to&#45;the&#45;end demo (universal mode)." alt="" coords="5,372,88,397"/>
-<area shape="poly" id="edge6_Node000003_Node000005" title=" " alt="" coords="346,245,273,252,192,262,120,278,93,289,74,301,62,317,54,336,49,372,44,371,49,335,57,314,70,297,90,284,119,273,191,257,272,246,345,240"/>
+<area shape="poly" id="edge6_Node000003_Node000005" title=" " alt="" coords="438,243,344,246,236,256,138,273,100,285,74,301,61,317,54,336,49,372,44,372,49,335,57,314,70,297,98,281,136,268,235,250,344,241,438,237"/>
 <area shape="rect" id="Node000007" href="$universal__mode_2main_8cpp.html" title="Universal mode demo: load any ruleset JSON at runtime and resolve rules generically." alt="" coords="207,299,289,324"/>
-<area shape="poly" id="edge7_Node000003_Node000007" title=" " alt="" coords="370,259,275,301,273,296,368,254"/>
+<area shape="poly" id="edge7_Node000003_Node000007" title=" " alt="" coords="446,257,289,301,288,296,444,252"/>
 <area shape="rect" id="Node000008" href="$test__codegen__output_8cpp.html" title="Tests for the generated &quot;specific mode&quot; headers in generated/." alt="" coords="314,299,499,324"/>
-<area shape="poly" id="edge8_Node000003_Node000008" title=" " alt="" coords="409,264,409,299,404,299,404,264"/>
-<area shape="rect" id="Node000009" href="$test__engine_8cpp.html" title="Integration tests for the universal engine facade (rpg_os::RulesetEngine)." alt="" coords="524,299,649,324"/>
-<area shape="poly" id="edge9_Node000003_Node000009" title=" " alt="" coords="449,253,558,296,556,301,447,258"/>
-<area shape="rect" id="Node000010" href="$test__rulesets_8cpp.html" title="Tests that load the real shipped rulesets (the rulesets/ JSON files)." alt="" coords="673,299,807,324"/>
-<area shape="poly" id="edge10_Node000003_Node000010" title=" " alt="" coords="468,250,687,296,686,301,467,255"/>
-<area shape="rect" id="Node000011" href="$test__variance_8cpp.html" title="Tests for variance / range selection (rpg_os::Variance, rpg_os::readVariantValue)." alt="" coords="831,299,969,324"/>
-<area shape="poly" id="edge11_Node000003_Node000011" title=" " alt="" coords="468,245,831,297,831,303,468,251"/>
+<area shape="poly" id="edge8_Node000003_Node000008" title=" " alt="" coords="475,261,423,301,420,296,472,257"/>
+<area shape="rect" id="Node000009" href="$test__data__api_8cpp.html" title="Tests for the engine&#39;s full&#45;coverage data API." alt="" coords="523,299,661,324"/>
+<area shape="poly" id="edge9_Node000003_Node000009" title=" " alt="" coords="526,257,578,296,575,301,523,261"/>
+<area shape="rect" id="Node000010" href="$test__engine_8cpp.html" title="Integration tests for the universal engine facade (rpg_os::RulesetEngine)." alt="" coords="685,299,811,324"/>
+<area shape="poly" id="edge10_Node000003_Node000010" title=" " alt="" coords="553,252,708,296,707,301,551,257"/>
+<area shape="rect" id="Node000011" href="$test__rulesets_8cpp.html" title="Tests that load the real shipped rulesets (the rulesets/ JSON files)." alt="" coords="835,299,968,324"/>
+<area shape="poly" id="edge11_Node000003_Node000011" title=" " alt="" coords="560,247,837,296,836,301,559,253"/>
+<area shape="rect" id="Node000012" href="$test__variance_8cpp.html" title="Tests for variance / range selection (rpg_os::Variance, rpg_os::readVariantValue)." alt="" coords="993,299,1130,324"/>
+<area shape="poly" id="edge12_Node000003_Node000012" title=" " alt="" coords="560,244,980,296,993,298,992,303,980,301,559,249"/>
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="111,335,63,374,59,370,107,330"/>
 <area shape="rect" id="Node000006" href="$test__combat_8cpp.html" title="Tests for the combat simulation helpers (include/rpg_os/universal/combat.hpp)." alt="" coords="112,372,243,397"/>
 <area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="150,334,172,370,168,373,146,337"/>
-<area shape="poly" id="edge13_Node000012_Node000002" title=" " alt="" coords="466,115,422,154,418,150,463,111"/>
-<area shape="poly" id="edge14_Node000012_Node000003" title=" " alt="" coords="498,117,501,147,494,178,483,195,468,208,437,227,434,223,465,204,479,191,490,176,496,147,493,118"/>
+<area shape="poly" id="edge14_Node000013_Node000002" title=" " alt="" coords="558,115,514,154,510,150,555,111"/>
+<area shape="poly" id="edge15_Node000013_Node000003" title=" " alt="" coords="590,117,593,147,586,178,575,195,560,208,529,227,526,223,557,204,571,191,582,176,588,147,585,118"/>
 </map>

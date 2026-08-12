@@ -1,16 +1,20 @@
 var searchData=
 [
   ['rawdicerolls_0',['rawDiceRolls',['../structrpg__os_1_1CheckResult.html#ac7ab5717d50dfe471ed8fda87bda5d74',1,'rpg_os::CheckResult']]],
-  ['religion_1',['religion',['../classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#aa1d70a4b070f27ee73940a5ecf42e53f',1,'rpg_os::generated::dnd5e::Character']]],
-  ['religions_2',['religions',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a802b141f6e2108452f961d83e80b1bc5',1,'rpg_os::generated::tde5e::Character']]],
-  ['remaininglp_3',['remainingLp',['../structrpg__os_1_1FightOutcome.html#a2a0133165dacbf8de4f614b561986770',1,'rpg_os::FightOutcome']]],
-  ['remainingpool_4',['remainingPool',['../structrpg__os_1_1CheckResult.html#ae8bd7c84e5def307a1c8f70f72bb8f19',1,'rpg_os::CheckResult']]],
-  ['repair_5',['repair',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#ac9cea40ba0053b079cb86eaea0f374c4',1,'rpg_os::generated::brp_ugc::Character']]],
-  ['research_6',['research',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a122d23989998ead836aa7c835576574b',1,'rpg_os::generated::brp_ugc::Character']]],
-  ['resource_7',['resource',['../structrpg__os_1_1EventActionDef.html#ac71af0ca343d7c1527418a634343788d',1,'rpg_os::EventActionDef']]],
-  ['resourcepools_8',['resourcePools',['../classrpg__os_1_1Ruleset.html#ac6d7b06fb3418d0fef60e9caa9fe1fcb',1,'rpg_os::Ruleset']]],
-  ['ride_9',['ride',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#ac1af4637c6f0d14964e871adfd4e36b6',1,'rpg_os::generated::brp_ugc::Character']]],
-  ['riding_10',['riding',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#ae0061d40c85fcdccc1f2d56b2ba36dd8',1,'rpg_os::generated::tde5e::Character']]],
-  ['ropes_11',['ropes',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a08e241438b8f9fbeb8e3a531779cb325',1,'rpg_os::generated::tde5e::Character']]],
-  ['rounds_12',['rounds',['../structrpg__os_1_1FightOutcome.html#af4ed806950a6560d154369b9a027ade0',1,'rpg_os::FightOutcome']]]
+  ['recipe_1',['recipe',['../structrpg__os_1_1CheckTypeDef.html#a215f37b6634e92af13b6cde19e360186',1,'rpg_os::CheckTypeDef']]],
+  ['religion_2',['religion',['../classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#a7e173294aa45ba7f9c712d9276463591',1,'rpg_os::generated::dnd5e::Character']]],
+  ['religions_3',['religions',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a4169e7d716954d9a9f8fd26666c4a77a',1,'rpg_os::generated::tde5e::Character']]],
+  ['remaininglp_4',['remainingLp',['../structrpg__os_1_1FightOutcome.html#a2a0133165dacbf8de4f614b561986770',1,'rpg_os::FightOutcome']]],
+  ['remainingpool_5',['remainingPool',['../structrpg__os_1_1CheckResult.html#ae8bd7c84e5def307a1c8f70f72bb8f19',1,'rpg_os::CheckResult']]],
+  ['repair_6',['repair',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a5e24f13b5c5d5591e3ffbf2891ecfa37',1,'rpg_os::generated::brp_ugc::Character']]],
+  ['research_7',['research',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#af3405d926b10d7761073a601638335b4',1,'rpg_os::generated::brp_ugc::Character']]],
+  ['resisted_8',['resisted',['../structrpg__os_1_1RulesetEngine_1_1AfflictionResult.html#a22e973b16b0fcf3eab3fe83c8e212e34',1,'rpg_os::RulesetEngine::AfflictionResult']]],
+  ['resolution_9',['resolution',['../structrpg__os_1_1CheckRecipe.html#a5e706fbcc0018f1d371a39efa723b0a6',1,'rpg_os::CheckRecipe']]],
+  ['resource_10',['resource',['../structrpg__os_1_1EventActionDef.html#ac71af0ca343d7c1527418a634343788d',1,'rpg_os::EventActionDef']]],
+  ['resourceid_11',['resourceId',['../structrpg__os_1_1RulesetEngine_1_1SpellResult.html#a5a748f81ea072c54144037135a6ab786',1,'rpg_os::RulesetEngine::SpellResult']]],
+  ['resourcepools_12',['resourcePools',['../classrpg__os_1_1Ruleset.html#ac6d7b06fb3418d0fef60e9caa9fe1fcb',1,'rpg_os::Ruleset']]],
+  ['ride_13',['ride',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#ab94017430ea08aa13d14c0365f9e8e09',1,'rpg_os::generated::brp_ugc::Character']]],
+  ['riding_14',['riding',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a62bffb438b6307f2b0428f9101f50c70',1,'rpg_os::generated::tde5e::Character']]],
+  ['ropes_15',['ropes',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a4ae1c2f482d5041dfaa12822531ca851',1,'rpg_os::generated::tde5e::Character']]],
+  ['rounds_16',['rounds',['../structrpg__os_1_1FightOutcome.html#af4ed806950a6560d154369b9a027ade0',1,'rpg_os::FightOutcome']]]
 ];

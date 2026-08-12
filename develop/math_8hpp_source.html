@@ -141,65 +141,152 @@ $(document).ready(function(){initNavTree('math_8hpp_source.html',''); initResiza
 <div class="foldopen" id="foldopen00035" data-start="{" data-end="}">
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="namespacerpg__os_1_1math.html">   35</a></span><span class="keyword">namespace </span>math {</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="foldopen" id="foldopen00039" data-start="{" data-end="}">
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="namespacerpg__os_1_1math.html#a3c0163700521e1fccaa9b400c22b9a85">   39</a></span>[[nodiscard]] <span class="keyword">inline</span> <span class="keywordtype">double</span> <a class="code hl_function" href="namespacerpg__os_1_1math.html#a3c0163700521e1fccaa9b400c22b9a85">floor</a>(<span class="keywordtype">double</span> value) <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  <span class="keywordflow">return</span> std::floor(value);</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>}</div>
+<div class="foldopen" id="foldopen00037" data-start="{" data-end="}">
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="namespacerpg__os_1_1math_1_1detail.html">   37</a></span><span class="keyword">namespace </span>detail {</div>
+<div class="foldopen" id="foldopen00041" data-start="{" data-end="}">
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="namespacerpg__os_1_1math_1_1detail.html#ae9cc30b38decd8f039c1385af62c94cf">   41</a></span>[[nodiscard]] <span class="keyword">constexpr</span> <span class="keywordtype">double</span> <a class="code hl_function" href="namespacerpg__os_1_1math_1_1detail.html#ae9cc30b38decd8f039c1385af62c94cf">trunc</a>(<span class="keywordtype">double</span> value) <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(<span class="keyword">static_cast&lt;</span>int64_t<span class="keyword">&gt;</span>(value));</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>}</div>
 </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="foldopen" id="foldopen00044" data-start="{" data-end="}">
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="namespacerpg__os_1_1math.html#a250c6484dd880177bb890f6fb937e285">   44</a></span>[[nodiscard]] <span class="keyword">inline</span> <span class="keywordtype">double</span> <a class="code hl_function" href="namespacerpg__os_1_1math.html#a250c6484dd880177bb890f6fb937e285">ceil</a>(<span class="keywordtype">double</span> value) <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  <span class="keywordflow">return</span> std::ceil(value);</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>}</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>} <span class="comment">// namespace detail</span></div>
 </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="foldopen" id="foldopen00051" data-start="{" data-end="}">
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="namespacerpg__os_1_1math.html#a231b27b0762b503c391f17d61fde0dfa">   51</a></span>[[nodiscard]] <span class="keyword">inline</span> <span class="keywordtype">double</span> <a class="code hl_function" href="namespacerpg__os_1_1math.html#a231b27b0762b503c391f17d61fde0dfa">round</a>(<span class="keywordtype">double</span> value) <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  <span class="keywordflow">return</span> std::round(value);</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>}</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="foldopen" id="foldopen00054" data-start="{" data-end="}">
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="namespacerpg__os_1_1math.html#a6911032cab70db4f10158b620a3bc885">   54</a></span>[[nodiscard]] <span class="keyword">constexpr</span> <span class="keywordtype">double</span> <a class="code hl_function" href="namespacerpg__os_1_1math.html#a6911032cab70db4f10158b620a3bc885">floor</a>(<span class="keywordtype">double</span> value) <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  <span class="keyword">const</span> <span class="keywordtype">double</span> t = <a class="code hl_function" href="namespacerpg__os_1_1math_1_1detail.html#ae9cc30b38decd8f039c1385af62c94cf">detail::trunc</a>(value);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  <span class="keywordflow">return</span> t &gt; value ? t - 1.0 : t;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>}</div>
 </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="foldopen" id="foldopen00056" data-start="{" data-end="}">
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="namespacerpg__os_1_1math.html#a301072269058f8606363f2a82749cd6e">   56</a></span>[[nodiscard]] <span class="keyword">inline</span> <span class="keywordtype">double</span> <a class="code hl_function" href="namespacerpg__os_1_1math.html#a301072269058f8606363f2a82749cd6e">min</a>(<span class="keywordtype">double</span> a, <span class="keywordtype">double</span> b) <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  <span class="keywordflow">return</span> std::min(a, b);</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>}</div>
-</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
 <div class="foldopen" id="foldopen00061" data-start="{" data-end="}">
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="namespacerpg__os_1_1math.html#a95a4007a73d38edfe74b4ef6167bffda">   61</a></span>[[nodiscard]] <span class="keyword">inline</span> <span class="keywordtype">double</span> <a class="code hl_function" href="namespacerpg__os_1_1math.html#a95a4007a73d38edfe74b4ef6167bffda">max</a>(<span class="keywordtype">double</span> a, <span class="keywordtype">double</span> b) <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  <span class="keywordflow">return</span> std::max(a, b);</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>}</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="namespacerpg__os_1_1math.html#a24fc1e59b6f8b95f00b5d2e91753a845">   61</a></span>[[nodiscard]] <span class="keyword">constexpr</span> <span class="keywordtype">double</span> <a class="code hl_function" href="namespacerpg__os_1_1math.html#a24fc1e59b6f8b95f00b5d2e91753a845">ceil</a>(<span class="keywordtype">double</span> value) <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  <span class="keyword">const</span> <span class="keywordtype">double</span> t = <a class="code hl_function" href="namespacerpg__os_1_1math_1_1detail.html#ae9cc30b38decd8f039c1385af62c94cf">detail::trunc</a>(value);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  <span class="keywordflow">return</span> t &lt; value ? t + 1.0 : t;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>}</div>
 </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="foldopen" id="foldopen00073" data-start="{" data-end="}">
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="namespacerpg__os_1_1math.html#aa104df255620a73f718d4244c91ad2f4">   73</a></span>[[nodiscard]] <span class="keyword">inline</span> <span class="keywordtype">double</span> <a class="code hl_function" href="namespacerpg__os_1_1math.html#aa104df255620a73f718d4244c91ad2f4">clamp</a>(<span class="keywordtype">double</span> value, <span class="keywordtype">double</span> lo, <span class="keywordtype">double</span> hi) <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  <span class="keywordflow">return</span> value &lt; lo ? lo : (value &gt; hi ? hi : value);</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>}</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="foldopen" id="foldopen00070" data-start="{" data-end="}">
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="namespacerpg__os_1_1math.html#a0d4031fba81606354e3edaaf0e73dcac">   70</a></span>[[nodiscard]] <span class="keyword">constexpr</span> <span class="keywordtype">double</span> <a class="code hl_function" href="namespacerpg__os_1_1math.html#a0d4031fba81606354e3edaaf0e73dcac">round</a>(<span class="keywordtype">double</span> value) <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  <span class="keyword">const</span> <span class="keywordtype">double</span> t = <a class="code hl_function" href="namespacerpg__os_1_1math_1_1detail.html#ae9cc30b38decd8f039c1385af62c94cf">detail::trunc</a>(value);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  <span class="keyword">const</span> <span class="keywordtype">double</span> diff = value - t;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  <span class="keywordflow">if</span> (diff &gt;= 0.5) {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keywordflow">return</span> t + 1.0;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  }</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  <span class="keywordflow">if</span> (diff &lt;= -0.5) {</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keywordflow">return</span> t - 1.0;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  }</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  <span class="keywordflow">return</span> t;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>}</div>
 </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
-<div class="foldopen" id="foldopen00084" data-start="{" data-end="}">
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="namespacerpg__os_1_1math.html#aad515bfebb229cc9d169ca6df71cfe0e">   84</a></span>[[nodiscard]] <span class="keyword">inline</span> int32_t <a class="code hl_function" href="namespacerpg__os_1_1math.html#aad515bfebb229cc9d169ca6df71cfe0e">clampInt</a>(int32_t value, int32_t lo, int32_t hi) <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  <span class="keywordflow">return</span> value &lt; lo ? lo : (value &gt; hi ? hi : value);</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>}</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="foldopen" id="foldopen00083" data-start="{" data-end="}">
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="namespacerpg__os_1_1math.html#aea8b229c47eaa1472ee7613eacce7ab4">   83</a></span>[[nodiscard]] <span class="keyword">constexpr</span> <span class="keywordtype">double</span> <a class="code hl_function" href="namespacerpg__os_1_1math.html#aea8b229c47eaa1472ee7613eacce7ab4">min</a>(<span class="keywordtype">double</span> a, <span class="keywordtype">double</span> b) <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  <span class="keywordflow">return</span> std::min(a, b);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>}</div>
 </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
-<div class="foldopen" id="foldopen00097" data-start="{" data-end="}">
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="namespacerpg__os_1_1math.html#aff1d290ebfeafea29783c813e35faafb">   97</a></span>[[nodiscard]] <span class="keyword">inline</span> int32_t <a class="code hl_function" href="namespacerpg__os_1_1math.html#aff1d290ebfeafea29783c813e35faafb">toStat</a>(<span class="keywordtype">double</span> value) <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>  <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>int32_t<span class="keyword">&gt;</span>(value);</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>}</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="foldopen" id="foldopen00088" data-start="{" data-end="}">
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="namespacerpg__os_1_1math.html#a54dc832d91bd4b8e77331ac51e3b0db3">   88</a></span>[[nodiscard]] <span class="keyword">constexpr</span> <span class="keywordtype">double</span> <a class="code hl_function" href="namespacerpg__os_1_1math.html#a54dc832d91bd4b8e77331ac51e3b0db3">max</a>(<span class="keywordtype">double</span> a, <span class="keywordtype">double</span> b) <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  <span class="keywordflow">return</span> std::max(a, b);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>}</div>
 </div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>} <span class="comment">// namespace math</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="foldopen" id="foldopen00100" data-start="{" data-end="}">
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="namespacerpg__os_1_1math.html#a16c183b1fd3884c24734548b35761d80">  100</a></span>[[nodiscard]] <span class="keyword">constexpr</span> <span class="keywordtype">double</span> <a class="code hl_function" href="namespacerpg__os_1_1math.html#a16c183b1fd3884c24734548b35761d80">clamp</a>(<span class="keywordtype">double</span> value, <span class="keywordtype">double</span> lo, <span class="keywordtype">double</span> hi) <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>  <span class="keywordflow">return</span> value &lt; lo ? lo : (value &gt; hi ? hi : value);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>}</div>
 </div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>} <span class="comment">// namespace rpg_os</span></div>
-<div class="ttc" id="anamespacerpg__os_1_1math_html_a231b27b0762b503c391f17d61fde0dfa"><div class="ttname"><a href="namespacerpg__os_1_1math.html#a231b27b0762b503c391f17d61fde0dfa">rpg_os::math::round</a></div><div class="ttdeci">double round(double value) noexcept</div><div class="ttdef"><b>Definition</b> <a href="math_8hpp_source.html#l00051">math.hpp:51</a></div></div>
-<div class="ttc" id="anamespacerpg__os_1_1math_html_a250c6484dd880177bb890f6fb937e285"><div class="ttname"><a href="namespacerpg__os_1_1math.html#a250c6484dd880177bb890f6fb937e285">rpg_os::math::ceil</a></div><div class="ttdeci">double ceil(double value) noexcept</div><div class="ttdoc">Ceils a value (matches std::ceil).</div><div class="ttdef"><b>Definition</b> <a href="math_8hpp_source.html#l00044">math.hpp:44</a></div></div>
-<div class="ttc" id="anamespacerpg__os_1_1math_html_a301072269058f8606363f2a82749cd6e"><div class="ttname"><a href="namespacerpg__os_1_1math.html#a301072269058f8606363f2a82749cd6e">rpg_os::math::min</a></div><div class="ttdeci">double min(double a, double b) noexcept</div><div class="ttdoc">Minimum of two values (matches std::min).</div><div class="ttdef"><b>Definition</b> <a href="math_8hpp_source.html#l00056">math.hpp:56</a></div></div>
-<div class="ttc" id="anamespacerpg__os_1_1math_html_a3c0163700521e1fccaa9b400c22b9a85"><div class="ttname"><a href="namespacerpg__os_1_1math.html#a3c0163700521e1fccaa9b400c22b9a85">rpg_os::math::floor</a></div><div class="ttdeci">double floor(double value) noexcept</div><div class="ttdef"><b>Definition</b> <a href="math_8hpp_source.html#l00039">math.hpp:39</a></div></div>
-<div class="ttc" id="anamespacerpg__os_1_1math_html_a95a4007a73d38edfe74b4ef6167bffda"><div class="ttname"><a href="namespacerpg__os_1_1math.html#a95a4007a73d38edfe74b4ef6167bffda">rpg_os::math::max</a></div><div class="ttdeci">double max(double a, double b) noexcept</div><div class="ttdoc">Maximum of two values (matches std::max).</div><div class="ttdef"><b>Definition</b> <a href="math_8hpp_source.html#l00061">math.hpp:61</a></div></div>
-<div class="ttc" id="anamespacerpg__os_1_1math_html_aa104df255620a73f718d4244c91ad2f4"><div class="ttname"><a href="namespacerpg__os_1_1math.html#aa104df255620a73f718d4244c91ad2f4">rpg_os::math::clamp</a></div><div class="ttdeci">double clamp(double value, double lo, double hi) noexcept</div><div class="ttdef"><b>Definition</b> <a href="math_8hpp_source.html#l00073">math.hpp:73</a></div></div>
-<div class="ttc" id="anamespacerpg__os_1_1math_html_aad515bfebb229cc9d169ca6df71cfe0e"><div class="ttname"><a href="namespacerpg__os_1_1math.html#aad515bfebb229cc9d169ca6df71cfe0e">rpg_os::math::clampInt</a></div><div class="ttdeci">int32_t clampInt(int32_t value, int32_t lo, int32_t hi) noexcept</div><div class="ttdef"><b>Definition</b> <a href="math_8hpp_source.html#l00084">math.hpp:84</a></div></div>
-<div class="ttc" id="anamespacerpg__os_1_1math_html_aff1d290ebfeafea29783c813e35faafb"><div class="ttname"><a href="namespacerpg__os_1_1math.html#aff1d290ebfeafea29783c813e35faafb">rpg_os::math::toStat</a></div><div class="ttdeci">int32_t toStat(double value) noexcept</div><div class="ttdef"><b>Definition</b> <a href="math_8hpp_source.html#l00097">math.hpp:97</a></div></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="foldopen" id="foldopen00111" data-start="{" data-end="}">
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="namespacerpg__os_1_1math.html#a33f5c88483e9687bd1e5bafef976b25c">  111</a></span>[[nodiscard]] <span class="keyword">constexpr</span> int32_t <a class="code hl_function" href="namespacerpg__os_1_1math.html#a33f5c88483e9687bd1e5bafef976b25c">clampInt</a>(int32_t value, int32_t lo, int32_t hi) <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>  <span class="keywordflow">return</span> value &lt; lo ? lo : (value &gt; hi ? hi : value);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>}</div>
+</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="foldopen" id="foldopen00117" data-start="{" data-end="}">
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="namespacerpg__os_1_1math.html#a6abf6a94a395973026a4a64f54d279cb">  117</a></span>[[nodiscard]] <span class="keyword">constexpr</span> <span class="keywordtype">int</span> <a class="code hl_function" href="namespacerpg__os_1_1math.html#a6abf6a94a395973026a4a64f54d279cb">minI</a>(<span class="keywordtype">int</span> a, <span class="keywordtype">int</span> b) <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>  <span class="keywordflow">return</span> a &lt; b ? a : b;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>}</div>
+</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="foldopen" id="foldopen00122" data-start="{" data-end="}">
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="namespacerpg__os_1_1math.html#a960a34f0458986fa0147384ef6698f94">  122</a></span>[[nodiscard]] <span class="keyword">constexpr</span> <span class="keywordtype">int</span> <a class="code hl_function" href="namespacerpg__os_1_1math.html#a960a34f0458986fa0147384ef6698f94">maxI</a>(<span class="keywordtype">int</span> a, <span class="keywordtype">int</span> b) <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>  <span class="keywordflow">return</span> a &gt; b ? a : b;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>}</div>
+</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="foldopen" id="foldopen00143" data-start="{" data-end="}">
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno"><a class="line" href="namespacerpg__os_1_1math.html#ac8615267511359d943d641fcd44f0ebf">  143</a></span>[[nodiscard]] <span class="keyword">constexpr</span> <span class="keywordtype">int</span> <a class="code hl_function" href="namespacerpg__os_1_1math.html#ac8615267511359d943d641fcd44f0ebf">floorDiv</a>(<span class="keywordtype">int</span> a, <span class="keywordtype">int</span> b) <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> q = a / b;</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> r = a % b;</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>  <span class="keywordflow">return</span> (r != 0 &amp;&amp; ((r &lt; 0) != (b &lt; 0))) ? q - 1 : q;</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>}</div>
+</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
+<div class="foldopen" id="foldopen00150" data-start="{" data-end="}">
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno"><a class="line" href="namespacerpg__os_1_1math.html#aee1e3832de9e1c416c529ebd6ff63026">  150</a></span>[[nodiscard]] <span class="keyword">constexpr</span> <span class="keywordtype">int</span> <a class="code hl_function" href="namespacerpg__os_1_1math.html#aee1e3832de9e1c416c529ebd6ff63026">ceilDiv</a>(<span class="keywordtype">int</span> a, <span class="keywordtype">int</span> b) <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> q = a / b;</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> r = a % b;</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>  <span class="keywordflow">return</span> (r != 0 &amp;&amp; ((r &gt; 0) == (b &gt; 0))) ? q + 1 : q;</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>}</div>
+</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
+<div class="foldopen" id="foldopen00158" data-start="{" data-end="}">
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno"><a class="line" href="namespacerpg__os_1_1math.html#a8b5efe7f928f2f66905c652fd205299d">  158</a></span>[[nodiscard]] <span class="keyword">constexpr</span> <span class="keywordtype">int</span> <a class="code hl_function" href="namespacerpg__os_1_1math.html#a8b5efe7f928f2f66905c652fd205299d">roundDiv</a>(<span class="keywordtype">int</span> a, <span class="keywordtype">int</span> b) <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> absB = b &lt; 0 ? -b : b;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> r = a % b;</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> absR = r &lt; 0 ? -r : r;</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>  <span class="keywordflow">if</span> (2 * absR &gt;= absB) {</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    <span class="keywordflow">return</span> (a &lt; 0) != (b &lt; 0) ? a / b - 1 : a / b + 1;</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>  }</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>  <span class="keywordflow">return</span> a / b;</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>}</div>
+</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="foldopen" id="foldopen00178" data-start="{" data-end="}">
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno"><a class="line" href="namespacerpg__os_1_1math.html#af9250abccc3738e63d5bdb53eef3e770">  178</a></span>[[nodiscard]] <span class="keyword">constexpr</span> <span class="keywordtype">int</span> <a class="code hl_function" href="namespacerpg__os_1_1math.html#af9250abccc3738e63d5bdb53eef3e770">floorDivN</a>(<span class="keywordtype">int</span> a, <span class="keywordtype">int</span> b) <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>  <span class="keywordflow">return</span> a / b;</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>}</div>
+</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span> </div>
+<div class="foldopen" id="foldopen00184" data-start="{" data-end="}">
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno"><a class="line" href="namespacerpg__os_1_1math.html#a3c56c61380803b7c20b4eeb11b6b3068">  184</a></span>[[nodiscard]] <span class="keyword">constexpr</span> <span class="keywordtype">int</span> <a class="code hl_function" href="namespacerpg__os_1_1math.html#a3c56c61380803b7c20b4eeb11b6b3068">ceilDivN</a>(<span class="keywordtype">int</span> a, <span class="keywordtype">int</span> b) <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>  <span class="keywordflow">return</span> (a + b - 1) / b;</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>}</div>
+</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span> </div>
+<div class="foldopen" id="foldopen00190" data-start="{" data-end="}">
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno"><a class="line" href="namespacerpg__os_1_1math.html#ace8edcd4fe29f2466df53253b4d6b8b7">  190</a></span>[[nodiscard]] <span class="keyword">constexpr</span> <span class="keywordtype">int</span> <a class="code hl_function" href="namespacerpg__os_1_1math.html#ace8edcd4fe29f2466df53253b4d6b8b7">roundDivN</a>(<span class="keywordtype">int</span> a, <span class="keywordtype">int</span> b) <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>  <span class="keywordflow">return</span> (a + b / 2) / b;</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>}</div>
+</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span> </div>
+<div class="foldopen" id="foldopen00203" data-start="{" data-end="}">
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno"><a class="line" href="namespacerpg__os_1_1math.html#ac5a31aca3b8649aeec81a0c0c769325c">  203</a></span>[[nodiscard]] <span class="keyword">constexpr</span> int32_t <a class="code hl_function" href="namespacerpg__os_1_1math.html#ac5a31aca3b8649aeec81a0c0c769325c">toStat</a>(<span class="keywordtype">double</span> value) <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>  <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>int32_t<span class="keyword">&gt;</span>(value);</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>}</div>
+</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>} <span class="comment">// namespace math</span></div>
+</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>} <span class="comment">// namespace rpg_os</span></div>
+<div class="ttc" id="anamespacerpg__os_1_1math_1_1detail_html_ae9cc30b38decd8f039c1385af62c94cf"><div class="ttname"><a href="namespacerpg__os_1_1math_1_1detail.html#ae9cc30b38decd8f039c1385af62c94cf">rpg_os::math::detail::trunc</a></div><div class="ttdeci">constexpr double trunc(double value) noexcept</div><div class="ttdef"><b>Definition</b> <a href="math_8hpp_source.html#l00041">math.hpp:41</a></div></div>
+<div class="ttc" id="anamespacerpg__os_1_1math_html_a0d4031fba81606354e3edaaf0e73dcac"><div class="ttname"><a href="namespacerpg__os_1_1math.html#a0d4031fba81606354e3edaaf0e73dcac">rpg_os::math::round</a></div><div class="ttdeci">constexpr double round(double value) noexcept</div><div class="ttdef"><b>Definition</b> <a href="math_8hpp_source.html#l00070">math.hpp:70</a></div></div>
+<div class="ttc" id="anamespacerpg__os_1_1math_html_a16c183b1fd3884c24734548b35761d80"><div class="ttname"><a href="namespacerpg__os_1_1math.html#a16c183b1fd3884c24734548b35761d80">rpg_os::math::clamp</a></div><div class="ttdeci">constexpr double clamp(double value, double lo, double hi) noexcept</div><div class="ttdef"><b>Definition</b> <a href="math_8hpp_source.html#l00100">math.hpp:100</a></div></div>
+<div class="ttc" id="anamespacerpg__os_1_1math_html_a24fc1e59b6f8b95f00b5d2e91753a845"><div class="ttname"><a href="namespacerpg__os_1_1math.html#a24fc1e59b6f8b95f00b5d2e91753a845">rpg_os::math::ceil</a></div><div class="ttdeci">constexpr double ceil(double value) noexcept</div><div class="ttdef"><b>Definition</b> <a href="math_8hpp_source.html#l00061">math.hpp:61</a></div></div>
+<div class="ttc" id="anamespacerpg__os_1_1math_html_a33f5c88483e9687bd1e5bafef976b25c"><div class="ttname"><a href="namespacerpg__os_1_1math.html#a33f5c88483e9687bd1e5bafef976b25c">rpg_os::math::clampInt</a></div><div class="ttdeci">constexpr int32_t clampInt(int32_t value, int32_t lo, int32_t hi) noexcept</div><div class="ttdef"><b>Definition</b> <a href="math_8hpp_source.html#l00111">math.hpp:111</a></div></div>
+<div class="ttc" id="anamespacerpg__os_1_1math_html_a3c56c61380803b7c20b4eeb11b6b3068"><div class="ttname"><a href="namespacerpg__os_1_1math.html#a3c56c61380803b7c20b4eeb11b6b3068">rpg_os::math::ceilDivN</a></div><div class="ttdeci">constexpr int ceilDivN(int a, int b) noexcept</div><div class="ttdef"><b>Definition</b> <a href="math_8hpp_source.html#l00184">math.hpp:184</a></div></div>
+<div class="ttc" id="anamespacerpg__os_1_1math_html_a54dc832d91bd4b8e77331ac51e3b0db3"><div class="ttname"><a href="namespacerpg__os_1_1math.html#a54dc832d91bd4b8e77331ac51e3b0db3">rpg_os::math::max</a></div><div class="ttdeci">constexpr double max(double a, double b) noexcept</div><div class="ttdoc">Maximum of two values (matches std::max).</div><div class="ttdef"><b>Definition</b> <a href="math_8hpp_source.html#l00088">math.hpp:88</a></div></div>
+<div class="ttc" id="anamespacerpg__os_1_1math_html_a6911032cab70db4f10158b620a3bc885"><div class="ttname"><a href="namespacerpg__os_1_1math.html#a6911032cab70db4f10158b620a3bc885">rpg_os::math::floor</a></div><div class="ttdeci">constexpr double floor(double value) noexcept</div><div class="ttdef"><b>Definition</b> <a href="math_8hpp_source.html#l00054">math.hpp:54</a></div></div>
+<div class="ttc" id="anamespacerpg__os_1_1math_html_a6abf6a94a395973026a4a64f54d279cb"><div class="ttname"><a href="namespacerpg__os_1_1math.html#a6abf6a94a395973026a4a64f54d279cb">rpg_os::math::minI</a></div><div class="ttdeci">constexpr int minI(int a, int b) noexcept</div><div class="ttdef"><b>Definition</b> <a href="math_8hpp_source.html#l00117">math.hpp:117</a></div></div>
+<div class="ttc" id="anamespacerpg__os_1_1math_html_a8b5efe7f928f2f66905c652fd205299d"><div class="ttname"><a href="namespacerpg__os_1_1math.html#a8b5efe7f928f2f66905c652fd205299d">rpg_os::math::roundDiv</a></div><div class="ttdeci">constexpr int roundDiv(int a, int b) noexcept</div><div class="ttdef"><b>Definition</b> <a href="math_8hpp_source.html#l00158">math.hpp:158</a></div></div>
+<div class="ttc" id="anamespacerpg__os_1_1math_html_a960a34f0458986fa0147384ef6698f94"><div class="ttname"><a href="namespacerpg__os_1_1math.html#a960a34f0458986fa0147384ef6698f94">rpg_os::math::maxI</a></div><div class="ttdeci">constexpr int maxI(int a, int b) noexcept</div><div class="ttdoc">Integer maximum (see minI).</div><div class="ttdef"><b>Definition</b> <a href="math_8hpp_source.html#l00122">math.hpp:122</a></div></div>
+<div class="ttc" id="anamespacerpg__os_1_1math_html_ac5a31aca3b8649aeec81a0c0c769325c"><div class="ttname"><a href="namespacerpg__os_1_1math.html#ac5a31aca3b8649aeec81a0c0c769325c">rpg_os::math::toStat</a></div><div class="ttdeci">constexpr int32_t toStat(double value) noexcept</div><div class="ttdef"><b>Definition</b> <a href="math_8hpp_source.html#l00203">math.hpp:203</a></div></div>
+<div class="ttc" id="anamespacerpg__os_1_1math_html_ac8615267511359d943d641fcd44f0ebf"><div class="ttname"><a href="namespacerpg__os_1_1math.html#ac8615267511359d943d641fcd44f0ebf">rpg_os::math::floorDiv</a></div><div class="ttdeci">constexpr int floorDiv(int a, int b) noexcept</div><div class="ttdef"><b>Definition</b> <a href="math_8hpp_source.html#l00143">math.hpp:143</a></div></div>
+<div class="ttc" id="anamespacerpg__os_1_1math_html_ace8edcd4fe29f2466df53253b4d6b8b7"><div class="ttname"><a href="namespacerpg__os_1_1math.html#ace8edcd4fe29f2466df53253b4d6b8b7">rpg_os::math::roundDivN</a></div><div class="ttdeci">constexpr int roundDivN(int a, int b) noexcept</div><div class="ttdef"><b>Definition</b> <a href="math_8hpp_source.html#l00190">math.hpp:190</a></div></div>
+<div class="ttc" id="anamespacerpg__os_1_1math_html_aea8b229c47eaa1472ee7613eacce7ab4"><div class="ttname"><a href="namespacerpg__os_1_1math.html#aea8b229c47eaa1472ee7613eacce7ab4">rpg_os::math::min</a></div><div class="ttdeci">constexpr double min(double a, double b) noexcept</div><div class="ttdoc">Minimum of two values (matches std::min).</div><div class="ttdef"><b>Definition</b> <a href="math_8hpp_source.html#l00083">math.hpp:83</a></div></div>
+<div class="ttc" id="anamespacerpg__os_1_1math_html_aee1e3832de9e1c416c529ebd6ff63026"><div class="ttname"><a href="namespacerpg__os_1_1math.html#aee1e3832de9e1c416c529ebd6ff63026">rpg_os::math::ceilDiv</a></div><div class="ttdeci">constexpr int ceilDiv(int a, int b) noexcept</div><div class="ttdoc">Integer ceiling division: the smallest integer &gt;= a/b (see floorDiv).</div><div class="ttdef"><b>Definition</b> <a href="math_8hpp_source.html#l00150">math.hpp:150</a></div></div>
+<div class="ttc" id="anamespacerpg__os_1_1math_html_af9250abccc3738e63d5bdb53eef3e770"><div class="ttname"><a href="namespacerpg__os_1_1math.html#af9250abccc3738e63d5bdb53eef3e770">rpg_os::math::floorDivN</a></div><div class="ttdeci">constexpr int floorDivN(int a, int b) noexcept</div><div class="ttdef"><b>Definition</b> <a href="math_8hpp_source.html#l00178">math.hpp:178</a></div></div>
 <div class="ttc" id="anamespacerpg__os_html"><div class="ttname"><a href="namespacerpg__os.html">rpg_os</a></div><div class="ttdef"><b>Definition</b> <a href="event__system_8hpp_source.html#l00041">event_system.hpp:41</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

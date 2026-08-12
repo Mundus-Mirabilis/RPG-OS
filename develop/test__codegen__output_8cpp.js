@@ -5,6 +5,8 @@ var test__codegen__output_8cpp =
     [ "TEST_CASE", "test__codegen__output_8cpp.html#aae10a15bf7d94de7f96a21a1c1077445", null ],
     [ "TEST_CASE", "test__codegen__output_8cpp.html#a116b8bad1f1375713c677caadd42aad5", null ],
     [ "TEST_CASE", "test__codegen__output_8cpp.html#a2cc7dbef7909a8a7a66ddea1f9d015a7", null ],
+    [ "TEST_CASE", "test__codegen__output_8cpp.html#a809636c0a9f837f1505f84715a46a8ad", null ],
+    [ "TEST_CASE", "test__codegen__output_8cpp.html#aa9f7cfe3db6fd0f081632845d0d251fe", null ],
     [ "TEST_CASE", "test__codegen__output_8cpp.html#a8309608f6f3575fe5f9d3f04fc30a2aa", null ],
     [ "TEST_CASE", "test__codegen__output_8cpp.html#ae7bce9addb8b2edcd60cdc62633e5537", null ],
     [ "TEST_CASE", "test__codegen__output_8cpp.html#ad80b0815ae6dc99757b6c1b6f1e2c018", null ],

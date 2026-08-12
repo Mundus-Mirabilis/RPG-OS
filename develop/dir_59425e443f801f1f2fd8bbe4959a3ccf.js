@@ -4,6 +4,7 @@ var dir_59425e443f801f1f2fd8bbe4959a3ccf =
     [ "test_codegen_output.cpp", "test__codegen__output_8cpp.html", "test__codegen__output_8cpp" ],
     [ "test_combat.cpp", "test__combat_8cpp.html", "test__combat_8cpp" ],
     [ "test_cost_table.cpp", "test__cost__table_8cpp.html", "test__cost__table_8cpp" ],
+    [ "test_data_api.cpp", "test__data__api_8cpp.html", "test__data__api_8cpp" ],
     [ "test_dice.cpp", "test__dice_8cpp.html", "test__dice_8cpp" ],
     [ "test_engine.cpp", "test__engine_8cpp.html", "test__engine_8cpp" ],
     [ "test_entity.cpp", "test__entity_8cpp.html", "test__entity_8cpp" ],

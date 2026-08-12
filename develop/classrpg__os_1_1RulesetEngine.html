@@ -121,6 +121,7 @@ $(document).ready(function(){initNavTree('classrpg__os_1_1RulesetEngine.html',''
 
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classrpg__os_1_1RulesetEngine-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">rpg_os::RulesetEngine Class Reference</div></div>
@@ -132,6 +133,15 @@ $(document).ready(function(){initNavTree('classrpg__os_1_1RulesetEngine.html',''
 
 <p><code>#include &lt;<a class="el" href="engine_8hpp_source.html">rpg_os/universal/engine.hpp</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrpg__os_1_1RulesetEngine_1_1AfflictionResult.html">AfflictionResult</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The outcome of applying an affliction through <a class="el" href="classrpg__os_1_1RulesetEngine.html#a0fb7f5650c7dd2c9d886b7a41374cc0e">applyAffliction</a>.  <a href="structrpg__os_1_1RulesetEngine_1_1AfflictionResult.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrpg__os_1_1RulesetEngine_1_1SpellResult.html">SpellResult</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The outcome of casting a spell through <a class="el" href="classrpg__os_1_1RulesetEngine.html#a89a4c819918ef4baaa0fb2fea02cdf3c">castSpell</a>.  <a href="structrpg__os_1_1RulesetEngine_1_1SpellResult.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a623a96b8702962fa31b0baa77bde4af5" id="r_a623a96b8702962fa31b0baa77bde4af5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1RulesetEngine.html#a623a96b8702962fa31b0baa77bde4af5">loadRulesetFromJson</a> (std::string_view jsonContent)</td></tr>
@@ -168,6 +178,38 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7bce689f7341c0bda71cd5f96caef517"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abaf7d31b22c7e134079d1c03aa20be2e" id="r_abaf7d31b22c7e134079d1c03aa20be2e"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1RulesetEngine.html#abaf7d31b22c7e134079d1c03aa20be2e">applyDamage</a> (<a class="el" href="classrpg__os_1_1DynamicEntity.html">DynamicEntity</a> &amp;actor, <a class="el" href="classrpg__os_1_1DynamicEntity.html">DynamicEntity</a> &amp;target, std::string_view resourceId, int32_t rawDamage, const <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &amp;env={})</td></tr>
 <tr class="separator:abaf7d31b22c7e134079d1c03aa20be2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6728a565334609cc331da78d96304db0" id="r_a6728a565334609cc331da78d96304db0"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1RulesetEngine.html#a6728a565334609cc331da78d96304db0">findDataRecord</a> (std::string_view section, std::string_view id) const</td></tr>
+<tr class="separator:a6728a565334609cc331da78d96304db0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fc03fb7fb84d35a662f38a46ba17485" id="r_a0fc03fb7fb84d35a662f38a46ba17485"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1RulesetEngine.html#a0fc03fb7fb84d35a662f38a46ba17485">findSpell</a> (std::string_view id) const</td></tr>
+<tr class="memdesc:a0fc03fb7fb84d35a662f38a46ba17485"><td class="mdescLeft">&#160;</td><td class="mdescRight">The named data record accessors for the common sections.  <br /></td></tr>
+<tr class="separator:a0fc03fb7fb84d35a662f38a46ba17485"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e83975dd53bf57ed6df9cc12e870b7d" id="r_a0e83975dd53bf57ed6df9cc12e870b7d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1RulesetEngine.html#a0e83975dd53bf57ed6df9cc12e870b7d">findItem</a> (std::string_view id) const</td></tr>
+<tr class="separator:a0e83975dd53bf57ed6df9cc12e870b7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ca06062604ac06fe307ae7db13c2010" id="r_a5ca06062604ac06fe307ae7db13c2010"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1RulesetEngine.html#a5ca06062604ac06fe307ae7db13c2010">findCondition</a> (std::string_view id) const</td></tr>
+<tr class="separator:a5ca06062604ac06fe307ae7db13c2010"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a0baf216845a78ad1af8653652caaa6" id="r_a3a0baf216845a78ad1af8653652caaa6"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1RulesetEngine.html#a3a0baf216845a78ad1af8653652caaa6">findPoison</a> (std::string_view id) const</td></tr>
+<tr class="separator:a3a0baf216845a78ad1af8653652caaa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66f0e56c2d27422076b0b6e7e5578abd" id="r_a66f0e56c2d27422076b0b6e7e5578abd"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1RulesetEngine.html#a66f0e56c2d27422076b0b6e7e5578abd">findDisease</a> (std::string_view id) const</td></tr>
+<tr class="separator:a66f0e56c2d27422076b0b6e7e5578abd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a617b0ec5e7c02f48b61c64c7b19ddcf7" id="r_a617b0ec5e7c02f48b61c64c7b19ddcf7"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1RulesetEngine.html#a617b0ec5e7c02f48b61c64c7b19ddcf7">findArchetype</a> (std::string_view id) const</td></tr>
+<tr class="separator:a617b0ec5e7c02f48b61c64c7b19ddcf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf41f041a0348a10dee7db6884b19c4d" id="r_aaf41f041a0348a10dee7db6884b19c4d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1RulesetEngine.html#aaf41f041a0348a10dee7db6884b19c4d">findCreature</a> (std::string_view id) const</td></tr>
+<tr class="separator:aaf41f041a0348a10dee7db6884b19c4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89a4c819918ef4baaa0fb2fea02cdf3c" id="r_a89a4c819918ef4baaa0fb2fea02cdf3c"><td class="memTemplParams" colspan="2">template&lt;RandomNumberGenerator Rng&gt; </td></tr>
+<tr class="memitem:a89a4c819918ef4baaa0fb2fea02cdf3c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structrpg__os_1_1RulesetEngine_1_1SpellResult.html">SpellResult</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1RulesetEngine.html#a89a4c819918ef4baaa0fb2fea02cdf3c">castSpell</a> (std::string_view spellId, <a class="el" href="classrpg__os_1_1DynamicEntity.html">DynamicEntity</a> &amp;actor, <a class="el" href="classrpg__os_1_1DynamicEntity.html">DynamicEntity</a> *target, const <a class="el" href="structrpg__os_1_1CheckParams.html">CheckParams</a> &amp;params, Rng &amp;rng)</td></tr>
+<tr class="separator:a89a4c819918ef4baaa0fb2fea02cdf3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c266f5c1917c566c5f8d8172ff869be" id="r_a9c266f5c1917c566c5f8d8172ff869be"><td class="memTemplParams" colspan="2">template&lt;RandomNumberGenerator Rng&gt; </td></tr>
+<tr class="memitem:a9c266f5c1917c566c5f8d8172ff869be"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structrpg__os_1_1RulesetEngine_1_1SpellResult.html">SpellResult</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1RulesetEngine.html#a9c266f5c1917c566c5f8d8172ff869be">castSpell</a> (std::string_view spellId, <a class="el" href="classrpg__os_1_1DynamicEntity.html">DynamicEntity</a> &amp;actor, <a class="el" href="classrpg__os_1_1DynamicEntity.html">DynamicEntity</a> *target, std::string_view resourceId, const <a class="el" href="structrpg__os_1_1CheckParams.html">CheckParams</a> &amp;params, Rng &amp;rng)</td></tr>
+<tr class="separator:a9c266f5c1917c566c5f8d8172ff869be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa20c45fa5b450fb55869e78ee58eb22b" id="r_aa20c45fa5b450fb55869e78ee58eb22b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structrpg__os_1_1RulesetEngine_1_1SpellResult.html">SpellResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1RulesetEngine.html#aa20c45fa5b450fb55869e78ee58eb22b">castSpell</a> (std::string_view spellId, <a class="el" href="classrpg__os_1_1DynamicEntity.html">DynamicEntity</a> &amp;actor, <a class="el" href="classrpg__os_1_1DynamicEntity.html">DynamicEntity</a> *target, const <a class="el" href="structrpg__os_1_1CheckParams.html">CheckParams</a> &amp;params)</td></tr>
+<tr class="memdesc:aa20c45fa5b450fb55869e78ee58eb22b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts a spell using a fresh default RNG (convenience overload).  <br /></td></tr>
+<tr class="separator:aa20c45fa5b450fb55869e78ee58eb22b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fb7f5650c7dd2c9d886b7a41374cc0e" id="r_a0fb7f5650c7dd2c9d886b7a41374cc0e"><td class="memTemplParams" colspan="2">template&lt;RandomNumberGenerator Rng&gt; </td></tr>
+<tr class="memitem:a0fb7f5650c7dd2c9d886b7a41374cc0e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structrpg__os_1_1RulesetEngine_1_1AfflictionResult.html">AfflictionResult</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1RulesetEngine.html#a0fb7f5650c7dd2c9d886b7a41374cc0e">applyAffliction</a> (std::string_view section, std::string_view id, <a class="el" href="classrpg__os_1_1DynamicEntity.html">DynamicEntity</a> &amp;victim, const <a class="el" href="structrpg__os_1_1CheckParams.html">CheckParams</a> &amp;params, Rng &amp;rng)</td></tr>
+<tr class="separator:a0fb7f5650c7dd2c9d886b7a41374cc0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00d72dffc1ff4e780bb79312c63d5e94" id="r_a00d72dffc1ff4e780bb79312c63d5e94"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structrpg__os_1_1RulesetEngine_1_1AfflictionResult.html">AfflictionResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1RulesetEngine.html#a00d72dffc1ff4e780bb79312c63d5e94">applyAffliction</a> (std::string_view section, std::string_view id, <a class="el" href="classrpg__os_1_1DynamicEntity.html">DynamicEntity</a> &amp;victim, const <a class="el" href="structrpg__os_1_1CheckParams.html">CheckParams</a> &amp;params)</td></tr>
+<tr class="memdesc:a00d72dffc1ff4e780bb79312c63d5e94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies an affliction using a fresh default RNG (convenience overload).  <br /></td></tr>
+<tr class="separator:a00d72dffc1ff4e780bb79312c63d5e94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a51b1d9f2d49d505197aa17edada095" id="r_a9a51b1d9f2d49d505197aa17edada095"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1RulesetEngine.html#a9a51b1d9f2d49d505197aa17edada095">registerEventListener</a> (<a class="el" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18">EventType</a> type, <a class="el" href="classrpg__os_1_1EventBus.html#a083cdf91b0b9ea319a958c2760532b4f">EventBus::Callback</a> callback)</td></tr>
 <tr class="separator:a9a51b1d9f2d49d505197aa17edada095"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3885036d0e16d519914a10871477931" id="r_ae3885036d0e16d519914a10871477931"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1RulesetEngine.html#ae3885036d0e16d519914a10871477931">unregisterEventListener</a> (uint64_t listenerId)</td></tr>
@@ -187,6 +229,124 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00043">43</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a00d72dffc1ff4e780bb79312c63d5e94" name="a00d72dffc1ff4e780bb79312c63d5e94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00d72dffc1ff4e780bb79312c63d5e94">&#9670;&#160;</a></span>applyAffliction() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structrpg__os_1_1RulesetEngine_1_1AfflictionResult.html">AfflictionResult</a> rpg_os::RulesetEngine::applyAffliction </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>section</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classrpg__os_1_1DynamicEntity.html">DynamicEntity</a> &amp;&#160;</td>
+          <td class="paramname"><em>victim</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structrpg__os_1_1CheckParams.html">CheckParams</a> &amp;&#160;</td>
+          <td class="paramname"><em>params</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Applies an affliction using a fresh default RNG (convenience overload). </p>
+
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00486">486</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00430">applyAffliction()</a>.</p>
+
+</div>
+</div>
+<a id="a0fb7f5650c7dd2c9d886b7a41374cc0e" name="a0fb7f5650c7dd2c9d886b7a41374cc0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fb7f5650c7dd2c9d886b7a41374cc0e">&#9670;&#160;</a></span>applyAffliction() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;RandomNumberGenerator Rng&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structrpg__os_1_1RulesetEngine_1_1AfflictionResult.html">AfflictionResult</a> rpg_os::RulesetEngine::applyAffliction </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>section</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classrpg__os_1_1DynamicEntity.html">DynamicEntity</a> &amp;&#160;</td>
+          <td class="paramname"><em>victim</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structrpg__os_1_1CheckParams.html">CheckParams</a> &amp;&#160;</td>
+          <td class="paramname"><em>params</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Rng &amp;&#160;</td>
+          <td class="paramname"><em>rng</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Applies an affliction (a poison or disease) from <code>data.&lt;section&gt;</code> to <code>victim</code> (see <a class="el" href="structrpg__os_1_1RulesetEngine_1_1AfflictionResult.html">AfflictionResult</a>).</p>
+<p>The application is fully data-driven: if the record declares a <code>save</code> stat, the victim rolls a generic roll-under check against it and the affliction is resisted on success. Otherwise (or on a failed save) every structured <code>effects[]</code> entry is applied: a resource pool id damages that pool, a condition id (or the effect's <code>condition</code> field) applies stacks, and any other stat id is reduced by <code>amount</code>. Prose-only effects are left for the caller, who can read the full record via <a class="el" href="classrpg__os_1_1RulesetEngine.html#a3a0baf216845a78ad1af8653652caaa6">findPoison</a> / <a class="el" href="classrpg__os_1_1RulesetEngine.html#a66f0e56c2d27422076b0b6e7e5578abd">findDisease</a>. Throws std::invalid_argument for an unknown record. </p>
+
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00430">430</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="namespacerpg__os.html#a031baa10011b869e066dd2a216ce55d4ae15941912a4c035ac473229ac6bf832a">rpg_os::ActorStat</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00169">rpg_os::DynamicEntity::addCondition()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00138">rpg_os::DynamicEntity::baseAttribute()</a>, <a class="el" href="checks_8hpp_source.html#l00114">rpg_os::CheckRecipe::comparison</a>, <a class="el" href="checks_8hpp_source.html#l00111">rpg_os::CheckRecipe::dice</a>, <a class="el" href="checks_8hpp_source.html#l00157">rpg_os::CheckRecipe::difficultyMode</a>, <a class="el" href="engine_8hpp_source.html#l00335">rpg_os::RulesetEngine::AfflictionResult::effectsApplied</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00225">rpg_os::Ruleset::findAttribute()</a>, <a class="el" href="engine_8hpp_source.html#l00283">findDataRecord()</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00270">rpg_os::Ruleset::hasStat()</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00294">rpg_os::Ruleset::isCondition()</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00285">rpg_os::Ruleset::isResourcePool()</a>, <a class="el" href="types_8hpp_source.html#l00080">rpg_os::CheckResult::isSuccess</a>, <a class="el" href="namespacerpg__os.html#a4ede194e1af239829344bcfe6bf5791fad3e6fdac55bb7b0edd7834c968ba1f38">rpg_os::LessEqual</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00158">rpg_os::DynamicEntity::modifyResource()</a>, <a class="el" href="namespacerpg__os.html#ab870da3d65c79d59dad5920efc43dc65a64663f4646781c9c0110838b905daa23">rpg_os::Random</a>, <a class="el" href="variance_8hpp_source.html#l00131">rpg_os::readVariantValue()</a>, <a class="el" href="engine_8hpp_source.html#l00333">rpg_os::RulesetEngine::AfflictionResult::resisted</a>, <a class="el" href="checks_8hpp_source.html#l00107">rpg_os::CheckRecipe::resolution</a>, <a class="el" href="checks_8hpp_source.html#l00523">rpg_os::resolveCheck()</a>, <a class="el" href="engine_8hpp_source.html#l00334">rpg_os::RulesetEngine::AfflictionResult::saveRolled</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00131">rpg_os::DynamicEntity::setBaseAttribute()</a>, <a class="el" href="namespacerpg__os.html#a95eaa793f5aa7a7b28d2851594d614dca2a63f555989152ba866b43a1faacd680">rpg_os::Threshold</a>, <a class="el" href="checks_8hpp_source.html#l00116">rpg_os::CheckRecipe::thresholdSource</a>, <a class="el" href="checks_8hpp_source.html#l00119">rpg_os::CheckRecipe::thresholdStat</a>, and <a class="el" href="namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753daedc924ddad3e72aa05c6d5b29250fe41">rpg_os::ToStat</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00486">applyAffliction()</a>, <a class="el" href="test__data__api_8cpp_source.html#l00113">TEST_CASE()</a>, and <a class="el" href="test__data__api_8cpp_source.html#l00144">TEST_CASE()</a>.</p>
+
+</div>
+</div>
 <a id="abaf7d31b22c7e134079d1c03aa20be2e" name="abaf7d31b22c7e134079d1c03aa20be2e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abaf7d31b22c7e134079d1c03aa20be2e">&#9670;&#160;</a></span>applyDamage()</h2>
 
@@ -246,9 +406,9 @@ Public Member Functions</h2></td></tr>
 <dl class="section user"><dt>Why route damage through events even when no triggers exist?</dt><dd>It is cheaper to always run the pipeline than to ask "are there any
 relevant triggers?" first — with no triggers registered the loop is a no-op — and it guarantees ruleset-defined reactions (armor absorption, wound checks) fire uniformly for universal and specific mode alike. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00246">246</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00256">256</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00221">rpg_os::detail::attackOnce()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00303">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00101">TEST_CASE()</a>, <a class="el" href="test__engine_8cpp_source.html#l00201">TEST_CASE()</a>, <a class="el" href="test__engine_8cpp_source.html#l00182">TEST_CASE()</a>, <a class="el" href="test__engine_8cpp_source.html#l00211">TEST_CASE()</a>, and <a class="el" href="test__rulesets_8cpp_source.html#l00108">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00220">rpg_os::detail::attackOnce()</a>, <a class="el" href="engine_8hpp_source.html#l00356">castSpell()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00304">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00101">TEST_CASE()</a>, <a class="el" href="test__engine_8cpp_source.html#l00206">TEST_CASE()</a>, <a class="el" href="test__engine_8cpp_source.html#l00187">TEST_CASE()</a>, <a class="el" href="test__engine_8cpp_source.html#l00216">TEST_CASE()</a>, and <a class="el" href="test__rulesets_8cpp_source.html#l00108">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -291,7 +451,192 @@ relevant triggers?" first — with no triggers registered the loop is a no-op �
 
 <p class="reference">References <a class="el" href="dynamic__entity_8hpp_source.html#l00119">rpg_os::DynamicEntity::getStat()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="test__rulesets_8cpp_source.html#l00193">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00029">TEST_CASE()</a>, <a class="el" href="test__engine_8cpp_source.html#l00121">TEST_CASE()</a>, <a class="el" href="test__engine_8cpp_source.html#l00108">TEST_CASE()</a>, and <a class="el" href="test__rulesets_8cpp_source.html#l00076">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="test__rulesets_8cpp_source.html#l00194">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00029">TEST_CASE()</a>, <a class="el" href="test__engine_8cpp_source.html#l00126">TEST_CASE()</a>, <a class="el" href="test__engine_8cpp_source.html#l00113">TEST_CASE()</a>, and <a class="el" href="test__rulesets_8cpp_source.html#l00076">TEST_CASE()</a>.</p>
+
+</div>
+</div>
+<a id="aa20c45fa5b450fb55869e78ee58eb22b" name="aa20c45fa5b450fb55869e78ee58eb22b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa20c45fa5b450fb55869e78ee58eb22b">&#9670;&#160;</a></span>castSpell() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structrpg__os_1_1RulesetEngine_1_1SpellResult.html">SpellResult</a> rpg_os::RulesetEngine::castSpell </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>spellId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classrpg__os_1_1DynamicEntity.html">DynamicEntity</a> &amp;&#160;</td>
+          <td class="paramname"><em>actor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classrpg__os_1_1DynamicEntity.html">DynamicEntity</a> *&#160;</td>
+          <td class="paramname"><em>target</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structrpg__os_1_1CheckParams.html">CheckParams</a> &amp;&#160;</td>
+          <td class="paramname"><em>params</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Casts a spell using a fresh default RNG (convenience overload). </p>
+
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00412">412</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00348">castSpell()</a>.</p>
+
+</div>
+</div>
+<a id="a89a4c819918ef4baaa0fb2fea02cdf3c" name="a89a4c819918ef4baaa0fb2fea02cdf3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89a4c819918ef4baaa0fb2fea02cdf3c">&#9670;&#160;</a></span>castSpell() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;RandomNumberGenerator Rng&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structrpg__os_1_1RulesetEngine_1_1SpellResult.html">SpellResult</a> rpg_os::RulesetEngine::castSpell </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>spellId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classrpg__os_1_1DynamicEntity.html">DynamicEntity</a> &amp;&#160;</td>
+          <td class="paramname"><em>actor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classrpg__os_1_1DynamicEntity.html">DynamicEntity</a> *&#160;</td>
+          <td class="paramname"><em>target</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structrpg__os_1_1CheckParams.html">CheckParams</a> &amp;&#160;</td>
+          <td class="paramname"><em>params</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Rng &amp;&#160;</td>
+          <td class="paramname"><em>rng</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Casts a spell from the ruleset's <code>data.spells</code> (see <a class="el" href="structrpg__os_1_1RulesetEngine_1_1SpellResult.html">SpellResult</a>).</p>
+<p>The casting is fully data-driven: the cost is read from the spell record (<code>cost</code> / <code>ae_cost</code>, or <code>level</code> — one point per level), drawn from the ruleset's declared <code>spell_resource</code> (or the caller-supplied resource), and the spell's <code>check</code> field (a named check type or an "A/B/C" attribute list) is resolved when present. A spell with <code>damage</code> applies the rolled damage to the target's primary hit-point pool through the event pipeline. Throws std::invalid_argument for an unknown spell. </p>
+
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00348">348</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00348">castSpell()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00412">castSpell()</a>, <a class="el" href="engine_8hpp_source.html#l00348">castSpell()</a>, <a class="el" href="test__data__api_8cpp_source.html#l00079">TEST_CASE()</a>, <a class="el" href="test__data__api_8cpp_source.html#l00092">TEST_CASE()</a>, and <a class="el" href="test__data__api_8cpp_source.html#l00060">TEST_CASE()</a>.</p>
+
+</div>
+</div>
+<a id="a9c266f5c1917c566c5f8d8172ff869be" name="a9c266f5c1917c566c5f8d8172ff869be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c266f5c1917c566c5f8d8172ff869be">&#9670;&#160;</a></span>castSpell() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;RandomNumberGenerator Rng&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structrpg__os_1_1RulesetEngine_1_1SpellResult.html">SpellResult</a> rpg_os::RulesetEngine::castSpell </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>spellId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classrpg__os_1_1DynamicEntity.html">DynamicEntity</a> &amp;&#160;</td>
+          <td class="paramname"><em>actor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classrpg__os_1_1DynamicEntity.html">DynamicEntity</a> *&#160;</td>
+          <td class="paramname"><em>target</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>resourceId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structrpg__os_1_1CheckParams.html">CheckParams</a> &amp;&#160;</td>
+          <td class="paramname"><em>params</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Rng &amp;&#160;</td>
+          <td class="paramname"><em>rng</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>As above, but draws the cost from <code>resourceId</code> instead of the ruleset's declared spell resource. </p>
+
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00356">356</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00327">rpg_os::RulesetEngine::SpellResult::appliedDamage</a>, <a class="el" href="engine_8hpp_source.html#l00256">applyDamage()</a>, <a class="el" href="engine_8hpp_source.html#l00324">rpg_os::RulesetEngine::SpellResult::cast</a>, <a class="el" href="engine_8hpp_source.html#l00325">rpg_os::RulesetEngine::SpellResult::check</a>, <a class="el" href="engine_8hpp_source.html#l00326">rpg_os::RulesetEngine::SpellResult::cost</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00243">rpg_os::Ruleset::findCheckType()</a>, <a class="el" href="engine_8hpp_source.html#l00300">findSpell()</a>, <a class="el" href="types_8hpp_source.html#l00080">rpg_os::CheckResult::isSuccess</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00158">rpg_os::DynamicEntity::modifyResource()</a>, <a class="el" href="namespacerpg__os.html#ab870da3d65c79d59dad5920efc43dc65a64663f4646781c9c0110838b905daa23">rpg_os::Random</a>, <a class="el" href="variance_8hpp_source.html#l00131">rpg_os::readVariantValue()</a>, <a class="el" href="check__resolver_8hpp_source.html#l00043">rpg_os::CheckResolver::resolve()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00149">rpg_os::DynamicEntity::resource()</a>, and <a class="el" href="engine_8hpp_source.html#l00328">rpg_os::RulesetEngine::SpellResult::resourceId</a>.</p>
 
 </div>
 </div>
@@ -385,9 +730,9 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00151">151</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ruleset__loader_8hpp_source.html#l00194">rpg_os::Ruleset::data</a>.</p>
+<p class="reference">References <a class="el" href="ruleset__loader_8hpp_source.html#l00196">rpg_os::Ruleset::data</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00144">createCreature()</a>, <a class="el" href="combat_8hpp_source.html#l00196">rpg_os::createFighter()</a>, and <a class="el" href="combat_8hpp_source.html#l00116">rpg_os::makeCombatantSpec()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00144">createCreature()</a>, <a class="el" href="combat_8hpp_source.html#l00195">rpg_os::createFighter()</a>, and <a class="el" href="combat_8hpp_source.html#l00115">rpg_os::makeCombatantSpec()</a>.</p>
 
 </div>
 </div>
@@ -420,7 +765,7 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 
 <p class="reference">References <a class="el" href="engine_8hpp_source.html#l00103">createEntity()</a>, and <a class="el" href="namespacerpg__os.html#ab870da3d65c79d59dad5920efc43dc65a64663f4646781c9c0110838b905daa23">rpg_os::Random</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00103">createEntity()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00242">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00323">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00193">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00303">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00282">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00216">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00265">TEST_CASE()</a>, <a class="el" href="test__engine_8cpp_source.html#l00201">TEST_CASE()</a>, <a class="el" href="test__engine_8cpp_source.html#l00182">TEST_CASE()</a>, <a class="el" href="test__engine_8cpp_source.html#l00121">TEST_CASE()</a>, <a class="el" href="test__engine_8cpp_source.html#l00108">TEST_CASE()</a>, <a class="el" href="test__engine_8cpp_source.html#l00172">TEST_CASE()</a>, <a class="el" href="test__engine_8cpp_source.html#l00129">TEST_CASE()</a>, <a class="el" href="test__engine_8cpp_source.html#l00153">TEST_CASE()</a>, <a class="el" href="test__engine_8cpp_source.html#l00211">TEST_CASE()</a>, <a class="el" href="test__codegen__output_8cpp_source.html#l00280">TEST_CASE()</a>, <a class="el" href="test__codegen__output_8cpp_source.html#l00260">TEST_CASE()</a>, <a class="el" href="test__codegen__output_8cpp_source.html#l00236">TEST_CASE()</a>, <a class="el" href="test__codegen__output_8cpp_source.html#l00078">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00108">TEST_CASE()</a>, and <a class="el" href="test__rulesets_8cpp_source.html#l00076">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00103">createEntity()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00243">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00324">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00194">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00304">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00283">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00217">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00266">TEST_CASE()</a>, <a class="el" href="test__data__api_8cpp_source.html#l00113">TEST_CASE()</a>, <a class="el" href="test__data__api_8cpp_source.html#l00079">TEST_CASE()</a>, <a class="el" href="test__data__api_8cpp_source.html#l00092">TEST_CASE()</a>, <a class="el" href="test__data__api_8cpp_source.html#l00060">TEST_CASE()</a>, <a class="el" href="test__data__api_8cpp_source.html#l00144">TEST_CASE()</a>, <a class="el" href="test__engine_8cpp_source.html#l00206">TEST_CASE()</a>, <a class="el" href="test__engine_8cpp_source.html#l00187">TEST_CASE()</a>, <a class="el" href="test__engine_8cpp_source.html#l00126">TEST_CASE()</a>, <a class="el" href="test__engine_8cpp_source.html#l00113">TEST_CASE()</a>, <a class="el" href="test__engine_8cpp_source.html#l00177">TEST_CASE()</a>, <a class="el" href="test__engine_8cpp_source.html#l00134">TEST_CASE()</a>, <a class="el" href="test__engine_8cpp_source.html#l00158">TEST_CASE()</a>, <a class="el" href="test__engine_8cpp_source.html#l00216">TEST_CASE()</a>, <a class="el" href="test__codegen__output_8cpp_source.html#l00281">TEST_CASE()</a>, <a class="el" href="test__codegen__output_8cpp_source.html#l00261">TEST_CASE()</a>, <a class="el" href="test__codegen__output_8cpp_source.html#l00237">TEST_CASE()</a>, <a class="el" href="test__codegen__output_8cpp_source.html#l00079">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00108">TEST_CASE()</a>, and <a class="el" href="test__rulesets_8cpp_source.html#l00076">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -510,9 +855,9 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00119">119</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ruleset__loader_8hpp_source.html#l00194">rpg_os::Ruleset::data</a>.</p>
+<p class="reference">References <a class="el" href="ruleset__loader_8hpp_source.html#l00196">rpg_os::Ruleset::data</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00109">createEntity()</a>, <a class="el" href="combat_8hpp_source.html#l00196">rpg_os::createFighter()</a>, and <a class="el" href="combat_8hpp_source.html#l00116">rpg_os::makeCombatantSpec()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00109">createEntity()</a>, <a class="el" href="combat_8hpp_source.html#l00195">rpg_os::createFighter()</a>, and <a class="el" href="combat_8hpp_source.html#l00115">rpg_os::makeCombatantSpec()</a>.</p>
 
 </div>
 </div>
@@ -629,7 +974,7 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 
 <p class="reference">References <a class="el" href="check__resolver_8hpp_source.html#l00043">rpg_os::CheckResolver::resolve()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00221">rpg_os::detail::attackOnce()</a>, <a class="el" href="engine_8hpp_source.html#l00193">executeCheck()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00242">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00282">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00216">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00265">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00061">TEST_CASE()</a>, <a class="el" href="test__engine_8cpp_source.html#l00172">TEST_CASE()</a>, <a class="el" href="test__engine_8cpp_source.html#l00129">TEST_CASE()</a>, <a class="el" href="test__codegen__output_8cpp_source.html#l00280">TEST_CASE()</a>, <a class="el" href="test__codegen__output_8cpp_source.html#l00260">TEST_CASE()</a>, <a class="el" href="test__codegen__output_8cpp_source.html#l00236">TEST_CASE()</a>, and <a class="el" href="test__codegen__output_8cpp_source.html#l00129">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00220">rpg_os::detail::attackOnce()</a>, <a class="el" href="engine_8hpp_source.html#l00193">executeCheck()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00243">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00283">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00217">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00266">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00061">TEST_CASE()</a>, <a class="el" href="test__engine_8cpp_source.html#l00177">TEST_CASE()</a>, <a class="el" href="test__engine_8cpp_source.html#l00134">TEST_CASE()</a>, <a class="el" href="test__codegen__output_8cpp_source.html#l00281">TEST_CASE()</a>, <a class="el" href="test__codegen__output_8cpp_source.html#l00261">TEST_CASE()</a>, <a class="el" href="test__codegen__output_8cpp_source.html#l00237">TEST_CASE()</a>, and <a class="el" href="test__codegen__output_8cpp_source.html#l00130">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -675,9 +1020,9 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 
 <p>Resolves a skill check using a fresh default RNG. Convenience overload. </p>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00227">227</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00237">237</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00212">executeSkillCheck()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00213">executeSkillCheck()</a>.</p>
 
 </div>
 </div>
@@ -728,14 +1073,284 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Resolves a skill check for a named skill, using the skill's own linked attributes and the skill rating as the pool (real TDE model, where every talent has its own three attributes). Skill checks have no target. Throws std::invalid_argument for an unknown skill or a skill without three linked attributes.</p>
-<dl class="section user"><dt>Why bypass the check-type mechanism here?</dt><dd>A talent check <em>is</em> a 3d20 pool check whose attributes live on the skill definition, not in a named check type. Driving it straight from the skill keeps the ruleset from having to duplicate each talent as a check type — one source of truth for a talent's attributes. </dd></dl>
+<p>Resolves a skill check for a named skill, using the skill's own linked attributes and the skill rating as the pool (the generic pool resolution applied to the skill's three linked attributes). Skill checks have no target. Throws std::invalid_argument for an unknown skill or a skill without exactly three linked attributes.</p>
+<dl class="section user"><dt>Why drive it from the skill definition rather than a check type?</dt><dd>A skill check's attributes live on the skill definition, not in a named check type. Building a generic pool recipe from those attributes keeps the skill as the single source of truth and requires no ruleset-specific code — the pool resolution (and its double-roll criticals and quality grading) is entirely described by the recipe. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00212">212</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00213">213</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ruleset__loader_8hpp_source.html#l00104">rpg_os::SkillDef::attributes</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00244">rpg_os::Ruleset::findSkill()</a>, and <a class="el" href="checks_8hpp_source.html#l00297">rpg_os::resolveTripleRollUnderPool()</a>.</p>
+<p class="reference">References <a class="el" href="ruleset__loader_8hpp_source.html#l00104">rpg_os::SkillDef::attributes</a>, <a class="el" href="checks_8hpp_source.html#l00141">rpg_os::CheckRecipe::criticalStyle</a>, <a class="el" href="checks_8hpp_source.html#l00111">rpg_os::CheckRecipe::dice</a>, <a class="el" href="checks_8hpp_source.html#l00157">rpg_os::CheckRecipe::difficultyMode</a>, <a class="el" href="namespacerpg__os.html#a475606cc248fcbc80000a0ceb3b8c448a58a065c7f5b83923cce9c69323749f20">rpg_os::DoubleRoll</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00252">rpg_os::Ruleset::findSkill()</a>, <a class="el" href="checks_8hpp_source.html#l00147">rpg_os::CheckRecipe::fumbleStyle</a>, <a class="el" href="checks_8hpp_source.html#l00154">rpg_os::CheckRecipe::grading</a>, <a class="el" href="checks_8hpp_source.html#l00127">rpg_os::CheckRecipe::numPoolAttributes</a>, <a class="el" href="namespacerpg__os.html#a95eaa793f5aa7a7b28d2851594d614dcadef36b726efed529b13ba240dd331a12">rpg_os::Pool</a>, <a class="el" href="checks_8hpp_source.html#l00126">rpg_os::CheckRecipe::poolAttributes</a>, <a class="el" href="namespacerpg__os.html#a77f98d725fb2409a3e02d40f5772f3bcafd05b06908768e6dd8c686b4d5a73429">rpg_os::PoolQuality</a>, <a class="el" href="checks_8hpp_source.html#l00129">rpg_os::CheckRecipe::poolStat</a>, <a class="el" href="checks_8hpp_source.html#l00107">rpg_os::CheckRecipe::resolution</a>, <a class="el" href="checks_8hpp_source.html#l00523">rpg_os::resolveCheck()</a>, and <a class="el" href="namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753daedc924ddad3e72aa05c6d5b29250fe41">rpg_os::ToStat</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00227">executeSkillCheck()</a>, <a class="el" href="test__engine_8cpp_source.html#l00153">TEST_CASE()</a>, <a class="el" href="test__codegen__output_8cpp_source.html#l00078">TEST_CASE()</a>, and <a class="el" href="test__rulesets_8cpp_source.html#l00076">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00237">executeSkillCheck()</a>, <a class="el" href="test__engine_8cpp_source.html#l00158">TEST_CASE()</a>, <a class="el" href="test__codegen__output_8cpp_source.html#l00079">TEST_CASE()</a>, and <a class="el" href="test__rulesets_8cpp_source.html#l00076">TEST_CASE()</a>.</p>
+
+</div>
+</div>
+<a id="a617b0ec5e7c02f48b61c64c7b19ddcf7" name="a617b0ec5e7c02f48b61c64c7b19ddcf7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a617b0ec5e7c02f48b61c64c7b19ddcf7">&#9670;&#160;</a></span>findArchetype()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> * rpg_os::RulesetEngine::findArchetype </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00315">315</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00283">findDataRecord()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="test__data__api_8cpp_source.html#l00034">TEST_CASE()</a>.</p>
+
+</div>
+</div>
+<a id="a5ca06062604ac06fe307ae7db13c2010" name="a5ca06062604ac06fe307ae7db13c2010"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ca06062604ac06fe307ae7db13c2010">&#9670;&#160;</a></span>findCondition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> * rpg_os::RulesetEngine::findCondition </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00306">306</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00283">findDataRecord()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="test__data__api_8cpp_source.html#l00034">TEST_CASE()</a>.</p>
+
+</div>
+</div>
+<a id="aaf41f041a0348a10dee7db6884b19c4d" name="aaf41f041a0348a10dee7db6884b19c4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf41f041a0348a10dee7db6884b19c4d">&#9670;&#160;</a></span>findCreature()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> * rpg_os::RulesetEngine::findCreature </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00318">318</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00283">findDataRecord()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="test__data__api_8cpp_source.html#l00034">TEST_CASE()</a>.</p>
+
+</div>
+</div>
+<a id="a6728a565334609cc331da78d96304db0" name="a6728a565334609cc331da78d96304db0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6728a565334609cc331da78d96304db0">&#9670;&#160;</a></span>findDataRecord()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> * rpg_os::RulesetEngine::findDataRecord </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>section</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Looks up a raw data record by id in a named <code>data</code> section (e.g. "spells", "poisons", "diseases", "conditions", "items", "archetypes", "creatures"). Returns nullptr when the section or record does not exist.</p>
+<dl class="section user"><dt>Why raw JSON?</dt><dd>The <code>data</code> database is intentionally free-form — each ruleset's records carry exactly the fields its source book has. The engine exposes every record verbatim so an application can read anything the ruleset covers (magic, illness, equipment, ...) without the engine having to model it. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00283">283</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="ruleset__loader_8hpp_source.html#l00196">rpg_os::Ruleset::data</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00430">applyAffliction()</a>, <a class="el" href="engine_8hpp_source.html#l00315">findArchetype()</a>, <a class="el" href="engine_8hpp_source.html#l00306">findCondition()</a>, <a class="el" href="engine_8hpp_source.html#l00318">findCreature()</a>, <a class="el" href="engine_8hpp_source.html#l00312">findDisease()</a>, <a class="el" href="engine_8hpp_source.html#l00303">findItem()</a>, <a class="el" href="engine_8hpp_source.html#l00309">findPoison()</a>, <a class="el" href="engine_8hpp_source.html#l00300">findSpell()</a>, and <a class="el" href="test__data__api_8cpp_source.html#l00034">TEST_CASE()</a>.</p>
+
+</div>
+</div>
+<a id="a66f0e56c2d27422076b0b6e7e5578abd" name="a66f0e56c2d27422076b0b6e7e5578abd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66f0e56c2d27422076b0b6e7e5578abd">&#9670;&#160;</a></span>findDisease()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> * rpg_os::RulesetEngine::findDisease </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00312">312</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00283">findDataRecord()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="test__data__api_8cpp_source.html#l00144">TEST_CASE()</a>, and <a class="el" href="test__data__api_8cpp_source.html#l00034">TEST_CASE()</a>.</p>
+
+</div>
+</div>
+<a id="a0e83975dd53bf57ed6df9cc12e870b7d" name="a0e83975dd53bf57ed6df9cc12e870b7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e83975dd53bf57ed6df9cc12e870b7d">&#9670;&#160;</a></span>findItem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> * rpg_os::RulesetEngine::findItem </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00303">303</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00283">findDataRecord()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="test__data__api_8cpp_source.html#l00034">TEST_CASE()</a>.</p>
+
+</div>
+</div>
+<a id="a3a0baf216845a78ad1af8653652caaa6" name="a3a0baf216845a78ad1af8653652caaa6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a0baf216845a78ad1af8653652caaa6">&#9670;&#160;</a></span>findPoison()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> * rpg_os::RulesetEngine::findPoison </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00309">309</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00283">findDataRecord()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="test__data__api_8cpp_source.html#l00034">TEST_CASE()</a>.</p>
+
+</div>
+</div>
+<a id="a0fc03fb7fb84d35a662f38a46ba17485" name="a0fc03fb7fb84d35a662f38a46ba17485"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fc03fb7fb84d35a662f38a46ba17485">&#9670;&#160;</a></span>findSpell()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> * rpg_os::RulesetEngine::findSpell </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The named data record accessors for the common sections. </p>
+
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00300">300</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00283">findDataRecord()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00356">castSpell()</a>, and <a class="el" href="test__data__api_8cpp_source.html#l00034">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -763,9 +1378,9 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 </div><div class="memdoc">
 <p>Message from the last failed load / validation. Empty after a successful load. </p>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00288">288</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00516">516</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fight_2main_8cpp_source.html#l00211">main()</a>, and <a class="el" href="test__engine_8cpp_source.html#l00095">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fight_2main_8cpp_source.html#l00211">main()</a>, and <a class="el" href="test__engine_8cpp_source.html#l00100">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -794,9 +1409,9 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 
 <p>Whether a ruleset has been loaded successfully. </p>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00282">282</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00510">510</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="test__engine_8cpp_source.html#l00095">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="test__engine_8cpp_source.html#l00100">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -829,7 +1444,7 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 
 <p class="reference">References <a class="el" href="engine_8hpp_source.html#l00053">loadRulesetFromJson()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fight_2main_8cpp_source.html#l00211">main()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00242">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00323">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00193">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00303">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00282">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00216">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00265">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00067">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00051">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00031">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00101">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00038">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00157">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00136">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00116">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00150">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00061">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00145">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00029">TEST_CASE()</a>, <a class="el" href="test__engine_8cpp_source.html#l00228">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00127">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00108">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00161">TEST_CASE()</a>, and <a class="el" href="test__rulesets_8cpp_source.html#l00076">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fight_2main_8cpp_source.html#l00211">main()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00243">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00324">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00194">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00304">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00283">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00217">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00266">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00067">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00051">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00031">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00101">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00038">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00157">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00136">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00116">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00150">TEST_CASE()</a>, <a class="el" href="test__data__api_8cpp_source.html#l00113">TEST_CASE()</a>, <a class="el" href="test__data__api_8cpp_source.html#l00079">TEST_CASE()</a>, <a class="el" href="test__data__api_8cpp_source.html#l00092">TEST_CASE()</a>, <a class="el" href="test__data__api_8cpp_source.html#l00060">TEST_CASE()</a>, <a class="el" href="test__data__api_8cpp_source.html#l00144">TEST_CASE()</a>, <a class="el" href="test__data__api_8cpp_source.html#l00034">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00061">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00145">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00029">TEST_CASE()</a>, <a class="el" href="test__engine_8cpp_source.html#l00233">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00127">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00108">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00161">TEST_CASE()</a>, and <a class="el" href="test__rulesets_8cpp_source.html#l00076">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -861,9 +1476,9 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00053">53</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ruleset__loader_8hpp_source.html#l00598">rpg_os::RulesetLoader::loadFromString()</a>.</p>
+<p class="reference">References <a class="el" href="ruleset__loader_8hpp_source.html#l00704">rpg_os::RulesetLoader::loadFromString()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00068">loadRulesetFromFile()</a>, <a class="el" href="test__combat_8cpp_source.html#l00078">TEST_CASE()</a>, <a class="el" href="test__variance_8cpp_source.html#l00067">TEST_CASE()</a>, <a class="el" href="test__engine_8cpp_source.html#l00095">TEST_CASE()</a>, <a class="el" href="test__codegen__output_8cpp_source.html#l00280">TEST_CASE()</a>, <a class="el" href="test__codegen__output_8cpp_source.html#l00260">TEST_CASE()</a>, <a class="el" href="test__codegen__output_8cpp_source.html#l00236">TEST_CASE()</a>, <a class="el" href="test__codegen__output_8cpp_source.html#l00129">TEST_CASE()</a>, and <a class="el" href="test__codegen__output_8cpp_source.html#l00078">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00068">loadRulesetFromFile()</a>, <a class="el" href="test__combat_8cpp_source.html#l00078">TEST_CASE()</a>, <a class="el" href="test__variance_8cpp_source.html#l00067">TEST_CASE()</a>, <a class="el" href="test__engine_8cpp_source.html#l00100">TEST_CASE()</a>, <a class="el" href="test__codegen__output_8cpp_source.html#l00281">TEST_CASE()</a>, <a class="el" href="test__codegen__output_8cpp_source.html#l00261">TEST_CASE()</a>, <a class="el" href="test__codegen__output_8cpp_source.html#l00237">TEST_CASE()</a>, <a class="el" href="test__codegen__output_8cpp_source.html#l00130">TEST_CASE()</a>, and <a class="el" href="test__codegen__output_8cpp_source.html#l00079">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -902,11 +1517,11 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 </div><div class="memdoc">
 <p>Registers a user-facing event listener (returns a handle for removal). User listeners run <em>after</em> the ruleset's own JSON-driven triggers, so they observe the final, mutated payload. </p>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00267">267</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00495">495</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="event__system_8hpp_source.html#l00124">rpg_os::EventBus::addListener()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="test__engine_8cpp_source.html#l00211">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="test__engine_8cpp_source.html#l00216">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -935,9 +1550,9 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 
 <p>The loaded ruleset (only valid when <code><a class="el" href="classrpg__os_1_1RulesetEngine.html#af5217714ab538b53ed01199a22716198" title="Whether a ruleset has been loaded successfully.">loaded()</a></code> is true). </p>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00277">277</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00505">505</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fight_2main_8cpp_source.html#l00211">main()</a>, <a class="el" href="combat_8hpp_source.html#l00116">rpg_os::makeCombatantSpec()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00323">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00193">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00031">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00101">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00157">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00061">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00145">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00029">TEST_CASE()</a>, <a class="el" href="test__engine_8cpp_source.html#l00201">TEST_CASE()</a>, <a class="el" href="test__engine_8cpp_source.html#l00182">TEST_CASE()</a>, <a class="el" href="test__engine_8cpp_source.html#l00228">TEST_CASE()</a>, <a class="el" href="test__engine_8cpp_source.html#l00095">TEST_CASE()</a>, <a class="el" href="test__engine_8cpp_source.html#l00211">TEST_CASE()</a>, <a class="el" href="test__codegen__output_8cpp_source.html#l00129">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00127">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00108">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00161">TEST_CASE()</a>, and <a class="el" href="test__rulesets_8cpp_source.html#l00076">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fight_2main_8cpp_source.html#l00211">main()</a>, <a class="el" href="combat_8hpp_source.html#l00115">rpg_os::makeCombatantSpec()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00324">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00194">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00031">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00101">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00157">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00061">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00145">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00029">TEST_CASE()</a>, <a class="el" href="test__engine_8cpp_source.html#l00206">TEST_CASE()</a>, <a class="el" href="test__engine_8cpp_source.html#l00187">TEST_CASE()</a>, <a class="el" href="test__engine_8cpp_source.html#l00233">TEST_CASE()</a>, <a class="el" href="test__engine_8cpp_source.html#l00100">TEST_CASE()</a>, <a class="el" href="test__engine_8cpp_source.html#l00216">TEST_CASE()</a>, <a class="el" href="test__codegen__output_8cpp_source.html#l00130">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00127">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00108">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00161">TEST_CASE()</a>, and <a class="el" href="test__rulesets_8cpp_source.html#l00076">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -967,11 +1582,11 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 
 <p>Removes a previously registered event listener. </p>
 
-<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00272">272</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00500">500</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="event__system_8hpp_source.html#l00133">rpg_os::EventBus::removeListener()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="test__engine_8cpp_source.html#l00211">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="test__engine_8cpp_source.html#l00216">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -1001,9 +1616,9 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="engine_8hpp_source.html#l00088">88</a> of file <a class="el" href="engine_8hpp_source.html">engine.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ruleset__loader_8hpp_source.html#l00603">rpg_os::RulesetLoader::validate()</a>.</p>
+<p class="reference">References <a class="el" href="ruleset__loader_8hpp_source.html#l00709">rpg_os::RulesetLoader::validate()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="test__engine_8cpp_source.html#l00095">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="test__engine_8cpp_source.html#l00100">TEST_CASE()</a>.</p>
 
 </div>
 </div>

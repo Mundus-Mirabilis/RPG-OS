@@ -130,14 +130,14 @@ $(document).ready(function(){initNavTree('dice__engine_8hpp.html',''); initResiz
 
 <p>Dice expression parsing and rolling.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;array&gt;</code><br />
-<code>#include &lt;chrono&gt;</code><br />
+<div class="textblock"><code>#include &lt;chrono&gt;</code><br />
 <code>#include &lt;cstddef&gt;</code><br />
 <code>#include &lt;cstdint&gt;</code><br />
 <code>#include &lt;random&gt;</code><br />
 <code>#include &lt;<a class="el" href="concepts_8hpp_source.html">rpg_os/core/concepts.hpp</a>&gt;</code><br />
 <code>#include &lt;stdexcept&gt;</code><br />
 <code>#include &lt;string_view&gt;</code><br />
+<code>#include &lt;utility&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for dice_engine.hpp:</div>
@@ -165,22 +165,28 @@ Classes</h2></td></tr>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespacerpg__os" id="r_namespacerpg__os"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerpg__os.html">rpg_os</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespacerpg__os_1_1detail" id="r_namespacerpg__os_1_1detail"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerpg__os_1_1detail.html">rpg_os::detail</a></td></tr>
+<tr class="memitem:namespacerpg__os_1_1dice__literals" id="r_namespacerpg__os_1_1dice__literals"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerpg__os_1_1dice__literals.html">rpg_os::dice_literals</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a858c36e0d13cf3dd47daaceafb63b2e4" id="r_a858c36e0d13cf3dd47daaceafb63b2e4"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerpg__os_1_1detail.html#a858c36e0d13cf3dd47daaceafb63b2e4">rpg_os::detail::processId</a> () noexcept</td></tr>
-<tr class="separator:a858c36e0d13cf3dd47daaceafb63b2e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a769c90230e3850b1a2ae06b3f7be17a7" id="r_a769c90230e3850b1a2ae06b3f7be17a7"><td class="memItemLeft" align="right" valign="top">std::array&lt; uint32_t, 8 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerpg__os_1_1detail.html#a769c90230e3850b1a2ae06b3f7be17a7">rpg_os::detail::entropyWords</a> () noexcept</td></tr>
-<tr class="separator:a769c90230e3850b1a2ae06b3f7be17a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae74c58efe66f2fe3d9cd970227f9b02e" id="r_ae74c58efe66f2fe3d9cd970227f9b02e"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerpg__os.html#ae74c58efe66f2fe3d9cd970227f9b02e">rpg_os::randomSeed</a> () noexcept</td></tr>
 <tr class="separator:ae74c58efe66f2fe3d9cd970227f9b02e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">arithmetic with a leading integer</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>Allow <code>2</code> + 2_d6 and <code>2</code> - 2_d6; found by ADL on <code><a class="el" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a></code>. </p>
+</div></td></tr>
+<tr class="memitem:a2c9ba73f667596b8ab089577bfed0ec6" id="r_a2c9ba73f667596b8ab089577bfed0ec6"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerpg__os.html#a2c9ba73f667596b8ab089577bfed0ec6">rpg_os::operator+</a> (int lhs, const <a class="el" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a> &amp;rhs)</td></tr>
+<tr class="memdesc:a2c9ba73f667596b8ab089577bfed0ec6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a flat constant on the left: <code>2</code> + 2_d6 == <code>2_d6</code> + 2.  <br /></td></tr>
+<tr class="separator:a2c9ba73f667596b8ab089577bfed0ec6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af141eb3e6be2d938ce2b9bac02b4f3a5" id="r_af141eb3e6be2d938ce2b9bac02b4f3a5"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerpg__os.html#af141eb3e6be2d938ce2b9bac02b4f3a5">rpg_os::operator-</a> (int lhs, const <a class="el" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a> &amp;rhs)</td></tr>
+<tr class="separator:af141eb3e6be2d938ce2b9bac02b4f3a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">common die sizes — the integer part is the number of dice</div></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Dice expression parsing and rolling. </p>
 <p>Parses dice expressions such as <code>"1d20"</code>, <code>"3d20"</code>, <code>"2d6+4"</code>, <code>"1d20-2"</code> or <code>"2d6+1d4"</code> into a list of die groups plus a flat constant, and rolls them with an injectable random number generator (see <code><a class="el" href="concepts_8hpp.html" title="Core concepts that both modes (universal + specific) satisfy.">core/concepts.hpp</a></code>). Shared by the universal engine and the generated specific-mode code.</p>
 <dl class="section user"><dt>Why parse dice expressions at all?</dt><dd>Rulesets express damage and hit points as dice expressions verbatim from the source books (<code>"2d6+4"</code>). Keeping them as text in the JSON — rather than pre-rolling or pre-computing bounds — preserves the original stat and lets the engine roll at the right moment with the right variance. This header turns that text into a structure that can be rolled, bounded (see <code><a class="el" href="variance_8hpp.html" title="Variance / range selection for stat values.">variance.hpp</a></code>), and validated.</dd></dl>
+<dl class="section user"><dt>Dice as literals</dt><dd>Once a dice string is parsed it is a plain C++ object. Two literal forms build one directly from source text: the common die-size suffixes (<code>3_d20</code>, and with the arithmetic operators <code>2_d6</code> + 2) for everyday use, and the <code>"2d6+4"_dice</code> suffix for arbitrary expressions — the form the generated ruleset headers use, since a ruleset JSON may contain any dice string. Either way the dice are parsed once at startup instead of re-interpreting a string on every roll.</dd></dl>
 <dl class="section user"><dt>Why injectable randomness?</dt><dd>Dice are consumed by check algorithms, damage rolls, and entity creation. Injecting an RNG (rather than having <code>DiceExpression</code> own one) keeps the engine deterministic under a scripted RNG in tests and reproducible under a seeded RNG in Monte-Carlo simulations — the same expression object can be rolled by many independent RNGs. </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>

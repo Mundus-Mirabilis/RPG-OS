@@ -129,7 +129,7 @@ $(document).ready(function(){initNavTree('checks_8hpp.html',''); initResizable()
 </div><!--header-->
 <div class="contents">
 
-<p>Shared check resolution algorithms.  
+<p>Generic, data-driven check resolution.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;array&gt;</code><br />
 <code>#include &lt;cstddef&gt;</code><br />
@@ -137,7 +137,6 @@ $(document).ready(function(){initNavTree('checks_8hpp.html',''); initResizable()
 <code>#include &lt;<a class="el" href="types_8hpp_source.html">rpg_os/common/types.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="concepts_8hpp_source.html">rpg_os/core/concepts.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="dice__engine_8hpp_source.html">rpg_os/core/dice_engine.hpp</a>&gt;</code><br />
-<code>#include &lt;span&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;string_view&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
@@ -156,7 +155,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrpg__os_1_1CheckConfig.html">rpg_os::CheckConfig</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrpg__os_1_1CheckRecipe.html">rpg_os::CheckRecipe</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrpg__os_1_1CheckParams.html">rpg_os::CheckParams</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -170,66 +169,83 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a588e72e855deaf1543a7331fc9706b84" id="r_a588e72e855deaf1543a7331fc9706b84"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerpg__os.html#a588e72e855deaf1543a7331fc9706b84">rpg_os::CheckKind</a> { <br />
-&#160;&#160;<a class="el" href="namespacerpg__os.html#a588e72e855deaf1543a7331fc9706b84a4879fbe38b10f2627894a2bd19b129cc">rpg_os::AdditiveD20</a>
-, <a class="el" href="namespacerpg__os.html#a588e72e855deaf1543a7331fc9706b84ac0b61f4c5712ae9efcb75350544517b0">rpg_os::RollUnderD20</a>
-, <a class="el" href="namespacerpg__os.html#a588e72e855deaf1543a7331fc9706b84a34ca41df64b6d7bfcc8544f372c0d2e2">rpg_os::TripleRollUnderPool</a>
-, <a class="el" href="namespacerpg__os.html#a588e72e855deaf1543a7331fc9706b84a05de50aa3c40bf047396759a987eb395">rpg_os::AttackVsDefense</a>
-, <br />
-&#160;&#160;<a class="el" href="namespacerpg__os.html#a588e72e855deaf1543a7331fc9706b84a01dbfdaa798f8a1eb112235c920e30c1">rpg_os::RollUnderD100</a>
-, <a class="el" href="namespacerpg__os.html#a588e72e855deaf1543a7331fc9706b84ad263b757c382910a48bceae4f4b25fb8">rpg_os::OpposedRollUnderD100</a>
-, <a class="el" href="namespacerpg__os.html#a588e72e855deaf1543a7331fc9706b84a3dc68444b1fa4c3c821be15a324b36c4">rpg_os::ResistanceRoll</a>
-<br />
+<tr class="memitem:a4ede194e1af239829344bcfe6bf5791f" id="r_a4ede194e1af239829344bcfe6bf5791f"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerpg__os.html#a4ede194e1af239829344bcfe6bf5791f">rpg_os::Comparison</a> : int8_t { <a class="el" href="namespacerpg__os.html#a4ede194e1af239829344bcfe6bf5791fa758b05d899def79c9eb864ad4f96be1f">rpg_os::GreaterEqual</a>
+, <a class="el" href="namespacerpg__os.html#a4ede194e1af239829344bcfe6bf5791fad3e6fdac55bb7b0edd7834c968ba1f38">rpg_os::LessEqual</a>
  }</td></tr>
-<tr class="separator:a588e72e855deaf1543a7331fc9706b84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa851b7886a1792c711386fd71ee2753d" id="r_aa851b7886a1792c711386fd71ee2753d"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753d">rpg_os::DifficultyMode</a> : int8_t { <a class="el" href="namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753dab1897515d548a960afe49ecf66a29021">rpg_os::Average</a> = 0
-, <a class="el" href="namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753da7f943921724d63dc0ac9c6febf99fa88">rpg_os::Easy</a> = 1
-, <a class="el" href="namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753da429ee94cd13d541a0d434e93c798ac4c">rpg_os::Difficult</a> = -1
+<tr class="memdesc:a4ede194e1af239829344bcfe6bf5791f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Which way a rolled value is compared against the reference.  <a href="namespacerpg__os.html#a4ede194e1af239829344bcfe6bf5791f">More...</a><br /></td></tr>
+<tr class="separator:a4ede194e1af239829344bcfe6bf5791f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a031baa10011b869e066dd2a216ce55d4" id="r_a031baa10011b869e066dd2a216ce55d4"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerpg__os.html#a031baa10011b869e066dd2a216ce55d4">rpg_os::ThresholdSource</a> : int8_t { <a class="el" href="namespacerpg__os.html#a031baa10011b869e066dd2a216ce55d4a7b29ca96ada2afa3aadbcf55cd61a1ed">rpg_os::Difficulty</a>
+, <a class="el" href="namespacerpg__os.html#a031baa10011b869e066dd2a216ce55d4ae15941912a4c035ac473229ac6bf832a">rpg_os::ActorStat</a>
+, <a class="el" href="namespacerpg__os.html#a031baa10011b869e066dd2a216ce55d4aa0fe624424aad8695f9a86a5f115b641">rpg_os::TargetStat</a>
  }</td></tr>
+<tr class="memdesc:a031baa10011b869e066dd2a216ce55d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Where the reference value of a check comes from.  <a href="namespacerpg__os.html#a031baa10011b869e066dd2a216ce55d4">More...</a><br /></td></tr>
+<tr class="separator:a031baa10011b869e066dd2a216ce55d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95eaa793f5aa7a7b28d2851594d614dc" id="r_a95eaa793f5aa7a7b28d2851594d614dc"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerpg__os.html#a95eaa793f5aa7a7b28d2851594d614dc">rpg_os::Resolution</a> : int8_t { <a class="el" href="namespacerpg__os.html#a95eaa793f5aa7a7b28d2851594d614dca2a63f555989152ba866b43a1faacd680">rpg_os::Threshold</a>
+, <a class="el" href="namespacerpg__os.html#a95eaa793f5aa7a7b28d2851594d614dcadef36b726efed529b13ba240dd331a12">rpg_os::Pool</a>
+, <a class="el" href="namespacerpg__os.html#a95eaa793f5aa7a7b28d2851594d614dca4426b14cf40eb77915f04b0a4701c0b3">rpg_os::Opposed</a>
+, <a class="el" href="namespacerpg__os.html#a95eaa793f5aa7a7b28d2851594d614dca9db444f7a3b8ba8f817647de53b7a6fe">rpg_os::Resistance</a>
+ }</td></tr>
+<tr class="separator:a95eaa793f5aa7a7b28d2851594d614dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a475606cc248fcbc80000a0ceb3b8c448" id="r_a475606cc248fcbc80000a0ceb3b8c448"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerpg__os.html#a475606cc248fcbc80000a0ceb3b8c448">rpg_os::CriticalStyle</a> : int8_t { <a class="el" href="namespacerpg__os.html#a475606cc248fcbc80000a0ceb3b8c448a6adf97f83acf6453d4a6a4b1070f3754">rpg_os::None</a>
+, <a class="el" href="namespacerpg__os.html#a475606cc248fcbc80000a0ceb3b8c448a8af5861002f3c157f9ba842bba10aa3f">rpg_os::Face</a>
+, <a class="el" href="namespacerpg__os.html#a475606cc248fcbc80000a0ceb3b8c448a58a065c7f5b83923cce9c69323749f20">rpg_os::DoubleRoll</a>
+, <a class="el" href="namespacerpg__os.html#a475606cc248fcbc80000a0ceb3b8c448aa33a17ca6946e7e0ca35aa02201166eb">rpg_os::PercentileBand</a>
+ }</td></tr>
+<tr class="memdesc:a475606cc248fcbc80000a0ceb3b8c448"><td class="mdescLeft">&#160;</td><td class="mdescRight">How critical successes / failures are detected.  <a href="namespacerpg__os.html#a475606cc248fcbc80000a0ceb3b8c448">More...</a><br /></td></tr>
+<tr class="separator:a475606cc248fcbc80000a0ceb3b8c448"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77f98d725fb2409a3e02d40f5772f3bc" id="r_a77f98d725fb2409a3e02d40f5772f3bc"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerpg__os.html#a77f98d725fb2409a3e02d40f5772f3bc">rpg_os::Grading</a> : int8_t { <a class="el" href="namespacerpg__os.html#a77f98d725fb2409a3e02d40f5772f3bca6adf97f83acf6453d4a6a4b1070f3754">rpg_os::None</a>
+, <a class="el" href="namespacerpg__os.html#a77f98d725fb2409a3e02d40f5772f3bca915b56c00229b328af95134410779d20">rpg_os::Percentile</a>
+, <a class="el" href="namespacerpg__os.html#a77f98d725fb2409a3e02d40f5772f3bcafd05b06908768e6dd8c686b4d5a73429">rpg_os::PoolQuality</a>
+ }</td></tr>
+<tr class="memdesc:a77f98d725fb2409a3e02d40f5772f3bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">How much information the check result carries.  <a href="namespacerpg__os.html#a77f98d725fb2409a3e02d40f5772f3bc">More...</a><br /></td></tr>
+<tr class="separator:a77f98d725fb2409a3e02d40f5772f3bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa851b7886a1792c711386fd71ee2753d" id="r_aa851b7886a1792c711386fd71ee2753d"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753d">rpg_os::DifficultyMode</a> : int8_t { <a class="el" href="namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753daac18f68e8a52d0ae7da868601481627e">rpg_os::ToThreshold</a>
+, <a class="el" href="namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753daedc924ddad3e72aa05c6d5b29250fe41">rpg_os::ToStat</a>
+ }</td></tr>
+<tr class="memdesc:aa851b7886a1792c711386fd71ee2753d"><td class="mdescLeft">&#160;</td><td class="mdescRight">How <code>CheckParams::difficulty</code> is applied to the reference value.  <a href="namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753d">More...</a><br /></td></tr>
 <tr class="separator:aa851b7886a1792c711386fd71ee2753d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab545c7c57f9754a6d5b040f83bedaf52" id="r_ab545c7c57f9754a6d5b040f83bedaf52"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerpg__os.html#ab545c7c57f9754a6d5b040f83bedaf52">rpg_os::DifficultyMultiplier</a> : int8_t { <a class="el" href="namespacerpg__os.html#ab545c7c57f9754a6d5b040f83bedaf52a6adf97f83acf6453d4a6a4b1070f3754">rpg_os::None</a>
+, <a class="el" href="namespacerpg__os.html#ab545c7c57f9754a6d5b040f83bedaf52aa2224aa958f41d288d9e97e986492b36">rpg_os::DoubleHalve</a>
+ }</td></tr>
+<tr class="separator:ab545c7c57f9754a6d5b040f83bedaf52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d0f76e637716d8f9bedca406ff39fe6" id="r_a5d0f76e637716d8f9bedca406ff39fe6"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerpg__os.html#a5d0f76e637716d8f9bedca406ff39fe6">rpg_os::DifficultyScale</a> : int8_t { <a class="el" href="namespacerpg__os.html#a5d0f76e637716d8f9bedca406ff39fe6ab1897515d548a960afe49ecf66a29021">rpg_os::Average</a> = 0
+, <a class="el" href="namespacerpg__os.html#a5d0f76e637716d8f9bedca406ff39fe6a7f943921724d63dc0ac9c6febf99fa88">rpg_os::Easy</a> = 1
+, <a class="el" href="namespacerpg__os.html#a5d0f76e637716d8f9bedca406ff39fe6a429ee94cd13d541a0d434e93c798ac4c">rpg_os::Difficult</a> = -1
+ }</td></tr>
+<tr class="separator:a5d0f76e637716d8f9bedca406ff39fe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a7930cbc1013ee467e217a6579a529246" id="r_a7930cbc1013ee467e217a6579a529246"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerpg__os.html#a7930cbc1013ee467e217a6579a529246">rpg_os::qualityLevelFromRemaining</a> (int32_t remaining) noexcept</td></tr>
-<tr class="separator:a7930cbc1013ee467e217a6579a529246"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac38fd72e232b89754c8431c1d1e5a041" id="r_ac38fd72e232b89754c8431c1d1e5a041"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacerpg__os.html#a0dc66a7ae36ef58a210fec7c99826700">SuccessLevel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerpg__os.html#ac38fd72e232b89754c8431c1d1e5a041">rpg_os::successLevelFor</a> (int32_t stat, int roll) noexcept</td></tr>
-<tr class="separator:ac38fd72e232b89754c8431c1d1e5a041"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a949169c3f54b5825c5cda5d545f8f6e9" id="r_a949169c3f54b5825c5cda5d545f8f6e9"><td class="memTemplParams" colspan="2">template&lt;RandomNumberGenerator Rng&gt; </td></tr>
-<tr class="memitem:a949169c3f54b5825c5cda5d545f8f6e9"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacerpg__os_1_1detail.html#a949169c3f54b5825c5cda5d545f8f6e9">rpg_os::detail::rollDie</a> (int sides, Rng &amp;rng)</td></tr>
-<tr class="separator:a949169c3f54b5825c5cda5d545f8f6e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01418601184a765bd5eaede47d5f9b34" id="r_a01418601184a765bd5eaede47d5f9b34"><td class="memTemplParams" colspan="2">template&lt;StatProvider Actor, StatProvider Target, RandomNumberGenerator Rng&gt; </td></tr>
-<tr class="memitem:a01418601184a765bd5eaede47d5f9b34"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structrpg__os_1_1CheckResult.html">CheckResult</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacerpg__os.html#a01418601184a765bd5eaede47d5f9b34">rpg_os::resolveAdditiveD20</a> (const Actor &amp;actor, const Target &amp;target, std::string_view diceExpression, std::span&lt; const std::string_view &gt; bonusStats, std::string_view targetStat, const <a class="el" href="structrpg__os_1_1CheckParams.html">CheckParams</a> &amp;params, Rng &amp;rng)</td></tr>
-<tr class="separator:a01418601184a765bd5eaede47d5f9b34"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a138152104cbde2e9655fb564a8dd405c" id="r_a138152104cbde2e9655fb564a8dd405c"><td class="memTemplParams" colspan="2">template&lt;StatProvider Actor, RandomNumberGenerator Rng&gt; </td></tr>
-<tr class="memitem:a138152104cbde2e9655fb564a8dd405c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structrpg__os_1_1CheckResult.html">CheckResult</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacerpg__os.html#a138152104cbde2e9655fb564a8dd405c">rpg_os::resolveRollUnderD20</a> (const Actor &amp;actor, std::string_view attribute, bool useConfirmationRoll, const <a class="el" href="structrpg__os_1_1CheckParams.html">CheckParams</a> &amp;params, Rng &amp;rng)</td></tr>
-<tr class="separator:a138152104cbde2e9655fb564a8dd405c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67cec6e58ce0e92bc143ec58e6a5fb9f" id="r_a67cec6e58ce0e92bc143ec58e6a5fb9f"><td class="memTemplParams" colspan="2">template&lt;StatProvider Actor, RandomNumberGenerator Rng&gt; </td></tr>
-<tr class="memitem:a67cec6e58ce0e92bc143ec58e6a5fb9f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structrpg__os_1_1CheckResult.html">CheckResult</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacerpg__os.html#a67cec6e58ce0e92bc143ec58e6a5fb9f">rpg_os::resolveTripleRollUnderPool</a> (const Actor &amp;actor, std::string_view attr1, std::string_view attr2, std::string_view attr3, std::string_view poolStat, const <a class="el" href="structrpg__os_1_1CheckParams.html">CheckParams</a> &amp;params, Rng &amp;rng)</td></tr>
-<tr class="separator:a67cec6e58ce0e92bc143ec58e6a5fb9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ef034f2b27d47dfec3241d25c8677c5" id="r_a7ef034f2b27d47dfec3241d25c8677c5"><td class="memTemplParams" colspan="2">template&lt;StatProvider Actor, StatProvider Target, RandomNumberGenerator Rng&gt; </td></tr>
-<tr class="memitem:a7ef034f2b27d47dfec3241d25c8677c5"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structrpg__os_1_1CheckResult.html">CheckResult</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacerpg__os.html#a7ef034f2b27d47dfec3241d25c8677c5">rpg_os::resolveAttackVsDefense</a> (const Actor &amp;actor, const Target &amp;target, std::string_view attackStat, std::string_view parryStat, const <a class="el" href="structrpg__os_1_1CheckParams.html">CheckParams</a> &amp;params, Rng &amp;rng)</td></tr>
-<tr class="separator:a7ef034f2b27d47dfec3241d25c8677c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ff1a4815cbc06e6ca9c115bcecbd205" id="r_a2ff1a4815cbc06e6ca9c115bcecbd205"><td class="memTemplParams" colspan="2">template&lt;StatProvider Actor, RandomNumberGenerator Rng&gt; </td></tr>
-<tr class="memitem:a2ff1a4815cbc06e6ca9c115bcecbd205"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structrpg__os_1_1CheckResult.html">CheckResult</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacerpg__os.html#a2ff1a4815cbc06e6ca9c115bcecbd205">rpg_os::resolveRollUnderD100</a> (const Actor &amp;actor, std::string_view attribute, const <a class="el" href="structrpg__os_1_1CheckParams.html">CheckParams</a> &amp;params, Rng &amp;rng)</td></tr>
-<tr class="separator:a2ff1a4815cbc06e6ca9c115bcecbd205"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae17c63b87985c6cfcba7199fe43c3981" id="r_ae17c63b87985c6cfcba7199fe43c3981"><td class="memTemplParams" colspan="2">template&lt;StatProvider Actor, StatProvider Target, RandomNumberGenerator Rng&gt; </td></tr>
-<tr class="memitem:ae17c63b87985c6cfcba7199fe43c3981"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structrpg__os_1_1CheckResult.html">CheckResult</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacerpg__os.html#ae17c63b87985c6cfcba7199fe43c3981">rpg_os::resolveOpposedRollUnderD100</a> (const Actor &amp;actor, const Target &amp;target, std::string_view attackStat, std::string_view parryStat, const <a class="el" href="structrpg__os_1_1CheckParams.html">CheckParams</a> &amp;params, Rng &amp;rng)</td></tr>
-<tr class="separator:ae17c63b87985c6cfcba7199fe43c3981"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b8472bc5b027cb0cb3feecfbcf2bb86" id="r_a8b8472bc5b027cb0cb3feecfbcf2bb86"><td class="memTemplParams" colspan="2">template&lt;StatProvider Actor, StatProvider Target, RandomNumberGenerator Rng&gt; </td></tr>
-<tr class="memitem:a8b8472bc5b027cb0cb3feecfbcf2bb86"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structrpg__os_1_1CheckResult.html">CheckResult</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacerpg__os.html#a8b8472bc5b027cb0cb3feecfbcf2bb86">rpg_os::resolveResistanceRoll</a> (const Actor &amp;actor, const Target &amp;target, std::string_view activeStat, std::string_view passiveStat, const <a class="el" href="structrpg__os_1_1CheckParams.html">CheckParams</a> &amp;params, Rng &amp;rng)</td></tr>
-<tr class="separator:a8b8472bc5b027cb0cb3feecfbcf2bb86"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1dd7326c980a88cf098c9b9706f0fc87" id="r_a1dd7326c980a88cf098c9b9706f0fc87"><td class="memTemplParams" colspan="2">template&lt;StatProvider Actor, StatProvider Target, RandomNumberGenerator Rng&gt; </td></tr>
-<tr class="memitem:a1dd7326c980a88cf098c9b9706f0fc87"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structrpg__os_1_1CheckResult.html">CheckResult</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacerpg__os.html#a1dd7326c980a88cf098c9b9706f0fc87">rpg_os::resolveCheck</a> (const Actor &amp;actor, const Target &amp;target, const <a class="el" href="structrpg__os_1_1CheckConfig.html">CheckConfig</a> &amp;config, const <a class="el" href="structrpg__os_1_1CheckParams.html">CheckParams</a> &amp;params, Rng &amp;rng)</td></tr>
-<tr class="separator:a1dd7326c980a88cf098c9b9706f0fc87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5202972feec1585019a7ab8a69a0ea3b" id="r_a5202972feec1585019a7ab8a69a0ea3b"><td class="memItemLeft" align="right" valign="top">constexpr int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerpg__os.html#a5202972feec1585019a7ab8a69a0ea3b">rpg_os::qualityLevelFromRemaining</a> (int32_t remaining) noexcept</td></tr>
+<tr class="separator:a5202972feec1585019a7ab8a69a0ea3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cc63c6411d33823547b72473c8ce523" id="r_a7cc63c6411d33823547b72473c8ce523"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespacerpg__os.html#a0dc66a7ae36ef58a210fec7c99826700">SuccessLevel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerpg__os.html#a7cc63c6411d33823547b72473c8ce523">rpg_os::successLevelFor</a> (int32_t stat, int roll) noexcept</td></tr>
+<tr class="separator:a7cc63c6411d33823547b72473c8ce523"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e9f2d36f9bbe8af6826ca5b2a0a1932" id="r_a8e9f2d36f9bbe8af6826ca5b2a0a1932"><td class="memTemplParams" colspan="2">template&lt;RandomNumberGenerator Rng&gt; </td></tr>
+<tr class="memitem:a8e9f2d36f9bbe8af6826ca5b2a0a1932"><td class="memTemplItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacerpg__os_1_1detail.html#a8e9f2d36f9bbe8af6826ca5b2a0a1932">rpg_os::detail::rollDie</a> (int sides, Rng &amp;rng)</td></tr>
+<tr class="separator:a8e9f2d36f9bbe8af6826ca5b2a0a1932"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe51285921020775936aeeed9cf1b57e" id="r_abe51285921020775936aeeed9cf1b57e"><td class="memItemLeft" align="right" valign="top">constexpr int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerpg__os_1_1detail.html#abe51285921020775936aeeed9cf1b57e">rpg_os::detail::scaleByDifficulty</a> (int32_t value, <a class="el" href="namespacerpg__os.html#a5d0f76e637716d8f9bedca406ff39fe6">DifficultyScale</a> scale) noexcept</td></tr>
+<tr class="memdesc:abe51285921020775936aeeed9cf1b57e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies a multiplicative difficulty scale to a reference value.  <br /></td></tr>
+<tr class="separator:abe51285921020775936aeeed9cf1b57e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b46ef1cf31683f3c873e49ca842cab6" id="r_a6b46ef1cf31683f3c873e49ca842cab6"><td class="memTemplParams" colspan="2">template&lt;StatProvider Actor, StatProvider Target, RandomNumberGenerator Rng&gt; </td></tr>
+<tr class="memitem:a6b46ef1cf31683f3c873e49ca842cab6"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="structrpg__os_1_1CheckResult.html">CheckResult</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacerpg__os.html#a6b46ef1cf31683f3c873e49ca842cab6">rpg_os::resolveThresholdCheck</a> (const Actor &amp;actor, const Target &amp;target, const <a class="el" href="structrpg__os_1_1CheckRecipe.html">CheckRecipe</a> &amp;recipe, const <a class="el" href="structrpg__os_1_1CheckParams.html">CheckParams</a> &amp;params, Rng &amp;rng)</td></tr>
+<tr class="separator:a6b46ef1cf31683f3c873e49ca842cab6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dc70248cb410a26d27117eb3347042b" id="r_a8dc70248cb410a26d27117eb3347042b"><td class="memTemplParams" colspan="2">template&lt;StatProvider Actor, RandomNumberGenerator Rng&gt; </td></tr>
+<tr class="memitem:a8dc70248cb410a26d27117eb3347042b"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="structrpg__os_1_1CheckResult.html">CheckResult</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacerpg__os.html#a8dc70248cb410a26d27117eb3347042b">rpg_os::resolvePoolCheck</a> (const Actor &amp;actor, const <a class="el" href="structrpg__os_1_1CheckRecipe.html">CheckRecipe</a> &amp;recipe, const <a class="el" href="structrpg__os_1_1CheckParams.html">CheckParams</a> &amp;params, Rng &amp;rng)</td></tr>
+<tr class="separator:a8dc70248cb410a26d27117eb3347042b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35c81cc264d9a39fa0ae84a98e47cc45" id="r_a35c81cc264d9a39fa0ae84a98e47cc45"><td class="memTemplParams" colspan="2">template&lt;StatProvider Actor, StatProvider Target, RandomNumberGenerator Rng&gt; </td></tr>
+<tr class="memitem:a35c81cc264d9a39fa0ae84a98e47cc45"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="structrpg__os_1_1CheckResult.html">CheckResult</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacerpg__os.html#a35c81cc264d9a39fa0ae84a98e47cc45">rpg_os::resolveOpposedCheck</a> (const Actor &amp;actor, const Target &amp;target, const <a class="el" href="structrpg__os_1_1CheckRecipe.html">CheckRecipe</a> &amp;recipe, const <a class="el" href="structrpg__os_1_1CheckParams.html">CheckParams</a> &amp;params, Rng &amp;rng)</td></tr>
+<tr class="separator:a35c81cc264d9a39fa0ae84a98e47cc45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec022d03c5ed920153ee4dca70e7bb9d" id="r_aec022d03c5ed920153ee4dca70e7bb9d"><td class="memTemplParams" colspan="2">template&lt;StatProvider Actor, StatProvider Target, RandomNumberGenerator Rng&gt; </td></tr>
+<tr class="memitem:aec022d03c5ed920153ee4dca70e7bb9d"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="structrpg__os_1_1CheckResult.html">CheckResult</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacerpg__os.html#aec022d03c5ed920153ee4dca70e7bb9d">rpg_os::resolveResistanceCheck</a> (const Actor &amp;actor, const Target &amp;target, const <a class="el" href="structrpg__os_1_1CheckRecipe.html">CheckRecipe</a> &amp;recipe, const <a class="el" href="structrpg__os_1_1CheckParams.html">CheckParams</a> &amp;params, Rng &amp;rng)</td></tr>
+<tr class="separator:aec022d03c5ed920153ee4dca70e7bb9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac882be2ad6ea807bb910557771569803" id="r_ac882be2ad6ea807bb910557771569803"><td class="memTemplParams" colspan="2">template&lt;StatProvider Actor, StatProvider Target, RandomNumberGenerator Rng&gt; </td></tr>
+<tr class="memitem:ac882be2ad6ea807bb910557771569803"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="structrpg__os_1_1CheckResult.html">CheckResult</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacerpg__os.html#ac882be2ad6ea807bb910557771569803">rpg_os::resolveCheck</a> (const Actor &amp;actor, const Target &amp;target, const <a class="el" href="structrpg__os_1_1CheckRecipe.html">CheckRecipe</a> &amp;recipe, const <a class="el" href="structrpg__os_1_1CheckParams.html">CheckParams</a> &amp;params, Rng &amp;rng)</td></tr>
+<tr class="separator:ac882be2ad6ea807bb910557771569803"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Shared check resolution algorithms. </p>
-<p>The check algorithms — additive d20, roll-under d20, the DSA (The Dark Eye) 3d20 pool check, attack-vs-defense, and the Basic Roleplaying percentile (d100 roll-under, opposed combat, and resistance) — live here as templates over a <code>StatProvider</code> and an <code>RandomNumberGenerator</code>. Both modes call the very same functions:</p><ul>
-<li>generated specific-mode code calls them directly with string literals for every parameter, so the whole computation is inlined and dead branches fold away (zero dynamic allocation in the hot path);</li>
-<li>the universal engine feeds them through <code>CheckConfig</code> (owning <code>std::string</code>) via the <code>resolveCheck</code> dispatcher.</li>
-</ul>
-<dl class="section user"><dt>Why share the algorithms between modes at all?</dt><dd>A "check" is the heart of a tabletop ruleset, and the two modes must agree on its outcome — the parity test exists precisely to prove that the universal engine and the generated code roll the same dice, apply the same criticals, and report the same margins. Writing the algorithms once, as templates, is the only way to get that agreement without duplicating the rules logic (and the risk of a copy drifting).</dd></dl>
-<dl class="section user"><dt>Why templates with <code>std::string_view</code> parameters?</dt><dd>The universal mode passes owning <code>std::string</code> data (from the ruleset) and the specific mode passes compile-time string literals. Templating on the <code>StatProvider</code> and taking <code>std::string_view</code> for every parameter means the same source serves both: for the specific mode the compiler can see the exact stat ids at compile time and fold the whole check into a few instructions. </dd></dl>
+<div class="textblock"><p>Generic, data-driven check resolution. </p>
+<p>A "check" is the heart of a tabletop ruleset: the engine must roll some dice and decide success, margins, and criticals. The engine deliberately knows <b>no ruleset-specific mechanisms</b> — there is no "D&amp;D roll" or "The Dark Eye talent check" anywhere in this header. Instead a check is described entirely by a <code>CheckRecipe:</code> which dice to roll, how to derive the reference value the roll is compared against, which way to compare, how to grade criticals, and how difficulty parameters are applied.</p>
+<p>The universal engine interprets the recipe at runtime (loaded from the ruleset JSON), and the generated specific-mode code calls the very same <code>resolveCheck</code> with a <code>constexpr</code> recipe, so the compiler folds the whole check into a few instructions. Adding a new game system — including one with a new combination of dice, comparison, and grading — requires only a new JSON recipe, never a change to this (or any other universal) code. </p>
 
 <p class="definition">Definition in file <a class="el" href="checks_8hpp_source.html">checks.hpp</a>.</p>
 </div></div><!-- contents -->

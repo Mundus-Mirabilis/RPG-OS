@@ -132,8 +132,8 @@ $(document).ready(function(){initNavTree('structrpg__os_1_1ResourcePool.html',''
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a21ab85ffe385e1ad958c8d25f2af2595" id="r_a21ab85ffe385e1ad958c8d25f2af2595"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrpg__os_1_1ResourcePool.html#a21ab85ffe385e1ad958c8d25f2af2595">modify</a> (int32_t delta) noexcept</td></tr>
-<tr class="separator:a21ab85ffe385e1ad958c8d25f2af2595"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3038837e8f4a53710617f74284d637d" id="r_af3038837e8f4a53710617f74284d637d"><td class="memItemLeft" align="right" valign="top">constexpr int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrpg__os_1_1ResourcePool.html#af3038837e8f4a53710617f74284d637d">modify</a> (int32_t delta) noexcept</td></tr>
+<tr class="separator:af3038837e8f4a53710617f74284d637d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -150,8 +150,8 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="entity_8hpp_source.html#l00043">43</a> of file <a class="el" href="entity_8hpp_source.html">entity.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a21ab85ffe385e1ad958c8d25f2af2595" name="a21ab85ffe385e1ad958c8d25f2af2595"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a21ab85ffe385e1ad958c8d25f2af2595">&#9670;&#160;</a></span>modify()</h2>
+<a id="af3038837e8f4a53710617f74284d637d" name="af3038837e8f4a53710617f74284d637d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3038837e8f4a53710617f74284d637d">&#9670;&#160;</a></span>modify()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -160,7 +160,7 @@ Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int32_t rpg_os::ResourcePool::modify </td>
+          <td class="memname">constexpr int32_t rpg_os::ResourcePool::modify </td>
           <td>(</td>
           <td class="paramtype">int32_t&#160;</td>
           <td class="paramname"><em>delta</em></td><td>)</td>
@@ -169,15 +169,15 @@ Public Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Applies <code>delta</code> and clamps into [min, max]. Returns the amount actually applied (callers can detect overkill or overheal). The <code>noexcept</code> reflects that this is pure integer arithmetic with no allocation. </p>
+<p>Applies <code>delta</code> and clamps into [min, max]. Returns the amount actually applied (callers can detect overkill or overheal). The <code>noexcept</code> reflects that this is pure integer arithmetic with no allocation; the <code>constexpr</code> lets the compiler fold constant pool arithmetic. </p>
 
-<p class="definition">Definition at line <a class="el" href="entity_8hpp_source.html#l00051">51</a> of file <a class="el" href="entity_8hpp_source.html">entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="entity_8hpp_source.html#l00052">52</a> of file <a class="el" href="entity_8hpp_source.html">entity.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="math_8hpp_source.html#l00084">rpg_os::math::clampInt()</a>, <a class="el" href="entity_8hpp_source.html#l00044">current</a>, <a class="el" href="entity_8hpp_source.html#l00046">max</a>, and <a class="el" href="entity_8hpp_source.html#l00045">min</a>.</p>
+<p class="reference">References <a class="el" href="math_8hpp_source.html#l00111">rpg_os::math::clampInt()</a>, <a class="el" href="entity_8hpp_source.html#l00044">current</a>, <a class="el" href="entity_8hpp_source.html#l00046">max</a>, and <a class="el" href="entity_8hpp_source.html#l00045">min</a>.</p>
 
 </div>
 </div>
@@ -196,7 +196,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="entity_8hpp_source.html#l00044">44</a> of file <a class="el" href="entity_8hpp_source.html">entity.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="entity_8hpp_source.html#l00051">modify()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="entity_8hpp_source.html#l00052">modify()</a>.</p>
 
 </div>
 </div>
@@ -214,7 +214,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="entity_8hpp_source.html#l00046">46</a> of file <a class="el" href="entity_8hpp_source.html">entity.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="entity_8hpp_source.html#l00051">modify()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="entity_8hpp_source.html#l00052">modify()</a>.</p>
 
 </div>
 </div>
@@ -232,7 +232,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="entity_8hpp_source.html#l00045">45</a> of file <a class="el" href="entity_8hpp_source.html">entity.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="entity_8hpp_source.html#l00051">modify()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="entity_8hpp_source.html#l00052">modify()</a>.</p>
 
 </div>
 </div>

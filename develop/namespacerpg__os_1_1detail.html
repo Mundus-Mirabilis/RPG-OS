@@ -128,13 +128,12 @@ $(document).ready(function(){initNavTree('namespacerpg__os_1_1detail.html',''); 
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a949169c3f54b5825c5cda5d545f8f6e9" id="r_a949169c3f54b5825c5cda5d545f8f6e9"><td class="memTemplParams" colspan="2">template&lt;RandomNumberGenerator Rng&gt; </td></tr>
-<tr class="memitem:a949169c3f54b5825c5cda5d545f8f6e9"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacerpg__os_1_1detail.html#a949169c3f54b5825c5cda5d545f8f6e9">rollDie</a> (int sides, Rng &amp;rng)</td></tr>
-<tr class="separator:a949169c3f54b5825c5cda5d545f8f6e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a858c36e0d13cf3dd47daaceafb63b2e4" id="r_a858c36e0d13cf3dd47daaceafb63b2e4"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerpg__os_1_1detail.html#a858c36e0d13cf3dd47daaceafb63b2e4">processId</a> () noexcept</td></tr>
-<tr class="separator:a858c36e0d13cf3dd47daaceafb63b2e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a769c90230e3850b1a2ae06b3f7be17a7" id="r_a769c90230e3850b1a2ae06b3f7be17a7"><td class="memItemLeft" align="right" valign="top">std::array&lt; uint32_t, 8 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerpg__os_1_1detail.html#a769c90230e3850b1a2ae06b3f7be17a7">entropyWords</a> () noexcept</td></tr>
-<tr class="separator:a769c90230e3850b1a2ae06b3f7be17a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e9f2d36f9bbe8af6826ca5b2a0a1932" id="r_a8e9f2d36f9bbe8af6826ca5b2a0a1932"><td class="memTemplParams" colspan="2">template&lt;RandomNumberGenerator Rng&gt; </td></tr>
+<tr class="memitem:a8e9f2d36f9bbe8af6826ca5b2a0a1932"><td class="memTemplItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacerpg__os_1_1detail.html#a8e9f2d36f9bbe8af6826ca5b2a0a1932">rollDie</a> (int sides, Rng &amp;rng)</td></tr>
+<tr class="separator:a8e9f2d36f9bbe8af6826ca5b2a0a1932"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe51285921020775936aeeed9cf1b57e" id="r_abe51285921020775936aeeed9cf1b57e"><td class="memItemLeft" align="right" valign="top">constexpr int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerpg__os_1_1detail.html#abe51285921020775936aeeed9cf1b57e">scaleByDifficulty</a> (int32_t value, <a class="el" href="namespacerpg__os.html#a5d0f76e637716d8f9bedca406ff39fe6">DifficultyScale</a> scale) noexcept</td></tr>
+<tr class="memdesc:abe51285921020775936aeeed9cf1b57e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies a multiplicative difficulty scale to a reference value.  <br /></td></tr>
+<tr class="separator:abe51285921020775936aeeed9cf1b57e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49b71459ad1cd47e7238a85092c6163f" id="r_a49b71459ad1cd47e7238a85092c6163f"><td class="memTemplParams" colspan="2">template&lt;RandomNumberGenerator Rng&gt; </td></tr>
 <tr class="memitem:a49b71459ad1cd47e7238a85092c6163f"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacerpg__os_1_1detail.html#a49b71459ad1cd47e7238a85092c6163f">attackOnce</a> (<a class="el" href="classrpg__os_1_1RulesetEngine.html">RulesetEngine</a> &amp;engine, <a class="el" href="classrpg__os_1_1DynamicEntity.html">DynamicEntity</a> &amp;attacker, const <a class="el" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a> &amp;damage, <a class="el" href="classrpg__os_1_1DynamicEntity.html">DynamicEntity</a> &amp;defender, std::string_view checkTypeId, std::string_view hpResourceId, Rng &amp;rng)</td></tr>
 <tr class="separator:a49b71459ad1cd47e7238a85092c6163f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -200,79 +199,16 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 <p>One combatant's action: resolves the attack check against the defender and, on a hit, rolls and applies the damage through the event pipeline. Returns true when the defender is reduced to 0 (or below) hit points.</p>
 <dl class="section user"><dt>Why keep this in a detail namespace?</dt><dd>It is a single round of a fight — meaningful only inside the loop below. Hiding it in <code>detail</code> keeps the public surface of the header to the reusable entry points (<a class="el" href="namespacerpg__os.html#adacf6091542317212a714e913c4badb1">makeCombatantSpec</a>, <a class="el" href="namespacerpg__os.html#a4a210e0aabb993a0723ab42ee2760ed2">runFight</a>) while still making the loop readable. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="combat_8hpp_source.html#l00221">221</a> of file <a class="el" href="combat_8hpp_source.html">combat.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="combat_8hpp_source.html#l00220">220</a> of file <a class="el" href="combat_8hpp_source.html">combat.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00246">rpg_os::RulesetEngine::applyDamage()</a>, <a class="el" href="engine_8hpp_source.html#l00182">rpg_os::RulesetEngine::executeCheck()</a>, <a class="el" href="types_8hpp_source.html#l00080">rpg_os::CheckResult::isSuccess</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00149">rpg_os::DynamicEntity::resource()</a>, and <a class="el" href="dice__engine_8hpp_source.html#l00216">rpg_os::DiceExpression::rollSum()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00256">rpg_os::RulesetEngine::applyDamage()</a>, <a class="el" href="engine_8hpp_source.html#l00182">rpg_os::RulesetEngine::executeCheck()</a>, <a class="el" href="types_8hpp_source.html#l00080">rpg_os::CheckResult::isSuccess</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00149">rpg_os::DynamicEntity::resource()</a>, and <a class="el" href="dice__engine_8hpp_source.html#l00194">rpg_os::DiceExpression::rollSum()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00247">rpg_os::runFight()</a>.</p>
-
-</div>
-</div>
-<a id="a769c90230e3850b1a2ae06b3f7be17a7" name="a769c90230e3850b1a2ae06b3f7be17a7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a769c90230e3850b1a2ae06b3f7be17a7">&#9670;&#160;</a></span>entropyWords()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::array&lt; uint32_t, 8 &gt; rpg_os::detail::entropyWords </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Collects 8 entropy words from the OS random device (when available), mixed with the high-resolution clock, the process id and an ASLR-random stack address.</p>
-<dl class="section user"><dt>Why mix several sources?</dt><dd><code>std::random_device</code> is <em>not</em> guaranteed to be truly random — on some implementations (notably MinGW) it is a deterministic PRNG. Mixing in the clock, the stack address (randomised by ASLR) and the process id keeps the seed genuinely unpredictable even where the random device is weak, while the try/catch means a missing device degrades to "still varied" instead of aborting. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00076">76</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
-
-<p class="reference">References <a class="el" href="dice__engine_8hpp_source.html#l00055">processId()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="dice__engine_8hpp_source.html#l00138">rpg_os::DefaultRandom::DefaultRandom()</a>, and <a class="el" href="dice__engine_8hpp_source.html#l00108">rpg_os::randomSeed()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00246">rpg_os::runFight()</a>.</p>
 
 </div>
 </div>
-<a id="a858c36e0d13cf3dd47daaceafb63b2e4" name="a858c36e0d13cf3dd47daaceafb63b2e4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a858c36e0d13cf3dd47daaceafb63b2e4">&#9670;&#160;</a></span>processId()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint32_t rpg_os::detail::processId </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>The process id, used as one entropy source (0 when unavailable). Kept behind platform guards so the entropy mix below works on Windows, POSIX, and exotic targets alike — a missing process id just weakens entropy slightly, it never breaks the build. </p>
-
-<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00055">55</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="dice__engine_8hpp_source.html#l00076">entropyWords()</a>.</p>
-
-</div>
-</div>
-<a id="a949169c3f54b5825c5cda5d545f8f6e9" name="a949169c3f54b5825c5cda5d545f8f6e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a949169c3f54b5825c5cda5d545f8f6e9">&#9670;&#160;</a></span>rollDie()</h2>
+<a id="a8e9f2d36f9bbe8af6826ca5b2a0a1932" name="a8e9f2d36f9bbe8af6826ca5b2a0a1932"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e9f2d36f9bbe8af6826ca5b2a0a1932">&#9670;&#160;</a></span>rollDie()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -283,7 +219,7 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int rpg_os::detail::rollDie </td>
+          <td class="memname">constexpr int rpg_os::detail::rollDie </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>sides</em>, </td>
@@ -302,14 +238,57 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Rolls a single die of <code>sides</code> (a shared primitive used by every resolution; the recipe decides how many times it is called). </p>
+
+<p class="definition">Definition at line <a class="el" href="checks_8hpp_source.html#l00241">241</a> of file <a class="el" href="checks_8hpp_source.html">checks.hpp</a>.</p>
+
+</div>
+</div>
+<a id="abe51285921020775936aeeed9cf1b57e" name="abe51285921020775936aeeed9cf1b57e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe51285921020775936aeeed9cf1b57e">&#9670;&#160;</a></span>scaleByDifficulty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr int32_t rpg_os::detail::scaleByDifficulty </td>
+          <td>(</td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacerpg__os.html#a5d0f76e637716d8f9bedca406ff39fe6">DifficultyScale</a>&#160;</td>
+          <td class="paramname"><em>scale</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="checks_8hpp_source.html#l00190">190</a> of file <a class="el" href="checks_8hpp_source.html">checks.hpp</a>.</p>
+<p>Applies a multiplicative difficulty scale to a reference value. </p>
 
-<p class="reference">Referenced by <a class="el" href="checks_8hpp_source.html#l00356">rpg_os::resolveAttackVsDefense()</a>, <a class="el" href="checks_8hpp_source.html#l00434">rpg_os::resolveOpposedRollUnderD100()</a>, <a class="el" href="checks_8hpp_source.html#l00468">rpg_os::resolveResistanceRoll()</a>, <a class="el" href="checks_8hpp_source.html#l00399">rpg_os::resolveRollUnderD100()</a>, <a class="el" href="checks_8hpp_source.html#l00245">rpg_os::resolveRollUnderD20()</a>, and <a class="el" href="checks_8hpp_source.html#l00297">rpg_os::resolveTripleRollUnderPool()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="checks_8hpp_source.html#l00246">246</a> of file <a class="el" href="checks_8hpp_source.html">checks.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="namespacerpg__os.html#a5d0f76e637716d8f9bedca406ff39fe6a429ee94cd13d541a0d434e93c798ac4c">rpg_os::Difficult</a>, and <a class="el" href="namespacerpg__os.html#a5d0f76e637716d8f9bedca406ff39fe6a7f943921724d63dc0ac9c6febf99fa88">rpg_os::Easy</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="checks_8hpp_source.html#l00268">rpg_os::resolveThresholdCheck()</a>.</p>
 
 </div>
 </div>

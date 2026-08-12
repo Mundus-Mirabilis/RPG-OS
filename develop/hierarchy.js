@@ -1,11 +1,12 @@
 var hierarchy =
 [
+    [ "rpg_os::RulesetEngine::AfflictionResult", "structrpg__os_1_1RulesetEngine_1_1AfflictionResult.html", null ],
     [ "rpg_os::AttributeDef", "structrpg__os_1_1AttributeDef.html", null ],
     [ "rpg_os::generated::brp_ugc::Character", "classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html", null ],
     [ "rpg_os::generated::dnd5e::Character", "classrpg__os_1_1generated_1_1dnd5e_1_1Character.html", null ],
     [ "rpg_os::generated::tde5e::Character", "classrpg__os_1_1generated_1_1tde5e_1_1Character.html", null ],
-    [ "rpg_os::CheckConfig", "structrpg__os_1_1CheckConfig.html", null ],
     [ "rpg_os::CheckParams", "structrpg__os_1_1CheckParams.html", null ],
+    [ "rpg_os::CheckRecipe", "structrpg__os_1_1CheckRecipe.html", null ],
     [ "rpg_os::CheckResolver", "classrpg__os_1_1CheckResolver.html", null ],
     [ "rpg_os::CheckResult", "structrpg__os_1_1CheckResult.html", null ],
     [ "rpg_os::CheckTypeDef", "structrpg__os_1_1CheckTypeDef.html", null ],
@@ -36,5 +37,6 @@ var hierarchy =
     [ "rpg_os::RulesetEngine", "classrpg__os_1_1RulesetEngine.html", null ],
     [ "rpg_os::RulesetLoader", "classrpg__os_1_1RulesetLoader.html", null ],
     [ "ScriptedRng", "structScriptedRng.html", null ],
-    [ "rpg_os::SkillDef", "structrpg__os_1_1SkillDef.html", null ]
+    [ "rpg_os::SkillDef", "structrpg__os_1_1SkillDef.html", null ],
+    [ "rpg_os::RulesetEngine::SpellResult", "structrpg__os_1_1RulesetEngine_1_1SpellResult.html", null ]
 ];

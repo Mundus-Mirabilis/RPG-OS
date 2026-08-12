@@ -162,8 +162,8 @@ Namespaces</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Check resolver (universal mode). </p>
-<p>A thin runtime layer over the shared algorithms in <code><a class="el" href="checks_8hpp.html" title="Shared check resolution algorithms.">core/checks.hpp</a></code>: it looks up a named <code>check_types</code> config in the ruleset and dispatches through <code>resolveCheck</code>. Specific-mode generated code calls the algorithm templates directly instead, so no work is duplicated.</p>
-<dl class="section user"><dt>Why a separate, near-empty class?</dt><dd>Keeping the name -&gt; <code>CheckConfig</code> lookup separate from the engine facade gives the universal mode a tiny, independently testable seam: it answers exactly "given a ruleset and a check name, resolve this check" and nothing more. The engine composes it with entity creation, damage, and events. </dd></dl>
+<p>A thin runtime layer over the generic resolver in <code><a class="el" href="checks_8hpp.html" title="Generic, data-driven check resolution.">core/checks.hpp</a></code>: it looks up a named <code>check_types</code> recipe in the ruleset and dispatches through <code>resolveCheck</code>. Specific-mode generated code calls <code>resolveCheck</code> with a <code>constexpr</code> recipe directly, so no work is duplicated.</p>
+<dl class="section user"><dt>Why a separate, near-empty class?</dt><dd>Keeping the name -&gt; <code>CheckRecipe</code> lookup separate from the engine facade gives the universal mode a tiny, independently testable seam: it answers exactly "given a ruleset and a check name, resolve this check" and nothing more. The engine composes it with entity creation, damage, and events. </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="check__resolver_8hpp_source.html">check_resolver.hpp</a>.</p>
 </div></div><!-- contents -->

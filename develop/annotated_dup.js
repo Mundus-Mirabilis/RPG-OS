@@ -13,8 +13,8 @@ var annotated_dup =
         ] ]
       ] ],
       [ "AttributeDef", "structrpg__os_1_1AttributeDef.html", "structrpg__os_1_1AttributeDef" ],
-      [ "CheckConfig", "structrpg__os_1_1CheckConfig.html", "structrpg__os_1_1CheckConfig" ],
       [ "CheckParams", "structrpg__os_1_1CheckParams.html", "structrpg__os_1_1CheckParams" ],
+      [ "CheckRecipe", "structrpg__os_1_1CheckRecipe.html", "structrpg__os_1_1CheckRecipe" ],
       [ "CheckResolver", "classrpg__os_1_1CheckResolver.html", "classrpg__os_1_1CheckResolver" ],
       [ "CheckResult", "structrpg__os_1_1CheckResult.html", "structrpg__os_1_1CheckResult" ],
       [ "CheckTypeDef", "structrpg__os_1_1CheckTypeDef.html", "structrpg__os_1_1CheckTypeDef" ],

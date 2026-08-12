@@ -1,11 +1,11 @@
 var searchData=
 [
-  ['bargain_0',['bargain',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#afbeff850378b0947abfb56926451ae15',1,'rpg_os::generated::brp_ugc::Character']]],
+  ['bargain_0',['bargain',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a0089924d7b2564c04b0c64ee32626379',1,'rpg_os::generated::brp_ugc::Character']]],
   ['baseattribute_1',['baseAttribute',['../classrpg__os_1_1DynamicEntity.html#a961fee4be5d65b78f04e46984ae4af2d',1,'rpg_os::DynamicEntity']]],
   ['basefactor_2',['baseFactor',['../classrpg__os_1_1CostTable.html#a0f4776f41682e3e9e3f57e7939edf3ff',1,'rpg_os::CostTable']]],
-  ['bodycontrol_3',['bodyControl',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a838ddd51c512f60ab5aa53df4c834591',1,'rpg_os::generated::tde5e::Character']]],
-  ['bonusstats_4',['bonusStats',['../structrpg__os_1_1CheckConfig.html#afe04f92d40080cd8fbd16bab1cb937ec',1,'rpg_os::CheckConfig']]],
-  ['brawl_5',['brawl',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a4b097801327ebefad81d5c16b6b0c798',1,'rpg_os::generated::brp_ugc::Character']]],
+  ['bodycontrol_3',['bodyControl',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a0c77df7cba88cb70623176331023904d',1,'rpg_os::generated::tde5e::Character']]],
+  ['bonusstats_4',['bonusStats',['../structrpg__os_1_1CheckRecipe.html#a6e261a4710dcf0d242f270ec6bbdf390',1,'rpg_os::CheckRecipe']]],
+  ['brawl_5',['brawl',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a78cef3ed5cb4ee62f7f0b8d74434f49e',1,'rpg_os::generated::brp_ugc::Character']]],
   ['brp_5fugc_5fstatic_2ehpp_6',['brp_ugc_static.hpp',['../brp__ugc__static_8hpp.html',1,'']]],
   ['brpcheckapp_7',['brpCheckApp',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a8ee0b0c8187e5dc4e716f5e92c75b951',1,'rpg_os::generated::brp_ugc::Character']]],
   ['brpcheckcon_8',['brpCheckCon',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a3ca08049d6c3adcaef74fb201ec94a0e',1,'rpg_os::generated::brp_ugc::Character']]],

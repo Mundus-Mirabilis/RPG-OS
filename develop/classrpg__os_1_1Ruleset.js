@@ -6,6 +6,8 @@ var classrpg__os_1_1Ruleset =
     [ "findDerivedStat", "classrpg__os_1_1Ruleset.html#a8cb17af1583cd349543ffd1cd809bf0a", null ],
     [ "findSkill", "classrpg__os_1_1Ruleset.html#a30a91a49f1512caa5f7572e019e67750", null ],
     [ "hasStat", "classrpg__os_1_1Ruleset.html#a9f26155d3756c67feb9fb7b47e97efbd", null ],
+    [ "isCondition", "classrpg__os_1_1Ruleset.html#a08c80acda537e3a260512fc00e34e723", null ],
+    [ "isResourcePool", "classrpg__os_1_1Ruleset.html#a9b7b919480aee8c24e79fa5648c4fa52", null ],
     [ "attributes", "classrpg__os_1_1Ruleset.html#abbb6a9f154f5aace74e3d9a351ccc38e", null ],
     [ "checkTypes", "classrpg__os_1_1Ruleset.html#a31c488bcc1568b4f7affbcc6aa3f045f", null ],
     [ "comment", "classrpg__os_1_1Ruleset.html#adba702cfb79e893ef7f199f3ab7be76a", null ],
@@ -21,5 +23,6 @@ var classrpg__os_1_1Ruleset =
     [ "resourcePools", "classrpg__os_1_1Ruleset.html#ac6d7b06fb3418d0fef60e9caa9fe1fcb", null ],
     [ "schemaVersion", "classrpg__os_1_1Ruleset.html#a69c1f61072069d159a74b90f00cd60ce", null ],
     [ "skills", "classrpg__os_1_1Ruleset.html#afa95030d4529acf1498aef09ca86f539", null ],
-    [ "source", "classrpg__os_1_1Ruleset.html#ab17ece19ddc3158a5f26ce132d477a82", null ]
+    [ "source", "classrpg__os_1_1Ruleset.html#ab17ece19ddc3158a5f26ce132d477a82", null ],
+    [ "spellResource", "classrpg__os_1_1Ruleset.html#a24728e74acc563deb82aea5a5ba2ddab", null ]
 ];
