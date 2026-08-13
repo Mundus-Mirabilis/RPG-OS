@@ -15,6 +15,7 @@ var annotated_dup =
       [ "ActiveEffect", "structrpg__os_1_1ActiveEffect.html", "structrpg__os_1_1ActiveEffect" ],
       [ "Advancement", "classrpg__os_1_1Advancement.html", "classrpg__os_1_1Advancement" ],
       [ "AttributeDef", "structrpg__os_1_1AttributeDef.html", "structrpg__os_1_1AttributeDef" ],
+      [ "BonusDie", "structrpg__os_1_1BonusDie.html", "structrpg__os_1_1BonusDie" ],
       [ "CheckParams", "structrpg__os_1_1CheckParams.html", "structrpg__os_1_1CheckParams" ],
       [ "CheckRecipe", "structrpg__os_1_1CheckRecipe.html", "structrpg__os_1_1CheckRecipe" ],
       [ "CheckResolver", "classrpg__os_1_1CheckResolver.html", "classrpg__os_1_1CheckResolver" ],
@@ -49,6 +50,7 @@ var annotated_dup =
       [ "Modifier", "structrpg__os_1_1Modifier.html", "structrpg__os_1_1Modifier" ],
       [ "Money", "classrpg__os_1_1Money.html", "classrpg__os_1_1Money" ],
       [ "NullStatProvider", "structrpg__os_1_1NullStatProvider.html", "structrpg__os_1_1NullStatProvider" ],
+      [ "OngoingEffect", "structrpg__os_1_1OngoingEffect.html", "structrpg__os_1_1OngoingEffect" ],
       [ "ResourcePool", "structrpg__os_1_1ResourcePool.html", "structrpg__os_1_1ResourcePool" ],
       [ "ResourcePoolDef", "structrpg__os_1_1ResourcePoolDef.html", "structrpg__os_1_1ResourcePoolDef" ],
       [ "Ruleset", "classrpg__os_1_1Ruleset.html", "classrpg__os_1_1Ruleset" ],
@@ -57,6 +59,7 @@ var annotated_dup =
       [ "SkillDef", "structrpg__os_1_1SkillDef.html", "structrpg__os_1_1SkillDef" ],
       [ "Spellbook", "classrpg__os_1_1Spellbook.html", "classrpg__os_1_1Spellbook" ],
       [ "SpellcastingConfig", "structrpg__os_1_1SpellcastingConfig.html", "structrpg__os_1_1SpellcastingConfig" ],
+      [ "StatBonus", "structrpg__os_1_1StatBonus.html", "structrpg__os_1_1StatBonus" ],
       [ "Weight", "structrpg__os_1_1Weight.html", "structrpg__os_1_1Weight" ],
       [ "WorldState", "classrpg__os_1_1WorldState.html", "classrpg__os_1_1WorldState" ]
     ] ],

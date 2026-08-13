@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['gamesession_0',['GameSession',['../classrpg__os_1_1GameSession.html',1,'rpg_os']]]
+  ['fightoutcome_0',['FightOutcome',['../structrpg__os_1_1FightOutcome.html',1,'rpg_os']]]
 ];

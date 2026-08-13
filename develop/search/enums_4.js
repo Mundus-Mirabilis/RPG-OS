@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['grading_0',['Grading',['../namespacerpg__os.html#a77f98d725fb2409a3e02d40f5772f3bc',1,'rpg_os']]]
+  ['eventtype_0',['EventType',['../namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18',1,'rpg_os']]]
 ];

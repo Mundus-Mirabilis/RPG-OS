@@ -136,6 +136,7 @@ $(document).ready(function(){initNavTree('test__bookkeeping_8cpp.html',''); init
 <code>#include &lt;<a class="el" href="inventory_8hpp_source.html">rpg_os/core/inventory.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="money_8hpp_source.html">rpg_os/core/money.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="spellbook_8hpp_source.html">rpg_os/core/spellbook.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="combat_8hpp_source.html">rpg_os/universal/combat.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="engine_8hpp_source.html">rpg_os/universal/engine.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="game__session_8hpp_source.html">rpg_os/universal/game_session.hpp</a>&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
@@ -157,6 +158,16 @@ Functions</h2></td></tr>
 <tr class="separator:a30664635869f131657af3d8e8422f25a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa5f1da8af969582a87d21569ba4c5f8e" id="r_aa5f1da8af969582a87d21569ba4c5f8e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__bookkeeping_8cpp.html#aa5f1da8af969582a87d21569ba4c5f8e">TEST_CASE</a> (&quot;bookkeeping: EffectTimeline ticks and expires (phase 0)&quot;)</td></tr>
 <tr class="separator:aa5f1da8af969582a87d21569ba4c5f8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7aa4224cd731365ce6e48da347002f04" id="r_a7aa4224cd731365ce6e48da347002f04"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__bookkeeping_8cpp.html#a7aa4224cd731365ce6e48da347002f04">TEST_CASE</a> (&quot;bookkeeping: stat bonuses tick, expire, and survive serialization (phase 0)&quot;)</td></tr>
+<tr class="separator:a7aa4224cd731365ce6e48da347002f04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd5bea640a8793f87092c5ef2b0b019e" id="r_acd5bea640a8793f87092c5ef2b0b019e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__bookkeeping_8cpp.html#acd5bea640a8793f87092c5ef2b0b019e">TEST_CASE</a> (&quot;bookkeeping: stat_bonus effects apply a temporary stat modifier&quot;)</td></tr>
+<tr class="separator:acd5bea640a8793f87092c5ef2b0b019e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f21b8f232448fbeb9552df85d75104c" id="r_a6f21b8f232448fbeb9552df85d75104c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__bookkeeping_8cpp.html#a6f21b8f232448fbeb9552df85d75104c">TEST_CASE</a> (&quot;bookkeeping: recurring effects re-apply each turn and expire&quot;)</td></tr>
+<tr class="separator:a6f21b8f232448fbeb9552df85d75104c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a318a74e04cb71ddf2d41f51b2040dd80" id="r_a318a74e04cb71ddf2d41f51b2040dd80"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__bookkeeping_8cpp.html#a318a74e04cb71ddf2d41f51b2040dd80">TEST_CASE</a> (&quot;bookkeeping: runTurn fires recurring effects at the declared phase&quot;)</td></tr>
+<tr class="separator:a318a74e04cb71ddf2d41f51b2040dd80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a7300eb324786899641e07c2745a3e9" id="r_a8a7300eb324786899641e07c2745a3e9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__bookkeeping_8cpp.html#a8a7300eb324786899641e07c2745a3e9">TEST_CASE</a> (&quot;bookkeeping: ongoing effects can re-apply a different effect (acid arrow)&quot;)</td></tr>
+<tr class="separator:a8a7300eb324786899641e07c2745a3e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac02c2e3ff4881eb625076d44aa1b09bc" id="r_ac02c2e3ff4881eb625076d44aa1b09bc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__bookkeeping_8cpp.html#ac02c2e3ff4881eb625076d44aa1b09bc">TEST_CASE</a> (&quot;bookkeeping: Spellbook knows, prepares, and tracks slots (phase 0)&quot;)</td></tr>
 <tr class="separator:ac02c2e3ff4881eb625076d44aa1b09bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa5690fa0ce5ea86d182137aabc81b012" id="r_aa5690fa0ce5ea86d182137aabc81b012"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__bookkeeping_8cpp.html#aa5690fa0ce5ea86d182137aabc81b012">TEST_CASE</a> (&quot;bookkeeping: itemPrice parses D&amp;D cost strings (phase 1)&quot;)</td></tr>
@@ -175,6 +186,8 @@ Functions</h2></td></tr>
 <tr class="separator:abfa53869f46ee8e8bdcf3f5df214645c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a776f78c3f22db6d994523430752d70bb" id="r_a776f78c3f22db6d994523430752d70bb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__bookkeeping_8cpp.html#a776f78c3f22db6d994523430752d70bb">TEST_CASE</a> (&quot;bookkeeping: a condition's stat modifiers affect effective stats (phase 3)&quot;)</td></tr>
 <tr class="separator:a776f78c3f22db6d994523430752d70bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdc14548707948dd3697058ab7f82f2c" id="r_afdc14548707948dd3697058ab7f82f2c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__bookkeeping_8cpp.html#afdc14548707948dd3697058ab7f82f2c">TEST_CASE</a> (&quot;bookkeeping: a condition's check modifiers shape the carrier's checks&quot;)</td></tr>
+<tr class="separator:afdc14548707948dd3697058ab7f82f2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0d0aa0700bbf8aac1bf30db924d9843" id="r_ab0d0aa0700bbf8aac1bf30db924d9843"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__bookkeeping_8cpp.html#ab0d0aa0700bbf8aac1bf30db924d9843">TEST_CASE</a> (&quot;bookkeeping: prepared pool casting spends the resource (phase 4)&quot;)</td></tr>
 <tr class="separator:ab0d0aa0700bbf8aac1bf30db924d9843"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b14181d9ee4df789f1ac06f2af60425" id="r_a7b14181d9ee4df789f1ac06f2af60425"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__bookkeeping_8cpp.html#a7b14181d9ee4df789f1ac06f2af60425">TEST_CASE</a> (&quot;bookkeeping: vancian casting spends a spell slot (phase 4)&quot;)</td></tr>
@@ -213,6 +226,56 @@ Functions</h2></td></tr>
 <tr class="separator:a23c51d353fdc9840d10d3b400d7e0296"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea09ce387685b3e1c650583f37b523a6" id="r_aea09ce387685b3e1c650583f37b523a6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__bookkeeping_8cpp.html#aea09ce387685b3e1c650583f37b523a6">TEST_CASE</a> (&quot;bookkeeping: resolveEffects applies resistances and conditions (magic-item style)&quot;)</td></tr>
 <tr class="separator:aea09ce387685b3e1c650583f37b523a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3db1991bc6c07e732ddf52c174a59f91" id="r_a3db1991bc6c07e732ddf52c174a59f91"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__bookkeeping_8cpp.html#a3db1991bc6c07e732ddf52c174a59f91">TEST_CASE</a> (&quot;bookkeeping: D&amp;D condition check modifiers shape attack rolls both ways&quot;)</td></tr>
+<tr class="separator:a3db1991bc6c07e732ddf52c174a59f91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa50718c96aa4417bd087369e0b54b5c" id="r_afa50718c96aa4417bd087369e0b54b5c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__bookkeeping_8cpp.html#afa50718c96aa4417bd087369e0b54b5c">TEST_CASE</a> (&quot;bookkeeping: TDE spell effects resolve through castSpell with the cast QL&quot;)</td></tr>
+<tr class="separator:afa50718c96aa4417bd087369e0b54b5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3857281a43adf1ee7057895e1f4447f9" id="r_a3857281a43adf1ee7057895e1f4447f9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__bookkeeping_8cpp.html#a3857281a43adf1ee7057895e1f4447f9">TEST_CASE</a> (&quot;bookkeeping: TDE buff spells apply stat bonuses via castSpell&quot;)</td></tr>
+<tr class="separator:a3857281a43adf1ee7057895e1f4447f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0e79a2272c57a921f6cca5e7f966004" id="r_af0e79a2272c57a921f6cca5e7f966004"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__bookkeeping_8cpp.html#af0e79a2272c57a921f6cca5e7f966004">TEST_CASE</a> (&quot;bookkeeping: creature traits contribute check and stat modifiers&quot;)</td></tr>
+<tr class="separator:af0e79a2272c57a921f6cca5e7f966004"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fc30a163f926858af404035c6ca34a8" id="r_a0fc30a163f926858af404035c6ca34a8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__bookkeeping_8cpp.html#a0fc30a163f926858af404035c6ca34a8">TEST_CASE</a> (&quot;bookkeeping: migrated D&amp;D creature traits apply via the engine&quot;)</td></tr>
+<tr class="separator:a0fc30a163f926858af404035c6ca34a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac37f59b34ec9600d08dd902e2bcee3e" id="r_aac37f59b34ec9600d08dd902e2bcee3e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__bookkeeping_8cpp.html#aac37f59b34ec9600d08dd902e2bcee3e">TEST_CASE</a> (&quot;bookkeeping: bonus_die effects add a die to matching checks&quot;)</td></tr>
+<tr class="separator:aac37f59b34ec9600d08dd902e2bcee3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d3be20be19a330f22bc462b11e900a8" id="r_a9d3be20be19a330f22bc462b11e900a8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__bookkeeping_8cpp.html#a9d3be20be19a330f22bc462b11e900a8">TEST_CASE</a> (&quot;bookkeeping: auto_fail check modifiers fail matching checks&quot;)</td></tr>
+<tr class="separator:a9d3be20be19a330f22bc462b11e900a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a485d26aaea4584fec2cc63c9e1861ca6" id="r_a485d26aaea4584fec2cc63c9e1861ca6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__bookkeeping_8cpp.html#a485d26aaea4584fec2cc63c9e1861ca6">TEST_CASE</a> (&quot;bookkeeping: creature trait effects apply at creation&quot;)</td></tr>
+<tr class="separator:a485d26aaea4584fec2cc63c9e1861ca6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37f83f2990a2eb3f9dfcc95fea4264c1" id="r_a37f83f2990a2eb3f9dfcc95fea4264c1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__bookkeeping_8cpp.html#a37f83f2990a2eb3f9dfcc95fea4264c1">TEST_CASE</a> (&quot;bookkeeping: bless grants bonus dice on attack and save checks&quot;)</td></tr>
+<tr class="separator:a37f83f2990a2eb3f9dfcc95fea4264c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4916e77f62b6011a68ef3236eba89ed6" id="r_a4916e77f62b6011a68ef3236eba89ed6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__bookkeeping_8cpp.html#a4916e77f62b6011a68ef3236eba89ed6">TEST_CASE</a> (&quot;bookkeeping: paralyzed creatures auto-fail STR and DEX saves&quot;)</td></tr>
+<tr class="separator:a4916e77f62b6011a68ef3236eba89ed6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1006352aafb6bacdf435d769f38ce31e" id="r_a1006352aafb6bacdf435d769f38ce31e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__bookkeeping_8cpp.html#a1006352aafb6bacdf435d769f38ce31e">TEST_CASE</a> (&quot;bookkeeping: oni regeneration heals at the start of its turns&quot;)</td></tr>
+<tr class="separator:a1006352aafb6bacdf435d769f38ce31e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ca3dc91eb56c52a696c21ff65a75809" id="r_a7ca3dc91eb56c52a696c21ff65a75809"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__bookkeeping_8cpp.html#a7ca3dc91eb56c52a696c21ff65a75809">TEST_CASE</a> (&quot;bookkeeping: quality-scaled damage effects add the QL formula (TDE style)&quot;)</td></tr>
+<tr class="separator:a7ca3dc91eb56c52a696c21ff65a75809"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a047df2f16abe7d6fd8bbb2dfb48f39f6" id="r_a047df2f16abe7d6fd8bbb2dfb48f39f6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__bookkeeping_8cpp.html#a047df2f16abe7d6fd8bbb2dfb48f39f6">TEST_CASE</a> (&quot;bookkeeping: quality-scaled condition stacks resolve the QL formula (TDE style)&quot;)</td></tr>
+<tr class="separator:a047df2f16abe7d6fd8bbb2dfb48f39f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af45d4c71f18742bb3482e4853c232c70" id="r_af45d4c71f18742bb3482e4853c232c70"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__bookkeeping_8cpp.html#af45d4c71f18742bb3482e4853c232c70">TEST_CASE</a> (&quot;bookkeeping: roll-under saves express TDE resistance (stat minus QL)&quot;)</td></tr>
+<tr class="separator:af45d4c71f18742bb3482e4853c232c70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15e4e0c6884324ebb34861d522a6931b" id="r_a15e4e0c6884324ebb34861d522a6931b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__bookkeeping_8cpp.html#a15e4e0c6884324ebb34861d522a6931b">TEST_CASE</a> (&quot;bookkeeping: options effects require a caller choice (choice interface)&quot;)</td></tr>
+<tr class="separator:a15e4e0c6884324ebb34861d522a6931b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3115541590846cf009cada9deae1cc43" id="r_a3115541590846cf009cada9deae1cc43"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__bookkeeping_8cpp.html#a3115541590846cf009cada9deae1cc43">TEST_CASE</a> (&quot;bookkeeping: optional option groups are skipped without a choice&quot;)</td></tr>
+<tr class="separator:a3115541590846cf009cada9deae1cc43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49543f129e5cb6500333a6ae1ccb898f" id="r_a49543f129e5cb6500333a6ae1ccb898f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__bookkeeping_8cpp.html#a49543f129e5cb6500333a6ae1ccb898f">TEST_CASE</a> (&quot;bookkeeping: restrictions are queryable and enforced in castSpell&quot;)</td></tr>
+<tr class="separator:a49543f129e5cb6500333a6ae1ccb898f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a699b0a2282442830afa96cdff127a4aa" id="r_a699b0a2282442830afa96cdff127a4aa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__bookkeeping_8cpp.html#a699b0a2282442830afa96cdff127a4aa">TEST_CASE</a> (&quot;bookkeeping: restrictions come from traits too and block casting&quot;)</td></tr>
+<tr class="separator:a699b0a2282442830afa96cdff127a4aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47197bd3a4e1d26c4bc1c191ae9245a9" id="r_a47197bd3a4e1d26c4bc1c191ae9245a9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__bookkeeping_8cpp.html#a47197bd3a4e1d26c4bc1c191ae9245a9">TEST_CASE</a> (&quot;bookkeeping: capabilities are queryable on traits and conditions&quot;)</td></tr>
+<tr class="separator:a47197bd3a4e1d26c4bc1c191ae9245a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af77a2d75a5790ccf58c61dc24f67443f" id="r_af77a2d75a5790ccf58c61dc24f67443f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__bookkeeping_8cpp.html#af77a2d75a5790ccf58c61dc24f67443f">TEST_CASE</a> (&quot;bookkeeping: attackOnce enforces the attacker's restrictions&quot;)</td></tr>
+<tr class="separator:af77a2d75a5790ccf58c61dc24f67443f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab17daacc0c8cadf8f5bfe7c93c00a1f7" id="r_ab17daacc0c8cadf8f5bfe7c93c00a1f7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__bookkeeping_8cpp.html#ab17daacc0c8cadf8f5bfe7c93c00a1f7">TEST_CASE</a> (&quot;bookkeeping: converted D&amp;D creature traits expose capabilities&quot;)</td></tr>
+<tr class="separator:ab17daacc0c8cadf8f5bfe7c93c00a1f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb7f97e2f3729548ea578e89365fd2be" id="r_acb7f97e2f3729548ea578e89365fd2be"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__bookkeeping_8cpp.html#acb7f97e2f3729548ea578e89365fd2be">TEST_CASE</a> (&quot;bookkeeping: converted regeneration traits heal per amount&quot;)</td></tr>
+<tr class="separator:acb7f97e2f3729548ea578e89365fd2be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e45de05eae8239419af05e82b4ded11" id="r_a2e45de05eae8239419af05e82b4ded11"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__bookkeeping_8cpp.html#a2e45de05eae8239419af05e82b4ded11">TEST_CASE</a> (&quot;bookkeeping: converted D&amp;D creature traits keep their prose&quot;)</td></tr>
+<tr class="separator:a2e45de05eae8239419af05e82b4ded11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac426bfab1e7ba83953c1a94955313e4b" id="r_ac426bfab1e7ba83953c1a94955313e4b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__bookkeeping_8cpp.html#ac426bfab1e7ba83953c1a94955313e4b">TEST_CASE</a> (&quot;bookkeeping: converted creature traits shape checks (magic resistance)&quot;)</td></tr>
+<tr class="separator:ac426bfab1e7ba83953c1a94955313e4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6193907d21e8c22aa38fe137d617073" id="r_ab6193907d21e8c22aa38fe137d617073"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__bookkeeping_8cpp.html#ab6193907d21e8c22aa38fe137d617073">TEST_CASE</a> (&quot;bookkeeping: shipped D&amp;D conditions enforce action restrictions&quot;)</td></tr>
+<tr class="separator:ab6193907d21e8c22aa38fe137d617073"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Tests for the universal bookkeeping layer. </p>
@@ -220,8 +283,30 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition in file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a id="afdc14548707948dd3697058ab7f82f2c" name="afdc14548707948dd3697058ab7f82f2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdc14548707948dd3697058ab7f82f2c">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[1/63]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;bookkeeping: a condition's check modifiers shape the carrier's checks&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00471">471</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01136">rpg_os::RulesetEngine::applyCondition()</a>, <a class="el" href="checks_8hpp_source.html#l00202">rpg_os::CheckParams::difficulty</a>, <a class="el" href="engine_8hpp_source.html#l00362">rpg_os::RulesetEngine::executeCheck()</a>, <a class="el" href="types_8hpp_source.html#l00080">rpg_os::CheckResult::isSuccess</a>, <a class="el" href="engine_8hpp_source.html#l00059">rpg_os::RulesetEngine::loadRulesetFromJson()</a>, <a class="el" href="engine_8hpp_source.html#l01152">rpg_os::RulesetEngine::removeCondition()</a>, <a class="el" href="engine_8hpp_source.html#l01791">rpg_os::RulesetEngine::ruleset()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="dynamic__entity_8hpp_source.html#l00174">rpg_os::DynamicEntity::setBaseAttribute()</a>.</p>
+
+</div>
+</div>
 <a id="a776f78c3f22db6d994523430752d70bb" name="a776f78c3f22db6d994523430752d70bb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a776f78c3f22db6d994523430752d70bb">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[1/32]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a776f78c3f22db6d994523430752d70bb">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[2/63]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -236,14 +321,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00289">289</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00447">447</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00915">rpg_os::RulesetEngine::applyCondition()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00249">rpg_os::DynamicEntity::getEffectiveStat()</a>, <a class="el" href="engine_8hpp_source.html#l00059">rpg_os::RulesetEngine::loadRulesetFromJson()</a>, <a class="el" href="engine_8hpp_source.html#l01355">rpg_os::RulesetEngine::ruleset()</a>, and <a class="el" href="dynamic__entity_8hpp_source.html#l00174">rpg_os::DynamicEntity::setBaseAttribute()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01136">rpg_os::RulesetEngine::applyCondition()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00339">rpg_os::DynamicEntity::getEffectiveStat()</a>, <a class="el" href="engine_8hpp_source.html#l00059">rpg_os::RulesetEngine::loadRulesetFromJson()</a>, <a class="el" href="engine_8hpp_source.html#l01791">rpg_os::RulesetEngine::ruleset()</a>, and <a class="el" href="dynamic__entity_8hpp_source.html#l00174">rpg_os::DynamicEntity::setBaseAttribute()</a>.</p>
 
 </div>
 </div>
 <a id="a9b166dc94f347ab7cdf9cfe52e196522" name="a9b166dc94f347ab7cdf9cfe52e196522"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9b166dc94f347ab7cdf9cfe52e196522">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[2/32]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b166dc94f347ab7cdf9cfe52e196522">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[3/63]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -258,14 +343,102 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00398">398</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00621">621</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00915">rpg_os::RulesetEngine::applyCondition()</a>, <a class="el" href="engine_8hpp_source.html#l00109">rpg_os::RulesetEngine::createEntity()</a>, <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, and <a class="el" href="engine_8hpp_source.html#l01306">rpg_os::RulesetEngine::longRest()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01136">rpg_os::RulesetEngine::applyCondition()</a>, <a class="el" href="engine_8hpp_source.html#l00109">rpg_os::RulesetEngine::createEntity()</a>, <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, and <a class="el" href="engine_8hpp_source.html#l01742">rpg_os::RulesetEngine::longRest()</a>.</p>
+
+</div>
+</div>
+<a id="af77a2d75a5790ccf58c61dc24f67443f" name="af77a2d75a5790ccf58c61dc24f67443f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af77a2d75a5790ccf58c61dc24f67443f">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[4/63]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;bookkeeping: attackOnce enforces the attacker's restrictions&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l01658">1658</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01136">rpg_os::RulesetEngine::applyCondition()</a>, <a class="el" href="combat_8hpp_source.html#l00298">rpg_os::detail::attackOnce()</a>, <a class="el" href="engine_8hpp_source.html#l00150">rpg_os::RulesetEngine::createCreature()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00564">rpg_os::DynamicEntity::loadFromArchetype()</a>, <a class="el" href="engine_8hpp_source.html#l00059">rpg_os::RulesetEngine::loadRulesetFromJson()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00192">rpg_os::DynamicEntity::resource()</a>, <a class="el" href="engine_8hpp_source.html#l01791">rpg_os::RulesetEngine::ruleset()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="dynamic__entity_8hpp_source.html#l00174">rpg_os::DynamicEntity::setBaseAttribute()</a>.</p>
+
+</div>
+</div>
+<a id="a9d3be20be19a330f22bc462b11e900a8" name="a9d3be20be19a330f22bc462b11e900a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d3be20be19a330f22bc462b11e900a8">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[5/63]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;bookkeeping: auto_fail check modifiers fail matching checks&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l01230">1230</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01136">rpg_os::RulesetEngine::applyCondition()</a>, <a class="el" href="checks_8hpp_source.html#l00202">rpg_os::CheckParams::difficulty</a>, <a class="el" href="engine_8hpp_source.html#l00362">rpg_os::RulesetEngine::executeCheck()</a>, <a class="el" href="engine_8hpp_source.html#l00059">rpg_os::RulesetEngine::loadRulesetFromJson()</a>, <a class="el" href="engine_8hpp_source.html#l01791">rpg_os::RulesetEngine::ruleset()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="dynamic__entity_8hpp_source.html#l00174">rpg_os::DynamicEntity::setBaseAttribute()</a>.</p>
+
+</div>
+</div>
+<a id="a37f83f2990a2eb3f9dfcc95fea4264c1" name="a37f83f2990a2eb3f9dfcc95fea4264c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37f83f2990a2eb3f9dfcc95fea4264c1">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[6/63]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;bookkeeping: bless grants bonus dice on attack and save checks&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l01293">1293</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="effects_8hpp_source.html#l00179">rpg_os::EffectTimeline::bonusDice()</a>, <a class="el" href="engine_8hpp_source.html#l00585">rpg_os::RulesetEngine::castSpell()</a>, <a class="el" href="checks_8hpp_source.html#l00202">rpg_os::CheckParams::difficulty</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00401">rpg_os::DynamicEntity::effects()</a>, <a class="el" href="engine_8hpp_source.html#l00362">rpg_os::RulesetEngine::executeCheck()</a>, <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="engine_8hpp_source.html#l01791">rpg_os::RulesetEngine::ruleset()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="dynamic__entity_8hpp_source.html#l00174">rpg_os::DynamicEntity::setBaseAttribute()</a>.</p>
+
+</div>
+</div>
+<a id="aac37f59b34ec9600d08dd902e2bcee3e" name="aac37f59b34ec9600d08dd902e2bcee3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac37f59b34ec9600d08dd902e2bcee3e">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[7/63]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;bookkeeping: bonus_die effects add a die to matching checks&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l01193">1193</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="engine_8hpp_source.html#l01395">rpg_os::RulesetEngine::resolveEffects()</a>, <a class="el" href="engine_8hpp_source.html#l01791">rpg_os::RulesetEngine::ruleset()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="dynamic__entity_8hpp_source.html#l00174">rpg_os::DynamicEntity::setBaseAttribute()</a>.</p>
 
 </div>
 </div>
 <a id="ab816ebab24590bc25c7ff7ddee277658" name="ab816ebab24590bc25c7ff7ddee277658"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab816ebab24590bc25c7ff7ddee277658">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[3/32]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab816ebab24590bc25c7ff7ddee277658">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[8/63]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -280,14 +453,36 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00161">161</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00319">319</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00664">rpg_os::RulesetEngine::buy()</a>, <a class="el" href="engine_8hpp_source.html#l00109">rpg_os::RulesetEngine::createEntity()</a>, <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, and <a class="el" href="engine_8hpp_source.html#l00640">rpg_os::RulesetEngine::pay()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00885">rpg_os::RulesetEngine::buy()</a>, <a class="el" href="engine_8hpp_source.html#l00109">rpg_os::RulesetEngine::createEntity()</a>, <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, and <a class="el" href="engine_8hpp_source.html#l00861">rpg_os::RulesetEngine::pay()</a>.</p>
+
+</div>
+</div>
+<a id="a47197bd3a4e1d26c4bc1c191ae9245a9" name="a47197bd3a4e1d26c4bc1c191ae9245a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47197bd3a4e1d26c4bc1c191ae9245a9">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[9/63]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;bookkeeping: capabilities are queryable on traits and conditions&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l01624">1624</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01136">rpg_os::RulesetEngine::applyCondition()</a>, <a class="el" href="engine_8hpp_source.html#l00150">rpg_os::RulesetEngine::createCreature()</a>, <a class="el" href="engine_8hpp_source.html#l00059">rpg_os::RulesetEngine::loadRulesetFromJson()</a>, and <a class="el" href="engine_8hpp_source.html#l01152">rpg_os::RulesetEngine::removeCondition()</a>.</p>
 
 </div>
 </div>
 <a id="abfa53869f46ee8e8bdcf3f5df214645c" name="abfa53869f46ee8e8bdcf3f5df214645c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abfa53869f46ee8e8bdcf3f5df214645c">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[4/32]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abfa53869f46ee8e8bdcf3f5df214645c">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[10/63]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -318,14 +513,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00262">262</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00420">420</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00915">rpg_os::RulesetEngine::applyCondition()</a>, <a class="el" href="engine_8hpp_source.html#l00109">rpg_os::RulesetEngine::createEntity()</a>, <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="engine_8hpp_source.html#l00931">rpg_os::RulesetEngine::removeCondition()</a>, and <a class="el" href="engine_8hpp_source.html#l00942">rpg_os::RulesetEngine::tickEffects()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01136">rpg_os::RulesetEngine::applyCondition()</a>, <a class="el" href="engine_8hpp_source.html#l00109">rpg_os::RulesetEngine::createEntity()</a>, <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="engine_8hpp_source.html#l01152">rpg_os::RulesetEngine::removeCondition()</a>, and <a class="el" href="engine_8hpp_source.html#l01189">rpg_os::RulesetEngine::tickEffects()</a>.</p>
 
 </div>
 </div>
 <a id="a18ea9a57c1497e6d509d84bdc987f043" name="a18ea9a57c1497e6d509d84bdc987f043"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a18ea9a57c1497e6d509d84bdc987f043">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[5/32]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a18ea9a57c1497e6d509d84bdc987f043">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[11/63]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -340,14 +535,146 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00492">492</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00715">715</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00602">rpg_os::RulesetEngine::addItem()</a>, <a class="el" href="engine_8hpp_source.html#l00796">rpg_os::RulesetEngine::addItemToContainer()</a>, <a class="el" href="engine_8hpp_source.html#l00765">rpg_os::RulesetEngine::carriedWeight()</a>, <a class="el" href="inventory_8hpp_source.html#l00206">rpg_os::Inventory::contentsOf()</a>, <a class="el" href="inventory_8hpp_source.html#l00232">rpg_os::Inventory::count()</a>, <a class="el" href="inventory_8hpp_source.html#l00216">rpg_os::Inventory::countIn()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00401">rpg_os::DynamicEntity::fromJson()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00254">rpg_os::DynamicEntity::inventory()</a>, <a class="el" href="engine_8hpp_source.html#l00059">rpg_os::RulesetEngine::loadRulesetFromJson()</a>, <a class="el" href="engine_8hpp_source.html#l00823">rpg_os::RulesetEngine::removeItemFromContainer()</a>, <a class="el" href="engine_8hpp_source.html#l01355">rpg_os::RulesetEngine::ruleset()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00174">rpg_os::DynamicEntity::setBaseAttribute()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00359">rpg_os::DynamicEntity::toJson()</a>, <a class="el" href="inventory_8hpp_source.html#l00248">rpg_os::Inventory::totalCount()</a>, and <a class="el" href="inventory_8hpp_source.html#l00091">rpg_os::Weight::value</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00823">rpg_os::RulesetEngine::addItem()</a>, <a class="el" href="engine_8hpp_source.html#l01017">rpg_os::RulesetEngine::addItemToContainer()</a>, <a class="el" href="engine_8hpp_source.html#l00986">rpg_os::RulesetEngine::carriedWeight()</a>, <a class="el" href="inventory_8hpp_source.html#l00206">rpg_os::Inventory::contentsOf()</a>, <a class="el" href="inventory_8hpp_source.html#l00232">rpg_os::Inventory::count()</a>, <a class="el" href="inventory_8hpp_source.html#l00216">rpg_os::Inventory::countIn()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00497">rpg_os::DynamicEntity::fromJson()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00345">rpg_os::DynamicEntity::inventory()</a>, <a class="el" href="engine_8hpp_source.html#l00059">rpg_os::RulesetEngine::loadRulesetFromJson()</a>, <a class="el" href="engine_8hpp_source.html#l01044">rpg_os::RulesetEngine::removeItemFromContainer()</a>, <a class="el" href="engine_8hpp_source.html#l01791">rpg_os::RulesetEngine::ruleset()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00174">rpg_os::DynamicEntity::setBaseAttribute()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00450">rpg_os::DynamicEntity::toJson()</a>, <a class="el" href="inventory_8hpp_source.html#l00248">rpg_os::Inventory::totalCount()</a>, and <a class="el" href="inventory_8hpp_source.html#l00091">rpg_os::Weight::value</a>.</p>
+
+</div>
+</div>
+<a id="ac426bfab1e7ba83953c1a94955313e4b" name="ac426bfab1e7ba83953c1a94955313e4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac426bfab1e7ba83953c1a94955313e4b">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[12/63]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;bookkeeping: converted creature traits shape checks (magic resistance)&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l01780">1780</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00150">rpg_os::RulesetEngine::createCreature()</a>, <a class="el" href="checks_8hpp_source.html#l00202">rpg_os::CheckParams::difficulty</a>, <a class="el" href="engine_8hpp_source.html#l00362">rpg_os::RulesetEngine::executeCheck()</a>, <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="engine_8hpp_source.html#l01791">rpg_os::RulesetEngine::ruleset()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="dynamic__entity_8hpp_source.html#l00174">rpg_os::DynamicEntity::setBaseAttribute()</a>.</p>
+
+</div>
+</div>
+<a id="ab17daacc0c8cadf8f5bfe7c93c00a1f7" name="ab17daacc0c8cadf8f5bfe7c93c00a1f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab17daacc0c8cadf8f5bfe7c93c00a1f7">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[13/63]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;bookkeeping: converted D&amp;D creature traits expose capabilities&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l01709">1709</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00150">rpg_os::RulesetEngine::createCreature()</a>, and <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>.</p>
+
+</div>
+</div>
+<a id="a2e45de05eae8239419af05e82b4ded11" name="a2e45de05eae8239419af05e82b4ded11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e45de05eae8239419af05e82b4ded11">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[14/63]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;bookkeeping: converted D&amp;D creature traits keep their prose&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l01763">1763</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00150">rpg_os::RulesetEngine::createCreature()</a>, <a class="el" href="engine_8hpp_source.html#l00498">rpg_os::RulesetEngine::findDataRecord()</a>, and <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>.</p>
+
+</div>
+</div>
+<a id="acb7f97e2f3729548ea578e89365fd2be" name="acb7f97e2f3729548ea578e89365fd2be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb7f97e2f3729548ea578e89365fd2be">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[15/63]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;bookkeeping: converted regeneration traits heal per amount&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l01739">1739</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00150">rpg_os::RulesetEngine::createCreature()</a>, <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="engine_8hpp_source.html#l01206">rpg_os::RulesetEngine::runTurn()</a>, and <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>.</p>
+
+</div>
+</div>
+<a id="a485d26aaea4584fec2cc63c9e1861ca6" name="a485d26aaea4584fec2cc63c9e1861ca6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a485d26aaea4584fec2cc63c9e1861ca6">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[16/63]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;bookkeeping: creature trait effects apply at creation&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l01269">1269</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00150">rpg_os::RulesetEngine::createCreature()</a>, and <a class="el" href="engine_8hpp_source.html#l00059">rpg_os::RulesetEngine::loadRulesetFromJson()</a>.</p>
+
+</div>
+</div>
+<a id="af0e79a2272c57a921f6cca5e7f966004" name="af0e79a2272c57a921f6cca5e7f966004"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0e79a2272c57a921f6cca5e7f966004">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[17/63]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;bookkeeping: creature traits contribute check and stat modifiers&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l01114">1114</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00150">rpg_os::RulesetEngine::createCreature()</a>, <a class="el" href="checks_8hpp_source.html#l00202">rpg_os::CheckParams::difficulty</a>, <a class="el" href="engine_8hpp_source.html#l00362">rpg_os::RulesetEngine::executeCheck()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00497">rpg_os::DynamicEntity::fromJson()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00339">rpg_os::DynamicEntity::getEffectiveStat()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00251">rpg_os::DynamicEntity::hasTrait()</a>, <a class="el" href="engine_8hpp_source.html#l00059">rpg_os::RulesetEngine::loadRulesetFromJson()</a>, <a class="el" href="engine_8hpp_source.html#l01791">rpg_os::RulesetEngine::ruleset()</a>, and <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>.</p>
 
 </div>
 </div>
 <a id="a64306be3387842cc128d7ddd74361bb1" name="a64306be3387842cc128d7ddd74361bb1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a64306be3387842cc128d7ddd74361bb1">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[6/32]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a64306be3387842cc128d7ddd74361bb1">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[18/63]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -362,14 +689,36 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00414">414</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00637">637</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="dynamic__entity_8hpp_source.html#l00324">rpg_os::DynamicEntity::afflictions()</a>, <a class="el" href="engine_8hpp_source.html#l01321">rpg_os::RulesetEngine::applyCurse()</a>, <a class="el" href="engine_8hpp_source.html#l01329">rpg_os::RulesetEngine::cureAffliction()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00223">rpg_os::DynamicEntity::hasCondition()</a>, <a class="el" href="engine_8hpp_source.html#l00059">rpg_os::RulesetEngine::loadRulesetFromJson()</a>, <a class="el" href="engine_8hpp_source.html#l01355">rpg_os::RulesetEngine::ruleset()</a>, and <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>.</p>
+<p class="reference">References <a class="el" href="dynamic__entity_8hpp_source.html#l00415">rpg_os::DynamicEntity::afflictions()</a>, <a class="el" href="engine_8hpp_source.html#l01757">rpg_os::RulesetEngine::applyCurse()</a>, <a class="el" href="engine_8hpp_source.html#l01765">rpg_os::RulesetEngine::cureAffliction()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00223">rpg_os::DynamicEntity::hasCondition()</a>, <a class="el" href="engine_8hpp_source.html#l00059">rpg_os::RulesetEngine::loadRulesetFromJson()</a>, <a class="el" href="engine_8hpp_source.html#l01791">rpg_os::RulesetEngine::ruleset()</a>, and <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>.</p>
+
+</div>
+</div>
+<a id="a3db1991bc6c07e732ddf52c174a59f91" name="a3db1991bc6c07e732ddf52c174a59f91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3db1991bc6c07e732ddf52c174a59f91">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[19/63]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;bookkeeping: D&amp;D condition check modifiers shape attack rolls both ways&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l01009">1009</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01136">rpg_os::RulesetEngine::applyCondition()</a>, <a class="el" href="engine_8hpp_source.html#l00362">rpg_os::RulesetEngine::executeCheck()</a>, <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="engine_8hpp_source.html#l01791">rpg_os::RulesetEngine::ruleset()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="dynamic__entity_8hpp_source.html#l00174">rpg_os::DynamicEntity::setBaseAttribute()</a>.</p>
 
 </div>
 </div>
 <a id="ad6e1eac410ad6ef859042386d2bb3814" name="ad6e1eac410ad6ef859042386d2bb3814"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad6e1eac410ad6ef859042386d2bb3814">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[7/32]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6e1eac410ad6ef859042386d2bb3814">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[20/63]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -384,14 +733,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00240">240</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00398">398</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00602">rpg_os::RulesetEngine::addItem()</a>, <a class="el" href="engine_8hpp_source.html#l00765">rpg_os::RulesetEngine::carriedWeight()</a>, <a class="el" href="engine_8hpp_source.html#l00847">rpg_os::RulesetEngine::carryingCapacity()</a>, <a class="el" href="engine_8hpp_source.html#l00862">rpg_os::RulesetEngine::encumbranceLevel()</a>, <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="engine_8hpp_source.html#l01355">rpg_os::RulesetEngine::ruleset()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00174">rpg_os::DynamicEntity::setBaseAttribute()</a>, and <a class="el" href="inventory_8hpp_source.html#l00091">rpg_os::Weight::value</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00823">rpg_os::RulesetEngine::addItem()</a>, <a class="el" href="engine_8hpp_source.html#l00986">rpg_os::RulesetEngine::carriedWeight()</a>, <a class="el" href="engine_8hpp_source.html#l01068">rpg_os::RulesetEngine::carryingCapacity()</a>, <a class="el" href="engine_8hpp_source.html#l01083">rpg_os::RulesetEngine::encumbranceLevel()</a>, <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="engine_8hpp_source.html#l01791">rpg_os::RulesetEngine::ruleset()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00174">rpg_os::DynamicEntity::setBaseAttribute()</a>, and <a class="el" href="inventory_8hpp_source.html#l00091">rpg_os::Weight::value</a>.</p>
 
 </div>
 </div>
 <a id="a027cf3aafd1cba89ca07d1e0eac3bcb0" name="a027cf3aafd1cba89ca07d1e0eac3bcb0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a027cf3aafd1cba89ca07d1e0eac3bcb0">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[8/32]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a027cf3aafd1cba89ca07d1e0eac3bcb0">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[21/63]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -406,14 +755,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00545">545</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00768">768</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00286">rpg_os::RulesetEngine::applyDamage()</a>, <a class="el" href="engine_8hpp_source.html#l00109">rpg_os::RulesetEngine::createEntity()</a>, <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="engine_8hpp_source.html#l01355">rpg_os::RulesetEngine::ruleset()</a>, and <a class="el" href="engine_8hpp_source.html#l00745">rpg_os::RulesetEngine::unequip()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00463">rpg_os::RulesetEngine::applyDamage()</a>, <a class="el" href="engine_8hpp_source.html#l00109">rpg_os::RulesetEngine::createEntity()</a>, <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="engine_8hpp_source.html#l01791">rpg_os::RulesetEngine::ruleset()</a>, and <a class="el" href="engine_8hpp_source.html#l00966">rpg_os::RulesetEngine::unequip()</a>.</p>
 
 </div>
 </div>
 <a id="aa5f1da8af969582a87d21569ba4c5f8e" name="aa5f1da8af969582a87d21569ba4c5f8e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa5f1da8af969582a87d21569ba4c5f8e">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[9/32]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5f1da8af969582a87d21569ba4c5f8e">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[22/63]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -428,14 +777,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00104">104</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00105">105</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="effects_8hpp_source.html#l00033">rpg_os::EffectTimeline::add()</a>, <a class="el" href="effects_8hpp_source.html#l00076">rpg_os::EffectTimeline::has()</a>, <a class="el" href="effects_8hpp_source.html#l00065">rpg_os::EffectTimeline::stacks()</a>, and <a class="el" href="effects_8hpp_source.html#l00087">rpg_os::EffectTimeline::tick()</a>.</p>
+<p class="reference">References <a class="el" href="effects_8hpp_source.html#l00066">rpg_os::EffectTimeline::add()</a>, <a class="el" href="effects_8hpp_source.html#l00112">rpg_os::EffectTimeline::has()</a>, <a class="el" href="effects_8hpp_source.html#l00101">rpg_os::EffectTimeline::stacks()</a>, and <a class="el" href="effects_8hpp_source.html#l00211">rpg_os::EffectTimeline::tick()</a>.</p>
 
 </div>
 </div>
 <a id="ae675cd1a61ce47012f8fb621ff857f10" name="ae675cd1a61ce47012f8fb621ff857f10"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae675cd1a61ce47012f8fb621ff857f10">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[10/32]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae675cd1a61ce47012f8fb621ff857f10">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[23/63]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -450,14 +799,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00192">192</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00350">350</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00602">rpg_os::RulesetEngine::addItem()</a>, <a class="el" href="engine_8hpp_source.html#l00109">rpg_os::RulesetEngine::createEntity()</a>, <a class="el" href="engine_8hpp_source.html#l00698">rpg_os::RulesetEngine::equip()</a>, <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, and <a class="el" href="engine_8hpp_source.html#l00745">rpg_os::RulesetEngine::unequip()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00823">rpg_os::RulesetEngine::addItem()</a>, <a class="el" href="engine_8hpp_source.html#l00109">rpg_os::RulesetEngine::createEntity()</a>, <a class="el" href="engine_8hpp_source.html#l00919">rpg_os::RulesetEngine::equip()</a>, <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, and <a class="el" href="engine_8hpp_source.html#l00966">rpg_os::RulesetEngine::unequip()</a>.</p>
 
 </div>
 </div>
 <a id="a30664635869f131657af3d8e8422f25a" name="a30664635869f131657af3d8e8422f25a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a30664635869f131657af3d8e8422f25a">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[11/32]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a30664635869f131657af3d8e8422f25a">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[24/63]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -472,14 +821,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00092">92</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00093">93</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="equipment_8hpp_source.html#l00029">rpg_os::Equipment::equip()</a>, <a class="el" href="equipment_8hpp_source.html#l00052">rpg_os::Equipment::isEquipped()</a>, <a class="el" href="equipment_8hpp_source.html#l00057">rpg_os::Equipment::itemIn()</a>, and <a class="el" href="equipment_8hpp_source.html#l00041">rpg_os::Equipment::unequip()</a>.</p>
 
 </div>
 </div>
 <a id="afb091734bf919655fe52d12b02a1785c" name="afb091734bf919655fe52d12b02a1785c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afb091734bf919655fe52d12b02a1785c">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[12/32]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#afb091734bf919655fe52d12b02a1785c">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[25/63]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -494,14 +843,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00224">224</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00382">382</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00109">rpg_os::RulesetEngine::createEntity()</a>, <a class="el" href="engine_8hpp_source.html#l00698">rpg_os::RulesetEngine::equip()</a>, <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, and <a class="el" href="engine_8hpp_source.html#l00745">rpg_os::RulesetEngine::unequip()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00109">rpg_os::RulesetEngine::createEntity()</a>, <a class="el" href="engine_8hpp_source.html#l00919">rpg_os::RulesetEngine::equip()</a>, <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, and <a class="el" href="engine_8hpp_source.html#l00966">rpg_os::RulesetEngine::unequip()</a>.</p>
 
 </div>
 </div>
 <a id="af409712c9852ddd191f42f7e735f3178" name="af409712c9852ddd191f42f7e735f3178"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af409712c9852ddd191f42f7e735f3178">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[13/32]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af409712c9852ddd191f42f7e735f3178">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[26/63]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -532,14 +881,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00566">566</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00789">789</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="dynamic__entity_8hpp_source.html#l00302">rpg_os::DynamicEntity::advancement()</a>, <a class="el" href="engine_8hpp_source.html#l00286">rpg_os::RulesetEngine::applyDamage()</a>, <a class="el" href="money_8hpp_source.html#l00082">rpg_os::Money::baseUnits()</a>, <a class="el" href="inventory_8hpp_source.html#l00232">rpg_os::Inventory::count()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00254">rpg_os::DynamicEntity::inventory()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00462">rpg_os::DynamicEntity::loadFromArchetype()</a>, <a class="el" href="engine_8hpp_source.html#l00059">rpg_os::RulesetEngine::loadRulesetFromJson()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00270">rpg_os::DynamicEntity::money()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00192">rpg_os::DynamicEntity::resource()</a>, <a class="el" href="engine_8hpp_source.html#l01355">rpg_os::RulesetEngine::ruleset()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00174">rpg_os::DynamicEntity::setBaseAttribute()</a>, and <a class="el" href="advancement_8hpp_source.html#l00034">rpg_os::Advancement::xp()</a>.</p>
+<p class="reference">References <a class="el" href="dynamic__entity_8hpp_source.html#l00393">rpg_os::DynamicEntity::advancement()</a>, <a class="el" href="engine_8hpp_source.html#l00463">rpg_os::RulesetEngine::applyDamage()</a>, <a class="el" href="money_8hpp_source.html#l00082">rpg_os::Money::baseUnits()</a>, <a class="el" href="inventory_8hpp_source.html#l00232">rpg_os::Inventory::count()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00345">rpg_os::DynamicEntity::inventory()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00564">rpg_os::DynamicEntity::loadFromArchetype()</a>, <a class="el" href="engine_8hpp_source.html#l00059">rpg_os::RulesetEngine::loadRulesetFromJson()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00361">rpg_os::DynamicEntity::money()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00192">rpg_os::DynamicEntity::resource()</a>, <a class="el" href="engine_8hpp_source.html#l01791">rpg_os::RulesetEngine::ruleset()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00174">rpg_os::DynamicEntity::setBaseAttribute()</a>, and <a class="el" href="advancement_8hpp_source.html#l00034">rpg_os::Advancement::xp()</a>.</p>
 
 </div>
 </div>
 <a id="a2f2357226ffb3a81b0a55f3aa8d3a297" name="a2f2357226ffb3a81b0a55f3aa8d3a297"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2f2357226ffb3a81b0a55f3aa8d3a297">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[14/32]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f2357226ffb3a81b0a55f3aa8d3a297">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[27/63]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -554,14 +903,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00369">369</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00592">592</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00150">rpg_os::RulesetEngine::createCreature()</a>, <a class="el" href="engine_8hpp_source.html#l01263">rpg_os::RulesetEngine::gainXp()</a>, and <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00150">rpg_os::RulesetEngine::createCreature()</a>, <a class="el" href="engine_8hpp_source.html#l01699">rpg_os::RulesetEngine::gainXp()</a>, and <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>.</p>
 
 </div>
 </div>
 <a id="ac379207bf167a2e89cce796cc299c57c" name="ac379207bf167a2e89cce796cc299c57c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac379207bf167a2e89cce796cc299c57c">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[15/32]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac379207bf167a2e89cce796cc299c57c">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[28/63]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -592,14 +941,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00468">468</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00691">691</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="world__state_8hpp_source.html#l00031">rpg_os::WorldState::addToTreasury()</a>, <a class="el" href="world__state_8hpp_source.html#l00039">rpg_os::WorldState::advanceDays()</a>, <a class="el" href="money_8hpp_source.html#l00082">rpg_os::Money::baseUnits()</a>, <a class="el" href="game__session_8hpp_source.html#l00072">rpg_os::GameSession::createCharacter()</a>, <a class="el" href="world__state_8hpp_source.html#l00028">rpg_os::WorldState::day</a>, <a class="el" href="game__session_8hpp_source.html#l00063">rpg_os::GameSession::engine()</a>, <a class="el" href="game__session_8hpp_source.html#l00198">rpg_os::GameSession::gainXp()</a>, <a class="el" href="game__session_8hpp_source.html#l00045">rpg_os::GameSession::loadRulesetFromFile()</a>, <a class="el" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18a25df4d5e17c26458db65198292838c64">rpg_os::OnCurrencyChanged</a>, <a class="el" href="game__session_8hpp_source.html#l00089">rpg_os::GameSession::onEvent()</a>, <a class="el" href="game__session_8hpp_source.html#l00121">rpg_os::GameSession::pay()</a>, <a class="el" href="world__state_8hpp_source.html#l00026">rpg_os::WorldState::treasury</a>, <a class="el" href="engine_8hpp_source.html#l01350">rpg_os::RulesetEngine::unregisterEventListener()</a>, and <a class="el" href="game__session_8hpp_source.html#l00081">rpg_os::GameSession::world()</a>.</p>
+<p class="reference">References <a class="el" href="world__state_8hpp_source.html#l00031">rpg_os::WorldState::addToTreasury()</a>, <a class="el" href="world__state_8hpp_source.html#l00039">rpg_os::WorldState::advanceDays()</a>, <a class="el" href="money_8hpp_source.html#l00082">rpg_os::Money::baseUnits()</a>, <a class="el" href="game__session_8hpp_source.html#l00072">rpg_os::GameSession::createCharacter()</a>, <a class="el" href="world__state_8hpp_source.html#l00028">rpg_os::WorldState::day</a>, <a class="el" href="game__session_8hpp_source.html#l00063">rpg_os::GameSession::engine()</a>, <a class="el" href="game__session_8hpp_source.html#l00198">rpg_os::GameSession::gainXp()</a>, <a class="el" href="game__session_8hpp_source.html#l00045">rpg_os::GameSession::loadRulesetFromFile()</a>, <a class="el" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18a25df4d5e17c26458db65198292838c64">rpg_os::OnCurrencyChanged</a>, <a class="el" href="game__session_8hpp_source.html#l00089">rpg_os::GameSession::onEvent()</a>, <a class="el" href="game__session_8hpp_source.html#l00121">rpg_os::GameSession::pay()</a>, <a class="el" href="world__state_8hpp_source.html#l00026">rpg_os::WorldState::treasury</a>, <a class="el" href="engine_8hpp_source.html#l01786">rpg_os::RulesetEngine::unregisterEventListener()</a>, and <a class="el" href="game__session_8hpp_source.html#l00081">rpg_os::GameSession::world()</a>.</p>
 
 </div>
 </div>
 <a id="aa3f14eacf0eee7c5b2af6487d49f7ca8" name="aa3f14eacf0eee7c5b2af6487d49f7ca8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa3f14eacf0eee7c5b2af6487d49f7ca8">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[16/32]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3f14eacf0eee7c5b2af6487d49f7ca8">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[29/63]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -614,14 +963,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00389">389</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00612">612</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01288">rpg_os::RulesetEngine::improvementCost()</a>, and <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01724">rpg_os::RulesetEngine::improvementCost()</a>, and <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>.</p>
 
 </div>
 </div>
 <a id="a6b40e64ca7b3cfc6dfeecd381b961909" name="a6b40e64ca7b3cfc6dfeecd381b961909"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6b40e64ca7b3cfc6dfeecd381b961909">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[17/32]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b40e64ca7b3cfc6dfeecd381b961909">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[30/63]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -652,14 +1001,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00077">77</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00078">78</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="inventory_8hpp_source.html#l00140">rpg_os::Inventory::add()</a>, <a class="el" href="inventory_8hpp_source.html#l00232">rpg_os::Inventory::count()</a>, <a class="el" href="inventory_8hpp_source.html#l00242">rpg_os::Inventory::has()</a>, <a class="el" href="inventory_8hpp_source.html#l00153">rpg_os::Inventory::remove()</a>, and <a class="el" href="inventory_8hpp_source.html#l00272">rpg_os::Inventory::size()</a>.</p>
 
 </div>
 </div>
 <a id="aa5690fa0ce5ea86d182137aabc81b012" name="aa5690fa0ce5ea86d182137aabc81b012"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa5690fa0ce5ea86d182137aabc81b012">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[18/32]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5690fa0ce5ea86d182137aabc81b012">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[31/63]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -674,14 +1023,36 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00136">136</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00294">294</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00556">rpg_os::RulesetEngine::hasCurrency()</a>, <a class="el" href="engine_8hpp_source.html#l00569">rpg_os::RulesetEngine::itemPrice()</a>, and <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00777">rpg_os::RulesetEngine::hasCurrency()</a>, <a class="el" href="engine_8hpp_source.html#l00790">rpg_os::RulesetEngine::itemPrice()</a>, and <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>.</p>
+
+</div>
+</div>
+<a id="a0fc30a163f926858af404035c6ca34a8" name="a0fc30a163f926858af404035c6ca34a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fc30a163f926858af404035c6ca34a8">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[32/63]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;bookkeeping: migrated D&amp;D creature traits apply via the engine&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l01168">1168</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00150">rpg_os::RulesetEngine::createCreature()</a>, <a class="el" href="engine_8hpp_source.html#l00362">rpg_os::RulesetEngine::executeCheck()</a>, <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="engine_8hpp_source.html#l01791">rpg_os::RulesetEngine::ruleset()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="dynamic__entity_8hpp_source.html#l00174">rpg_os::DynamicEntity::setBaseAttribute()</a>.</p>
 
 </div>
 </div>
 <a id="a2ab3999e23f6687b5dcd10fa3d28cf69" name="a2ab3999e23f6687b5dcd10fa3d28cf69"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2ab3999e23f6687b5dcd10fa3d28cf69">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[19/32]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ab3999e23f6687b5dcd10fa3d28cf69">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[33/63]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -696,14 +1067,124 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00059">59</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00060">60</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="money_8hpp_source.html#l00082">rpg_os::Money::baseUnits()</a>, <a class="el" href="money_8hpp_source.html#l00125">rpg_os::Money::fromCoins()</a>, <a class="el" href="money_8hpp_source.html#l00139">rpg_os::Money::in()</a>, and <a class="el" href="money_8hpp_source.html#l00061">rpg_os::CurrencySystem::valueOf()</a>.</p>
 
 </div>
 </div>
+<a id="a8a7300eb324786899641e07c2745a3e9" name="a8a7300eb324786899641e07c2745a3e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a7300eb324786899641e07c2745a3e9">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[34/63]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;bookkeeping: ongoing effects can re-apply a different effect (acid arrow)&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00235">235</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="dynamic__entity_8hpp_source.html#l00564">rpg_os::DynamicEntity::loadFromArchetype()</a>, <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="engine_8hpp_source.html#l01236">rpg_os::RulesetEngine::processOngoing()</a>, <a class="el" href="engine_8hpp_source.html#l01395">rpg_os::RulesetEngine::resolveEffects()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00192">rpg_os::DynamicEntity::resource()</a>, <a class="el" href="engine_8hpp_source.html#l01791">rpg_os::RulesetEngine::ruleset()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="dynamic__entity_8hpp_source.html#l00174">rpg_os::DynamicEntity::setBaseAttribute()</a>.</p>
+
+</div>
+</div>
+<a id="a1006352aafb6bacdf435d769f38ce31e" name="a1006352aafb6bacdf435d769f38ce31e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1006352aafb6bacdf435d769f38ce31e">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[35/63]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;bookkeeping: oni regeneration heals at the start of its turns&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l01348">1348</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00150">rpg_os::RulesetEngine::createCreature()</a>, <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="engine_8hpp_source.html#l01206">rpg_os::RulesetEngine::runTurn()</a>, and <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>.</p>
+
+</div>
+</div>
+<a id="a3115541590846cf009cada9deae1cc43" name="a3115541590846cf009cada9deae1cc43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3115541590846cf009cada9deae1cc43">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[36/63]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;bookkeeping: optional option groups are skipped without a choice&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l01494">1494</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00585">rpg_os::RulesetEngine::castSpell()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00564">rpg_os::DynamicEntity::loadFromArchetype()</a>, <a class="el" href="engine_8hpp_source.html#l00059">rpg_os::RulesetEngine::loadRulesetFromJson()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00192">rpg_os::DynamicEntity::resource()</a>, <a class="el" href="engine_8hpp_source.html#l01791">rpg_os::RulesetEngine::ruleset()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="dynamic__entity_8hpp_source.html#l00174">rpg_os::DynamicEntity::setBaseAttribute()</a>.</p>
+
+</div>
+</div>
+<a id="a15e4e0c6884324ebb34861d522a6931b" name="a15e4e0c6884324ebb34861d522a6931b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15e4e0c6884324ebb34861d522a6931b">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[37/63]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;bookkeeping: options effects require a caller choice (choice interface)&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l01446">1446</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00585">rpg_os::RulesetEngine::castSpell()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00564">rpg_os::DynamicEntity::loadFromArchetype()</a>, <a class="el" href="engine_8hpp_source.html#l00059">rpg_os::RulesetEngine::loadRulesetFromJson()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00192">rpg_os::DynamicEntity::resource()</a>, <a class="el" href="engine_8hpp_source.html#l01791">rpg_os::RulesetEngine::ruleset()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="dynamic__entity_8hpp_source.html#l00174">rpg_os::DynamicEntity::setBaseAttribute()</a>.</p>
+
+</div>
+</div>
+<a id="a4916e77f62b6011a68ef3236eba89ed6" name="a4916e77f62b6011a68ef3236eba89ed6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4916e77f62b6011a68ef3236eba89ed6">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[38/63]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;bookkeeping: paralyzed creatures auto-fail STR and DEX saves&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l01324">1324</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01136">rpg_os::RulesetEngine::applyCondition()</a>, <a class="el" href="checks_8hpp_source.html#l00202">rpg_os::CheckParams::difficulty</a>, <a class="el" href="engine_8hpp_source.html#l00362">rpg_os::RulesetEngine::executeCheck()</a>, <a class="el" href="types_8hpp_source.html#l00080">rpg_os::CheckResult::isSuccess</a>, <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="engine_8hpp_source.html#l01791">rpg_os::RulesetEngine::ruleset()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="dynamic__entity_8hpp_source.html#l00174">rpg_os::DynamicEntity::setBaseAttribute()</a>.</p>
+
+</div>
+</div>
 <a id="ab0d0aa0700bbf8aac1bf30db924d9843" name="ab0d0aa0700bbf8aac1bf30db924d9843"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab0d0aa0700bbf8aac1bf30db924d9843">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[20/32]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0d0aa0700bbf8aac1bf30db924d9843">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[39/63]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -718,14 +1199,80 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00313">313</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00536">536</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01013">rpg_os::RulesetEngine::castSpellPrepared()</a>, <a class="el" href="engine_8hpp_source.html#l00109">rpg_os::RulesetEngine::createEntity()</a>, <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="engine_8hpp_source.html#l00974">rpg_os::RulesetEngine::prepareSpell()</a>, and <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01301">rpg_os::RulesetEngine::castSpellPrepared()</a>, <a class="el" href="engine_8hpp_source.html#l00109">rpg_os::RulesetEngine::createEntity()</a>, <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="engine_8hpp_source.html#l01262">rpg_os::RulesetEngine::prepareSpell()</a>, and <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>.</p>
+
+</div>
+</div>
+<a id="a047df2f16abe7d6fd8bbb2dfb48f39f6" name="a047df2f16abe7d6fd8bbb2dfb48f39f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a047df2f16abe7d6fd8bbb2dfb48f39f6">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[40/63]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;bookkeeping: quality-scaled condition stacks resolve the QL formula (TDE style)&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l01393">1393</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="dynamic__entity_8hpp_source.html#l00229">rpg_os::DynamicEntity::conditionStacks()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00564">rpg_os::DynamicEntity::loadFromArchetype()</a>, <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="engine_8hpp_source.html#l01395">rpg_os::RulesetEngine::resolveEffects()</a>, <a class="el" href="engine_8hpp_source.html#l01791">rpg_os::RulesetEngine::ruleset()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="dynamic__entity_8hpp_source.html#l00174">rpg_os::DynamicEntity::setBaseAttribute()</a>.</p>
+
+</div>
+</div>
+<a id="a7ca3dc91eb56c52a696c21ff65a75809" name="a7ca3dc91eb56c52a696c21ff65a75809"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ca3dc91eb56c52a696c21ff65a75809">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[41/63]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;bookkeeping: quality-scaled damage effects add the QL formula (TDE style)&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l01365">1365</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="dynamic__entity_8hpp_source.html#l00564">rpg_os::DynamicEntity::loadFromArchetype()</a>, <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="engine_8hpp_source.html#l01395">rpg_os::RulesetEngine::resolveEffects()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00192">rpg_os::DynamicEntity::resource()</a>, <a class="el" href="engine_8hpp_source.html#l01791">rpg_os::RulesetEngine::ruleset()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="dynamic__entity_8hpp_source.html#l00174">rpg_os::DynamicEntity::setBaseAttribute()</a>.</p>
+
+</div>
+</div>
+<a id="a6f21b8f232448fbeb9552df85d75104c" name="a6f21b8f232448fbeb9552df85d75104c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f21b8f232448fbeb9552df85d75104c">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[42/63]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;bookkeeping: recurring effects re-apply each turn and expire&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00173">173</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="dynamic__entity_8hpp_source.html#l00564">rpg_os::DynamicEntity::loadFromArchetype()</a>, <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="engine_8hpp_source.html#l01236">rpg_os::RulesetEngine::processOngoing()</a>, <a class="el" href="engine_8hpp_source.html#l01395">rpg_os::RulesetEngine::resolveEffects()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00192">rpg_os::DynamicEntity::resource()</a>, <a class="el" href="engine_8hpp_source.html#l01791">rpg_os::RulesetEngine::ruleset()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="dynamic__entity_8hpp_source.html#l00174">rpg_os::DynamicEntity::setBaseAttribute()</a>.</p>
 
 </div>
 </div>
 <a id="aea09ce387685b3e1c650583f37b523a6" name="aea09ce387685b3e1c650583f37b523a6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aea09ce387685b3e1c650583f37b523a6">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[21/32]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aea09ce387685b3e1c650583f37b523a6">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[43/63]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -740,14 +1287,102 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00760">760</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00983">983</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="dynamic__entity_8hpp_source.html#l00401">rpg_os::DynamicEntity::fromJson()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00223">rpg_os::DynamicEntity::hasCondition()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00339">rpg_os::DynamicEntity::hasResistance()</a>, <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="engine_8hpp_source.html#l01085">rpg_os::RulesetEngine::resolveEffects()</a>, <a class="el" href="engine_8hpp_source.html#l01355">rpg_os::RulesetEngine::ruleset()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="dynamic__entity_8hpp_source.html#l00359">rpg_os::DynamicEntity::toJson()</a>.</p>
+<p class="reference">References <a class="el" href="dynamic__entity_8hpp_source.html#l00497">rpg_os::DynamicEntity::fromJson()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00223">rpg_os::DynamicEntity::hasCondition()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00430">rpg_os::DynamicEntity::hasResistance()</a>, <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="engine_8hpp_source.html#l01395">rpg_os::RulesetEngine::resolveEffects()</a>, <a class="el" href="engine_8hpp_source.html#l01791">rpg_os::RulesetEngine::ruleset()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="dynamic__entity_8hpp_source.html#l00450">rpg_os::DynamicEntity::toJson()</a>.</p>
+
+</div>
+</div>
+<a id="a49543f129e5cb6500333a6ae1ccb898f" name="a49543f129e5cb6500333a6ae1ccb898f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49543f129e5cb6500333a6ae1ccb898f">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[44/63]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;bookkeeping: restrictions are queryable and enforced in castSpell&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l01537">1537</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00558">rpg_os::RulesetEngine::actionAllowed()</a>, <a class="el" href="engine_8hpp_source.html#l01136">rpg_os::RulesetEngine::applyCondition()</a>, <a class="el" href="engine_8hpp_source.html#l00585">rpg_os::RulesetEngine::castSpell()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00305">rpg_os::DynamicEntity::hasRestriction()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00564">rpg_os::DynamicEntity::loadFromArchetype()</a>, <a class="el" href="engine_8hpp_source.html#l00059">rpg_os::RulesetEngine::loadRulesetFromJson()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00192">rpg_os::DynamicEntity::resource()</a>, <a class="el" href="engine_8hpp_source.html#l01791">rpg_os::RulesetEngine::ruleset()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="dynamic__entity_8hpp_source.html#l00174">rpg_os::DynamicEntity::setBaseAttribute()</a>.</p>
+
+</div>
+</div>
+<a id="a699b0a2282442830afa96cdff127a4aa" name="a699b0a2282442830afa96cdff127a4aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a699b0a2282442830afa96cdff127a4aa">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[45/63]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;bookkeeping: restrictions come from traits too and block casting&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l01586">1586</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00558">rpg_os::RulesetEngine::actionAllowed()</a>, <a class="el" href="engine_8hpp_source.html#l00585">rpg_os::RulesetEngine::castSpell()</a>, <a class="el" href="engine_8hpp_source.html#l00150">rpg_os::RulesetEngine::createCreature()</a>, <a class="el" href="engine_8hpp_source.html#l00059">rpg_os::RulesetEngine::loadRulesetFromJson()</a>, and <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>.</p>
+
+</div>
+</div>
+<a id="af45d4c71f18742bb3482e4853c232c70" name="af45d4c71f18742bb3482e4853c232c70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af45d4c71f18742bb3482e4853c232c70">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[46/63]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;bookkeeping: roll-under saves express TDE resistance (stat minus QL)&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l01418">1418</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="dynamic__entity_8hpp_source.html#l00223">rpg_os::DynamicEntity::hasCondition()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00564">rpg_os::DynamicEntity::loadFromArchetype()</a>, <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="engine_8hpp_source.html#l01395">rpg_os::RulesetEngine::resolveEffects()</a>, <a class="el" href="engine_8hpp_source.html#l01791">rpg_os::RulesetEngine::ruleset()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="dynamic__entity_8hpp_source.html#l00174">rpg_os::DynamicEntity::setBaseAttribute()</a>.</p>
+
+</div>
+</div>
+<a id="a318a74e04cb71ddf2d41f51b2040dd80" name="a318a74e04cb71ddf2d41f51b2040dd80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a318a74e04cb71ddf2d41f51b2040dd80">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[47/63]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;bookkeeping: runTurn fires recurring effects at the declared phase&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00203">203</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="dynamic__entity_8hpp_source.html#l00564">rpg_os::DynamicEntity::loadFromArchetype()</a>, <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00201">rpg_os::DynamicEntity::modifyResource()</a>, <a class="el" href="engine_8hpp_source.html#l01395">rpg_os::RulesetEngine::resolveEffects()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00192">rpg_os::DynamicEntity::resource()</a>, <a class="el" href="engine_8hpp_source.html#l01791">rpg_os::RulesetEngine::ruleset()</a>, <a class="el" href="engine_8hpp_source.html#l01206">rpg_os::RulesetEngine::runTurn()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="dynamic__entity_8hpp_source.html#l00174">rpg_os::DynamicEntity::setBaseAttribute()</a>.</p>
 
 </div>
 </div>
 <a id="ad083e18416a54a82b8d4b565a72def4c" name="ad083e18416a54a82b8d4b565a72def4c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad083e18416a54a82b8d4b565a72def4c">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[22/32]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad083e18416a54a82b8d4b565a72def4c">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[48/63]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -762,14 +1397,36 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00443">443</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00666">666</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00602">rpg_os::RulesetEngine::addItem()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00302">rpg_os::DynamicEntity::advancement()</a>, <a class="el" href="engine_8hpp_source.html#l00915">rpg_os::RulesetEngine::applyCondition()</a>, <a class="el" href="money_8hpp_source.html#l00082">rpg_os::Money::baseUnits()</a>, <a class="el" href="inventory_8hpp_source.html#l00232">rpg_os::Inventory::count()</a>, <a class="el" href="engine_8hpp_source.html#l00109">rpg_os::RulesetEngine::createEntity()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00262">rpg_os::DynamicEntity::equipment()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00401">rpg_os::DynamicEntity::fromJson()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00249">rpg_os::DynamicEntity::getEffectiveStat()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00162">rpg_os::DynamicEntity::getStat()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00223">rpg_os::DynamicEntity::hasCondition()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00254">rpg_os::DynamicEntity::inventory()</a>, <a class="el" href="equipment_8hpp_source.html#l00057">rpg_os::Equipment::itemIn()</a>, <a class="el" href="spellbook_8hpp_source.html#l00063">rpg_os::Spellbook::knows()</a>, <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00270">rpg_os::DynamicEntity::money()</a>, <a class="el" href="engine_8hpp_source.html#l01355">rpg_os::RulesetEngine::ruleset()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00294">rpg_os::DynamicEntity::spellbook()</a>, and <a class="el" href="advancement_8hpp_source.html#l00034">rpg_os::Advancement::xp()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00823">rpg_os::RulesetEngine::addItem()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00393">rpg_os::DynamicEntity::advancement()</a>, <a class="el" href="engine_8hpp_source.html#l01136">rpg_os::RulesetEngine::applyCondition()</a>, <a class="el" href="money_8hpp_source.html#l00082">rpg_os::Money::baseUnits()</a>, <a class="el" href="inventory_8hpp_source.html#l00232">rpg_os::Inventory::count()</a>, <a class="el" href="engine_8hpp_source.html#l00109">rpg_os::RulesetEngine::createEntity()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00353">rpg_os::DynamicEntity::equipment()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00497">rpg_os::DynamicEntity::fromJson()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00339">rpg_os::DynamicEntity::getEffectiveStat()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00162">rpg_os::DynamicEntity::getStat()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00223">rpg_os::DynamicEntity::hasCondition()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00345">rpg_os::DynamicEntity::inventory()</a>, <a class="el" href="equipment_8hpp_source.html#l00057">rpg_os::Equipment::itemIn()</a>, <a class="el" href="spellbook_8hpp_source.html#l00063">rpg_os::Spellbook::knows()</a>, <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00361">rpg_os::DynamicEntity::money()</a>, <a class="el" href="engine_8hpp_source.html#l01791">rpg_os::RulesetEngine::ruleset()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00385">rpg_os::DynamicEntity::spellbook()</a>, and <a class="el" href="advancement_8hpp_source.html#l00034">rpg_os::Advancement::xp()</a>.</p>
+
+</div>
+</div>
+<a id="ab6193907d21e8c22aa38fe137d617073" name="ab6193907d21e8c22aa38fe137d617073"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6193907d21e8c22aa38fe137d617073">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[49/63]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;bookkeeping: shipped D&amp;D conditions enforce action restrictions&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l01805">1805</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00558">rpg_os::RulesetEngine::actionAllowed()</a>, <a class="el" href="engine_8hpp_source.html#l01136">rpg_os::RulesetEngine::applyCondition()</a>, <a class="el" href="engine_8hpp_source.html#l00585">rpg_os::RulesetEngine::castSpell()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00305">rpg_os::DynamicEntity::hasRestriction()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00564">rpg_os::DynamicEntity::loadFromArchetype()</a>, <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="engine_8hpp_source.html#l01152">rpg_os::RulesetEngine::removeCondition()</a>, <a class="el" href="engine_8hpp_source.html#l01791">rpg_os::RulesetEngine::ruleset()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="dynamic__entity_8hpp_source.html#l00174">rpg_os::DynamicEntity::setBaseAttribute()</a>.</p>
 
 </div>
 </div>
 <a id="af9acf31f044e6dbfe3aafcad422721e9" name="af9acf31f044e6dbfe3aafcad422721e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af9acf31f044e6dbfe3aafcad422721e9">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[23/32]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af9acf31f044e6dbfe3aafcad422721e9">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[50/63]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -784,14 +1441,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00716">716</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00939">939</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00386">rpg_os::RulesetEngine::castSpell()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00462">rpg_os::DynamicEntity::loadFromArchetype()</a>, <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00192">rpg_os::DynamicEntity::resource()</a>, <a class="el" href="engine_8hpp_source.html#l01355">rpg_os::RulesetEngine::ruleset()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="dynamic__entity_8hpp_source.html#l00174">rpg_os::DynamicEntity::setBaseAttribute()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00585">rpg_os::RulesetEngine::castSpell()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00564">rpg_os::DynamicEntity::loadFromArchetype()</a>, <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00192">rpg_os::DynamicEntity::resource()</a>, <a class="el" href="engine_8hpp_source.html#l01791">rpg_os::RulesetEngine::ruleset()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="dynamic__entity_8hpp_source.html#l00174">rpg_os::DynamicEntity::setBaseAttribute()</a>.</p>
 
 </div>
 </div>
 <a id="ac02c2e3ff4881eb625076d44aa1b09bc" name="ac02c2e3ff4881eb625076d44aa1b09bc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac02c2e3ff4881eb625076d44aa1b09bc">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[24/32]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac02c2e3ff4881eb625076d44aa1b09bc">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[51/63]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -822,14 +1479,74 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00119">119</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00277">277</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="spellbook_8hpp_source.html#l00033">rpg_os::Spellbook::forget()</a>, <a class="el" href="spellbook_8hpp_source.html#l00073">rpg_os::Spellbook::hasPrepared()</a>, <a class="el" href="spellbook_8hpp_source.html#l00063">rpg_os::Spellbook::knows()</a>, <a class="el" href="spellbook_8hpp_source.html#l00026">rpg_os::Spellbook::learn()</a>, <a class="el" href="spellbook_8hpp_source.html#l00092">rpg_os::Spellbook::markSlotUsed()</a>, <a class="el" href="spellbook_8hpp_source.html#l00045">rpg_os::Spellbook::prepare()</a>, <a class="el" href="spellbook_8hpp_source.html#l00101">rpg_os::Spellbook::recoverAllSlots()</a>, <a class="el" href="spellbook_8hpp_source.html#l00096">rpg_os::Spellbook::slotsUsed()</a>, and <a class="el" href="spellbook_8hpp_source.html#l00056">rpg_os::Spellbook::unprepare()</a>.</p>
 
 </div>
 </div>
+<a id="a7aa4224cd731365ce6e48da347002f04" name="a7aa4224cd731365ce6e48da347002f04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7aa4224cd731365ce6e48da347002f04">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[52/63]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;bookkeeping: stat bonuses&#160;</td>
+          <td class="paramname"><em>tick</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">expire&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">and survive serialization(phase 0)&quot;&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00120">120</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="effects_8hpp_source.html#l00123">rpg_os::EffectTimeline::addBonus()</a>, <a class="el" href="effects_8hpp_source.html#l00151">rpg_os::EffectTimeline::bonusFor()</a>, <a class="el" href="effects_8hpp_source.html#l00305">rpg_os::EffectTimeline::fromJson()</a>, <a class="el" href="effects_8hpp_source.html#l00211">rpg_os::EffectTimeline::tick()</a>, and <a class="el" href="effects_8hpp_source.html#l00268">rpg_os::EffectTimeline::toJson()</a>.</p>
+
+</div>
+</div>
+<a id="acd5bea640a8793f87092c5ef2b0b019e" name="acd5bea640a8793f87092c5ef2b0b019e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd5bea640a8793f87092c5ef2b0b019e">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[53/63]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;bookkeeping: stat_bonus effects apply a temporary stat modifier&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00145">145</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="dynamic__entity_8hpp_source.html#l00339">rpg_os::DynamicEntity::getEffectiveStat()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00564">rpg_os::DynamicEntity::loadFromArchetype()</a>, <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="engine_8hpp_source.html#l01395">rpg_os::RulesetEngine::resolveEffects()</a>, <a class="el" href="engine_8hpp_source.html#l01791">rpg_os::RulesetEngine::ruleset()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="dynamic__entity_8hpp_source.html#l00174">rpg_os::DynamicEntity::setBaseAttribute()</a>.</p>
+
+</div>
+</div>
 <a id="a32d6e8edc6799fecfafad54990e9c879" name="a32d6e8edc6799fecfafad54990e9c879"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a32d6e8edc6799fecfafad54990e9c879">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[25/32]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a32d6e8edc6799fecfafad54990e9c879">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[54/63]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -844,14 +1561,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00680">680</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00903">903</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00386">rpg_os::RulesetEngine::castSpell()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00462">rpg_os::DynamicEntity::loadFromArchetype()</a>, <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00201">rpg_os::DynamicEntity::modifyResource()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00192">rpg_os::DynamicEntity::resource()</a>, <a class="el" href="engine_8hpp_source.html#l01355">rpg_os::RulesetEngine::ruleset()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="dynamic__entity_8hpp_source.html#l00174">rpg_os::DynamicEntity::setBaseAttribute()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00585">rpg_os::RulesetEngine::castSpell()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00564">rpg_os::DynamicEntity::loadFromArchetype()</a>, <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00201">rpg_os::DynamicEntity::modifyResource()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00192">rpg_os::DynamicEntity::resource()</a>, <a class="el" href="engine_8hpp_source.html#l01791">rpg_os::RulesetEngine::ruleset()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="dynamic__entity_8hpp_source.html#l00174">rpg_os::DynamicEntity::setBaseAttribute()</a>.</p>
 
 </div>
 </div>
 <a id="a23c51d353fdc9840d10d3b400d7e0296" name="a23c51d353fdc9840d10d3b400d7e0296"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a23c51d353fdc9840d10d3b400d7e0296">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[26/32]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a23c51d353fdc9840d10d3b400d7e0296">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[55/63]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -866,14 +1583,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00745">745</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00968">968</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00386">rpg_os::RulesetEngine::castSpell()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00339">rpg_os::DynamicEntity::hasResistance()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00462">rpg_os::DynamicEntity::loadFromArchetype()</a>, <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="engine_8hpp_source.html#l01355">rpg_os::RulesetEngine::ruleset()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="dynamic__entity_8hpp_source.html#l00174">rpg_os::DynamicEntity::setBaseAttribute()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00585">rpg_os::RulesetEngine::castSpell()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00430">rpg_os::DynamicEntity::hasResistance()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00564">rpg_os::DynamicEntity::loadFromArchetype()</a>, <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="engine_8hpp_source.html#l01791">rpg_os::RulesetEngine::ruleset()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="dynamic__entity_8hpp_source.html#l00174">rpg_os::DynamicEntity::setBaseAttribute()</a>.</p>
 
 </div>
 </div>
 <a id="acd82c52207d9d033d7993170d42f790a" name="acd82c52207d9d033d7993170d42f790a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acd82c52207d9d033d7993170d42f790a">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[27/32]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#acd82c52207d9d033d7993170d42f790a">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[56/63]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -888,14 +1605,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00652">652</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00875">875</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00386">rpg_os::RulesetEngine::castSpell()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00229">rpg_os::DynamicEntity::conditionStacks()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00223">rpg_os::DynamicEntity::hasCondition()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00462">rpg_os::DynamicEntity::loadFromArchetype()</a>, <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="engine_8hpp_source.html#l01355">rpg_os::RulesetEngine::ruleset()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="dynamic__entity_8hpp_source.html#l00174">rpg_os::DynamicEntity::setBaseAttribute()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00585">rpg_os::RulesetEngine::castSpell()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00229">rpg_os::DynamicEntity::conditionStacks()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00223">rpg_os::DynamicEntity::hasCondition()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00564">rpg_os::DynamicEntity::loadFromArchetype()</a>, <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="engine_8hpp_source.html#l01791">rpg_os::RulesetEngine::ruleset()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="dynamic__entity_8hpp_source.html#l00174">rpg_os::DynamicEntity::setBaseAttribute()</a>.</p>
 
 </div>
 </div>
 <a id="a7dc4a45f6227deddd75b7936ac1ce633" name="a7dc4a45f6227deddd75b7936ac1ce633"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7dc4a45f6227deddd75b7936ac1ce633">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[28/32]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7dc4a45f6227deddd75b7936ac1ce633">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[57/63]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -910,14 +1627,36 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00613">613</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00836">836</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00386">rpg_os::RulesetEngine::castSpell()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00462">rpg_os::DynamicEntity::loadFromArchetype()</a>, <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00192">rpg_os::DynamicEntity::resource()</a>, <a class="el" href="engine_8hpp_source.html#l01355">rpg_os::RulesetEngine::ruleset()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="dynamic__entity_8hpp_source.html#l00174">rpg_os::DynamicEntity::setBaseAttribute()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00585">rpg_os::RulesetEngine::castSpell()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00564">rpg_os::DynamicEntity::loadFromArchetype()</a>, <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00192">rpg_os::DynamicEntity::resource()</a>, <a class="el" href="engine_8hpp_source.html#l01791">rpg_os::RulesetEngine::ruleset()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="dynamic__entity_8hpp_source.html#l00174">rpg_os::DynamicEntity::setBaseAttribute()</a>.</p>
+
+</div>
+</div>
+<a id="a3857281a43adf1ee7057895e1f4447f9" name="a3857281a43adf1ee7057895e1f4447f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3857281a43adf1ee7057895e1f4447f9">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[58/63]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;bookkeeping: TDE buff spells apply stat bonuses via castSpell&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l01083">1083</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="effects_8hpp_source.html#l00151">rpg_os::EffectTimeline::bonusFor()</a>, <a class="el" href="engine_8hpp_source.html#l00585">rpg_os::RulesetEngine::castSpell()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00401">rpg_os::DynamicEntity::effects()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00497">rpg_os::DynamicEntity::fromJson()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00339">rpg_os::DynamicEntity::getEffectiveStat()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00564">rpg_os::DynamicEntity::loadFromArchetype()</a>, <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="engine_8hpp_source.html#l01791">rpg_os::RulesetEngine::ruleset()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00174">rpg_os::DynamicEntity::setBaseAttribute()</a>, and <a class="el" href="dynamic__entity_8hpp_source.html#l00450">rpg_os::DynamicEntity::toJson()</a>.</p>
 
 </div>
 </div>
 <a id="a13239c38c4a16e1a7447ec5ad8af1080" name="a13239c38c4a16e1a7447ec5ad8af1080"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a13239c38c4a16e1a7447ec5ad8af1080">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[29/32]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a13239c38c4a16e1a7447ec5ad8af1080">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[59/63]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -932,14 +1671,36 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00146">146</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00304">304</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00561">rpg_os::RulesetEngine::currencySystem()</a>, <a class="el" href="engine_8hpp_source.html#l00556">rpg_os::RulesetEngine::hasCurrency()</a>, <a class="el" href="engine_8hpp_source.html#l00569">rpg_os::RulesetEngine::itemPrice()</a>, and <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00782">rpg_os::RulesetEngine::currencySystem()</a>, <a class="el" href="engine_8hpp_source.html#l00777">rpg_os::RulesetEngine::hasCurrency()</a>, <a class="el" href="engine_8hpp_source.html#l00790">rpg_os::RulesetEngine::itemPrice()</a>, and <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>.</p>
+
+</div>
+</div>
+<a id="afa50718c96aa4417bd087369e0b54b5c" name="afa50718c96aa4417bd087369e0b54b5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa50718c96aa4417bd087369e0b54b5c">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[60/63]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;bookkeeping: TDE spell effects resolve through castSpell with the cast QL&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l01038">1038</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00585">rpg_os::RulesetEngine::castSpell()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00229">rpg_os::DynamicEntity::conditionStacks()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00223">rpg_os::DynamicEntity::hasCondition()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00564">rpg_os::DynamicEntity::loadFromArchetype()</a>, <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00192">rpg_os::DynamicEntity::resource()</a>, <a class="el" href="engine_8hpp_source.html#l01791">rpg_os::RulesetEngine::ruleset()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="dynamic__entity_8hpp_source.html#l00174">rpg_os::DynamicEntity::setBaseAttribute()</a>.</p>
 
 </div>
 </div>
 <a id="abb1147b2b5e4b89ddfd9981fc02dec14" name="abb1147b2b5e4b89ddfd9981fc02dec14"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abb1147b2b5e4b89ddfd9981fc02dec14">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[30/32]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abb1147b2b5e4b89ddfd9981fc02dec14">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[61/63]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -954,14 +1715,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00699">699</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00922">922</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00386">rpg_os::RulesetEngine::castSpell()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00462">rpg_os::DynamicEntity::loadFromArchetype()</a>, <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00192">rpg_os::DynamicEntity::resource()</a>, <a class="el" href="engine_8hpp_source.html#l01355">rpg_os::RulesetEngine::ruleset()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00174">rpg_os::DynamicEntity::setBaseAttribute()</a>, and <a class="el" href="dynamic__entity_8hpp_source.html#l00279">rpg_os::DynamicEntity::temporaryHitPoints()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00585">rpg_os::RulesetEngine::castSpell()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00564">rpg_os::DynamicEntity::loadFromArchetype()</a>, <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00192">rpg_os::DynamicEntity::resource()</a>, <a class="el" href="engine_8hpp_source.html#l01791">rpg_os::RulesetEngine::ruleset()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00174">rpg_os::DynamicEntity::setBaseAttribute()</a>, and <a class="el" href="dynamic__entity_8hpp_source.html#l00370">rpg_os::DynamicEntity::temporaryHitPoints()</a>.</p>
 
 </div>
 </div>
 <a id="a8ec2977bea9624c523f781c38422f355" name="a8ec2977bea9624c523f781c38422f355"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ec2977bea9624c523f781c38422f355">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[31/32]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ec2977bea9624c523f781c38422f355">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[62/63]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -976,14 +1737,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00601">601</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00824">824</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="engine_8hpp_source.html#l00059">rpg_os::RulesetEngine::loadRulesetFromJson()</a>.</p>
 
 </div>
 </div>
 <a id="a7b14181d9ee4df789f1ac06f2af60425" name="a7b14181d9ee4df789f1ac06f2af60425"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7b14181d9ee4df789f1ac06f2af60425">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[32/32]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b14181d9ee4df789f1ac06f2af60425">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[63/63]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -998,9 +1759,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00337">337</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__bookkeeping_8cpp_source.html#l00560">560</a> of file <a class="el" href="test__bookkeeping_8cpp_source.html">test_bookkeeping.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01013">rpg_os::RulesetEngine::castSpellPrepared()</a>, <a class="el" href="engine_8hpp_source.html#l00059">rpg_os::RulesetEngine::loadRulesetFromJson()</a>, <a class="el" href="engine_8hpp_source.html#l01306">rpg_os::RulesetEngine::longRest()</a>, <a class="el" href="engine_8hpp_source.html#l00974">rpg_os::RulesetEngine::prepareSpell()</a>, <a class="el" href="engine_8hpp_source.html#l01355">rpg_os::RulesetEngine::ruleset()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="engine_8hpp_source.html#l00985">rpg_os::RulesetEngine::spellSlotsRemaining()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01301">rpg_os::RulesetEngine::castSpellPrepared()</a>, <a class="el" href="engine_8hpp_source.html#l00059">rpg_os::RulesetEngine::loadRulesetFromJson()</a>, <a class="el" href="engine_8hpp_source.html#l01742">rpg_os::RulesetEngine::longRest()</a>, <a class="el" href="engine_8hpp_source.html#l01262">rpg_os::RulesetEngine::prepareSpell()</a>, <a class="el" href="engine_8hpp_source.html#l01791">rpg_os::RulesetEngine::ruleset()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="engine_8hpp_source.html#l01273">rpg_os::RulesetEngine::spellSlotsRemaining()</a>.</p>
 
 </div>
 </div>

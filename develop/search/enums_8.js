@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['successlevel_0',['SuccessLevel',['../namespacerpg__os.html#a0dc66a7ae36ef58a210fec7c99826700',1,'rpg_os']]]
+  ['resolution_0',['Resolution',['../namespacerpg__os.html#a95eaa793f5aa7a7b28d2851594d614dc',1,'rpg_os']]]
 ];

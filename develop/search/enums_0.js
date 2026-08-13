@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['bookkeepingerror_0',['BookkeepingError',['../namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766',1,'rpg_os']]]
+  ['advantagemode_0',['AdvantageMode',['../namespacerpg__os.html#a2fe23abe4211557387324614b880a9bc',1,'rpg_os']]]
 ];

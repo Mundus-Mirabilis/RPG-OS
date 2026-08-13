@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['difficultymode_0',['DifficultyMode',['../namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753d',1,'rpg_os']]],
-  ['difficultymultiplier_1',['DifficultyMultiplier',['../namespacerpg__os.html#ab545c7c57f9754a6d5b040f83bedaf52',1,'rpg_os']]],
-  ['difficultyscale_2',['DifficultyScale',['../namespacerpg__os.html#a5d0f76e637716d8f9bedca406ff39fe6',1,'rpg_os']]]
+  ['comparison_0',['Comparison',['../namespacerpg__os.html#a4ede194e1af239829344bcfe6bf5791f',1,'rpg_os']]],
+  ['criticalstyle_1',['CriticalStyle',['../namespacerpg__os.html#a475606cc248fcbc80000a0ceb3b8c448',1,'rpg_os']]]
 ];

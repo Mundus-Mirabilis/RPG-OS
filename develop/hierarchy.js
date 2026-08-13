@@ -5,6 +5,7 @@ var hierarchy =
     [ "rpg_os::RulesetEngine::AfflictionResult", "structrpg__os_1_1RulesetEngine_1_1AfflictionResult.html", null ],
     [ "rpg_os::DynamicEntity::AppliedAffliction", "structrpg__os_1_1DynamicEntity_1_1AppliedAffliction.html", null ],
     [ "rpg_os::AttributeDef", "structrpg__os_1_1AttributeDef.html", null ],
+    [ "rpg_os::BonusDie", "structrpg__os_1_1BonusDie.html", null ],
     [ "rpg_os::generated::brp_ugc::Character", "classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html", null ],
     [ "rpg_os::generated::dnd5e::Character", "classrpg__os_1_1generated_1_1dnd5e_1_1Character.html", null ],
     [ "rpg_os::generated::tde5e::Character", "classrpg__os_1_1generated_1_1tde5e_1_1Character.html", null ],
@@ -48,6 +49,7 @@ var hierarchy =
     [ "rpg_os::Modifier", "structrpg__os_1_1Modifier.html", null ],
     [ "rpg_os::Money", "classrpg__os_1_1Money.html", null ],
     [ "rpg_os::NullStatProvider", "structrpg__os_1_1NullStatProvider.html", null ],
+    [ "rpg_os::OngoingEffect", "structrpg__os_1_1OngoingEffect.html", null ],
     [ "rpg_os::ResourcePool", "structrpg__os_1_1ResourcePool.html", null ],
     [ "rpg_os::ResourcePoolDef", "structrpg__os_1_1ResourcePoolDef.html", null ],
     [ "rpg_os::Ruleset", "classrpg__os_1_1Ruleset.html", null ],
@@ -58,6 +60,7 @@ var hierarchy =
     [ "rpg_os::Spellbook", "classrpg__os_1_1Spellbook.html", null ],
     [ "rpg_os::SpellcastingConfig", "structrpg__os_1_1SpellcastingConfig.html", null ],
     [ "rpg_os::RulesetEngine::SpellResult", "structrpg__os_1_1RulesetEngine_1_1SpellResult.html", null ],
+    [ "rpg_os::StatBonus", "structrpg__os_1_1StatBonus.html", null ],
     [ "rpg_os::Weight", "structrpg__os_1_1Weight.html", null ],
     [ "rpg_os::WorldState", "classrpg__os_1_1WorldState.html", null ]
 ];

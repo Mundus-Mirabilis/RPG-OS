@@ -145,6 +145,12 @@ Functions</h2></td></tr>
 <tr class="separator:a052de4e8667b93832ac72b8fc429f61f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d2044028df4629e86d8fa82a2bcd239" id="r_a2d2044028df4629e86d8fa82a2bcd239"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__checks_8cpp.html#a2d2044028df4629e86d8fa82a2bcd239">TEST_CASE</a> (&quot;Additive threshold: natural 20 always hits, natural 1 always misses&quot;)</td></tr>
 <tr class="separator:a2d2044028df4629e86d8fa82a2bcd239"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07b74841df6e7acd0c0046c52fa4621d" id="r_a07b74841df6e7acd0c0046c52fa4621d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__checks_8cpp.html#a07b74841df6e7acd0c0046c52fa4621d">TEST_CASE</a> (&quot;Additive threshold: bonus dice are rolled and added to the total&quot;)</td></tr>
+<tr class="separator:a07b74841df6e7acd0c0046c52fa4621d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a330adbd23b0fd89efe25bbeb188eb6e9" id="r_a330adbd23b0fd89efe25bbeb188eb6e9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__checks_8cpp.html#a330adbd23b0fd89efe25bbeb188eb6e9">TEST_CASE</a> (&quot;Additive threshold: autoFail fails the check without rolling&quot;)</td></tr>
+<tr class="separator:a330adbd23b0fd89efe25bbeb188eb6e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bc23d6b334ba51c9e86f297063814b2" id="r_a6bc23d6b334ba51c9e86f297063814b2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__checks_8cpp.html#a6bc23d6b334ba51c9e86f297063814b2">TEST_CASE</a> (&quot;Additive threshold: advantage/disadvantage rolls twice and keeps the better roll&quot;)</td></tr>
+<tr class="separator:a6bc23d6b334ba51c9e86f297063814b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a029cf390004154400cc97da4db5ea557" id="r_a029cf390004154400cc97da4db5ea557"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__checks_8cpp.html#a029cf390004154400cc97da4db5ea557">TEST_CASE</a> (&quot;Additive threshold: uses params.difficulty as DC when no target stat&quot;)</td></tr>
 <tr class="separator:a029cf390004154400cc97da4db5ea557"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac97c238aa34fe1676587f58e45c8871b" id="r_ac97c238aa34fe1676587f58e45c8871b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__checks_8cpp.html#ac97c238aa34fe1676587f58e45c8871b">TEST_CASE</a> (&quot;Pool: unmodified skill check succeeds with pool left&quot;)</td></tr>
@@ -198,8 +204,74 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition in file <a class="el" href="test__checks_8cpp_source.html">test_checks.cpp</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a id="a6bc23d6b334ba51c9e86f297063814b2" name="a6bc23d6b334ba51c9e86f297063814b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bc23d6b334ba51c9e86f297063814b2">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[1/28]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;Additive threshold: advantage/disadvantage rolls twice and keeps the better roll&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="test__checks_8cpp_source.html#l00231">231</a> of file <a class="el" href="test__checks_8cpp_source.html">test_checks.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="namespacerpg__os.html#a2fe23abe4211557387324614b880a9bca1b2430d20c750dada9aaaed48b4eb8f1">rpg_os::Advantage</a>, <a class="el" href="checks_8hpp_source.html#l00211">rpg_os::CheckParams::advantage</a>, <a class="el" href="namespacerpg__os.html#a2fe23abe4211557387324614b880a9bcae755d083f9085a585ef791919be5a004">rpg_os::Disadvantage</a>, <a class="el" href="checks_8hpp_source.html#l00573">rpg_os::resolveCheck()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="test__util_8hpp_source.html#l00064">MockStats::values</a>.</p>
+
+</div>
+</div>
+<a id="a330adbd23b0fd89efe25bbeb188eb6e9" name="a330adbd23b0fd89efe25bbeb188eb6e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a330adbd23b0fd89efe25bbeb188eb6e9">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[2/28]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;Additive threshold: autoFail fails the check without rolling&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="test__checks_8cpp_source.html#l00214">214</a> of file <a class="el" href="test__checks_8cpp_source.html">test_checks.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="checks_8hpp_source.html#l00219">rpg_os::CheckParams::autoFail</a>, <a class="el" href="checks_8hpp_source.html#l00573">rpg_os::resolveCheck()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="test__util_8hpp_source.html#l00064">MockStats::values</a>.</p>
+
+</div>
+</div>
+<a id="a07b74841df6e7acd0c0046c52fa4621d" name="a07b74841df6e7acd0c0046c52fa4621d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07b74841df6e7acd0c0046c52fa4621d">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[3/28]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;Additive threshold: bonus dice are rolled and added to the total&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="test__checks_8cpp_source.html#l00189">189</a> of file <a class="el" href="test__checks_8cpp_source.html">test_checks.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="checks_8hpp_source.html#l00215">rpg_os::CheckParams::bonusDice</a>, <a class="el" href="checks_8hpp_source.html#l00573">rpg_os::resolveCheck()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="test__util_8hpp_source.html#l00064">MockStats::values</a>.</p>
+
+</div>
+</div>
 <a id="a052de4e8667b93832ac72b8fc429f61f" name="a052de4e8667b93832ac72b8fc429f61f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a052de4e8667b93832ac72b8fc429f61f">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[1/25]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a052de4e8667b93832ac72b8fc429f61f">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[4/28]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -216,12 +288,12 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="test__checks_8cpp_source.html#l00145">145</a> of file <a class="el" href="test__checks_8cpp_source.html">test_checks.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="checks_8hpp_source.html#l00523">rpg_os::resolveCheck()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="test__util_8hpp_source.html#l00064">MockStats::values</a>.</p>
+<p class="reference">References <a class="el" href="checks_8hpp_source.html#l00573">rpg_os::resolveCheck()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="test__util_8hpp_source.html#l00064">MockStats::values</a>.</p>
 
 </div>
 </div>
 <a id="a2d2044028df4629e86d8fa82a2bcd239" name="a2d2044028df4629e86d8fa82a2bcd239"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2d2044028df4629e86d8fa82a2bcd239">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[2/25]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d2044028df4629e86d8fa82a2bcd239">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[5/28]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -248,12 +320,12 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="test__checks_8cpp_source.html#l00170">170</a> of file <a class="el" href="test__checks_8cpp_source.html">test_checks.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="checks_8hpp_source.html#l00523">rpg_os::resolveCheck()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="test__util_8hpp_source.html#l00064">MockStats::values</a>.</p>
+<p class="reference">References <a class="el" href="checks_8hpp_source.html#l00573">rpg_os::resolveCheck()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="test__util_8hpp_source.html#l00064">MockStats::values</a>.</p>
 
 </div>
 </div>
 <a id="a029cf390004154400cc97da4db5ea557" name="a029cf390004154400cc97da4db5ea557"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a029cf390004154400cc97da4db5ea557">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[3/25]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a029cf390004154400cc97da4db5ea557">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[6/28]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -268,14 +340,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__checks_8cpp_source.html#l00189">189</a> of file <a class="el" href="test__checks_8cpp_source.html">test_checks.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__checks_8cpp_source.html#l00260">260</a> of file <a class="el" href="test__checks_8cpp_source.html">test_checks.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="checks_8hpp_source.html#l00122">rpg_os::CheckRecipe::bonusStats</a>, <a class="el" href="namespacerpg__os.html#a031baa10011b869e066dd2a216ce55d4a7b29ca96ada2afa3aadbcf55cd61a1ed">rpg_os::Difficulty</a>, <a class="el" href="checks_8hpp_source.html#l00186">rpg_os::CheckParams::difficulty</a>, <a class="el" href="checks_8hpp_source.html#l00523">rpg_os::resolveCheck()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, <a class="el" href="checks_8hpp_source.html#l00116">rpg_os::CheckRecipe::thresholdSource</a>, <a class="el" href="checks_8hpp_source.html#l00119">rpg_os::CheckRecipe::thresholdStat</a>, and <a class="el" href="test__util_8hpp_source.html#l00064">MockStats::values</a>.</p>
+<p class="reference">References <a class="el" href="checks_8hpp_source.html#l00122">rpg_os::CheckRecipe::bonusStats</a>, <a class="el" href="namespacerpg__os.html#a031baa10011b869e066dd2a216ce55d4a7b29ca96ada2afa3aadbcf55cd61a1ed">rpg_os::Difficulty</a>, <a class="el" href="checks_8hpp_source.html#l00202">rpg_os::CheckParams::difficulty</a>, <a class="el" href="checks_8hpp_source.html#l00573">rpg_os::resolveCheck()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, <a class="el" href="checks_8hpp_source.html#l00116">rpg_os::CheckRecipe::thresholdSource</a>, <a class="el" href="checks_8hpp_source.html#l00119">rpg_os::CheckRecipe::thresholdStat</a>, and <a class="el" href="test__util_8hpp_source.html#l00064">MockStats::values</a>.</p>
 
 </div>
 </div>
 <a id="a89dbe23ed84d8d57f235074f9e20a84a" name="a89dbe23ed84d8d57f235074f9e20a84a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a89dbe23ed84d8d57f235074f9e20a84a">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[4/25]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a89dbe23ed84d8d57f235074f9e20a84a">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[7/28]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -290,14 +362,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__checks_8cpp_source.html#l00641">641</a> of file <a class="el" href="test__checks_8cpp_source.html">test_checks.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__checks_8cpp_source.html#l00712">712</a> of file <a class="el" href="test__checks_8cpp_source.html">test_checks.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="checks_8hpp_source.html#l00523">rpg_os::resolveCheck()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="test__util_8hpp_source.html#l00064">MockStats::values</a>.</p>
+<p class="reference">References <a class="el" href="checks_8hpp_source.html#l00573">rpg_os::resolveCheck()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="test__util_8hpp_source.html#l00064">MockStats::values</a>.</p>
 
 </div>
 </div>
 <a id="af70cab02114865a313dfbd4f5744bc0f" name="af70cab02114865a313dfbd4f5744bc0f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af70cab02114865a313dfbd4f5744bc0f">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[5/25]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af70cab02114865a313dfbd4f5744bc0f">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[8/28]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -322,14 +394,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__checks_8cpp_source.html#l00579">579</a> of file <a class="el" href="test__checks_8cpp_source.html">test_checks.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__checks_8cpp_source.html#l00650">650</a> of file <a class="el" href="test__checks_8cpp_source.html">test_checks.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="namespacerpg__os.html#a0dc66a7ae36ef58a210fec7c99826700a278d01e5af56273bae1bb99a98b370cd">rpg_os::Critical</a>, <a class="el" href="checks_8hpp_source.html#l00523">rpg_os::resolveCheck()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="test__util_8hpp_source.html#l00064">MockStats::values</a>.</p>
+<p class="reference">References <a class="el" href="namespacerpg__os.html#a0dc66a7ae36ef58a210fec7c99826700a278d01e5af56273bae1bb99a98b370cd">rpg_os::Critical</a>, <a class="el" href="checks_8hpp_source.html#l00573">rpg_os::resolveCheck()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="test__util_8hpp_source.html#l00064">MockStats::values</a>.</p>
 
 </div>
 </div>
 <a id="a3683c94178bea3c230fb9d6ba10e0176" name="a3683c94178bea3c230fb9d6ba10e0176"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3683c94178bea3c230fb9d6ba10e0176">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[6/25]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3683c94178bea3c230fb9d6ba10e0176">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[9/28]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -354,14 +426,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__checks_8cpp_source.html#l00559">559</a> of file <a class="el" href="test__checks_8cpp_source.html">test_checks.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__checks_8cpp_source.html#l00630">630</a> of file <a class="el" href="test__checks_8cpp_source.html">test_checks.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="checks_8hpp_source.html#l00523">rpg_os::resolveCheck()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="test__util_8hpp_source.html#l00064">MockStats::values</a>.</p>
+<p class="reference">References <a class="el" href="checks_8hpp_source.html#l00573">rpg_os::resolveCheck()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="test__util_8hpp_source.html#l00064">MockStats::values</a>.</p>
 
 </div>
 </div>
 <a id="a898d56edb1a2109e9113e27416ebbb98" name="a898d56edb1a2109e9113e27416ebbb98"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a898d56edb1a2109e9113e27416ebbb98">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[7/25]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a898d56edb1a2109e9113e27416ebbb98">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[10/28]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -376,14 +448,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__checks_8cpp_source.html#l00541">541</a> of file <a class="el" href="test__checks_8cpp_source.html">test_checks.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__checks_8cpp_source.html#l00612">612</a> of file <a class="el" href="test__checks_8cpp_source.html">test_checks.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="checks_8hpp_source.html#l00523">rpg_os::resolveCheck()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="test__util_8hpp_source.html#l00064">MockStats::values</a>.</p>
+<p class="reference">References <a class="el" href="checks_8hpp_source.html#l00573">rpg_os::resolveCheck()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="test__util_8hpp_source.html#l00064">MockStats::values</a>.</p>
 
 </div>
 </div>
 <a id="adff98a96cee2842ca36c1660962b5cbd" name="adff98a96cee2842ca36c1660962b5cbd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adff98a96cee2842ca36c1660962b5cbd">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[8/25]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#adff98a96cee2842ca36c1660962b5cbd">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[11/28]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -398,14 +470,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__checks_8cpp_source.html#l00509">509</a> of file <a class="el" href="test__checks_8cpp_source.html">test_checks.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__checks_8cpp_source.html#l00580">580</a> of file <a class="el" href="test__checks_8cpp_source.html">test_checks.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="namespacerpg__os.html#a5d0f76e637716d8f9bedca406ff39fe6a429ee94cd13d541a0d434e93c798ac4c">rpg_os::Difficult</a>, <a class="el" href="checks_8hpp_source.html#l00193">rpg_os::CheckParams::difficultyScale</a>, <a class="el" href="namespacerpg__os.html#a5d0f76e637716d8f9bedca406ff39fe6a7f943921724d63dc0ac9c6febf99fa88">rpg_os::Easy</a>, <a class="el" href="checks_8hpp_source.html#l00523">rpg_os::resolveCheck()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="test__util_8hpp_source.html#l00064">MockStats::values</a>.</p>
+<p class="reference">References <a class="el" href="namespacerpg__os.html#a5d0f76e637716d8f9bedca406ff39fe6a429ee94cd13d541a0d434e93c798ac4c">rpg_os::Difficult</a>, <a class="el" href="checks_8hpp_source.html#l00209">rpg_os::CheckParams::difficultyScale</a>, <a class="el" href="namespacerpg__os.html#a5d0f76e637716d8f9bedca406ff39fe6a7f943921724d63dc0ac9c6febf99fa88">rpg_os::Easy</a>, <a class="el" href="checks_8hpp_source.html#l00573">rpg_os::resolveCheck()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="test__util_8hpp_source.html#l00064">MockStats::values</a>.</p>
 
 </div>
 </div>
 <a id="a52ab89555420efe59b5a4be2d07298a6" name="a52ab89555420efe59b5a4be2d07298a6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a52ab89555420efe59b5a4be2d07298a6">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[9/25]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a52ab89555420efe59b5a4be2d07298a6">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[12/28]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -420,14 +492,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__checks_8cpp_source.html#l00465">465</a> of file <a class="el" href="test__checks_8cpp_source.html">test_checks.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__checks_8cpp_source.html#l00536">536</a> of file <a class="el" href="test__checks_8cpp_source.html">test_checks.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="namespacerpg__os.html#a0dc66a7ae36ef58a210fec7c99826700ae139a585510a502bbf1841cf589f5086">rpg_os::Failure</a>, <a class="el" href="namespacerpg__os.html#a0dc66a7ae36ef58a210fec7c99826700a697c0f6712edee06e7cc9e3aba782ea0">rpg_os::Fumble</a>, <a class="el" href="checks_8hpp_source.html#l00523">rpg_os::resolveCheck()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="test__util_8hpp_source.html#l00064">MockStats::values</a>.</p>
+<p class="reference">References <a class="el" href="namespacerpg__os.html#a0dc66a7ae36ef58a210fec7c99826700ae139a585510a502bbf1841cf589f5086">rpg_os::Failure</a>, <a class="el" href="namespacerpg__os.html#a0dc66a7ae36ef58a210fec7c99826700a697c0f6712edee06e7cc9e3aba782ea0">rpg_os::Fumble</a>, <a class="el" href="checks_8hpp_source.html#l00573">rpg_os::resolveCheck()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="test__util_8hpp_source.html#l00064">MockStats::values</a>.</p>
 
 </div>
 </div>
 <a id="a270b222c4f5223f4f3091de0feaec775" name="a270b222c4f5223f4f3091de0feaec775"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a270b222c4f5223f4f3091de0feaec775">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[10/25]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a270b222c4f5223f4f3091de0feaec775">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[13/28]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -452,14 +524,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__checks_8cpp_source.html#l00426">426</a> of file <a class="el" href="test__checks_8cpp_source.html">test_checks.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__checks_8cpp_source.html#l00497">497</a> of file <a class="el" href="test__checks_8cpp_source.html">test_checks.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="namespacerpg__os.html#a0dc66a7ae36ef58a210fec7c99826700a278d01e5af56273bae1bb99a98b370cd">rpg_os::Critical</a>, <a class="el" href="namespacerpg__os.html#a0dc66a7ae36ef58a210fec7c99826700ae139a585510a502bbf1841cf589f5086">rpg_os::Failure</a>, <a class="el" href="namespacerpg__os.html#a0dc66a7ae36ef58a210fec7c99826700a697c0f6712edee06e7cc9e3aba782ea0">rpg_os::Fumble</a>, <a class="el" href="checks_8hpp_source.html#l00523">rpg_os::resolveCheck()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, <a class="el" href="namespacerpg__os.html#a0dc66a7ae36ef58a210fec7c99826700ab4c2b550635fe54fd29f2b64dfaca55d">rpg_os::Special</a>, <a class="el" href="namespacerpg__os.html#a0dc66a7ae36ef58a210fec7c99826700a505a83f220c02df2f85c3810cd9ceb38">rpg_os::Success</a>, and <a class="el" href="test__util_8hpp_source.html#l00064">MockStats::values</a>.</p>
+<p class="reference">References <a class="el" href="namespacerpg__os.html#a0dc66a7ae36ef58a210fec7c99826700a278d01e5af56273bae1bb99a98b370cd">rpg_os::Critical</a>, <a class="el" href="namespacerpg__os.html#a0dc66a7ae36ef58a210fec7c99826700ae139a585510a502bbf1841cf589f5086">rpg_os::Failure</a>, <a class="el" href="namespacerpg__os.html#a0dc66a7ae36ef58a210fec7c99826700a697c0f6712edee06e7cc9e3aba782ea0">rpg_os::Fumble</a>, <a class="el" href="checks_8hpp_source.html#l00573">rpg_os::resolveCheck()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, <a class="el" href="namespacerpg__os.html#a0dc66a7ae36ef58a210fec7c99826700ab4c2b550635fe54fd29f2b64dfaca55d">rpg_os::Special</a>, <a class="el" href="namespacerpg__os.html#a0dc66a7ae36ef58a210fec7c99826700a505a83f220c02df2f85c3810cd9ceb38">rpg_os::Success</a>, and <a class="el" href="test__util_8hpp_source.html#l00064">MockStats::values</a>.</p>
 
 </div>
 </div>
 <a id="a08702ce8f4f8aa2f8a5c51c9837e1ab3" name="a08702ce8f4f8aa2f8a5c51c9837e1ab3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a08702ce8f4f8aa2f8a5c51c9837e1ab3">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[11/25]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a08702ce8f4f8aa2f8a5c51c9837e1ab3">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[14/28]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -474,14 +546,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__checks_8cpp_source.html#l00489">489</a> of file <a class="el" href="test__checks_8cpp_source.html">test_checks.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__checks_8cpp_source.html#l00560">560</a> of file <a class="el" href="test__checks_8cpp_source.html">test_checks.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="checks_8hpp_source.html#l00186">rpg_os::CheckParams::difficulty</a>, <a class="el" href="checks_8hpp_source.html#l00523">rpg_os::resolveCheck()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="test__util_8hpp_source.html#l00064">MockStats::values</a>.</p>
+<p class="reference">References <a class="el" href="checks_8hpp_source.html#l00202">rpg_os::CheckParams::difficulty</a>, <a class="el" href="checks_8hpp_source.html#l00573">rpg_os::resolveCheck()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="test__util_8hpp_source.html#l00064">MockStats::values</a>.</p>
 
 </div>
 </div>
 <a id="ace6b1211d7169ada54af0ffff8b40f05" name="ace6b1211d7169ada54af0ffff8b40f05"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ace6b1211d7169ada54af0ffff8b40f05">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[12/25]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ace6b1211d7169ada54af0ffff8b40f05">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[15/28]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -496,14 +568,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__checks_8cpp_source.html#l00230">230</a> of file <a class="el" href="test__checks_8cpp_source.html">test_checks.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__checks_8cpp_source.html#l00301">301</a> of file <a class="el" href="test__checks_8cpp_source.html">test_checks.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="checks_8hpp_source.html#l00186">rpg_os::CheckParams::difficulty</a>, <a class="el" href="checks_8hpp_source.html#l00523">rpg_os::resolveCheck()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="test__util_8hpp_source.html#l00064">MockStats::values</a>.</p>
+<p class="reference">References <a class="el" href="checks_8hpp_source.html#l00202">rpg_os::CheckParams::difficulty</a>, <a class="el" href="checks_8hpp_source.html#l00573">rpg_os::resolveCheck()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="test__util_8hpp_source.html#l00064">MockStats::values</a>.</p>
 
 </div>
 </div>
 <a id="a5ac2fea547dda182aa44ec6c4b1a49e9" name="a5ac2fea547dda182aa44ec6c4b1a49e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5ac2fea547dda182aa44ec6c4b1a49e9">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[13/25]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ac2fea547dda182aa44ec6c4b1a49e9">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[16/28]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -528,14 +600,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__checks_8cpp_source.html#l00267">267</a> of file <a class="el" href="test__checks_8cpp_source.html">test_checks.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__checks_8cpp_source.html#l00338">338</a> of file <a class="el" href="test__checks_8cpp_source.html">test_checks.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="checks_8hpp_source.html#l00523">rpg_os::resolveCheck()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="test__util_8hpp_source.html#l00064">MockStats::values</a>.</p>
+<p class="reference">References <a class="el" href="checks_8hpp_source.html#l00573">rpg_os::resolveCheck()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="test__util_8hpp_source.html#l00064">MockStats::values</a>.</p>
 
 </div>
 </div>
 <a id="a9b9250ec5d92948351177c68bec7651a" name="a9b9250ec5d92948351177c68bec7651a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9b9250ec5d92948351177c68bec7651a">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[14/25]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b9250ec5d92948351177c68bec7651a">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[17/28]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -550,14 +622,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__checks_8cpp_source.html#l00254">254</a> of file <a class="el" href="test__checks_8cpp_source.html">test_checks.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__checks_8cpp_source.html#l00325">325</a> of file <a class="el" href="test__checks_8cpp_source.html">test_checks.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="checks_8hpp_source.html#l00186">rpg_os::CheckParams::difficulty</a>, <a class="el" href="checks_8hpp_source.html#l00523">rpg_os::resolveCheck()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="test__util_8hpp_source.html#l00064">MockStats::values</a>.</p>
+<p class="reference">References <a class="el" href="checks_8hpp_source.html#l00202">rpg_os::CheckParams::difficulty</a>, <a class="el" href="checks_8hpp_source.html#l00573">rpg_os::resolveCheck()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="test__util_8hpp_source.html#l00064">MockStats::values</a>.</p>
 
 </div>
 </div>
 <a id="ac97c238aa34fe1676587f58e45c8871b" name="ac97c238aa34fe1676587f58e45c8871b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac97c238aa34fe1676587f58e45c8871b">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[15/25]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac97c238aa34fe1676587f58e45c8871b">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[18/28]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -572,14 +644,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__checks_8cpp_source.html#l00212">212</a> of file <a class="el" href="test__checks_8cpp_source.html">test_checks.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__checks_8cpp_source.html#l00283">283</a> of file <a class="el" href="test__checks_8cpp_source.html">test_checks.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="checks_8hpp_source.html#l00523">rpg_os::resolveCheck()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="test__util_8hpp_source.html#l00064">MockStats::values</a>.</p>
+<p class="reference">References <a class="el" href="checks_8hpp_source.html#l00573">rpg_os::resolveCheck()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="test__util_8hpp_source.html#l00064">MockStats::values</a>.</p>
 
 </div>
 </div>
 <a id="a2f3e0413e2a531f4ed3ed02df934c894" name="a2f3e0413e2a531f4ed3ed02df934c894"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2f3e0413e2a531f4ed3ed02df934c894">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[16/25]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f3e0413e2a531f4ed3ed02df934c894">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[19/28]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -594,14 +666,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__checks_8cpp_source.html#l00654">654</a> of file <a class="el" href="test__checks_8cpp_source.html">test_checks.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__checks_8cpp_source.html#l00725">725</a> of file <a class="el" href="test__checks_8cpp_source.html">test_checks.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="checks_8hpp_source.html#l00203">rpg_os::qualityLevelFromRemaining()</a>.</p>
+<p class="reference">References <a class="el" href="checks_8hpp_source.html#l00229">rpg_os::qualityLevelFromRemaining()</a>.</p>
 
 </div>
 </div>
 <a id="a75470bbad939db076c3a821d12725b5c" name="a75470bbad939db076c3a821d12725b5c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a75470bbad939db076c3a821d12725b5c">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[17/25]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a75470bbad939db076c3a821d12725b5c">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[20/28]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -616,14 +688,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__checks_8cpp_source.html#l00617">617</a> of file <a class="el" href="test__checks_8cpp_source.html">test_checks.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__checks_8cpp_source.html#l00688">688</a> of file <a class="el" href="test__checks_8cpp_source.html">test_checks.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="checks_8hpp_source.html#l00523">rpg_os::resolveCheck()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="test__util_8hpp_source.html#l00064">MockStats::values</a>.</p>
+<p class="reference">References <a class="el" href="checks_8hpp_source.html#l00573">rpg_os::resolveCheck()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="test__util_8hpp_source.html#l00064">MockStats::values</a>.</p>
 
 </div>
 </div>
 <a id="a1ea18c901f8bcbe0fae35b48d1e331a0" name="a1ea18c901f8bcbe0fae35b48d1e331a0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1ea18c901f8bcbe0fae35b48d1e331a0">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[18/25]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ea18c901f8bcbe0fae35b48d1e331a0">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[21/28]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -638,14 +710,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__checks_8cpp_source.html#l00599">599</a> of file <a class="el" href="test__checks_8cpp_source.html">test_checks.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__checks_8cpp_source.html#l00670">670</a> of file <a class="el" href="test__checks_8cpp_source.html">test_checks.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="checks_8hpp_source.html#l00523">rpg_os::resolveCheck()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="test__util_8hpp_source.html#l00064">MockStats::values</a>.</p>
+<p class="reference">References <a class="el" href="checks_8hpp_source.html#l00573">rpg_os::resolveCheck()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="test__util_8hpp_source.html#l00064">MockStats::values</a>.</p>
 
 </div>
 </div>
 <a id="a690528755ed0635abadeb8906cf530f1" name="a690528755ed0635abadeb8906cf530f1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a690528755ed0635abadeb8906cf530f1">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[19/25]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a690528755ed0635abadeb8906cf530f1">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[22/28]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -660,14 +732,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__checks_8cpp_source.html#l00330">330</a> of file <a class="el" href="test__checks_8cpp_source.html">test_checks.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__checks_8cpp_source.html#l00401">401</a> of file <a class="el" href="test__checks_8cpp_source.html">test_checks.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="checks_8hpp_source.html#l00523">rpg_os::resolveCheck()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="test__util_8hpp_source.html#l00064">MockStats::values</a>.</p>
+<p class="reference">References <a class="el" href="checks_8hpp_source.html#l00573">rpg_os::resolveCheck()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="test__util_8hpp_source.html#l00064">MockStats::values</a>.</p>
 
 </div>
 </div>
 <a id="a80b7015d64ad3b5c06e62708d1001283" name="a80b7015d64ad3b5c06e62708d1001283"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a80b7015d64ad3b5c06e62708d1001283">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[20/25]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a80b7015d64ad3b5c06e62708d1001283">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[23/28]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -682,14 +754,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__checks_8cpp_source.html#l00300">300</a> of file <a class="el" href="test__checks_8cpp_source.html">test_checks.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__checks_8cpp_source.html#l00371">371</a> of file <a class="el" href="test__checks_8cpp_source.html">test_checks.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="checks_8hpp_source.html#l00186">rpg_os::CheckParams::difficulty</a>, <a class="el" href="checks_8hpp_source.html#l00523">rpg_os::resolveCheck()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="test__util_8hpp_source.html#l00064">MockStats::values</a>.</p>
+<p class="reference">References <a class="el" href="checks_8hpp_source.html#l00202">rpg_os::CheckParams::difficulty</a>, <a class="el" href="checks_8hpp_source.html#l00573">rpg_os::resolveCheck()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="test__util_8hpp_source.html#l00064">MockStats::values</a>.</p>
 
 </div>
 </div>
 <a id="a68e507dd8a7d691b996c11587e5e00b8" name="a68e507dd8a7d691b996c11587e5e00b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a68e507dd8a7d691b996c11587e5e00b8">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[21/25]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a68e507dd8a7d691b996c11587e5e00b8">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[24/28]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -704,14 +776,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__checks_8cpp_source.html#l00317">317</a> of file <a class="el" href="test__checks_8cpp_source.html">test_checks.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__checks_8cpp_source.html#l00388">388</a> of file <a class="el" href="test__checks_8cpp_source.html">test_checks.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="checks_8hpp_source.html#l00186">rpg_os::CheckParams::difficulty</a>, <a class="el" href="checks_8hpp_source.html#l00523">rpg_os::resolveCheck()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="test__util_8hpp_source.html#l00064">MockStats::values</a>.</p>
+<p class="reference">References <a class="el" href="checks_8hpp_source.html#l00202">rpg_os::CheckParams::difficulty</a>, <a class="el" href="checks_8hpp_source.html#l00573">rpg_os::resolveCheck()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="test__util_8hpp_source.html#l00064">MockStats::values</a>.</p>
 
 </div>
 </div>
 <a id="a3976c668b3db3a9e1e79b27c397b9fac" name="a3976c668b3db3a9e1e79b27c397b9fac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3976c668b3db3a9e1e79b27c397b9fac">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[22/25]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3976c668b3db3a9e1e79b27c397b9fac">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[25/28]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -726,14 +798,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__checks_8cpp_source.html#l00288">288</a> of file <a class="el" href="test__checks_8cpp_source.html">test_checks.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__checks_8cpp_source.html#l00359">359</a> of file <a class="el" href="test__checks_8cpp_source.html">test_checks.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="checks_8hpp_source.html#l00523">rpg_os::resolveCheck()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="test__util_8hpp_source.html#l00064">MockStats::values</a>.</p>
+<p class="reference">References <a class="el" href="checks_8hpp_source.html#l00573">rpg_os::resolveCheck()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="test__util_8hpp_source.html#l00064">MockStats::values</a>.</p>
 
 </div>
 </div>
 <a id="a041e8a24fdf3b323657d7a4579d3abb9" name="a041e8a24fdf3b323657d7a4579d3abb9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a041e8a24fdf3b323657d7a4579d3abb9">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[23/25]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a041e8a24fdf3b323657d7a4579d3abb9">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[26/28]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -758,14 +830,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__checks_8cpp_source.html#l00361">361</a> of file <a class="el" href="test__checks_8cpp_source.html">test_checks.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__checks_8cpp_source.html#l00432">432</a> of file <a class="el" href="test__checks_8cpp_source.html">test_checks.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="checks_8hpp_source.html#l00523">rpg_os::resolveCheck()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="test__util_8hpp_source.html#l00064">MockStats::values</a>.</p>
+<p class="reference">References <a class="el" href="checks_8hpp_source.html#l00573">rpg_os::resolveCheck()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="test__util_8hpp_source.html#l00064">MockStats::values</a>.</p>
 
 </div>
 </div>
 <a id="aa2338db9706cb90d90a236e17d96c8aa" name="aa2338db9706cb90d90a236e17d96c8aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa2338db9706cb90d90a236e17d96c8aa">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[24/25]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2338db9706cb90d90a236e17d96c8aa">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[27/28]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -780,14 +852,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__checks_8cpp_source.html#l00380">380</a> of file <a class="el" href="test__checks_8cpp_source.html">test_checks.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__checks_8cpp_source.html#l00451">451</a> of file <a class="el" href="test__checks_8cpp_source.html">test_checks.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="checks_8hpp_source.html#l00523">rpg_os::resolveCheck()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="test__util_8hpp_source.html#l00064">MockStats::values</a>.</p>
+<p class="reference">References <a class="el" href="checks_8hpp_source.html#l00573">rpg_os::resolveCheck()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="test__util_8hpp_source.html#l00064">MockStats::values</a>.</p>
 
 </div>
 </div>
 <a id="ab70e772002ea69c81a8d7da087970972" name="ab70e772002ea69c81a8d7da087970972"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab70e772002ea69c81a8d7da087970972">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[25/25]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab70e772002ea69c81a8d7da087970972">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[28/28]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -812,9 +884,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__checks_8cpp_source.html#l00401">401</a> of file <a class="el" href="test__checks_8cpp_source.html">test_checks.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__checks_8cpp_source.html#l00472">472</a> of file <a class="el" href="test__checks_8cpp_source.html">test_checks.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="checks_8hpp_source.html#l00523">rpg_os::resolveCheck()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="test__util_8hpp_source.html#l00064">MockStats::values</a>.</p>
+<p class="reference">References <a class="el" href="checks_8hpp_source.html#l00573">rpg_os::resolveCheck()</a>, <a class="el" href="test__util_8hpp_source.html#l00050">script()</a>, and <a class="el" href="test__util_8hpp_source.html#l00064">MockStats::values</a>.</p>
 
 </div>
 </div>

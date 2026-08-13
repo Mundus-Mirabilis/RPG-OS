@@ -1,5 +1,8 @@
 var test__checks_8cpp =
 [
+    [ "TEST_CASE", "test__checks_8cpp.html#a6bc23d6b334ba51c9e86f297063814b2", null ],
+    [ "TEST_CASE", "test__checks_8cpp.html#a330adbd23b0fd89efe25bbeb188eb6e9", null ],
+    [ "TEST_CASE", "test__checks_8cpp.html#a07b74841df6e7acd0c0046c52fa4621d", null ],
     [ "TEST_CASE", "test__checks_8cpp.html#a052de4e8667b93832ac72b8fc429f61f", null ],
     [ "TEST_CASE", "test__checks_8cpp.html#a2d2044028df4629e86d8fa82a2bcd239", null ],
     [ "TEST_CASE", "test__checks_8cpp.html#a029cf390004154400cc97da4db5ea557", null ],

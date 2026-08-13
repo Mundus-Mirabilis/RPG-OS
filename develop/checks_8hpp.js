@@ -2,6 +2,11 @@ var checks_8hpp =
 [
     [ "rpg_os::CheckRecipe", "structrpg__os_1_1CheckRecipe.html", "structrpg__os_1_1CheckRecipe" ],
     [ "rpg_os::CheckParams", "structrpg__os_1_1CheckParams.html", "structrpg__os_1_1CheckParams" ],
+    [ "AdvantageMode", "checks_8hpp.html#a2fe23abe4211557387324614b880a9bc", [
+      [ "None", "checks_8hpp.html#a2fe23abe4211557387324614b880a9bca6adf97f83acf6453d4a6a4b1070f3754", null ],
+      [ "Advantage", "checks_8hpp.html#a2fe23abe4211557387324614b880a9bca1b2430d20c750dada9aaaed48b4eb8f1", null ],
+      [ "Disadvantage", "checks_8hpp.html#a2fe23abe4211557387324614b880a9bcae755d083f9085a585ef791919be5a004", null ]
+    ] ],
     [ "Comparison", "checks_8hpp.html#a4ede194e1af239829344bcfe6bf5791f", [
       [ "GreaterEqual", "checks_8hpp.html#a4ede194e1af239829344bcfe6bf5791fa758b05d899def79c9eb864ad4f96be1f", null ],
       [ "LessEqual", "checks_8hpp.html#a4ede194e1af239829344bcfe6bf5791fad3e6fdac55bb7b0edd7834c968ba1f38", null ]
