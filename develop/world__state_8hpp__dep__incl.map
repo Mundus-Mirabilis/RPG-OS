@@ -1,7 +1,13 @@
 <map id="world_state.hpp" name="world_state.hpp">
-<area shape="rect" id="Node000001" title="Minimal shared world bookkeeping." alt="" coords="24,5,151,31"/>
-<area shape="rect" id="Node000002" href="$game__session_8hpp.html" title="The application&#45;facing facade (&quot;OS kernel&quot;)." alt="" coords="16,79,159,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="90,44,90,79,85,79,85,44"/>
-<area shape="rect" id="Node000003" href="$test__bookkeeping_8cpp.html" title="Tests for the universal bookkeeping layer." alt="" coords="5,152,169,177"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="90,118,90,152,85,152,85,118"/>
+<area shape="rect" id="Node000001" title="Minimal shared world bookkeeping." alt="" coords="231,5,358,31"/>
+<area shape="rect" id="Node000002" href="$game__session_8hpp.html" title="The application&#45;facing facade (&quot;OS kernel&quot;)." alt="" coords="223,79,366,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="297,44,297,79,292,79,292,44"/>
+<area shape="rect" id="Node000003" href="$ecs__registry_2main_8cpp.html" title="Dependency&#45;free ECS pattern example." alt="" coords="5,152,88,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="242,110,88,154,86,149,241,105"/>
+<area shape="rect" id="Node000004" href="$test__bookkeeping_8cpp.html" title="Tests for the universal bookkeeping layer." alt="" coords="113,152,277,177"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="269,114,213,154,209,150,266,110"/>
+<area shape="rect" id="Node000005" href="$test__combat__session_8cpp.html" title="Tests for the turn &amp; action&#45;economy orchestrator (rpg_os::CombatSession)." alt="" coords="301,152,488,177"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="323,110,380,150,377,154,320,114"/>
+<area shape="rect" id="Node000006" href="$test__entity__registry_8cpp.html" title="Tests for entity instance ids, handles, and the registry." alt="" coords="513,152,687,177"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="358,104,551,149,550,154,356,110"/>
 </map>

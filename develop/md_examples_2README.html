@@ -128,6 +128,8 @@ $(document).ready(function(){initNavTree('md_examples_2README.html',''); initRes
 <li><code>universal_mode/</code> — the dynamic engine: loads any ruleset JSON at runtime and resolves rules generically (derived stats, named checks, DSA skill checks, D&amp;D attacks).</li>
 <li><code>specific_mode/</code> — the code-generated headers: named members, compiled derived-stat getters, and named check methods, while the character data is still read from the ruleset JSON at runtime.</li>
 <li><code>fight/</code> — fight two archetypes or bestiary entries to the end and announce the winner (CLI-selectable combatants, <code>--csv</code> output for scripts). Built on the combat helpers in <code><a class="el" href="combat_8hpp.html" title="Combat simulation helpers (universal mode).">include/rpg_os/universal/combat.hpp</a></code>; a Monte Carlo ELO ranking that runs many fights in parallel lives in <code>scripts/elo_ranking.py</code>. A spellcaster (e.g. the TDE Magister) fights with magic by default; <code>--no-magic</code> forces a pure weapon fight.</li>
+<li><code>ecs_registry/</code> — the entity-component-system <b>pattern</b> with no third-party dependency: entities are live <code>DynamicEntity</code> sheets addressed by a stable <code>EntityId</code>/<code>EntityHandle</code>, components are plain id-keyed structs, and systems are plain functions over <code>GameSession::entities()</code>. Shows the observer events (<code>OnResourceChanged</code>) driving an HP-bar component and a <code>CombatSession</code> decaying a timed condition across turns.</li>
+<li><code>ecs_entt/</code> — the same idea with <b>EnTT</b> (vendored single header) as the storage layer: each EnTT entity carries a <code>Sheet</code> component owning a <code>DynamicEntity</code>, and an <code>OnResourceChanged</code> listener updates an EnTT <code>HpBar</code> component without polling.</li>
 </ul>
 <p>Build:</p>
 <div class="fragment"><div class="line">cmake -S . -B build -G Ninja &amp;&amp; cmake --build build</div>
@@ -138,6 +140,8 @@ $(document).ready(function(){initNavTree('md_examples_2README.html',''); initRes
 <div class="line">./build/bin/rpg_os_example_fight . --list          # all combatants</div>
 <div class="line">./build/bin/rpg_os_example_fight . --csv --batch 20 irrhalk toad</div>
 <div class="line">./build/bin/rpg_os_example_fight . magister toad   # a mage fights with magic</div>
+<div class="line">./build/bin/rpg_os_example_ecs_registry .          # ECS pattern, no deps</div>
+<div class="line">./build/bin/rpg_os_example_ecs_entt .              # ECS pattern with EnTT</div>
 </div><!-- fragment --><p>Not part of the library itself and not installed. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->

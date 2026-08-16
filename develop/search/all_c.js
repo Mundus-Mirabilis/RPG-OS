@@ -1,7 +1,7 @@
 var searchData=
 [
   ['magicallore_0',['magicalLore',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#afdf4f5a02801c2a55ff58e61542e84e9',1,'rpg_os::generated::tde5e::Character']]],
-  ['main_1',['main',['../fight_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;main.cpp'],['../specific__mode_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;main.cpp'],['../universal__mode_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;main.cpp']]],
+  ['main_1',['main',['../ecs__entt_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;main.cpp'],['../ecs__registry_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;main.cpp'],['../fight_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;main.cpp'],['../specific__mode_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;main.cpp'],['../universal__mode_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;main.cpp']]],
   ['makecombatantspec_2',['makeCombatantSpec',['../namespacerpg__os.html#adacf6091542317212a714e913c4badb1',1,'rpg_os']]],
   ['marginofsuccess_3',['marginOfSuccess',['../structrpg__os_1_1CheckResult.html#a6c8304908ea1ae78358ee2061a1f1175',1,'rpg_os::CheckResult']]],
   ['markslotused_4',['markSlotUsed',['../classrpg__os_1_1Spellbook.html#a489b55eb6cc84dd5620dd35f4031d41d',1,'rpg_os::Spellbook']]],
@@ -10,7 +10,7 @@ var searchData=
   ['math_2ehpp_7',['math.hpp',['../math_8hpp.html',1,'']]],
   ['max_8',['max',['../structrpg__os_1_1ResourcePool.html#a7bf368cc1d3af674ada0830abd202e32',1,'rpg_os::ResourcePool::max'],['../namespacerpg__os_1_1math.html#a54dc832d91bd4b8e77331ac51e3b0db3',1,'rpg_os::math::max()']]],
   ['maxarcaneenergy_9',['maxArcaneEnergy',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a7fd2f680a8c4a5701687d83929bf08fb',1,'rpg_os::generated::tde5e::Character']]],
-  ['maxhitpoints_10',['maxhitpoints',['../classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#a279902d07db099ea98007a3cb17d04ce',1,'rpg_os::generated::dnd5e::Character::maxHitPoints'],['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a64ca33ae7fde112ecf82f93a8f12c568',1,'rpg_os::generated::brp_ugc::Character::maxHitPoints()']]],
+  ['maxhitpoints_10',['maxhitpoints',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a64ca33ae7fde112ecf82f93a8f12c568',1,'rpg_os::generated::brp_ugc::Character::maxHitPoints()'],['../classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#a279902d07db099ea98007a3cb17d04ce',1,'rpg_os::generated::dnd5e::Character::maxHitPoints']]],
   ['maxi_11',['maxI',['../namespacerpg__os_1_1math.html#a960a34f0458986fa0147384ef6698f94',1,'rpg_os::math']]],
   ['maxkarmapoints_12',['maxKarmaPoints',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#aef22841fa7e138c31d31e69c27d431a0',1,'rpg_os::generated::tde5e::Character']]],
   ['maxlifepoints_13',['maxLifePoints',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#ab17c45c1a46d408ab5dc22ce7e112899',1,'rpg_os::generated::tde5e::Character']]],
@@ -34,11 +34,13 @@ var searchData=
   ['modifiertype_31',['ModifierType',['../namespacerpg__os.html#aab9c315b59a58b0733ac5a30a02da3f2',1,'rpg_os']]],
   ['modify_32',['modify',['../structrpg__os_1_1ResourcePool.html#af3038837e8f4a53710617f74284d637d',1,'rpg_os::ResourcePool']]],
   ['modifyresource_33',['modifyResource',['../classrpg__os_1_1DynamicEntity.html#a88bd9431036e2b74bc66ef608ecaf7aa',1,'rpg_os::DynamicEntity']]],
-  ['money_34',['money',['../classrpg__os_1_1DynamicEntity.html#adb575dcf6f39fa3391f68e727c52a1ab',1,'rpg_os::DynamicEntity::money()'],['../classrpg__os_1_1Money.html',1,'rpg_os::Money'],['../classrpg__os_1_1Money.html#a51edeaefa5218a0687edc90b4f316382',1,'rpg_os::Money::Money()=default'],['../classrpg__os_1_1Money.html#a173d51c5586c247d90cb4941845ad4cd',1,'rpg_os::Money::Money(int64_t baseUnits)'],['../classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#ab59b68d218e521503dc390d21f8531e4',1,'rpg_os::generated::dnd5e::Character::money'],['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a8a1b20352e914ba16b838ddf6347b955',1,'rpg_os::generated::tde5e::Character::money'],['../classrpg__os_1_1DynamicEntity.html#a733b6c220339e4d42ac6b61f13565698',1,'rpg_os::DynamicEntity::money()']]],
+  ['money_34',['money',['../classrpg__os_1_1Money.html',1,'rpg_os::Money'],['../classrpg__os_1_1Money.html#a173d51c5586c247d90cb4941845ad4cd',1,'rpg_os::Money::Money(int64_t baseUnits)'],['../classrpg__os_1_1Money.html#a51edeaefa5218a0687edc90b4f316382',1,'rpg_os::Money::Money()=default'],['../classrpg__os_1_1DynamicEntity.html#adb575dcf6f39fa3391f68e727c52a1ab',1,'rpg_os::DynamicEntity::money() const noexcept'],['../classrpg__os_1_1DynamicEntity.html#a733b6c220339e4d42ac6b61f13565698',1,'rpg_os::DynamicEntity::money() noexcept'],['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a8a1b20352e914ba16b838ddf6347b955',1,'rpg_os::generated::tde5e::Character::money'],['../classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#ab59b68d218e521503dc390d21f8531e4',1,'rpg_os::generated::dnd5e::Character::money']]],
   ['money_2ehpp_35',['money.hpp',['../money_8hpp.html',1,'']]],
   ['monte_20carlo_20elo_20ranking_36',['Combat simulation &amp; Monte Carlo ELO ranking',['../index.html#autotoc_md8',1,'']]],
-  ['multiplier_37',['Multiplier',['../classrpg__os_1_1CostTable.html#aa3019c91e18a440b7b275be56cbb4aaeaee34a21131a5636ee8dcf521e2369bee',1,'rpg_os::CostTable']]],
-  ['multiply_38',['Multiply',['../namespacerpg__os.html#aab9c315b59a58b0733ac5a30a02da3f2ae257376d913f3b53cbb4a9b19d770648',1,'rpg_os']]],
-  ['music_39',['music',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a3cbba4020786dd3a50918864f9d4d847',1,'rpg_os::generated::tde5e::Character']]],
-  ['mythslegends_40',['mythsLegends',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a9da1a5eb657be9cedc2a63806072b3a8',1,'rpg_os::generated::tde5e::Character']]]
+  ['move_37',['Move',['../namespacerpg__os.html#a6a13cad429ddc557ce73339a0091284ea6bc362dbf494c61ea117fe3c71ca48a5',1,'rpg_os']]],
+  ['movement_38',['movement',['../structrpg__os_1_1ActionBudget.html#a18644c5d57995c3297cdf11a2db53289',1,'rpg_os::ActionBudget']]],
+  ['multiplier_39',['Multiplier',['../classrpg__os_1_1CostTable.html#aa3019c91e18a440b7b275be56cbb4aaeaee34a21131a5636ee8dcf521e2369bee',1,'rpg_os::CostTable']]],
+  ['multiply_40',['Multiply',['../namespacerpg__os.html#aab9c315b59a58b0733ac5a30a02da3f2ae257376d913f3b53cbb4a9b19d770648',1,'rpg_os']]],
+  ['music_41',['music',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a3cbba4020786dd3a50918864f9d4d847',1,'rpg_os::generated::tde5e::Character']]],
+  ['mythslegends_42',['mythsLegends',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a9da1a5eb657be9cedc2a63806072b3a8',1,'rpg_os::generated::tde5e::Character']]]
 ];

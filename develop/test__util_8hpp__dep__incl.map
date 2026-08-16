@@ -1,21 +1,25 @@
 <map id="test_util.hpp" name="test_util.hpp">
-<area shape="rect" id="Node000001" title="Shared helpers for the rpg_os test suite." alt="" coords="727,5,829,31"/>
+<area shape="rect" id="Node000001" title="Shared helpers for the rpg_os test suite." alt="" coords="937,5,1040,31"/>
 <area shape="rect" id="Node000002" href="$test__bookkeeping_8cpp.html" title="Tests for the universal bookkeeping layer." alt="" coords="5,79,169,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="713,28,181,81,170,83,169,77,180,76,713,23"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="924,26,604,46,181,81,170,82,169,77,180,76,604,41,923,20"/>
 <area shape="rect" id="Node000003" href="$test__checks_8cpp.html" title="Tests for the generic, data&#45;driven check resolver (rpg_os::checks)." alt="" coords="193,79,320,104"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="713,30,332,81,321,83,320,78,331,76,713,25"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="924,27,665,47,332,81,321,83,320,77,331,76,664,42,923,21"/>
 <area shape="rect" id="Node000004" href="$test__codegen__output_8cpp.html" title="Tests for the generated &quot;specific mode&quot; headers in generated/." alt="" coords="344,79,529,104"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="714,35,492,81,491,76,713,30"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="924,30,526,81,525,76,924,25"/>
 <area shape="rect" id="Node000005" href="$test__combat_8cpp.html" title="Tests for the combat simulation helpers (include/rpg_os/universal/combat.hpp)." alt="" coords="554,79,685,104"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="741,39,646,81,644,76,739,34"/>
-<area shape="rect" id="Node000006" href="$test__data__api_8cpp.html" title="Tests for the engine&#39;s full&#45;coverage data API." alt="" coords="709,79,847,104"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="781,44,781,79,775,79,775,44"/>
-<area shape="rect" id="Node000007" href="$test__dice_8cpp.html" title="Tests for the shared dice engine (rpg_os::DiceExpression, rpg_os::DefaultRandom)." alt="" coords="871,79,979,104"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="815,34,902,76,900,81,812,39"/>
-<area shape="rect" id="Node000008" href="$test__engine_8cpp.html" title="Integration tests for the universal engine facade (rpg_os::RulesetEngine)." alt="" coords="1003,79,1129,104"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="838,31,1020,76,1019,81,837,37"/>
-<area shape="rect" id="Node000009" href="$test__rulesets_8cpp.html" title="Tests that load the real shipped rulesets (the rulesets/ JSON files)." alt="" coords="1153,79,1286,104"/>
-<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="843,27,1153,77,1152,82,842,32"/>
-<area shape="rect" id="Node000010" href="$test__variance_8cpp.html" title="Tests for variance / range selection (rpg_os::Variance, rpg_os::readVariantValue)." alt="" coords="1311,79,1448,104"/>
-<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="843,24,1298,76,1311,78,1310,83,1298,81,843,29"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="925,34,679,81,678,76,924,29"/>
+<area shape="rect" id="Node000006" href="$test__combat__session_8cpp.html" title="Tests for the turn &amp; action&#45;economy orchestrator (rpg_os::CombatSession)." alt="" coords="709,79,895,104"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="947,38,833,81,832,76,945,33"/>
+<area shape="rect" id="Node000007" href="$test__data__api_8cpp.html" title="Tests for the engine&#39;s full&#45;coverage data API." alt="" coords="920,79,1057,104"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="991,44,991,79,986,79,986,44"/>
+<area shape="rect" id="Node000008" href="$test__dice_8cpp.html" title="Tests for the shared dice engine (rpg_os::DiceExpression, rpg_os::DefaultRandom)." alt="" coords="1081,79,1189,104"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="1025,34,1112,76,1110,81,1023,39"/>
+<area shape="rect" id="Node000009" href="$test__engine_8cpp.html" title="Integration tests for the universal engine facade (rpg_os::RulesetEngine)." alt="" coords="1214,79,1339,104"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="1049,31,1231,76,1229,81,1047,37"/>
+<area shape="rect" id="Node000010" href="$test__entity__registry_8cpp.html" title="Tests for entity instance ids, handles, and the registry." alt="" coords="1364,79,1539,104"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="1054,27,1378,76,1377,81,1054,32"/>
+<area shape="rect" id="Node000011" href="$test__rulesets_8cpp.html" title="Tests that load the real shipped rulesets (the rulesets/ JSON files)." alt="" coords="1563,79,1697,104"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="1054,23,1275,45,1552,76,1563,78,1563,83,1551,81,1274,50,1054,28"/>
+<area shape="rect" id="Node000012" href="$test__variance_8cpp.html" title="Tests for variance / range selection (rpg_os::Variance, rpg_os::readVariantValue)." alt="" coords="1721,79,1859,104"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="1054,21,1339,42,1709,76,1722,77,1721,83,1708,81,1338,47,1054,26"/>
 </map>

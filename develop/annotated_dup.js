@@ -12,8 +12,10 @@ var annotated_dup =
           [ "Character", "classrpg__os_1_1generated_1_1tde5e_1_1Character.html", "classrpg__os_1_1generated_1_1tde5e_1_1Character" ]
         ] ]
       ] ],
+      [ "ActionBudget", "structrpg__os_1_1ActionBudget.html", "structrpg__os_1_1ActionBudget" ],
       [ "ActiveEffect", "structrpg__os_1_1ActiveEffect.html", "structrpg__os_1_1ActiveEffect" ],
       [ "Advancement", "classrpg__os_1_1Advancement.html", "classrpg__os_1_1Advancement" ],
+      [ "AppliedAffliction", "structrpg__os_1_1AppliedAffliction.html", "structrpg__os_1_1AppliedAffliction" ],
       [ "AttributeDef", "structrpg__os_1_1AttributeDef.html", "structrpg__os_1_1AttributeDef" ],
       [ "BonusDie", "structrpg__os_1_1BonusDie.html", "structrpg__os_1_1BonusDie" ],
       [ "CheckParams", "structrpg__os_1_1CheckParams.html", "structrpg__os_1_1CheckParams" ],
@@ -21,7 +23,9 @@ var annotated_dup =
       [ "CheckResolver", "classrpg__os_1_1CheckResolver.html", "classrpg__os_1_1CheckResolver" ],
       [ "CheckResult", "structrpg__os_1_1CheckResult.html", "structrpg__os_1_1CheckResult" ],
       [ "CheckTypeDef", "structrpg__os_1_1CheckTypeDef.html", "structrpg__os_1_1CheckTypeDef" ],
+      [ "Combatant", "structrpg__os_1_1Combatant.html", "structrpg__os_1_1Combatant" ],
       [ "CombatantSpec", "structrpg__os_1_1CombatantSpec.html", "structrpg__os_1_1CombatantSpec" ],
+      [ "CombatSession", "classrpg__os_1_1CombatSession.html", "classrpg__os_1_1CombatSession" ],
       [ "CostTable", "classrpg__os_1_1CostTable.html", "classrpg__os_1_1CostTable" ],
       [ "CostTableDef", "structrpg__os_1_1CostTableDef.html", "structrpg__os_1_1CostTableDef" ],
       [ "CurrencySystem", "structrpg__os_1_1CurrencySystem.html", "structrpg__os_1_1CurrencySystem" ],
@@ -35,6 +39,9 @@ var annotated_dup =
       [ "EffectTimeline", "classrpg__os_1_1EffectTimeline.html", "classrpg__os_1_1EffectTimeline" ],
       [ "EncumbranceConfig", "structrpg__os_1_1EncumbranceConfig.html", "structrpg__os_1_1EncumbranceConfig" ],
       [ "EntityContext", "classrpg__os_1_1EntityContext.html", "classrpg__os_1_1EntityContext" ],
+      [ "EntityHandle", "classrpg__os_1_1EntityHandle.html", "classrpg__os_1_1EntityHandle" ],
+      [ "EntityId", "structrpg__os_1_1EntityId.html", "structrpg__os_1_1EntityId" ],
+      [ "EntityRegistry", "classrpg__os_1_1EntityRegistry.html", "classrpg__os_1_1EntityRegistry" ],
       [ "Equipment", "classrpg__os_1_1Equipment.html", "classrpg__os_1_1Equipment" ],
       [ "EvalContext", "classrpg__os_1_1EvalContext.html", "classrpg__os_1_1EvalContext" ],
       [ "EventActionDef", "structrpg__os_1_1EventActionDef.html", "structrpg__os_1_1EventActionDef" ],
@@ -62,6 +69,9 @@ var annotated_dup =
       [ "StatBonus", "structrpg__os_1_1StatBonus.html", "structrpg__os_1_1StatBonus" ],
       [ "Weight", "structrpg__os_1_1Weight.html", "structrpg__os_1_1Weight" ],
       [ "WorldState", "classrpg__os_1_1WorldState.html", "classrpg__os_1_1WorldState" ]
+    ] ],
+    [ "std", "namespacestd.html", [
+      [ "hash< rpg_os::EntityId >", "structstd_1_1hash_3_01rpg__os_1_1EntityId_01_4.html", "structstd_1_1hash_3_01rpg__os_1_1EntityId_01_4" ]
     ] ],
     [ "MockStats", "structMockStats.html", "structMockStats" ],
     [ "ScriptedRng", "structScriptedRng.html", "structScriptedRng" ]

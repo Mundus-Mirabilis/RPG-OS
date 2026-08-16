@@ -1,11 +1,7 @@
 var searchData=
 [
-  ['unknownaffliction_0',['UnknownAffliction',['../namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766a2cab9bb5d931ca91165f25c1be4189c1',1,'rpg_os']]],
-  ['unknowncondition_1',['UnknownCondition',['../namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766a41b6db72fa3a5db6e5fdf39d47e767c3',1,'rpg_os']]],
-  ['unknowncontainer_2',['UnknownContainer',['../namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766aef34acf3252b0a27a9b5b0b3eae373dd',1,'rpg_os']]],
-  ['unknowncosttable_3',['UnknownCostTable',['../namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766a48979b0ea0d774588fe1ef113f43387a',1,'rpg_os']]],
-  ['unknowncurrency_4',['UnknownCurrency',['../namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766ae9364046d848a745b43c8bd144ef597d',1,'rpg_os']]],
-  ['unknowndenomination_5',['UnknownDenomination',['../namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766a927ab2e7bff99240a62f32cea1abc324',1,'rpg_os']]],
-  ['unknownitem_6',['UnknownItem',['../namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766ab94b40e5c60319f4fc15e8166bd8d2af',1,'rpg_os']]],
-  ['unknownspell_7',['UnknownSpell',['../namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766ab1ecdc430320983beb8bc90d62c3db51',1,'rpg_os']]]
+  ['targetstat_0',['TargetStat',['../namespacerpg__os.html#a031baa10011b869e066dd2a216ce55d4aa0fe624424aad8695f9a86a5f115b641',1,'rpg_os']]],
+  ['threshold_1',['threshold',['../classrpg__os_1_1CostTable.html#aa3019c91e18a440b7b275be56cbb4aaea2a63f555989152ba866b43a1faacd680',1,'rpg_os::CostTable::Threshold'],['../namespacerpg__os.html#a95eaa793f5aa7a7b28d2851594d614dca2a63f555989152ba866b43a1faacd680',1,'rpg_os::Threshold']]],
+  ['tostat_2',['ToStat',['../namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753daedc924ddad3e72aa05c6d5b29250fe41',1,'rpg_os']]],
+  ['tothreshold_3',['ToThreshold',['../namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753daac18f68e8a52d0ae7da868601481627e',1,'rpg_os']]]
 ];

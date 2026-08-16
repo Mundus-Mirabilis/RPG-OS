@@ -1,9 +1,8 @@
 var searchData=
 [
-  ['scriptedrng_0',['ScriptedRng',['../structScriptedRng.html',1,'']]],
-  ['skilldef_1',['SkillDef',['../structrpg__os_1_1SkillDef.html',1,'rpg_os']]],
-  ['spellbook_2',['Spellbook',['../classrpg__os_1_1Spellbook.html',1,'rpg_os']]],
-  ['spellcastingconfig_3',['SpellcastingConfig',['../structrpg__os_1_1SpellcastingConfig.html',1,'rpg_os']]],
-  ['spellresult_4',['SpellResult',['../structrpg__os_1_1RulesetEngine_1_1SpellResult.html',1,'rpg_os::RulesetEngine']]],
-  ['statbonus_5',['StatBonus',['../structrpg__os_1_1StatBonus.html',1,'rpg_os']]]
+  ['resourcepool_0',['ResourcePool',['../structrpg__os_1_1ResourcePool.html',1,'rpg_os']]],
+  ['resourcepooldef_1',['ResourcePoolDef',['../structrpg__os_1_1ResourcePoolDef.html',1,'rpg_os']]],
+  ['ruleset_2',['Ruleset',['../classrpg__os_1_1Ruleset.html',1,'rpg_os']]],
+  ['rulesetengine_3',['RulesetEngine',['../classrpg__os_1_1RulesetEngine.html',1,'rpg_os']]],
+  ['rulesetloader_4',['RulesetLoader',['../classrpg__os_1_1RulesetLoader.html',1,'rpg_os']]]
 ];

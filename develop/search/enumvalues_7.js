@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['lessequal_0',['LessEqual',['../namespacerpg__os.html#a4ede194e1af239829344bcfe6bf5791fad3e6fdac55bb7b0edd7834c968ba1f38',1,'rpg_os']]]
+  ['insufficientxp_0',['InsufficientXp',['../namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766ad5bad3d08f3863cfb75243ed6bef5751',1,'rpg_os']]],
+  ['itemnotowned_1',['ItemNotOwned',['../namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766aa02cbd2c1225951f433567e43b12d165',1,'rpg_os']]]
 ];

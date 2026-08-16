@@ -1,6 +1,7 @@
 var classrpg__os_1_1DynamicEntity =
 [
-    [ "AppliedAffliction", "structrpg__os_1_1DynamicEntity_1_1AppliedAffliction.html", "structrpg__os_1_1DynamicEntity_1_1AppliedAffliction" ],
+    [ "AppliedAffliction", "classrpg__os_1_1DynamicEntity.html#a57040c42313d412e5c4c90d6301d4f99", null ],
+    [ "EventSink", "classrpg__os_1_1DynamicEntity.html#abaa08177469d99dc62108f4e44420c7e", null ],
     [ "DynamicEntity", "classrpg__os_1_1DynamicEntity.html#a59e6e4d6a951e59c87e6b3b4bef10328", null ],
     [ "addAffliction", "classrpg__os_1_1DynamicEntity.html#a4b84490714ca8a4541558e0ffc6074b5", null ],
     [ "addCondition", "classrpg__os_1_1DynamicEntity.html#adb312c30565ee046d574f39f8776f9f8", null ],
@@ -18,6 +19,7 @@ var classrpg__os_1_1DynamicEntity =
     [ "conditionStacks", "classrpg__os_1_1DynamicEntity.html#ae482ee8617eddefd3ed401a6c13bb526", null ],
     [ "effects", "classrpg__os_1_1DynamicEntity.html#a163fada3347fa5ce5b6d6ad529a53430", null ],
     [ "effects", "classrpg__os_1_1DynamicEntity.html#a423fe4b4f0cee85adc7922731c984ddf", null ],
+    [ "entityId", "classrpg__os_1_1DynamicEntity.html#a058b6dade58b693b0cf7ace69490f3fd", null ],
     [ "equipment", "classrpg__os_1_1DynamicEntity.html#adc10d2102b1e788db7962fe56d41dccc", null ],
     [ "equipment", "classrpg__os_1_1DynamicEntity.html#aef296d39bbc83446d7dff3d700830276", null ],
     [ "fromJson", "classrpg__os_1_1DynamicEntity.html#aadd2644839f25c337aeb661e43ea824f", null ],
@@ -44,6 +46,8 @@ var classrpg__os_1_1DynamicEntity =
     [ "resource", "classrpg__os_1_1DynamicEntity.html#adcfda1f77bef92daa69a53c3f6f6eb61", null ],
     [ "restrictions", "classrpg__os_1_1DynamicEntity.html#a0ab01b57f5a18571f9a3745fe8b7b7aa", null ],
     [ "setBaseAttribute", "classrpg__os_1_1DynamicEntity.html#aee1b68d2475225e69bd1f554d8c3f136", null ],
+    [ "setEventSink", "classrpg__os_1_1DynamicEntity.html#af2dfad47587f33a7d019c7bbfc15c687", null ],
+    [ "setEventsSuppressed", "classrpg__os_1_1DynamicEntity.html#a1522f9e2ae2dadaba32d7361729f2b3c", null ],
     [ "setTemporaryHitPoints", "classrpg__os_1_1DynamicEntity.html#aac0c0f9b03887856c838c94af1134c08", null ],
     [ "spellbook", "classrpg__os_1_1DynamicEntity.html#addf6f1d7777d20a2ae1ff6396fdf84e4", null ],
     [ "spellbook", "classrpg__os_1_1DynamicEntity.html#a8a44709ee787786fbdf26621cef692f0", null ],

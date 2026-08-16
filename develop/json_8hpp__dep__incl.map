@@ -1,107 +1,128 @@
 <map id="json.hpp" name="json.hpp">
-<area shape="rect" id="Node000001" title="JSON value type used throughout rpg_os." alt="" coords="717,5,795,31"/>
-<area shape="rect" id="Node000002" href="$advancement_8hpp.html" title="Experience and advancement state." alt="" coords="385,152,524,177"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="721,39,480,154,477,150,718,34"/>
-<area shape="rect" id="Node000003" href="$brp__ugc__static_8hpp.html" title=" " alt="" coords="93,225,237,251"/>
-<area shape="poly" id="edge29_Node000001_Node000003" title=" " alt="" coords="704,23,581,27,425,37,276,55,215,67,170,81,133,99,103,120,94,131,88,144,88,159,93,176,103,191,115,204,143,223,140,227,112,208,99,194,88,178,82,160,83,143,89,129,100,116,131,94,168,76,214,61,275,49,425,32,580,22,703,18"/>
-<area shape="rect" id="Node000005" href="$dnd5e__srd__static_8hpp.html" title=" " alt="" coords="501,225,661,251"/>
-<area shape="poly" id="edge30_Node000001_Node000005" title=" " alt="" coords="752,45,727,109,707,146,682,179,647,208,611,228,608,223,644,203,678,175,702,143,722,107,747,43"/>
-<area shape="rect" id="Node000006" href="$specific__mode_2main_8cpp.html" title="Specific mode demo: use the code&#45;generated, strongly typed headers." alt="" coords="461,299,544,324"/>
-<area shape="poly" id="edge57_Node000001_Node000006" title=" " alt="" coords="757,45,751,89,738,146,714,203,696,230,675,253,644,274,610,290,545,307,543,302,608,285,642,270,672,249,692,226,709,201,733,144,746,88,752,44"/>
-<area shape="rect" id="Node000007" href="$dynamic__entity_8hpp.html" title="Dynamic entity (universal mode)." alt="" coords="837,225,987,251"/>
-<area shape="poly" id="edge31_Node000001_Node000007" title=" " alt="" coords="793,35,824,55,859,81,890,113,914,151,920,171,922,191,918,225,912,225,916,191,915,172,910,153,886,116,855,85,821,59,790,40"/>
-<area shape="rect" id="Node000009" href="$engine_8hpp.html" title="RulesetEngine facade (universal mode)." alt="" coords="1034,372,1129,397"/>
-<area shape="poly" id="edge35_Node000001_Node000009" title=" " alt="" coords="808,17,973,21,1078,28,1187,39,1292,55,1385,79,1424,93,1458,110,1484,129,1502,151,1515,178,1518,204,1512,227,1500,249,1481,268,1457,286,1397,316,1327,340,1254,359,1129,380,1128,375,1253,353,1325,335,1395,311,1454,282,1477,264,1495,246,1507,225,1512,203,1509,179,1498,153,1480,133,1455,114,1422,98,1383,84,1291,61,1186,44,1077,33,973,26,808,22"/>
-<area shape="rect" id="Node000020" href="$tde5e__core__static_8hpp.html" title=" " alt="" coords="312,225,477,251"/>
-<area shape="poly" id="edge65_Node000001_Node000020" title=" " alt="" coords="704,24,560,34,377,56,287,73,207,95,143,122,119,137,102,153,97,165,102,176,115,186,134,196,187,211,250,222,312,229,312,234,249,227,186,217,132,201,112,191,98,179,92,165,98,151,116,133,140,117,205,90,286,68,376,51,560,29,704,19"/>
-<area shape="rect" id="Node000021" href="$effects_8hpp.html" title="Active conditions with stack counts and durations." alt="" coords="1145,152,1239,177"/>
-<area shape="poly" id="edge32_Node000001_Node000021" title=" " alt="" coords="809,28,895,48,992,76,1091,115,1169,150,1167,154,1089,119,990,81,894,53,808,33"/>
-<area shape="rect" id="Node000022" href="$equipment_8hpp.html" title="Worn gear: a slot &#45;&gt; item map." alt="" coords="548,152,668,177"/>
-<area shape="poly" id="edge36_Node000001_Node000022" title=" " alt="" coords="733,41,689,81,620,154,616,150,685,77,730,37"/>
-<area shape="rect" id="Node000023" href="$event__system_8hpp.html" title="Shared event system for reactive rules." alt="" coords="1206,79,1349,104"/>
-<area shape="poly" id="edge42_Node000001_Node000023" title=" " alt="" coords="809,24,1206,78,1205,83,808,29"/>
-<area shape="rect" id="Node000024" href="$ruleset__loader_8hpp.html" title="Ruleset loading and validation (universal / dynamic mode)." alt="" coords="978,152,1121,177"/>
-<area shape="poly" id="edge58_Node000001_Node000024" title=" " alt="" coords="809,26,881,44,920,58,957,76,983,94,1007,114,1042,150,1038,154,1003,118,980,98,955,81,918,63,880,49,808,31"/>
-<area shape="rect" id="Node000027" href="$inventory_8hpp.html" title="Carried items: weight and a flat inventory." alt="" coords="113,152,223,177"/>
-<area shape="poly" id="edge51_Node000001_Node000027" title=" " alt="" coords="704,34,498,81,212,154,210,149,497,76,703,28"/>
-<area shape="rect" id="Node000028" href="$spellbook_8hpp.html" title="Known and prepared spells, plus vancian slot usage." alt="" coords="247,152,361,177"/>
-<area shape="poly" id="edge59_Node000001_Node000028" title=" " alt="" coords="708,38,341,154,339,149,706,32"/>
-<area shape="rect" id="Node000029" href="$variance_8hpp.html" title="Variance / range selection for stat values." alt="" coords="793,152,900,177"/>
-<area shape="poly" id="edge66_Node000001_Node000029" title=" " alt="" coords="773,41,842,150,837,153,768,44"/>
-<area shape="rect" id="Node000030" href="$world__state_8hpp.html" title="Minimal shared world bookkeeping." alt="" coords="1661,372,1787,397"/>
-<area shape="poly" id="edge74_Node000001_Node000030" title=" " alt="" coords="808,19,1031,33,1328,60,1469,79,1588,102,1634,115,1670,129,1693,145,1701,163,1701,239,1704,277,1710,315,1723,371,1718,373,1704,316,1698,278,1696,239,1696,164,1689,149,1667,134,1633,120,1587,107,1469,84,1327,65,1030,38,808,24"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="396,183,213,228,212,223,394,178"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="488,182,562,223,559,227,486,186"/>
-<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="538,176,839,223,838,228,537,181"/>
-<area shape="rect" id="Node000012" href="$test__bookkeeping_8cpp.html" title="Tests for the universal bookkeeping layer." alt="" coords="583,519,747,544"/>
-<area shape="poly" id="edge28_Node000002_Node000012" title=" " alt="" coords="377,184,337,201,302,227,287,247,280,264,277,310,277,386,280,413,287,434,301,451,323,468,342,479,368,488,435,503,584,521,583,527,434,508,366,493,340,483,320,473,297,455,283,436,274,414,272,386,272,310,275,263,282,244,298,223,334,196,375,179"/>
-<area shape="poly" id="edge25_Node000002_Node000020" title=" " alt="" coords="438,190,406,227,402,223,434,186"/>
-<area shape="rect" id="Node000004" href="$test__codegen__output_8cpp.html" title="Tests for the generated &quot;specific mode&quot; headers in generated/." alt="" coords="334,445,519,471"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="191,257,414,443,411,447,188,262"/>
-<area shape="poly" id="edge6_Node000005_Node000004" title=" " alt="" coords="580,265,572,295,558,325,531,364,499,398,444,447,440,443,496,395,527,361,554,323,567,293,575,264"/>
-<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="560,262,517,300,514,296,557,258"/>
-<area shape="rect" id="Node000008" href="$check__resolver_8hpp.html" title="Check resolver (universal mode)." alt="" coords="889,299,1036,324"/>
-<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="931,261,957,297,952,300,926,264"/>
-<area shape="poly" id="edge24_Node000007_Node000009" title=" " alt="" coords="894,262,876,293,874,308,879,322,903,339,943,353,1034,374,1033,379,941,359,901,344,875,326,869,309,871,291,890,259"/>
-<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="995,329,1063,369,1061,374,992,333"/>
-<area shape="poly" id="edge19_Node000009_Node000004" title=" " alt="" coords="1021,395,520,449,519,444,1020,390"/>
-<area shape="rect" id="Node000010" href="$combat_8hpp.html" title="Combat simulation helpers (universal mode)." alt="" coords="1436,445,1535,471"/>
-<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="1143,394,1436,445,1435,451,1142,399"/>
-<area shape="rect" id="Node000011" href="$fight_2main_8cpp.html" title="Fight&#45;to&#45;the&#45;end demo (universal mode)." alt="" coords="1357,519,1440,544"/>
-<area shape="poly" id="edge16_Node000009_Node000011" title=" " alt="" coords="1143,394,1286,421,1346,434,1375,443,1388,461,1396,481,1401,518,1396,519,1391,483,1384,463,1372,448,1345,439,1285,426,1142,399"/>
-<area shape="poly" id="edge18_Node000009_Node000012" title=" " alt="" coords="1020,395,915,413,856,428,798,448,764,465,731,484,681,521,678,516,728,480,761,460,796,443,854,423,914,408,1020,390"/>
-<area shape="rect" id="Node000014" href="$game__session_8hpp.html" title="The application&#45;facing facade (&quot;OS kernel&quot;)." alt="" coords="1610,445,1753,471"/>
-<area shape="poly" id="edge14_Node000009_Node000014" title=" " alt="" coords="1143,391,1610,446,1609,451,1142,396"/>
-<area shape="rect" id="Node000015" href="$universal__mode_2main_8cpp.html" title="Universal mode demo: load any ruleset JSON at runtime and resolve rules generically." alt="" coords="809,445,892,471"/>
-<area shape="poly" id="edge17_Node000009_Node000015" title=" " alt="" coords="1032,404,889,448,887,443,1030,399"/>
-<area shape="rect" id="Node000016" href="$test__data__api_8cpp.html" title="Tests for the engine&#39;s full&#45;coverage data API." alt="" coords="917,445,1054,471"/>
-<area shape="poly" id="edge20_Node000009_Node000016" title=" " alt="" coords="1056,408,1003,447,999,443,1053,403"/>
-<area shape="rect" id="Node000017" href="$test__engine_8cpp.html" title="Integration tests for the universal engine facade (rpg_os::RulesetEngine)." alt="" coords="1079,445,1204,471"/>
-<area shape="poly" id="edge21_Node000009_Node000017" title=" " alt="" coords="1102,406,1134,443,1130,447,1098,410"/>
-<area shape="rect" id="Node000018" href="$test__rulesets_8cpp.html" title="Tests that load the real shipped rulesets (the rulesets/ JSON files)." alt="" coords="1228,445,1361,471"/>
-<area shape="poly" id="edge22_Node000009_Node000018" title=" " alt="" coords="1129,399,1261,443,1259,448,1128,404"/>
-<area shape="rect" id="Node000019" href="$test__variance_8cpp.html" title="Tests for variance / range selection (rpg_os::Variance, rpg_os::readVariantValue)." alt="" coords="597,445,734,471"/>
-<area shape="poly" id="edge23_Node000009_Node000019" title=" " alt="" coords="1021,399,733,448,732,443,1020,394"/>
-<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="1463,481,1415,521,1411,516,1459,477"/>
-<area shape="poly" id="edge12_Node000010_Node000012" title=" " alt="" coords="1422,469,1374,473,748,526,747,521,1373,468,1422,463"/>
-<area shape="rect" id="Node000013" href="$test__combat_8cpp.html" title="Tests for the combat simulation helpers (include/rpg_os/universal/combat.hpp)." alt="" coords="1464,519,1595,544"/>
-<area shape="poly" id="edge13_Node000010_Node000013" title=" " alt="" coords="1502,481,1524,517,1520,520,1498,484"/>
-<area shape="poly" id="edge15_Node000014_Node000012" title=" " alt="" coords="1596,473,1591,473,1351,493,1114,509,748,529,748,524,1113,504,1351,488,1590,468,1596,468"/>
-<area shape="poly" id="edge27_Node000020_Node000004" title=" " alt="" coords="401,264,428,445,422,445,396,265"/>
-<area shape="poly" id="edge26_Node000020_Node000006" title=" " alt="" coords="425,256,486,296,484,301,422,260"/>
-<area shape="poly" id="edge33_Node000021_Node000007" title=" " alt="" coords="1135,183,958,228,957,223,1133,178"/>
-<area shape="poly" id="edge34_Node000021_Node000012" title=" " alt="" coords="1254,170,1327,187,1365,203,1400,223,1479,280,1515,309,1546,340,1568,371,1577,403,1577,420,1572,438,1549,473,1532,483,1506,492,1429,507,1325,518,1205,525,953,532,748,533,748,528,953,527,1205,520,1325,513,1428,502,1505,487,1530,478,1545,469,1567,435,1571,419,1572,404,1563,373,1542,343,1512,313,1476,284,1397,228,1363,207,1326,192,1253,175"/>
-<area shape="poly" id="edge37_Node000022_Node000003" title=" " alt="" coords="535,180,237,228,236,223,534,175"/>
-<area shape="poly" id="edge38_Node000022_Node000005" title=" " alt="" coords="601,191,588,226,583,224,596,189"/>
-<area shape="poly" id="edge39_Node000022_Node000007" title=" " alt="" coords="671,178,863,223,862,228,669,183"/>
-<area shape="poly" id="edge41_Node000022_Node000012" title=" " alt="" coords="641,184,661,202,676,224,679,238,676,251,664,287,646,317,605,366,589,388,579,412,577,438,588,469,598,484,611,497,641,516,638,521,608,501,594,488,583,472,572,439,573,410,584,386,601,362,641,314,659,285,671,250,673,238,671,226,657,205,638,188"/>
-<area shape="poly" id="edge40_Node000022_Node000020" title=" " alt="" coords="562,184,430,228,428,223,560,179"/>
-<area shape="poly" id="edge43_Node000023_Node000009" title=" " alt="" coords="1282,117,1289,147,1305,176,1319,188,1337,197,1376,210,1392,216,1403,225,1407,236,1401,252,1375,284,1343,310,1307,331,1269,348,1194,371,1130,382,1129,377,1193,366,1268,343,1305,327,1340,306,1371,280,1396,249,1402,236,1399,228,1389,221,1374,215,1335,202,1316,193,1301,179,1284,149,1277,119"/>
-<area shape="poly" id="edge44_Node000023_Node000014" title=" " alt="" coords="1363,90,1447,99,1490,108,1532,122,1569,141,1598,166,1618,197,1625,236,1625,312,1631,352,1644,389,1675,444,1671,446,1639,391,1626,353,1620,313,1620,237,1613,199,1594,169,1566,145,1530,127,1489,113,1446,104,1362,95"/>
-<area shape="poly" id="edge45_Node000023_Node000024" title=" " alt="" coords="1228,111,1087,154,1085,149,1227,106"/>
-<area shape="rect" id="Node000026" href="$test__event__system_8cpp.html" title="Tests for the shared event system (rpg_os::EventBus, rpg_os::EventData)." alt="" coords="1315,152,1488,177"/>
-<area shape="poly" id="edge50_Node000023_Node000026" title=" " alt="" coords="1310,108,1382,149,1380,154,1308,113"/>
-<area shape="poly" id="edge47_Node000024_Node000007" title=" " alt="" coords="1017,186,936,227,933,223,1014,181"/>
-<area shape="poly" id="edge46_Node000024_Node000008" title=" " alt="" coords="1038,190,1001,252,972,300,967,297,996,249,1033,188"/>
-<area shape="poly" id="edge48_Node000024_Node000009" title=" " alt="" coords="1064,189,1086,249,1094,286,1095,324,1087,372,1081,371,1089,324,1088,287,1081,251,1059,191"/>
-<area shape="rect" id="Node000025" href="$test__ruleset__loader_8cpp.html" title="Tests for the ruleset loader and model (rpg_os::RulesetLoader, rpg_os::Ruleset)." alt="" coords="1213,225,1387,251"/>
-<area shape="poly" id="edge49_Node000024_Node000025" title=" " alt="" coords="1104,179,1260,223,1259,228,1102,184"/>
-<area shape="poly" id="edge52_Node000027_Node000003" title=" " alt="" coords="170,191,168,225,163,225,164,191"/>
-<area shape="poly" id="edge53_Node000027_Node000005" title=" " alt="" coords="238,175,515,223,514,228,237,180"/>
-<area shape="poly" id="edge54_Node000027_Node000007" title=" " alt="" coords="237,175,576,210,837,229,837,235,576,215,237,180"/>
-<area shape="poly" id="edge56_Node000027_Node000012" title=" " alt="" coords="125,185,86,205,48,233,32,249,19,268,11,288,8,310,8,386,10,405,16,419,24,430,36,439,67,453,105,468,144,481,196,491,325,508,464,519,583,525,583,530,463,524,325,513,195,497,143,486,103,473,65,458,33,444,21,434,11,422,5,406,3,386,3,310,6,286,15,265,28,246,45,229,84,200,123,180"/>
-<area shape="poly" id="edge55_Node000027_Node000020" title=" " alt="" coords="218,179,359,223,357,228,217,184"/>
-<area shape="poly" id="edge60_Node000028_Node000003" title=" " alt="" coords="271,186,189,227,187,223,268,181"/>
-<area shape="poly" id="edge61_Node000028_Node000005" title=" " alt="" coords="363,178,537,223,536,228,361,183"/>
-<area shape="poly" id="edge62_Node000028_Node000007" title=" " alt="" coords="375,175,633,206,837,227,837,232,632,211,374,180"/>
-<area shape="poly" id="edge64_Node000028_Node000012" title=" " alt="" coords="238,183,141,206,103,218,83,227,68,246,61,264,59,310,59,386,63,404,74,421,92,436,116,450,180,473,258,492,344,505,431,515,583,525,583,530,430,520,343,511,257,497,178,479,114,455,89,440,70,424,58,406,53,386,53,310,55,263,63,243,80,223,101,213,140,201,237,178"/>
-<area shape="poly" id="edge63_Node000028_Node000020" title=" " alt="" coords="331,184,381,223,378,227,328,188"/>
-<area shape="poly" id="edge67_Node000029_Node000003" title=" " alt="" coords="780,176,238,232,237,227,779,170"/>
-<area shape="poly" id="edge69_Node000029_Node000005" title=" " alt="" coords="791,183,625,228,624,223,790,178"/>
-<area shape="poly" id="edge70_Node000029_Node000007" title=" " alt="" coords="869,186,903,223,899,227,865,189"/>
-<area shape="poly" id="edge71_Node000029_Node000009" title=" " alt="" coords="911,179,957,197,1000,223,1033,259,1057,301,1073,341,1081,371,1076,372,1068,343,1052,304,1029,262,997,227,955,201,909,184"/>
-<area shape="poly" id="edge68_Node000029_Node000010" title=" " alt="" coords="902,179,964,198,1030,223,1163,283,1291,346,1467,443,1464,447,1288,351,1161,287,1028,228,962,203,900,184"/>
-<area shape="poly" id="edge73_Node000029_Node000019" title=" " alt="" coords="835,190,675,446,670,444,830,188"/>
-<area shape="poly" id="edge72_Node000029_Node000020" title=" " alt="" coords="780,179,468,228,467,223,779,174"/>
-<area shape="poly" id="edge75_Node000030_Node000014" title=" " alt="" coords="1712,411,1691,447,1686,444,1708,408"/>
+<area shape="rect" id="Node000001" title="JSON value type used throughout rpg_os." alt="" coords="667,5,744,31"/>
+<area shape="rect" id="Node000002" href="$advancement_8hpp.html" title="Experience and advancement state." alt="" coords="35,152,173,177"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="654,32,415,81,264,120,143,155,142,149,263,115,414,76,653,26"/>
+<area shape="rect" id="Node000003" href="$brp__ugc__static_8hpp.html" title=" " alt="" coords="173,225,317,251"/>
+<area shape="poly" id="edge40_Node000001_Node000003" title=" " alt="" coords="653,23,525,27,362,37,205,54,141,66,94,81,66,94,44,108,28,126,13,153,8,175,14,192,29,205,52,216,110,229,173,234,173,240,109,235,50,221,26,210,10,195,3,175,8,151,24,123,41,104,63,90,92,76,140,61,204,49,362,32,525,22,653,18"/>
+<area shape="rect" id="Node000005" href="$dnd5e__srd__static_8hpp.html" title=" " alt="" coords="341,225,501,251"/>
+<area shape="poly" id="edge41_Node000001_Node000005" title=" " alt="" coords="653,24,504,33,312,54,218,71,134,93,67,120,43,136,25,153,20,165,24,175,141,196,341,223,341,229,140,201,21,179,15,165,20,151,39,132,65,116,132,88,217,66,311,49,503,27,652,18"/>
+<area shape="rect" id="Node000006" href="$specific__mode_2main_8cpp.html" title="Specific mode demo: use the code&#45;generated, strongly typed headers." alt="" coords="488,299,571,324"/>
+<area shape="poly" id="edge72_Node000001_Node000006" title=" " alt="" coords="728,39,750,66,771,101,782,139,782,159,777,178,761,207,739,232,713,252,684,269,625,293,572,306,570,301,623,288,682,264,710,248,736,228,757,204,772,176,777,158,777,140,766,103,746,69,724,42"/>
+<area shape="rect" id="Node000007" href="$dynamic__entity_8hpp.html" title="Dynamic entity (universal mode)." alt="" coords="968,225,1117,251"/>
+<area shape="poly" id="edge42_Node000001_Node000007" title=" " alt="" coords="758,19,830,24,911,35,983,51,1011,63,1030,77,1042,94,1050,114,1056,157,1054,196,1048,226,1043,225,1049,196,1051,157,1045,116,1038,97,1026,81,1008,68,982,57,910,40,830,30,758,24"/>
+<area shape="rect" id="Node000009" href="$engine_8hpp.html" title="RulesetEngine facade (universal mode)." alt="" coords="1419,372,1514,397"/>
+<area shape="poly" id="edge49_Node000001_Node000009" title=" " alt="" coords="758,19,997,30,1318,56,1472,75,1601,98,1651,112,1690,127,1715,144,1724,163,1724,240,1718,273,1701,301,1677,324,1647,342,1613,356,1579,367,1515,381,1514,375,1577,362,1611,351,1644,337,1674,319,1697,297,1713,271,1719,239,1719,164,1711,147,1687,132,1649,117,1599,103,1471,80,1317,61,996,36,758,24"/>
+<area shape="rect" id="Node000026" href="$tde5e__core__static_8hpp.html" title=" " alt="" coords="525,225,691,251"/>
+<area shape="poly" id="edge80_Node000001_Node000026" title=" " alt="" coords="694,44,640,153,614,226,609,224,635,151,690,42"/>
+<area shape="rect" id="Node000027" href="$effects_8hpp.html" title="Active conditions with stack counts and durations." alt="" coords="198,152,293,177"/>
+<area shape="poly" id="edge43_Node000001_Node000027" title=" " alt="" coords="654,36,498,81,279,154,277,149,497,76,653,31"/>
+<area shape="rect" id="Node000028" href="$equipment_8hpp.html" title="Worn gear: a slot &#45;&gt; item map." alt="" coords="317,152,437,177"/>
+<area shape="poly" id="edge50_Node000001_Node000028" title=" " alt="" coords="664,38,560,81,402,154,399,150,558,76,662,33"/>
+<area shape="rect" id="Node000029" href="$event__system_8hpp.html" title="Shared event system for reactive rules." alt="" coords="1150,79,1293,104"/>
+<area shape="poly" id="edge56_Node000001_Node000029" title=" " alt="" coords="758,24,1150,78,1149,83,757,29"/>
+<area shape="rect" id="Node000030" href="$ruleset__loader_8hpp.html" title="Ruleset loading and validation (universal / dynamic mode)." alt="" coords="1390,152,1533,177"/>
+<area shape="poly" id="edge73_Node000001_Node000030" title=" " alt="" coords="758,19,1041,38,1195,55,1258,65,1306,76,1348,92,1387,112,1447,150,1444,154,1385,117,1346,97,1305,81,1257,70,1194,60,1040,44,757,25"/>
+<area shape="rect" id="Node000033" href="$inventory_8hpp.html" title="Carried items: weight and a flat inventory." alt="" coords="462,152,573,177"/>
+<area shape="poly" id="edge66_Node000001_Node000033" title=" " alt="" coords="665,39,629,57,594,81,555,119,527,153,523,150,551,115,590,77,626,53,663,34"/>
+<area shape="rect" id="Node000034" href="$spellbook_8hpp.html" title="Known and prepared spells, plus vancian slot usage." alt="" coords="649,152,762,177"/>
+<area shape="poly" id="edge74_Node000001_Node000034" title=" " alt="" coords="708,45,708,152,703,152,703,45"/>
+<area shape="rect" id="Node000035" href="$variance_8hpp.html" title="Variance / range selection for stat values." alt="" coords="837,152,944,177"/>
+<area shape="poly" id="edge81_Node000001_Node000035" title=" " alt="" coords="748,34,784,53,820,77,859,115,885,150,881,153,855,119,817,81,782,57,745,39"/>
+<area shape="rect" id="Node000036" href="$world__state_8hpp.html" title="Minimal shared world bookkeeping." alt="" coords="889,79,1015,104"/>
+<area shape="poly" id="edge89_Node000001_Node000036" title=" " alt="" coords="758,32,913,76,912,81,757,37"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="140,181,223,223,221,227,137,186"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="169,178,370,223,369,228,168,183"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="187,175,414,195,634,211,968,230,967,236,634,217,414,200,187,180"/>
+<area shape="rect" id="Node000012" href="$test__bookkeeping_8cpp.html" title="Tests for the universal bookkeeping layer." alt="" coords="661,519,825,544"/>
+<area shape="poly" id="edge39_Node000002_Node000012" title=" " alt="" coords="88,189,55,243,42,276,37,310,37,386,43,417,60,438,86,453,118,468,162,483,222,496,369,513,527,523,660,526,660,532,526,528,369,518,221,501,161,489,116,473,83,458,56,442,38,419,32,386,32,310,37,274,50,240,83,187"/>
+<area shape="poly" id="edge36_Node000002_Node000026" title=" " alt="" coords="187,175,527,223,527,228,187,180"/>
+<area shape="rect" id="Node000004" href="$test__codegen__output_8cpp.html" title="Tests for the generated &quot;specific mode&quot; headers in generated/." alt="" coords="414,445,599,471"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="271,257,494,443,491,447,268,262"/>
+<area shape="poly" id="edge6_Node000005_Node000004" title=" " alt="" coords="433,263,505,444,500,446,428,265"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="451,256,513,296,510,301,449,260"/>
+<area shape="rect" id="Node000008" href="$check__resolver_8hpp.html" title="Check resolver (universal mode)." alt="" coords="1343,299,1489,324"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="1117,251,1356,296,1355,301,1116,256"/>
+<area shape="poly" id="edge32_Node000007_Node000009" title=" " alt="" coords="1093,252,1224,296,1288,321,1431,369,1429,374,1286,327,1222,301,1092,257"/>
+<area shape="rect" id="Node000014" href="$combat__session_8hpp.html" title="Turn &amp; action&#45;economy orchestrator (universal mode)." alt="" coords="1191,445,1345,471"/>
+<area shape="poly" id="edge31_Node000007_Node000014" title=" " alt="" coords="1067,259,1258,443,1254,447,1063,263"/>
+<area shape="rect" id="Node000025" href="$entity__registry_8hpp.html" title="Entity handles and a live&#45;instance registry (universal mode)." alt="" coords="973,372,1115,397"/>
+<area shape="poly" id="edge33_Node000007_Node000025" title=" " alt="" coords="1046,265,1047,372,1041,372,1040,265"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="1434,334,1461,370,1456,373,1430,337"/>
+<area shape="poly" id="edge26_Node000009_Node000004" title=" " alt="" coords="1406,393,600,452,599,447,1405,388"/>
+<area shape="rect" id="Node000010" href="$combat_8hpp.html" title="Combat simulation helpers (universal mode)." alt="" coords="2052,445,2151,471"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="1528,388,1754,408,2040,443,2052,445,2051,450,2040,448,1753,414,1527,393"/>
+<area shape="rect" id="Node000011" href="$fight_2main_8cpp.html" title="Fight&#45;to&#45;the&#45;end demo (universal mode)." alt="" coords="2147,519,2229,544"/>
+<area shape="poly" id="edge23_Node000009_Node000011" title=" " alt="" coords="1528,385,1688,390,1887,400,2066,417,2129,429,2164,443,2178,460,2186,481,2191,518,2186,519,2181,482,2174,463,2161,447,2127,434,2065,423,1887,406,1688,395,1527,390"/>
+<area shape="poly" id="edge25_Node000009_Node000012" title=" " alt="" coords="1407,396,1299,416,1239,430,1180,448,1155,461,1129,473,1071,487,992,500,825,523,825,518,991,495,1070,482,1127,468,1152,456,1178,443,1237,425,1298,410,1406,391"/>
+<area shape="poly" id="edge14_Node000009_Node000014" title=" " alt="" coords="1423,404,1301,448,1300,443,1421,399"/>
+<area shape="rect" id="Node000017" href="$game__session_8hpp.html" title="The application&#45;facing facade (&quot;OS kernel&quot;)." alt="" coords="973,445,1115,471"/>
+<area shape="poly" id="edge17_Node000009_Node000017" title=" " alt="" coords="1406,399,1112,448,1112,443,1405,394"/>
+<area shape="rect" id="Node000019" href="$ecs__entt_2main_8cpp.html" title="EnTT integration example (specific implementation of the ECS pattern)." alt="" coords="1369,445,1452,471"/>
+<area shape="poly" id="edge22_Node000009_Node000019" title=" " alt="" coords="1451,410,1422,447,1418,444,1447,407"/>
+<area shape="rect" id="Node000020" href="$universal__mode_2main_8cpp.html" title="Universal mode demo: load any ruleset JSON at runtime and resolve rules generically." alt="" coords="1476,445,1559,471"/>
+<area shape="poly" id="edge24_Node000009_Node000020" title=" " alt="" coords="1485,407,1511,444,1507,447,1481,410"/>
+<area shape="rect" id="Node000021" href="$test__data__api_8cpp.html" title="Tests for the engine&#39;s full&#45;coverage data API." alt="" coords="1583,445,1721,471"/>
+<area shape="poly" id="edge27_Node000009_Node000021" title=" " alt="" coords="1510,400,1623,443,1621,448,1508,405"/>
+<area shape="rect" id="Node000022" href="$test__engine_8cpp.html" title="Integration tests for the universal engine facade (rpg_os::RulesetEngine)." alt="" coords="1745,445,1871,471"/>
+<area shape="poly" id="edge28_Node000009_Node000022" title=" " alt="" coords="1528,396,1754,443,1752,448,1527,401"/>
+<area shape="rect" id="Node000023" href="$test__rulesets_8cpp.html" title="Tests that load the real shipped rulesets (the rulesets/ JSON files)." alt="" coords="1895,445,2028,471"/>
+<area shape="poly" id="edge29_Node000009_Node000023" title=" " alt="" coords="1528,392,1883,443,1895,444,1894,450,1882,448,1527,397"/>
+<area shape="rect" id="Node000024" href="$test__variance_8cpp.html" title="Tests for variance / range selection (rpg_os::Variance, rpg_os::readVariantValue)." alt="" coords="811,445,949,471"/>
+<area shape="poly" id="edge30_Node000009_Node000024" title=" " alt="" coords="1406,395,962,448,949,450,948,444,961,443,1406,390"/>
+<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="2127,477,2175,516,2172,521,2124,481"/>
+<area shape="poly" id="edge12_Node000010_Node000012" title=" " alt="" coords="2038,473,1859,490,1706,500,1447,505,1188,507,1036,511,857,521,825,524,824,519,857,516,1036,506,1188,501,1447,500,1706,495,1858,485,2038,468"/>
+<area shape="rect" id="Node000013" href="$test__combat_8cpp.html" title="Tests for the combat simulation helpers (include/rpg_os/universal/combat.hpp)." alt="" coords="1992,519,2123,544"/>
+<area shape="poly" id="edge13_Node000010_Node000013" title=" " alt="" coords="2089,484,2067,520,2062,517,2085,481"/>
+<area shape="rect" id="Node000015" href="$ecs__registry_2main_8cpp.html" title="Dependency&#45;free ECS pattern example." alt="" coords="1068,519,1151,544"/>
+<area shape="poly" id="edge15_Node000014_Node000015" title=" " alt="" coords="1231,479,1136,521,1134,516,1229,474"/>
+<area shape="rect" id="Node000016" href="$test__combat__session_8cpp.html" title="Tests for the turn &amp; action&#45;economy orchestrator (rpg_os::CombatSession)." alt="" coords="1175,519,1361,544"/>
+<area shape="poly" id="edge16_Node000014_Node000016" title=" " alt="" coords="1271,484,1271,519,1265,519,1265,484"/>
+<area shape="poly" id="edge19_Node000017_Node000012" title=" " alt="" coords="983,476,792,521,791,516,982,471"/>
+<area shape="poly" id="edge18_Node000017_Node000015" title=" " alt="" coords="1066,479,1101,517,1097,520,1062,483"/>
+<area shape="poly" id="edge20_Node000017_Node000016" title=" " alt="" coords="1094,472,1232,516,1231,521,1092,477"/>
+<area shape="rect" id="Node000018" href="$test__entity__registry_8cpp.html" title="Tests for entity instance ids, handles, and the registry." alt="" coords="869,519,1043,544"/>
+<area shape="poly" id="edge21_Node000017_Node000018" title=" " alt="" coords="1021,481,972,521,969,516,1018,477"/>
+<area shape="poly" id="edge34_Node000025_Node000014" title=" " alt="" coords="1094,399,1232,443,1231,448,1092,404"/>
+<area shape="poly" id="edge35_Node000025_Node000017" title=" " alt="" coords="1047,411,1047,445,1041,445,1041,411"/>
+<area shape="poly" id="edge38_Node000026_Node000004" title=" " alt="" coords="605,265,585,325,549,395,517,446,512,444,544,392,580,323,600,264"/>
+<area shape="poly" id="edge37_Node000026_Node000006" title=" " alt="" coords="587,262,544,300,540,296,583,258"/>
+<area shape="poly" id="edge44_Node000027_Node000003" title=" " alt="" coords="248,191,248,225,243,225,243,191"/>
+<area shape="poly" id="edge45_Node000027_Node000005" title=" " alt="" coords="287,180,394,223,392,228,285,185"/>
+<area shape="poly" id="edge46_Node000027_Node000007" title=" " alt="" coords="307,175,497,196,682,213,968,231,967,236,681,218,496,202,306,180"/>
+<area shape="poly" id="edge48_Node000027_Node000012" title=" " alt="" coords="203,185,165,205,128,233,112,250,99,268,91,288,88,310,88,386,90,404,95,419,104,430,115,439,145,453,182,468,221,481,273,492,402,508,541,519,661,525,660,530,541,524,402,514,272,497,220,486,180,473,143,458,112,443,100,434,91,421,85,406,83,386,83,310,86,287,94,265,108,246,124,229,162,201,200,181"/>
+<area shape="poly" id="edge47_Node000027_Node000026" title=" " alt="" coords="307,175,550,223,549,228,306,180"/>
+<area shape="poly" id="edge51_Node000028_Node000003" title=" " alt="" coords="346,186,268,227,266,223,343,181"/>
+<area shape="poly" id="edge52_Node000028_Node000005" title=" " alt="" coords="394,188,416,224,412,227,389,191"/>
+<area shape="poly" id="edge53_Node000028_Node000007" title=" " alt="" coords="451,175,741,207,968,228,967,233,741,212,451,180"/>
+<area shape="poly" id="edge55_Node000028_Node000012" title=" " alt="" coords="305,181,221,201,186,213,163,227,148,246,141,264,139,310,139,386,142,404,154,421,172,436,196,450,259,473,336,491,422,505,509,515,660,525,660,530,508,520,421,510,335,497,257,478,193,454,169,440,150,424,138,406,133,386,133,310,135,263,143,243,160,223,183,209,219,196,304,176"/>
+<area shape="poly" id="edge54_Node000028_Node000026" title=" " alt="" coords="428,179,571,223,570,228,427,184"/>
+<area shape="poly" id="edge57_Node000029_Node000007" title=" " alt="" coords="1194,114,1138,154,1056,227,1053,223,1134,150,1191,109"/>
+<area shape="poly" id="edge58_Node000029_Node000009" title=" " alt="" coords="1307,95,1375,102,1445,113,1506,129,1530,139,1547,150,1565,170,1578,191,1585,212,1587,233,1584,256,1577,278,1551,326,1524,354,1493,374,1490,370,1520,350,1547,322,1572,276,1579,255,1582,233,1580,213,1573,193,1561,173,1544,154,1527,143,1505,134,1444,119,1374,108,1306,101"/>
+<area shape="poly" id="edge59_Node000029_Node000017" title=" " alt="" coords="1205,116,1182,153,1170,189,1164,221,1163,278,1162,306,1158,335,1148,365,1130,399,1102,428,1071,448,1068,443,1099,424,1126,396,1144,363,1153,334,1157,306,1158,278,1159,220,1165,187,1178,151,1200,113"/>
+<area shape="poly" id="edge60_Node000029_Node000030" title=" " alt="" coords="1274,105,1423,149,1422,154,1272,110"/>
+<area shape="rect" id="Node000032" href="$test__event__system_8cpp.html" title="Tests for the shared event system (rpg_os::EventBus, rpg_os::EventData)." alt="" coords="1192,152,1365,177"/>
+<area shape="poly" id="edge65_Node000029_Node000032" title=" " alt="" coords="1241,113,1271,150,1267,154,1237,116"/>
+<area shape="poly" id="edge62_Node000030_Node000007" title=" " alt="" coords="1381,182,1111,228,1110,223,1380,177"/>
+<area shape="poly" id="edge61_Node000030_Node000008" title=" " alt="" coords="1403,185,1372,202,1349,227,1345,236,1346,246,1356,265,1375,282,1396,296,1393,301,1372,287,1352,268,1341,247,1340,236,1344,224,1369,198,1400,180"/>
+<area shape="poly" id="edge63_Node000030_Node000009" title=" " alt="" coords="1502,182,1527,199,1546,224,1553,246,1552,268,1546,290,1536,310,1508,347,1482,374,1478,370,1504,344,1531,308,1541,288,1547,267,1548,247,1542,227,1523,203,1499,186"/>
+<area shape="rect" id="Node000031" href="$test__ruleset__loader_8cpp.html" title="Tests for the ruleset loader and model (rpg_os::RulesetLoader, rpg_os::Ruleset)." alt="" coords="1359,225,1532,251"/>
+<area shape="poly" id="edge64_Node000030_Node000031" title=" " alt="" coords="1458,191,1450,226,1445,225,1453,190"/>
+<area shape="poly" id="edge67_Node000033_Node000003" title=" " alt="" coords="461,183,290,228,289,223,460,178"/>
+<area shape="poly" id="edge68_Node000033_Node000005" title=" " alt="" coords="492,188,439,227,435,223,489,183"/>
+<area shape="poly" id="edge69_Node000033_Node000007" title=" " alt="" coords="587,173,968,224,967,229,586,178"/>
+<area shape="poly" id="edge71_Node000033_Node000012" title=" " alt="" coords="587,168,618,174,650,185,680,201,705,224,718,248,728,283,740,370,745,458,745,518,740,518,739,458,734,370,722,284,713,250,701,227,677,205,648,190,617,179,586,173"/>
+<area shape="poly" id="edge70_Node000033_Node000026" title=" " alt="" coords="544,184,595,223,591,227,541,188"/>
+<area shape="poly" id="edge75_Node000034_Node000003" title=" " alt="" coords="636,179,318,228,317,223,635,174"/>
+<area shape="poly" id="edge76_Node000034_Node000005" title=" " alt="" coords="647,183,468,228,467,223,646,178"/>
+<area shape="poly" id="edge77_Node000034_Node000007" title=" " alt="" coords="773,178,989,223,987,228,772,183"/>
+<area shape="poly" id="edge79_Node000034_Node000012" title=" " alt="" coords="727,186,740,204,749,224,759,267,765,311,765,398,757,471,748,519,743,518,751,470,760,398,760,312,754,268,744,226,735,207,723,189"/>
+<area shape="poly" id="edge78_Node000034_Node000026" title=" " alt="" coords="680,188,625,227,622,223,677,183"/>
+<area shape="poly" id="edge82_Node000035_Node000003" title=" " alt="" coords="824,175,330,228,318,229,317,224,329,223,824,170"/>
+<area shape="poly" id="edge84_Node000035_Node000005" title=" " alt="" coords="824,179,497,228,496,223,824,173"/>
+<area shape="poly" id="edge85_Node000035_Node000007" title=" " alt="" coords="928,181,1019,223,1017,228,926,185"/>
+<area shape="poly" id="edge86_Node000035_Node000009" title=" " alt="" coords="958,176,1041,195,1130,223,1189,247,1232,269,1332,322,1440,369,1438,374,1329,326,1230,274,1186,252,1128,228,1040,201,957,181"/>
+<area shape="poly" id="edge83_Node000035_Node000010" title=" " alt="" coords="958,177,1178,223,1502,296,1824,379,2061,443,2059,448,1823,384,1501,301,1177,228,957,182"/>
+<area shape="poly" id="edge88_Node000035_Node000024" title=" " alt="" coords="892,191,883,445,878,445,887,191"/>
+<area shape="poly" id="edge87_Node000035_Node000026" title=" " alt="" coords="833,183,654,228,653,223,831,178"/>
+<area shape="poly" id="edge90_Node000036_Node000017" title=" " alt="" coords="957,117,959,152,959,251,956,293,950,327,950,359,964,396,974,411,988,424,1018,443,1015,447,985,428,970,415,959,399,945,360,945,327,950,293,953,251,953,152,951,118"/>
 </map>

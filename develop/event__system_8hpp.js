@@ -18,6 +18,10 @@ var event__system_8hpp =
       [ "OnRest", "event__system_8hpp.html#af3060be908d09a6c80aa2f7eb65afc18a91195337a3284ee8662e7bfd439dc39c", null ],
       [ "OnLevelUp", "event__system_8hpp.html#af3060be908d09a6c80aa2f7eb65afc18a77bb613d874efd18a265755b974c8e1c", null ],
       [ "OnAfflictionApplied", "event__system_8hpp.html#af3060be908d09a6c80aa2f7eb65afc18ad67033bca00a2b0a8230a243a06eb5ba", null ],
+      [ "OnStatChanged", "event__system_8hpp.html#af3060be908d09a6c80aa2f7eb65afc18a5d7b01a14744e42aef8fe005f753cc6a", null ],
+      [ "OnCheckResolved", "event__system_8hpp.html#af3060be908d09a6c80aa2f7eb65afc18ac597c5ab23a27927df8e51d2adcb5672", null ],
+      [ "OnResourceChanged", "event__system_8hpp.html#af3060be908d09a6c80aa2f7eb65afc18a92aee13a1b90dc1a86e2e215959dbd5a", null ],
+      [ "OnTempHpChanged", "event__system_8hpp.html#af3060be908d09a6c80aa2f7eb65afc18a57e422b0f7a15268add030e99c7f822a", null ],
       [ "OnTimePassed", "event__system_8hpp.html#af3060be908d09a6c80aa2f7eb65afc18a6e4587e0b371451d4486afa6acbd5b81", null ]
     ] ]
 ];

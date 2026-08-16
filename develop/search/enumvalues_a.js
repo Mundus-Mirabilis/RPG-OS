@@ -1,22 +1,9 @@
 var searchData=
 [
-  ['onafflictionapplied_0',['OnAfflictionApplied',['../namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18ad67033bca00a2b0a8230a243a06eb5ba',1,'rpg_os']]],
-  ['onaftercheckroll_1',['OnAfterCheckRoll',['../namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18a0b3c086f0b5060681307c116985c6a56',1,'rpg_os']]],
-  ['onbeforecheckroll_2',['OnBeforeCheckRoll',['../namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18ab4bda534e9935d6126740b9d38997e0f',1,'rpg_os']]],
-  ['onconditionchanged_3',['OnConditionChanged',['../namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18a4692df9e1af05daefdceb962dd4acce7',1,'rpg_os']]],
-  ['oncurrencychanged_4',['OnCurrencyChanged',['../namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18a25df4d5e17c26458db65198292838c64',1,'rpg_os']]],
-  ['ondamagecalculated_5',['OnDamageCalculated',['../namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18aa577a19f9f98a0d17bb8eec3c1d10102',1,'rpg_os']]],
-  ['ondamagetaken_6',['OnDamageTaken',['../namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18a95ce917c466f63f718bd35fe03fca558',1,'rpg_os']]],
-  ['onequipchanged_7',['OnEquipChanged',['../namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18ae0e1d7b48effa0b86dc44a9dd20f85c9',1,'rpg_os']]],
-  ['onitemadded_8',['OnItemAdded',['../namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18a88ffa6f79ad32221ae4cd4733351f7f9',1,'rpg_os']]],
-  ['onitemremoved_9',['OnItemRemoved',['../namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18a43f8196232f6fb9f4b028cd75d46c722',1,'rpg_os']]],
-  ['onlevelup_10',['OnLevelUp',['../namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18a77bb613d874efd18a265755b974c8e1c',1,'rpg_os']]],
-  ['onrest_11',['OnRest',['../namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18a91195337a3284ee8662e7bfd439dc39c',1,'rpg_os']]],
-  ['onspellcast_12',['OnSpellCast',['../namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18ae4d11b996fec0cf9ce3acc1dffd5d019',1,'rpg_os']]],
-  ['ontimepassed_13',['OnTimePassed',['../namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18a6e4587e0b371451d4486afa6acbd5b81',1,'rpg_os']]],
-  ['onturnend_14',['OnTurnEnd',['../namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18ad9d09877492c9df8ba92e5dba5b3caad',1,'rpg_os']]],
-  ['onturnstart_15',['OnTurnStart',['../namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18adaf718659527e949aad66f1c860bbb5f',1,'rpg_os']]],
-  ['opposed_16',['Opposed',['../namespacerpg__os.html#a95eaa793f5aa7a7b28d2851594d614dca4426b14cf40eb77915f04b0a4701c0b3',1,'rpg_os']]],
-  ['overcapacity_17',['OverCapacity',['../namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766a4fcf3e94521b7db24bd0c3bd6e9201af',1,'rpg_os']]],
-  ['override_18',['Override',['../namespacerpg__os.html#aab9c315b59a58b0733ac5a30a02da3f2a6da8e67225fdcfa78c3ea5dc3154b849',1,'rpg_os']]]
+  ['noencumbrance_0',['NoEncumbrance',['../namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766a8e035c9eac2ef52493607d738b571317',1,'rpg_os']]],
+  ['none_1',['none',['../namespacerpg__os.html#a475606cc248fcbc80000a0ceb3b8c448a6adf97f83acf6453d4a6a4b1070f3754',1,'rpg_os::None'],['../namespacerpg__os.html#a77f98d725fb2409a3e02d40f5772f3bca6adf97f83acf6453d4a6a4b1070f3754',1,'rpg_os::None'],['../namespacerpg__os.html#ab545c7c57f9754a6d5b040f83bedaf52a6adf97f83acf6453d4a6a4b1070f3754',1,'rpg_os::None'],['../namespacerpg__os.html#a2fe23abe4211557387324614b880a9bca6adf97f83acf6453d4a6a4b1070f3754',1,'rpg_os::None'],['../namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766a6adf97f83acf6453d4a6a4b1070f3754',1,'rpg_os::None']]],
+  ['noruleset_2',['NoRuleset',['../namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766a143bbdad2c2cf2dd5ba6e537edd822c9',1,'rpg_os']]],
+  ['nospellslot_3',['NoSpellSlot',['../namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766a7cde3b18e13aa9cb5addf7e0ff1f9f0d',1,'rpg_os']]],
+  ['notenoughmoney_4',['NotEnoughMoney',['../namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766a261cca2ac483068d987c38cfa8fd6094',1,'rpg_os']]],
+  ['notequipped_5',['NotEquipped',['../namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766ae4f167d7fb73c6592711f327d3d7f8f6',1,'rpg_os']]]
 ];

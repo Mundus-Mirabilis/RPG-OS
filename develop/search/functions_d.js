@@ -1,18 +1,17 @@
 var searchData=
 [
-  ['parrydefense_0',['parryDefense',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a1e5e166f7aa51406272d618f5ce5c59d',1,'rpg_os::generated::brp_ugc::Character']]],
-  ['parryswords_1',['parrySwords',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#aa902febed083fc903ef4eef11029f2fb',1,'rpg_os::generated::tde5e::Character']]],
-  ['parsefractionstring_2',['parseFractionString',['../namespacerpg__os.html#aa323a2b4cbd8d90b59a49b2533573a75',1,'rpg_os']]],
-  ['parsemodifierjson_3',['parseModifierJson',['../namespacerpg__os.html#a1a551c859ce00abc9a5aad74eb0e5035',1,'rpg_os']]],
-  ['parseweightvalue_4',['parseWeightValue',['../namespacerpg__os.html#a21ad91942a01cd36d1706ea9ae048f6c',1,'rpg_os']]],
-  ['pay_5',['pay',['../classrpg__os_1_1RulesetEngine.html#abeddf14ae82e51a7b53e1f5960092e00',1,'rpg_os::RulesetEngine::pay()'],['../classrpg__os_1_1GameSession.html#a5d4d738bf242bb2d5365ebcf6568baf5',1,'rpg_os::GameSession::pay()']]],
-  ['pickspell_6',['pickSpell',['../namespacerpg__os_1_1detail.html#a5c08ab552cdf7a80a7847daf84ac11d9',1,'rpg_os::detail']]],
-  ['pickvariant_7',['pickVariant',['../namespacerpg__os.html#aa55b58906fac846e9841f808de5c926e',1,'rpg_os']]],
-  ['powerx5_8',['powerX5',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#aad870177c0b56cc8bfb76d2f1f87ca55',1,'rpg_os::generated::brp_ugc::Character']]],
-  ['prepare_9',['prepare',['../classrpg__os_1_1Spellbook.html#a014d4d9b8d4145b061eb5a1c897390ba',1,'rpg_os::Spellbook']]],
-  ['prepared_10',['prepared',['../classrpg__os_1_1Spellbook.html#a15f3812d6fa1b6d15679b1244a0e5d14',1,'rpg_os::Spellbook']]],
-  ['preparespell_11',['preparespell',['../classrpg__os_1_1GameSession.html#ae421fd4f2676827d205f76baa0d5032b',1,'rpg_os::GameSession::prepareSpell()'],['../classrpg__os_1_1RulesetEngine.html#aab9068ff301ca0d702f98d3f89d4fa3d',1,'rpg_os::RulesetEngine::prepareSpell(DynamicEntity &amp;sheet, std::string_view spellId) const']]],
-  ['processongoing_12',['processOngoing',['../classrpg__os_1_1RulesetEngine.html#ad35230677e4fcbfbae94f63a4e849e99',1,'rpg_os::RulesetEngine']]],
-  ['proficiencybonusbylevel_13',['proficiencyBonusByLevel',['../classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#ad816561fd9b91b3a329a0ae7299e0f9b',1,'rpg_os::generated::dnd5e::Character']]],
-  ['putinto_14',['putInto',['../classrpg__os_1_1Inventory.html#aeff57af5a963d5bcd873cb48d392419c',1,'rpg_os::Inventory']]]
+  ['onevent_0',['onEvent',['../classrpg__os_1_1GameSession.html#a0cdcc9c3cbe4702e3a2d13abb48ef7d0',1,'rpg_os::GameSession']]],
+  ['ongoing_1',['ongoing',['../classrpg__os_1_1EffectTimeline.html#a730686746b82237c41a90db96298d143',1,'rpg_os::EffectTimeline']]],
+  ['operator_20bool_2',['operator bool',['../classrpg__os_1_1EntityHandle.html#a9937dc0a3efebe6bea9465eb365ecbc5',1,'rpg_os::EntityHandle']]],
+  ['operator_28_29_3',['operator()',['../classrpg__os_1_1DefaultRandom.html#a00afb530ac51d039350c39e6e5ec6168',1,'rpg_os::DefaultRandom::operator()()'],['../structstd_1_1hash_3_01rpg__os_1_1EntityId_01_4.html#ae8dbf841f47f0a15ee3ae2c72faccdfc',1,'std::hash&lt; rpg_os::EntityId &gt;::operator()()'],['../structScriptedRng.html#a29da634981b08c2259bbcdf5f6ae9a22',1,'ScriptedRng::operator()()']]],
+  ['operator_2a_4',['operator*',['../classrpg__os_1_1Money.html#a9415649354b8e75b66f1c2eed84e0504',1,'rpg_os::Money']]],
+  ['operator_2b_5',['operator+',['../classrpg__os_1_1DiceExpression.html#a3d8a3b91b1c49a35724f8cd47343cfd9',1,'rpg_os::DiceExpression::operator+(const DiceExpression &amp;rhs) const'],['../classrpg__os_1_1DiceExpression.html#ada8e6d6e26ddc8c68ff098e0cf3c2a5c',1,'rpg_os::DiceExpression::operator+(int rhs) const'],['../structrpg__os_1_1Weight.html#ae5138e41961c7cf94dcb26b64162b6d9',1,'rpg_os::Weight::operator+()'],['../classrpg__os_1_1Money.html#a564a7bc00a56550fc87f147321a93015',1,'rpg_os::Money::operator+()'],['../namespacerpg__os.html#a2c9ba73f667596b8ab089577bfed0ec6',1,'rpg_os::operator+()']]],
+  ['operator_2b_3d_6',['operator+=',['../structrpg__os_1_1Weight.html#aeed06a9c565dbe147eab478c2cd8ef90',1,'rpg_os::Weight::operator+=()'],['../classrpg__os_1_1Money.html#ad419e9d1f8be1de10f267160c1439c72',1,'rpg_os::Money::operator+=()']]],
+  ['operator_2d_7',['operator-',['../namespacerpg__os.html#af141eb3e6be2d938ce2b9bac02b4f3a5',1,'rpg_os::operator-()'],['../classrpg__os_1_1Money.html#aae8174c3cd57f3aa11f3571730e183e8',1,'rpg_os::Money::operator-()'],['../structrpg__os_1_1Weight.html#a37cd75eb33bb1d65ff360ce4dcb4689b',1,'rpg_os::Weight::operator-()'],['../classrpg__os_1_1DiceExpression.html#a9e5f872c743e13ff41563b43af0afca1',1,'rpg_os::DiceExpression::operator-(int rhs) const'],['../classrpg__os_1_1DiceExpression.html#ae60121548dec516c055d5dc6f9ff2f38',1,'rpg_os::DiceExpression::operator-(const DiceExpression &amp;rhs) const'],['../classrpg__os_1_1DiceExpression.html#a31cd9e6e18d81a03739b9bc7e1b1b1f5',1,'rpg_os::DiceExpression::operator-() const']]],
+  ['operator_2d_3d_8',['operator-=',['../classrpg__os_1_1Money.html#a4ea4bb4758460e20e01f51eb2eeb7f98',1,'rpg_os::Money']]],
+  ['operator_3c_9',['operator&lt;',['../structrpg__os_1_1Weight.html#aa5759f6c443d7d4245ab3d7e255a722d',1,'rpg_os::Weight::operator&lt;()'],['../classrpg__os_1_1Money.html#abff8368c346964220963071eed60a68d',1,'rpg_os::Money::operator&lt;()']]],
+  ['operator_3c_3d_10',['operator&lt;=',['../structrpg__os_1_1Weight.html#ad7744d9b070d5f5be4009f3558403e75',1,'rpg_os::Weight::operator&lt;=()'],['../classrpg__os_1_1Money.html#accdde4443428a42b924e4cdde8ba7c9d',1,'rpg_os::Money::operator&lt;=()']]],
+  ['operator_3d_3d_11',['operator==',['../structrpg__os_1_1EntityId.html#ae852ecbb97053d3f6f2826b0b1eeddfa',1,'rpg_os::EntityId::operator==()'],['../classrpg__os_1_1Money.html#a5363a2bf2a616d1589ca7872f3f3535a',1,'rpg_os::Money::operator==()'],['../classrpg__os_1_1EntityHandle.html#a0cfb7b2b4d1264cea13ed3ce3cb60908',1,'rpg_os::EntityHandle::operator==()']]],
+  ['operator_3e_12',['operator&gt;',['../structrpg__os_1_1Weight.html#a95bda643509eaa979379c509a642a1f8',1,'rpg_os::Weight::operator&gt;()'],['../classrpg__os_1_1Money.html#a2ef299018c732e8ccb6a7f04cac773c8',1,'rpg_os::Money::operator&gt;(const Money &amp;o) const noexcept']]],
+  ['operator_3e_3d_13',['operator&gt;=',['../classrpg__os_1_1Money.html#a2ae5273dba0771705b44b9b02cdb2b56',1,'rpg_os::Money']]]
 ];

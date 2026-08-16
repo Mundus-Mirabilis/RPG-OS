@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['level_0',['Level',['../structrpg__os_1_1EncumbranceConfig_1_1Level.html',1,'rpg_os::EncumbranceConfig']]],
-  ['levelup_1',['LevelUp',['../structrpg__os_1_1LevelUp.html',1,'rpg_os']]]
+  ['inventory_0',['Inventory',['../classrpg__os_1_1Inventory.html',1,'rpg_os']]],
+  ['iteminstance_1',['ItemInstance',['../structrpg__os_1_1ItemInstance.html',1,'rpg_os']]]
 ];

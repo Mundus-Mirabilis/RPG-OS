@@ -1,7 +1,11 @@
 var searchData=
 [
-  ['targetstat_0',['TargetStat',['../namespacerpg__os.html#a031baa10011b869e066dd2a216ce55d4aa0fe624424aad8695f9a86a5f115b641',1,'rpg_os']]],
-  ['threshold_1',['threshold',['../classrpg__os_1_1CostTable.html#aa3019c91e18a440b7b275be56cbb4aaea2a63f555989152ba866b43a1faacd680',1,'rpg_os::CostTable::Threshold'],['../namespacerpg__os.html#a95eaa793f5aa7a7b28d2851594d614dca2a63f555989152ba866b43a1faacd680',1,'rpg_os::Threshold']]],
-  ['tostat_2',['ToStat',['../namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753daedc924ddad3e72aa05c6d5b29250fe41',1,'rpg_os']]],
-  ['tothreshold_3',['ToThreshold',['../namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753daac18f68e8a52d0ae7da868601481627e',1,'rpg_os']]]
+  ['slotmismatch_0',['SlotMismatch',['../namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766a23577eacdfab2acde669a2b80f876995',1,'rpg_os']]],
+  ['slotoccupied_1',['SlotOccupied',['../namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766a75dccd608eefc2f608964e1430e6dd20',1,'rpg_os']]],
+  ['special_2',['Special',['../namespacerpg__os.html#a0dc66a7ae36ef58a210fec7c99826700ab4c2b550635fe54fd29f2b64dfaca55d',1,'rpg_os']]],
+  ['spellnotknown_3',['SpellNotKnown',['../namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766ae34430d2f3524e9787b64b79d0ae6b97',1,'rpg_os']]],
+  ['spellnotprepared_4',['SpellNotPrepared',['../namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766adf78dea9b4009e6bd19816575521d083',1,'rpg_os']]],
+  ['strong_5',['Strong',['../namespacerpg__os.html#ab870da3d65c79d59dad5920efc43dc65ac43e0fd449c758dab8f891d8e19eb1a9',1,'rpg_os']]],
+  ['strongest_6',['Strongest',['../namespacerpg__os.html#ab870da3d65c79d59dad5920efc43dc65ada1d569c5bad0cd874e498597871cbef',1,'rpg_os']]],
+  ['success_7',['Success',['../namespacerpg__os.html#a0dc66a7ae36ef58a210fec7c99826700a505a83f220c02df2f85c3810cd9ceb38',1,'rpg_os']]]
 ];

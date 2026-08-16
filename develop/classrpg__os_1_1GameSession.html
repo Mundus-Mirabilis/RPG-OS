@@ -156,6 +156,26 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af6fd4da8a06a99ad8966e6bc5e1f2153" id="r_af6fd4da8a06a99ad8966e6bc5e1f2153"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classrpg__os_1_1DynamicEntity.html">DynamicEntity</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1GameSession.html#af6fd4da8a06a99ad8966e6bc5e1f2153">createCreature</a> (std::string_view creatureId)</td></tr>
 <tr class="memdesc:af6fd4da8a06a99ad8966e6bc5e1f2153"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a creature sheet from a bestiary entry and takes ownership.  <br /></td></tr>
 <tr class="separator:af6fd4da8a06a99ad8966e6bc5e1f2153"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96639f77dff51e3caca598a640dc7534" id="r_a96639f77dff51e3caca598a640dc7534"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classrpg__os_1_1EntityHandle.html">EntityHandle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1GameSession.html#a96639f77dff51e3caca598a640dc7534">createCharacterHandle</a> (std::string_view archetypeId)</td></tr>
+<tr class="separator:a96639f77dff51e3caca598a640dc7534"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fb858147b5c8f02f1ad1e581397ab6c" id="r_a9fb858147b5c8f02f1ad1e581397ab6c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classrpg__os_1_1EntityHandle.html">EntityHandle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1GameSession.html#a9fb858147b5c8f02f1ad1e581397ab6c">createCreatureHandle</a> (std::string_view creatureId)</td></tr>
+<tr class="memdesc:a9fb858147b5c8f02f1ad1e581397ab6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a creature and returns a stable <a class="el" href="classrpg__os_1_1EntityHandle.html">EntityHandle</a> to it.  <br /></td></tr>
+<tr class="separator:a9fb858147b5c8f02f1ad1e581397ab6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bfaaa1e5eb8a184a0fd93b24f46f0f7" id="r_a0bfaaa1e5eb8a184a0fd93b24f46f0f7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classrpg__os_1_1DynamicEntity.html">DynamicEntity</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1GameSession.html#a0bfaaa1e5eb8a184a0fd93b24f46f0f7">findEntity</a> (<a class="el" href="structrpg__os_1_1EntityId.html">EntityId</a> id) const</td></tr>
+<tr class="memdesc:a0bfaaa1e5eb8a184a0fd93b24f46f0f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Looks up a live entity by its unique instance id; <code>nullptr</code> when absent.  <br /></td></tr>
+<tr class="separator:a0bfaaa1e5eb8a184a0fd93b24f46f0f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae778b0cf0a6e5a017b7ba4d8c798eba5" id="r_ae778b0cf0a6e5a017b7ba4d8c798eba5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classrpg__os_1_1EntityHandle.html">EntityHandle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1GameSession.html#ae778b0cf0a6e5a017b7ba4d8c798eba5">entity</a> (<a class="el" href="structrpg__os_1_1EntityId.html">EntityId</a> id) const</td></tr>
+<tr class="memdesc:ae778b0cf0a6e5a017b7ba4d8c798eba5"><td class="mdescLeft">&#160;</td><td class="mdescRight">A non-owning handle to the entity with <code>id</code> (null handle when absent).  <br /></td></tr>
+<tr class="separator:ae778b0cf0a6e5a017b7ba4d8c798eba5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48d59f38fc8f903b51791a0b921cf33a" id="r_a48d59f38fc8f903b51791a0b921cf33a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1GameSession.html#a48d59f38fc8f903b51791a0b921cf33a">removeEntity</a> (<a class="el" href="structrpg__os_1_1EntityId.html">EntityId</a> id)</td></tr>
+<tr class="memdesc:a48d59f38fc8f903b51791a0b921cf33a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes an entity from the session (destroying the last owner).  <br /></td></tr>
+<tr class="separator:a48d59f38fc8f903b51791a0b921cf33a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ed0cd6ac6d8a19087500c93b0f91422" id="r_a8ed0cd6ac6d8a19087500c93b0f91422"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1GameSession.html#a8ed0cd6ac6d8a19087500c93b0f91422">entityCount</a> () const noexcept</td></tr>
+<tr class="memdesc:a8ed0cd6ac6d8a19087500c93b0f91422"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of entities the session currently owns.  <br /></td></tr>
+<tr class="separator:a8ed0cd6ac6d8a19087500c93b0f91422"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a388e08889593ebdc37cca399500c86a6" id="r_a388e08889593ebdc37cca399500c86a6"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classrpg__os_1_1DynamicEntity.html">DynamicEntity</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1GameSession.html#a388e08889593ebdc37cca399500c86a6">entities</a> () const</td></tr>
+<tr class="memdesc:a388e08889593ebdc37cca399500c86a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">All live entities, in unspecified order.  <br /></td></tr>
+<tr class="separator:a388e08889593ebdc37cca399500c86a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab713f5f3935a30db03aa2d3258409e21" id="r_ab713f5f3935a30db03aa2d3258409e21"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classrpg__os_1_1WorldState.html">WorldState</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1GameSession.html#ab713f5f3935a30db03aa2d3258409e21">world</a> () noexcept</td></tr>
 <tr class="memdesc:ab713f5f3935a30db03aa2d3258409e21"><td class="mdescLeft">&#160;</td><td class="mdescRight">The shared world bookkeeping (treasury, day counter).  <br /></td></tr>
 <tr class="separator:ab713f5f3935a30db03aa2d3258409e21"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -202,6 +222,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a72326ea3510417e60e508ef730b7e38c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaee3646d67f17976f39f1f4fd00309ad" id="r_aaee3646d67f17976f39f1f4fd00309ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1GameSession.html#aaee3646d67f17976f39f1f4fd00309ad">runTurn</a> (<a class="el" href="classrpg__os_1_1DynamicEntity.html">DynamicEntity</a> &amp;sheet)</td></tr>
 <tr class="separator:aaee3646d67f17976f39f1f4fd00309ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae0963a66f0b1e151fe7c8739d7cad02" id="r_aae0963a66f0b1e151fe7c8739d7cad02"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1GameSession.html#aae0963a66f0b1e151fe7c8739d7cad02">advanceTime</a> (int32_t days=1)</td></tr>
+<tr class="separator:aae0963a66f0b1e151fe7c8739d7cad02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69cc9f6aebf80e71670da35f3aa7774b" id="r_a69cc9f6aebf80e71670da35f3aa7774b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1GameSession.html#a69cc9f6aebf80e71670da35f3aa7774b">saveState</a> () const</td></tr>
+<tr class="separator:a69cc9f6aebf80e71670da35f3aa7774b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52f1e6b89dbef7ceb15b0aea9fe5ffe5" id="r_a52f1e6b89dbef7ceb15b0aea9fe5ffe5"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1GameSession.html#a52f1e6b89dbef7ceb15b0aea9fe5ffe5">loadState</a> (const <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &amp;in)</td></tr>
+<tr class="separator:a52f1e6b89dbef7ceb15b0aea9fe5ffe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae421fd4f2676827d205f76baa0d5032b" id="r_ae421fd4f2676827d205f76baa0d5032b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1GameSession.html#ae421fd4f2676827d205f76baa0d5032b">prepareSpell</a> (<a class="el" href="classrpg__os_1_1DynamicEntity.html">DynamicEntity</a> &amp;sheet, std::string_view spellId) const</td></tr>
 <tr class="separator:ae421fd4f2676827d205f76baa0d5032b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70bf710d71487a7b1f1dcc81351b0d12" id="r_a70bf710d71487a7b1f1dcc81351b0d12"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1GameSession.html#a70bf710d71487a7b1f1dcc81351b0d12">spellSlotsRemaining</a> (const <a class="el" href="classrpg__os_1_1DynamicEntity.html">DynamicEntity</a> &amp;sheet, int32_t level) const</td></tr>
@@ -232,7 +258,7 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Application-facing session facade (see the file doc comment). </p>
 
-<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00041">41</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00043">43</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aebcc3749348c5db639f65efcf89b683b" name="aebcc3749348c5db639f65efcf89b683b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aebcc3749348c5db639f65efcf89b683b">&#9670;&#160;</a></span>addItem()</h2>
@@ -274,9 +300,9 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00103">103</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00137">137</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00823">rpg_os::RulesetEngine::addItem()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00849">rpg_os::RulesetEngine::addItem()</a>.</p>
 
 </div>
 </div>
@@ -326,9 +352,42 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00111">111</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00145">145</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01017">rpg_os::RulesetEngine::addItemToContainer()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01043">rpg_os::RulesetEngine::addItemToContainer()</a>.</p>
+
+</div>
+</div>
+<a id="aae0963a66f0b1e151fe7c8739d7cad02" name="aae0963a66f0b1e151fe7c8739d7cad02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae0963a66f0b1e151fe7c8739d7cad02">&#9670;&#160;</a></span>advanceTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t rpg_os::GameSession::advanceTime </td>
+          <td>(</td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>days</em> = <code>1</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Advances game time by <code>days</code>: increments the world day counter, fires <code>OnTimePassed</code> (elapsed + new day in the payload), and ticks every owned sheet's effect durations once, so day-scale durations decay and expired effects are stripped. Returns the new day. </p>
+
+<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00208">208</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="world__state_8hpp_source.html#l00039">rpg_os::WorldState::advanceDays()</a>, <a class="el" href="entity__registry_8hpp_source.html#l00149">rpg_os::EntityRegistry::all()</a>, <a class="el" href="engine_8hpp_source.html#l01865">rpg_os::RulesetEngine::announceTimePassed()</a>, <a class="el" href="world__state_8hpp_source.html#l00028">rpg_os::WorldState::day</a>, and <a class="el" href="engine_8hpp_source.html#l01244">rpg_os::RulesetEngine::tickEffects()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="test__bookkeeping_8cpp_source.html#l00715">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -384,7 +443,9 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00155">155</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00189">189</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ecs__registry_2main_8cpp_source.html#l00080">main()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00715">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00744">TEST_CASE()</a>, <a class="el" href="test__combat__session_8cpp_source.html#l00110">TEST_CASE()</a>, and <a class="el" href="test__combat__session_8cpp_source.html#l00140">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -436,9 +497,9 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00212">212</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00323">323</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01757">rpg_os::RulesetEngine::applyCurse()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01815">rpg_os::RulesetEngine::applyCurse()</a>.</p>
 
 </div>
 </div>
@@ -488,9 +549,9 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00125">125</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00159">159</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00885">rpg_os::RulesetEngine::buy()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00911">rpg_os::RulesetEngine::buy()</a>.</p>
 
 </div>
 </div>
@@ -518,9 +579,9 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00138">138</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00172">172</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00986">rpg_os::RulesetEngine::carriedWeight()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01012">rpg_os::RulesetEngine::carriedWeight()</a>.</p>
 
 </div>
 </div>
@@ -548,9 +609,9 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00142">142</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00176">176</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01068">rpg_os::RulesetEngine::carryingCapacity()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01094">rpg_os::RulesetEngine::carryingCapacity()</a>.</p>
 
 </div>
 </div>
@@ -600,9 +661,9 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00189">189</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00300">300</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01301">rpg_os::RulesetEngine::castSpellPrepared()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01359">rpg_os::RulesetEngine::castSpellPrepared()</a>.</p>
 
 </div>
 </div>
@@ -660,9 +721,9 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00185">185</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00296">296</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01301">rpg_os::RulesetEngine::castSpellPrepared()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01359">rpg_os::RulesetEngine::castSpellPrepared()</a>.</p>
 
 </div>
 </div>
@@ -691,11 +752,44 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 </div><div class="memdoc">
 <p>Creates a character sheet from an archetype and takes ownership of it. The returned reference stays valid (the sheet lives on the heap). </p>
 
-<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00071">71</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00073">73</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="engine_8hpp_source.html#l00109">rpg_os::RulesetEngine::createEntity()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="test__bookkeeping_8cpp_source.html#l00691">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="test__bookkeeping_8cpp_source.html#l00715">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00691">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00744">TEST_CASE()</a>, <a class="el" href="test__entity__registry_8cpp_source.html#l00053">TEST_CASE()</a>, <a class="el" href="test__entity__registry_8cpp_source.html#l00064">TEST_CASE()</a>, and <a class="el" href="test__entity__registry_8cpp_source.html#l00097">TEST_CASE()</a>.</p>
+
+</div>
+</div>
+<a id="a96639f77dff51e3caca598a640dc7534" name="a96639f77dff51e3caca598a640dc7534"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96639f77dff51e3caca598a640dc7534">&#9670;&#160;</a></span>createCharacterHandle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classrpg__os_1_1EntityHandle.html">EntityHandle</a> rpg_os::GameSession::createCharacterHandle </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>archetypeId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Creates a character and returns a stable <a class="el" href="classrpg__os_1_1EntityHandle.html">EntityHandle</a> to it (see <a class="el" href="classrpg__os_1_1GameSession.html#a7efe1c0d2ae40b9773b62a357bbfe100">createCharacter</a> for the owning-reference variant). </p>
+
+<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00083">83</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00109">rpg_os::RulesetEngine::createEntity()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ecs__registry_2main_8cpp_source.html#l00080">main()</a>, <a class="el" href="test__combat__session_8cpp_source.html#l00088">TEST_CASE()</a>, <a class="el" href="test__combat__session_8cpp_source.html#l00110">TEST_CASE()</a>, <a class="el" href="test__combat__session_8cpp_source.html#l00065">TEST_CASE()</a>, <a class="el" href="test__combat__session_8cpp_source.html#l00140">TEST_CASE()</a>, and <a class="el" href="test__entity__registry_8cpp_source.html#l00084">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -725,9 +819,43 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 
 <p>Creates a creature sheet from a bestiary entry and takes ownership. </p>
 
-<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00075">75</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00077">77</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00150">rpg_os::RulesetEngine::createCreature()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00151">rpg_os::RulesetEngine::createCreature()</a>.</p>
+
+</div>
+</div>
+<a id="a9fb858147b5c8f02f1ad1e581397ab6c" name="a9fb858147b5c8f02f1ad1e581397ab6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fb858147b5c8f02f1ad1e581397ab6c">&#9670;&#160;</a></span>createCreatureHandle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classrpg__os_1_1EntityHandle.html">EntityHandle</a> rpg_os::GameSession::createCreatureHandle </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>creatureId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a creature and returns a stable <a class="el" href="classrpg__os_1_1EntityHandle.html">EntityHandle</a> to it. </p>
+
+<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00087">87</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00151">rpg_os::RulesetEngine::createCreature()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ecs__registry_2main_8cpp_source.html#l00080">main()</a>.</p>
 
 </div>
 </div>
@@ -771,9 +899,9 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00215">215</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00326">326</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01765">rpg_os::RulesetEngine::cureAffliction()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01823">rpg_os::RulesetEngine::cureAffliction()</a>.</p>
 
 </div>
 </div>
@@ -800,9 +928,9 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00096">96</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00130">130</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00782">rpg_os::RulesetEngine::currencySystem()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00808">rpg_os::RulesetEngine::currencySystem()</a>.</p>
 
 </div>
 </div>
@@ -830,9 +958,9 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00146">146</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00180">180</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01083">rpg_os::RulesetEngine::encumbranceLevel()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01109">rpg_os::RulesetEngine::encumbranceLevel()</a>.</p>
 
 </div>
 </div>
@@ -859,7 +987,7 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00065">65</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00067">67</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
 
 </div>
 </div>
@@ -888,9 +1016,109 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 
 <p>The underlying engine (resolution primitives). </p>
 
-<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00062">62</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00064">64</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="test__bookkeeping_8cpp_source.html#l00691">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ecs__registry_2main_8cpp_source.html#l00080">main()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00691">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00744">TEST_CASE()</a>, <a class="el" href="test__combat__session_8cpp_source.html#l00088">TEST_CASE()</a>, <a class="el" href="test__combat__session_8cpp_source.html#l00110">TEST_CASE()</a>, <a class="el" href="test__combat__session_8cpp_source.html#l00065">TEST_CASE()</a>, and <a class="el" href="test__combat__session_8cpp_source.html#l00140">TEST_CASE()</a>.</p>
+
+</div>
+</div>
+<a id="a388e08889593ebdc37cca399500c86a6" name="a388e08889593ebdc37cca399500c86a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a388e08889593ebdc37cca399500c86a6">&#9670;&#160;</a></span>entities()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="classrpg__os_1_1DynamicEntity.html">DynamicEntity</a> * &gt; rpg_os::GameSession::entities </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>All live entities, in unspecified order. </p>
+
+<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00109">109</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="entity__registry_8hpp_source.html#l00149">rpg_os::EntityRegistry::all()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ecs__registry_2main_8cpp_source.html#l00080">main()</a>, and <a class="el" href="test__entity__registry_8cpp_source.html#l00064">TEST_CASE()</a>.</p>
+
+</div>
+</div>
+<a id="ae778b0cf0a6e5a017b7ba4d8c798eba5" name="ae778b0cf0a6e5a017b7ba4d8c798eba5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae778b0cf0a6e5a017b7ba4d8c798eba5">&#9670;&#160;</a></span>entity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classrpg__os_1_1EntityHandle.html">EntityHandle</a> rpg_os::GameSession::entity </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structrpg__os_1_1EntityId.html">EntityId</a>&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A non-owning handle to the entity with <code>id</code> (null handle when absent). </p>
+
+<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00097">97</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="entity__registry_8hpp_source.html#l00118">rpg_os::EntityRegistry::handle()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="test__entity__registry_8cpp_source.html#l00064">TEST_CASE()</a>.</p>
+
+</div>
+</div>
+<a id="a8ed0cd6ac6d8a19087500c93b0f91422" name="a8ed0cd6ac6d8a19087500c93b0f91422"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ed0cd6ac6d8a19087500c93b0f91422">&#9670;&#160;</a></span>entityCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t rpg_os::GameSession::entityCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Number of entities the session currently owns. </p>
+
+<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00105">105</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="entity__registry_8hpp_source.html#l00132">rpg_os::EntityRegistry::size()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="test__bookkeeping_8cpp_source.html#l00744">TEST_CASE()</a>, and <a class="el" href="test__entity__registry_8cpp_source.html#l00064">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -934,9 +1162,43 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00131">131</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00165">165</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00919">rpg_os::RulesetEngine::equip()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00945">rpg_os::RulesetEngine::equip()</a>.</p>
+
+</div>
+</div>
+<a id="a0bfaaa1e5eb8a184a0fd93b24f46f0f7" name="a0bfaaa1e5eb8a184a0fd93b24f46f0f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bfaaa1e5eb8a184a0fd93b24f46f0f7">&#9670;&#160;</a></span>findEntity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classrpg__os_1_1DynamicEntity.html">DynamicEntity</a> * rpg_os::GameSession::findEntity </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structrpg__os_1_1EntityId.html">EntityId</a>&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Looks up a live entity by its unique instance id; <code>nullptr</code> when absent. </p>
+
+<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00093">93</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="entity__registry_8hpp_source.html#l00112">rpg_os::EntityRegistry::get()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="test__bookkeeping_8cpp_source.html#l00744">TEST_CASE()</a>, <a class="el" href="test__entity__registry_8cpp_source.html#l00084">TEST_CASE()</a>, and <a class="el" href="test__entity__registry_8cpp_source.html#l00064">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -974,9 +1236,9 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00197">197</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00308">308</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01699">rpg_os::RulesetEngine::gainXp()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01757">rpg_os::RulesetEngine::gainXp()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="test__bookkeeping_8cpp_source.html#l00691">TEST_CASE()</a>.</p>
 
@@ -1005,9 +1267,9 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00093">93</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00127">127</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00777">rpg_os::RulesetEngine::hasCurrency()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00803">rpg_os::RulesetEngine::hasCurrency()</a>.</p>
 
 </div>
 </div>
@@ -1045,9 +1307,9 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00201">201</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00312">312</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01724">rpg_os::RulesetEngine::improvementCost()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01782">rpg_os::RulesetEngine::improvementCost()</a>.</p>
 
 </div>
 </div>
@@ -1075,9 +1337,9 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00099">99</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00133">133</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00790">rpg_os::RulesetEngine::itemPrice()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00816">rpg_os::RulesetEngine::itemPrice()</a>.</p>
 
 </div>
 </div>
@@ -1106,9 +1368,11 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 
 <p>Message from the last failed load. </p>
 
-<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00057">57</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00059">59</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01802">rpg_os::RulesetEngine::lastError()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01881">rpg_os::RulesetEngine::lastError()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ecs__registry_2main_8cpp_source.html#l00080">main()</a>.</p>
 
 </div>
 </div>
@@ -1137,9 +1401,9 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 
 <p>Whether a ruleset is loaded. </p>
 
-<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00053">53</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00055">55</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01796">rpg_os::RulesetEngine::loaded()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01875">rpg_os::RulesetEngine::loaded()</a>.</p>
 
 </div>
 </div>
@@ -1169,11 +1433,11 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 
 <p>Loads a ruleset file; false (with <a class="el" href="classrpg__os_1_1GameSession.html#af8b291c196b9b6688f7a8b2c6ccf1d5c">lastError</a>) on failure. </p>
 
-<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00044">44</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00046">46</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="engine_8hpp_source.html#l00074">rpg_os::RulesetEngine::loadRulesetFromFile()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="test__bookkeeping_8cpp_source.html#l00691">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ecs__registry_2main_8cpp_source.html#l00080">main()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00715">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00691">TEST_CASE()</a>, and <a class="el" href="test__bookkeeping_8cpp_source.html#l00744">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -1203,9 +1467,42 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 
 <p>Loads a ruleset from a JSON string; false (with <a class="el" href="classrpg__os_1_1GameSession.html#af8b291c196b9b6688f7a8b2c6ccf1d5c">lastError</a>) on failure. </p>
 
-<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00048">48</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00050">50</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="engine_8hpp_source.html#l00059">rpg_os::RulesetEngine::loadRulesetFromJson()</a>.</p>
+
+</div>
+</div>
+<a id="a52f1e6b89dbef7ceb15b0aea9fe5ffe5" name="a52f1e6b89dbef7ceb15b0aea9fe5ffe5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52f1e6b89dbef7ceb15b0aea9fe5ffe5">&#9670;&#160;</a></span>loadState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t rpg_os::GameSession::loadState </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &amp;&#160;</td>
+          <td class="paramname"><em>in</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Restores a state produced by <code>saveState:</code> replaces every owned sheet and the shared world. Each sheet is recreated from its archetype / creature record (so resource-pool bounds are rebuilt from the ruleset) and its saved living state — current pools, conditions with remaining durations, inventory, spell slots, effect timeline — is then applied, with events suppressed during the restore. Returns how many sheets were restored (a sheet whose type is absent from the ruleset is skipped). </p>
+
+<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00244">244</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="entity__registry_8hpp_source.html#l00105">rpg_os::EntityRegistry::add()</a>, <a class="el" href="entity__registry_8hpp_source.html#l00144">rpg_os::EntityRegistry::clear()</a>, <a class="el" href="engine_8hpp_source.html#l00151">rpg_os::RulesetEngine::createCreature()</a>, <a class="el" href="engine_8hpp_source.html#l00109">rpg_os::RulesetEngine::createEntity()</a>, and <a class="el" href="world__state_8hpp_source.html#l00049">rpg_os::WorldState::fromJson()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="test__bookkeeping_8cpp_source.html#l00744">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -1233,9 +1530,9 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00207">207</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00318">318</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01742">rpg_os::RulesetEngine::longRest()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01800">rpg_os::RulesetEngine::longRest()</a>.</p>
 
 </div>
 </div>
@@ -1275,11 +1572,11 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 
 <p>Registers a listener for a bookkeeping event (e.g. OnCurrencyChanged). </p>
 
-<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00088">88</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00122">122</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01781">rpg_os::RulesetEngine::registerEventListener()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01839">rpg_os::RulesetEngine::registerEventListener()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="test__bookkeeping_8cpp_source.html#l00691">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ecs__registry_2main_8cpp_source.html#l00080">main()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00715">TEST_CASE()</a>, and <a class="el" href="test__bookkeeping_8cpp_source.html#l00691">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -1323,9 +1620,9 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00120">120</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00154">154</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00861">rpg_os::RulesetEngine::pay()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00887">rpg_os::RulesetEngine::pay()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="test__bookkeeping_8cpp_source.html#l00691">TEST_CASE()</a>.</p>
 
@@ -1365,9 +1662,9 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00170">170</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00281">281</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01262">rpg_os::RulesetEngine::prepareSpell()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01320">rpg_os::RulesetEngine::prepareSpell()</a>.</p>
 
 </div>
 </div>
@@ -1395,9 +1692,9 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00180">180</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00291">291</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01292">rpg_os::RulesetEngine::recoverSpellSlots()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01350">rpg_os::RulesetEngine::recoverSpellSlots()</a>.</p>
 
 </div>
 </div>
@@ -1435,9 +1732,43 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00159">159</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00193">193</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01152">rpg_os::RulesetEngine::removeCondition()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01185">rpg_os::RulesetEngine::removeCondition()</a>.</p>
+
+</div>
+</div>
+<a id="a48d59f38fc8f903b51791a0b921cf33a" name="a48d59f38fc8f903b51791a0b921cf33a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48d59f38fc8f903b51791a0b921cf33a">&#9670;&#160;</a></span>removeEntity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rpg_os::GameSession::removeEntity </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structrpg__os_1_1EntityId.html">EntityId</a>&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Removes an entity from the session (destroying the last owner). </p>
+
+<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00101">101</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="entity__registry_8hpp_source.html#l00138">rpg_os::EntityRegistry::remove()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ecs__registry_2main_8cpp_source.html#l00080">main()</a>, <a class="el" href="test__entity__registry_8cpp_source.html#l00084">TEST_CASE()</a>, and <a class="el" href="test__entity__registry_8cpp_source.html#l00064">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -1481,9 +1812,9 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00107">107</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00141">141</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00841">rpg_os::RulesetEngine::removeItem()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00867">rpg_os::RulesetEngine::removeItem()</a>.</p>
 
 </div>
 </div>
@@ -1533,9 +1864,9 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00116">116</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00150">150</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01044">rpg_os::RulesetEngine::removeItemFromContainer()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01070">rpg_os::RulesetEngine::removeItemFromContainer()</a>.</p>
 
 </div>
 </div>
@@ -1563,9 +1894,41 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00165">165</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00199">199</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01206">rpg_os::RulesetEngine::runTurn()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01264">rpg_os::RulesetEngine::runTurn()</a>.</p>
+
+</div>
+</div>
+<a id="a69cc9f6aebf80e71670da35f3aa7774b" name="a69cc9f6aebf80e71670da35f3aa7774b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69cc9f6aebf80e71670da35f3aa7774b">&#9670;&#160;</a></span>saveState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> rpg_os::GameSession::saveState </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Snapshots the whole session — every owned sheet (via <code>toJson</code>) plus the shared <a class="el" href="classrpg__os_1_1WorldState.html">WorldState</a> — into one JSON save state. Per-instance entity ids are preserved, so <a class="el" href="classrpg__os_1_1GameSession.html#a52f1e6b89dbef7ceb15b0aea9fe5ffe5">loadState</a> restores the same living characters. </p>
+
+<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00222">222</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="entity__registry_8hpp_source.html#l00149">rpg_os::EntityRegistry::all()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00507">rpg_os::DynamicEntity::toJson()</a>, and <a class="el" href="world__state_8hpp_source.html#l00043">rpg_os::WorldState::toJson()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="test__bookkeeping_8cpp_source.html#l00744">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -1593,9 +1956,9 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00204">204</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00315">315</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01733">rpg_os::RulesetEngine::shortRest()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01791">rpg_os::RulesetEngine::shortRest()</a>.</p>
 
 </div>
 </div>
@@ -1633,9 +1996,9 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00173">173</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00284">284</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01273">rpg_os::RulesetEngine::spellSlotsRemaining()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01331">rpg_os::RulesetEngine::spellSlotsRemaining()</a>.</p>
 
 </div>
 </div>
@@ -1673,9 +2036,9 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00176">176</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00287">287</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01282">rpg_os::RulesetEngine::spendSpellSlot()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01340">rpg_os::RulesetEngine::spendSpellSlot()</a>.</p>
 
 </div>
 </div>
@@ -1703,9 +2066,9 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00162">162</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00196">196</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01189">rpg_os::RulesetEngine::tickEffects()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01244">rpg_os::RulesetEngine::tickEffects()</a>.</p>
 
 </div>
 </div>
@@ -1743,9 +2106,9 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00134">134</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00168">168</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00966">rpg_os::RulesetEngine::unequip()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00992">rpg_os::RulesetEngine::unequip()</a>.</p>
 
 </div>
 </div>
@@ -1773,9 +2136,9 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00150">150</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00184">184</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01110">rpg_os::RulesetEngine::updateEncumbrance()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l01136">rpg_os::RulesetEngine::updateEncumbrance()</a>.</p>
 
 </div>
 </div>
@@ -1802,7 +2165,7 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00083">83</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00117">117</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
 
 </div>
 </div>
@@ -1831,9 +2194,9 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 
 <p>The shared world bookkeeping (treasury, day counter). </p>
 
-<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00080">80</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="game__session_8hpp_source.html#l00114">114</a> of file <a class="el" href="game__session_8hpp_source.html">game_session.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="test__bookkeeping_8cpp_source.html#l00691">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="test__bookkeeping_8cpp_source.html#l00715">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00691">TEST_CASE()</a>, and <a class="el" href="test__bookkeeping_8cpp_source.html#l00744">TEST_CASE()</a>.</p>
 
 </div>
 </div>

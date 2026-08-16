@@ -151,7 +151,7 @@ Public Attributes</h2></td></tr>
 <div class="textblock"><p>Free-form payload carried by an event dispatch.</p>
 <dl class="section user"><dt>Why free-form JSON instead of fixed fields?</dt><dd>A ruleset may declare any fields it needs in its event triggers, so the payload cannot be a closed struct. Values are read through the typed getters, which fall back to a caller-supplied default when a key is absent or has the wrong type — this keeps rule code defensive without forcing every listener to check key presence by hand. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="event__system_8hpp_source.html#l00100">100</a> of file <a class="el" href="event__system_8hpp_source.html">event_system.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event__system_8hpp_source.html#l00110">110</a> of file <a class="el" href="event__system_8hpp_source.html">event_system.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a1cb203e68faf89408debf034a7b6c726" name="a1cb203e68faf89408debf034a7b6c726"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1cb203e68faf89408debf034a7b6c726">&#9670;&#160;</a></span>getBool()</h2>
@@ -189,11 +189,11 @@ Public Attributes</h2></td></tr>
 
 <p>Reads a boolean field, or <code>fallback</code> when absent / not a boolean. </p>
 
-<p class="definition">Definition at line <a class="el" href="event__system_8hpp_source.html#l00112">112</a> of file <a class="el" href="event__system_8hpp_source.html">event_system.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event__system_8hpp_source.html#l00122">122</a> of file <a class="el" href="event__system_8hpp_source.html">event_system.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="event__system_8hpp_source.html#l00104">payload</a>.</p>
+<p class="reference">References <a class="el" href="event__system_8hpp_source.html#l00114">payload</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="test__event__system_8cpp_source.html#l00075">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="test__engine_8cpp_source.html#l00252">TEST_CASE()</a>, <a class="el" href="test__engine_8cpp_source.html#l00389">TEST_CASE()</a>, and <a class="el" href="test__event__system_8cpp_source.html#l00075">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -233,11 +233,11 @@ Public Attributes</h2></td></tr>
 
 <p>Reads an integer field, or <code>fallback</code> when absent / not an integer. </p>
 
-<p class="definition">Definition at line <a class="el" href="event__system_8hpp_source.html#l00107">107</a> of file <a class="el" href="event__system_8hpp_source.html">event_system.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event__system_8hpp_source.html#l00117">117</a> of file <a class="el" href="event__system_8hpp_source.html">event_system.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="event__system_8hpp_source.html#l00104">payload</a>.</p>
+<p class="reference">References <a class="el" href="event__system_8hpp_source.html#l00114">payload</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="test__engine_8cpp_source.html#l00216">TEST_CASE()</a>, and <a class="el" href="test__event__system_8cpp_source.html#l00075">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ecs__entt_2main_8cpp_source.html#l00054">main()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00715">TEST_CASE()</a>, <a class="el" href="test__engine_8cpp_source.html#l00430">TEST_CASE()</a>, <a class="el" href="test__engine_8cpp_source.html#l00252">TEST_CASE()</a>, <a class="el" href="test__engine_8cpp_source.html#l00316">TEST_CASE()</a>, <a class="el" href="test__engine_8cpp_source.html#l00223">TEST_CASE()</a>, and <a class="el" href="test__event__system_8cpp_source.html#l00075">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -277,9 +277,9 @@ Public Attributes</h2></td></tr>
 
 <p>Reads a string field, or <code>fallback</code> when absent / not a string. </p>
 
-<p class="definition">Definition at line <a class="el" href="event__system_8hpp_source.html#l00117">117</a> of file <a class="el" href="event__system_8hpp_source.html">event_system.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event__system_8hpp_source.html#l00127">127</a> of file <a class="el" href="event__system_8hpp_source.html">event_system.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="test__event__system_8cpp_source.html#l00075">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ecs__entt_2main_8cpp_source.html#l00054">main()</a>, <a class="el" href="test__engine_8cpp_source.html#l00343">TEST_CASE()</a>, <a class="el" href="test__engine_8cpp_source.html#l00293">TEST_CASE()</a>, and <a class="el" href="test__event__system_8cpp_source.html#l00075">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -297,9 +297,9 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>The payload bag (e.g. <code>{"damage": 12, "attacker_visible": true}</code>). Public so rules that need custom fields can read and mutate it directly; the getters are conveniences over this bag, not a separate storage. </p>
 
-<p class="definition">Definition at line <a class="el" href="event__system_8hpp_source.html#l00104">104</a> of file <a class="el" href="event__system_8hpp_source.html">event_system.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event__system_8hpp_source.html#l00114">114</a> of file <a class="el" href="event__system_8hpp_source.html">event_system.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00823">rpg_os::RulesetEngine::addItem()</a>, <a class="el" href="engine_8hpp_source.html#l00696">rpg_os::RulesetEngine::applyAffliction()</a>, <a class="el" href="engine_8hpp_source.html#l01301">rpg_os::RulesetEngine::castSpellPrepared()</a>, <a class="el" href="engine_8hpp_source.html#l00919">rpg_os::RulesetEngine::equip()</a>, <a class="el" href="engine_8hpp_source.html#l01699">rpg_os::RulesetEngine::gainXp()</a>, <a class="el" href="event__system_8hpp_source.html#l00112">getBool()</a>, <a class="el" href="event__system_8hpp_source.html#l00107">getInt()</a>, <a class="el" href="engine_8hpp_source.html#l01742">rpg_os::RulesetEngine::longRest()</a>, <a class="el" href="engine_8hpp_source.html#l00861">rpg_os::RulesetEngine::pay()</a>, <a class="el" href="engine_8hpp_source.html#l01152">rpg_os::RulesetEngine::removeCondition()</a>, <a class="el" href="engine_8hpp_source.html#l00841">rpg_os::RulesetEngine::removeItem()</a>, <a class="el" href="engine_8hpp_source.html#l01044">rpg_os::RulesetEngine::removeItemFromContainer()</a>, <a class="el" href="engine_8hpp_source.html#l01206">rpg_os::RulesetEngine::runTurn()</a>, <a class="el" href="engine_8hpp_source.html#l01733">rpg_os::RulesetEngine::shortRest()</a>, <a class="el" href="test__event__system_8cpp_source.html#l00075">TEST_CASE()</a>, and <a class="el" href="engine_8hpp_source.html#l00966">rpg_os::RulesetEngine::unequip()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00849">rpg_os::RulesetEngine::addItem()</a>, <a class="el" href="engine_8hpp_source.html#l00722">rpg_os::RulesetEngine::applyAffliction()</a>, <a class="el" href="engine_8hpp_source.html#l00610">rpg_os::RulesetEngine::castSpell()</a>, <a class="el" href="engine_8hpp_source.html#l00945">rpg_os::RulesetEngine::equip()</a>, <a class="el" href="engine_8hpp_source.html#l01197">rpg_os::RulesetEngine::fireConditionChanged()</a>, <a class="el" href="engine_8hpp_source.html#l01757">rpg_os::RulesetEngine::gainXp()</a>, <a class="el" href="event__system_8hpp_source.html#l00122">getBool()</a>, <a class="el" href="event__system_8hpp_source.html#l00117">getInt()</a>, <a class="el" href="engine_8hpp_source.html#l01800">rpg_os::RulesetEngine::longRest()</a>, <a class="el" href="engine_8hpp_source.html#l00887">rpg_os::RulesetEngine::pay()</a>, <a class="el" href="engine_8hpp_source.html#l00867">rpg_os::RulesetEngine::removeItem()</a>, <a class="el" href="engine_8hpp_source.html#l01070">rpg_os::RulesetEngine::removeItemFromContainer()</a>, <a class="el" href="engine_8hpp_source.html#l01264">rpg_os::RulesetEngine::runTurn()</a>, <a class="el" href="engine_8hpp_source.html#l01791">rpg_os::RulesetEngine::shortRest()</a>, <a class="el" href="test__event__system_8cpp_source.html#l00075">TEST_CASE()</a>, and <a class="el" href="engine_8hpp_source.html#l00992">rpg_os::RulesetEngine::unequip()</a>.</p>
 
 </div>
 </div>

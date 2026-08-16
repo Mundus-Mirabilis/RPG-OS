@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['difficult_0',['Difficult',['../namespacerpg__os.html#a5d0f76e637716d8f9bedca406ff39fe6a429ee94cd13d541a0d434e93c798ac4c',1,'rpg_os']]],
-  ['difficulty_1',['Difficulty',['../namespacerpg__os.html#a031baa10011b869e066dd2a216ce55d4a7b29ca96ada2afa3aadbcf55cd61a1ed',1,'rpg_os']]],
-  ['disadvantage_2',['Disadvantage',['../namespacerpg__os.html#a2fe23abe4211557387324614b880a9bcae755d083f9085a585ef791919be5a004',1,'rpg_os']]],
-  ['doublehalve_3',['DoubleHalve',['../namespacerpg__os.html#ab545c7c57f9754a6d5b040f83bedaf52aa2224aa958f41d288d9e97e986492b36',1,'rpg_os']]],
-  ['doubleroll_4',['DoubleRoll',['../namespacerpg__os.html#a475606cc248fcbc80000a0ceb3b8c448a58a065c7f5b83923cce9c69323749f20',1,'rpg_os']]]
+  ['clamp_0',['Clamp',['../namespacerpg__os.html#aab9c315b59a58b0733ac5a30a02da3f2a08825280e3f8137556325061ba67ff8c',1,'rpg_os']]],
+  ['critical_1',['Critical',['../namespacerpg__os.html#a0dc66a7ae36ef58a210fec7c99826700a278d01e5af56273bae1bb99a98b370cd',1,'rpg_os']]]
 ];
