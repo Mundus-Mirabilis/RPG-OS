@@ -46,6 +46,9 @@ var checks_8hpp =
       [ "ActorStat", "checks_8hpp.html#a031baa10011b869e066dd2a216ce55d4ae15941912a4c035ac473229ac6bf832a", null ],
       [ "TargetStat", "checks_8hpp.html#a031baa10011b869e066dd2a216ce55d4aa0fe624424aad8695f9a86a5f115b641", null ]
     ] ],
+    [ "additiveBonuses", "checks_8hpp.html#a57bb8cc489c712191ae953b042750c66", null ],
+    [ "applyAdvantage", "checks_8hpp.html#a85b90997636bc8b6b6fc60120b986d06", null ],
+    [ "gradeThresholdResult", "checks_8hpp.html#a1ebb0ebc515a1e899240e12886768985", null ],
     [ "qualityLevelFromRemaining", "checks_8hpp.html#a5202972feec1585019a7ab8a69a0ea3b", null ],
     [ "resolveCheck", "checks_8hpp.html#ac882be2ad6ea807bb910557771569803", null ],
     [ "resolveOpposedCheck", "checks_8hpp.html#a35c81cc264d9a39fa0ae84a98e47cc45", null ],
@@ -53,6 +56,8 @@ var checks_8hpp =
     [ "resolveResistanceCheck", "checks_8hpp.html#aec022d03c5ed920153ee4dca70e7bb9d", null ],
     [ "resolveThresholdCheck", "checks_8hpp.html#a6b46ef1cf31683f3c873e49ca842cab6", null ],
     [ "rollDie", "checks_8hpp.html#a8e9f2d36f9bbe8af6826ca5b2a0a1932", null ],
+    [ "rollWithTotal", "checks_8hpp.html#a0f48fa66b573a734af0763de614c3f58", null ],
     [ "scaleByDifficulty", "checks_8hpp.html#abe51285921020775936aeeed9cf1b57e", null ],
-    [ "successLevelFor", "checks_8hpp.html#a7cc63c6411d33823547b72473c8ce523", null ]
+    [ "successLevelFor", "checks_8hpp.html#a7cc63c6411d33823547b72473c8ce523", null ],
+    [ "thresholdReference", "checks_8hpp.html#a2fbc7f0203cb4abc6c9048d26b60bbdf", null ]
 ];

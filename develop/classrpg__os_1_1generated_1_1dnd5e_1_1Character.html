@@ -172,6 +172,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a694947946e9172b1e0f49b5b7c57043b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structrpg__os_1_1CheckResult.html">rpg_os::CheckResult</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#a694947946e9172b1e0f49b5b7c57043b">dnd5eAttackRanged</a> (const Target &amp;target, const <a class="el" href="structrpg__os_1_1CheckParams.html">rpg_os::CheckParams</a> &amp;params, Rng &amp;rng) const</td></tr>
 <tr class="memdesc:a694947946e9172b1e0f49b5b7c57043b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Named check 'dnd5e_attack_ranged' (see the ruleset's check_types).  <br /></td></tr>
 <tr class="separator:a694947946e9172b1e0f49b5b7c57043b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae115066de66b981c0614ea44aee40d6a" id="r_ae115066de66b981c0614ea44aee40d6a"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="conceptrpg__os_1_1StatProvider.html">rpg_os::StatProvider</a> Target, <a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rpg_os::RandomNumberGenerator</a> Rng&gt; </td></tr>
+<tr class="memitem:ae115066de66b981c0614ea44aee40d6a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structrpg__os_1_1CheckResult.html">rpg_os::CheckResult</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#ae115066de66b981c0614ea44aee40d6a">dnd5eAttack</a> (const Target &amp;target, const <a class="el" href="structrpg__os_1_1CheckParams.html">rpg_os::CheckParams</a> &amp;params, Rng &amp;rng) const</td></tr>
+<tr class="memdesc:ae115066de66b981c0614ea44aee40d6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Named check 'dnd5e_attack' (see the ruleset's check_types).  <br /></td></tr>
+<tr class="separator:ae115066de66b981c0614ea44aee40d6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae902f18bc4a1249b9de27ff94302cd49" id="r_ae902f18bc4a1249b9de27ff94302cd49"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rpg_os::RandomNumberGenerator</a> Rng&gt; </td></tr>
 <tr class="memitem:ae902f18bc4a1249b9de27ff94302cd49"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structrpg__os_1_1CheckResult.html">rpg_os::CheckResult</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#ae902f18bc4a1249b9de27ff94302cd49">dnd5eCheckStr</a> (const <a class="el" href="structrpg__os_1_1CheckParams.html">rpg_os::CheckParams</a> &amp;params, Rng &amp;rng) const</td></tr>
 <tr class="memdesc:ae902f18bc4a1249b9de27ff94302cd49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Named check 'dnd5e_check_str' (see the ruleset's check_types).  <br /></td></tr>
@@ -539,7 +543,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00092">92</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00113">coinAmount()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00108">depositCoins()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00540">fromJson()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00113">coinAmount()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00108">depositCoins()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00562">fromJson()</a>.</p>
 
 </div>
 </div>
@@ -605,6 +609,56 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="ae115066de66b981c0614ea44aee40d6a" name="ae115066de66b981c0614ea44aee40d6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae115066de66b981c0614ea44aee40d6a">&#9670;&#160;</a></span>dnd5eAttack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="conceptrpg__os_1_1StatProvider.html">rpg_os::StatProvider</a> Target, <a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rpg_os::RandomNumberGenerator</a> Rng&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structrpg__os_1_1CheckResult.html">rpg_os::CheckResult</a> rpg_os::generated::dnd5e::Character::dnd5eAttack </td>
+          <td>(</td>
+          <td class="paramtype">const Target &amp;&#160;</td>
+          <td class="paramname"><em>target</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structrpg__os_1_1CheckParams.html">rpg_os::CheckParams</a> &amp;&#160;</td>
+          <td class="paramname"><em>params</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Rng &amp;&#160;</td>
+          <td class="paramname"><em>rng</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Named check 'dnd5e_attack' (see the ruleset's check_types). </p>
+
+<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00265">265</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="namespacerpg__os.html#a475606cc248fcbc80000a0ceb3b8c448a8af5861002f3c157f9ba842bba10aa3f">rpg_os::Face</a>, <a class="el" href="namespacerpg__os.html#a4ede194e1af239829344bcfe6bf5791fa758b05d899def79c9eb864ad4f96be1f">rpg_os::GreaterEqual</a>, <a class="el" href="namespacerpg__os.html#a77f98d725fb2409a3e02d40f5772f3bca6adf97f83acf6453d4a6a4b1070f3754">rpg_os::None</a>, <a class="el" href="checks_8hpp_source.html#l00108">rpg_os::CheckRecipe::resolution</a>, <a class="el" href="checks_8hpp_source.html#l00618">rpg_os::resolveCheck()</a>, <a class="el" href="namespacerpg__os.html#a031baa10011b869e066dd2a216ce55d4aa0fe624424aad8695f9a86a5f115b641">rpg_os::TargetStat</a>, <a class="el" href="namespacerpg__os.html#a95eaa793f5aa7a7b28d2851594d614dca2a63f555989152ba866b43a1faacd680">rpg_os::Threshold</a>, and <a class="el" href="namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753daac18f68e8a52d0ae7da868601481627e">rpg_os::ToThreshold</a>.</p>
+
+</div>
+</div>
 <a id="ad8bdf40901561556d05ef52767a89fe5" name="ad8bdf40901561556d05ef52767a89fe5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad8bdf40901561556d05ef52767a89fe5">&#9670;&#160;</a></span>dnd5eAttackMelee()</h2>
 
@@ -651,7 +705,7 @@ template&lt;<a class="el" href="conceptrpg__os_1_1StatProvider.html">rpg_os::Sta
 
 <p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00222">222</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="namespacerpg__os.html#a475606cc248fcbc80000a0ceb3b8c448a8af5861002f3c157f9ba842bba10aa3f">rpg_os::Face</a>, <a class="el" href="namespacerpg__os.html#a4ede194e1af239829344bcfe6bf5791fa758b05d899def79c9eb864ad4f96be1f">rpg_os::GreaterEqual</a>, <a class="el" href="namespacerpg__os.html#a77f98d725fb2409a3e02d40f5772f3bca6adf97f83acf6453d4a6a4b1070f3754">rpg_os::None</a>, <a class="el" href="checks_8hpp_source.html#l00107">rpg_os::CheckRecipe::resolution</a>, <a class="el" href="checks_8hpp_source.html#l00573">rpg_os::resolveCheck()</a>, <a class="el" href="namespacerpg__os.html#a031baa10011b869e066dd2a216ce55d4aa0fe624424aad8695f9a86a5f115b641">rpg_os::TargetStat</a>, <a class="el" href="namespacerpg__os.html#a95eaa793f5aa7a7b28d2851594d614dca2a63f555989152ba866b43a1faacd680">rpg_os::Threshold</a>, and <a class="el" href="namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753daac18f68e8a52d0ae7da868601481627e">rpg_os::ToThreshold</a>.</p>
+<p class="reference">References <a class="el" href="namespacerpg__os.html#a475606cc248fcbc80000a0ceb3b8c448a8af5861002f3c157f9ba842bba10aa3f">rpg_os::Face</a>, <a class="el" href="namespacerpg__os.html#a4ede194e1af239829344bcfe6bf5791fa758b05d899def79c9eb864ad4f96be1f">rpg_os::GreaterEqual</a>, <a class="el" href="namespacerpg__os.html#a77f98d725fb2409a3e02d40f5772f3bca6adf97f83acf6453d4a6a4b1070f3754">rpg_os::None</a>, <a class="el" href="checks_8hpp_source.html#l00108">rpg_os::CheckRecipe::resolution</a>, <a class="el" href="checks_8hpp_source.html#l00618">rpg_os::resolveCheck()</a>, <a class="el" href="namespacerpg__os.html#a031baa10011b869e066dd2a216ce55d4aa0fe624424aad8695f9a86a5f115b641">rpg_os::TargetStat</a>, <a class="el" href="namespacerpg__os.html#a95eaa793f5aa7a7b28d2851594d614dca2a63f555989152ba866b43a1faacd680">rpg_os::Threshold</a>, and <a class="el" href="namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753daac18f68e8a52d0ae7da868601481627e">rpg_os::ToThreshold</a>.</p>
 
 </div>
 </div>
@@ -701,7 +755,7 @@ template&lt;<a class="el" href="conceptrpg__os_1_1StatProvider.html">rpg_os::Sta
 
 <p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00244">244</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="namespacerpg__os.html#a475606cc248fcbc80000a0ceb3b8c448a8af5861002f3c157f9ba842bba10aa3f">rpg_os::Face</a>, <a class="el" href="namespacerpg__os.html#a4ede194e1af239829344bcfe6bf5791fa758b05d899def79c9eb864ad4f96be1f">rpg_os::GreaterEqual</a>, <a class="el" href="namespacerpg__os.html#a77f98d725fb2409a3e02d40f5772f3bca6adf97f83acf6453d4a6a4b1070f3754">rpg_os::None</a>, <a class="el" href="checks_8hpp_source.html#l00107">rpg_os::CheckRecipe::resolution</a>, <a class="el" href="checks_8hpp_source.html#l00573">rpg_os::resolveCheck()</a>, <a class="el" href="namespacerpg__os.html#a031baa10011b869e066dd2a216ce55d4aa0fe624424aad8695f9a86a5f115b641">rpg_os::TargetStat</a>, <a class="el" href="namespacerpg__os.html#a95eaa793f5aa7a7b28d2851594d614dca2a63f555989152ba866b43a1faacd680">rpg_os::Threshold</a>, and <a class="el" href="namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753daac18f68e8a52d0ae7da868601481627e">rpg_os::ToThreshold</a>.</p>
+<p class="reference">References <a class="el" href="namespacerpg__os.html#a475606cc248fcbc80000a0ceb3b8c448a8af5861002f3c157f9ba842bba10aa3f">rpg_os::Face</a>, <a class="el" href="namespacerpg__os.html#a4ede194e1af239829344bcfe6bf5791fa758b05d899def79c9eb864ad4f96be1f">rpg_os::GreaterEqual</a>, <a class="el" href="namespacerpg__os.html#a77f98d725fb2409a3e02d40f5772f3bca6adf97f83acf6453d4a6a4b1070f3754">rpg_os::None</a>, <a class="el" href="checks_8hpp_source.html#l00108">rpg_os::CheckRecipe::resolution</a>, <a class="el" href="checks_8hpp_source.html#l00618">rpg_os::resolveCheck()</a>, <a class="el" href="namespacerpg__os.html#a031baa10011b869e066dd2a216ce55d4aa0fe624424aad8695f9a86a5f115b641">rpg_os::TargetStat</a>, <a class="el" href="namespacerpg__os.html#a95eaa793f5aa7a7b28d2851594d614dca2a63f555989152ba866b43a1faacd680">rpg_os::Threshold</a>, and <a class="el" href="namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753daac18f68e8a52d0ae7da868601481627e">rpg_os::ToThreshold</a>.</p>
 
 </div>
 </div>
@@ -743,9 +797,9 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p>Named check 'dnd5e_check_cha' (see the ruleset's check_types). </p>
 
-<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00370">370</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00392">392</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="namespacerpg__os.html#a031baa10011b869e066dd2a216ce55d4a7b29ca96ada2afa3aadbcf55cd61a1ed">rpg_os::Difficulty</a>, <a class="el" href="namespacerpg__os.html#a475606cc248fcbc80000a0ceb3b8c448a8af5861002f3c157f9ba842bba10aa3f">rpg_os::Face</a>, <a class="el" href="namespacerpg__os.html#a4ede194e1af239829344bcfe6bf5791fa758b05d899def79c9eb864ad4f96be1f">rpg_os::GreaterEqual</a>, <a class="el" href="namespacerpg__os.html#a77f98d725fb2409a3e02d40f5772f3bca6adf97f83acf6453d4a6a4b1070f3754">rpg_os::None</a>, <a class="el" href="checks_8hpp_source.html#l00107">rpg_os::CheckRecipe::resolution</a>, <a class="el" href="checks_8hpp_source.html#l00573">rpg_os::resolveCheck()</a>, <a class="el" href="namespacerpg__os.html#a95eaa793f5aa7a7b28d2851594d614dca2a63f555989152ba866b43a1faacd680">rpg_os::Threshold</a>, and <a class="el" href="namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753daac18f68e8a52d0ae7da868601481627e">rpg_os::ToThreshold</a>.</p>
+<p class="reference">References <a class="el" href="namespacerpg__os.html#a031baa10011b869e066dd2a216ce55d4a7b29ca96ada2afa3aadbcf55cd61a1ed">rpg_os::Difficulty</a>, <a class="el" href="namespacerpg__os.html#a475606cc248fcbc80000a0ceb3b8c448a8af5861002f3c157f9ba842bba10aa3f">rpg_os::Face</a>, <a class="el" href="namespacerpg__os.html#a4ede194e1af239829344bcfe6bf5791fa758b05d899def79c9eb864ad4f96be1f">rpg_os::GreaterEqual</a>, <a class="el" href="namespacerpg__os.html#a77f98d725fb2409a3e02d40f5772f3bca6adf97f83acf6453d4a6a4b1070f3754">rpg_os::None</a>, <a class="el" href="checks_8hpp_source.html#l00108">rpg_os::CheckRecipe::resolution</a>, <a class="el" href="checks_8hpp_source.html#l00618">rpg_os::resolveCheck()</a>, <a class="el" href="namespacerpg__os.html#a95eaa793f5aa7a7b28d2851594d614dca2a63f555989152ba866b43a1faacd680">rpg_os::Threshold</a>, and <a class="el" href="namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753daac18f68e8a52d0ae7da868601481627e">rpg_os::ToThreshold</a>.</p>
 
 </div>
 </div>
@@ -787,9 +841,9 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p>Named check 'dnd5e_check_con' (see the ruleset's check_types). </p>
 
-<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00307">307</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00329">329</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="namespacerpg__os.html#a031baa10011b869e066dd2a216ce55d4a7b29ca96ada2afa3aadbcf55cd61a1ed">rpg_os::Difficulty</a>, <a class="el" href="namespacerpg__os.html#a475606cc248fcbc80000a0ceb3b8c448a8af5861002f3c157f9ba842bba10aa3f">rpg_os::Face</a>, <a class="el" href="namespacerpg__os.html#a4ede194e1af239829344bcfe6bf5791fa758b05d899def79c9eb864ad4f96be1f">rpg_os::GreaterEqual</a>, <a class="el" href="namespacerpg__os.html#a77f98d725fb2409a3e02d40f5772f3bca6adf97f83acf6453d4a6a4b1070f3754">rpg_os::None</a>, <a class="el" href="checks_8hpp_source.html#l00107">rpg_os::CheckRecipe::resolution</a>, <a class="el" href="checks_8hpp_source.html#l00573">rpg_os::resolveCheck()</a>, <a class="el" href="namespacerpg__os.html#a95eaa793f5aa7a7b28d2851594d614dca2a63f555989152ba866b43a1faacd680">rpg_os::Threshold</a>, and <a class="el" href="namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753daac18f68e8a52d0ae7da868601481627e">rpg_os::ToThreshold</a>.</p>
+<p class="reference">References <a class="el" href="namespacerpg__os.html#a031baa10011b869e066dd2a216ce55d4a7b29ca96ada2afa3aadbcf55cd61a1ed">rpg_os::Difficulty</a>, <a class="el" href="namespacerpg__os.html#a475606cc248fcbc80000a0ceb3b8c448a8af5861002f3c157f9ba842bba10aa3f">rpg_os::Face</a>, <a class="el" href="namespacerpg__os.html#a4ede194e1af239829344bcfe6bf5791fa758b05d899def79c9eb864ad4f96be1f">rpg_os::GreaterEqual</a>, <a class="el" href="namespacerpg__os.html#a77f98d725fb2409a3e02d40f5772f3bca6adf97f83acf6453d4a6a4b1070f3754">rpg_os::None</a>, <a class="el" href="checks_8hpp_source.html#l00108">rpg_os::CheckRecipe::resolution</a>, <a class="el" href="checks_8hpp_source.html#l00618">rpg_os::resolveCheck()</a>, <a class="el" href="namespacerpg__os.html#a95eaa793f5aa7a7b28d2851594d614dca2a63f555989152ba866b43a1faacd680">rpg_os::Threshold</a>, and <a class="el" href="namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753daac18f68e8a52d0ae7da868601481627e">rpg_os::ToThreshold</a>.</p>
 
 </div>
 </div>
@@ -831,9 +885,9 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p>Named check 'dnd5e_check_dex' (see the ruleset's check_types). </p>
 
-<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00286">286</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00308">308</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="namespacerpg__os.html#a031baa10011b869e066dd2a216ce55d4a7b29ca96ada2afa3aadbcf55cd61a1ed">rpg_os::Difficulty</a>, <a class="el" href="namespacerpg__os.html#a475606cc248fcbc80000a0ceb3b8c448a8af5861002f3c157f9ba842bba10aa3f">rpg_os::Face</a>, <a class="el" href="namespacerpg__os.html#a4ede194e1af239829344bcfe6bf5791fa758b05d899def79c9eb864ad4f96be1f">rpg_os::GreaterEqual</a>, <a class="el" href="namespacerpg__os.html#a77f98d725fb2409a3e02d40f5772f3bca6adf97f83acf6453d4a6a4b1070f3754">rpg_os::None</a>, <a class="el" href="checks_8hpp_source.html#l00107">rpg_os::CheckRecipe::resolution</a>, <a class="el" href="checks_8hpp_source.html#l00573">rpg_os::resolveCheck()</a>, <a class="el" href="namespacerpg__os.html#a95eaa793f5aa7a7b28d2851594d614dca2a63f555989152ba866b43a1faacd680">rpg_os::Threshold</a>, and <a class="el" href="namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753daac18f68e8a52d0ae7da868601481627e">rpg_os::ToThreshold</a>.</p>
+<p class="reference">References <a class="el" href="namespacerpg__os.html#a031baa10011b869e066dd2a216ce55d4a7b29ca96ada2afa3aadbcf55cd61a1ed">rpg_os::Difficulty</a>, <a class="el" href="namespacerpg__os.html#a475606cc248fcbc80000a0ceb3b8c448a8af5861002f3c157f9ba842bba10aa3f">rpg_os::Face</a>, <a class="el" href="namespacerpg__os.html#a4ede194e1af239829344bcfe6bf5791fa758b05d899def79c9eb864ad4f96be1f">rpg_os::GreaterEqual</a>, <a class="el" href="namespacerpg__os.html#a77f98d725fb2409a3e02d40f5772f3bca6adf97f83acf6453d4a6a4b1070f3754">rpg_os::None</a>, <a class="el" href="checks_8hpp_source.html#l00108">rpg_os::CheckRecipe::resolution</a>, <a class="el" href="checks_8hpp_source.html#l00618">rpg_os::resolveCheck()</a>, <a class="el" href="namespacerpg__os.html#a95eaa793f5aa7a7b28d2851594d614dca2a63f555989152ba866b43a1faacd680">rpg_os::Threshold</a>, and <a class="el" href="namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753daac18f68e8a52d0ae7da868601481627e">rpg_os::ToThreshold</a>.</p>
 
 </div>
 </div>
@@ -875,9 +929,9 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p>Named check 'dnd5e_check_int' (see the ruleset's check_types). </p>
 
-<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00328">328</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00350">350</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="namespacerpg__os.html#a031baa10011b869e066dd2a216ce55d4a7b29ca96ada2afa3aadbcf55cd61a1ed">rpg_os::Difficulty</a>, <a class="el" href="namespacerpg__os.html#a475606cc248fcbc80000a0ceb3b8c448a8af5861002f3c157f9ba842bba10aa3f">rpg_os::Face</a>, <a class="el" href="namespacerpg__os.html#a4ede194e1af239829344bcfe6bf5791fa758b05d899def79c9eb864ad4f96be1f">rpg_os::GreaterEqual</a>, <a class="el" href="namespacerpg__os.html#a77f98d725fb2409a3e02d40f5772f3bca6adf97f83acf6453d4a6a4b1070f3754">rpg_os::None</a>, <a class="el" href="checks_8hpp_source.html#l00107">rpg_os::CheckRecipe::resolution</a>, <a class="el" href="checks_8hpp_source.html#l00573">rpg_os::resolveCheck()</a>, <a class="el" href="namespacerpg__os.html#a95eaa793f5aa7a7b28d2851594d614dca2a63f555989152ba866b43a1faacd680">rpg_os::Threshold</a>, and <a class="el" href="namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753daac18f68e8a52d0ae7da868601481627e">rpg_os::ToThreshold</a>.</p>
+<p class="reference">References <a class="el" href="namespacerpg__os.html#a031baa10011b869e066dd2a216ce55d4a7b29ca96ada2afa3aadbcf55cd61a1ed">rpg_os::Difficulty</a>, <a class="el" href="namespacerpg__os.html#a475606cc248fcbc80000a0ceb3b8c448a8af5861002f3c157f9ba842bba10aa3f">rpg_os::Face</a>, <a class="el" href="namespacerpg__os.html#a4ede194e1af239829344bcfe6bf5791fa758b05d899def79c9eb864ad4f96be1f">rpg_os::GreaterEqual</a>, <a class="el" href="namespacerpg__os.html#a77f98d725fb2409a3e02d40f5772f3bca6adf97f83acf6453d4a6a4b1070f3754">rpg_os::None</a>, <a class="el" href="checks_8hpp_source.html#l00108">rpg_os::CheckRecipe::resolution</a>, <a class="el" href="checks_8hpp_source.html#l00618">rpg_os::resolveCheck()</a>, <a class="el" href="namespacerpg__os.html#a95eaa793f5aa7a7b28d2851594d614dca2a63f555989152ba866b43a1faacd680">rpg_os::Threshold</a>, and <a class="el" href="namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753daac18f68e8a52d0ae7da868601481627e">rpg_os::ToThreshold</a>.</p>
 
 </div>
 </div>
@@ -919,9 +973,9 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p>Named check 'dnd5e_check_str' (see the ruleset's check_types). </p>
 
-<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00265">265</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00287">287</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="namespacerpg__os.html#a031baa10011b869e066dd2a216ce55d4a7b29ca96ada2afa3aadbcf55cd61a1ed">rpg_os::Difficulty</a>, <a class="el" href="namespacerpg__os.html#a475606cc248fcbc80000a0ceb3b8c448a8af5861002f3c157f9ba842bba10aa3f">rpg_os::Face</a>, <a class="el" href="namespacerpg__os.html#a4ede194e1af239829344bcfe6bf5791fa758b05d899def79c9eb864ad4f96be1f">rpg_os::GreaterEqual</a>, <a class="el" href="namespacerpg__os.html#a77f98d725fb2409a3e02d40f5772f3bca6adf97f83acf6453d4a6a4b1070f3754">rpg_os::None</a>, <a class="el" href="checks_8hpp_source.html#l00107">rpg_os::CheckRecipe::resolution</a>, <a class="el" href="checks_8hpp_source.html#l00573">rpg_os::resolveCheck()</a>, <a class="el" href="namespacerpg__os.html#a95eaa793f5aa7a7b28d2851594d614dca2a63f555989152ba866b43a1faacd680">rpg_os::Threshold</a>, and <a class="el" href="namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753daac18f68e8a52d0ae7da868601481627e">rpg_os::ToThreshold</a>.</p>
+<p class="reference">References <a class="el" href="namespacerpg__os.html#a031baa10011b869e066dd2a216ce55d4a7b29ca96ada2afa3aadbcf55cd61a1ed">rpg_os::Difficulty</a>, <a class="el" href="namespacerpg__os.html#a475606cc248fcbc80000a0ceb3b8c448a8af5861002f3c157f9ba842bba10aa3f">rpg_os::Face</a>, <a class="el" href="namespacerpg__os.html#a4ede194e1af239829344bcfe6bf5791fa758b05d899def79c9eb864ad4f96be1f">rpg_os::GreaterEqual</a>, <a class="el" href="namespacerpg__os.html#a77f98d725fb2409a3e02d40f5772f3bca6adf97f83acf6453d4a6a4b1070f3754">rpg_os::None</a>, <a class="el" href="checks_8hpp_source.html#l00108">rpg_os::CheckRecipe::resolution</a>, <a class="el" href="checks_8hpp_source.html#l00618">rpg_os::resolveCheck()</a>, <a class="el" href="namespacerpg__os.html#a95eaa793f5aa7a7b28d2851594d614dca2a63f555989152ba866b43a1faacd680">rpg_os::Threshold</a>, and <a class="el" href="namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753daac18f68e8a52d0ae7da868601481627e">rpg_os::ToThreshold</a>.</p>
 
 </div>
 </div>
@@ -963,9 +1017,9 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p>Named check 'dnd5e_check_wis' (see the ruleset's check_types). </p>
 
-<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00349">349</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00371">371</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="namespacerpg__os.html#a031baa10011b869e066dd2a216ce55d4a7b29ca96ada2afa3aadbcf55cd61a1ed">rpg_os::Difficulty</a>, <a class="el" href="namespacerpg__os.html#a475606cc248fcbc80000a0ceb3b8c448a8af5861002f3c157f9ba842bba10aa3f">rpg_os::Face</a>, <a class="el" href="namespacerpg__os.html#a4ede194e1af239829344bcfe6bf5791fa758b05d899def79c9eb864ad4f96be1f">rpg_os::GreaterEqual</a>, <a class="el" href="namespacerpg__os.html#a77f98d725fb2409a3e02d40f5772f3bca6adf97f83acf6453d4a6a4b1070f3754">rpg_os::None</a>, <a class="el" href="checks_8hpp_source.html#l00107">rpg_os::CheckRecipe::resolution</a>, <a class="el" href="checks_8hpp_source.html#l00573">rpg_os::resolveCheck()</a>, <a class="el" href="namespacerpg__os.html#a95eaa793f5aa7a7b28d2851594d614dca2a63f555989152ba866b43a1faacd680">rpg_os::Threshold</a>, and <a class="el" href="namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753daac18f68e8a52d0ae7da868601481627e">rpg_os::ToThreshold</a>.</p>
+<p class="reference">References <a class="el" href="namespacerpg__os.html#a031baa10011b869e066dd2a216ce55d4a7b29ca96ada2afa3aadbcf55cd61a1ed">rpg_os::Difficulty</a>, <a class="el" href="namespacerpg__os.html#a475606cc248fcbc80000a0ceb3b8c448a8af5861002f3c157f9ba842bba10aa3f">rpg_os::Face</a>, <a class="el" href="namespacerpg__os.html#a4ede194e1af239829344bcfe6bf5791fa758b05d899def79c9eb864ad4f96be1f">rpg_os::GreaterEqual</a>, <a class="el" href="namespacerpg__os.html#a77f98d725fb2409a3e02d40f5772f3bca6adf97f83acf6453d4a6a4b1070f3754">rpg_os::None</a>, <a class="el" href="checks_8hpp_source.html#l00108">rpg_os::CheckRecipe::resolution</a>, <a class="el" href="checks_8hpp_source.html#l00618">rpg_os::resolveCheck()</a>, <a class="el" href="namespacerpg__os.html#a95eaa793f5aa7a7b28d2851594d614dca2a63f555989152ba866b43a1faacd680">rpg_os::Threshold</a>, and <a class="el" href="namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753daac18f68e8a52d0ae7da868601481627e">rpg_os::ToThreshold</a>.</p>
 
 </div>
 </div>
@@ -1007,9 +1061,9 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p>Named check 'dnd5e_save_cha' (see the ruleset's check_types). </p>
 
-<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00496">496</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00518">518</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="namespacerpg__os.html#a031baa10011b869e066dd2a216ce55d4a7b29ca96ada2afa3aadbcf55cd61a1ed">rpg_os::Difficulty</a>, <a class="el" href="namespacerpg__os.html#a475606cc248fcbc80000a0ceb3b8c448a8af5861002f3c157f9ba842bba10aa3f">rpg_os::Face</a>, <a class="el" href="namespacerpg__os.html#a4ede194e1af239829344bcfe6bf5791fa758b05d899def79c9eb864ad4f96be1f">rpg_os::GreaterEqual</a>, <a class="el" href="namespacerpg__os.html#a77f98d725fb2409a3e02d40f5772f3bca6adf97f83acf6453d4a6a4b1070f3754">rpg_os::None</a>, <a class="el" href="checks_8hpp_source.html#l00107">rpg_os::CheckRecipe::resolution</a>, <a class="el" href="checks_8hpp_source.html#l00573">rpg_os::resolveCheck()</a>, <a class="el" href="namespacerpg__os.html#a95eaa793f5aa7a7b28d2851594d614dca2a63f555989152ba866b43a1faacd680">rpg_os::Threshold</a>, and <a class="el" href="namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753daac18f68e8a52d0ae7da868601481627e">rpg_os::ToThreshold</a>.</p>
+<p class="reference">References <a class="el" href="namespacerpg__os.html#a031baa10011b869e066dd2a216ce55d4a7b29ca96ada2afa3aadbcf55cd61a1ed">rpg_os::Difficulty</a>, <a class="el" href="namespacerpg__os.html#a475606cc248fcbc80000a0ceb3b8c448a8af5861002f3c157f9ba842bba10aa3f">rpg_os::Face</a>, <a class="el" href="namespacerpg__os.html#a4ede194e1af239829344bcfe6bf5791fa758b05d899def79c9eb864ad4f96be1f">rpg_os::GreaterEqual</a>, <a class="el" href="namespacerpg__os.html#a77f98d725fb2409a3e02d40f5772f3bca6adf97f83acf6453d4a6a4b1070f3754">rpg_os::None</a>, <a class="el" href="checks_8hpp_source.html#l00108">rpg_os::CheckRecipe::resolution</a>, <a class="el" href="checks_8hpp_source.html#l00618">rpg_os::resolveCheck()</a>, <a class="el" href="namespacerpg__os.html#a95eaa793f5aa7a7b28d2851594d614dca2a63f555989152ba866b43a1faacd680">rpg_os::Threshold</a>, and <a class="el" href="namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753daac18f68e8a52d0ae7da868601481627e">rpg_os::ToThreshold</a>.</p>
 
 </div>
 </div>
@@ -1051,9 +1105,9 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p>Named check 'dnd5e_save_con' (see the ruleset's check_types). </p>
 
-<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00433">433</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00455">455</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="namespacerpg__os.html#a031baa10011b869e066dd2a216ce55d4a7b29ca96ada2afa3aadbcf55cd61a1ed">rpg_os::Difficulty</a>, <a class="el" href="namespacerpg__os.html#a475606cc248fcbc80000a0ceb3b8c448a8af5861002f3c157f9ba842bba10aa3f">rpg_os::Face</a>, <a class="el" href="namespacerpg__os.html#a4ede194e1af239829344bcfe6bf5791fa758b05d899def79c9eb864ad4f96be1f">rpg_os::GreaterEqual</a>, <a class="el" href="namespacerpg__os.html#a77f98d725fb2409a3e02d40f5772f3bca6adf97f83acf6453d4a6a4b1070f3754">rpg_os::None</a>, <a class="el" href="checks_8hpp_source.html#l00107">rpg_os::CheckRecipe::resolution</a>, <a class="el" href="checks_8hpp_source.html#l00573">rpg_os::resolveCheck()</a>, <a class="el" href="namespacerpg__os.html#a95eaa793f5aa7a7b28d2851594d614dca2a63f555989152ba866b43a1faacd680">rpg_os::Threshold</a>, and <a class="el" href="namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753daac18f68e8a52d0ae7da868601481627e">rpg_os::ToThreshold</a>.</p>
+<p class="reference">References <a class="el" href="namespacerpg__os.html#a031baa10011b869e066dd2a216ce55d4a7b29ca96ada2afa3aadbcf55cd61a1ed">rpg_os::Difficulty</a>, <a class="el" href="namespacerpg__os.html#a475606cc248fcbc80000a0ceb3b8c448a8af5861002f3c157f9ba842bba10aa3f">rpg_os::Face</a>, <a class="el" href="namespacerpg__os.html#a4ede194e1af239829344bcfe6bf5791fa758b05d899def79c9eb864ad4f96be1f">rpg_os::GreaterEqual</a>, <a class="el" href="namespacerpg__os.html#a77f98d725fb2409a3e02d40f5772f3bca6adf97f83acf6453d4a6a4b1070f3754">rpg_os::None</a>, <a class="el" href="checks_8hpp_source.html#l00108">rpg_os::CheckRecipe::resolution</a>, <a class="el" href="checks_8hpp_source.html#l00618">rpg_os::resolveCheck()</a>, <a class="el" href="namespacerpg__os.html#a95eaa793f5aa7a7b28d2851594d614dca2a63f555989152ba866b43a1faacd680">rpg_os::Threshold</a>, and <a class="el" href="namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753daac18f68e8a52d0ae7da868601481627e">rpg_os::ToThreshold</a>.</p>
 
 </div>
 </div>
@@ -1095,9 +1149,9 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p>Named check 'dnd5e_save_dex' (see the ruleset's check_types). </p>
 
-<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00412">412</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00434">434</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="namespacerpg__os.html#a031baa10011b869e066dd2a216ce55d4a7b29ca96ada2afa3aadbcf55cd61a1ed">rpg_os::Difficulty</a>, <a class="el" href="namespacerpg__os.html#a475606cc248fcbc80000a0ceb3b8c448a8af5861002f3c157f9ba842bba10aa3f">rpg_os::Face</a>, <a class="el" href="namespacerpg__os.html#a4ede194e1af239829344bcfe6bf5791fa758b05d899def79c9eb864ad4f96be1f">rpg_os::GreaterEqual</a>, <a class="el" href="namespacerpg__os.html#a77f98d725fb2409a3e02d40f5772f3bca6adf97f83acf6453d4a6a4b1070f3754">rpg_os::None</a>, <a class="el" href="checks_8hpp_source.html#l00107">rpg_os::CheckRecipe::resolution</a>, <a class="el" href="checks_8hpp_source.html#l00573">rpg_os::resolveCheck()</a>, <a class="el" href="namespacerpg__os.html#a95eaa793f5aa7a7b28d2851594d614dca2a63f555989152ba866b43a1faacd680">rpg_os::Threshold</a>, and <a class="el" href="namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753daac18f68e8a52d0ae7da868601481627e">rpg_os::ToThreshold</a>.</p>
+<p class="reference">References <a class="el" href="namespacerpg__os.html#a031baa10011b869e066dd2a216ce55d4a7b29ca96ada2afa3aadbcf55cd61a1ed">rpg_os::Difficulty</a>, <a class="el" href="namespacerpg__os.html#a475606cc248fcbc80000a0ceb3b8c448a8af5861002f3c157f9ba842bba10aa3f">rpg_os::Face</a>, <a class="el" href="namespacerpg__os.html#a4ede194e1af239829344bcfe6bf5791fa758b05d899def79c9eb864ad4f96be1f">rpg_os::GreaterEqual</a>, <a class="el" href="namespacerpg__os.html#a77f98d725fb2409a3e02d40f5772f3bca6adf97f83acf6453d4a6a4b1070f3754">rpg_os::None</a>, <a class="el" href="checks_8hpp_source.html#l00108">rpg_os::CheckRecipe::resolution</a>, <a class="el" href="checks_8hpp_source.html#l00618">rpg_os::resolveCheck()</a>, <a class="el" href="namespacerpg__os.html#a95eaa793f5aa7a7b28d2851594d614dca2a63f555989152ba866b43a1faacd680">rpg_os::Threshold</a>, and <a class="el" href="namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753daac18f68e8a52d0ae7da868601481627e">rpg_os::ToThreshold</a>.</p>
 
 </div>
 </div>
@@ -1139,9 +1193,9 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p>Named check 'dnd5e_save_int' (see the ruleset's check_types). </p>
 
-<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00454">454</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00476">476</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="namespacerpg__os.html#a031baa10011b869e066dd2a216ce55d4a7b29ca96ada2afa3aadbcf55cd61a1ed">rpg_os::Difficulty</a>, <a class="el" href="namespacerpg__os.html#a475606cc248fcbc80000a0ceb3b8c448a8af5861002f3c157f9ba842bba10aa3f">rpg_os::Face</a>, <a class="el" href="namespacerpg__os.html#a4ede194e1af239829344bcfe6bf5791fa758b05d899def79c9eb864ad4f96be1f">rpg_os::GreaterEqual</a>, <a class="el" href="namespacerpg__os.html#a77f98d725fb2409a3e02d40f5772f3bca6adf97f83acf6453d4a6a4b1070f3754">rpg_os::None</a>, <a class="el" href="checks_8hpp_source.html#l00107">rpg_os::CheckRecipe::resolution</a>, <a class="el" href="checks_8hpp_source.html#l00573">rpg_os::resolveCheck()</a>, <a class="el" href="namespacerpg__os.html#a95eaa793f5aa7a7b28d2851594d614dca2a63f555989152ba866b43a1faacd680">rpg_os::Threshold</a>, and <a class="el" href="namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753daac18f68e8a52d0ae7da868601481627e">rpg_os::ToThreshold</a>.</p>
+<p class="reference">References <a class="el" href="namespacerpg__os.html#a031baa10011b869e066dd2a216ce55d4a7b29ca96ada2afa3aadbcf55cd61a1ed">rpg_os::Difficulty</a>, <a class="el" href="namespacerpg__os.html#a475606cc248fcbc80000a0ceb3b8c448a8af5861002f3c157f9ba842bba10aa3f">rpg_os::Face</a>, <a class="el" href="namespacerpg__os.html#a4ede194e1af239829344bcfe6bf5791fa758b05d899def79c9eb864ad4f96be1f">rpg_os::GreaterEqual</a>, <a class="el" href="namespacerpg__os.html#a77f98d725fb2409a3e02d40f5772f3bca6adf97f83acf6453d4a6a4b1070f3754">rpg_os::None</a>, <a class="el" href="checks_8hpp_source.html#l00108">rpg_os::CheckRecipe::resolution</a>, <a class="el" href="checks_8hpp_source.html#l00618">rpg_os::resolveCheck()</a>, <a class="el" href="namespacerpg__os.html#a95eaa793f5aa7a7b28d2851594d614dca2a63f555989152ba866b43a1faacd680">rpg_os::Threshold</a>, and <a class="el" href="namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753daac18f68e8a52d0ae7da868601481627e">rpg_os::ToThreshold</a>.</p>
 
 </div>
 </div>
@@ -1183,9 +1237,9 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p>Named check 'dnd5e_save_str' (see the ruleset's check_types). </p>
 
-<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00391">391</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00413">413</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="namespacerpg__os.html#a031baa10011b869e066dd2a216ce55d4a7b29ca96ada2afa3aadbcf55cd61a1ed">rpg_os::Difficulty</a>, <a class="el" href="namespacerpg__os.html#a475606cc248fcbc80000a0ceb3b8c448a8af5861002f3c157f9ba842bba10aa3f">rpg_os::Face</a>, <a class="el" href="namespacerpg__os.html#a4ede194e1af239829344bcfe6bf5791fa758b05d899def79c9eb864ad4f96be1f">rpg_os::GreaterEqual</a>, <a class="el" href="namespacerpg__os.html#a77f98d725fb2409a3e02d40f5772f3bca6adf97f83acf6453d4a6a4b1070f3754">rpg_os::None</a>, <a class="el" href="checks_8hpp_source.html#l00107">rpg_os::CheckRecipe::resolution</a>, <a class="el" href="checks_8hpp_source.html#l00573">rpg_os::resolveCheck()</a>, <a class="el" href="namespacerpg__os.html#a95eaa793f5aa7a7b28d2851594d614dca2a63f555989152ba866b43a1faacd680">rpg_os::Threshold</a>, and <a class="el" href="namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753daac18f68e8a52d0ae7da868601481627e">rpg_os::ToThreshold</a>.</p>
+<p class="reference">References <a class="el" href="namespacerpg__os.html#a031baa10011b869e066dd2a216ce55d4a7b29ca96ada2afa3aadbcf55cd61a1ed">rpg_os::Difficulty</a>, <a class="el" href="namespacerpg__os.html#a475606cc248fcbc80000a0ceb3b8c448a8af5861002f3c157f9ba842bba10aa3f">rpg_os::Face</a>, <a class="el" href="namespacerpg__os.html#a4ede194e1af239829344bcfe6bf5791fa758b05d899def79c9eb864ad4f96be1f">rpg_os::GreaterEqual</a>, <a class="el" href="namespacerpg__os.html#a77f98d725fb2409a3e02d40f5772f3bca6adf97f83acf6453d4a6a4b1070f3754">rpg_os::None</a>, <a class="el" href="checks_8hpp_source.html#l00108">rpg_os::CheckRecipe::resolution</a>, <a class="el" href="checks_8hpp_source.html#l00618">rpg_os::resolveCheck()</a>, <a class="el" href="namespacerpg__os.html#a95eaa793f5aa7a7b28d2851594d614dca2a63f555989152ba866b43a1faacd680">rpg_os::Threshold</a>, and <a class="el" href="namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753daac18f68e8a52d0ae7da868601481627e">rpg_os::ToThreshold</a>.</p>
 
 </div>
 </div>
@@ -1227,9 +1281,9 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p>Named check 'dnd5e_save_wis' (see the ruleset's check_types). </p>
 
-<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00475">475</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00497">497</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="namespacerpg__os.html#a031baa10011b869e066dd2a216ce55d4a7b29ca96ada2afa3aadbcf55cd61a1ed">rpg_os::Difficulty</a>, <a class="el" href="namespacerpg__os.html#a475606cc248fcbc80000a0ceb3b8c448a8af5861002f3c157f9ba842bba10aa3f">rpg_os::Face</a>, <a class="el" href="namespacerpg__os.html#a4ede194e1af239829344bcfe6bf5791fa758b05d899def79c9eb864ad4f96be1f">rpg_os::GreaterEqual</a>, <a class="el" href="namespacerpg__os.html#a77f98d725fb2409a3e02d40f5772f3bca6adf97f83acf6453d4a6a4b1070f3754">rpg_os::None</a>, <a class="el" href="checks_8hpp_source.html#l00107">rpg_os::CheckRecipe::resolution</a>, <a class="el" href="checks_8hpp_source.html#l00573">rpg_os::resolveCheck()</a>, <a class="el" href="namespacerpg__os.html#a95eaa793f5aa7a7b28d2851594d614dca2a63f555989152ba866b43a1faacd680">rpg_os::Threshold</a>, and <a class="el" href="namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753daac18f68e8a52d0ae7da868601481627e">rpg_os::ToThreshold</a>.</p>
+<p class="reference">References <a class="el" href="namespacerpg__os.html#a031baa10011b869e066dd2a216ce55d4a7b29ca96ada2afa3aadbcf55cd61a1ed">rpg_os::Difficulty</a>, <a class="el" href="namespacerpg__os.html#a475606cc248fcbc80000a0ceb3b8c448a8af5861002f3c157f9ba842bba10aa3f">rpg_os::Face</a>, <a class="el" href="namespacerpg__os.html#a4ede194e1af239829344bcfe6bf5791fa758b05d899def79c9eb864ad4f96be1f">rpg_os::GreaterEqual</a>, <a class="el" href="namespacerpg__os.html#a77f98d725fb2409a3e02d40f5772f3bca6adf97f83acf6453d4a6a4b1070f3754">rpg_os::None</a>, <a class="el" href="checks_8hpp_source.html#l00108">rpg_os::CheckRecipe::resolution</a>, <a class="el" href="checks_8hpp_source.html#l00618">rpg_os::resolveCheck()</a>, <a class="el" href="namespacerpg__os.html#a95eaa793f5aa7a7b28d2851594d614dca2a63f555989152ba866b43a1faacd680">rpg_os::Threshold</a>, and <a class="el" href="namespacerpg__os.html#aa851b7886a1792c711386fd71ee2753daac18f68e8a52d0ae7da868601481627e">rpg_os::ToThreshold</a>.</p>
 
 </div>
 </div>
@@ -1269,11 +1323,11 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p>Loads a single archetype by id; throws std::invalid_argument when missing. </p>
 
-<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00664">664</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00686">686</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00664">fromArchetype()</a>, and <a class="el" href="namespacerpg__os.html#ab870da3d65c79d59dad5920efc43dc65a64663f4646781c9c0110838b905daa23">rpg_os::Random</a>.</p>
+<p class="reference">References <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00686">fromArchetype()</a>, and <a class="el" href="namespacerpg__os.html#ab870da3d65c79d59dad5920efc43dc65a64663f4646781c9c0110838b905daa23">rpg_os::Random</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00664">fromArchetype()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00686">fromArchetype()</a>.</p>
 
 </div>
 </div>
@@ -1327,9 +1381,9 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p>Loads a single archetype by id, picking ranged values per <code>variance</code>. </p>
 
-<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00671">671</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00693">693</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00532">fromJson()</a>.</p>
+<p class="reference">References <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00554">fromJson()</a>.</p>
 
 </div>
 </div>
@@ -1368,11 +1422,11 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 </div><div class="memdoc">
 <p>Loads a single creature from data.creatures by id; throws std::invalid_argument when missing (ranged values at random). </p>
 
-<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00704">704</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00726">726</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00704">fromCreature()</a>, and <a class="el" href="namespacerpg__os.html#ab870da3d65c79d59dad5920efc43dc65a64663f4646781c9c0110838b905daa23">rpg_os::Random</a>.</p>
+<p class="reference">References <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00726">fromCreature()</a>, and <a class="el" href="namespacerpg__os.html#ab870da3d65c79d59dad5920efc43dc65a64663f4646781c9c0110838b905daa23">rpg_os::Random</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00704">fromCreature()</a>, and <a class="el" href="specific__mode_2main_8cpp_source.html#l00053">main()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00726">fromCreature()</a>, and <a class="el" href="specific__mode_2main_8cpp_source.html#l00053">main()</a>.</p>
 
 </div>
 </div>
@@ -1426,9 +1480,9 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p>Loads a single creature by id, picking ranged values per <code>variance</code>. </p>
 
-<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00711">711</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00733">733</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00532">fromJson()</a>.</p>
+<p class="reference">References <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00554">fromJson()</a>.</p>
 
 </div>
 </div>
@@ -1457,11 +1511,11 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 </div><div class="memdoc">
 <p>Populates this character from a ruleset data record (archetype); ranged values are picked at random. </p>
 
-<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00532">532</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00554">554</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00532">fromJson()</a>, and <a class="el" href="namespacerpg__os.html#ab870da3d65c79d59dad5920efc43dc65a64663f4646781c9c0110838b905daa23">rpg_os::Random</a>.</p>
+<p class="reference">References <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00554">fromJson()</a>, and <a class="el" href="namespacerpg__os.html#ab870da3d65c79d59dad5920efc43dc65a64663f4646781c9c0110838b905daa23">rpg_os::Random</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00671">fromArchetype()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00711">fromCreature()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00532">fromJson()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00691">loadArchetypes()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00731">loadCreatures()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00693">fromArchetype()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00733">fromCreature()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00554">fromJson()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00713">loadArchetypes()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00753">loadCreatures()</a>.</p>
 
 </div>
 </div>
@@ -1508,7 +1562,7 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 </div><div class="memdoc">
 <p>As above, but picks ranged values according to <code>variance</code> (weakest, weak, average, strong, strongest) with the caller-supplied RNG. </p>
 
-<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00540">540</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00562">562</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00062">acrobatics</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00088">advancement</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00063">animalHandling</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00064">arcana</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00065">athletics</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00054">charisma</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00051">constitution</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00092">currencySystem()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00066">deception</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00050">dexterity</a>, <a class="el" href="equipment_8hpp_source.html#l00029">rpg_os::Equipment::equip()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00086">equipment</a>, <a class="el" href="advancement_8hpp_source.html#l00030">rpg_os::Advancement::gainXp()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00067">history</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00082">hitPoints</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00068">insight</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00052">intelligence</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00069">intimidation</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00070">investigation</a>, <a class="el" href="spellbook_8hpp_source.html#l00026">rpg_os::Spellbook::learn()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00058">level</a>, <a class="el" href="advancement_8hpp_source.html#l00038">rpg_os::Advancement::level</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00059">maxHitPoints</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00071">medicine</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00089">money</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00072">nature</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00073">perception</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00074">performance</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00075">persuasion</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00057">proficiencyBonus</a>, <a class="el" href="variance_8hpp_source.html#l00131">rpg_os::readVariantValue()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00076">religion</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00077">sleightOfHand</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00087">spellbook</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00078">stealth</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00049">strength</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00079">survival</a>, <a class="el" href="money_8hpp_source.html#l00061">rpg_os::CurrencySystem::valueOf()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00053">wisdom</a>.</p>
 
@@ -1601,11 +1655,11 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p>Loads every archetype record from the ruleset JSON's data section. </p>
 
-<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00684">684</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00706">706</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00684">loadArchetypes()</a>, and <a class="el" href="namespacerpg__os.html#ab870da3d65c79d59dad5920efc43dc65a64663f4646781c9c0110838b905daa23">rpg_os::Random</a>.</p>
+<p class="reference">References <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00706">loadArchetypes()</a>, and <a class="el" href="namespacerpg__os.html#ab870da3d65c79d59dad5920efc43dc65a64663f4646781c9c0110838b905daa23">rpg_os::Random</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00684">loadArchetypes()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00706">loadArchetypes()</a>.</p>
 
 </div>
 </div>
@@ -1653,9 +1707,9 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p>Loads every archetype record, picking ranged values per <code>variance</code>. </p>
 
-<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00691">691</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00713">713</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00532">fromJson()</a>.</p>
+<p class="reference">References <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00554">fromJson()</a>.</p>
 
 </div>
 </div>
@@ -1685,9 +1739,9 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p>Loads every conditions record from the ruleset JSON. </p>
 
-<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00762">762</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00784">784</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00744">loadSection()</a>.</p>
+<p class="reference">References <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00766">loadSection()</a>.</p>
 
 </div>
 </div>
@@ -1717,11 +1771,11 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p>Loads every creature record from the ruleset JSON's data section. </p>
 
-<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00724">724</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00746">746</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00724">loadCreatures()</a>, and <a class="el" href="namespacerpg__os.html#ab870da3d65c79d59dad5920efc43dc65a64663f4646781c9c0110838b905daa23">rpg_os::Random</a>.</p>
+<p class="reference">References <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00746">loadCreatures()</a>, and <a class="el" href="namespacerpg__os.html#ab870da3d65c79d59dad5920efc43dc65a64663f4646781c9c0110838b905daa23">rpg_os::Random</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00724">loadCreatures()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00746">loadCreatures()</a>.</p>
 
 </div>
 </div>
@@ -1769,9 +1823,9 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p>Loads every creature record, picking ranged values per <code>variance</code>. </p>
 
-<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00731">731</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00753">753</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00532">fromJson()</a>.</p>
+<p class="reference">References <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00554">fromJson()</a>.</p>
 
 </div>
 </div>
@@ -1801,9 +1855,9 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p>Loads every curses record from the ruleset JSON. </p>
 
-<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00782">782</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00804">804</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00744">loadSection()</a>.</p>
+<p class="reference">References <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00766">loadSection()</a>.</p>
 
 </div>
 </div>
@@ -1833,9 +1887,9 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p>Loads every diseases record from the ruleset JSON. </p>
 
-<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00772">772</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00794">794</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00744">loadSection()</a>.</p>
+<p class="reference">References <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00766">loadSection()</a>.</p>
 
 </div>
 </div>
@@ -1865,9 +1919,9 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p>Loads every items record from the ruleset JSON. </p>
 
-<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00777">777</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00799">799</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00744">loadSection()</a>.</p>
+<p class="reference">References <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00766">loadSection()</a>.</p>
 
 </div>
 </div>
@@ -1897,9 +1951,9 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p>Loads every poisons record from the ruleset JSON. </p>
 
-<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00767">767</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00789">789</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00744">loadSection()</a>.</p>
+<p class="reference">References <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00766">loadSection()</a>.</p>
 
 </div>
 </div>
@@ -1939,9 +1993,9 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p>Loads every record from a named <code>data</code> section as raw JSON. </p>
 
-<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00744">744</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00766">766</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00762">loadConditions()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00782">loadCurses()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00772">loadDiseases()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00777">loadItems()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00767">loadPoisons()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00757">loadSpells()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00784">loadConditions()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00804">loadCurses()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00794">loadDiseases()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00799">loadItems()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00789">loadPoisons()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00779">loadSpells()</a>.</p>
 
 </div>
 </div>
@@ -1971,9 +2025,9 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p>Loads every spells record from the ruleset JSON. </p>
 
-<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00757">757</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00779">779</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00744">loadSection()</a>.</p>
+<p class="reference">References <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00766">loadSection()</a>.</p>
 
 </div>
 </div>
@@ -2095,7 +2149,7 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p>Cost table 'xp_to_level'. </p>
 
-<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00519">519</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00541">541</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="cost__table_8hpp_source.html#l00110">rpg_os::CostTable::fromEntries()</a>, and <a class="el" href="classrpg__os_1_1CostTable.html#aa3019c91e18a440b7b275be56cbb4aaea2a63f555989152ba866b43a1faacd680">rpg_os::CostTable::Threshold</a>.</p>
 
@@ -2116,7 +2170,7 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00062">62</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00540">fromJson()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00144">getStat()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00562">fromJson()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00144">getStat()</a>.</p>
 
 </div>
 </div>
@@ -2134,7 +2188,7 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00088">88</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00540">fromJson()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00562">fromJson()</a>.</p>
 
 </div>
 </div>
@@ -2152,7 +2206,7 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00063">63</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00540">fromJson()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00144">getStat()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00562">fromJson()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00144">getStat()</a>.</p>
 
 </div>
 </div>
@@ -2170,7 +2224,7 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00064">64</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00540">fromJson()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00144">getStat()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00562">fromJson()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00144">getStat()</a>.</p>
 
 </div>
 </div>
@@ -2188,7 +2242,7 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00065">65</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00540">fromJson()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00144">getStat()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00562">fromJson()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00144">getStat()</a>.</p>
 
 </div>
 </div>
@@ -2206,7 +2260,7 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00054">54</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00133">charismaModifier()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00540">fromJson()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00144">getStat()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00133">charismaModifier()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00562">fromJson()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00144">getStat()</a>.</p>
 
 </div>
 </div>
@@ -2224,7 +2278,7 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00051">51</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00124">constitutionModifier()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00540">fromJson()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00144">getStat()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00124">constitutionModifier()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00562">fromJson()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00144">getStat()</a>.</p>
 
 </div>
 </div>
@@ -2242,7 +2296,7 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00066">66</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00540">fromJson()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00144">getStat()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00562">fromJson()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00144">getStat()</a>.</p>
 
 </div>
 </div>
@@ -2260,7 +2314,7 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00050">50</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00121">dexterityModifier()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00540">fromJson()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00144">getStat()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00121">dexterityModifier()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00562">fromJson()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00144">getStat()</a>.</p>
 
 </div>
 </div>
@@ -2278,7 +2332,7 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00086">86</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00540">fromJson()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00562">fromJson()</a>.</p>
 
 </div>
 </div>
@@ -2296,7 +2350,7 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00067">67</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00540">fromJson()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00144">getStat()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00562">fromJson()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00144">getStat()</a>.</p>
 
 </div>
 </div>
@@ -2314,7 +2368,7 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00082">82</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00540">fromJson()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00562">fromJson()</a>.</p>
 
 </div>
 </div>
@@ -2332,7 +2386,7 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00068">68</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00540">fromJson()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00144">getStat()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00562">fromJson()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00144">getStat()</a>.</p>
 
 </div>
 </div>
@@ -2350,7 +2404,7 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00052">52</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00540">fromJson()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00144">getStat()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00127">intelligenceModifier()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00562">fromJson()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00144">getStat()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00127">intelligenceModifier()</a>.</p>
 
 </div>
 </div>
@@ -2368,7 +2422,7 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00069">69</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00540">fromJson()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00144">getStat()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00562">fromJson()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00144">getStat()</a>.</p>
 
 </div>
 </div>
@@ -2402,7 +2456,7 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00070">70</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00540">fromJson()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00144">getStat()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00562">fromJson()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00144">getStat()</a>.</p>
 
 </div>
 </div>
@@ -2420,7 +2474,7 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00058">58</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00540">fromJson()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00144">getStat()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00139">proficiencyBonusByLevel()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00562">fromJson()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00144">getStat()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00139">proficiencyBonusByLevel()</a>.</p>
 
 </div>
 </div>
@@ -2438,7 +2492,7 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00059">59</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00540">fromJson()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00144">getStat()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00562">fromJson()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00144">getStat()</a>.</p>
 
 </div>
 </div>
@@ -2456,7 +2510,7 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00071">71</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00540">fromJson()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00144">getStat()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00562">fromJson()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00144">getStat()</a>.</p>
 
 </div>
 </div>
@@ -2474,7 +2528,7 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00089">89</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00113">coinAmount()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00108">depositCoins()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00540">fromJson()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00113">coinAmount()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00108">depositCoins()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00562">fromJson()</a>.</p>
 
 </div>
 </div>
@@ -2492,7 +2546,7 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00072">72</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00540">fromJson()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00144">getStat()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00562">fromJson()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00144">getStat()</a>.</p>
 
 </div>
 </div>
@@ -2510,7 +2564,7 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00073">73</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00540">fromJson()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00144">getStat()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00562">fromJson()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00144">getStat()</a>.</p>
 
 </div>
 </div>
@@ -2528,7 +2582,7 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00074">74</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00540">fromJson()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00144">getStat()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00562">fromJson()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00144">getStat()</a>.</p>
 
 </div>
 </div>
@@ -2546,7 +2600,7 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00075">75</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00540">fromJson()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00144">getStat()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00562">fromJson()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00144">getStat()</a>.</p>
 
 </div>
 </div>
@@ -2564,7 +2618,7 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00057">57</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00540">fromJson()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00144">getStat()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00562">fromJson()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00144">getStat()</a>.</p>
 
 </div>
 </div>
@@ -2582,7 +2636,7 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00076">76</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00540">fromJson()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00144">getStat()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00562">fromJson()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00144">getStat()</a>.</p>
 
 </div>
 </div>
@@ -2600,7 +2654,7 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00077">77</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00540">fromJson()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00144">getStat()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00562">fromJson()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00144">getStat()</a>.</p>
 
 </div>
 </div>
@@ -2618,7 +2672,7 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00087">87</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00540">fromJson()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00562">fromJson()</a>.</p>
 
 </div>
 </div>
@@ -2636,7 +2690,7 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00078">78</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00540">fromJson()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00144">getStat()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00562">fromJson()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00144">getStat()</a>.</p>
 
 </div>
 </div>
@@ -2654,7 +2708,7 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00049">49</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00540">fromJson()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00144">getStat()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00118">strengthModifier()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00562">fromJson()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00144">getStat()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00118">strengthModifier()</a>.</p>
 
 </div>
 </div>
@@ -2672,7 +2726,7 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00079">79</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00540">fromJson()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00144">getStat()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00562">fromJson()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00144">getStat()</a>.</p>
 
 </div>
 </div>
@@ -2690,7 +2744,7 @@ template&lt;<a class="el" href="conceptrpg__os_1_1RandomNumberGenerator.html">rp
 
 <p class="definition">Definition at line <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00053">53</a> of file <a class="el" href="dnd5e__srd__static_8hpp_source.html">dnd5e_srd_static.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00540">fromJson()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00144">getStat()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00130">wisdomModifier()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00562">fromJson()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00144">getStat()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00130">wisdomModifier()</a>.</p>
 
 </div>
 </div>

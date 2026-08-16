@@ -87,7 +87,7 @@ var searchData=
   ['checkwillpower_84',['checkWillpower',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#aac7e6054bcaafba9b5ff16b4a3c931fb',1,'rpg_os::generated::tde5e::Character']]],
   ['checkwoodworking_85',['checkWoodworking',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a9d5a17d5f6d3c5c8e18f8e4a49929855',1,'rpg_os::generated::tde5e::Character']]],
   ['choicesrequired_86',['choicesrequired',['../structrpg__os_1_1RulesetEngine_1_1SpellResult.html#a7aadc13d31c24f0198c51f369950920e',1,'rpg_os::RulesetEngine::SpellResult::choicesRequired'],['../structrpg__os_1_1RulesetEngine_1_1EffectsResult.html#a5da29cb53014c730eb41c8de67249e8a',1,'rpg_os::RulesetEngine::EffectsResult::choicesRequired']]],
-  ['clamp_87',['clamp',['../namespacerpg__os_1_1math.html#a16c183b1fd3884c24734548b35761d80',1,'rpg_os::math::clamp()'],['../namespacerpg__os.html#aab9c315b59a58b0733ac5a30a02da3f2a08825280e3f8137556325061ba67ff8c',1,'rpg_os::Clamp']]],
+  ['clamp_87',['clamp',['../namespacerpg__os.html#aab9c315b59a58b0733ac5a30a02da3f2a08825280e3f8137556325061ba67ff8c',1,'rpg_os::Clamp'],['../namespacerpg__os_1_1math.html#a16c183b1fd3884c24734548b35761d80',1,'rpg_os::math::clamp(double value, double lo, double hi) noexcept']]],
   ['clampint_88',['clampInt',['../namespacerpg__os_1_1math.html#a33f5c88483e9687bd1e5bafef976b25c',1,'rpg_os::math']]],
   ['clampmax_89',['clampMax',['../structrpg__os_1_1Modifier.html#aaa72927fe1b4ba8e10a2bbb82d125487',1,'rpg_os::Modifier']]],
   ['clampmin_90',['clampMin',['../structrpg__os_1_1Modifier.html#afb714760f719b12e49f17732e8bb2e16',1,'rpg_os::Modifier']]],

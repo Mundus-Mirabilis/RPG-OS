@@ -8,6 +8,7 @@ var classrpg__os_1_1generated_1_1dnd5e_1_1Character =
     [ "currencySystem", "classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#ae84bb23fe4aff2fb1995c04b5ec3acc8", null ],
     [ "depositCoins", "classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#a3b7cb063aadc961c65bcbff806213954", null ],
     [ "dexterityModifier", "classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#aa293b5e02bc17f0c78b2ae02ecd73409", null ],
+    [ "dnd5eAttack", "classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#ae115066de66b981c0614ea44aee40d6a", null ],
     [ "dnd5eAttackMelee", "classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#ad8bdf40901561556d05ef52767a89fe5", null ],
     [ "dnd5eAttackRanged", "classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#a694947946e9172b1e0f49b5b7c57043b", null ],
     [ "dnd5eCheckCha", "classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#a303f6118f6e2027d8064fc23fc9f26d7", null ],

@@ -5,7 +5,7 @@ var searchData=
   ['religion_2',['religion',['../classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#a7e173294aa45ba7f9c712d9276463591',1,'rpg_os::generated::dnd5e::Character']]],
   ['religions_3',['religions',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a4169e7d716954d9a9f8fd26666c4a77a',1,'rpg_os::generated::tde5e::Character']]],
   ['remaining_4',['remaining',['../structrpg__os_1_1ActiveEffect.html#a795b88fbb3c85b318fbd19df284757d9',1,'rpg_os::ActiveEffect::remaining'],['../structrpg__os_1_1StatBonus.html#a4b506966eefe996fc1c261c3c5d5fe93',1,'rpg_os::StatBonus::remaining'],['../structrpg__os_1_1BonusDie.html#a3ef8aa49cb60add2c4a604ed9c9dc4c2',1,'rpg_os::BonusDie::remaining'],['../structrpg__os_1_1OngoingEffect.html#a37a63ceec6f867c11d1f0750d80b2bff',1,'rpg_os::OngoingEffect::remaining']]],
-  ['remaininglp_5',['remainingLp',['../structrpg__os_1_1FightOutcome.html#a2a0133165dacbf8de4f614b561986770',1,'rpg_os::FightOutcome']]],
+  ['remaininglp_5',['remainingLp',['../structrpg__os_1_1FightOutcome.html#a4dcd5ddbc90e3c7a6c79f62f80b9d09c',1,'rpg_os::FightOutcome']]],
   ['remainingpool_6',['remainingPool',['../structrpg__os_1_1CheckResult.html#ae8bd7c84e5def307a1c8f70f72bb8f19',1,'rpg_os::CheckResult']]],
   ['repair_7',['repair',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a5e24f13b5c5d5591e3ffbf2891ecfa37',1,'rpg_os::generated::brp_ugc::Character']]],
   ['research_8',['research',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#af3405d926b10d7761073a601638335b4',1,'rpg_os::generated::brp_ugc::Character']]],

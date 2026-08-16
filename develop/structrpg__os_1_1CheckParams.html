@@ -140,7 +140,7 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:afa09a3f957211c987596a707639595a6" id="r_afa09a3f957211c987596a707639595a6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacerpg__os.html#a2fe23abe4211557387324614b880a9bc">AdvantageMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrpg__os_1_1CheckParams.html#afa09a3f957211c987596a707639595a6">advantage</a> {<a class="el" href="namespacerpg__os.html#a2fe23abe4211557387324614b880a9bca6adf97f83acf6453d4a6a4b1070f3754">AdvantageMode::None</a>}</td></tr>
 <tr class="memdesc:afa09a3f957211c987596a707639595a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Advantage / disadvantage for this roll (see <a class="el" href="namespacerpg__os.html#a2fe23abe4211557387324614b880a9bc">AdvantageMode</a>).  <br /></td></tr>
 <tr class="separator:afa09a3f957211c987596a707639595a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ffde606867e23558f318d089d54b257" id="r_a9ffde606867e23558f318d089d54b257"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrpg__os_1_1CheckParams.html#a9ffde606867e23558f318d089d54b257">bonusDice</a> {}</td></tr>
+<tr class="memitem:a9ffde606867e23558f318d089d54b257" id="r_a9ffde606867e23558f318d089d54b257"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrpg__os_1_1CheckParams.html#a9ffde606867e23558f318d089d54b257">bonusDice</a></td></tr>
 <tr class="separator:a9ffde606867e23558f318d089d54b257"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a27bdb3888cf673271f6f9ba81e47d8" id="r_a5a27bdb3888cf673271f6f9ba81e47d8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrpg__os_1_1CheckParams.html#a5a27bdb3888cf673271f6f9ba81e47d8">autoFail</a> {false}</td></tr>
 <tr class="separator:a5a27bdb3888cf673271f6f9ba81e47d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -149,7 +149,7 @@ Public Attributes</h2></td></tr>
 <div class="textblock"><p>Per-call inputs shared by both modes.</p>
 <dl class="section user"><dt>Why separate per-call inputs from the recipe?</dt><dd>The recipe says <em>how</em> a check is resolved (which dice, which stats); this struct carries the values that change <em>per</em> invocation — the difficulty imposed by the situation, and situational modifiers. Keeping them apart means the recipe can be built once and reused across many checks with different difficulties. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="checks_8hpp_source.html#l00199">199</a> of file <a class="el" href="checks_8hpp_source.html">checks.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="checks_8hpp_source.html#l00200">200</a> of file <a class="el" href="checks_8hpp_source.html">checks.hpp</a>.</p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="afa09a3f957211c987596a707639595a6" name="afa09a3f957211c987596a707639595a6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afa09a3f957211c987596a707639595a6">&#9670;&#160;</a></span>advantage</h2>
@@ -165,9 +165,9 @@ Public Attributes</h2></td></tr>
 
 <p>Advantage / disadvantage for this roll (see <a class="el" href="namespacerpg__os.html#a2fe23abe4211557387324614b880a9bc">AdvantageMode</a>). </p>
 
-<p class="definition">Definition at line <a class="el" href="checks_8hpp_source.html#l00211">211</a> of file <a class="el" href="checks_8hpp_source.html">checks.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="checks_8hpp_source.html#l00212">212</a> of file <a class="el" href="checks_8hpp_source.html">checks.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="checks_8hpp_source.html#l00294">rpg_os::resolveThresholdCheck()</a>, <a class="el" href="test__checks_8cpp_source.html#l00231">TEST_CASE()</a>, and <a class="el" href="engine_8hpp_source.html#l00239">rpg_os::RulesetEngine::withConditionModifiers()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="checks_8hpp_source.html#l00398">rpg_os::resolveThresholdCheck()</a>, <a class="el" href="test__checks_8cpp_source.html#l00231">TEST_CASE()</a>, and <a class="el" href="engine_8hpp_source.html#l00239">rpg_os::RulesetEngine::withConditionModifiers()</a>.</p>
 
 </div>
 </div>
@@ -185,9 +185,9 @@ Public Attributes</h2></td></tr>
 <p>Whether the check is automatically a failure (e.g. "you automatically
 fail Strength and Dexterity saving throws"). When true no dice are rolled and the result is a failure. </p>
 
-<p class="definition">Definition at line <a class="el" href="checks_8hpp_source.html#l00219">219</a> of file <a class="el" href="checks_8hpp_source.html">checks.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="checks_8hpp_source.html#l00220">220</a> of file <a class="el" href="checks_8hpp_source.html">checks.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="checks_8hpp_source.html#l00573">rpg_os::resolveCheck()</a>, <a class="el" href="test__checks_8cpp_source.html#l00214">TEST_CASE()</a>, and <a class="el" href="engine_8hpp_source.html#l00239">rpg_os::RulesetEngine::withConditionModifiers()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="checks_8hpp_source.html#l00618">rpg_os::resolveCheck()</a>, <a class="el" href="test__checks_8cpp_source.html#l00214">TEST_CASE()</a>, and <a class="el" href="engine_8hpp_source.html#l00239">rpg_os::RulesetEngine::withConditionModifiers()</a>.</p>
 
 </div>
 </div>
@@ -198,15 +198,15 @@ fail Strength and Dexterity saving throws"). When true no dice are rolled and th
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a>&gt; rpg_os::CheckParams::bonusDice {}</td>
+          <td class="memname">std::vector&lt;<a class="el" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a>&gt; rpg_os::CheckParams::bonusDice</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>Bonus dice rolled in addition to the check's dice and added to the additive total (a D&amp;D Bless die, a bane penalty die, ...). Aggregated by the engine from active conditions / effects / traits; empty means none. </p>
 
-<p class="definition">Definition at line <a class="el" href="checks_8hpp_source.html#l00215">215</a> of file <a class="el" href="checks_8hpp_source.html">checks.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="checks_8hpp_source.html#l00216">216</a> of file <a class="el" href="checks_8hpp_source.html">checks.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="checks_8hpp_source.html#l00294">rpg_os::resolveThresholdCheck()</a>, <a class="el" href="test__checks_8cpp_source.html#l00189">TEST_CASE()</a>, and <a class="el" href="engine_8hpp_source.html#l00239">rpg_os::RulesetEngine::withConditionModifiers()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="checks_8hpp_source.html#l00336">rpg_os::detail::additiveBonuses()</a>, <a class="el" href="test__checks_8cpp_source.html#l00189">TEST_CASE()</a>, and <a class="el" href="engine_8hpp_source.html#l00239">rpg_os::RulesetEngine::withConditionModifiers()</a>.</p>
 
 </div>
 </div>
@@ -223,9 +223,9 @@ fail Strength and Dexterity saving throws"). When true no dice are rolled and th
 </div><div class="memdoc">
 <p>Threshold resolution: the reference when <code><a class="el" href="namespacerpg__os.html#a031baa10011b869e066dd2a216ce55d4a7b29ca96ada2afa3aadbcf55cd61a1ed" title="the value in CheckParams::difficulty">ThresholdSource::Difficulty</a></code>; otherwise the amount added to the stat that forms the reference. </p>
 
-<p class="definition">Definition at line <a class="el" href="checks_8hpp_source.html#l00202">202</a> of file <a class="el" href="checks_8hpp_source.html">checks.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="checks_8hpp_source.html#l00203">203</a> of file <a class="el" href="checks_8hpp_source.html">checks.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="checks_8hpp_source.html#l00472">rpg_os::resolveOpposedCheck()</a>, <a class="el" href="checks_8hpp_source.html#l00409">rpg_os::resolvePoolCheck()</a>, <a class="el" href="checks_8hpp_source.html#l00534">rpg_os::resolveResistanceCheck()</a>, <a class="el" href="engine_8hpp_source.html#l01622">rpg_os::RulesetEngine::resolveSave()</a>, <a class="el" href="checks_8hpp_source.html#l00294">rpg_os::resolveThresholdCheck()</a>, <a class="el" href="test__checks_8cpp_source.html#l00260">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00471">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01230">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01293">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01780">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01114">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01324">TEST_CASE()</a>, <a class="el" href="test__engine_8cpp_source.html#l00134">TEST_CASE()</a>, <a class="el" href="test__checks_8cpp_source.html#l00560">TEST_CASE()</a>, <a class="el" href="test__checks_8cpp_source.html#l00301">TEST_CASE()</a>, <a class="el" href="test__checks_8cpp_source.html#l00325">TEST_CASE()</a>, <a class="el" href="test__checks_8cpp_source.html#l00371">TEST_CASE()</a>, and <a class="el" href="test__checks_8cpp_source.html#l00388">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="checks_8hpp_source.html#l00517">rpg_os::resolveOpposedCheck()</a>, <a class="el" href="checks_8hpp_source.html#l00450">rpg_os::resolvePoolCheck()</a>, <a class="el" href="checks_8hpp_source.html#l00579">rpg_os::resolveResistanceCheck()</a>, <a class="el" href="engine_8hpp_source.html#l01622">rpg_os::RulesetEngine::resolveSave()</a>, <a class="el" href="test__checks_8cpp_source.html#l00260">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00471">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01230">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01293">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01780">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01114">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01324">TEST_CASE()</a>, <a class="el" href="test__engine_8cpp_source.html#l00134">TEST_CASE()</a>, <a class="el" href="test__checks_8cpp_source.html#l00560">TEST_CASE()</a>, <a class="el" href="test__checks_8cpp_source.html#l00301">TEST_CASE()</a>, <a class="el" href="test__checks_8cpp_source.html#l00325">TEST_CASE()</a>, <a class="el" href="test__checks_8cpp_source.html#l00371">TEST_CASE()</a>, <a class="el" href="test__checks_8cpp_source.html#l00388">TEST_CASE()</a>, and <a class="el" href="checks_8hpp_source.html#l00286">rpg_os::detail::thresholdReference()</a>.</p>
 
 </div>
 </div>
@@ -242,9 +242,9 @@ fail Strength and Dexterity saving throws"). When true no dice are rolled and th
 </div><div class="memdoc">
 <p>Multiplicative difficulty scale (Easy doubles / Difficult halves the reference). Only checks that opt in via <code><a class="el" href="structrpg__os_1_1CheckRecipe.html#a018ef57e890c0d29fad83f45f8d84fa3" title="Whether Easy / Difficult scales the reference multiplicatively.">CheckRecipe::difficultyMultiplier</a></code> honour it; see <a class="el" href="namespacerpg__os.html#a5d0f76e637716d8f9bedca406ff39fe6">DifficultyScale</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="checks_8hpp_source.html#l00209">209</a> of file <a class="el" href="checks_8hpp_source.html">checks.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="checks_8hpp_source.html#l00210">210</a> of file <a class="el" href="checks_8hpp_source.html">checks.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="checks_8hpp_source.html#l00294">rpg_os::resolveThresholdCheck()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00244">TEST_CASE()</a>, and <a class="el" href="test__checks_8cpp_source.html#l00580">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="test__rulesets_8cpp_source.html#l00244">TEST_CASE()</a>, <a class="el" href="test__checks_8cpp_source.html#l00580">TEST_CASE()</a>, and <a class="el" href="checks_8hpp_source.html#l00286">rpg_os::detail::thresholdReference()</a>.</p>
 
 </div>
 </div>
@@ -261,9 +261,9 @@ fail Strength and Dexterity saving throws"). When true no dice are rolled and th
 </div><div class="memdoc">
 <p>Extra flat modifier added to the rolled total (additive checks) or to the pool (pool checks). </p>
 
-<p class="definition">Definition at line <a class="el" href="checks_8hpp_source.html#l00205">205</a> of file <a class="el" href="checks_8hpp_source.html">checks.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="checks_8hpp_source.html#l00206">206</a> of file <a class="el" href="checks_8hpp_source.html">checks.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="checks_8hpp_source.html#l00409">rpg_os::resolvePoolCheck()</a>, <a class="el" href="checks_8hpp_source.html#l00294">rpg_os::resolveThresholdCheck()</a>, and <a class="el" href="engine_8hpp_source.html#l00239">rpg_os::RulesetEngine::withConditionModifiers()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="checks_8hpp_source.html#l00336">rpg_os::detail::additiveBonuses()</a>, <a class="el" href="checks_8hpp_source.html#l00450">rpg_os::resolvePoolCheck()</a>, and <a class="el" href="engine_8hpp_source.html#l00239">rpg_os::RulesetEngine::withConditionModifiers()</a>.</p>
 
 </div>
 </div>
