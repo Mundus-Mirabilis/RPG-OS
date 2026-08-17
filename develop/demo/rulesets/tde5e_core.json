@@ -1,0 +1,2605 @@
+{
+  "schema_version": 1,
+  "ruleset_id": "tde5e_core",
+  "ruleset_name": "The Dark Eye 5th Edition (Core Rules)",
+  "source": "The Dark Eye Core Rules, 2nd Printing (Ulisses Spiele, 2016)",
+  "licence": "Open RPG Creative License (ORC). This product is licensed under the ORC License located at the Library of Congress at TX00[number TBD] and available online at various locations. All warranties are disclaimed as set forth therein. The Dark Eye (Das Schwarze Auge) is (c) Ulisses Spiele GmbH; this is a fan-made reference data file for RPG-OS, not affiliated with or endorsed by Ulisses Spiele.",
+  "comment": "Data transcription of the German original 'Das Schwarze Auge 5. Edition - Regelwerk' (2. Druck). Attribute abbreviations COU SGC INT CHA DEX AGI CON STR follow the official English localization.",
+  "namespace": "rpg_os::generated::tde5e",
+  "spell_resource": "AE",
+  "currencies": {
+    "id": "tde_money",
+    "name": "Aventurian Coins",
+    "base_unit": "heller",
+    "denominations": [
+      { "id": "heller", "name": "Heller", "symbol": "H", "per_base": 1 },
+      { "id": "kreutzer", "name": "Kreutzer", "symbol": "K", "per_base": 10 },
+      { "id": "silbertaler", "name": "Silbertaler", "symbol": "ST", "per_base": 100 },
+      { "id": "dukat", "name": "Dukat", "symbol": "D", "per_base": 200 }
+    ]
+  },
+  "attributes": [
+    {
+      "id": "COU",
+      "name": "Courage",
+      "min": 1,
+      "max": 21,
+      "default": 10
+    },
+    {
+      "id": "SGC",
+      "name": "Sagacity",
+      "min": 1,
+      "max": 21,
+      "default": 10
+    },
+    {
+      "id": "INT",
+      "name": "Intuition",
+      "min": 1,
+      "max": 21,
+      "default": 10
+    },
+    {
+      "id": "CHA",
+      "name": "Charisma",
+      "min": 1,
+      "max": 21,
+      "default": 10
+    },
+    {
+      "id": "DEX",
+      "name": "Dexterity",
+      "min": 1,
+      "max": 21,
+      "default": 10
+    },
+    {
+      "id": "AGI",
+      "name": "Agility",
+      "min": 1,
+      "max": 21,
+      "default": 10
+    },
+    {
+      "id": "CON",
+      "name": "Constitution",
+      "min": 1,
+      "max": 21,
+      "default": 10
+    },
+    {
+      "id": "STR",
+      "name": "Strength",
+      "min": 1,
+      "max": 21,
+      "default": 10
+    },
+    {
+      "id": "Armor_Rating",
+      "name": "Armor Rating",
+      "min": 0,
+      "max": 20,
+      "default": 0
+    }
+  ],
+  "derived_stats": [
+    {
+      "id": "LifePoints_Max",
+      "name": "Max Life Points",
+      "formula": "5 + 2 * CON"
+    },
+    {
+      "id": "ArcaneEnergy_Max",
+      "name": "Max Arcane Energy",
+      "formula": "20 + INT"
+    },
+    {
+      "id": "KarmaPoints_Max",
+      "name": "Max Karma Points",
+      "formula": "20 + COU"
+    },
+    {
+      "id": "Dodge",
+      "name": "Dodge",
+      "formula": "round(AGI / 2)"
+    },
+    {
+      "id": "Initiative",
+      "name": "Initiative",
+      "formula": "round((COU + AGI) / 2)"
+    },
+    {
+      "id": "COU_Bonus",
+      "name": "Courage Bonus",
+      "formula": "floor((COU - 8) / 3)"
+    },
+    {
+      "id": "AGI_Bonus",
+      "name": "Agility Bonus",
+      "formula": "floor((AGI - 8) / 3)"
+    },
+    {
+      "id": "DEX_Bonus",
+      "name": "Dexterity Bonus",
+      "formula": "floor((DEX - 8) / 3)"
+    },
+    {
+      "id": "STR_Bonus",
+      "name": "Strength Bonus",
+      "formula": "floor((STR - 8) / 3)"
+    },
+    {
+      "id": "Attack",
+      "name": "Attack (Swords, SR 6)",
+      "formula": "6 + COU_Bonus"
+    },
+    {
+      "id": "Parry",
+      "name": "Parry (Swords)",
+      "formula": "floor(6 / 2) + AGI_Bonus"
+    },
+    {
+      "id": "RangedCombat",
+      "name": "Ranged Combat (Bows)",
+      "formula": "6 + DEX_Bonus"
+    },
+    {
+      "id": "Spirit",
+      "name": "Spirit",
+      "formula": "round((COU + SGC + INT) / 6)"
+    },
+    {
+      "id": "Toughness",
+      "name": "Toughness",
+      "formula": "round((CON + CON + STR) / 6)"
+    }
+  ],
+  "resource_pools": [
+    {
+      "id": "LP",
+      "name": "Life Points",
+      "max_stat": "LifePoints_Max",
+      "min": 0
+    },
+    {
+      "id": "AE",
+      "name": "Arcane Energy",
+      "max_stat": "ArcaneEnergy_Max",
+      "min": 0
+    },
+    {
+      "id": "KP",
+      "name": "Karma Points",
+      "max_stat": "KarmaPoints_Max",
+      "min": 0
+    }
+  ],
+  "skills": [
+    {
+      "id": "body_control",
+      "name": "Body Control",
+      "attributes": [
+        "AGI",
+        "AGI",
+        "CON"
+      ],
+      "default": 0
+    },
+    {
+      "id": "carousing",
+      "name": "Carousing",
+      "attributes": [
+        "SGC",
+        "CON",
+        "STR"
+      ],
+      "default": 0
+    },
+    {
+      "id": "climbing",
+      "name": "Climbing",
+      "attributes": [
+        "COU",
+        "AGI",
+        "STR"
+      ],
+      "default": 0
+    },
+    {
+      "id": "dancing",
+      "name": "Dancing",
+      "attributes": [
+        "SGC",
+        "CHA",
+        "DEX"
+      ],
+      "default": 0
+    },
+    {
+      "id": "feat_of_strength",
+      "name": "Feat of Strength",
+      "attributes": [
+        "CON",
+        "STR",
+        "STR"
+      ],
+      "default": 0
+    },
+    {
+      "id": "flying",
+      "name": "Flying",
+      "attributes": [
+        "COU",
+        "INT",
+        "AGI"
+      ],
+      "default": 0
+    },
+    {
+      "id": "gaukelei",
+      "name": "Gaukelei",
+      "attributes": [
+        "COU",
+        "CHA",
+        "DEX"
+      ],
+      "default": 0
+    },
+    {
+      "id": "perception",
+      "name": "Perception",
+      "attributes": [
+        "SGC",
+        "INT",
+        "INT"
+      ],
+      "default": 0
+    },
+    {
+      "id": "pickpocket",
+      "name": "Pickpocket",
+      "attributes": [
+        "COU",
+        "DEX",
+        "AGI"
+      ],
+      "default": 0
+    },
+    {
+      "id": "riding",
+      "name": "Riding",
+      "attributes": [
+        "CHA",
+        "AGI",
+        "STR"
+      ],
+      "default": 0
+    },
+    {
+      "id": "self_control",
+      "name": "Self-Control",
+      "attributes": [
+        "COU",
+        "COU",
+        "CON"
+      ],
+      "default": 0
+    },
+    {
+      "id": "singing",
+      "name": "Singing",
+      "attributes": [
+        "SGC",
+        "CHA",
+        "CON"
+      ],
+      "default": 0
+    },
+    {
+      "id": "stealth",
+      "name": "Stealth",
+      "attributes": [
+        "COU",
+        "INT",
+        "AGI"
+      ],
+      "default": 0
+    },
+    {
+      "id": "swimming",
+      "name": "Swimming",
+      "attributes": [
+        "AGI",
+        "CON",
+        "STR"
+      ],
+      "default": 0
+    },
+    {
+      "id": "disguise",
+      "name": "Disguise",
+      "attributes": [
+        "INT",
+        "CHA",
+        "AGI"
+      ],
+      "default": 0
+    },
+    {
+      "id": "empathy",
+      "name": "Empathy",
+      "attributes": [
+        "SGC",
+        "INT",
+        "CHA"
+      ],
+      "default": 0
+    },
+    {
+      "id": "etiquette",
+      "name": "Etiquette",
+      "attributes": [
+        "SGC",
+        "INT",
+        "CHA"
+      ],
+      "default": 0
+    },
+    {
+      "id": "fast_talk",
+      "name": "Fast-Talk",
+      "attributes": [
+        "COU",
+        "INT",
+        "CHA"
+      ],
+      "default": 0
+    },
+    {
+      "id": "intimidation",
+      "name": "Intimidation",
+      "attributes": [
+        "COU",
+        "INT",
+        "CHA"
+      ],
+      "default": 0
+    },
+    {
+      "id": "persuasion",
+      "name": "Persuasion",
+      "attributes": [
+        "COU",
+        "SGC",
+        "CHA"
+      ],
+      "default": 0
+    },
+    {
+      "id": "seduction",
+      "name": "Seduction",
+      "attributes": [
+        "COU",
+        "CHA",
+        "CHA"
+      ],
+      "default": 0
+    },
+    {
+      "id": "streetwise",
+      "name": "Streetwise",
+      "attributes": [
+        "SGC",
+        "INT",
+        "CHA"
+      ],
+      "default": 0
+    },
+    {
+      "id": "willpower",
+      "name": "Willpower",
+      "attributes": [
+        "COU",
+        "INT",
+        "CHA"
+      ],
+      "default": 0
+    },
+    {
+      "id": "animal_lore",
+      "name": "Animal Lore",
+      "attributes": [
+        "COU",
+        "COU",
+        "CHA"
+      ],
+      "default": 0
+    },
+    {
+      "id": "fishing",
+      "name": "Fishing",
+      "attributes": [
+        "DEX",
+        "AGI",
+        "CON"
+      ],
+      "default": 0
+    },
+    {
+      "id": "orienting",
+      "name": "Orienting",
+      "attributes": [
+        "SGC",
+        "INT",
+        "INT"
+      ],
+      "default": 0
+    },
+    {
+      "id": "plant_lore",
+      "name": "Plant Lore",
+      "attributes": [
+        "SGC",
+        "DEX",
+        "CON"
+      ],
+      "default": 0
+    },
+    {
+      "id": "ropes",
+      "name": "Ropes",
+      "attributes": [
+        "SGC",
+        "DEX",
+        "STR"
+      ],
+      "default": 0
+    },
+    {
+      "id": "survival",
+      "name": "Survival",
+      "attributes": [
+        "COU",
+        "AGI",
+        "CON"
+      ],
+      "default": 0
+    },
+    {
+      "id": "tracking",
+      "name": "Tracking",
+      "attributes": [
+        "COU",
+        "INT",
+        "AGI"
+      ],
+      "default": 0
+    },
+    {
+      "id": "astronomy",
+      "name": "Astronomy",
+      "attributes": [
+        "SGC",
+        "SGC",
+        "INT"
+      ],
+      "default": 0
+    },
+    {
+      "id": "gambling",
+      "name": "Gambling",
+      "attributes": [
+        "SGC",
+        "SGC",
+        "INT"
+      ],
+      "default": 0
+    },
+    {
+      "id": "geography",
+      "name": "Geography",
+      "attributes": [
+        "SGC",
+        "SGC",
+        "INT"
+      ],
+      "default": 0
+    },
+    {
+      "id": "history",
+      "name": "History",
+      "attributes": [
+        "SGC",
+        "SGC",
+        "INT"
+      ],
+      "default": 0
+    },
+    {
+      "id": "law",
+      "name": "Law",
+      "attributes": [
+        "SGC",
+        "SGC",
+        "INT"
+      ],
+      "default": 0
+    },
+    {
+      "id": "magical_lore",
+      "name": "Magical Lore",
+      "attributes": [
+        "SGC",
+        "SGC",
+        "INT"
+      ],
+      "default": 0
+    },
+    {
+      "id": "math",
+      "name": "Math",
+      "attributes": [
+        "SGC",
+        "SGC",
+        "INT"
+      ],
+      "default": 0
+    },
+    {
+      "id": "mechanics",
+      "name": "Mechanics",
+      "attributes": [
+        "SGC",
+        "SGC",
+        "DEX"
+      ],
+      "default": 0
+    },
+    {
+      "id": "myths_legends",
+      "name": "Myths & Legends",
+      "attributes": [
+        "SGC",
+        "SGC",
+        "INT"
+      ],
+      "default": 0
+    },
+    {
+      "id": "religions",
+      "name": "Religions",
+      "attributes": [
+        "SGC",
+        "SGC",
+        "INT"
+      ],
+      "default": 0
+    },
+    {
+      "id": "sphere_lore",
+      "name": "Sphere Lore",
+      "attributes": [
+        "SGC",
+        "SGC",
+        "INT"
+      ],
+      "default": 0
+    },
+    {
+      "id": "warfare",
+      "name": "Warfare",
+      "attributes": [
+        "COU",
+        "SGC",
+        "INT"
+      ],
+      "default": 0
+    },
+    {
+      "id": "alchemy",
+      "name": "Alchemy",
+      "attributes": [
+        "COU",
+        "SGC",
+        "DEX"
+      ],
+      "default": 0
+    },
+    {
+      "id": "artistic_ability",
+      "name": "Artistic Ability",
+      "attributes": [
+        "INT",
+        "DEX",
+        "DEX"
+      ],
+      "default": 0
+    },
+    {
+      "id": "clothworking",
+      "name": "Clothworking",
+      "attributes": [
+        "SGC",
+        "DEX",
+        "DEX"
+      ],
+      "default": 0
+    },
+    {
+      "id": "commerce",
+      "name": "Commerce",
+      "attributes": [
+        "SGC",
+        "INT",
+        "CHA"
+      ],
+      "default": 0
+    },
+    {
+      "id": "driving",
+      "name": "Driving",
+      "attributes": [
+        "CHA",
+        "DEX",
+        "CON"
+      ],
+      "default": 0
+    },
+    {
+      "id": "earthencraft",
+      "name": "Earthencraft",
+      "attributes": [
+        "DEX",
+        "DEX",
+        "STR"
+      ],
+      "default": 0
+    },
+    {
+      "id": "leatherworking",
+      "name": "Leatherworking",
+      "attributes": [
+        "DEX",
+        "AGI",
+        "CON"
+      ],
+      "default": 0
+    },
+    {
+      "id": "metalworking",
+      "name": "Metalworking",
+      "attributes": [
+        "DEX",
+        "CON",
+        "STR"
+      ],
+      "default": 0
+    },
+    {
+      "id": "music",
+      "name": "Music",
+      "attributes": [
+        "CHA",
+        "DEX",
+        "CON"
+      ],
+      "default": 0
+    },
+    {
+      "id": "pick_locks",
+      "name": "Pick Locks",
+      "attributes": [
+        "INT",
+        "DEX",
+        "DEX"
+      ],
+      "default": 0
+    },
+    {
+      "id": "prepare_food",
+      "name": "Prepare Food",
+      "attributes": [
+        "INT",
+        "DEX",
+        "DEX"
+      ],
+      "default": 0
+    },
+    {
+      "id": "sailing",
+      "name": "Sailing",
+      "attributes": [
+        "DEX",
+        "AGI",
+        "STR"
+      ],
+      "default": 0
+    },
+    {
+      "id": "treat_disease",
+      "name": "Treat Disease",
+      "attributes": [
+        "COU",
+        "INT",
+        "CON"
+      ],
+      "default": 0
+    },
+    {
+      "id": "treat_poison",
+      "name": "Treat Poison",
+      "attributes": [
+        "COU",
+        "SGC",
+        "INT"
+      ],
+      "default": 0
+    },
+    {
+      "id": "treat_soul",
+      "name": "Treat Soul",
+      "attributes": [
+        "INT",
+        "CHA",
+        "CON"
+      ],
+      "default": 0
+    },
+    {
+      "id": "treat_wounds",
+      "name": "Treat Wounds",
+      "attributes": [
+        "SGC",
+        "DEX",
+        "DEX"
+      ],
+      "default": 0
+    },
+    {
+      "id": "woodworking",
+      "name": "Woodworking",
+      "attributes": [
+        "DEX",
+        "AGI",
+        "STR"
+      ],
+      "default": 0
+    }
+  ],
+  "check_types": {
+    "tde_attribute": {
+      "resolution": "threshold",
+      "dice": "1d20",
+      "comparison": "le",
+      "threshold_source": "actor_stat",
+      "threshold_stat": "COU",
+      "critical_style": "face",
+      "critical_face": 1,
+      "critical_confirm": true,
+      "fumble_style": "face",
+      "fumble_face": 20,
+      "fumble_confirm": true,
+      "grading": "none",
+      "difficulty_mode": "to_stat"
+    },
+    "tde_talent": {
+      "resolution": "pool",
+      "dice": "3d20",
+      "pool_attributes": [
+        "COU",
+        "AGI",
+        "STR"
+      ],
+      "pool_stat": "climbing",
+      "critical_style": "double",
+      "fumble_style": "double",
+      "grading": "pool_quality",
+      "difficulty_mode": "to_stat"
+    },
+    "tde_attack": {
+      "resolution": "opposed",
+      "dice": "1d20",
+      "attack_stat": "Attack",
+      "parry_stat": "Parry",
+      "compare_levels": false,
+      "critical_style": "face",
+      "critical_face": 1,
+      "fumble_style": "face",
+      "fumble_face": 20,
+      "grading": "none",
+      "difficulty_mode": "to_stat"
+    }
+  },
+  "cost_tables": {
+    "AP_Column_A": {
+      "type": "multiplier",
+      "base_factor": 1.0,
+      "values": {
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1,
+        "5": 1,
+        "6": 1,
+        "7": 1,
+        "8": 1,
+        "9": 1,
+        "10": 1,
+        "11": 1,
+        "12": 1,
+        "13": 2,
+        "14": 3,
+        "15": 4,
+        "16": 5,
+        "17": 6,
+        "18": 7,
+        "19": 8,
+        "20": 9,
+        "21": 10,
+        "22": 11,
+        "23": 12,
+        "24": 13,
+        "25": 14
+      }
+    },
+    "AP_Column_B": {
+      "type": "multiplier",
+      "base_factor": 1.0,
+      "values": {
+        "1": 2,
+        "2": 2,
+        "3": 2,
+        "4": 2,
+        "5": 2,
+        "6": 2,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 2,
+        "11": 2,
+        "12": 2,
+        "13": 4,
+        "14": 6,
+        "15": 8,
+        "16": 10,
+        "17": 12,
+        "18": 14,
+        "19": 16,
+        "20": 18,
+        "21": 20,
+        "22": 22,
+        "23": 24,
+        "24": 26,
+        "25": 28
+      }
+    },
+    "AP_Column_C": {
+      "type": "multiplier",
+      "base_factor": 1.0,
+      "values": {
+        "1": 3,
+        "2": 3,
+        "3": 3,
+        "4": 3,
+        "5": 3,
+        "6": 3,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 3,
+        "12": 3,
+        "13": 6,
+        "14": 9,
+        "15": 12,
+        "16": 15,
+        "17": 18,
+        "18": 21,
+        "19": 24,
+        "20": 27,
+        "21": 30,
+        "22": 33,
+        "23": 36,
+        "24": 39,
+        "25": 42
+      }
+    },
+    "AP_Column_D": {
+      "type": "multiplier",
+      "base_factor": 1.0,
+      "values": {
+        "1": 4,
+        "2": 4,
+        "3": 4,
+        "4": 4,
+        "5": 4,
+        "6": 4,
+        "7": 4,
+        "8": 4,
+        "9": 4,
+        "10": 4,
+        "11": 4,
+        "12": 4,
+        "13": 8,
+        "14": 12,
+        "15": 16,
+        "16": 20,
+        "17": 24,
+        "18": 28,
+        "19": 32,
+        "20": 36,
+        "21": 40,
+        "22": 44,
+        "23": 48,
+        "24": 52,
+        "25": 56
+      }
+    },
+    "AP_Column_E": {
+      "type": "multiplier",
+      "base_factor": 1.0,
+      "values": {
+        "1": 15,
+        "2": 15,
+        "3": 15,
+        "4": 15,
+        "5": 15,
+        "6": 15,
+        "7": 15,
+        "8": 15,
+        "9": 15,
+        "10": 15,
+        "11": 15,
+        "12": 15,
+        "13": 15,
+        "14": 15,
+        "15": 30,
+        "16": 45,
+        "17": 60,
+        "18": 75,
+        "19": 90,
+        "20": 105,
+        "21": 120,
+        "22": 135,
+        "23": 150,
+        "24": 165,
+        "25": 180
+      }
+    }
+  },
+  "equipment_slots": [
+    {
+      "id": "weapon_hand",
+      "name": "Weapon Hand"
+    },
+    {
+      "id": "off_hand",
+      "name": "Off Hand"
+    },
+    {
+      "id": "body_armor",
+      "name": "Body Armor"
+    },
+    {
+      "id": "shield",
+      "name": "Shield"
+    },
+    {
+      "id": "head",
+      "name": "Head"
+    },
+    {
+      "id": "feet",
+      "name": "Feet"
+    },
+    {
+      "id": "amulet",
+      "name": "Amulet"
+    },
+    {
+      "id": "bracers",
+      "name": "Bracers"
+    }
+  ],
+  "event_triggers": [
+    {
+      "id": "armor_absorption",
+      "trigger": "on_damage_calculated",
+      "actions": [
+        {
+          "type": "modify_event_damage",
+          "formula": "max(0, event.damage - effective.Armor_Rating)"
+        }
+      ]
+    },
+    {
+      "id": "wound_check",
+      "trigger": "on_damage_taken",
+      "condition": "event.damage > target.CON",
+      "actions": [
+        {
+          "type": "apply_condition",
+          "condition": "Wound",
+          "stacks": "floor(event.damage / target.CON)"
+        }
+      ]
+    }
+  ],
+  "data": {
+    "archetypes": [
+      {
+        "id": "louisa",
+        "name": "Louisa, the Aventurian Vagabond",
+        "attributes": {
+          "COU": 14,
+          "SGC": 12,
+          "INT": 14,
+          "CHA": 11,
+          "DEX": 12,
+          "AGI": 14,
+          "CON": 10,
+          "STR": 9,
+          "Armor_Rating": 0
+        },
+        "skills": {
+          "streetwise": 7,
+          "climbing": 4,
+          "stealth": 3,
+          "gaukelei": 3,
+          "pick_locks": 3,
+          "etiquette": 1,
+          "empathy": 2,
+          "fast_talk": 2,
+          "self_control": 2
+        }
+      },
+      {
+        "id": "geron",
+        "name": "Geron, the Mercenary",
+        "attributes": {
+          "COU": 12,
+          "SGC": 11,
+          "INT": 10,
+          "CHA": 11,
+          "DEX": 12,
+          "AGI": 13,
+          "CON": 13,
+          "STR": 13,
+          "Armor_Rating": 2
+        },
+        "skills": {
+          "climbing": 7,
+          "tracking": 5,
+          "swimming": 4,
+          "stealth": 3,
+          "willpower": 4,
+          "intimidation": 3,
+          "self_control": 2
+        },
+        "wealth": { "silbertaler": 25 },
+        "equipment": { "weapon_hand": "longsword", "body_armor": "leather_armor" },
+        "spells_known": []
+      },
+      {
+        "id": "magister",
+        "name": "Magister, the Aventurian Mage",
+        "attributes": {
+          "COU": 11,
+          "SGC": 13,
+          "INT": 15,
+          "CHA": 12,
+          "DEX": 10,
+          "AGI": 11,
+          "CON": 11,
+          "STR": 10,
+          "Armor_Rating": 0
+        },
+        "skills": {
+          "magical_lore": 6,
+          "sphere_lore": 5,
+          "myths_legends": 4,
+          "perception": 5,
+          "willpower": 5,
+          "self_control": 4
+        },
+        "wealth": { "silbertaler": 20 },
+        "equipment": { "weapon_hand": "dagger" },
+        "spells_known": ["fulminictus", "ignifaxius", "witch_s_claws"]
+      }
+    ],
+    "items": [
+      {
+        "id": "dagger",
+        "name": "Dagger",
+        "slot": "weapon_hand",
+        "cost": "45 ST",
+        "damage": "1d6+1",
+        "damage_type": "Piercing",
+        "properties": [],
+        "modifiers": []
+      },
+      {
+        "id": "short_sword",
+        "name": "Short Sword",
+        "slot": "weapon_hand",
+        "cost": "140 ST",
+        "damage": "1d6+2",
+        "damage_type": "Piercing",
+        "properties": [],
+        "modifiers": []
+      },
+      {
+        "id": "longsword",
+        "name": "Longsword",
+        "slot": "weapon_hand",
+        "cost": "200 ST",
+        "damage": "1d6+4",
+        "damage_type": "Slashing",
+        "properties": [],
+        "modifiers": []
+      },
+      {
+        "id": "bow",
+        "name": "Bow",
+        "slot": "weapon_hand",
+        "cost": "45 ST",
+        "damage": "1d6+4",
+        "damage_type": "Piercing",
+        "properties": [
+          "Two-Handed"
+        ],
+        "modifiers": []
+      },
+      {
+        "id": "leather_armor",
+        "name": "Leather Armor",
+        "slot": "body_armor",
+        "cost": "150 ST",
+        "modifiers": [
+          {
+            "target_stat": "Armor_Rating",
+            "type": "add",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "id": "chain_mail",
+        "name": "Chain Mail",
+        "slot": "body_armor",
+        "cost": "250 ST",
+        "modifiers": [
+          {
+            "target_stat": "Armor_Rating",
+            "type": "add",
+            "value": 4
+          }
+        ]
+      },
+      {
+        "id": "small_shield",
+        "name": "Small Shield",
+        "slot": "shield",
+        "cost": "30 ST",
+        "modifiers": [
+          {
+            "target_stat": "Parry",
+            "type": "add",
+            "value": 1
+          }
+        ]
+      }
+    ],
+    "creatures": [
+      {
+        "id": "gotongi",
+        "name": "Gotongi",
+        "dodge": 9,
+        "speed": "12",
+        "armor_rating": 0,
+        "ini": "15+1D6",
+        "attributes": {
+          "COU": 12,
+          "SGC": 9,
+          "INT": 14,
+          "CHA": 8,
+          "DEX": 9,
+          "AGI": 18,
+          "CON": 8,
+          "STR": 8,
+          "LifePoints_Max": 12
+        },
+        "attacks": [
+          {
+            "name": "Pinch",
+            "to_hit": 15,
+            "damage": "1d6",
+            "reach": "short"
+          }
+        ]
+      },
+      {
+        "id": "heshthot",
+        "name": "Heshthot",
+        "dodge": 7,
+        "speed": "9",
+        "armor_rating": 2,
+        "ini": "15+1D6",
+        "attributes": {
+          "COU": 16,
+          "SGC": 12,
+          "INT": 14,
+          "CHA": 12,
+          "DEX": 13,
+          "AGI": 13,
+          "CON": 15,
+          "STR": 15,
+          "LifePoints_Max": 35
+        },
+        "attacks": [
+          {
+            "name": "Unarmed",
+            "to_hit": 12,
+            "damage": "1d6+1",
+            "reach": "short"
+          },
+          {
+            "name": "Long Sword",
+            "to_hit": 16,
+            "damage": "1d6+5",
+            "reach": "medium"
+          },
+          {
+            "name": "Whip",
+            "to_hit": 16,
+            "damage": "1d6+1",
+            "reach": "long"
+          }
+        ]
+      },
+      {
+        "id": "irrhalk",
+        "name": "Irrhalk",
+        "dodge": 9,
+        "speed": "12/36 (ground/air)",
+        "armor_rating": 4,
+        "ini": "18+1D6",
+        "attributes": {
+          "COU": 17,
+          "SGC": 12,
+          "INT": 15,
+          "CHA": 12,
+          "DEX": 9,
+          "AGI": 18,
+          "CON": 24,
+          "STR": 26,
+          "LifePoints_Max": 90
+        },
+        "attacks": [
+          {
+            "name": "Claws",
+            "to_hit": 19,
+            "damage": "2d6+4",
+            "reach": "medium"
+          },
+          {
+            "name": "Bite",
+            "to_hit": 16,
+            "damage": "2d6+6",
+            "reach": "short"
+          }
+        ]
+      },
+      {
+        "id": "fire_djinni",
+        "name": "Fire Djinni",
+        "dodge": 8,
+        "speed": "10",
+        "armor_rating": 2,
+        "ini": "16+1D6",
+        "attributes": {
+          "COU": 16,
+          "SGC": 13,
+          "INT": 15,
+          "CHA": 14,
+          "DEX": 12,
+          "AGI": 16,
+          "CON": 14,
+          "STR": 15,
+          "LifePoints_Max": 33
+        },
+        "attacks": [
+          {
+            "name": "Burning Hand",
+            "to_hit": 18,
+            "damage": "3d6+6",
+            "reach": "medium"
+          }
+        ]
+      },
+      {
+        "id": "fire_spirit",
+        "name": "Fire Spirit",
+        "dodge": 6,
+        "speed": "8",
+        "armor_rating": 0,
+        "ini": "13+1D6",
+        "attributes": {
+          "COU": 14,
+          "SGC": 8,
+          "INT": 10,
+          "CHA": 10,
+          "DEX": 10,
+          "AGI": 12,
+          "CON": 9,
+          "STR": 9,
+          "LifePoints_Max": 18
+        },
+        "attacks": [
+          {
+            "name": "Burning Hand",
+            "to_hit": 16,
+            "damage": "2d6+2",
+            "reach": "short"
+          }
+        ]
+      },
+      {
+        "id": "dog",
+        "name": "Dog (Mixed-breed)",
+        "dodge": 7,
+        "speed": "12",
+        "armor_rating": 0,
+        "ini": "13+1D6",
+        "attributes": {
+          "COU": 12,
+          "SGC": 11,
+          "INT": 14,
+          "CHA": 13,
+          "DEX": 9,
+          "AGI": 14,
+          "CON": 9,
+          "STR": 10,
+          "LifePoints_Max": 13
+        },
+        "attacks": [
+          {
+            "name": "Bite",
+            "to_hit": 13,
+            "damage": "1d6+2",
+            "reach": "short"
+          }
+        ]
+      },
+      {
+        "id": "horse",
+        "name": "Horse (Warunker)",
+        "dodge": 7,
+        "speed": "12",
+        "armor_rating": 0,
+        "ini": "13+1D6",
+        "attributes": {
+          "COU": 10,
+          "SGC": 10,
+          "INT": 12,
+          "CHA": 12,
+          "DEX": 8,
+          "AGI": 14,
+          "CON": 22,
+          "STR": 24,
+          "LifePoints_Max": 65
+        },
+        "attacks": [
+          {
+            "name": "Kick",
+            "to_hit": 15,
+            "damage": "1d6+5",
+            "reach": "medium"
+          },
+          {
+            "name": "Bite",
+            "to_hit": 12,
+            "damage": "1d6+1",
+            "reach": "short"
+          },
+          {
+            "name": "Trample",
+            "to_hit": 14,
+            "damage": "2d6+4",
+            "reach": "medium"
+          }
+        ]
+      },
+      {
+        "id": "toad",
+        "name": "Toad (Kosh Toad)",
+        "dodge": 4,
+        "speed": "1",
+        "armor_rating": 0,
+        "ini": "12+1D6",
+        "attributes": {
+          "COU": 16,
+          "SGC": 8,
+          "INT": 12,
+          "CHA": 10,
+          "DEX": 6,
+          "AGI": 8,
+          "CON": 4,
+          "STR": 9,
+          "LifePoints_Max": 2
+        },
+        "attacks": [
+          {
+            "name": "Tongue",
+            "to_hit": 13,
+            "damage": "0",
+            "reach": "short"
+          }
+        ]
+      },
+      {
+        "id": "cat",
+        "name": "Cat (Barn Cat)",
+        "dodge": 7,
+        "speed": "10",
+        "armor_rating": 0,
+        "ini": "13+1D6",
+        "attributes": {
+          "COU": 12,
+          "SGC": 12,
+          "INT": 13,
+          "CHA": 12,
+          "DEX": 10,
+          "AGI": 14,
+          "CON": 6,
+          "STR": 13,
+          "LifePoints_Max": 10
+        },
+        "attacks": [
+          {
+            "name": "Claws",
+            "to_hit": 14,
+            "damage": "1d2",
+            "reach": "short"
+          },
+          {
+            "name": "Bite",
+            "to_hit": 12,
+            "damage": "1d3",
+            "reach": "short"
+          }
+        ]
+      },
+      {
+        "id": "raven",
+        "name": "Raven (Coal Raven)",
+        "dodge": 5,
+        "speed": "2/16 (ground/air)",
+        "armor_rating": 0,
+        "ini": "11+1D6",
+        "attributes": {
+          "COU": 12,
+          "SGC": 16,
+          "INT": 12,
+          "CHA": 11,
+          "DEX": 12,
+          "AGI": 10,
+          "CON": 6,
+          "STR": 9,
+          "LifePoints_Max": 5
+        },
+        "attacks": [
+          {
+            "name": "Beak",
+            "to_hit": 14,
+            "damage": "1d3-1"
+          }
+        ]
+      },
+      {
+        "id": "staff_serpent",
+        "name": "Staff Serpent",
+        "dodge": 6,
+        "speed": "2",
+        "armor_rating": 1,
+        "ini": "14+1D6",
+        "attributes": {
+          "COU": 16,
+          "SGC": 11,
+          "INT": 11,
+          "CHA": 10,
+          "DEX": 6,
+          "AGI": 11,
+          "CON": 4,
+          "STR": 4,
+          "LifePoints_Max": 12
+        },
+        "attacks": [
+          {
+            "name": "Bite",
+            "to_hit": 15,
+            "damage": "1d6",
+            "reach": "short"
+          }
+        ]
+      }
+    ],
+    "spells": [
+      {
+        "id": "analyze_arcane_structure",
+        "name": "Analyze Arcane Structure",
+        "check": "SGC/SGC/INT",
+        "casting_time": "32 Actions",
+        "ae_cost": 16,
+        "range": "Touch",
+        "duration": "Immediate",
+        "target_category": "Creatures, Objects",
+        "property": "Clairvoyance",
+        "traditions": "General",
+        "improvement_cost": "C",
+        "description": "Most mages who specialize in Clairvoyance spells need Analyze to observe an object or creature’s magic and make deductions about its type or effect. This spell reveals whether an object or creature is magical, and if so, it also reveals details about the object or creature’s arcane structure. This information can be useful for a magical analysis. When performing a magical analysis, the maximum number of QL you can normally achieve with the Magical Lore (appropriate application) check is equal to the QL of the Analyze spell. For example, a spellcaster who gets a result of 3 QL with Analyze can usually achieve no more than 3 QL in the Magical Lore check (exception—see the special ability Analyst on page 214). Similarly, with a QL of 4 in Analyze , the spellcaster can normally achieve at most a QL of 4 in the Magical Lore check for the analysis, and so on. For more about conducting magical analyses, see page 268."
+      },
+      {
+        "id": "armatrutz",
+        "name": "Armatrutz",
+        "check": "SGC/INT/DEX",
+        "casting_time": "1 Action",
+        "ae_cost": 4,
+        "range": "Self",
+        "duration": "QL x 3 in minutes",
+        "target_category": "Creatures",
+        "property": "Healing",
+        "traditions": "General",
+        "improvement_cost": "C",
+        "description": "The Armatrutz covers your skin with magical armor. This armor does not encumber you, and its effect stacks with other armor worn on the body. Your skin hardens without losing flexibility, providing a natural protection that adds to any armor worn on the body, without raising encumbrance. You must decide how many additional points of PRO you want before casting the spell, up to a maximum of 3 points."
+      },
+      {
+        "id": "axxeleratus",
+        "name": "Axxeleratus",
+        "check": "SGC/INT/DEX",
+        "casting_time": "1 Action",
+        "ae_cost": 8,
+        "range": "Touch",
+        "duration": "QL x 5 in combat rounds",
+        "target_category": "Living Creatures",
+        "property": "Healing",
+        "traditions": "Elf",
+        "improvement_cost": "B",
+        "description": "The spell Axxeleratus gives the target the speed of a jungle cat, granting much faster movement. This gives advantages in combat, as noted below. Accelerates the target’s movements supernaturally, granting +1 Defense, Movement x 2, and Initiative base stat x 2. Also, in combat, the target’s opponents suffer a penalty of 2 to their defenses."
+      },
+      {
+        "id": "balsam_salabunde",
+        "name": "Balsam Salabunde",
+        "check": "SGC/INT/DEX",
+        "casting_time": "16 Actions",
+        "ae_cost": 1,
+        "range": "Touch",
+        "duration": "Immediate",
+        "target_category": "Intelligent Creatures",
+        "property": "Healing",
+        "traditions": "General",
+        "improvement_cost": "B",
+        "description": "The classic healing spell that allows you to mend wounds by laying on hands. The target recovers a number of LP equal to the AE spent on the spell. You can spend as much AE as you have SR in the spell. The healing occurs in six minutes, but each QL reduces the healing time by 1 minute. If you start casting the spell during the time period defined by a mortally wounded character’s Constitution, you can save that character’s life (see Life- Saving Measures and Death in Chapter 12: Detailed Rules , on page 340). If the spell is interrupted, the patient survives only for the number of combat rounds that remain, as described there."
+      },
+      {
+        "id": "bannbaladin",
+        "name": "Bannbaladin",
+        "check": "COU/INT/CHA (modified by Spirit)",
+        "casting_time": "4 Actions",
+        "ae_cost": 8,
+        "range": "4 yards",
+        "duration": "QL x 3 in minutes",
+        "target_category": "Intelligent Creatures, Supernatural Creatures",
+        "property": "Influence",
+        "traditions": "General",
+        "improvement_cost": "B",
+        "description": "Mainly elves use this spell of friendship. They use it to greet strangers and make them peaceful, but spellcasters from other Traditions use this spell for mental domination. This friendship spell, which was developed by the elves, creates feelings of sympathy and friendship toward the caster. The exact effects depend on the target’s feelings for the caster beforehand, but basically the connection between target and caster improves by"
+      },
+      {
+        "id": "blinding_flash",
+        "name": "Blinding Flash",
+        "check": "COU/INT/CHA (modified by Spirit)",
+        "casting_time": "1 Action",
+        "ae_cost": 4,
+        "range": "8 yards",
+        "duration": "QL in combat rounds",
+        "target_category": "Living Creatures",
+        "property": "Influence",
+        "traditions": "General",
+        "improvement_cost": "B",
+        "effects": [
+          {
+            "kind": "condition",
+            "condition": "confusion",
+            "stacks": 1,
+            "save": {
+              "stat": "Spirit",
+              "comparison": "le",
+              "dc": "-env.ql"
+            }
+          }
+        ]
+      },
+      {
+        "id": "breathe_water",
+        "name": "Breathe Water",
+        "check": "SGC/INT/CON",
+        "casting_time": "8 Actions",
+        "ae_cost": 4,
+        "range": "Touch",
+        "duration": "Sustained",
+        "target_category": "Living Creatures",
+        "property": "Transformation",
+        "traditions": "Elf",
+        "improvement_cost": "B",
+        "description": "This spell allows elves to breathe both in the air and underwater. The target can breathe underwater for 1 minute per QL and extend the time with additional AE."
+      },
+      {
+        "id": "disruptivo",
+        "name": "Disruptivo",
+        "check": "COU/SGC/CHA",
+        "casting_time": "8 Actions",
+        "ae_cost": 8,
+        "range": "Self",
+        "duration": "Sustained",
+        "target_category": "Zone",
+        "property": "Anti-Magic",
+        "traditions": "General",
+        "improvement_cost": "B",
+        "description": "An anti-magical formula that makes spells harder to cast within a defined area. This spell was invented as a training aid to make tests more difficult for magical apprentices. This basic anti-magic spell impairs all kinds of magic in a radius of QL x 2 yards around the spellcaster. It does so by issuing vibrations that disrupt surrounding arcane patterns, imposing a penalty (based on QL—see below) on all checks for spells and rituals either cast in the area or taking effect there. Disruptivo affects your own spells, as well. Before casting, you must declare whether the zone will move with you or remain stationary. QL 1: Penalty -1 QL 2: Penalty -2 QL 3: Penalty -3 QL 4: Penalty -4 QL 5: Penalty -5 QL 6: Penalty -6"
+      },
+      {
+        "id": "duplicatus",
+        "name": "Duplicatus",
+        "check": "SGC/INT/CHA",
+        "casting_time": "2 Actions",
+        "ae_cost": 4,
+        "range": "Touch",
+        "duration": "QL x 3 in combat rounds",
+        "target_category": "Living Creatures",
+        "property": "Illusion",
+        "traditions": "Guild Mage",
+        "improvement_cost": "C",
+        "description": "Duplicatus is a famous illusion spell that creates animated duplicates. Most spellcasters use Duplicatus during combat, to make it more difficult for enemies to identify their real targets. The spellcaster creates one or more illusory duplicates of the target that move synchronously with that individual, appearing to blend into the target and split off again. The number of duplicates depends on QL. You can create fewer duplicates than allowed, if desired. QL 1: 1 duplicate, for 2 combat rounds QL 2: 1 duplicate QL 3: 2 duplicates QL 4: 3 duplicates QL 5: 4 duplicates QL 6: 4 duplicates for twice the normal duration It is not easy to determine which image is the original target creature, and close combat attacks, ranged attacks, and spells stand a good chance of hitting a duplicate instead. If an attack does hit the target, it must be parried or dodged. Duplicatus does not block area effect attacks. You can read more about illusion spells and spotting illusions on page 258."
+      },
+      {
+        "id": "eagle_eye",
+        "name": "Eagle Eye",
+        "check": "SGC/INT/DEX",
+        "casting_time": "2 Actions",
+        "ae_cost": 4,
+        "range": "Self",
+        "duration": "Sustained",
+        "target_category": "Creatures",
+        "property": "Healing",
+        "traditions": "Elf",
+        "improvement_cost": "B",
+        "effects": [
+          {
+            "kind": "stat_bonus",
+            "stat": "perception",
+            "add": "env.ql + 3"
+          }
+        ]
+      },
+      {
+        "id": "fighting_stick",
+        "name": "Fighting Stick",
+        "check": "SGC/DEX/STR",
+        "casting_time": "2 Actions",
+        "ae_cost": 4,
+        "range": "16 yards",
+        "duration": "Sustained",
+        "target_category": "Objects",
+        "property": "Telekinesis",
+        "traditions": "Witch",
+        "improvement_cost": "B",
+        "description": "This spell, known mainly to witches, gives a broom or other wooden stick the semblance of life. The target broom or other staff attacks a target of your choice at a distance of up to 8 yards (after casting the spell, both target and broom can move farther away from the witch). The broom is unbreakable for the duration of the spell and is considered a magical weapon that makes 1 attack per combat round. It cannot use combat maneuvers. Its stats are INI 12+1D6, AT 10 (+QL), DP 1D6+3, MOV 12. If the broom kills its target before the duration expires, or the enemy somehow flees, it attacks another target at random within 16 yards (this might even be the caster). If no target is within range at that time, the spell ends. To grab the broom, you must make a successful attack with Brawling and the special ability Grapple (the broom/staff has PA equal to half its AT, Feat of Strength 10, and 14 in all relevant attributes).",
+        "damage": "1d6"
+      },
+      {
+        "id": "fulminictus",
+        "name": "Fulminictus",
+        "check": "SGC/INT/CON (modified by Toughness)",
+        "casting_time": "1 Action",
+        "ae_cost": 8,
+        "range": "8 yards",
+        "duration": "Immediate",
+        "target_category": "Living Creatures",
+        "property": "Transformation",
+        "traditions": "Elf",
+        "improvement_cost": "C",
+        "effects": [
+          {
+            "kind": "damage",
+            "dice": "2d6",
+            "add": "env.ql * 2"
+          }
+        ]
+      },
+      {
+        "id": "harmless_shape",
+        "name": "Harmless Shape",
+        "check": "SGC/INT/CHA",
+        "casting_time": "4 Actions",
+        "ae_cost": 8,
+        "range": "Self",
+        "duration": "Sustained",
+        "target_category": "Creatures",
+        "property": "Illusion",
+        "traditions": "Witch",
+        "improvement_cost": "B",
+        "description": "In the past, many witches lived in fear of angry village mobs and agents of the Inquisition. With Harmless Shape , they were able to cloak themselves in the illusion of an innocent child or other harmless creature, in order to escape their pursuers’ wrath. You take the shape of an inconspicuous person (such as a servant or beggar) that does not attract attention at the current location. The illusion changes your appearance and voice, but does not grant knowledge of things like languages or appropriate behavior. This spell does not hide larger objects or familiars. The spell itself picks the shape automatically—the caster cannot choose which appearance to take. For more about illusion spells and spotting illusions, see page 258."
+      },
+      {
+        "id": "hawk_eye",
+        "name": "Hawk Eye",
+        "check": "COU/SGC/INT",
+        "casting_time": "2 Actions",
+        "ae_cost": 4,
+        "range": "Touch",
+        "duration": "Until the next shot, but no longer than QL x 2 combat rounds",
+        "target_category": "Living Creatures",
+        "property": "Clairvoyance",
+        "traditions": "Elf",
+        "improvement_cost": "B",
+        "description": "Ranged combatants use this spell to be more precise and deadly with their ranged attacks. This spell is the reason behind the legendary elven accuracy with bows. The spell’s recipient gains a mental connection to the attack’s target. The recipient’s next ranged attack receives a bonus equal to the spell’s QL."
+      },
+      {
+        "id": "horriphobus",
+        "name": "Horriphobus",
+        "check": "COU/INT/CHA (modified by Spirit)",
+        "casting_time": "2 Actions",
+        "ae_cost": 8,
+        "range": "8 yards",
+        "duration": "QL x 3 in minutes",
+        "target_category": "Living Creatures",
+        "property": "Influence",
+        "traditions": "Guild Mage",
+        "improvement_cost": "B",
+        "effects": [
+          {
+            "kind": "condition",
+            "condition": "fear",
+            "stacks": "clamp(env.ql - 1, 1, 3)",
+            "save": {
+              "stat": "Spirit",
+              "comparison": "le",
+              "dc": "-env.ql"
+            }
+          }
+        ]
+      },
+      {
+        "id": "invocatio_minima",
+        "name": "Invocatio Minima",
+        "check": "COU/CHA/CON",
+        "casting_time": "4 Actions",
+        "ae_cost": 4,
+        "range": "1 yard",
+        "duration": "Immediate",
+        "target_category": "Objects",
+        "property": "Spheres",
+        "traditions": "Guild Mage, Witch",
+        "improvement_cost": "A",
+        "description": "This is a simple spell that calls up a small amount of demonic essence. Black magicians and demon summoners must master this practice spell before they can learn to summon real demons. The spell manifests a handful of substance from the Netherhells (2 ounces of substance per QL—mostly slime, acid, sulfurous vapors, or liquid fire). Summoners cannot choose which substance appears—the GM determines the result."
+      },
+      {
+        "id": "manifesto",
+        "name": "Manifesto",
+        "check": "COU/SGC/CHA",
+        "casting_time": "4 Actions",
+        "ae_cost": 4,
+        "range": "1 yard",
+        "duration": "Immediate",
+        "target_category": "Objects",
+        "property": "Elemental",
+        "traditions": "General",
+        "improvement_cost": "A",
+        "description": "This spell calls forth a small amount of an element. Elementalists must master this practice spell before they can learn to call forth elementals. The spell manifests a handful of the desired element (2 ounces of substance per QL—simple manifestations, such as a small flame, a pebble, or a hunk of ice). Elementalists learn this spell early in their education, in order to master the basics of calling without having to bother actual elementals."
+      },
+      {
+        "id": "manus_miracula",
+        "name": "Manus Miracula",
+        "check": "SGC/DEX/STR",
+        "casting_time": "2 Actions",
+        "ae_cost": 4,
+        "range": "Self",
+        "duration": "Sustained",
+        "target_category": "Creatures",
+        "property": "Telekinesis",
+        "traditions": "General",
+        "improvement_cost": "A",
+        "description": "This is a variation of the spell Motoricus. It is mainly considered a practice spell for students rather than a serious spell for use during adventures. You can push, turn, shape, and bend objects at a distance (of QL yards) as if you were touching them with your hands. You can lift at most 2 pounds. For skill checks (such as when making clay figurines or painting with a brush held up by telekinesis), all linked physical attributes have a value of QL +7 (this can exceed the limit imposed by your stats—see page 39). The application of force is punctual but rather slow, so you cannot use this spell to attack or parry."
+      },
+      {
+        "id": "motoricus",
+        "name": "Motoricus",
+        "check": "SGC/DEX/STR",
+        "casting_time": "2 Actions",
+        "ae_cost": 4,
+        "range": "8 yards",
+        "duration": "Sustained",
+        "target_category": "Objects",
+        "property": "Telekinesis",
+        "traditions": "General",
+        "improvement_cost": "B",
+        "description": "The classic telekinesis spell, sufficient for most applications of such magic. You can pick up and move inanimate objects with your mind. Items move at a maximum speed of QL +2 yards per action, and may not weigh more than QL x 40 pounds. You must spend 1 AE per 10 pounds of weight. Other objects resting on or attached to the moving item add to its total weight. The object moves sluggishly and cannot be used to attack or parry. To prevent an item from being moved by Motoricus , whether by grabbing or pushing it, make a check using Feat of Strength (Dragging & Pulling)."
+      },
+      {
+        "id": "oculus_illusionis",
+        "name": "Oculus Illusionis",
+        "check": "SGC/INT/CHA",
+        "casting_time": "4 Actions",
+        "ae_cost": 4,
+        "range": "8 yards",
+        "duration": "Sustained",
+        "target_category": "Zone",
+        "property": "Illusion",
+        "traditions": "Guild Mage",
+        "improvement_cost": "B",
+        "description": "This spell creates optical illusions. Variants of the spell affect other senses. You can create illusions that confuse sight. You can create moving, three-dimensional objects, but they affect only the visual sense. For more details, see Rules for Illusions on page 258."
+      },
+      {
+        "id": "odem_arcanum",
+        "name": "Odem Arcanum",
+        "check": "COU/SGC/INT",
+        "casting_time": "2 Actions",
+        "ae_cost": 4,
+        "range": "8 yards",
+        "duration": "1 minute",
+        "target_category": "Creatures, Objects",
+        "property": "Clairvoyance",
+        "traditions": "General",
+        "improvement_cost": "A",
+        "description": "As one of the most basic of all Tradition spells, Odem allows you to perceive magic. Finds active magic on items or people. Enchanted objects and other sources of magic give off a red shimmer when examined with Odem. It can also increase the effectiveness of an Analyze spell or a magical analysis (see pages 268 and 299). Depending on the AE of the target, the check can suffer a penalty or receive a bonus. The spellcaster can examine only one creature or object within range, not everything that happens to be in view. The spellcaster receives information or bonuses based on QL. QL 1: Is there magic present? QL 2: The maximum QL you can achieve with the magical analysis check rises by 1. QL 3: Receive a bonus of 1 on the check for the Analyze spell cast subsequently on the same target. QL 4: Receive a bonus of 2 on the check for the Analyze spell cast subsequently on the same target. QL 5: The maximum QL you can achieve with the magical analysis check rises by 2. QL 6: Receive a bonus of 3 on the check for the Analyze spell cast subsequently on the same target. Bonuses to maximum QL or Analyze are not cumulative. Also, the hero receives only the highest bonus of each type. For example, a result of QL 4 for Odem grants an Analyze bonus of 2 (not 3) and the maximum QL for magical analysis rises by 1. Similarly, a result of QL 6 for Odem grants an Analyze bonus of 3 (not 6), and the maximum QL for the magical analysis rises by 2 (not 3)."
+      },
+      {
+        "id": "placidity",
+        "name": "Placidity",
+        "check": "COU/INT/CHA (modified by Spirit)",
+        "casting_time": "2 Actions",
+        "ae_cost": 4,
+        "range": "8 yards",
+        "duration": "QL x 3 in minutes",
+        "target_category": "Animals",
+        "property": "Influence",
+        "traditions": "Witch",
+        "improvement_cost": "A",
+        "description": "Witches can calm any animal and prevent it from attacking. The affected animal becomes peaceful and even allows the spellcaster to touch it. This spell only affects mundane animals."
+      },
+      {
+        "id": "powerful_greed",
+        "name": "Powerful Greed",
+        "check": "COU/INT/CHA (modified by Spirit)",
+        "casting_time": "2 Actions",
+        "ae_cost": 8,
+        "range": "Touch (you cannot use a modification on this spell's range)",
+        "duration": "QL x 15 in minutes",
+        "target_category": "Living Creatures",
+        "property": "Influence",
+        "traditions": "Witches",
+        "improvement_cost": "B",
+        "description": "This witch’s spell creates extreme longing for a certain object or action. The suggestion is quite strong and fills the target with a desire to satisfy these cravings. Targets of this spell feel immense cravings for an object or action named by the spellcaster. They do anything to obtain it short of endangering their own life and health. For the duration of the spell, the target receives the negative trait Avarice (see page 174)."
+      },
+      {
+        "id": "psychostabilis",
+        "name": "Psychostabilis",
+        "check": "SGC/INT/DEX",
+        "casting_time": "8 Actions",
+        "ae_cost": 4,
+        "range": "Touch",
+        "duration": "Sustained",
+        "target_category": "Living Creatures",
+        "property": "Healing",
+        "traditions": "General",
+        "improvement_cost": "B",
+        "effects": [
+          {
+            "kind": "stat_bonus",
+            "stat": "Spirit",
+            "add": "round(env.ql / 2)"
+          }
+        ]
+      },
+      {
+        "id": "respondami",
+        "name": "Respondami",
+        "check": "COU/INT/CHA (modified by Spirit)",
+        "casting_time": "2 Actions",
+        "ae_cost": 8,
+        "range": "Touch",
+        "duration": "QL x 15 in minutes",
+        "target_category": "Living Creatures",
+        "property": "Influence",
+        "traditions": "Guild Mage",
+        "improvement_cost": "B",
+        "description": "This spell lets you dominate a target’s mind to force them to speak the truth. The target must answer QL questions truthfully. The questions must have an answer of either yes or no. When asked other questions, the target can remain silent. The target must understand your language, and if the target does not understand what you are saying, no answer is possible. The target remembers what was said while the spell was in effect."
+      },
+      {
+        "id": "salander",
+        "name": "Salander",
+        "check": "SGC/INT/CON (modified by Toughness)",
+        "casting_time": "8 Actions",
+        "ae_cost": 16,
+        "range": "Touch",
+        "duration": "QL x 3 in hours",
+        "target_category": "Living Creatures",
+        "property": "Transformation",
+        "traditions": "Guild Mage",
+        "improvement_cost": "C",
+        "description": "This spell turns a living creature into a smaller living creature. This spell is especially popular as a kind of curse. This spell turns one living thing into another, but the new form must be smaller and lighter. The target cannot be transformed into a magical or supernatural creature. If the change is extreme (a mammoth turned into a mouse, for example), the check suffers a penalty of up to 3. The spell can turn the target only into a creature known to the spellcaster."
+      },
+      {
+        "id": "satuaria_s_splendor",
+        "name": "Satuaria’s Splendor",
+        "check": "SGC/INT/CON",
+        "casting_time": "4 Actions",
+        "ae_cost": 8,
+        "range": "Self",
+        "duration": "QL x 3 in hours",
+        "target_category": "Creatures",
+        "property": "Transformation",
+        "traditions": "Witch",
+        "improvement_cost": "B",
+        "description": "This beauty spell is the reason behind many witches’ legendary beauty. This spell causes subtle physical changes to make you more attractive. The spell improves hair and skin, whitens the teeth, and changes your features to fit an ideal of beauty or physical perfection. Checks using Seduction (Flirting, Romantic Arts) and Fast- Talk (Flattering) receive a bonus equal to the QL. Other social skills can get the bonus, too, depending on the situation. The transformation has no effect on creatures with standards of beauty that differ from those of the spellcaster."
+      },
+      {
+        "id": "silentium",
+        "name": "Silentium",
+        "check": "SGC/DEX/STR",
+        "casting_time": "8 Actions",
+        "ae_cost": 4,
+        "range": "Self",
+        "duration": "Sustained",
+        "target_category": "Zone",
+        "property": "Telekinesis",
+        "traditions": "Elf",
+        "improvement_cost": "B",
+        "description": "This spell creates a zone of absolute silence. It’s a helpful tool for thieves, and particularly useful when you need to silence an enemy spellcaster. This spell creates a spherical zone in which no sound can be made or heard. The zone’s radius is QL x 3 yards, with the spellcaster at the center. You must declare before casting the spell whether the zone will move with you or remain in place. In the latter case, you cannot move more than QL x 3 yards away from the zone, or else the spell effect ends immediately."
+      },
+      {
+        "id": "traceless",
+        "name": "Traceless",
+        "check": "SGC/DEX/STR",
+        "casting_time": "4 Actions",
+        "ae_cost": 4,
+        "range": "Self",
+        "duration": "Sustained",
+        "target_category": "Creatures",
+        "property": "Telekinesis",
+        "traditions": "Elf",
+        "improvement_cost": "B",
+        "description": "It is said that elves leave no footprints, and perhaps this spell accounts for those tales. You do not leave any traces as you move through terrain. You do not bend grass, and you leave no footprints on soft ground. You do not even leave much of a scent for others to follow. Tracking checks to find or follow the spellcaster’s trail suffer a penalty equal to the QL."
+      },
+      {
+        "id": "toad_jump",
+        "name": "Toad Jump",
+        "check": "SGC/INT/CON",
+        "casting_time": "2 Actions",
+        "ae_cost": 2,
+        "range": "Touch",
+        "duration": "Immediate",
+        "target_category": "Living Creatures",
+        "property": "Transformation",
+        "traditions": "Witch",
+        "improvement_cost": "A",
+        "description": "This spell allows witches to jump much higher and farther than normal. Unsurprisingly, this spell is used mainly by witches from the Sisterhood of the Daughters of the Earth. The target can make one supernaturally enhanced jump. Increase the jump’s length by QL+3 yards, and increase the jump’s height by QL in yards, as desired. The rules for jumping are on page 349."
+      },
+      {
+        "id": "transversalis",
+        "name": "Transversalis",
+        "check": "COU/CHA/CON",
+        "casting_time": "8 Actions",
+        "ae_cost": 8,
+        "range": "Self",
+        "duration": "Immediate",
+        "target_category": "Objects, Creatures",
+        "property": "Spheres",
+        "traditions": "Guild Mage",
+        "improvement_cost": "C",
+        "description": "This spell allows you to teleport short distances. This movement occurs through Limbo, though the spellcaster perceives nothing of the trip. You can teleport yourself plus at most QL x 10 pounds of equipment (such as clothes and weapons) to a different location. The closer you wear this equipment to the body, the greater the chance that it travels with you (clothing stands the best chance). Anything you bring along either travels with you in one piece or stays behind—it is not torn or damaged. The GM has the final say. You must have visited the target location prior to attempting the trip, or at least be able to see it currently (if you have not visited the location previously but can see it when you cast the spell, the check suffers a penalty of 2). In either event, the target location can be no further than QL x 3 miles from the caster."
+      },
+      {
+        "id": "visibili",
+        "name": "Visibili",
+        "check": "SGC/INT/CON",
+        "casting_time": "4 Actions",
+        "ae_cost": 8,
+        "range": "Touch",
+        "duration": "Sustained",
+        "target_category": "Living Creatures",
+        "property": "Transformation",
+        "traditions": "Elf",
+        "improvement_cost": "B",
+        "description": "This spell turns the target invisible, but with one drawback—the target's clothes remain visible. The target turns invisible in 20 - (QL x 3) combat rounds, with the target’s body slowly becoming more and more transparent until it completely disappears. Visibili affects only the target; clothes and equipment remain visible. Substances that remain in the body for more than 20 seconds become invisible, too. Substances that leave the body become visible after 20 seconds. While the spell remains in effect, the target receives the state invisible (see page 36)."
+      },
+      {
+        "id": "arcanovi",
+        "name": "Arcanovi",
+        "check": "SGC/INT/DEX",
+        "casting_time": "8 hours",
+        "ae_cost": 16,
+        "range": "8 yards",
+        "duration": "Immediate",
+        "target_category": "Blessed Objects, Mundane Objects",
+        "property": "Object",
+        "traditions": "General",
+        "improvement_cost": "D",
+        "description": "A ritual used in enchanting artifacts. You can find more information about enchanting artifacts on page 266. Ritual Time: 8 hours"
+      },
+      {
+        "id": "call_djinn",
+        "name": "Call Djinn",
+        "check": "COU/CHA/CON",
+        "casting_time": "8 hours",
+        "ae_cost": 32,
+        "range": "8 yards",
+        "duration": "Immediate",
+        "target_category": "Elementals",
+        "property": "Spheres",
+        "traditions": "Guild Mage",
+        "improvement_cost": "C",
+        "description": "A ritual to call powerful djinns. A djinni of the chosen element appears. For details about calling and dealing with djinn, see The Art of Elemental Calling , on page 262. Ritual Time: 8 hours"
+      },
+      {
+        "id": "elemental_servant",
+        "name": "Elemental Servant",
+        "check": "COU/CHA/CON",
+        "casting_time": "30 minutes",
+        "ae_cost": 16,
+        "range": "8 yards",
+        "duration": "Immediate",
+        "target_category": "Elementals",
+        "property": "Spheres",
+        "traditions": "Guild Mage",
+        "improvement_cost": "B",
+        "description": "A ritual to call elemental spirits. An elemental of the chosen element appears. For details about calling and dealing with elementals, see The Art of Elemental Calling , page 262. Ritual Time: 30 minutes"
+      },
+      {
+        "id": "invocatio_maior",
+        "name": "Invocatio Maior",
+        "check": "COU/CHA/CON",
+        "casting_time": "8 hours",
+        "ae_cost": 32,
+        "range": "8 yards",
+        "duration": "Immediate",
+        "target_category": "Demons",
+        "property": "Spheres",
+        "traditions": "Guild Mage, Witch",
+        "improvement_cost": "C",
+        "description": "A ritual to call powerful horned demons. A major demon, with at most 5 horns, appears. The ritual check suffers a penalty equal to the demon’s invocation difficulty. For details about summoning and dealing with demons, see The Art of Demon Summoning , on page 262. Ritual Time: 8 hours"
+      },
+      {
+        "id": "invocatio_minor",
+        "name": "Invocatio Minor",
+        "check": "COU/CHA/CON",
+        "casting_time": "30 minutes",
+        "ae_cost": 16,
+        "range": "8 yards",
+        "duration": "Immediate",
+        "target_category": "Demons",
+        "property": "Spheres",
+        "traditions": "Guild Mage, Witch",
+        "improvement_cost": "B",
+        "description": "A ritual to call lesser demons. A lesser demon appears. The ritual check suffers a penalty equal to the demon’s invocation difficulty. For details about summoning and dealing with demons, see The Art of Demon Summoning , on page 262. Ritual Time: 30 minutes"
+      },
+      {
+        "id": "spellblade_spiritspear",
+        "name": "Spellblade Spiritspear",
+        "check": "SGC/INT/DEX",
+        "casting_time": "8 hours",
+        "ae_cost": "Depends on the weapon (you cannot use a modification on this ritual's cost)",
+        "range": "8 yards",
+        "duration": "QL in days",
+        "target_category": "Objects",
+        "property": "Object",
+        "traditions": "General",
+        "improvement_cost": "C",
+        "description": "This ritual turns mundane weapons into magical weapons. You can use this ritual to bind AE into a weapon so it is considered a magical weapon. The AE cost of the ritual depends on the weapon’s size. You can increase the duration to QL x 30 years by multiplying the AE cost of the ritual by 5. Note: 1/20 of the AE cost of the ritual is permanent AE (for more about permanent AE, and regaining AE spent in this manner, see page 352). Ritual Time: 8 hours"
+      },
+      {
+        "id": "cat_eyes",
+        "name": "Cat Eyes",
+        "check": "SGC/INT/CON",
+        "casting_time": "4 Actions",
+        "ae_cost": 2,
+        "range": "Self",
+        "duration": "Sustained",
+        "target_category": "Creatures",
+        "property": "Transformation",
+        "traditions": "Witch",
+        "improvement_cost": "A",
+        "description": "This spell increases the eyes’ light sensitivity, letting the target see much better in darkness. Reduce darkness-related visibility penalties by 1 per QL (see page 348). The spell has no effect in complete darkness."
+      },
+      {
+        "id": "corpofesso",
+        "name": "Corpofesso",
+        "check": "SGC/INT/CON (modified by Toughness)",
+        "casting_time": "2 Actions",
+        "ae_cost": 16,
+        "range": "8 yards",
+        "duration": "QL x 2 in combat rounds",
+        "target_category": "Living Creatures",
+        "property": "Transformation",
+        "traditions": "Guild Mage",
+        "improvement_cost": "C",
+        "effects": [
+          {
+            "kind": "condition",
+            "condition": "pain",
+            "stacks": "clamp(env.ql - 1, 1, 4)",
+            "save": {
+              "stat": "Toughness",
+              "comparison": "le",
+              "dc": "-env.ql"
+            }
+          }
+        ]
+      },
+      {
+        "id": "gardianum",
+        "name": "Gardianum",
+        "check": "COU/SGC/CHA",
+        "casting_time": "1 Action",
+        "ae_cost": 4,
+        "range": "Self",
+        "duration": "5 minutes",
+        "target_category": "Zone",
+        "property": "Anti-Magic",
+        "traditions": "Guild Mage",
+        "improvement_cost": "B",
+        "description": "This spell creates an invisible dome around you that can absorb magical attacks originating from without. The spell actually creates a sphere, but since spellcasters are usually standing on the ground when using this spell, it functions more like a dome. This dome has a radius of 3 yards and a strength of AE + QL x 3. _Gardianum_ absorbs points of spell damage equal to the dome’s strength, on a point for point basis, until the dome’s strength is reduced to zero (at which time it collapses). The dome does not ward off magical beings or magical weapons. Unabsorbed damage is dealt to the spellcaster in the normal way. The dome moves with the spellcaster, and protects everybody within its radius."
+      },
+      {
+        "id": "gaze_into_the_mind",
+        "name": "Gaze Into the Mind",
+        "check": "COU/SGC/INT (modified by Spirit)",
+        "casting_time": "4 Actions",
+        "ae_cost": 8,
+        "range": "4 yards",
+        "duration": "Sustained",
+        "target_category": "Intelligent Creatures, Supernatural Creatures",
+        "property": "Clairvoyance",
+        "traditions": "General",
+        "improvement_cost": "C",
+        "description": "You can read the target’s mind. You can see what the target is thinking at the moment, but cannot search through memories. The target can notice that something is amiss by making a _Perception_ check with a penalty equal to the spell’s QL. If successful, the target can then make a _Willpower_ check (with a penalty equal to the spell’s QL) to send out thoughts filled with misleading information, useless trivia, inner monologues, or song."
+      },
+      {
+        "id": "glow_sphere",
+        "name": "Glow Sphere",
+        "check": "COU/SGC/CHA",
+        "casting_time": "1 Action",
+        "ae_cost": 2,
+        "range": "8 yards",
+        "duration": "Sustained",
+        "target_category": "Zone",
+        "property": "Elemental",
+        "traditions": "General",
+        "improvement_cost": "A",
+        "description": "This is probably the most well known spell in Aventuria. Glow Sphere creates a small, floating ball of light. You must declare in advance whether the light will remain stationary or follow you around. You also must choose the light’s color. The light’s brightness depends on QL. You can reduce the brightness, but only by one level. QL 1: The light is as bright as a candle; QL 2: as bright as a torch; QL 3: as bright as a campfire; QL 4: bright enough to illuminate a 15'x15' room; QL 5: bright enough to illuminate a large hall."
+      },
+      {
+        "id": "ignifaxius",
+        "name": "Ignifaxius",
+        "check": "COU/SGC/CHA",
+        "casting_time": "2 Actions",
+        "ae_cost": 8,
+        "range": "16 yards",
+        "duration": "Immediate",
+        "target_category": "all",
+        "property": "Elemental",
+        "traditions": "Guild Mage",
+        "improvement_cost": "C",
+        "effects": [
+          {
+            "kind": "damage",
+            "dice": "2d6",
+            "add": "env.ql * 2",
+            "type": "Fire"
+          }
+        ]
+      },
+      {
+        "id": "paralysis",
+        "name": "Paralysis",
+        "check": "SGC/INT/CON (modified by Toughness)",
+        "casting_time": "2 Actions",
+        "ae_cost": 8,
+        "range": "8 yards",
+        "duration": "QL x 2 in minutes",
+        "target_category": "Living Creatures",
+        "property": "Transformation",
+        "traditions": "Guild Mage",
+        "improvement_cost": "B",
+        "effects": [
+          {
+            "kind": "condition",
+            "condition": "paralysis",
+            "stacks": "clamp(env.ql - 1, 1, 4)",
+            "save": {
+              "stat": "Toughness",
+              "comparison": "le",
+              "dc": "-env.ql"
+            }
+          }
+        ]
+      },
+      {
+        "id": "penetrizzel",
+        "name": "Penetrizzel",
+        "check": "COU/SGC/INT",
+        "casting_time": "2 Actions",
+        "ae_cost": 4,
+        "range": "Self",
+        "duration": "Sustained",
+        "target_category": "All",
+        "property": "Clairvoyance",
+        "traditions": "Guild Mage",
+        "improvement_cost": "B",
+        "description": "You can see through 10 inches of solid matter per QL. Materials that interrupt magic can impose a penalty on the spell check (iron imposes a penalty of -1, Kosh basalt imposes a penalty of -4). _Penetrizzel_ cannot see through magical objects. Darkness or fog has its normal effect on your vision."
+      },
+      {
+        "id": "somnigravis",
+        "name": "Somnigravis",
+        "check": "COU/INT/CHA (modified by Spirit)",
+        "casting_time": "2 Actions",
+        "ae_cost": 8,
+        "range": "8 yards",
+        "duration": "QL x 3 in minutes",
+        "target_category": "Living Creatures",
+        "property": "Influence",
+        "traditions": "Elf",
+        "improvement_cost": "B",
+        "effects": [
+          {
+            "kind": "condition",
+            "condition": "stupor",
+            "stacks": "clamp(env.ql - 1, 1, 4)",
+            "save": {
+              "stat": "Spirit",
+              "comparison": "le",
+              "dc": "-env.ql"
+            }
+          }
+        ]
+      },
+      {
+        "id": "spider_walk",
+        "name": "Spider Walk",
+        "check": "SGC/INT/CON",
+        "casting_time": "4 Actions",
+        "ae_cost": 4,
+        "range": "Self",
+        "duration": "Sustained",
+        "target_category": "Living Creatures",
+        "property": "Transformation",
+        "traditions": "Witch",
+        "improvement_cost": "A",
+        "description": "Your hands and feet stick to even the smoothest of surfaces. You can climb slick rock faces and walls and even stick to the ceiling. However, this spell does not change your weight—if you climb a wall covered in plaster, the strain might tear the plaster free and cause you to fall. You must hold on with at least three limbs when using _Spider Walk_ , but you can use one less limb for each 2 QL of the spell (minimum of one limb)."
+      },
+      {
+        "id": "wall_of_fog",
+        "name": "Wall of Fog",
+        "check": "COU/SGC/CHA",
+        "casting_time": "2 Actions",
+        "ae_cost": 4,
+        "range": "16 yards",
+        "duration": "QL x 15 minutes; after that time, the fog dissipates",
+        "target_category": "Zone",
+        "property": "Elemental",
+        "traditions": "Elf",
+        "improvement_cost": "C",
+        "description": "You create an area of dense fog that wind cannot move. The spell creates 200 cubic yards of fog per AE, and you can shape the fog cloud as you wish, forming a compact ball, a drawn-out ribbon, or even the shape of a dragon, if desired. The fog creates a visibility penalty of 2 (see page 348)."
+      },
+      {
+        "id": "witch_s_bile",
+        "name": "Witch’s Bile",
+        "check": "SGC/INT/CON",
+        "casting_time": "1 Action",
+        "ae_cost": 4,
+        "range": "Self",
+        "duration": "Immediate",
+        "target_category": "Creatures",
+        "property": "Transformation",
+        "traditions": "Witch",
+        "improvement_cost": "B",
+        "effects": [
+          {
+            "kind": "damage",
+            "dice": "1d6",
+            "add": "env.ql",
+            "type": "Acid"
+          }
+        ]
+      },
+      {
+        "id": "witch_s_claws",
+        "name": "Witch’s Claws",
+        "check": "SGC/INT/CON",
+        "casting_time": "1 Action",
+        "ae_cost": 4,
+        "range": "Self",
+        "duration": "QL x 3 in minutes",
+        "target_category": "Creatures",
+        "property": "Transformation",
+        "traditions": "Witch",
+        "improvement_cost": "A",
+        "effects": [
+          {
+            "kind": "damage",
+            "dice": "1d6+3"
+          }
+        ]
+      }
+    ],
+    "conditions": [
+      {
+        "id": "fear",
+        "name": "Fear",
+        "check_modifiers": [
+          {
+            "scope": "all",
+            "bonus": -1,
+            "per_stack": true
+          }
+        ]
+      },
+      {
+        "id": "confusion",
+        "name": "Confusion",
+        "check_modifiers": [
+          {
+            "scope": "all",
+            "bonus": -1,
+            "per_stack": true
+          }
+        ]
+      },
+      {
+        "id": "pain",
+        "name": "Pain",
+        "check_modifiers": [
+          {
+            "scope": "all",
+            "bonus": -1,
+            "per_stack": true
+          }
+        ]
+      },
+      {
+        "id": "paralysis",
+        "name": "Paralysis",
+        "check_modifiers": [
+          {
+            "scope": "skill",
+            "bonus": -1,
+            "per_stack": true
+          }
+        ]
+      },
+      {
+        "id": "rapture",
+        "name": "Rapture",
+        "description": "Acquired by Blessed Ones who spend large numbers of KP in a short time; imposes skill-check penalties. Every passing hour reduces Rapture by 1 level."
+      },
+      {
+        "id": "stupor",
+        "name": "Stupor",
+        "description": "Disorientation and lethargy from wine, drugs, exhaustion, or a brawl; imposes penalties on checks. Remove 1 level for every 3 full hours of rest unless directed otherwise."
+      },
+      {
+        "id": "encumbrance",
+        "name": "Encumbrance",
+        "description": "From heavy gear and armor: penalties to applicable skill checks based on the current level. Levels go away when the hero discards weight; armor weight is already factored into its Encumbrance value."
+      },
+      {
+        "id": "wound",
+        "name": "Wound",
+        "description": "Acquired when damage taken exceeds Constitution in a single blow; the hero is impaired (Wound penalties) until the wound is treated. Stacks."
+      }
+    ],
+    "poisons": [
+      {
+        "id": "toad_poison",
+        "name": "Toad Poison",
+        "type": "Contact or weapon poison, animal venom",
+        "level": 4,
+        "save": "Toughness",
+        "onset": "5 combat rounds",
+        "duration": "30 minutes",
+        "effects": [
+          {
+            "stat": "condition",
+            "amount": 1,
+            "condition": "confusion",
+            "description": "1 level of Confusion"
+          }
+        ],
+        "description": "A weak hallucinogen secreted by Kosh toads; does not affect witches unless they want to be affected. Inflicts 1 level of Confusion."
+      },
+      {
+        "id": "arax",
+        "name": "Arax",
+        "type": "Weapon poison, animal venom",
+        "level": 3,
+        "save": "Toughness",
+        "price": "100 ST",
+        "onset": "10 minutes",
+        "duration": "1 day / 12 hours",
+        "effects": [
+          {
+            "stat": "condition",
+            "amount": 2,
+            "condition": "paralysis",
+            "description": "2 levels of Paralysis (degraded: 1 level)"
+          }
+        ],
+        "description": "Distilled spider venom. A creature that fails its Toughness resistance suffers 2 levels of Paralysis (degraded: 1 level)."
+      },
+      {
+        "id": "kelmon",
+        "name": "Kelmon",
+        "type": "Contact or weapon poison, plant poison",
+        "level": 2,
+        "save": "Toughness",
+        "price": "300 ST",
+        "onset": "5 combat rounds",
+        "duration": "30 minutes / 15 minutes",
+        "effects": [
+          {
+            "stat": "condition",
+            "amount": 4,
+            "condition": "paralysis",
+            "description": "4 levels of Paralysis and 4D6 damage ignoring PRO (degraded: 2D6 and 1 level)"
+          }
+        ],
+        "description": "A poison extracted from a carnivorous plant and used for hunting. On a failed Toughness resistance: 4D6 DP (ignoring PRO) and 4 levels of Paralysis; degraded: 2D6 DP and 1 level of Paralysis."
+      },
+      {
+        "id": "tulmadron",
+        "name": "Tulmadron",
+        "type": "Ingestion or weapon poison, mineral poison",
+        "level": 4,
+        "save": "Toughness",
+        "price": "1250 ST",
+        "onset": "20 combat rounds",
+        "duration": "50 combat rounds / 25 combat rounds",
+        "effects": [
+          {
+            "stat": "condition",
+            "amount": 2,
+            "condition": "pain",
+            "description": "1D6 DP per round ignoring PRO, hallucinations (1 level Confusion) and 2 levels of Pain (degraded: 1D3 and 1 level Pain)"
+          }
+        ],
+        "description": "A poison extracted from mineral sources. On a failed Toughness resistance: 1D6 DP (ignoring PRO) per combat round, 1 level of Confusion, and 2 levels of Pain; degraded: 1D3 DP per round and 1 level of Pain."
+      },
+      {
+        "id": "wurara",
+        "name": "Wurara",
+        "type": "Ingestion or weapon poison, plant poison",
+        "level": 2,
+        "save": "Toughness",
+        "price": "100 ST",
+        "onset": "3 combat rounds",
+        "duration": "4 hours / 2 hours",
+        "effects": [
+          {
+            "stat": "condition",
+            "amount": 2,
+            "condition": "confusion",
+            "description": "1D6 ignoring PRO per hour and mental delusions (2 levels of Confusion); degraded: 1D3 and 1 level"
+          }
+        ],
+        "description": "A plant poison that causes 1D6 DP (ignoring PRO) per hour and mental delusions (2 levels of Confusion); degraded: 1D3 DP and 1 level of Confusion."
+      },
+      {
+        "id": "staff_serpent_venom",
+        "name": "Staff Serpent Venom",
+        "type": "Weapon poison, venom",
+        "level": 5,
+        "save": "Toughness",
+        "onset": "2 combat rounds",
+        "duration": "30 minutes / 15 minutes",
+        "effects": [
+          {
+            "stat": "condition",
+            "amount": 2,
+            "condition": "pain",
+            "description": "One-time 1D6 DP (ignoring PRO) and 2 levels of Pain (degraded: 1 level of Pain)"
+          }
+        ],
+        "description": "Venom from the bite of a staff serpent, the Blessed One's transformed staff. On a failed Toughness resistance: one-time 1D6 DP (ignoring PRO) and 2 levels of Pain; degraded: 1 level of Pain."
+      }
+    ],
+    "diseases": [
+      {
+        "id": "swift_difar",
+        "name": "Swift Difar",
+        "type": "Illness",
+        "level": 1,
+        "save": "Toughness",
+        "onset": "1 day",
+        "duration": "4 days / 2 days",
+        "effects": [
+          {
+            "stat": "condition",
+            "amount": 1,
+            "description": "1D3 DP (ignoring PRO) per day and exhaustion (1 level of Stupor); degraded: 1 DP (ignoring PRO) per day"
+          }
+        ],
+        "description": "A bowel illness (also known as bowel cramps) contracted from spoiled food (1-16 on 1D20), sustained lack of hygiene (1 on 1D20), or close proximity to an infected person (1-5 on 1D20). Bed rest, home remedies, and drinking plenty of water reduce the duration by 1 day."
+      },
+      {
+        "id": "lutanas",
+        "name": "Lutanas",
+        "type": "Illness",
+        "level": 3,
+        "save": "Spirit",
+        "onset": "2 days",
+        "duration": "7 days / 3 days",
+        "effects": [
+          {
+            "stat": "condition",
+            "amount": 1,
+            "description": "1D6 DP (ignoring PRO) per day and anxiety (1 level of Fear per 6 hours); degraded: 1 DP per day and 1 level of Fear"
+          }
+        ],
+        "description": "The patient suffers anxiety, breathlessness, and fear. Contracted by being bitten by an infected person (1-6 on 1D20). Treated with psychological treatment or Treat Soul (penalty equal to the disease's level); lulany pollen in potion form lessens or cures the disease."
+      },
+      {
+        "id": "rapid_mania",
+        "name": "Rapid Mania",
+        "type": "Illness",
+        "level": 5,
+        "save": "Spirit",
+        "onset": "3 days",
+        "duration": "7 days/3 days",
+        "effects": [
+          {
+            "stat": "condition",
+            "amount": 1,
+            "description": "1D3 DP (ignoring PRO) and shaking palsy (1 level of Paralysis) on the first day, then frenzy and coma (1 level of Stupor per 3 hours); degraded: 1 DP per day (ignoring PRO), 1 level of Paralysis, and failed Willpower checks against Vengeance/Short Temper"
+          }
+        ],
+        "description": "Strong, uncontrollable twitching for the first day, then fits of unprovoked anger and indiscriminate rage; frenzy and coma set in on the second day. Treated with intercessions by Blessed Ones and restraints; cured by lulany pollen as a potion."
+      },
+      {
+        "id": "swamp_fever",
+        "name": "Swamp Fever",
+        "type": "Illness",
+        "level": 3,
+        "save": "Toughness",
+        "onset": "1 day",
+        "duration": "5 days / 3 days",
+        "effects": [
+          {
+            "stat": "condition",
+            "amount": 1,
+            "description": "1D6 DP (ignoring PRO) and 3 levels of Fear on day 1, 2D6 on day 2, 3D6 on day 3, 2D6 on day 4, and 1D6 on day 5; 1 level of Stupor every 3 hours (degraded: same effects but the disease ends sooner)"
+          }
+        ],
+        "description": "Also known as Brabak sweat. Causes hallucinations, panic, fever attacks, and unconsciousness. Contracted from pest bites or mosquito bites (1 on 1D20) or by caring for an infected person (1 on 1D20). Can be contracted only once in a lifetime; chewing donf stalks reduces the duration by 2 days."
+      },
+      {
+        "id": "zorganpox",
+        "name": "Zorganpox",
+        "type": "Illness",
+        "level": 5,
+        "save": "Toughness",
+        "onset": "13 days",
+        "duration": "13 days / 5 days",
+        "effects": [
+          {
+            "stat": "condition",
+            "amount": 3,
+            "description": "1D6 DP (ignoring PRO) per day after the third and weakness (3 levels of Stupor), plus 2D6 DP on the 13th day; degraded: 1D6 DP per day after the third and 2 levels of Stupor"
+          }
+        ],
+        "description": "Pale, pea-sized poxes appear on the whole body the first day, then turn red with fever, nausea, and weakness; they swell and break open on the 13th day, leaving scars. Contracted by casual contact (1-2 on 1D20) or caring for the infected (1-10 on 1D20). Can be contracted only once in a lifetime; xordai decoction lessens or cures it."
+      }
+    ]
+  }
+}
