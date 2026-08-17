@@ -3,7 +3,7 @@ var searchData=
   ['warfare_0',['warfare',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#abfbca23df3856e3e8dac4c8581064d3d',1,'rpg_os::generated::tde5e::Character']]],
   ['weak_1',['Weak',['../namespacerpg__os.html#ab870da3d65c79d59dad5920efc43dc65a7324e3727807d95037eb19d304fd91ec',1,'rpg_os']]],
   ['weakest_2',['Weakest',['../namespacerpg__os.html#ab870da3d65c79d59dad5920efc43dc65a983a8b4b7a68982963585846a025f565',1,'rpg_os']]],
-  ['weakest_20…_20strongest_3',['Ranges and variance (weakest … strongest)',['../index.html#autotoc_md6',1,'']]],
+  ['weakest_20…_20strongest_3',['Ranges and variance (weakest … strongest)',['../index.html#autotoc_md7',1,'']]],
   ['weight_4',['Weight',['../structrpg__os_1_1Weight.html',1,'rpg_os']]],
   ['weightunit_5',['weightUnit',['../structrpg__os_1_1EncumbranceConfig.html#ae04966d237ec3a3f7f993bba9f9c01e2',1,'rpg_os::EncumbranceConfig']]],
   ['willpower_6',['willpower',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a461f9e0f1fd5fa05ee08b90fa6abdeb4',1,'rpg_os::generated::tde5e::Character']]],

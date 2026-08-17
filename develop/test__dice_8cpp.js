@@ -1,6 +1,7 @@
 var test__dice_8cpp =
 [
     [ "TEST_CASE", "test__dice_8cpp.html#a3a76692912a299bf41d152b0e23c4a43", null ],
+    [ "TEST_CASE", "test__dice_8cpp.html#a530386cee475c1a33fa96c603a45fb30", null ],
     [ "TEST_CASE", "test__dice_8cpp.html#ae010d3eddea71b9ba2fc66ba38b46b10", null ],
     [ "TEST_CASE", "test__dice_8cpp.html#ac92988aea0e8ae330704ea79e384e325", null ],
     [ "TEST_CASE", "test__dice_8cpp.html#a44a0aa5d60558d90136cf80c075da512", null ],

@@ -27,11 +27,12 @@ var NAVTREE =
   [ "RPG-OS", "index.html", [
     [ "Building", "index.html#autotoc_md2", null ],
     [ "Documentation", "index.html#autotoc_md3", null ],
-    [ "Using the generated (specific-mode) headers", "index.html#autotoc_md4", null ],
-    [ "Ruleset format, licence, and schema", "index.html#autotoc_md5", null ],
-    [ "Ranges and variance (weakest … strongest)", "index.html#autotoc_md6", null ],
-    [ "Project layout", "index.html#autotoc_md7", null ],
-    [ "Combat simulation & Monte Carlo ELO ranking", "index.html#autotoc_md8", null ],
+    [ "npm package & live demo", "index.html#autotoc_md4", null ],
+    [ "Using the generated (specific-mode) headers", "index.html#autotoc_md5", null ],
+    [ "Ruleset format, licence, and schema", "index.html#autotoc_md6", null ],
+    [ "Ranges and variance (weakest … strongest)", "index.html#autotoc_md7", null ],
+    [ "Project layout", "index.html#autotoc_md8", null ],
+    [ "Combat simulation & Monte Carlo ELO ranking", "index.html#autotoc_md9", null ],
     [ "Examples", "md_examples_2README.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
@@ -69,18 +70,18 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "advancement_8hpp.html",
-"classrpg__os_1_1DynamicEntity.html#adb575dcf6f39fa3391f68e727c52a1ab",
-"classrpg__os_1_1GameSession.html#aebcc3749348c5db639f65efcf89b683b",
-"classrpg__os_1_1RulesetEngine.html#aa92968dd1fbb5bd56a538da8ed92ff78",
-"classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a50579e66cd5d7d1ad9af91173a6de3a9",
-"classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#a123c5762fff449a83abd5f7353de9b9c",
-"classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a2506cd3019a5cfc4eb84c37a77e266a2",
-"classrpg__os_1_1generated_1_1tde5e_1_1Character.html#add767b8b8d31a78960be23e752144c40",
-"globals_defs.html",
-"structrpg__os_1_1ActionBudget.html#a1c85fe04cff6cd258b4146e75101a4b0",
-"structrpg__os_1_1EntityId.html#a8972983924090e7ecedac5f114ab0192",
-"test__bookkeeping_8cpp.html#a7ca3dc91eb56c52a696c21ff65a75809",
-"test__ruleset__loader_8cpp.html#a8fadc3d1a8321d063a6c77f92cd546d2"
+"classrpg__os_1_1DynamicEntity.html#adb312c30565ee046d574f39f8776f9f8",
+"classrpg__os_1_1GameSession.html#ae7e904d02c7b8b6fbb12704bddbee7d6",
+"classrpg__os_1_1RulesetEngine.html#aa5201e73f7bd369623248eaabfbc887e",
+"classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a50207badc7a0988506ce6a7bf4139b33",
+"classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#a07497ce3f8416b3164dfb82c1b6df627",
+"classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a24b63fd945018c326d897ee823f578fe",
+"classrpg__os_1_1generated_1_1tde5e_1_1Character.html#add35477f17acb9a96811e4afde3f548a",
+"game__session_8hpp_source.html",
+"structrpg__os_1_1ActionBudget.html",
+"structrpg__os_1_1EncumbranceConfig_1_1Level.html#a93f90ee6c29b06bf47e73b748d55ad5e",
+"test__bookkeeping_8cpp.html#a699b0a2282442830afa96cdff127a4aa",
+"test__ruleset__loader_8cpp.html#a0990bc4cc846f508df4817d5fd559d7d"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

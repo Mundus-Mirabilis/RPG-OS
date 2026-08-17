@@ -9,5 +9,6 @@ var structrpg__os_1_1CombatantSpec =
     [ "initiativeValue", "structrpg__os_1_1CombatantSpec.html#a02c077548edbc9779f63f0ccf67b9431", null ],
     [ "isArchetype", "structrpg__os_1_1CombatantSpec.html#ab268407362245eacf277e16a5b99eeb6", null ],
     [ "name", "structrpg__os_1_1CombatantSpec.html#a3ecc093e0700183acc13acb58f2dd12b", null ],
+    [ "sheet", "structrpg__os_1_1CombatantSpec.html#a00401c25896c7aa83722a885f98d7387", null ],
     [ "spellIds", "structrpg__os_1_1CombatantSpec.html#aae01e6ff0f519a4d97eb977dfa005e6d", null ]
 ];

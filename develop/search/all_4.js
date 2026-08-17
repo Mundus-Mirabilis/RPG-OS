@@ -13,7 +13,7 @@ var searchData=
   ['effectsapplied_10',['effectsApplied',['../structrpg__os_1_1RulesetEngine_1_1AfflictionResult.html#a66089f7883e8c56595c7cfdf63b692bb',1,'rpg_os::RulesetEngine::AfflictionResult']]],
   ['effectsresult_11',['EffectsResult',['../structrpg__os_1_1RulesetEngine_1_1EffectsResult.html',1,'rpg_os::RulesetEngine']]],
   ['effecttimeline_12',['EffectTimeline',['../classrpg__os_1_1EffectTimeline.html',1,'rpg_os']]],
-  ['elo_20ranking_13',['Combat simulation &amp; Monte Carlo ELO ranking',['../index.html#autotoc_md8',1,'']]],
+  ['elo_20ranking_13',['Combat simulation &amp; Monte Carlo ELO ranking',['../index.html#autotoc_md9',1,'']]],
   ['empathy_14',['empathy',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#af85932021ba4907ee99dd40e7304d5c6',1,'rpg_os::generated::tde5e::Character']]],
   ['enabled_15',['enabled',['../structrpg__os_1_1EncumbranceConfig.html#a0ad004c95196275d901fa6481ff8c531',1,'rpg_os::EncumbranceConfig']]],
   ['encumbrance_16',['encumbrance',['../classrpg__os_1_1Ruleset.html#a2dfa2d825a7289b216ad9bab3159f415',1,'rpg_os::Ruleset']]],

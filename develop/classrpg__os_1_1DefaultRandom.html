@@ -238,9 +238,10 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns a uniform integer in [min, max] (inclusive). The operator form is what satisfies the <code>RandomNumberGenerator</code> concept. </p>
+<p>Returns a uniform integer in [min, max] (inclusive). The operator form is what satisfies the <code>RandomNumberGenerator</code> concept.</p>
+<dl class="section user"><dt>Why not std::uniform_int_distribution?</dt><dd><code>std::uniform_int_distribution</code> is <em>not</em> portable: for the same engine and seed it produces different sequences on libstdc++ and libc++. The engine here draws from the raw <code>std::mt19937</code> output instead, which is specified by the standard and identical on every implementation — so "explicitly seeded = exactly reproducible" also holds across a native build (libstdc++ or libc++) and the WebAssembly build (libc++). That cross-standard-library determinism is what lets the npm package's parity tests compare a seeded WASM fight with the native fight binary. The tiny modulo bias is irrelevant for a game RNG. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00101">101</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00112">112</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
 
 </div>
 </div>

@@ -241,11 +241,11 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 <p>One combatant's action for a fight: prefer casting the strongest affordable damaging spell when magic is enabled and a usable spell exists, otherwise make a weapon attack. Returns true when the defender is reduced to 0 hit points.</p>
 <dl class="section user"><dt>Why does a failed casting attempt consume the action?</dt><dd>Casting is what a spellcaster does instead of swinging a weapon (in The Dark Eye a spell takes a full action), and the arcane energy is spent on the attempt even when the check fails — so a botched cast simply wastes the round. Only when <em>no</em> spell is usable (nothing known, or all spells unaffordable) does the combatant fall back to its weapon. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="combat_8hpp_source.html#l00382">382</a> of file <a class="el" href="combat_8hpp_source.html">combat.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="combat_8hpp_source.html#l00437">437</a> of file <a class="el" href="combat_8hpp_source.html">combat.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="combat_8hpp_source.html#l00349">attackOnce()</a>, <a class="el" href="engine_8hpp_source.html#l00600">rpg_os::RulesetEngine::castSpell()</a>, <a class="el" href="combat_8hpp_source.html#l00309">pickSpell()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00235">rpg_os::DynamicEntity::resource()</a>, and <a class="el" href="combat_8hpp_source.html#l00067">rpg_os::CombatantSpec::spellIds</a>.</p>
+<p class="reference">References <a class="el" href="combat_8hpp_source.html#l00404">attackOnce()</a>, <a class="el" href="engine_8hpp_source.html#l00600">rpg_os::RulesetEngine::castSpell()</a>, <a class="el" href="combat_8hpp_source.html#l00364">pickSpell()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00235">rpg_os::DynamicEntity::resource()</a>, and <a class="el" href="combat_8hpp_source.html#l00067">rpg_os::CombatantSpec::spellIds</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00407">resolveRound()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00462">resolveRound()</a>.</p>
 
 </div>
 </div>
@@ -435,11 +435,11 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 <p>One combatant's action: resolves the attack check against the defender and, on a hit, rolls and applies the damage through the event pipeline. Returns true when the defender is reduced to 0 (or below) hit points.</p>
 <dl class="section user"><dt>Why keep this in a detail namespace?</dt><dd>It is a single round of a fight — meaningful only inside the loop below. Hiding it in <code>detail</code> keeps the public surface of the header to the reusable entry points (<a class="el" href="namespacerpg__os.html#adacf6091542317212a714e913c4badb1">makeCombatantSpec</a>, <a class="el" href="namespacerpg__os.html#a3758c1ea47b844ed9ca1d0244a1f0e1d">runFight</a>) while still making the loop readable. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="combat_8hpp_source.html#l00349">349</a> of file <a class="el" href="combat_8hpp_source.html">combat.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="combat_8hpp_source.html#l00404">404</a> of file <a class="el" href="combat_8hpp_source.html">combat.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00573">rpg_os::RulesetEngine::actionAllowed()</a>, <a class="el" href="engine_8hpp_source.html#l00479">rpg_os::RulesetEngine::applyDamage()</a>, <a class="el" href="engine_8hpp_source.html#l00394">rpg_os::RulesetEngine::executeCheckEffective()</a>, <a class="el" href="types_8hpp_source.html#l00080">rpg_os::CheckResult::isSuccess</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00235">rpg_os::DynamicEntity::resource()</a>, and <a class="el" href="dice__engine_8hpp_source.html#l00206">rpg_os::DiceExpression::rollSum()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00573">rpg_os::RulesetEngine::actionAllowed()</a>, <a class="el" href="engine_8hpp_source.html#l00479">rpg_os::RulesetEngine::applyDamage()</a>, <a class="el" href="engine_8hpp_source.html#l00394">rpg_os::RulesetEngine::executeCheckEffective()</a>, <a class="el" href="types_8hpp_source.html#l00080">rpg_os::CheckResult::isSuccess</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00235">rpg_os::DynamicEntity::resource()</a>, and <a class="el" href="dice__engine_8hpp_source.html#l00217">rpg_os::DiceExpression::rollSum()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00382">actOnce()</a>, and <a class="el" href="test__bookkeeping_8cpp_source.html#l01726">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00437">actOnce()</a>, and <a class="el" href="test__bookkeeping_8cpp_source.html#l01726">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -502,11 +502,11 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 </div><div class="memdoc">
 <p>Fills <code>out</code> from an archetype record (a probe entity at average variance); false when the archetype cannot be created. </p>
 
-<p class="definition">Definition at line <a class="el" href="combat_8hpp_source.html#l00134">134</a> of file <a class="el" href="combat_8hpp_source.html">combat.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="combat_8hpp_source.html#l00139">139</a> of file <a class="el" href="combat_8hpp_source.html">combat.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="combat_8hpp_source.html#l00063">rpg_os::CombatantSpec::armorRating</a>, <a class="el" href="combat_8hpp_source.html#l00061">rpg_os::CombatantSpec::attackValue</a>, <a class="el" href="namespacerpg__os.html#ab870da3d65c79d59dad5920efc43dc65ab1897515d548a960afe49ecf66a29021">rpg_os::Average</a>, <a class="el" href="engine_8hpp_source.html#l00125">rpg_os::RulesetEngine::createEntityWith()</a>, <a class="el" href="combat_8hpp_source.html#l00066">rpg_os::CombatantSpec::damageExpression</a>, <a class="el" href="combat_8hpp_source.html#l00062">rpg_os::CombatantSpec::defenseValue</a>, <a class="el" href="combat_8hpp_source.html#l00058">rpg_os::CombatantSpec::id</a>, <a class="el" href="combat_8hpp_source.html#l00060">rpg_os::CombatantSpec::isArchetype</a>, <a class="el" href="combat_8hpp_source.html#l00059">rpg_os::CombatantSpec::name</a>, and <a class="el" href="combat_8hpp_source.html#l00067">rpg_os::CombatantSpec::spellIds</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00206">rpg_os::makeCombatantSpec()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00211">rpg_os::makeCombatantSpec()</a>.</p>
 
 </div>
 </div>
@@ -569,11 +569,11 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 </div><div class="memdoc">
 <p>Fills <code>out</code> from a bestiary record (a probe creature at average variance), promoting its <code>to_hit</code> / <code>dodge</code> / <code>armor_rating</code> / <code>ac</code> / <code>initiative</code> fields; false when the creature cannot be created. </p>
 
-<p class="definition">Definition at line <a class="el" href="combat_8hpp_source.html#l00158">158</a> of file <a class="el" href="combat_8hpp_source.html">combat.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="combat_8hpp_source.html#l00163">163</a> of file <a class="el" href="combat_8hpp_source.html">combat.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="combat_8hpp_source.html#l00064">rpg_os::CombatantSpec::acValue</a>, <a class="el" href="combat_8hpp_source.html#l00063">rpg_os::CombatantSpec::armorRating</a>, <a class="el" href="combat_8hpp_source.html#l00061">rpg_os::CombatantSpec::attackValue</a>, <a class="el" href="namespacerpg__os.html#ab870da3d65c79d59dad5920efc43dc65ab1897515d548a960afe49ecf66a29021">rpg_os::Average</a>, <a class="el" href="engine_8hpp_source.html#l00158">rpg_os::RulesetEngine::createCreatureWith()</a>, <a class="el" href="combat_8hpp_source.html#l00066">rpg_os::CombatantSpec::damageExpression</a>, <a class="el" href="combat_8hpp_source.html#l00062">rpg_os::CombatantSpec::defenseValue</a>, <a class="el" href="combat_8hpp_source.html#l00058">rpg_os::CombatantSpec::id</a>, <a class="el" href="combat_8hpp_source.html#l00065">rpg_os::CombatantSpec::initiativeValue</a>, <a class="el" href="combat_8hpp_source.html#l00060">rpg_os::CombatantSpec::isArchetype</a>, and <a class="el" href="combat_8hpp_source.html#l00059">rpg_os::CombatantSpec::name</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00206">rpg_os::makeCombatantSpec()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00211">rpg_os::makeCombatantSpec()</a>.</p>
 
 </div>
 </div>
@@ -640,7 +640,7 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="checks_8hpp_source.html#l00355">355</a> of file <a class="el" href="checks_8hpp_source.html">checks.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="checks_8hpp_source.html#l00115">rpg_os::CheckRecipe::comparison</a>, <a class="el" href="namespacerpg__os.html#a0dc66a7ae36ef58a210fec7c99826700a278d01e5af56273bae1bb99a98b370cd">rpg_os::Critical</a>, <a class="el" href="checks_8hpp_source.html#l00146">rpg_os::CheckRecipe::criticalConfirm</a>, <a class="el" href="checks_8hpp_source.html#l00144">rpg_os::CheckRecipe::criticalFace</a>, <a class="el" href="checks_8hpp_source.html#l00142">rpg_os::CheckRecipe::criticalStyle</a>, <a class="el" href="checks_8hpp_source.html#l00112">rpg_os::CheckRecipe::dice</a>, <a class="el" href="namespacerpg__os.html#a475606cc248fcbc80000a0ceb3b8c448a8af5861002f3c157f9ba842bba10aa3f">rpg_os::Face</a>, <a class="el" href="namespacerpg__os.html#a0dc66a7ae36ef58a210fec7c99826700a697c0f6712edee06e7cc9e3aba782ea0">rpg_os::Fumble</a>, <a class="el" href="checks_8hpp_source.html#l00152">rpg_os::CheckRecipe::fumbleConfirm</a>, <a class="el" href="checks_8hpp_source.html#l00150">rpg_os::CheckRecipe::fumbleFace</a>, <a class="el" href="checks_8hpp_source.html#l00148">rpg_os::CheckRecipe::fumbleStyle</a>, <a class="el" href="checks_8hpp_source.html#l00155">rpg_os::CheckRecipe::grading</a>, <a class="el" href="namespacerpg__os.html#a4ede194e1af239829344bcfe6bf5791fa758b05d899def79c9eb864ad4f96be1f">rpg_os::GreaterEqual</a>, <a class="el" href="types_8hpp_source.html#l00084">rpg_os::CheckResult::isCriticalFailure</a>, <a class="el" href="types_8hpp_source.html#l00082">rpg_os::CheckResult::isCriticalSuccess</a>, <a class="el" href="types_8hpp_source.html#l00080">rpg_os::CheckResult::isSuccess</a>, <a class="el" href="namespacerpg__os.html#a77f98d725fb2409a3e02d40f5772f3bca915b56c00229b328af95134410779d20">rpg_os::Percentile</a>, <a class="el" href="types_8hpp_source.html#l00093">rpg_os::CheckResult::rawDiceRolls</a>, <a class="el" href="dice__engine_8hpp_source.html#l00206">rpg_os::DiceExpression::rollSum()</a>, <a class="el" href="namespacerpg__os.html#a0dc66a7ae36ef58a210fec7c99826700a505a83f220c02df2f85c3810cd9ceb38">rpg_os::Success</a>, <a class="el" href="types_8hpp_source.html#l00108">rpg_os::CheckResult::successLevel</a>, and <a class="el" href="checks_8hpp_source.html#l00249">rpg_os::successLevelFor()</a>.</p>
+<p class="reference">References <a class="el" href="checks_8hpp_source.html#l00115">rpg_os::CheckRecipe::comparison</a>, <a class="el" href="namespacerpg__os.html#a0dc66a7ae36ef58a210fec7c99826700a278d01e5af56273bae1bb99a98b370cd">rpg_os::Critical</a>, <a class="el" href="checks_8hpp_source.html#l00146">rpg_os::CheckRecipe::criticalConfirm</a>, <a class="el" href="checks_8hpp_source.html#l00144">rpg_os::CheckRecipe::criticalFace</a>, <a class="el" href="checks_8hpp_source.html#l00142">rpg_os::CheckRecipe::criticalStyle</a>, <a class="el" href="checks_8hpp_source.html#l00112">rpg_os::CheckRecipe::dice</a>, <a class="el" href="namespacerpg__os.html#a475606cc248fcbc80000a0ceb3b8c448a8af5861002f3c157f9ba842bba10aa3f">rpg_os::Face</a>, <a class="el" href="namespacerpg__os.html#a0dc66a7ae36ef58a210fec7c99826700a697c0f6712edee06e7cc9e3aba782ea0">rpg_os::Fumble</a>, <a class="el" href="checks_8hpp_source.html#l00152">rpg_os::CheckRecipe::fumbleConfirm</a>, <a class="el" href="checks_8hpp_source.html#l00150">rpg_os::CheckRecipe::fumbleFace</a>, <a class="el" href="checks_8hpp_source.html#l00148">rpg_os::CheckRecipe::fumbleStyle</a>, <a class="el" href="checks_8hpp_source.html#l00155">rpg_os::CheckRecipe::grading</a>, <a class="el" href="namespacerpg__os.html#a4ede194e1af239829344bcfe6bf5791fa758b05d899def79c9eb864ad4f96be1f">rpg_os::GreaterEqual</a>, <a class="el" href="types_8hpp_source.html#l00084">rpg_os::CheckResult::isCriticalFailure</a>, <a class="el" href="types_8hpp_source.html#l00082">rpg_os::CheckResult::isCriticalSuccess</a>, <a class="el" href="types_8hpp_source.html#l00080">rpg_os::CheckResult::isSuccess</a>, <a class="el" href="namespacerpg__os.html#a77f98d725fb2409a3e02d40f5772f3bca915b56c00229b328af95134410779d20">rpg_os::Percentile</a>, <a class="el" href="types_8hpp_source.html#l00093">rpg_os::CheckResult::rawDiceRolls</a>, <a class="el" href="dice__engine_8hpp_source.html#l00217">rpg_os::DiceExpression::rollSum()</a>, <a class="el" href="namespacerpg__os.html#a0dc66a7ae36ef58a210fec7c99826700a505a83f220c02df2f85c3810cd9ceb38">rpg_os::Success</a>, <a class="el" href="types_8hpp_source.html#l00108">rpg_os::CheckResult::successLevel</a>, and <a class="el" href="checks_8hpp_source.html#l00249">rpg_os::successLevelFor()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="checks_8hpp_source.html#l00398">rpg_os::resolveThresholdCheck()</a>.</p>
 
@@ -688,11 +688,11 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 <p>Returns the id of the strongest affordable damaging spell <code>caster</code> can cast from <code>spellIds</code>, or an empty string when none is usable.</p>
 <dl class="section user"><dt>Why "affordable" and "damaging"?</dt><dd>A fight is a damage race: a spellcaster is only "magic" while it has a spell it can actually afford to cast and that actually hurts. The cost is read exactly as <a class="el" href="classrpg__os_1_1RulesetEngine.html#a89a4c819918ef4baaa0fb2fea02cdf3c">RulesetEngine::castSpell</a> reads it (<code>cost</code>, <code>ae_cost</code>, then <code>level</code>), so the affordability check cannot disagree with what casting would really spend. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="combat_8hpp_source.html#l00309">309</a> of file <a class="el" href="combat_8hpp_source.html">combat.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="combat_8hpp_source.html#l00364">364</a> of file <a class="el" href="combat_8hpp_source.html">combat.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00530">rpg_os::RulesetEngine::findSpell()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00235">rpg_os::DynamicEntity::resource()</a>, <a class="el" href="engine_8hpp_source.html#l01870">rpg_os::RulesetEngine::ruleset()</a>, <a class="el" href="combat_8hpp_source.html#l00278">spellAverageDamage()</a>, and <a class="el" href="ruleset__loader_8hpp_source.html#l00222">rpg_os::Ruleset::spellResource</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00530">rpg_os::RulesetEngine::findSpell()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00235">rpg_os::DynamicEntity::resource()</a>, <a class="el" href="engine_8hpp_source.html#l01870">rpg_os::RulesetEngine::ruleset()</a>, <a class="el" href="combat_8hpp_source.html#l00333">spellAverageDamage()</a>, and <a class="el" href="ruleset__loader_8hpp_source.html#l00222">rpg_os::Ruleset::spellResource</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00382">actOnce()</a>, and <a class="el" href="test__combat_8cpp_source.html#l00196">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00437">actOnce()</a>, and <a class="el" href="test__combat_8cpp_source.html#l00196">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -780,11 +780,11 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 <p>Plays one round of a fight: rolls initiative, resolves both combatants' actions in initiative order, and returns the winner's index (0 or 1) or -1 when neither combatant is reduced to 0 hit points.</p>
 <dl class="section user"><dt>Why return the winner instead of mutating the outcome?</dt><dd>Keeping the round self-contained (inputs in, winner out) lets the fight loop stay a flat read loop — no winner bookkeeping spread across the round body — and makes the per-round RNG stream easy to reason about in tests. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="combat_8hpp_source.html#l00407">407</a> of file <a class="el" href="combat_8hpp_source.html">combat.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="combat_8hpp_source.html#l00462">462</a> of file <a class="el" href="combat_8hpp_source.html">combat.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="combat_8hpp_source.html#l00382">actOnce()</a>, and <a class="el" href="dynamic__entity_8hpp_source.html#l00198">rpg_os::DynamicEntity::getStat()</a>.</p>
+<p class="reference">References <a class="el" href="combat_8hpp_source.html#l00437">actOnce()</a>, and <a class="el" href="dynamic__entity_8hpp_source.html#l00198">rpg_os::DynamicEntity::getStat()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00454">rpg_os::runFight()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00509">rpg_os::runFight()</a>.</p>
 
 </div>
 </div>
@@ -869,7 +869,7 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="checks_8hpp_source.html#l00309">309</a> of file <a class="el" href="checks_8hpp_source.html">checks.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="dice__engine_8hpp_source.html#l00192">rpg_os::DiceExpression::roll()</a>.</p>
+<p class="reference">References <a class="el" href="dice__engine_8hpp_source.html#l00203">rpg_os::DiceExpression::roll()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="checks_8hpp_source.html#l00336">additiveBonuses()</a>, <a class="el" href="checks_8hpp_source.html#l00322">applyAdvantage()</a>, and <a class="el" href="checks_8hpp_source.html#l00398">rpg_os::resolveThresholdCheck()</a>.</p>
 
@@ -944,11 +944,11 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 </div><div class="memdoc">
 <p>The expected damage of a spell record, used only to rank spells so the caster picks its strongest option. Handles both the bare <code>damage</code> field and the structured <code>effects</code> array (sums the <code>dice</code> of every damage-kind effect). A spell with no damage at all (a buff, a heal, a utility effect) ranks as zero and is never chosen as a fight action. </p>
 
-<p class="definition">Definition at line <a class="el" href="combat_8hpp_source.html#l00278">278</a> of file <a class="el" href="combat_8hpp_source.html">combat.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="combat_8hpp_source.html#l00333">333</a> of file <a class="el" href="combat_8hpp_source.html">combat.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="dice__engine_8hpp_source.html#l00181">rpg_os::DiceExpression::expectedValue()</a>.</p>
+<p class="reference">References <a class="el" href="dice__engine_8hpp_source.html#l00192">rpg_os::DiceExpression::expectedValue()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00309">pickSpell()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00364">pickSpell()</a>.</p>
 
 </div>
 </div>

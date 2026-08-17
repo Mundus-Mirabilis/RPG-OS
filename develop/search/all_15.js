@@ -7,7 +7,7 @@ var searchData=
   ['valueof_4',['valueOf',['../structrpg__os_1_1CurrencySystem.html#ae4ffc36f86c5649e0798791b07509315',1,'rpg_os::CurrencySystem']]],
   ['values_5',['values',['../structScriptedRng.html#aff6da94f666db3734a0481c7633270d6',1,'ScriptedRng::values'],['../structMockStats.html#afd6a2b6395eafeb9951960b1e976aa60',1,'MockStats::values']]],
   ['variance_6',['Variance',['../namespacerpg__os.html#ab870da3d65c79d59dad5920efc43dc65',1,'rpg_os']]],
-  ['variance_20weakest_20…_20strongest_7',['Ranges and variance (weakest … strongest)',['../index.html#autotoc_md6',1,'']]],
+  ['variance_20weakest_20…_20strongest_7',['Ranges and variance (weakest … strongest)',['../index.html#autotoc_md7',1,'']]],
   ['variance_2ehpp_8',['variance.hpp',['../variance_8hpp.html',1,'']]],
   ['visitstacks_9',['visitStacks',['../classrpg__os_1_1Inventory.html#aa8cea0ddceddec5ea16ffe8f107c52eb',1,'rpg_os::Inventory']]]
 ];

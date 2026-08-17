@@ -39,6 +39,7 @@ var classrpg__os_1_1DynamicEntity =
     [ "modifyResource", "classrpg__os_1_1DynamicEntity.html#a88bd9431036e2b74bc66ef608ecaf7aa", null ],
     [ "money", "classrpg__os_1_1DynamicEntity.html#adb575dcf6f39fa3391f68e727c52a1ab", null ],
     [ "money", "classrpg__os_1_1DynamicEntity.html#a733b6c220339e4d42ac6b61f13565698", null ],
+    [ "refreshResources", "classrpg__os_1_1DynamicEntity.html#abce036557123fe5f3c7f9646408e1752", null ],
     [ "removeCondition", "classrpg__os_1_1DynamicEntity.html#ae8b2eb226f2bf5a1224fe1d85009939d", null ],
     [ "removeResistance", "classrpg__os_1_1DynamicEntity.html#a1228b67f68b76e4cb90b2adbecc20b02", null ],
     [ "removeTrait", "classrpg__os_1_1DynamicEntity.html#a2560f8771aa33c362a7a85d5b9a38d19", null ],

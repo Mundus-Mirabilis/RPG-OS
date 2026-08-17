@@ -157,8 +157,9 @@ Public Attributes</h2></td></tr>
 <tr class="memdesc:a4498b86989d28cb87ad3bee6e11b8ee9"><td class="mdescLeft">&#160;</td><td class="mdescRight">dice expression, e.g. "2d6+4"  <br /></td></tr>
 <tr class="separator:a4498b86989d28cb87ad3bee6e11b8ee9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae01e6ff0f519a4d97eb977dfa005e6d" id="r_aae01e6ff0f519a4d97eb977dfa005e6d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrpg__os_1_1CombatantSpec.html#aae01e6ff0f519a4d97eb977dfa005e6d">spellIds</a></td></tr>
-<tr class="memdesc:aae01e6ff0f519a4d97eb977dfa005e6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">spells the combatant can cast (empty = pure melee)  <br /></td></tr>
 <tr class="separator:aae01e6ff0f519a4d97eb977dfa005e6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00401c25896c7aa83722a885f98d7387" id="r_a00401c25896c7aa83722a885f98d7387"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrpg__os_1_1CombatantSpec.html#a00401c25896c7aa83722a885f98d7387">sheet</a></td></tr>
+<tr class="separator:a00401c25896c7aa83722a885f98d7387"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Static, per-entry description of a combatant. Built once from the ruleset and reused to spawn fresh entities for every fight — this is what lets a Monte-Carlo loop avoid re-deriving the stat block on each of thousands of fights.</p>
@@ -182,7 +183,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="combat_8hpp_source.html#l00064">64</a> of file <a class="el" href="combat_8hpp_source.html">combat.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00247">rpg_os::createFighter()</a>, <a class="el" href="combat_8hpp_source.html#l00158">rpg_os::detail::fillCreatureSpec()</a>, and <a class="el" href="test__combat_8cpp_source.html#l00264">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00291">rpg_os::createFighter()</a>, <a class="el" href="combat_8hpp_source.html#l00163">rpg_os::detail::fillCreatureSpec()</a>, <a class="el" href="combat_8hpp_source.html#l00252">rpg_os::makeCombatantSpecFromEntity()</a>, and <a class="el" href="test__combat_8cpp_source.html#l00264">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -202,7 +203,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="combat_8hpp_source.html#l00063">63</a> of file <a class="el" href="combat_8hpp_source.html">combat.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00247">rpg_os::createFighter()</a>, <a class="el" href="combat_8hpp_source.html#l00134">rpg_os::detail::fillArchetypeSpec()</a>, <a class="el" href="combat_8hpp_source.html#l00158">rpg_os::detail::fillCreatureSpec()</a>, <a class="el" href="test__combat_8cpp_source.html#l00052">TEST_CASE()</a>, and <a class="el" href="test__combat_8cpp_source.html#l00039">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00291">rpg_os::createFighter()</a>, <a class="el" href="combat_8hpp_source.html#l00139">rpg_os::detail::fillArchetypeSpec()</a>, <a class="el" href="combat_8hpp_source.html#l00163">rpg_os::detail::fillCreatureSpec()</a>, <a class="el" href="combat_8hpp_source.html#l00252">rpg_os::makeCombatantSpecFromEntity()</a>, <a class="el" href="test__combat_8cpp_source.html#l00312">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00052">TEST_CASE()</a>, and <a class="el" href="test__combat_8cpp_source.html#l00039">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -222,7 +223,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="combat_8hpp_source.html#l00061">61</a> of file <a class="el" href="combat_8hpp_source.html">combat.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00247">rpg_os::createFighter()</a>, <a class="el" href="combat_8hpp_source.html#l00134">rpg_os::detail::fillArchetypeSpec()</a>, <a class="el" href="combat_8hpp_source.html#l00158">rpg_os::detail::fillCreatureSpec()</a>, <a class="el" href="test__combat_8cpp_source.html#l00068">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00079">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00052">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00039">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00158">TEST_CASE()</a>, and <a class="el" href="test__combat_8cpp_source.html#l00264">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00291">rpg_os::createFighter()</a>, <a class="el" href="combat_8hpp_source.html#l00139">rpg_os::detail::fillArchetypeSpec()</a>, <a class="el" href="combat_8hpp_source.html#l00163">rpg_os::detail::fillCreatureSpec()</a>, <a class="el" href="combat_8hpp_source.html#l00252">rpg_os::makeCombatantSpecFromEntity()</a>, <a class="el" href="test__combat_8cpp_source.html#l00068">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00079">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00353">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00312">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00052">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00039">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00158">TEST_CASE()</a>, and <a class="el" href="test__combat_8cpp_source.html#l00264">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -242,7 +243,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="combat_8hpp_source.html#l00066">66</a> of file <a class="el" href="combat_8hpp_source.html">combat.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00134">rpg_os::detail::fillArchetypeSpec()</a>, <a class="el" href="combat_8hpp_source.html#l00158">rpg_os::detail::fillCreatureSpec()</a>, <a class="el" href="combat_8hpp_source.html#l00454">rpg_os::runFight()</a>, <a class="el" href="test__combat_8cpp_source.html#l00068">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00079">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00052">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00039">TEST_CASE()</a>, and <a class="el" href="test__combat_8cpp_source.html#l00264">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00139">rpg_os::detail::fillArchetypeSpec()</a>, <a class="el" href="combat_8hpp_source.html#l00163">rpg_os::detail::fillCreatureSpec()</a>, <a class="el" href="combat_8hpp_source.html#l00252">rpg_os::makeCombatantSpecFromEntity()</a>, <a class="el" href="combat_8hpp_source.html#l00509">rpg_os::runFight()</a>, <a class="el" href="test__combat_8cpp_source.html#l00068">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00079">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00312">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00052">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00039">TEST_CASE()</a>, and <a class="el" href="test__combat_8cpp_source.html#l00264">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -262,7 +263,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="combat_8hpp_source.html#l00062">62</a> of file <a class="el" href="combat_8hpp_source.html">combat.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00247">rpg_os::createFighter()</a>, <a class="el" href="combat_8hpp_source.html#l00134">rpg_os::detail::fillArchetypeSpec()</a>, <a class="el" href="combat_8hpp_source.html#l00158">rpg_os::detail::fillCreatureSpec()</a>, <a class="el" href="test__combat_8cpp_source.html#l00068">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00079">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00052">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00039">TEST_CASE()</a>, and <a class="el" href="test__combat_8cpp_source.html#l00158">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00291">rpg_os::createFighter()</a>, <a class="el" href="combat_8hpp_source.html#l00139">rpg_os::detail::fillArchetypeSpec()</a>, <a class="el" href="combat_8hpp_source.html#l00163">rpg_os::detail::fillCreatureSpec()</a>, <a class="el" href="combat_8hpp_source.html#l00252">rpg_os::makeCombatantSpecFromEntity()</a>, <a class="el" href="test__combat_8cpp_source.html#l00068">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00079">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00353">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00312">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00052">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00039">TEST_CASE()</a>, and <a class="el" href="test__combat_8cpp_source.html#l00158">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -280,7 +281,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="combat_8hpp_source.html#l00058">58</a> of file <a class="el" href="combat_8hpp_source.html">combat.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00247">rpg_os::createFighter()</a>, <a class="el" href="combat_8hpp_source.html#l00134">rpg_os::detail::fillArchetypeSpec()</a>, and <a class="el" href="combat_8hpp_source.html#l00158">rpg_os::detail::fillCreatureSpec()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00291">rpg_os::createFighter()</a>, <a class="el" href="combat_8hpp_source.html#l00139">rpg_os::detail::fillArchetypeSpec()</a>, <a class="el" href="combat_8hpp_source.html#l00163">rpg_os::detail::fillCreatureSpec()</a>, <a class="el" href="combat_8hpp_source.html#l00252">rpg_os::makeCombatantSpecFromEntity()</a>, <a class="el" href="test__combat_8cpp_source.html#l00353">TEST_CASE()</a>, and <a class="el" href="test__combat_8cpp_source.html#l00312">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -300,7 +301,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="combat_8hpp_source.html#l00065">65</a> of file <a class="el" href="combat_8hpp_source.html">combat.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00247">rpg_os::createFighter()</a>, <a class="el" href="combat_8hpp_source.html#l00158">rpg_os::detail::fillCreatureSpec()</a>, and <a class="el" href="test__combat_8cpp_source.html#l00264">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00291">rpg_os::createFighter()</a>, <a class="el" href="combat_8hpp_source.html#l00163">rpg_os::detail::fillCreatureSpec()</a>, <a class="el" href="combat_8hpp_source.html#l00252">rpg_os::makeCombatantSpecFromEntity()</a>, and <a class="el" href="test__combat_8cpp_source.html#l00264">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -320,7 +321,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="combat_8hpp_source.html#l00060">60</a> of file <a class="el" href="combat_8hpp_source.html">combat.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00247">rpg_os::createFighter()</a>, <a class="el" href="combat_8hpp_source.html#l00134">rpg_os::detail::fillArchetypeSpec()</a>, <a class="el" href="combat_8hpp_source.html#l00158">rpg_os::detail::fillCreatureSpec()</a>, <a class="el" href="test__combat_8cpp_source.html#l00068">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00079">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00183">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00052">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00039">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00158">TEST_CASE()</a>, and <a class="el" href="test__combat_8cpp_source.html#l00264">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00291">rpg_os::createFighter()</a>, <a class="el" href="combat_8hpp_source.html#l00139">rpg_os::detail::fillArchetypeSpec()</a>, <a class="el" href="combat_8hpp_source.html#l00163">rpg_os::detail::fillCreatureSpec()</a>, <a class="el" href="combat_8hpp_source.html#l00252">rpg_os::makeCombatantSpecFromEntity()</a>, <a class="el" href="test__combat_8cpp_source.html#l00068">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00079">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00183">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00052">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00039">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00158">TEST_CASE()</a>, and <a class="el" href="test__combat_8cpp_source.html#l00264">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -338,7 +339,26 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="combat_8hpp_source.html#l00059">59</a> of file <a class="el" href="combat_8hpp_source.html">combat.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00134">rpg_os::detail::fillArchetypeSpec()</a>, <a class="el" href="combat_8hpp_source.html#l00158">rpg_os::detail::fillCreatureSpec()</a>, and <a class="el" href="test__combat_8cpp_source.html#l00039">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00139">rpg_os::detail::fillArchetypeSpec()</a>, <a class="el" href="combat_8hpp_source.html#l00163">rpg_os::detail::fillCreatureSpec()</a>, <a class="el" href="combat_8hpp_source.html#l00252">rpg_os::makeCombatantSpecFromEntity()</a>, <a class="el" href="test__combat_8cpp_source.html#l00312">TEST_CASE()</a>, and <a class="el" href="test__combat_8cpp_source.html#l00039">TEST_CASE()</a>.</p>
+
+</div>
+</div>
+<a id="a00401c25896c7aa83722a885f98d7387" name="a00401c25896c7aa83722a885f98d7387"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00401c25896c7aa83722a885f98d7387">&#9670;&#160;</a></span>sheet</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> rpg_os::CombatantSpec::sheet</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>An optional embedded character sheet (the <code><a class="el" href="classrpg__os_1_1DynamicEntity.html">DynamicEntity</a></code> save form). When present (a JSON object), <code>createFighter</code> builds the fighter from this sheet instead of the named ruleset entry — letting ANY character (not just a named archetype or bestiary entry) take part in a fight. </p>
+
+<p class="definition">Definition at line <a class="el" href="combat_8hpp_source.html#l00072">72</a> of file <a class="el" href="combat_8hpp_source.html">combat.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00291">rpg_os::createFighter()</a>, <a class="el" href="combat_8hpp_source.html#l00252">rpg_os::makeCombatantSpecFromEntity()</a>, <a class="el" href="test__combat_8cpp_source.html#l00353">TEST_CASE()</a>, and <a class="el" href="test__combat_8cpp_source.html#l00312">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -353,12 +373,11 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
 <p>spells the combatant can cast (empty = pure melee) </p>
 
 <p class="definition">Definition at line <a class="el" href="combat_8hpp_source.html#l00067">67</a> of file <a class="el" href="combat_8hpp_source.html">combat.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00382">rpg_os::detail::actOnce()</a>, <a class="el" href="combat_8hpp_source.html#l00134">rpg_os::detail::fillArchetypeSpec()</a>, <a class="el" href="test__combat_8cpp_source.html#l00183">TEST_CASE()</a>, and <a class="el" href="test__combat_8cpp_source.html#l00196">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00437">rpg_os::detail::actOnce()</a>, <a class="el" href="combat_8hpp_source.html#l00139">rpg_os::detail::fillArchetypeSpec()</a>, <a class="el" href="combat_8hpp_source.html#l00252">rpg_os::makeCombatantSpecFromEntity()</a>, <a class="el" href="test__combat_8cpp_source.html#l00183">TEST_CASE()</a>, and <a class="el" href="test__combat_8cpp_source.html#l00196">TEST_CASE()</a>.</p>
 
 </div>
 </div>

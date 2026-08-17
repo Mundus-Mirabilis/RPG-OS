@@ -173,6 +173,23 @@ Documentation</h1>
 <div class="fragment"><div class="line">python3 codegen/rpg_os_codegen.py --ruleset rulesets/dnd5e_srd.json --out generated/</div>
 <div class="line">python3 codegen/rpg_os_codegen.py --ruleset rulesets/tde5e_core.json --out generated/</div>
 </div><!-- fragment --><h1><a class="anchor" id="autotoc_md4"></a>
+npm package &amp; live demo</h1>
+<p>The universal engine is also compiled to <b>WebAssembly</b> and published as the npm package **<code>@mundus-mirabilis/rpg-os</code>** — usable in <b>Node.js</b> and in the <b>browser</b>, with <b>any</b> ruleset JSON. The WASM binary never embeds a game's data: Node reads the JSON with <code>fs</code>, browsers fetch it, and both hand the string to the engine at runtime.</p>
+<div class="fragment"><div class="line">import { init } from &#39;@mundus-mirabilis/rpg-os&#39;;</div>
+<div class="line"> </div>
+<div class="line">const rpg = await init();                                  // loads the WASM engine</div>
+<div class="line">rpg.loadRulesetFromFile(&#39;rulesets/tde5e_core.json&#39;);       // Node: native fs</div>
+<div class="line">// browser: rpg.loadRuleset(await (await fetch(&#39;rulesets/...&#39;)).text());</div>
+<div class="line"> </div>
+<div class="line">const geron = rpg.createEntity(&#39;geron&#39;);                   // from a named archetype</div>
+<div class="line">console.log(geron.getStat(&#39;COU&#39;), geron.getResource(&#39;LP&#39;));</div>
+<div class="line"> </div>
+<div class="line">const hero = rpg.createEntityFromSheet(&#39;my_hero&#39;, { COU: 14, Attack: 12 }); // ANY character</div>
+<div class="line">const spec = rpg.specFromEntity(hero);</div>
+<div class="line">const outcome = rpg.fight(spec, rpg.specFromId(&#39;toad&#39;), { seed: 42 });      // loop for win %</div>
+</div><!-- fragment --><p>The package is built and published by CI: every push to <code>main</code> and <code>develop</code> updates a branch snapshot, and every <code>v*</code> tag publishes the release under <code>latest</code>. Consumers pick a line of development explicitly — <code>npm i @mundus-mirabilis/rpg-os</code> (release), <code>@main</code> or <code>@develop</code> (snapshots). See <code>wasm/</code> (bindings + build script) and <code>wasm/package/</code> (the package) for details, and <code>wasm/package/test/</code> for the test suite — including the seeded <b>native-vs-WASM fight parity test</b>.</p>
+<p><b>ELO Arena</b> — a live demo, deployed alongside the docs to <code>/&lt;version&gt;/demo/</code> (e.g. <a href="https://mundus-mirabilis.github.io/RPG-OS/main/demo/">https://mundus-mirabilis.github.io/RPG-OS/main/demo/</a>), shows the ELO ranking of every combatant in a ruleset (generated during CI by <code>scripts/elo_ranking.py</code>), lets you enter an arbitrary character that is ranked live in the browser via WASM, and computes head-to-head fight-win probabilities from the ELO ratings. The ELO ratings stay in Python — the page only ports the small formula to JS for the interactive, serverless parts. Source in <code>web/demo/</code>; the demo is deployed by the <code>deploy-demo</code> job of <code>.github/workflows/docs.yml</code> (chained after the docs deploy, so the two gh-pages pushes never race).</p>
+<h1><a class="anchor" id="autotoc_md5"></a>
 Using the generated (specific-mode) headers</h1>
 <p>The code generator compiles a ruleset's schema into a strongly typed header. Attributes become named members, derived stats become compiled getters, and checks become named methods — while the character data still comes from the ruleset JSON at runtime:</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="json_8hpp.html">rpg_os/common/json.hpp</a>&gt;</span></div>
@@ -194,7 +211,7 @@ Using the generated (specific-mode) headers</h1>
 <div class="ttc" id="astructrpg__os_1_1CheckResult_html"><div class="ttname"><a href="structrpg__os_1_1CheckResult.html">rpg_os::CheckResult</a></div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l00078">types.hpp:78</a></div></div>
 <div class="ttc" id="atde5e__core__static_8hpp_html"><div class="ttname"><a href="tde5e__core__static_8hpp.html">tde5e_core_static.hpp</a></div></div>
 </div><!-- fragment --><p>The same check through the universal engine produces identical results — a parity test enforces this.</p>
-<h1><a class="anchor" id="autotoc_md5"></a>
+<h1><a class="anchor" id="autotoc_md6"></a>
 Ruleset format, licence, and schema</h1>
 <p>Every ruleset is a single JSON file validated against <a href="rulesets/ruleset.schema.json"><code>rulesets/ruleset.schema.json</code></a> (JSON Schema draft-07). The top level carries the ruleset metadata, including two fields every ruleset must provide:</p>
 <div class="fragment"><div class="line">{</div>
@@ -209,7 +226,7 @@ Ruleset format, licence, and schema</h1>
 <div class="line">  &quot;data&quot;: { /* creatures, spells, conditions, poisons, diseases, ... */ }</div>
 <div class="line">}</div>
 </div><!-- fragment --><p>The loader refuses to load a ruleset without a <code>licence</code>, and the shipped validator <code>codegen/validate_ruleset.py</code> checks every ruleset against the schema (full draft-07 validation when <code>jsonschema</code> is installed, structural fallback otherwise). CI runs it on every pull request.</p>
-<h1><a class="anchor" id="autotoc_md6"></a>
+<h1><a class="anchor" id="autotoc_md7"></a>
 Ranges and variance (weakest … strongest)</h1>
 <p>Data records (creatures, archetypes, items, spells) may express a numeric value in three forms:</p>
 <ul>
@@ -224,7 +241,7 @@ Ranges and variance (weakest … strongest)</h1>
 <div class="line"><span class="keyword">auto</span> damage = 2_d6 + 2;      <span class="comment">// two D6 plus two</span></div>
 <div class="line"><span class="keyword">auto</span> heavy  = 3_d6 - 1_d4;   <span class="comment">// combined groups and subtraction</span></div>
 <div class="line"><span class="keyword">auto</span> weird  = <span class="stringliteral">&quot;1d7+1d23&quot;</span>_dice; <span class="comment">// unusual sizes (any ruleset dice string)</span></div>
-<div class="ttc" id="anamespacerpg__os_1_1dice__literals_html"><div class="ttname"><a href="namespacerpg__os_1_1dice__literals.html">rpg_os::dice_literals</a></div><div class="ttdef"><b>Definition</b> <a href="dice__engine_8hpp_source.html#l00365">dice_engine.hpp:365</a></div></div>
+<div class="ttc" id="anamespacerpg__os_1_1dice__literals_html"><div class="ttname"><a href="namespacerpg__os_1_1dice__literals.html">rpg_os::dice_literals</a></div><div class="ttdef"><b>Definition</b> <a href="dice__engine_8hpp_source.html#l00376">dice_engine.hpp:376</a></div></div>
 </div><!-- fragment --><p>The <code>_dN</code> suffixes (<code>_d2</code>, <code>_d3</code>, <code>_d4</code>, <code>_d6</code>, <code>_d8</code>, <code>_d10</code>, <code>_d12</code>, <code>_d20</code>, <code>_d30</code>, <code>_d100</code>) make the common cases readable, with <code>+</code>/<code>-</code> overloads on <code><a class="el" href="classrpg__os_1_1DiceExpression.html">rpg_os::DiceExpression</a></code> folding the result into one object; the <code>_dice</code> suffix parses any dice string — the form the generated ruleset headers use, so a check's dice are parsed once at startup rather than on every roll.</p>
 <p>When a caller picks such an entry (e.g. an animal as a fight opponent) it can request a <b>variance</b> via <code><a class="el" href="namespacerpg__os.html#ab870da3d65c79d59dad5920efc43dc65">rpg_os::Variance</a></code>:</p>
 <table class="markdownTable">
@@ -252,7 +269,7 @@ Ranges and variance (weakest … strongest)</h1>
 <div class="ttc" id="aclassrpg__os_1_1generated_1_1dnd5e_1_1Character_html_a388b3a3fa824b2672db4fc3ae89f23d7"><div class="ttname"><a href="classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#a388b3a3fa824b2672db4fc3ae89f23d7">rpg_os::generated::dnd5e::Character::fromCreature</a></div><div class="ttdeci">static Character fromCreature(const rpg_os::Json &amp;rulesetJson, std::string_view id)</div><div class="ttdef"><b>Definition</b> <a href="dnd5e__srd__static_8hpp_source.html#l00913">dnd5e_srd_static.hpp:913</a></div></div>
 <div class="ttc" id="anamespacerpg__os_html_ab870da3d65c79d59dad5920efc43dc65a983a8b4b7a68982963585846a025f565"><div class="ttname"><a href="namespacerpg__os.html#ab870da3d65c79d59dad5920efc43dc65a983a8b4b7a68982963585846a025f565">rpg_os::Variance::Weakest</a></div><div class="ttdeci">@ Weakest</div><div class="ttdoc">the minimum</div></div>
 </div><!-- fragment --><p><code>Variance::Weak</code> / <code>Average</code> / <code>Strong</code> draw from the lower / middle / upper third of the range at random; <code>Random</code> draws uniformly over the full range. The shared helper <code><a class="el" href="namespacerpg__os.html#aec9d689bf0943cb314269cc0e629ddb1">rpg_os::readVariantValue</a></code> (<code><a class="el" href="variance_8hpp.html" title="Variance / range selection for stat values.">include/rpg_os/core/variance.hpp</a></code>) backs both the universal engine and the generated code.</p>
-<h1><a class="anchor" id="autotoc_md7"></a>
+<h1><a class="anchor" id="autotoc_md8"></a>
 Project layout</h1>
 <div class="fragment"><div class="line">.</div>
 <div class="line">├── .github/workflows/ci.yml    # CI: GCC + Clang on Ubuntu/macOS + codegen sync check</div>
@@ -273,7 +290,7 @@ Project layout</h1>
 <div class="line">├── generated/                 # committed codegen outputs</div>
 <div class="line">├── tests/                     # doctest suite</div>
 <div class="line">└── examples/                  # demo programs</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md8"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md9"></a>
 Combat simulation &amp; Monte Carlo ELO ranking</h1>
 <p><code><a class="el" href="combat_8hpp.html" title="Combat simulation helpers (universal mode).">include/rpg_os/universal/combat.hpp</a></code> runs a fight between two archetypes or bestiary entries "to the end" (attack-vs-defence check, event-driven damage pipeline with armour absorption), creating fresh entities per fight so ranged values are re-rolled every time. It is demonstrated by the <code>fight</code> example:</p>
 <div class="fragment"><div class="line">cmake --build build --target rpg_os_example_fight</div>

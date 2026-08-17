@@ -8,6 +8,7 @@ var combat_8hpp =
     [ "fillArchetypeSpec", "combat_8hpp.html#acb7bf701ba934351c9660d2a444d72ef", null ],
     [ "fillCreatureSpec", "combat_8hpp.html#a3e17da87db10853035e9c8f2125daca7", null ],
     [ "makeCombatantSpec", "combat_8hpp.html#adacf6091542317212a714e913c4badb1", null ],
+    [ "makeCombatantSpecFromEntity", "combat_8hpp.html#a2d74551d4f6909799240c1ea7b674856", null ],
     [ "pickSpell", "combat_8hpp.html#a5c08ab552cdf7a80a7847daf84ac11d9", null ],
     [ "resolveAttackCheckType", "combat_8hpp.html#a14ace88217b0f637fa8c11d7ae5bfe23", null ],
     [ "resolveHitPointPool", "combat_8hpp.html#af34d585416afebd7167fec0777cf8390", null ],

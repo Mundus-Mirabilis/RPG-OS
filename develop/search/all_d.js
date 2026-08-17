@@ -11,7 +11,8 @@ var searchData=
   ['nospellslot_8',['NoSpellSlot',['../namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766a7cde3b18e13aa9cb5addf7e0ff1f9f0d',1,'rpg_os']]],
   ['notenoughmoney_9',['NotEnoughMoney',['../namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766a261cca2ac483068d987c38cfa8fd6094',1,'rpg_os']]],
   ['notequipped_10',['NotEquipped',['../namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766ae4f167d7fb73c6592711f327d3d7f8f6',1,'rpg_os']]],
-  ['ns_11',['ns',['../classrpg__os_1_1Ruleset.html#a7dbdecd3f981fae0a7b1d936ab3a155a',1,'rpg_os::Ruleset']]],
-  ['nullstatprovider_12',['NullStatProvider',['../structrpg__os_1_1NullStatProvider.html',1,'rpg_os']]],
-  ['numpoolattributes_13',['numPoolAttributes',['../structrpg__os_1_1CheckRecipe.html#a68a1055fb6c0915d1602e0d42002d353',1,'rpg_os::CheckRecipe']]]
+  ['npm_20package_20live_20demo_11',['npm package &amp; live demo',['../index.html#autotoc_md4',1,'']]],
+  ['ns_12',['ns',['../classrpg__os_1_1Ruleset.html#a7dbdecd3f981fae0a7b1d936ab3a155a',1,'rpg_os::Ruleset']]],
+  ['nullstatprovider_13',['NullStatProvider',['../structrpg__os_1_1NullStatProvider.html',1,'rpg_os']]],
+  ['numpoolattributes_14',['numPoolAttributes',['../structrpg__os_1_1CheckRecipe.html#a68a1055fb6c0915d1602e0d42002d353',1,'rpg_os::CheckRecipe']]]
 ];

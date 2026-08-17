@@ -12,7 +12,7 @@ var searchData=
   ['hasrestriction_9',['hasRestriction',['../classrpg__os_1_1DynamicEntity.html#aa6e9b5308706608d9a2bc964558ddd75',1,'rpg_os::DynamicEntity']]],
   ['hasstat_10',['hasStat',['../classrpg__os_1_1Ruleset.html#a9f26155d3756c67feb9fb7b47e97efbd',1,'rpg_os::Ruleset']]],
   ['hastrait_11',['hasTrait',['../classrpg__os_1_1DynamicEntity.html#ab8804c8d5a357748513535bf6528f737',1,'rpg_os::DynamicEntity']]],
-  ['headers_12',['Using the generated (specific-mode) headers',['../index.html#autotoc_md4',1,'']]],
+  ['headers_12',['Using the generated (specific-mode) headers',['../index.html#autotoc_md5',1,'']]],
   ['healingdone_13',['healingDone',['../structrpg__os_1_1RulesetEngine_1_1EffectsResult.html#a0cd62c6d0c014c293890a1718ef7e717',1,'rpg_os::RulesetEngine::EffectsResult']]],
   ['heavymachine_14',['heavyMachine',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#ada11e130f333292877d9d9c6be3f3ff2',1,'rpg_os::generated::brp_ugc::Character']]],
   ['heavyweapon_15',['heavyWeapon',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a4d20633c5d79b08521b9daa1132ee020',1,'rpg_os::generated::brp_ugc::Character']]],

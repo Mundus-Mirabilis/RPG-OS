@@ -2,7 +2,9 @@ var test__combat_8cpp =
 [
     [ "TEST_CASE", "test__combat_8cpp.html#a08b3b3683c19d94c3fb0b1805bc44ac0", null ],
     [ "TEST_CASE", "test__combat_8cpp.html#ad929a60ddcd2a7ccd893e68bd91c74e1", null ],
+    [ "TEST_CASE", "test__combat_8cpp.html#a158d0b0eaa0701b160fe32ea49c6c3bf", null ],
     [ "TEST_CASE", "test__combat_8cpp.html#a4ea4d8be9626b9911d69a2a6e85a5b50", null ],
+    [ "TEST_CASE", "test__combat_8cpp.html#a35140d6cef2315286a5b0363fc51d22b", null ],
     [ "TEST_CASE", "test__combat_8cpp.html#ac0755e6a7379f062f99c42d7ecc39086", null ],
     [ "TEST_CASE", "test__combat_8cpp.html#a30aacd696176d4ff598861ed5e7d6a74", null ],
     [ "TEST_CASE", "test__combat_8cpp.html#a7d5a76b144c7938d30f5ac3ae2ed85cc", null ],

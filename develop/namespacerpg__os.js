@@ -201,6 +201,7 @@ var namespacerpg__os =
     [ "createFighter", "namespacerpg__os.html#a2ffff45a6b10310d015dd0c1d6017bc5", null ],
     [ "diceBounds", "namespacerpg__os.html#ae2d848f9064bfb4ac2a8bf655a01e135", null ],
     [ "makeCombatantSpec", "namespacerpg__os.html#adacf6091542317212a714e913c4badb1", null ],
+    [ "makeCombatantSpecFromEntity", "namespacerpg__os.html#a2d74551d4f6909799240c1ea7b674856", null ],
     [ "nextEntityId", "namespacerpg__os.html#a2dcb05ea6914e1c082e0c320ec390679", null ],
     [ "operator+", "namespacerpg__os.html#a2c9ba73f667596b8ab089577bfed0ec6", null ],
     [ "operator-", "namespacerpg__os.html#af141eb3e6be2d938ce2b9bac02b4f3a5", null ],
