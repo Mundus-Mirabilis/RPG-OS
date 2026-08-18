@@ -38,6 +38,8 @@ var hierarchy =
     [ "rpg_os::Equipment", "classrpg__os_1_1Equipment.html", null ],
     [ "rpg_os::RulesetEngine::EquipResult", "structrpg__os_1_1RulesetEngine_1_1EquipResult.html", null ],
     [ "rpg_os::EvalContext", "classrpg__os_1_1EvalContext.html", [
+      [ "MapEvalContext", "structMapEvalContext.html", null ],
+      [ "MapEvalContext", "structMapEvalContext.html", null ],
       [ "rpg_os::EntityContext", "classrpg__os_1_1EntityContext.html", null ]
     ] ],
     [ "rpg_os::EventActionDef", "structrpg__os_1_1EventActionDef.html", null ],

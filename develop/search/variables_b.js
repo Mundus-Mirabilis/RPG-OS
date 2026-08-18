@@ -7,9 +7,11 @@ var searchData=
   ['leveled_4',['leveled',['../structrpg__os_1_1LevelUp.html#aca26677c0ef52a2f3201b6e0feb8176b',1,'rpg_os::LevelUp']]],
   ['levels_5',['levels',['../structrpg__os_1_1EncumbranceConfig.html#a442dd6483c0ce76ab28bf050a6556d4b',1,'rpg_os::EncumbranceConfig']]],
   ['licence_6',['licence',['../classrpg__os_1_1Ruleset.html#a4ce985e69e7f8e09d68b6f1c1d556412',1,'rpg_os::Ruleset']]],
-  ['lifepoints_7',['lifePoints',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a0a7cbefc410619b13e6b3f38d8d43dc6',1,'rpg_os::generated::tde5e::Character']]],
-  ['listen_8',['listen',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#aba07c0a2214965058fa64a10e5bea6f8',1,'rpg_os::generated::brp_ugc::Character']]],
-  ['literacy_9',['literacy',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a542e100e7d0d95d849ea3ee905acace9',1,'rpg_os::generated::brp_ugc::Character']]],
-  ['logdescription_10',['logDescription',['../structrpg__os_1_1CheckResult.html#a831ae9f7244cdba1785d2034fbd7be8b',1,'rpg_os::CheckResult']]],
-  ['luck_11',['luck',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a443deaea0c1ad3483038658bf10824ab',1,'rpg_os::generated::brp_ugc::Character']]]
+  ['licencenotice_7',['licenceNotice',['../classrpg__os_1_1Ruleset.html#a79e88489b802c17604813b6166d1a01b',1,'rpg_os::Ruleset']]],
+  ['licencesource_8',['licenceSource',['../classrpg__os_1_1Ruleset.html#a34a9660a05e9dfd3f8db417909588433',1,'rpg_os::Ruleset']]],
+  ['lifepoints_9',['lifePoints',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a0a7cbefc410619b13e6b3f38d8d43dc6',1,'rpg_os::generated::tde5e::Character']]],
+  ['listen_10',['listen',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#aba07c0a2214965058fa64a10e5bea6f8',1,'rpg_os::generated::brp_ugc::Character']]],
+  ['literacy_11',['literacy',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a542e100e7d0d95d849ea3ee905acace9',1,'rpg_os::generated::brp_ugc::Character']]],
+  ['logdescription_12',['logDescription',['../structrpg__os_1_1CheckResult.html#a831ae9f7244cdba1785d2034fbd7be8b',1,'rpg_os::CheckResult']]],
+  ['luck_13',['luck',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a443deaea0c1ad3483038658bf10824ab',1,'rpg_os::generated::brp_ugc::Character']]]
 ];

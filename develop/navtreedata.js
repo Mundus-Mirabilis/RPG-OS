@@ -61,6 +61,7 @@ var NAVTREE =
       [ "File Members", "globals.html", [
         [ "All", "globals.html", "globals_dup" ],
         [ "Functions", "globals_func.html", "globals_func" ],
+        [ "Variables", "globals_vars.html", null ],
         [ "Macros", "globals_defs.html", null ]
       ] ]
     ] ]
@@ -72,16 +73,16 @@ var NAVTREEINDEX =
 "advancement_8hpp.html",
 "classrpg__os_1_1DynamicEntity.html#adb312c30565ee046d574f39f8776f9f8",
 "classrpg__os_1_1GameSession.html#ae7e904d02c7b8b6fbb12704bddbee7d6",
-"classrpg__os_1_1RulesetEngine.html#aa5201e73f7bd369623248eaabfbc887e",
-"classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a50207badc7a0988506ce6a7bf4139b33",
-"classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#a07497ce3f8416b3164dfb82c1b6df627",
-"classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a24b63fd945018c326d897ee823f578fe",
-"classrpg__os_1_1generated_1_1tde5e_1_1Character.html#add35477f17acb9a96811e4afde3f548a",
-"game__session_8hpp_source.html",
-"structrpg__os_1_1ActionBudget.html",
-"structrpg__os_1_1EncumbranceConfig_1_1Level.html#a93f90ee6c29b06bf47e73b748d55ad5e",
-"test__bookkeeping_8cpp.html#a699b0a2282442830afa96cdff127a4aa",
-"test__ruleset__loader_8cpp.html#a0990bc4cc846f508df4817d5fd559d7d"
+"classrpg__os_1_1RulesetEngine.html#a9cd8f8ae806dca92569139f6465ecbd5",
+"classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a4ac7eec8adfd00986d31397c462c5ccd",
+"classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#affe68bf3e0268a8c96fcc1871b68c10f",
+"classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a232810f3be875ea10deb69adb631d2b4",
+"classrpg__os_1_1generated_1_1tde5e_1_1Character.html#ad9d4e5b597c8c55485458e5fcce9dbe9",
+"functions_vars_v.html",
+"specific__mode_2main_8cpp.html",
+"structrpg__os_1_1EncumbranceConfig.html",
+"test__bookkeeping_8cpp.html#a2ab3999e23f6687b5dcd10fa3d28cf69",
+"test__math_8cpp.html#adb6383b689560925d75162b7f5537fd5"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

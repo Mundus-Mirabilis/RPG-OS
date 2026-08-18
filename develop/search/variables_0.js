@@ -26,5 +26,6 @@ var searchData=
   ['attackstat_23',['attackStat',['../structrpg__os_1_1CheckRecipe.html#a5f15be8199f9bfc6ffae167409805bc2',1,'rpg_os::CheckRecipe']]],
   ['attackvalue_24',['attackValue',['../structrpg__os_1_1CombatantSpec.html#ad03596128293f53c4305d793cf0ca36b',1,'rpg_os::CombatantSpec']]],
   ['attributes_25',['attributes',['../structrpg__os_1_1SkillDef.html#a525cb335c9dee0d63b101bc65a489e8a',1,'rpg_os::SkillDef::attributes'],['../classrpg__os_1_1Ruleset.html#abbb6a9f154f5aace74e3d9a351ccc38e',1,'rpg_os::Ruleset::attributes']]],
-  ['autofail_26',['autoFail',['../structrpg__os_1_1CheckParams.html#a5a27bdb3888cf673271f6f9ba81e47d8',1,'rpg_os::CheckParams']]]
+  ['attribution_26',['attribution',['../classrpg__os_1_1Ruleset.html#a37c17d70392d84278fba809c25b2c20d',1,'rpg_os::Ruleset']]],
+  ['autofail_27',['autoFail',['../structrpg__os_1_1CheckParams.html#a5a27bdb3888cf673271f6f9ba81e47d8',1,'rpg_os::CheckParams']]]
 ];

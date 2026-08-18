@@ -73,6 +73,7 @@ var annotated_dup =
     [ "std", "namespacestd.html", [
       [ "hash< rpg_os::EntityId >", "structstd_1_1hash_3_01rpg__os_1_1EntityId_01_4.html", "structstd_1_1hash_3_01rpg__os_1_1EntityId_01_4" ]
     ] ],
+    [ "MapEvalContext", "structMapEvalContext.html", "structMapEvalContext" ],
     [ "MockStats", "structMockStats.html", "structMockStats" ],
     [ "ScriptedRng", "structScriptedRng.html", "structScriptedRng" ]
 ];
