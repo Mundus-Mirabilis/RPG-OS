@@ -17,7 +17,10 @@ via `needs`, so the two gh-pages pushes can never race).
    convention that keeps a default/average character at the standard strength.
    Tick exactly one row (or generate a character below) and the **Win %**
    column shows every combatant's win chance *relative to* that one — so it
-   shows exactly 50% for the reference itself.
+   shows exactly 50% for the reference itself. The **Win %** is an ELO
+   *estimate* of relative strength — combat in these systems is matchup-
+   specific (a lower-rated combatant can win a particular duel), so the Head
+   to head panel measures real fights for the ground-truth number.
 2. **Character entry form** — attributes and skills generated from the loaded
    ruleset's schema. The entered character is ranked **live in the browser**:
    the WASM engine fights it **Swiss-style against the leaderboard combatants
@@ -25,12 +28,22 @@ via `needs`, so the two gh-pages pushes can never race).
    rating converge quickly — starting from the ELO standard strength **1000**.
    A default/average character therefore lands at the standard strength. The
    JS ELO formula (`elo.js`, a port of the Python formula) updates the rating.
-3. **Head to head** — tick two rows; the ELO win probability is shown, with an
-   optional live 100-fight Monte-Carlo confirmation running in the WASM engine.
-   The live result appears in the same layout as the prediction (names,
-   W/D/L record, percentages) and can be **re-run** any number of times — each
-   run draws fresh dice, so you can watch the estimate vary around the ELO
-   prediction.
+3. **Head to head** — tick two rows; an **ELO estimate** of the win probability
+   is shown (from the ratings — an estimate, because individual matchups can
+   be matchup-specific), with a live 100-fight Monte-Carlo measurement running
+   in the WASM engine. The live result appears in the same layout as the
+   estimate (names, W/D/L record, percentages) and can be **re-run** any
+   number of times — each run draws fresh dice, so you can watch the measured
+   result vary around the estimate. A **"Run 1 fight — show details"** button
+   replays a single fight dice by dice: every round's initiative roll, each
+   combatant's attack/cast with its individual dice (attack + parry, the
+   casting check, the damage dice), the hit-point changes they caused, and a
+   summary of who won and in how many rounds. Spell casts show the casting
+   check and the actual damage dealt (a failed check fizzles — the round is
+   spent with no effect, exactly as the engine resolves it). Each single fight
+   also draws fresh dice, so re-running it shows a different possible fight.
+   Long draw fights are truncated in the middle (first and last rounds) to
+   stay readable.
 
 The currently loaded ruleset's **own licence** is shown in a dedicated box at
 the bottom of the page (read from `rpg.meta()` at runtime, so it always matches

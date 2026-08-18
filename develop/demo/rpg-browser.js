@@ -218,6 +218,20 @@ export class RpgOs {
       (options.useMagic ?? true) ? 1 : 0);
   }
 
+  /**
+   * Runs one fight and returns the outcome plus its full transcript — the
+   * individual dice rolls and stat changes of every round (same options and
+   * seed semantics as {@link fight}; the result additionally carries
+   * `hp_pool` and a `log` object).
+   */
+  fightDetail(specA, specB, options = {}) {
+    if (!specA?._ptr || !specB?._ptr) throw new Error('fightDetail needs two combatant specs');
+    return jsonResult(
+      this._m, this._m._rpg_os_fight_detail, this._ptr, specA._ptr, specB._ptr,
+      options.maxRounds ?? 1000, (options.seed ?? 0) >>> 0,
+      (options.useMagic ?? true) ? 1 : 0);
+  }
+
   dispose() {
     for (const h of this._entities) this._m._rpg_os_entity_free(h);
     for (const h of this._specs) this._m._rpg_os_spec_free(h);

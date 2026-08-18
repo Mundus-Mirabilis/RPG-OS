@@ -40,6 +40,7 @@ let leaderboard = []; // [{rank,id,name,rating,games,wins,losses,draws,win_pct}]
 let you = null; // { name, rating, spec } for the ranked character (spec kept alive)
 let selection = []; // ids of the selected rows (max 2)
 let duelLive = null; // { winsA, winsB, draws } of the last live run for the current pair
+let fightDetail = null; // transcript of the last single detailed fight for the current pair
 let formDebounce = 0;
 let leaderboardMeta = ''; // metadata line shown under the leaderboard table
 let leaderboardInitial = 1000; // ELO standard strength; the leaderboard's own anchor when known
@@ -289,12 +290,15 @@ function renderLeaderboard() {
     leaderboardBody.append(tr);
   });
 
-  leaderboardNote.textContent = leaderboardMeta +
-    (reference ? ` · Win % shown relative to ${reference.name}` : '');
+  const winNote = reference
+    ? `Win % is an ELO estimate of relative strength (vs ${reference.name})`
+    : "Win % is each combatant's actual win rate in the ranking tournament";
+  leaderboardNote.textContent = `${leaderboardMeta} · ${winNote}`;
 }
 
 function toggleSelection(id) {
   duelLive = null; // a different pair means the stored live result is stale
+  fightDetail = null;
   const idx = selection.indexOf(id);
   if (idx >= 0) {
     selection.splice(idx, 1);
@@ -312,7 +316,7 @@ async function specForEntry(entry) {
 }
 
 /** Builds a `.duel` grid: two `.side`s (name, meta line, big probability) and
- *  a `.bar` that fills `leftPct`. Shared by the ELO prediction and the live
+ *  a `.bar` that fills `leftPct`. Shared by the ELO estimate and the live
  *  Monte-Carlo result so the two are presented identically. */
 function duelGrid(left, right, leftPct, { leftMeta, rightMeta } = {}) {
   const side = (entry, prob, cls, meta) => {
@@ -355,6 +359,7 @@ function renderDuel() {
   if (selection.length !== 2) {
     el.innerHTML = '';
     duelLive = null;
+    fightDetail = null;
     $('#duel-hint').textContent =
       selection.length === 1 ? 'Pick one more row to compare.' : 'Select two rows in the ranking to see the ELO win probability.';
     return;
@@ -375,11 +380,18 @@ function renderDuel() {
     return l;
   };
 
-  // What the ELO ratings predict.
+  // What the ELO ratings suggest — an estimate: individual matchups can differ
+  // from it, so the live fights below are the measured result.
   const pa = winProbability(a.rating, b.rating);
   const predict = document.createElement('div');
-  predict.append(label('ELO prediction'));
+  predict.append(label('ELO estimate'));
   predict.append(duelGrid(a, b, pa));
+  const estimateNote = document.createElement('p');
+  estimateNote.className = 'muted';
+  estimateNote.textContent =
+    'Estimate from the ELO ratings — individual matchups can differ from it. ' +
+    'Run the live fights below for the measured result.';
+  predict.append(estimateNote);
 
   // The live WASM confirmation; stays around so it can be re-run.
   const actions = document.createElement('div');
@@ -388,6 +400,14 @@ function renderDuel() {
   button.textContent = duelLive ? 'Re-run 100 live fights' : 'Confirm with 100 live fights';
   button.addEventListener('click', () => runMonteCarlo(a, b, button));
   actions.append(button);
+
+  // A single fight, replayed dice by dice: what happened each round and which
+  // hit decided the winner.
+  const detailButton = document.createElement('button');
+  detailButton.className = 'ghost';
+  detailButton.textContent = 'Run 1 fight — show details';
+  detailButton.addEventListener('click', () => runSingleFight(a, b, detailButton));
+  actions.append(detailButton);
 
   el.append(predict, actions);
 
@@ -403,6 +423,11 @@ function renderDuel() {
     }));
     el.append(live);
   }
+
+  // The transcript of the last single detailed fight, if one was run.
+  if (fightDetail) {
+    el.append(renderFightDetail(a, b));
+  }
 }
 
 async function runMonteCarlo(a, b, button) {
@@ -416,7 +441,7 @@ async function runMonteCarlo(a, b, button) {
     const specA = await specForEntry(a);
     const specB = await specForEntry(b);
     // Each run is a fresh Monte-Carlo sample, so re-running shows how the
-    // estimate varies around the ELO prediction (fights within a run stay
+    // measured result varies around the ELO estimate (fights within a run stay
     // distinct via the index, mirroring scripts/elo_ranking.py).
     const runSeed = Math.floor(Math.random() * 0x100000000) >>> 0;
     for (let i = 0; i < 100; i += 1) {
@@ -437,6 +462,180 @@ async function runMonteCarlo(a, b, button) {
   }
   duelLive = { winsA, winsB, draws };
   renderDuel();
+}
+
+/** Runs a single fight between the two combatants and stores its transcript
+ *  for rendering. Each run draws fresh dice, so the replay varies like the
+ *  live Monte-Carlo result does. */
+async function runSingleFight(a, b, button) {
+  button.disabled = true;
+  const originalLabel = button.textContent;
+  button.textContent = 'Simulating…';
+  try {
+    const specA = await specForEntry(a);
+    const specB = await specForEntry(b);
+    const seed = Math.floor(Math.random() * 0x100000000) >>> 0;
+    fightDetail = rpg.fightDetail(specA, specB, { seed, maxRounds: 1000 });
+    if (!a.isYou) specA.dispose();
+    if (!b.isYou) specB.dispose();
+  } catch (err) {
+    setStatus(`Fight detail failed: ${err.message}`, true);
+    console.error(err);
+    button.disabled = false;
+    button.textContent = originalLabel;
+    return;
+  }
+  renderDuel();
+}
+
+// ---------------------------------------------------------------------------
+// single-fight transcript rendering
+// ---------------------------------------------------------------------------
+
+/** A monospaced `.dice` badge showing one dice result (e.g. "6 6"). */
+function diceBadge(text) {
+  const span = document.createElement('span');
+  span.className = 'dice';
+  span.textContent = text;
+  return span;
+}
+
+/** " · target H → H' pool" — the hit-point change one action caused. */
+function hpChange(target, before, after, pool) {
+  const span = document.createElement('span');
+  span.className = 'fight-hp';
+  span.textContent = before === after
+    ? ` · ${target} at ${after} ${pool}`
+    : ` · ${target} ${before} → ${after} ${pool}`;
+  return span;
+}
+
+/** One action line of a round's transcript (an attack or a spell cast). */
+function renderFightAction(action, aName, bName, hpPool) {
+  const actor = action.actor === 0 ? aName : bName;
+  const target = action.target === 0 ? aName : bName;
+  const row = document.createElement('div');
+  row.className = 'fight-action';
+
+  const actorEl = document.createElement('b');
+  actorEl.textContent = actor;
+  row.append(actorEl);
+
+  if (action.kind === 'cast') {
+    row.append(' casts ');
+    const spellEl = document.createElement('b');
+    spellEl.textContent = action.spell;
+    row.append(spellEl);
+    row.append(' — check ');
+    row.append(diceBadge(action.check_dice.join(' ')));
+    row.append(action.is_hit ? ' → success' : ' → failed');
+    if (action.is_hit && action.damage > 0) {
+      row.append(' · deals ');
+      const dmgEl = document.createElement('b');
+      dmgEl.textContent = `${action.damage} damage`;
+      row.append(dmgEl);
+      if (action.cost > 0) {
+        row.append(` (cost ${action.cost} ${action.resource})`);
+      }
+    }
+    row.append(hpChange(target, action.hp_before, action.target_hp, hpPool));
+  } else {
+    row.append(' attacks ');
+    const targetEl = document.createElement('b');
+    targetEl.textContent = target;
+    row.append(targetEl);
+    row.append(' — d20 ');
+    row.append(diceBadge(action.check_dice.join(' ')));
+    if (!action.is_hit) {
+      row.append(' → miss');
+      row.append(hpChange(target, action.hp_before, action.target_hp, hpPool));
+    } else {
+      row.append(' → hit · damage ');
+      // Some bestiary attacks have a flat (0-damage) expression — no dice.
+      if (action.damage_dice.length > 0) {
+        row.append(diceBadge(action.damage_dice.join(' ')));
+        row.append(' ');
+      }
+      const dmgEl = document.createElement('b');
+      dmgEl.textContent = `= ${action.damage}`;
+      row.append(dmgEl);
+      row.append(hpChange(target, action.hp_before, action.target_hp, hpPool));
+    }
+  }
+  return row;
+}
+
+/** One round of a fight's transcript: the initiative roll and its actions. */
+function renderFightRound(round, aName, bName, hpPool) {
+  const wrap = document.createElement('div');
+  wrap.className = 'fight-round';
+
+  const head = document.createElement('div');
+  head.className = 'fight-round-head';
+  const firstName = round.goes_first === 0 ? aName : bName;
+  head.append(`Round ${round.round} — initiative `);
+  head.append(diceBadge(`${aName} d6 ${round.init_roll[0]} → ${round.init_total[0]}`));
+  head.append(document.createTextNode(' · '));
+  head.append(diceBadge(`${bName} d6 ${round.init_roll[1]} → ${round.init_total[1]}`));
+  head.append(` — ${firstName} acts first`);
+  wrap.append(head);
+
+  for (const action of round.actions) {
+    wrap.append(renderFightAction(action, aName, bName, hpPool));
+  }
+  return wrap;
+}
+
+/** The transcript of the last single fight, from the opening roll to the
+ *  winner. Extremely long (draw) fights are truncated in the middle so the
+ *  beginning and the end stay readable. */
+function renderFightDetail(a, b) {
+  const detail = fightDetail;
+  const block = document.createElement('div');
+  block.className = 'fight-detail';
+
+  const labelEl = document.createElement('div');
+  labelEl.className = 'duel-label';
+  labelEl.textContent = 'Fight details';
+  block.append(labelEl);
+
+  const hpPool = detail.hp_pool;
+  const aName = a.name;
+  const bName = b.name;
+  const winnerName = detail.winner_index === 0 ? aName : detail.winner_index === 1 ? bName : null;
+
+  const summary = document.createElement('div');
+  summary.className = 'fight-summary';
+  const outcome = document.createElement('b');
+  outcome.className = winnerName ? 'fight-winner' : 'fight-draw';
+  outcome.textContent = winnerName
+    ? `${winnerName} wins in ${detail.rounds} round${detail.rounds === 1 ? '' : 's'}`
+    : `Draw after ${detail.rounds} rounds`;
+  summary.append(outcome);
+  summary.append(document.createTextNode(
+    ` · ${aName} ${detail.max_lp[0]} → ${detail.remaining_lp[0]} ${hpPool} · ` +
+    `${bName} ${detail.max_lp[1]} → ${detail.remaining_lp[1]} ${hpPool}`));
+  block.append(summary);
+
+  const roundsEl = document.createElement('div');
+  roundsEl.className = 'fight-rounds';
+  const all = detail.log.rounds;
+  const cap = 60; // keep an extreme (draw) fight readable
+  const shown = all.length > 2 * cap
+    ? [...all.slice(0, cap), null, ...all.slice(all.length - cap)]
+    : all;
+  for (const round of shown) {
+    if (round === null) {
+      const gap = document.createElement('div');
+      gap.className = 'fight-gap';
+      gap.textContent = `… ${all.length - 2 * cap} rounds omitted …`;
+      roundsEl.append(gap);
+      continue;
+    }
+    roundsEl.append(renderFightRound(round, aName, bName, hpPool));
+  }
+  block.append(roundsEl);
+  return block;
 }
 
 // ---------------------------------------------------------------------------
