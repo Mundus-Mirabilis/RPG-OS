@@ -42,6 +42,56 @@ function setStatus(text, isError = false) {
   status.classList.toggle('error', isError);
 }
 
+/**
+ * Shows the loaded ruleset's OWN licence (the rules are NOT Apache-2.0 — each
+ * ruleset carries its own licence in the JSON), plus the source document, an
+ * optional link to where the rights holder states the licence, and the
+ * verbatim notice/attribution text the licence requires (e.g. the ORC Notice).
+ */
+function renderLicence() {
+  const el = $('#ruleset-licence');
+  el.innerHTML = '';
+  if (!meta?.licence) {
+    el.hidden = true;
+    return;
+  }
+  const line = document.createElement('p');
+  const label = document.createElement('span');
+  label.textContent = 'Ruleset licence: ';
+  const lic = document.createElement('b');
+  lic.textContent = meta.licence;
+  line.append(label, lic);
+  if (meta.licence_source) {
+    line.append(document.createTextNode(' · '));
+    const link = document.createElement('a');
+    link.href = meta.licence_source;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.textContent = 'licence source';
+    line.append(link);
+  }
+  if (meta.source) {
+    line.append(document.createTextNode(' · '));
+    const src = document.createElement('span');
+    src.className = 'muted';
+    src.textContent = meta.source;
+    line.append(src);
+  }
+  el.append(line);
+
+  // The licence's own required notice and attribution (e.g. the ORC Notice).
+  for (const [key, cls] of [['licence_notice', 'licence-detail'],
+                            ['attribution', 'licence-detail']]) {
+    if (meta[key]) {
+      const p = document.createElement('p');
+      p.className = cls;
+      p.textContent = meta[key];
+      el.append(p);
+    }
+  }
+  el.hidden = false;
+}
+
 // ---------------------------------------------------------------------------
 // init / ruleset loading
 // ---------------------------------------------------------------------------
@@ -70,6 +120,7 @@ async function loadRuleset(id) {
   setStatus(`Loading ${cfg.label}…`);
   clearForm();
   selection = [];
+  $('#ruleset-licence').hidden = true;
   you?.spec?.dispose();
   you = null;
   renderDuel();
@@ -78,6 +129,7 @@ async function loadRuleset(id) {
     const rulesetJson = await (await fetch(`rulesets/${cfg.file}`)).text();
     rpg.loadRuleset(rulesetJson);
     meta = rpg.meta();
+    renderLicence();
     const entries = rpg.entries();
     entriesByName = new Map(entries.map((e) => [e.id, e.name]));
     buildForm(meta);

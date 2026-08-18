@@ -19,6 +19,13 @@ via `needs`, so the two gh-pages pushes can never race).
 3. **Head to head** — tick two rows; the ELO win probability is shown, with an
    optional live 100-fight Monte-Carlo confirmation running in the WASM engine.
 
+The page header shows the currently loaded ruleset's **own licence** and a link
+to where it is stated, plus the verbatim notice/attribution text the licence
+requires (e.g. the ORC Notice), read from `rpg.meta()` at runtime (so it always
+matches the JSON actually loaded). The ruleset data is **not** Apache-2.0 — the
+Apache-2.0 licence covers only the engine/demo code. See the root `README.md`
+for the per-ruleset licence table.
+
 ## Layout
 
 | Path | Origin |

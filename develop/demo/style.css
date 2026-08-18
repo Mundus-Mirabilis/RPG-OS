@@ -131,6 +131,33 @@ a:hover {
   color: var(--bad);
 }
 
+/* The loaded ruleset's own licence + source (the rules are not Apache-2.0). */
+.licence {
+  margin: 10px 0 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.licence p {
+  margin: 0 0 4px;
+}
+
+.licence p:last-child {
+  margin-bottom: 0;
+}
+
+/* Verbatim notice/attribution text the licence requires (e.g. the ORC Notice). */
+.licence-detail {
+  font-size: 0.8rem;
+}
+
+.licence a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 main {
   max-width: 1180px;
   margin: 0 auto;
