@@ -13,7 +13,7 @@
  * leaderboards into ./data/ (all three folders are gitignored here).
  */
 import { init } from './rpg-browser.js';
-import { expectedScore, winProbability, rankNewcomer } from './elo.js';
+import { winProbability, rankNewcomer } from './elo.js';
 
 const RULESETS = {
   tde5e_core: { label: 'The Dark Eye 5e', file: 'tde5e_core.json' },
@@ -21,8 +21,12 @@ const RULESETS = {
 };
 
 const COMBAT_STATS = ['Attack', 'Parry', 'Armor_Rating', 'AC', 'Initiative'];
-const RANK_OPPONENTS = 16; // the newcomer fights the top-N entries
-const GAMES_PER_OPPONENT = 20;
+// The newcomer is ranked Swiss-style against the leaderboard entries closest
+// to its current rating (see rankNewcomer in elo.js). A focus on similar
+// ratings plus more fights per opponent makes the estimate converge faster.
+const RANK_ROUNDS = 8; // how many similar-rating rounds it plays
+const RANK_OPPONENTS_PER_ROUND = 2; // opponents picked per round (closest rating)
+const GAMES_PER_OPPONENT = 30; // fights per opponent
 
 const $ = (sel) => document.querySelector(sel);
 const status = $('#status');
@@ -35,8 +39,10 @@ let entriesByName = new Map(); // id -> display name (from the ruleset)
 let leaderboard = []; // [{rank,id,name,rating,games,wins,losses,draws,win_pct}]
 let you = null; // { name, rating, spec } for the ranked character (spec kept alive)
 let selection = []; // ids of the selected rows (max 2)
+let duelLive = null; // { winsA, winsB, draws } of the last live run for the current pair
 let formDebounce = 0;
 let leaderboardMeta = ''; // metadata line shown under the leaderboard table
+let leaderboardInitial = 1000; // ELO standard strength; the leaderboard's own anchor when known
 
 function setStatus(text, isError = false) {
   status.textContent = text;
@@ -185,14 +191,16 @@ async function loadLeaderboard(rulesetId) {
       'Run it locally and place the JSON in data/ to preview.';
     leaderboard = [];
     leaderboardMeta = '';
+    leaderboardInitial = 1000; // no leaderboard, so fall back to the ELO standard
     return;
   }
   leaderboard = data.entries
     .map((e) => ({ ...e, name: entriesByName.get(e.id) ?? e.id }))
     .sort((a, b) => a.rank - b.rank);
+  leaderboardInitial = data.initial ?? 1000; // the leaderboard's own ELO anchor
   leaderboardMeta =
     `${data.entries.length} combatants · ${data.rounds} rounds × ${data.games_per_pair} games/pair · ` +
-    `seed ${data.seed} · champion: ${data.champion}`;
+    `start ${leaderboardInitial} · seed ${data.seed} · champion: ${data.champion}`;
   renderLeaderboard();
 }
 
@@ -286,6 +294,7 @@ function renderLeaderboard() {
 }
 
 function toggleSelection(id) {
+  duelLive = null; // a different pair means the stored live result is stale
   const idx = selection.indexOf(id);
   if (idx >= 0) {
     selection.splice(idx, 1);
@@ -302,10 +311,50 @@ async function specForEntry(entry) {
   return rpg.specFromId(entry.id);
 }
 
+/** Builds a `.duel` grid: two `.side`s (name, meta line, big probability) and
+ *  a `.bar` that fills `leftPct`. Shared by the ELO prediction and the live
+ *  Monte-Carlo result so the two are presented identically. */
+function duelGrid(left, right, leftPct, { leftMeta, rightMeta } = {}) {
+  const side = (entry, prob, cls, meta) => {
+    const div = document.createElement('div');
+    div.className = `side ${cls}`;
+    const name = document.createElement('div');
+    name.className = 'name';
+    name.textContent = entry.name;
+    const metaEl = document.createElement('div');
+    metaEl.className = 'rating';
+    metaEl.textContent = meta;
+    const probEl = document.createElement('div');
+    probEl.className = 'prob';
+    probEl.textContent = `${(prob * 100).toFixed(1)}%`;
+    div.append(name, metaEl, probEl);
+    return div;
+  };
+
+  const wrap = document.createElement('div');
+  wrap.className = 'duel';
+  const vs = document.createElement('div');
+  vs.className = 'vs';
+  vs.textContent = 'vs';
+  const bar = document.createElement('div');
+  bar.className = 'bar';
+  const fill = document.createElement('span');
+  fill.style.width = `${(leftPct * 100).toFixed(1)}%`;
+  bar.append(fill);
+  wrap.append(
+    side(left, leftPct, 'a', leftMeta ?? `ELO ${Math.round(left.rating)}`),
+    vs,
+    side(right, 1 - leftPct, 'b', rightMeta ?? `ELO ${Math.round(right.rating)}`),
+    bar,
+  );
+  return wrap;
+}
+
 function renderDuel() {
   const el = $('#duel-result');
   if (selection.length !== 2) {
     el.innerHTML = '';
+    duelLive = null;
     $('#duel-hint').textContent =
       selection.length === 1 ? 'Pick one more row to compare.' : 'Select two rows in the ranking to see the ELO win probability.';
     return;
@@ -317,59 +366,77 @@ function renderDuel() {
   const b = entryById(idB);
   if (!a || !b) return;
 
-  const pa = winProbability(a.rating, b.rating);
-  const pb = 1 - pa;
-
   el.innerHTML = '';
-  const bar = document.createElement('div');
-  bar.className = 'bar';
-  const fill = document.createElement('span');
-  fill.style.width = `${(pa * 100).toFixed(1)}%`;
-  bar.append(fill);
 
-  const side = (entry, prob, cls) => {
-    const div = document.createElement('div');
-    div.className = `side ${cls}`;
-    div.innerHTML = `<div class="name"></div><div class="rating"></div><div class="prob"></div>`;
-    div.querySelector('.name').textContent = entry.name;
-    div.querySelector('.rating').textContent = `ELO ${Math.round(entry.rating)}`;
-    div.querySelector('.prob').textContent = `${(prob * 100).toFixed(1)}%`;
-    return div;
+  const label = (text) => {
+    const l = document.createElement('div');
+    l.className = 'duel-label';
+    l.textContent = text;
+    return l;
   };
-  const vs = document.createElement('div');
-  vs.className = 'vs';
-  vs.textContent = 'vs';
 
+  // What the ELO ratings predict.
+  const pa = winProbability(a.rating, b.rating);
+  const predict = document.createElement('div');
+  predict.append(label('ELO prediction'));
+  predict.append(duelGrid(a, b, pa));
+
+  // The live WASM confirmation; stays around so it can be re-run.
+  const actions = document.createElement('div');
+  actions.className = 'duel-actions';
   const button = document.createElement('button');
-  button.textContent = 'Confirm with 100 live fights';
+  button.textContent = duelLive ? 'Re-run 100 live fights' : 'Confirm with 100 live fights';
   button.addEventListener('click', () => runMonteCarlo(a, b, button));
+  actions.append(button);
 
-  el.append(side(a, pa, 'a'), vs, side(b, pb, 'b'), bar, button);
+  el.append(predict, actions);
+
+  // The live result, in the same layout as the prediction (with real names).
+  if (duelLive) {
+    const { winsA, winsB, draws } = duelLive;
+    const total = winsA + winsB + draws;
+    const live = document.createElement('div');
+    live.append(label(`Live result — ${total} fights (WASM)`));
+    live.append(duelGrid(a, b, (winsA + 0.5 * draws) / total, {
+      leftMeta: `${winsA}W · ${draws}D · ${winsB}L`,
+      rightMeta: `${winsB}W · ${draws}D · ${winsA}L`,
+    }));
+    el.append(live);
+  }
 }
 
 async function runMonteCarlo(a, b, button) {
   button.disabled = true;
+  const originalLabel = button.textContent;
   button.textContent = 'Simulating…';
-  const specA = await specForEntry(a);
-  const specB = await specForEntry(b);
   let winsA = 0;
   let winsB = 0;
   let draws = 0;
-  for (let i = 0; i < 100; i += 1) {
-    const seed = (i * 1000003 + 13) >>> 0;
-    const outcome = rpg.fight(specA, specB, { seed, maxRounds: 1000 });
-    if (outcome.winner_index === 0) winsA += 1;
-    else if (outcome.winner_index === 1) winsB += 1;
-    else draws += 1;
+  try {
+    const specA = await specForEntry(a);
+    const specB = await specForEntry(b);
+    // Each run is a fresh Monte-Carlo sample, so re-running shows how the
+    // estimate varies around the ELO prediction (fights within a run stay
+    // distinct via the index, mirroring scripts/elo_ranking.py).
+    const runSeed = Math.floor(Math.random() * 0x100000000) >>> 0;
+    for (let i = 0; i < 100; i += 1) {
+      const seed = (runSeed * 1000003 + i * 31 + 13) >>> 0;
+      const outcome = rpg.fight(specA, specB, { seed, maxRounds: 1000 });
+      if (outcome.winner_index === 0) winsA += 1;
+      else if (outcome.winner_index === 1) winsB += 1;
+      else draws += 1;
+    }
+    if (!a.isYou) specA.dispose();
+    if (!b.isYou) specB.dispose();
+  } catch (err) {
+    setStatus(`Live fight failed: ${err.message}`, true);
+    console.error(err);
+    button.disabled = false;
+    button.textContent = originalLabel;
+    return;
   }
-  if (!a.isYou) specA.dispose();
-  if (!b.isYou) specB.dispose();
-  const note = document.createElement('p');
-  note.className = 'muted';
-  note.textContent =
-    `Live: ${winsA} A / ${winsB} B / ${draws} draws (100 fights, WASM). ` +
-    `ELO prediction: A ${(winProbability(a.rating, b.rating) * 100).toFixed(1)}%.`;
-  button.replaceWith(note);
+  duelLive = { winsA, winsB, draws };
+  renderDuel();
 }
 
 // ---------------------------------------------------------------------------
@@ -527,12 +594,13 @@ async function rankCharacter(event) {
     const spec = rpg.specFromEntity(entity, currentWeapon());
     entity.dispose();
 
-    const opponents = leaderboard
-      .slice(0, RANK_OPPONENTS)
-      .map((e) => ({ id: e.id, rating: e.rating }));
+    const opponents = leaderboard.map((e) => ({ id: e.id, rating: e.rating }));
 
     const result = await rankNewcomer(rpg, spec, opponents, {
       gamesPerOpponent: GAMES_PER_OPPONENT,
+      opponentsPerRound: RANK_OPPONENTS_PER_ROUND,
+      rounds: RANK_ROUNDS,
+      initial: leaderboardInitial,
     });
     you = {
       id: 'you',
@@ -544,7 +612,7 @@ async function rankCharacter(event) {
       draws: result.draws,
       games: result.games,
     };
-    renderRankResult(result, opponents);
+    renderRankResult(result);
     selection = [];
     renderLeaderboard();
     renderDuel();
@@ -557,14 +625,15 @@ async function rankCharacter(event) {
   }
 }
 
-function renderRankResult(result, opponents) {
+function renderRankResult(result) {
   const box = $('#rank-result');
   box.hidden = false;
   const rank = [...leaderboard].filter((e) => e.rating > result.rating).length + 1;
   box.innerHTML =
     `<div class="big">ELO ${Math.round(result.rating)}</div>` +
-    `<p>Ranked against the top ${opponents.length} combatants ` +
-    `(${GAMES_PER_OPPONENT} fights each, K=32, start 1500): ` +
+    `<p>Ranked Swiss-style against the ${result.opponents} leaderboard combatants ` +
+    `closest to your rating (${GAMES_PER_OPPONENT} fights each, K=32, ` +
+    `start ${leaderboardInitial}): ` +
     `${result.wins}W / ${result.losses}L / ${result.draws}D. ` +
     `That places you at <b>#${rank}</b> in the table. ` +
     `You are now selectable for a head-to-head below.</p>`;

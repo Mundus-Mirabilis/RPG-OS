@@ -26,41 +26,64 @@ export function winProbability(a, b) {
 }
 
 /**
- * Ranks a newcomer (a live combatant spec) against the top `opponents` of the
- * leaderboard using the standard ELO procedure: play `gamesPerOpponent`
- * Monte-Carlo fights against each opponent (in the WASM engine) and update the
- * rating with the K-factor — the same procedure scripts/elo_ranking.py uses.
+ * Ranks a newcomer (a live combatant spec) against the leaderboard using the
+ * standard ELO procedure, Swiss-style: over `rounds` rounds the newcomer plays
+ * the `opponentsPerRound` leaderboard entries whose rating is closest to its
+ * *current* rating ("play someone of your level"), and after
+ * `gamesPerOpponent` Monte-Carlo fights per opponent (in the WASM engine) the
+ * rating is updated with the K-factor — the same procedure
+ * scripts/elo_ranking.py uses. Matching similar ratings makes the estimate
+ * converge quickly, and a genuinely average character converges to the
+ * standard starting strength (`initial`, the ELO standard 1000).
  *
- * Returns `{ rating, wins, losses, draws, games }`.
+ * Returns `{ rating, wins, losses, draws, games, opponents }`.
  */
 export async function rankNewcomer(rpg, spec, opponents, options = {}) {
   const gamesPerOpponent = options.gamesPerOpponent ?? 20;
+  const opponentsPerRound = options.opponentsPerRound ?? 2;
+  const rounds = options.rounds ?? 8;
   const k = options.k ?? 32;
-  const initial = options.initial ?? 1500;
+  const initial = options.initial ?? 1000; // the ELO standard strength
   const maxRounds = options.maxRounds ?? 1000;
   let rating = initial;
   let wins = 0;
   let losses = 0;
   let draws = 0;
-  for (let o = 0; o < opponents.length; o += 1) {
-    const opp = opponents[o];
-    const oppSpec = rpg.specFromId(opp.id);
-    let w = 0;
-    let l = 0;
-    let d = 0;
-    for (let i = 0; i < gamesPerOpponent; i += 1) {
-      const seed = (o * 1000003 + i * 31 + 7) >>> 0;
-      const outcome = rpg.fight(spec, oppSpec, { seed, maxRounds });
-      if (outcome.winner_index === 0) w += 1;
-      else if (outcome.winner_index === 1) l += 1;
-      else d += 1;
+  let opponentsPlayed = 0;
+  const played = new Set();
+
+  for (let round = 0; round < rounds; round += 1) {
+    // The leaderboard entries closest to the newcomer's current rating that it
+    // has not yet met this ranking — the "similar strength" focus.
+    const byCloseness = [...opponents]
+      .filter((opp) => !played.has(opp.id))
+      .sort((a, b) => Math.abs(a.rating - rating) - Math.abs(b.rating - rating));
+    const picks = byCloseness.slice(0, opponentsPerRound);
+    if (picks.length === 0) break;
+    for (const opp of picks) {
+      played.add(opp.id);
+      const oppSpec = rpg.specFromId(opp.id);
+      let w = 0;
+      let l = 0;
+      let d = 0;
+      for (let i = 0; i < gamesPerOpponent; i += 1) {
+        const seed = (round * 1000003 + opponentsPlayed * 31 + i * 7 + 1) >>> 0;
+        const outcome = rpg.fight(spec, oppSpec, { seed, maxRounds });
+        if (outcome.winner_index === 0) w += 1;
+        else if (outcome.winner_index === 1) l += 1;
+        else d += 1;
+      }
+      oppSpec.dispose();
+      const score = (w + 0.5 * d) / gamesPerOpponent;
+      rating = updateRating(rating, expectedScore(rating, opp.rating), score, k);
+      wins += w;
+      losses += l;
+      draws += d;
+      opponentsPlayed += 1;
     }
-    oppSpec.dispose();
-    const score = (w + 0.5 * d) / gamesPerOpponent;
-    rating = updateRating(rating, expectedScore(rating, opp.rating), score, k);
-    wins += w;
-    losses += l;
-    draws += d;
   }
-  return { rating, wins, losses, draws, games: wins + losses + draws };
+  return {
+    rating, wins, losses, draws,
+    games: wins + losses + draws, opponents: opponentsPlayed,
+  };
 }
