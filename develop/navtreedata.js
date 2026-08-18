@@ -86,9 +86,10 @@ var NAVTREEINDEX =
 "classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a240b56f254b007e71d2ee5ef50606f09",
 "classrpg__os_1_1generated_1_1tde5e_1_1Character.html#ada86866923fe3d42ebce0b8af5d59ef0",
 "namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766a8e035c9eac2ef52493607d738b571317",
-"structrpg__os_1_1CheckRecipe.html#ab0cb9bcacf77be5e088da403d4653b2b",
-"structrpg__os_1_1NullStatProvider.html#a6ebadcd0d9ea2f3dc23236627f257e25",
-"test__combat_8cpp.html#a30aacd696176d4ff598861ed5e7d6a74"
+"structrpg__os_1_1CheckRecipe.html#aa7e6e014684c192b2593587db5b3c7b3",
+"structrpg__os_1_1FightOutcome.html#a4a3e8f408ed28dd9c542715ea0d87ce4",
+"test__checks_8cpp.html#a029cf390004154400cc97da4db5ea557",
+"test__smoke_8cpp_source.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

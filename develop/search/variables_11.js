@@ -10,14 +10,16 @@ var searchData=
   ['remainingpool_7',['remainingPool',['../structrpg__os_1_1CheckResult.html#ae8bd7c84e5def307a1c8f70f72bb8f19',1,'rpg_os::CheckResult']]],
   ['repair_8',['repair',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a5e24f13b5c5d5591e3ffbf2891ecfa37',1,'rpg_os::generated::brp_ugc::Character']]],
   ['research_9',['research',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#af3405d926b10d7761073a601638335b4',1,'rpg_os::generated::brp_ugc::Character']]],
-  ['resistances_10',['resistances',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#aeae1e4a8b7c55fc4da157bf333422b09',1,'rpg_os::generated::brp_ugc::Character::resistances'],['../classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#a9d4be67ab1ac66e9036972d7d74ba21f',1,'rpg_os::generated::dnd5e::Character::resistances'],['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a15afb7a8e0c952e043de361cb22587ea',1,'rpg_os::generated::tde5e::Character::resistances']]],
+  ['resistances_10',['resistances',['../classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#a9d4be67ab1ac66e9036972d7d74ba21f',1,'rpg_os::generated::dnd5e::Character::resistances'],['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a15afb7a8e0c952e043de361cb22587ea',1,'rpg_os::generated::tde5e::Character::resistances'],['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#aeae1e4a8b7c55fc4da157bf333422b09',1,'rpg_os::generated::brp_ugc::Character::resistances']]],
   ['resisted_11',['resisted',['../structrpg__os_1_1RulesetEngine_1_1AfflictionResult.html#a22e973b16b0fcf3eab3fe83c8e212e34',1,'rpg_os::RulesetEngine::AfflictionResult']]],
   ['resolution_12',['resolution',['../structrpg__os_1_1CheckRecipe.html#a5e706fbcc0018f1d371a39efa723b0a6',1,'rpg_os::CheckRecipe']]],
   ['resource_13',['resource',['../structrpg__os_1_1EventActionDef.html#ac71af0ca343d7c1527418a634343788d',1,'rpg_os::EventActionDef']]],
-  ['resourceid_14',['resourceId',['../structrpg__os_1_1RulesetEngine_1_1SpellResult.html#a5a748f81ea072c54144037135a6ab786',1,'rpg_os::RulesetEngine::SpellResult']]],
-  ['resourcepools_15',['resourcePools',['../classrpg__os_1_1Ruleset.html#ac6d7b06fb3418d0fef60e9caa9fe1fcb',1,'rpg_os::Ruleset']]],
-  ['ride_16',['ride',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#ab94017430ea08aa13d14c0365f9e8e09',1,'rpg_os::generated::brp_ugc::Character']]],
-  ['riding_17',['riding',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a62bffb438b6307f2b0428f9101f50c70',1,'rpg_os::generated::tde5e::Character']]],
-  ['ropes_18',['ropes',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a4ae1c2f482d5041dfaa12822531ca851',1,'rpg_os::generated::tde5e::Character']]],
-  ['rounds_19',['rounds',['../structrpg__os_1_1FightOutcome.html#af4ed806950a6560d154369b9a027ade0',1,'rpg_os::FightOutcome']]]
+  ['resourcecost_14',['resourceCost',['../structrpg__os_1_1FightActionLog.html#a31fd2685910d83e05282416665f8cc28',1,'rpg_os::FightActionLog']]],
+  ['resourceid_15',['resourceid',['../structrpg__os_1_1FightActionLog.html#a12934179f4afc750907747f3e12c88e5',1,'rpg_os::FightActionLog::resourceId'],['../structrpg__os_1_1RulesetEngine_1_1SpellResult.html#a5a748f81ea072c54144037135a6ab786',1,'rpg_os::RulesetEngine::SpellResult::resourceId']]],
+  ['resourcepools_16',['resourcePools',['../classrpg__os_1_1Ruleset.html#ac6d7b06fb3418d0fef60e9caa9fe1fcb',1,'rpg_os::Ruleset']]],
+  ['ride_17',['ride',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#ab94017430ea08aa13d14c0365f9e8e09',1,'rpg_os::generated::brp_ugc::Character']]],
+  ['riding_18',['riding',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a62bffb438b6307f2b0428f9101f50c70',1,'rpg_os::generated::tde5e::Character']]],
+  ['ropes_19',['ropes',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a4ae1c2f482d5041dfaa12822531ca851',1,'rpg_os::generated::tde5e::Character']]],
+  ['round_20',['round',['../structrpg__os_1_1FightRoundLog.html#a3f8883e7dcc620df7417afcf9cd21667',1,'rpg_os::FightRoundLog']]],
+  ['rounds_21',['rounds',['../structrpg__os_1_1FightOutcome.html#af4ed806950a6560d154369b9a027ade0',1,'rpg_os::FightOutcome::rounds'],['../structrpg__os_1_1FightLog.html#a1aa915756cdeb13ce7f901afd62c7c00',1,'rpg_os::FightLog::rounds']]]
 ];

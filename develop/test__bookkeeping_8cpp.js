@@ -2,6 +2,7 @@ var test__bookkeeping_8cpp =
 [
     [ "TEST_CASE", "test__bookkeeping_8cpp.html#afdc14548707948dd3697058ab7f82f2c", null ],
     [ "TEST_CASE", "test__bookkeeping_8cpp.html#a776f78c3f22db6d994523430752d70bb", null ],
+    [ "TEST_CASE", "test__bookkeeping_8cpp.html#adee7e5574175a5df5f50aaef35485320", null ],
     [ "TEST_CASE", "test__bookkeeping_8cpp.html#a9b166dc94f347ab7cdf9cfe52e196522", null ],
     [ "TEST_CASE", "test__bookkeeping_8cpp.html#a7a13b146e45ab355ae0c8c10bc7018e2", null ],
     [ "TEST_CASE", "test__bookkeeping_8cpp.html#af77a2d75a5790ccf58c61dc24f67443f", null ],

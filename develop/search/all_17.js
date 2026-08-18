@@ -13,12 +13,12 @@ var searchData=
   ['what_20it_20does_10',['What it does',['../index.html#autotoc_md3',1,'']]],
   ['where_20to_20go_20next_20in_20the_20reference_11',['Where to go next in the reference',['../user_guide.html#autotoc_md26',1,'']]],
   ['willpower_12',['willpower',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a461f9e0f1fd5fa05ee08b90fa6abdeb4',1,'rpg_os::generated::tde5e::Character']]],
-  ['winnerindex_13',['winnerIndex',['../structrpg__os_1_1FightOutcome.html#a4a3e8f408ed28dd9c542715ea0d87ce4',1,'rpg_os::FightOutcome']]],
+  ['winnerindex_13',['winnerindex',['../structrpg__os_1_1FightLog.html#aa18eb6e142cf7748e1b076c2daa5d57c',1,'rpg_os::FightLog::winnerIndex'],['../structrpg__os_1_1FightOutcome.html#a4a3e8f408ed28dd9c542715ea0d87ce4',1,'rpg_os::FightOutcome::winnerIndex']]],
   ['wisdom_14',['wisdom',['../classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#a5e93beecd7bd988037e81119fba28c9e',1,'rpg_os::generated::dnd5e::Character']]],
   ['wisdommodifier_15',['wisdomModifier',['../classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#aa6f6a95543809cc9c69b947e7f16b82a',1,'rpg_os::generated::dnd5e::Character']]],
   ['withconditionmodifiers_16',['withConditionModifiers',['../classrpg__os_1_1RulesetEngine.html#a6f990c1f0ed548c91e8f8477c02ee1a6',1,'rpg_os::RulesetEngine']]],
   ['woodworking_17',['woodworking',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a2020cff5b40f1441a84ccc5776a40a24',1,'rpg_os::generated::tde5e::Character']]],
-  ['world_18',['world',['../classrpg__os_1_1GameSession.html#ab713f5f3935a30db03aa2d3258409e21',1,'rpg_os::GameSession::world() noexcept'],['../classrpg__os_1_1GameSession.html#a75e2c88b4bd9668331179e1b1c8c6d43',1,'rpg_os::GameSession::world() const noexcept']]],
+  ['world_18',['world',['../classrpg__os_1_1GameSession.html#a75e2c88b4bd9668331179e1b1c8c6d43',1,'rpg_os::GameSession::world() const noexcept'],['../classrpg__os_1_1GameSession.html#ab713f5f3935a30db03aa2d3258409e21',1,'rpg_os::GameSession::world() noexcept']]],
   ['world_5fstate_2ehpp_19',['world_state.hpp',['../world__state_8hpp.html',1,'']]],
   ['worldstate_20',['WorldState',['../classrpg__os_1_1WorldState.html',1,'rpg_os']]]
 ];

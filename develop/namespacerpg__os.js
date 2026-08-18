@@ -1,17 +1,18 @@
 var namespacerpg__os =
 [
     [ "detail", "namespacerpg__os_1_1detail.html", [
-      [ "actOnce", "namespacerpg__os_1_1detail.html#a3644b285273b5714646eb1862c74a8c8", null ],
+      [ "actOnce", "namespacerpg__os_1_1detail.html#abe72829c3fef43c4785060add9b362c8", null ],
       [ "additiveBonuses", "namespacerpg__os_1_1detail.html#a57bb8cc489c712191ae953b042750c66", null ],
       [ "applyAdvantage", "namespacerpg__os_1_1detail.html#a85b90997636bc8b6b6fc60120b986d06", null ],
-      [ "attackOnce", "namespacerpg__os_1_1detail.html#a49b71459ad1cd47e7238a85092c6163f", null ],
+      [ "attackOnce", "namespacerpg__os_1_1detail.html#a1086db436adc670b1421da854da3ef3d", null ],
       [ "fillArchetypeSpec", "namespacerpg__os_1_1detail.html#acb7bf701ba934351c9660d2a444d72ef", null ],
       [ "fillCreatureSpec", "namespacerpg__os_1_1detail.html#a3e17da87db10853035e9c8f2125daca7", null ],
       [ "gradeThresholdResult", "namespacerpg__os_1_1detail.html#a1ebb0ebc515a1e899240e12886768985", null ],
       [ "pickSpell", "namespacerpg__os_1_1detail.html#a5c08ab552cdf7a80a7847daf84ac11d9", null ],
-      [ "resolveRound", "namespacerpg__os_1_1detail.html#a254717644cea5849f35574315102fb56", null ],
+      [ "resolveRound", "namespacerpg__os_1_1detail.html#a9c74f72a8ba48d71286af3db0e3f7a32", null ],
       [ "rollDie", "namespacerpg__os_1_1detail.html#a8e9f2d36f9bbe8af6826ca5b2a0a1932", null ],
       [ "rollWithTotal", "namespacerpg__os_1_1detail.html#a0f48fa66b573a734af0763de614c3f58", null ],
+      [ "runFightImpl", "namespacerpg__os_1_1detail.html#a13382fe5fec421a46b48410057fe1b6d", null ],
       [ "scaleByDifficulty", "namespacerpg__os_1_1detail.html#abe51285921020775936aeeed9cf1b57e", null ],
       [ "spellAverageDamage", "namespacerpg__os_1_1detail.html#af1de7148073c0aecc6138dda838414ed", null ],
       [ "thresholdReference", "namespacerpg__os_1_1detail.html#a2fbc7f0203cb4abc6c9048d26b60bbdf", null ]
@@ -56,7 +57,10 @@ var namespacerpg__os =
     [ "EventData", "structrpg__os_1_1EventData.html", "structrpg__os_1_1EventData" ],
     [ "EventTriggerDef", "structrpg__os_1_1EventTriggerDef.html", "structrpg__os_1_1EventTriggerDef" ],
     [ "Expression", "classrpg__os_1_1Expression.html", "classrpg__os_1_1Expression" ],
+    [ "FightActionLog", "structrpg__os_1_1FightActionLog.html", "structrpg__os_1_1FightActionLog" ],
+    [ "FightLog", "structrpg__os_1_1FightLog.html", "structrpg__os_1_1FightLog" ],
     [ "FightOutcome", "structrpg__os_1_1FightOutcome.html", "structrpg__os_1_1FightOutcome" ],
+    [ "FightRoundLog", "structrpg__os_1_1FightRoundLog.html", "structrpg__os_1_1FightRoundLog" ],
     [ "GameSession", "classrpg__os_1_1GameSession.html", "classrpg__os_1_1GameSession" ],
     [ "Inventory", "classrpg__os_1_1Inventory.html", "classrpg__os_1_1Inventory" ],
     [ "ItemInstance", "structrpg__os_1_1ItemInstance.html", "structrpg__os_1_1ItemInstance" ],
@@ -220,6 +224,7 @@ var namespacerpg__os =
     [ "resolvePoolCheck", "namespacerpg__os.html#a8dc70248cb410a26d27117eb3347042b", null ],
     [ "resolveResistanceCheck", "namespacerpg__os.html#aec022d03c5ed920153ee4dca70e7bb9d", null ],
     [ "resolveThresholdCheck", "namespacerpg__os.html#a6b46ef1cf31683f3c873e49ca842cab6", null ],
+    [ "runFight", "namespacerpg__os.html#a48743ce84d41f9fdc85fac5f617d980d", null ],
     [ "runFight", "namespacerpg__os.html#a3758c1ea47b844ed9ca1d0244a1f0e1d", null ],
     [ "successLevelFor", "namespacerpg__os.html#a7cc63c6411d33823547b72473c8ce523", null ],
     [ "trimWhitespace", "namespacerpg__os.html#a7fa123c0bde9f15013f8f154e1214d41", null ]
