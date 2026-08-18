@@ -234,6 +234,6 @@ export class RpgOs {
 export async function init() {
   const m = await getModule();
   const enginePtr = m._rpg_os_engine_new();
-  if (!enginePtr) throw new Error('failed to allocate the RPG-OS engine');
+  if (!enginePtr) throw new Error('failed to allocate the RPG OS engine');
   return new RpgOs(m, enginePtr);
 }

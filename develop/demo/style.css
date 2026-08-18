@@ -4,7 +4,7 @@
 :root {
   /* Corporate palette — mirrors the Doxygen Awesome dark theme used by the
      project docs (docs/doxygen-awesome/doxygen-awesome.css, dark values) so
-     the demo feels like part of RPG-OS rather than a standalone page. */
+     the demo feels like part of RPG OS rather than a standalone page. */
   --bg: #1C1D1F;         /* --page-background-color (dark) */
   --panel: #24262a;
   --panel-2: #282c34;    /* --fragment-background */
@@ -131,31 +131,81 @@ a:hover {
   color: var(--bad);
 }
 
-/* The loaded ruleset's own licence + source (the rules are not Apache-2.0). */
-.licence {
-  margin: 10px 0 0;
-  font-size: 0.85rem;
-  color: var(--muted);
-  line-height: 1.5;
-}
-
-.licence p {
+/* The loaded ruleset's own licence, in a box at the bottom of the page. The
+   rules are NOT Apache-2.0 (the engine and this page are), so the box states
+   that distinction up front: the licence shown belongs to the ruleset, not to
+   the application. */
+.licence-box {
   margin: 0 0 4px;
+  background: linear-gradient(180deg, var(--panel), var(--panel-2));
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 18px 20px 20px;
+  color: var(--text);
+  line-height: 1.6;
 }
 
-.licence p:last-child {
-  margin-bottom: 0;
+.licence-box-head .licence-eyebrow {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--accent);
 }
 
-/* Verbatim notice/attribution text the licence requires (e.g. the ORC Notice). */
-.licence-detail {
-  font-size: 0.8rem;
+.licence-box-head h2 {
+  margin: 0 0 6px;
+  font-size: 1.15rem;
 }
 
-.licence a {
+.licence-box-head .licence-note {
+  margin: 0 0 14px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.licence-box-head .licence-note b {
+  color: var(--text);
+}
+
+.licence-statement {
+  margin: 0 0 6px;
+  font-size: 0.9rem;
+}
+
+.licence-meta {
+  margin: 0 0 6px;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.licence-meta a {
   color: var(--accent);
   text-decoration: underline;
   text-underline-offset: 2px;
+}
+
+/* Verbatim notice/attribution text the licence requires (e.g. the ORC Notice). */
+.licence-details {
+  margin-top: 10px;
+  padding: 12px 14px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.licence-details p {
+  margin: 0 0 6px;
+}
+
+.licence-details p:last-child {
+  margin-bottom: 0;
 }
 
 main {

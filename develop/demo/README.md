@@ -1,6 +1,6 @@
 # ELO Arena demo
 
-A static, no-build web page that demonstrates the universal RPG-OS engine
+A static, no-build web page that demonstrates the universal RPG OS engine
 compiled to WebAssembly. It is deployed to GitHub Pages under the same version
 folders as the docs — `/main/demo/`, `/develop/demo/`, `/vX.Y.Z/demo/` — by the
 `deploy-demo` job of `.github/workflows/docs.yml` (run *after* the docs deploy
@@ -11,7 +11,10 @@ via `needs`, so the two gh-pages pushes can never race).
 1. **ELO ranking** — a leaderboard of every combatant in the selected ruleset
    (The Dark Eye 5e or D&D 5e SRD). The leaderboards are generated *during the
    CI run* by `scripts/elo_ranking.py --json` (the Python Monte-Carlo ELO over
-   the native fight binary) and stored in `data/<ruleset>_elo.json`.
+   the native fight binary) and stored in `data/<ruleset>_elo.json`. Tick
+   exactly one row (or generate a character below) and the **Win %** column
+   shows every combatant's win chance *relative to* that one — so it shows
+   exactly 50% for the reference itself.
 2. **Character entry form** — attributes and skills generated from the loaded
    ruleset's schema. The entered character is ranked **live in the browser**:
    the WASM engine fights it against the top combatants and the JS ELO formula
@@ -19,12 +22,14 @@ via `needs`, so the two gh-pages pushes can never race).
 3. **Head to head** — tick two rows; the ELO win probability is shown, with an
    optional live 100-fight Monte-Carlo confirmation running in the WASM engine.
 
-The page header shows the currently loaded ruleset's **own licence** and a link
-to where it is stated, plus the verbatim notice/attribution text the licence
-requires (e.g. the ORC Notice), read from `rpg.meta()` at runtime (so it always
-matches the JSON actually loaded). The ruleset data is **not** Apache-2.0 — the
-Apache-2.0 licence covers only the engine/demo code. See the root `README.md`
-for the per-ruleset licence table.
+The currently loaded ruleset's **own licence** is shown in a dedicated box at
+the bottom of the page (read from `rpg.meta()` at runtime, so it always matches
+the JSON actually loaded). The box makes the ruleset-vs-application distinction
+explicit up front: it states that the rules are **not** Apache-2.0 — the
+Apache-2.0 licence covers only the engine/demo code — and then shows the
+licence statement, where the rights holder states it, the source document, and
+the verbatim notice/attribution text the licence requires (e.g. the ORC
+Notice). See the root `README.md` for the per-ruleset licence table.
 
 ## Layout
 
