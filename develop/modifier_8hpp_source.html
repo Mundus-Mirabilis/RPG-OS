@@ -8,15 +8,15 @@
 <!-- Browser tab icon — copied into the output via HTML_EXTRA_FILES (favicon.png). -->
 <link rel="icon" type="image/png" href="favicon.png"/>
 <!-- BEGIN opengraph metadata -->
-<meta property="og:title" content="RPG-OS" />
-<meta property="og:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
+<meta property="og:title" content="RPG OS" />
+<meta property="og:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
 <meta property="og:url" content="https://Mundus-Mirabilis.github.io/RPG-OS/" />
 <!-- END opengraph metadata -->
 <!-- BEGIN twitter metadata -->
-<meta name="twitter:title" content="RPG-OS" />
-<meta name="twitter:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
+<meta name="twitter:title" content="RPG OS" />
+<meta name="twitter:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
 <!-- END twitter metadata -->
-<title>RPG-OS: modifier.hpp Source File</title>
+<title>RPG OS: modifier.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -55,9 +55,9 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="mundus-mirabilis_512.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">RPG-OS
+   <div id="projectname">RPG OS
    </div>
-   <div id="projectbrief">A header-only C++23 universal rule engine for tabletop role-playing games</div>
+   <div id="projectbrief">A universal, header-only C++23 rule engine for tabletop role-playing games</div>
   </td>
  </tr>
  </tbody>
@@ -131,81 +131,81 @@ $(document).ready(function(){initNavTree('modifier_8hpp_source.html',''); initRe
 <a href="modifier_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2026 Christian Mayer and the Mundus Mirabilis contributors.</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// SPDX-License-Identifier: Apache-2.0</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;<a class="code" href="math_8hpp.html">rpg_os/core/math.hpp</a>&gt;</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacerpg__os.html">rpg_os</a> {</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="foldopen" id="foldopen00035" data-start="{" data-end="};">
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="namespacerpg__os.html#aab9c315b59a58b0733ac5a30a02da3f2">   35</a></span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="namespacerpg__os.html#aab9c315b59a58b0733ac5a30a02da3f2">ModifierType</a> {</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#aab9c315b59a58b0733ac5a30a02da3f2a6da8e67225fdcfa78c3ea5dc3154b849">Override</a>, </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#aab9c315b59a58b0733ac5a30a02da3f2aec211f7c20af43e742bf2570c3cb84f9">Add</a>,      </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#aab9c315b59a58b0733ac5a30a02da3f2ae257376d913f3b53cbb4a9b19d770648">Multiply</a>, </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#aab9c315b59a58b0733ac5a30a02da3f2a08825280e3f8137556325061ba67ff8c">Clamp</a>,    </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>};</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;<a class="code" href="math_8hpp.html">rpg_os/core/math.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacerpg__os.html">rpg_os</a> {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="foldopen" id="foldopen00036" data-start="{" data-end="};">
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="namespacerpg__os.html#aab9c315b59a58b0733ac5a30a02da3f2">   36</a></span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="namespacerpg__os.html#aab9c315b59a58b0733ac5a30a02da3f2">ModifierType</a> {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#aab9c315b59a58b0733ac5a30a02da3f2a6da8e67225fdcfa78c3ea5dc3154b849">Override</a>, </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#aab9c315b59a58b0733ac5a30a02da3f2aec211f7c20af43e742bf2570c3cb84f9">Add</a>,      </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#aab9c315b59a58b0733ac5a30a02da3f2ae257376d913f3b53cbb4a9b19d770648">Multiply</a>, </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#aab9c315b59a58b0733ac5a30a02da3f2a08825280e3f8137556325061ba67ff8c">Clamp</a>,    </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>};</div>
 </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="foldopen" id="foldopen00053" data-start="{" data-end="};">
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="structrpg__os_1_1Modifier.html">   53</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structrpg__os_1_1Modifier.html">Modifier</a> {</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="structrpg__os_1_1Modifier.html#a02a2b341e2f1eb6b2f59a8bff27a4167">   54</a></span>  <a class="code hl_enumeration" href="namespacerpg__os.html#aab9c315b59a58b0733ac5a30a02da3f2">ModifierType</a> <a class="code hl_variable" href="structrpg__os_1_1Modifier.html#a02a2b341e2f1eb6b2f59a8bff27a4167">type</a>{<a class="code hl_enumvalue" href="namespacerpg__os.html#aab9c315b59a58b0733ac5a30a02da3f2aec211f7c20af43e742bf2570c3cb84f9">ModifierType::Add</a>};</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="structrpg__os_1_1Modifier.html#a8e509dbc18c4713e206ae7194696a2b2">   56</a></span>  int32_t <a class="code hl_variable" href="structrpg__os_1_1Modifier.html#a8e509dbc18c4713e206ae7194696a2b2">value</a>{0};</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="structrpg__os_1_1Modifier.html#affaf1bb648e85dfd9ea4ba4caf6edfda">   58</a></span>  <span class="keywordtype">double</span> <a class="code hl_variable" href="structrpg__os_1_1Modifier.html#affaf1bb648e85dfd9ea4ba4caf6edfda">factor</a>{1.0};</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="structrpg__os_1_1Modifier.html#afb714760f719b12e49f17732e8bb2e16">   60</a></span>  int32_t <a class="code hl_variable" href="structrpg__os_1_1Modifier.html#afb714760f719b12e49f17732e8bb2e16">clampMin</a>{0};</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="structrpg__os_1_1Modifier.html#aaa72927fe1b4ba8e10a2bbb82d125487">   62</a></span>  int32_t <a class="code hl_variable" href="structrpg__os_1_1Modifier.html#aaa72927fe1b4ba8e10a2bbb82d125487">clampMax</a>{0};</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>};</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="foldopen" id="foldopen00054" data-start="{" data-end="};">
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="structrpg__os_1_1Modifier.html">   54</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structrpg__os_1_1Modifier.html">Modifier</a> {</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="structrpg__os_1_1Modifier.html#a02a2b341e2f1eb6b2f59a8bff27a4167">   55</a></span>  <a class="code hl_enumeration" href="namespacerpg__os.html#aab9c315b59a58b0733ac5a30a02da3f2">ModifierType</a> <a class="code hl_variable" href="structrpg__os_1_1Modifier.html#a02a2b341e2f1eb6b2f59a8bff27a4167">type</a>{<a class="code hl_enumvalue" href="namespacerpg__os.html#aab9c315b59a58b0733ac5a30a02da3f2aec211f7c20af43e742bf2570c3cb84f9">ModifierType::Add</a>};</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="structrpg__os_1_1Modifier.html#a8e509dbc18c4713e206ae7194696a2b2">   57</a></span>  int32_t <a class="code hl_variable" href="structrpg__os_1_1Modifier.html#a8e509dbc18c4713e206ae7194696a2b2">value</a>{0};</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="structrpg__os_1_1Modifier.html#affaf1bb648e85dfd9ea4ba4caf6edfda">   59</a></span>  <span class="keywordtype">double</span> <a class="code hl_variable" href="structrpg__os_1_1Modifier.html#affaf1bb648e85dfd9ea4ba4caf6edfda">factor</a>{1.0};</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="structrpg__os_1_1Modifier.html#afb714760f719b12e49f17732e8bb2e16">   61</a></span>  int32_t <a class="code hl_variable" href="structrpg__os_1_1Modifier.html#afb714760f719b12e49f17732e8bb2e16">clampMin</a>{0};</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="structrpg__os_1_1Modifier.html#aaa72927fe1b4ba8e10a2bbb82d125487">   63</a></span>  int32_t <a class="code hl_variable" href="structrpg__os_1_1Modifier.html#aaa72927fe1b4ba8e10a2bbb82d125487">clampMax</a>{0};</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>};</div>
 </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="foldopen" id="foldopen00077" data-start="{" data-end="}">
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="namespacerpg__os.html#a87ad4f8cf7886eca2e27591884ef2bb9">   77</a></span>[[nodiscard]] <span class="keyword">inline</span> int32_t <a class="code hl_function" href="namespacerpg__os.html#a87ad4f8cf7886eca2e27591884ef2bb9">applyModifierPipeline</a>(int32_t base,</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                                                   <span class="keyword">const</span> std::vector&lt;Modifier&gt; &amp;modifiers) {</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  int32_t value = base;</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_struct" href="structrpg__os_1_1Modifier.html">Modifier</a> &amp;mod : modifiers) {</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keywordflow">if</span> (mod.type == <a class="code hl_enumvalue" href="namespacerpg__os.html#aab9c315b59a58b0733ac5a30a02da3f2a6da8e67225fdcfa78c3ea5dc3154b849">ModifierType::Override</a>) {</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>      value = mod.<a class="code hl_variable" href="structrpg__os_1_1Modifier.html#a8e509dbc18c4713e206ae7194696a2b2">value</a>;</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    }</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  }</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_struct" href="structrpg__os_1_1Modifier.html">Modifier</a> &amp;mod : modifiers) {</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordflow">if</span> (mod.type == <a class="code hl_enumvalue" href="namespacerpg__os.html#aab9c315b59a58b0733ac5a30a02da3f2aec211f7c20af43e742bf2570c3cb84f9">ModifierType::Add</a>) {</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>      value += mod.value;</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    }</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  }</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_struct" href="structrpg__os_1_1Modifier.html">Modifier</a> &amp;mod : modifiers) {</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordflow">if</span> (mod.type == <a class="code hl_enumvalue" href="namespacerpg__os.html#aab9c315b59a58b0733ac5a30a02da3f2ae257376d913f3b53cbb4a9b19d770648">ModifierType::Multiply</a>) {</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>      <span class="comment">// D&amp;D-style multiplicative modifiers round down, which is why the</span></div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>      <span class="comment">// multiplication goes through math::floor before narrowing to a stat.</span></div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>      value = <a class="code hl_function" href="namespacerpg__os_1_1math.html#ac5a31aca3b8649aeec81a0c0c769325c">math::toStat</a>(<a class="code hl_function" href="namespacerpg__os_1_1math.html#a6911032cab70db4f10158b620a3bc885">math::floor</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(value) * mod.factor));</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    }</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>  }</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_struct" href="structrpg__os_1_1Modifier.html">Modifier</a> &amp;mod : modifiers) {</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keywordflow">if</span> (mod.type == <a class="code hl_enumvalue" href="namespacerpg__os.html#aab9c315b59a58b0733ac5a30a02da3f2a08825280e3f8137556325061ba67ff8c">ModifierType::Clamp</a>) {</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>      value = <a class="code hl_function" href="namespacerpg__os_1_1math.html#a33f5c88483e9687bd1e5bafef976b25c">math::clampInt</a>(value, mod.clampMin, mod.clampMax);</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    }</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>  }</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  <span class="keywordflow">return</span> value;</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>}</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="foldopen" id="foldopen00078" data-start="{" data-end="}">
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="namespacerpg__os.html#a87ad4f8cf7886eca2e27591884ef2bb9">   78</a></span>[[nodiscard]] <span class="keyword">inline</span> int32_t <a class="code hl_function" href="namespacerpg__os.html#a87ad4f8cf7886eca2e27591884ef2bb9">applyModifierPipeline</a>(int32_t base,</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                                                   <span class="keyword">const</span> std::vector&lt;Modifier&gt; &amp;modifiers) {</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  int32_t value = base;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_struct" href="structrpg__os_1_1Modifier.html">Modifier</a> &amp;mod : modifiers) {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordflow">if</span> (mod.type == <a class="code hl_enumvalue" href="namespacerpg__os.html#aab9c315b59a58b0733ac5a30a02da3f2a6da8e67225fdcfa78c3ea5dc3154b849">ModifierType::Override</a>) {</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>      value = mod.<a class="code hl_variable" href="structrpg__os_1_1Modifier.html#a8e509dbc18c4713e206ae7194696a2b2">value</a>;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    }</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  }</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_struct" href="structrpg__os_1_1Modifier.html">Modifier</a> &amp;mod : modifiers) {</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keywordflow">if</span> (mod.type == <a class="code hl_enumvalue" href="namespacerpg__os.html#aab9c315b59a58b0733ac5a30a02da3f2aec211f7c20af43e742bf2570c3cb84f9">ModifierType::Add</a>) {</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>      value += mod.value;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    }</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>  }</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_struct" href="structrpg__os_1_1Modifier.html">Modifier</a> &amp;mod : modifiers) {</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keywordflow">if</span> (mod.type == <a class="code hl_enumvalue" href="namespacerpg__os.html#aab9c315b59a58b0733ac5a30a02da3f2ae257376d913f3b53cbb4a9b19d770648">ModifierType::Multiply</a>) {</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>      <span class="comment">// D&amp;D-style multiplicative modifiers round down, which is why the</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>      <span class="comment">// multiplication goes through math::floor before narrowing to a stat.</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>      value = <a class="code hl_function" href="namespacerpg__os_1_1math.html#ac5a31aca3b8649aeec81a0c0c769325c">math::toStat</a>(<a class="code hl_function" href="namespacerpg__os_1_1math.html#a6911032cab70db4f10158b620a3bc885">math::floor</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(value) * mod.factor));</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    }</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>  }</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_struct" href="structrpg__os_1_1Modifier.html">Modifier</a> &amp;mod : modifiers) {</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordflow">if</span> (mod.type == <a class="code hl_enumvalue" href="namespacerpg__os.html#aab9c315b59a58b0733ac5a30a02da3f2a08825280e3f8137556325061ba67ff8c">ModifierType::Clamp</a>) {</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>      value = <a class="code hl_function" href="namespacerpg__os_1_1math.html#a33f5c88483e9687bd1e5bafef976b25c">math::clampInt</a>(value, mod.clampMin, mod.clampMax);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    }</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  }</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>  <span class="keywordflow">return</span> value;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>}</div>
 </div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>} <span class="comment">// namespace rpg_os</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>} <span class="comment">// namespace rpg_os</span></div>
 <div class="ttc" id="amath_8hpp_html"><div class="ttname"><a href="math_8hpp.html">math.hpp</a></div><div class="ttdoc">Shared math helpers for formula evaluation and stat arithmetic.</div></div>
-<div class="ttc" id="anamespacerpg__os_1_1math_html_a33f5c88483e9687bd1e5bafef976b25c"><div class="ttname"><a href="namespacerpg__os_1_1math.html#a33f5c88483e9687bd1e5bafef976b25c">rpg_os::math::clampInt</a></div><div class="ttdeci">constexpr int32_t clampInt(int32_t value, int32_t lo, int32_t hi) noexcept</div><div class="ttdef"><b>Definition</b> <a href="math_8hpp_source.html#l00111">math.hpp:111</a></div></div>
-<div class="ttc" id="anamespacerpg__os_1_1math_html_a6911032cab70db4f10158b620a3bc885"><div class="ttname"><a href="namespacerpg__os_1_1math.html#a6911032cab70db4f10158b620a3bc885">rpg_os::math::floor</a></div><div class="ttdeci">constexpr double floor(double value) noexcept</div><div class="ttdef"><b>Definition</b> <a href="math_8hpp_source.html#l00054">math.hpp:54</a></div></div>
-<div class="ttc" id="anamespacerpg__os_1_1math_html_ac5a31aca3b8649aeec81a0c0c769325c"><div class="ttname"><a href="namespacerpg__os_1_1math.html#ac5a31aca3b8649aeec81a0c0c769325c">rpg_os::math::toStat</a></div><div class="ttdeci">constexpr int32_t toStat(double value) noexcept</div><div class="ttdef"><b>Definition</b> <a href="math_8hpp_source.html#l00203">math.hpp:203</a></div></div>
-<div class="ttc" id="anamespacerpg__os_html"><div class="ttname"><a href="namespacerpg__os.html">rpg_os</a></div><div class="ttdef"><b>Definition</b> <a href="event__system_8hpp_source.html#l00041">event_system.hpp:41</a></div></div>
-<div class="ttc" id="anamespacerpg__os_html_a87ad4f8cf7886eca2e27591884ef2bb9"><div class="ttname"><a href="namespacerpg__os.html#a87ad4f8cf7886eca2e27591884ef2bb9">rpg_os::applyModifierPipeline</a></div><div class="ttdeci">int32_t applyModifierPipeline(int32_t base, const std::vector&lt; Modifier &gt; &amp;modifiers)</div><div class="ttdef"><b>Definition</b> <a href="modifier_8hpp_source.html#l00077">modifier.hpp:77</a></div></div>
-<div class="ttc" id="anamespacerpg__os_html_aab9c315b59a58b0733ac5a30a02da3f2"><div class="ttname"><a href="namespacerpg__os.html#aab9c315b59a58b0733ac5a30a02da3f2">rpg_os::ModifierType</a></div><div class="ttdeci">ModifierType</div><div class="ttdoc">The kind of a modifier step.</div><div class="ttdef"><b>Definition</b> <a href="modifier_8hpp_source.html#l00035">modifier.hpp:35</a></div></div>
+<div class="ttc" id="anamespacerpg__os_1_1math_html_a33f5c88483e9687bd1e5bafef976b25c"><div class="ttname"><a href="namespacerpg__os_1_1math.html#a33f5c88483e9687bd1e5bafef976b25c">rpg_os::math::clampInt</a></div><div class="ttdeci">constexpr int32_t clampInt(int32_t value, int32_t lo, int32_t hi) noexcept</div><div class="ttdef"><b>Definition</b> <a href="math_8hpp_source.html#l00112">math.hpp:112</a></div></div>
+<div class="ttc" id="anamespacerpg__os_1_1math_html_a6911032cab70db4f10158b620a3bc885"><div class="ttname"><a href="namespacerpg__os_1_1math.html#a6911032cab70db4f10158b620a3bc885">rpg_os::math::floor</a></div><div class="ttdeci">constexpr double floor(double value) noexcept</div><div class="ttdef"><b>Definition</b> <a href="math_8hpp_source.html#l00055">math.hpp:55</a></div></div>
+<div class="ttc" id="anamespacerpg__os_1_1math_html_ac5a31aca3b8649aeec81a0c0c769325c"><div class="ttname"><a href="namespacerpg__os_1_1math.html#ac5a31aca3b8649aeec81a0c0c769325c">rpg_os::math::toStat</a></div><div class="ttdeci">constexpr int32_t toStat(double value) noexcept</div><div class="ttdef"><b>Definition</b> <a href="math_8hpp_source.html#l00204">math.hpp:204</a></div></div>
+<div class="ttc" id="anamespacerpg__os_html"><div class="ttname"><a href="namespacerpg__os.html">rpg_os</a></div><div class="ttdef"><b>Definition</b> <a href="event__system_8hpp_source.html#l00042">event_system.hpp:42</a></div></div>
+<div class="ttc" id="anamespacerpg__os_html_a87ad4f8cf7886eca2e27591884ef2bb9"><div class="ttname"><a href="namespacerpg__os.html#a87ad4f8cf7886eca2e27591884ef2bb9">rpg_os::applyModifierPipeline</a></div><div class="ttdeci">int32_t applyModifierPipeline(int32_t base, const std::vector&lt; Modifier &gt; &amp;modifiers)</div><div class="ttdef"><b>Definition</b> <a href="modifier_8hpp_source.html#l00078">modifier.hpp:78</a></div></div>
+<div class="ttc" id="anamespacerpg__os_html_aab9c315b59a58b0733ac5a30a02da3f2"><div class="ttname"><a href="namespacerpg__os.html#aab9c315b59a58b0733ac5a30a02da3f2">rpg_os::ModifierType</a></div><div class="ttdeci">ModifierType</div><div class="ttdoc">The kind of a modifier step.</div><div class="ttdef"><b>Definition</b> <a href="modifier_8hpp_source.html#l00036">modifier.hpp:36</a></div></div>
 <div class="ttc" id="anamespacerpg__os_html_aab9c315b59a58b0733ac5a30a02da3f2a08825280e3f8137556325061ba67ff8c"><div class="ttname"><a href="namespacerpg__os.html#aab9c315b59a58b0733ac5a30a02da3f2a08825280e3f8137556325061ba67ff8c">rpg_os::ModifierType::Clamp</a></div><div class="ttdeci">@ Clamp</div><div class="ttdoc">clamps the current value into [clampMin, clampMax]</div></div>
 <div class="ttc" id="anamespacerpg__os_html_aab9c315b59a58b0733ac5a30a02da3f2a6da8e67225fdcfa78c3ea5dc3154b849"><div class="ttname"><a href="namespacerpg__os.html#aab9c315b59a58b0733ac5a30a02da3f2a6da8e67225fdcfa78c3ea5dc3154b849">rpg_os::ModifierType::Override</a></div><div class="ttdeci">@ Override</div><div class="ttdoc">absolute value; the last override in source order wins</div></div>
 <div class="ttc" id="anamespacerpg__os_html_aab9c315b59a58b0733ac5a30a02da3f2ae257376d913f3b53cbb4a9b19d770648"><div class="ttname"><a href="namespacerpg__os.html#aab9c315b59a58b0733ac5a30a02da3f2ae257376d913f3b53cbb4a9b19d770648">rpg_os::ModifierType::Multiply</a></div><div class="ttdeci">@ Multiply</div><div class="ttdoc">multiplies the current value (rounds down, D&amp;D-style)</div></div>
 <div class="ttc" id="anamespacerpg__os_html_aab9c315b59a58b0733ac5a30a02da3f2aec211f7c20af43e742bf2570c3cb84f9"><div class="ttname"><a href="namespacerpg__os.html#aab9c315b59a58b0733ac5a30a02da3f2aec211f7c20af43e742bf2570c3cb84f9">rpg_os::ModifierType::Add</a></div><div class="ttdeci">@ Add</div><div class="ttdoc">flat amount added to the current value</div></div>
-<div class="ttc" id="astructrpg__os_1_1Modifier_html"><div class="ttname"><a href="structrpg__os_1_1Modifier.html">rpg_os::Modifier</a></div><div class="ttdef"><b>Definition</b> <a href="modifier_8hpp_source.html#l00053">modifier.hpp:53</a></div></div>
-<div class="ttc" id="astructrpg__os_1_1Modifier_html_a02a2b341e2f1eb6b2f59a8bff27a4167"><div class="ttname"><a href="structrpg__os_1_1Modifier.html#a02a2b341e2f1eb6b2f59a8bff27a4167">rpg_os::Modifier::type</a></div><div class="ttdeci">ModifierType type</div><div class="ttdef"><b>Definition</b> <a href="modifier_8hpp_source.html#l00054">modifier.hpp:54</a></div></div>
-<div class="ttc" id="astructrpg__os_1_1Modifier_html_a8e509dbc18c4713e206ae7194696a2b2"><div class="ttname"><a href="structrpg__os_1_1Modifier.html#a8e509dbc18c4713e206ae7194696a2b2">rpg_os::Modifier::value</a></div><div class="ttdeci">int32_t value</div><div class="ttdoc">For Override / Add / Clamp: the value / bound.</div><div class="ttdef"><b>Definition</b> <a href="modifier_8hpp_source.html#l00056">modifier.hpp:56</a></div></div>
-<div class="ttc" id="astructrpg__os_1_1Modifier_html_aaa72927fe1b4ba8e10a2bbb82d125487"><div class="ttname"><a href="structrpg__os_1_1Modifier.html#aaa72927fe1b4ba8e10a2bbb82d125487">rpg_os::Modifier::clampMax</a></div><div class="ttdeci">int32_t clampMax</div><div class="ttdoc">For Clamp: inclusive upper bound.</div><div class="ttdef"><b>Definition</b> <a href="modifier_8hpp_source.html#l00062">modifier.hpp:62</a></div></div>
-<div class="ttc" id="astructrpg__os_1_1Modifier_html_afb714760f719b12e49f17732e8bb2e16"><div class="ttname"><a href="structrpg__os_1_1Modifier.html#afb714760f719b12e49f17732e8bb2e16">rpg_os::Modifier::clampMin</a></div><div class="ttdeci">int32_t clampMin</div><div class="ttdoc">For Clamp: inclusive lower bound.</div><div class="ttdef"><b>Definition</b> <a href="modifier_8hpp_source.html#l00060">modifier.hpp:60</a></div></div>
-<div class="ttc" id="astructrpg__os_1_1Modifier_html_affaf1bb648e85dfd9ea4ba4caf6edfda"><div class="ttname"><a href="structrpg__os_1_1Modifier.html#affaf1bb648e85dfd9ea4ba4caf6edfda">rpg_os::Modifier::factor</a></div><div class="ttdeci">double factor</div><div class="ttdoc">For Multiply: the factor (1.5 == +50%). Ignored otherwise.</div><div class="ttdef"><b>Definition</b> <a href="modifier_8hpp_source.html#l00058">modifier.hpp:58</a></div></div>
+<div class="ttc" id="astructrpg__os_1_1Modifier_html"><div class="ttname"><a href="structrpg__os_1_1Modifier.html">rpg_os::Modifier</a></div><div class="ttdef"><b>Definition</b> <a href="modifier_8hpp_source.html#l00054">modifier.hpp:54</a></div></div>
+<div class="ttc" id="astructrpg__os_1_1Modifier_html_a02a2b341e2f1eb6b2f59a8bff27a4167"><div class="ttname"><a href="structrpg__os_1_1Modifier.html#a02a2b341e2f1eb6b2f59a8bff27a4167">rpg_os::Modifier::type</a></div><div class="ttdeci">ModifierType type</div><div class="ttdef"><b>Definition</b> <a href="modifier_8hpp_source.html#l00055">modifier.hpp:55</a></div></div>
+<div class="ttc" id="astructrpg__os_1_1Modifier_html_a8e509dbc18c4713e206ae7194696a2b2"><div class="ttname"><a href="structrpg__os_1_1Modifier.html#a8e509dbc18c4713e206ae7194696a2b2">rpg_os::Modifier::value</a></div><div class="ttdeci">int32_t value</div><div class="ttdoc">For Override / Add / Clamp: the value / bound.</div><div class="ttdef"><b>Definition</b> <a href="modifier_8hpp_source.html#l00057">modifier.hpp:57</a></div></div>
+<div class="ttc" id="astructrpg__os_1_1Modifier_html_aaa72927fe1b4ba8e10a2bbb82d125487"><div class="ttname"><a href="structrpg__os_1_1Modifier.html#aaa72927fe1b4ba8e10a2bbb82d125487">rpg_os::Modifier::clampMax</a></div><div class="ttdeci">int32_t clampMax</div><div class="ttdoc">For Clamp: inclusive upper bound.</div><div class="ttdef"><b>Definition</b> <a href="modifier_8hpp_source.html#l00063">modifier.hpp:63</a></div></div>
+<div class="ttc" id="astructrpg__os_1_1Modifier_html_afb714760f719b12e49f17732e8bb2e16"><div class="ttname"><a href="structrpg__os_1_1Modifier.html#afb714760f719b12e49f17732e8bb2e16">rpg_os::Modifier::clampMin</a></div><div class="ttdeci">int32_t clampMin</div><div class="ttdoc">For Clamp: inclusive lower bound.</div><div class="ttdef"><b>Definition</b> <a href="modifier_8hpp_source.html#l00061">modifier.hpp:61</a></div></div>
+<div class="ttc" id="astructrpg__os_1_1Modifier_html_affaf1bb648e85dfd9ea4ba4caf6edfda"><div class="ttname"><a href="structrpg__os_1_1Modifier.html#affaf1bb648e85dfd9ea4ba4caf6edfda">rpg_os::Modifier::factor</a></div><div class="ttdeci">double factor</div><div class="ttdoc">For Multiply: the factor (1.5 == +50%). Ignored otherwise.</div><div class="ttdef"><b>Definition</b> <a href="modifier_8hpp_source.html#l00059">modifier.hpp:59</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

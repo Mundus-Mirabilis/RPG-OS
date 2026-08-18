@@ -8,15 +8,15 @@
 <!-- Browser tab icon — copied into the output via HTML_EXTRA_FILES (favicon.png). -->
 <link rel="icon" type="image/png" href="favicon.png"/>
 <!-- BEGIN opengraph metadata -->
-<meta property="og:title" content="RPG-OS" />
-<meta property="og:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
+<meta property="og:title" content="RPG OS" />
+<meta property="og:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
 <meta property="og:url" content="https://Mundus-Mirabilis.github.io/RPG-OS/" />
 <!-- END opengraph metadata -->
 <!-- BEGIN twitter metadata -->
-<meta name="twitter:title" content="RPG-OS" />
-<meta name="twitter:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
+<meta name="twitter:title" content="RPG OS" />
+<meta name="twitter:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
 <!-- END twitter metadata -->
-<title>RPG-OS: rpg_os::ItemInstance Struct Reference</title>
+<title>RPG OS: rpg_os::ItemInstance Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -55,9 +55,9 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="mundus-mirabilis_512.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">RPG-OS
+   <div id="projectname">RPG OS
    </div>
-   <div id="projectbrief">A header-only C++23 universal rule engine for tabletop role-playing games</div>
+   <div id="projectbrief">A universal, header-only C++23 rule engine for tabletop role-playing games</div>
   </td>
  </tr>
  </tbody>
@@ -145,7 +145,7 @@ Public Attributes</h2></td></tr>
 <dl class="section user"><dt>Why a stack, not a per-unit entry?</dt><dd><a class="el" href="classrpg__os_1_1Inventory.html" title="An inventory of owned item stacks, which may nest (containers).">Inventory</a> in practice is a list of "what and how many", not N individual entries. A quantity field keeps the list short and the common operations (add / remove / count) linear and simple.</dd></dl>
 <dl class="section user"><dt>Containers (bag-in-bags)</dt><dd>A stack may also hold <a class="el" href="structrpg__os_1_1ItemInstance.html#ad009ddafd846c78552527281c8f0f43d">contents</a> — items carried <em>inside</em> it (a backpack holding a bedroll and a ration). Contents may themselves contain items, so a stack is a tree rather than a flat leaf; the tree is walked recursively for totals (<a class="el" href="classrpg__os_1_1Inventory.html#a9d9a28bd05881f245f53e173a814fbc0">Inventory::totalCount</a>) and weight sums (<a class="el" href="classrpg__os_1_1Inventory.html#aa8cea0ddceddec5ea16ffe8f107c52eb">Inventory::visitStacks</a>). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="inventory_8hpp_source.html#l00128">128</a> of file <a class="el" href="inventory_8hpp_source.html">inventory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="inventory_8hpp_source.html#l00129">129</a> of file <a class="el" href="inventory_8hpp_source.html">inventory.hpp</a>.</p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="ad009ddafd846c78552527281c8f0f43d" name="ad009ddafd846c78552527281c8f0f43d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad009ddafd846c78552527281c8f0f43d">&#9670;&#160;</a></span>contents</h2>
@@ -161,7 +161,7 @@ Public Attributes</h2></td></tr>
 
 <p>Items stored inside this stack (meaningful for quantity-1 containers). </p>
 
-<p class="definition">Definition at line <a class="el" href="inventory_8hpp_source.html#l00132">132</a> of file <a class="el" href="inventory_8hpp_source.html">inventory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="inventory_8hpp_source.html#l00133">133</a> of file <a class="el" href="inventory_8hpp_source.html">inventory.hpp</a>.</p>
 
 </div>
 </div>
@@ -179,9 +179,9 @@ Public Attributes</h2></td></tr>
 
 <p>id of the item record in <code>data.items</code> </p>
 
-<p class="definition">Definition at line <a class="el" href="inventory_8hpp_source.html#l00129">129</a> of file <a class="el" href="inventory_8hpp_source.html">inventory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="inventory_8hpp_source.html#l00130">130</a> of file <a class="el" href="inventory_8hpp_source.html">inventory.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="inventory_8hpp_source.html#l00140">rpg_os::Inventory::add()</a>, <a class="el" href="engine_8hpp_source.html#l01024">rpg_os::RulesetEngine::carriedWeight()</a>, and <a class="el" href="inventory_8hpp_source.html#l00289">rpg_os::Inventory::fromJson()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="inventory_8hpp_source.html#l00141">rpg_os::Inventory::add()</a>, <a class="el" href="engine_8hpp_source.html#l01025">rpg_os::RulesetEngine::carriedWeight()</a>, and <a class="el" href="inventory_8hpp_source.html#l00290">rpg_os::Inventory::fromJson()</a>.</p>
 
 </div>
 </div>
@@ -197,9 +197,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="inventory_8hpp_source.html#l00130">130</a> of file <a class="el" href="inventory_8hpp_source.html">inventory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="inventory_8hpp_source.html#l00131">131</a> of file <a class="el" href="inventory_8hpp_source.html">inventory.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="inventory_8hpp_source.html#l00140">rpg_os::Inventory::add()</a>, and <a class="el" href="engine_8hpp_source.html#l01024">rpg_os::RulesetEngine::carriedWeight()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="inventory_8hpp_source.html#l00141">rpg_os::Inventory::add()</a>, and <a class="el" href="engine_8hpp_source.html#l01025">rpg_os::RulesetEngine::carriedWeight()</a>.</p>
 
 </div>
 </div>

@@ -8,15 +8,15 @@
 <!-- Browser tab icon — copied into the output via HTML_EXTRA_FILES (favicon.png). -->
 <link rel="icon" type="image/png" href="favicon.png"/>
 <!-- BEGIN opengraph metadata -->
-<meta property="og:title" content="RPG-OS" />
-<meta property="og:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
+<meta property="og:title" content="RPG OS" />
+<meta property="og:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
 <meta property="og:url" content="https://Mundus-Mirabilis.github.io/RPG-OS/" />
 <!-- END opengraph metadata -->
 <!-- BEGIN twitter metadata -->
-<meta name="twitter:title" content="RPG-OS" />
-<meta name="twitter:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
+<meta name="twitter:title" content="RPG OS" />
+<meta name="twitter:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
 <!-- END twitter metadata -->
-<title>RPG-OS: rpg_os::DiceExpression Class Reference</title>
+<title>RPG OS: rpg_os::DiceExpression Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -55,9 +55,9 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="mundus-mirabilis_512.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">RPG-OS
+   <div id="projectname">RPG OS
    </div>
-   <div id="projectbrief">A header-only C++23 universal rule engine for tabletop role-playing games</div>
+   <div id="projectbrief">A universal, header-only C++23 rule engine for tabletop role-playing games</div>
   </td>
  </tr>
  </tbody>
@@ -171,7 +171,7 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p>A parsed dice expression. Immutable after construction.</p>
 <dl class="section user"><dt>Why immutable?</dt><dd>Once parsed, a dice expression is pure data; making it immutable lets it be safely shared (the combat loop holds one per combatant across many fights) and lets the compiler reason about it. Parsing happens eagerly in the constructor so a malformed expression from a ruleset fails fast at load time rather than mid-roll. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00148">148</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00149">149</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a028552cceafcc83a3fe5ff2b6bce1349" name="a028552cceafcc83a3fe5ff2b6bce1349"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a028552cceafcc83a3fe5ff2b6bce1349">&#9670;&#160;</a></span>DiceExpression() <span class="overload">[1/3]</span></h2>
@@ -199,7 +199,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Parses <code>expression</code>; throws std::invalid_argument on malformed input. </p>
 
-<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00331">331</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00332">332</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -228,7 +228,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Builds a constant-only expression (no dice, a flat value), equivalent to <code><a class="el" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a></code>("7"). Used by the <code>7_dice</code> integer literal. </p>
 
-<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00155">155</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00156">156</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -267,7 +267,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Builds a single group of <code>count</code> dice with <code>sides</code> faces (e.g. <code>DiceExpression(3, 20)</code> == <code><a class="el" href="classrpg__os_1_1DiceExpression.html">DiceExpression</a></code>("3d20")). Used by the <code>3_d20</code> die-size literals; throws std::invalid_argument if either value is less than one. </p>
 
-<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00161">161</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00162">162</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -297,9 +297,9 @@ Public Member Functions</h2></td></tr>
 
 <p>The flat additive constant (already includes its sign). </p>
 
-<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00184">184</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00185">185</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="variance_8hpp_source.html#l00102">rpg_os::diceBounds()</a>, <a class="el" href="test__dice_8cpp_source.html#l00067">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00279">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00108">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00151">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00159">TEST_CASE()</a>, and <a class="el" href="test__dice_8cpp_source.html#l00076">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="variance_8hpp_source.html#l00103">rpg_os::diceBounds()</a>, <a class="el" href="test__dice_8cpp_source.html#l00067">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00279">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00108">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00151">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00159">TEST_CASE()</a>, and <a class="el" href="test__dice_8cpp_source.html#l00076">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -328,9 +328,9 @@ Public Member Functions</h2></td></tr>
 
 <p>The die groups in order of appearance. </p>
 
-<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00172">172</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00173">173</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="variance_8hpp_source.html#l00102">rpg_os::diceBounds()</a>, <a class="el" href="test__dice_8cpp_source.html#l00083">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00067">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00279">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00108">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00151">TEST_CASE()</a>, and <a class="el" href="test__dice_8cpp_source.html#l00159">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="variance_8hpp_source.html#l00103">rpg_os::diceBounds()</a>, <a class="el" href="test__dice_8cpp_source.html#l00083">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00067">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00279">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00108">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00151">TEST_CASE()</a>, and <a class="el" href="test__dice_8cpp_source.html#l00159">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -358,9 +358,9 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>The total number of individual dice rolled by the expression (the sum of every group's count). Used by the ruleset loader to validate that a pool check has exactly one die per attribute. </p>
 
-<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00179">179</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00180">180</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ruleset__loader_8hpp_source.html#l00838">rpg_os::RulesetLoader::validate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ruleset__loader_8hpp_source.html#l00839">rpg_os::RulesetLoader::validate()</a>.</p>
 
 </div>
 </div>
@@ -388,9 +388,9 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>The expected (average) total of the expression: the constant plus, per group, <code>sign * count * (sides + 1) / 2</code>. This is the flat mathematical mean of all outcomes — useful for ranking options (e.g. a mage picking the strongest spell to cast) without actually rolling dice. </p>
 
-<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00192">192</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00193">193</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00333">rpg_os::detail::spellAverageDamage()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00334">rpg_os::detail::spellAverageDamage()</a>.</p>
 
 </div>
 </div>
@@ -419,7 +419,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Combines two expressions: their die groups are concatenated and their constants added, so <code>2_d6</code> + 1_d4 is one two-group expression. </p>
 
-<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00240">240</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00241">241</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -449,7 +449,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Adds a flat constant, e.g. <code>2_d6</code> + 2. </p>
 
-<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00253">253</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00254">254</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -477,7 +477,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Unary minus: negates the constant and every die group's sign, so <code>-</code>(2_d6) is the same expression as the "-2d6" term of a parsed string (raw rolls stay positive; only the sum is negated). </p>
 
-<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00230">230</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00231">231</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -506,7 +506,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Subtracts <code>rhs</code>: its die groups and constant are negated first, e.g. <code>3_d6</code> - 1_d4. </p>
 
-<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00248">248</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00249">249</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -536,7 +536,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Subtracts a flat constant, e.g. <code>1_d20</code> - 2. </p>
 
-<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00258">258</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00259">259</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -567,9 +567,9 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 </div><div class="memdoc">
 <p>Rolls every die with <code>rng</code>. The raw results are always positive and appear in roll order (checks that need individual dice use this). </p>
 
-<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00203">203</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00204">204</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="checks_8hpp_source.html#l00450">rpg_os::resolvePoolCheck()</a>, <a class="el" href="checks_8hpp_source.html#l00309">rpg_os::detail::rollWithTotal()</a>, <a class="el" href="test__dice_8cpp_source.html#l00083">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00067">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00092">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00100">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00037">TEST_CASE()</a>, and <a class="el" href="test__dice_8cpp_source.html#l00059">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="checks_8hpp_source.html#l00451">rpg_os::resolvePoolCheck()</a>, <a class="el" href="checks_8hpp_source.html#l00310">rpg_os::detail::rollWithTotal()</a>, <a class="el" href="test__dice_8cpp_source.html#l00083">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00067">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00092">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00100">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00037">TEST_CASE()</a>, and <a class="el" href="test__dice_8cpp_source.html#l00059">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -600,9 +600,9 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 </div><div class="memdoc">
 <p>Rolls every die and returns the signed total (constant + signed dice). This is the common "how much damage / how high did I roll" entry point; use <a class="el" href="classrpg__os_1_1DiceExpression.html#af86ee76d55c8a135295663ba541a5fb4">roll</a> instead when individual dice matter. </p>
 
-<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00217">217</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00218">218</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00404">rpg_os::detail::attackOnce()</a>, <a class="el" href="checks_8hpp_source.html#l00355">rpg_os::detail::gradeThresholdResult()</a>, <a class="el" href="variance_8hpp_source.html#l00131">rpg_os::readVariantValue()</a>, <a class="el" href="checks_8hpp_source.html#l00517">rpg_os::resolveOpposedCheck()</a>, <a class="el" href="checks_8hpp_source.html#l00579">rpg_os::resolveResistanceCheck()</a>, <a class="el" href="test__dice_8cpp_source.html#l00067">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00151">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00092">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00076">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00100">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00037">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00045">TEST_CASE()</a>, and <a class="el" href="test__dice_8cpp_source.html#l00059">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00405">rpg_os::detail::attackOnce()</a>, <a class="el" href="checks_8hpp_source.html#l00356">rpg_os::detail::gradeThresholdResult()</a>, <a class="el" href="variance_8hpp_source.html#l00132">rpg_os::readVariantValue()</a>, <a class="el" href="checks_8hpp_source.html#l00518">rpg_os::resolveOpposedCheck()</a>, <a class="el" href="checks_8hpp_source.html#l00580">rpg_os::resolveResistanceCheck()</a>, <a class="el" href="test__dice_8cpp_source.html#l00067">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00151">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00092">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00076">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00100">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00037">TEST_CASE()</a>, <a class="el" href="test__dice_8cpp_source.html#l00045">TEST_CASE()</a>, and <a class="el" href="test__dice_8cpp_source.html#l00059">TEST_CASE()</a>.</p>
 
 </div>
 </div>

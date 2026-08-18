@@ -8,15 +8,15 @@
 <!-- Browser tab icon — copied into the output via HTML_EXTRA_FILES (favicon.png). -->
 <link rel="icon" type="image/png" href="favicon.png"/>
 <!-- BEGIN opengraph metadata -->
-<meta property="og:title" content="RPG-OS" />
-<meta property="og:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
+<meta property="og:title" content="RPG OS" />
+<meta property="og:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
 <meta property="og:url" content="https://Mundus-Mirabilis.github.io/RPG-OS/" />
 <!-- END opengraph metadata -->
 <!-- BEGIN twitter metadata -->
-<meta name="twitter:title" content="RPG-OS" />
-<meta name="twitter:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
+<meta name="twitter:title" content="RPG OS" />
+<meta name="twitter:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
 <!-- END twitter metadata -->
-<title>RPG-OS: test_variance.cpp Source File</title>
+<title>RPG OS: test_variance.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -55,9 +55,9 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="mundus-mirabilis_512.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">RPG-OS
+   <div id="projectname">RPG OS
    </div>
-   <div id="projectbrief">A header-only C++23 universal rule engine for tabletop role-playing games</div>
+   <div id="projectbrief">A universal, header-only C++23 rule engine for tabletop role-playing games</div>
   </td>
  </tr>
  </tbody>
@@ -218,15 +218,15 @@ $(document).ready(function(){initNavTree('test__variance_8cpp_source.html',''); 
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  <a class="code hl_function" href="test__ruleset__loader_8cpp.html#a3ef0060dff335461a92da38c5eee6e2a">CHECK</a>(random-&gt;resource(<span class="stringliteral">&quot;HP&quot;</span>) &lt;= 18);</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>}</div>
 </div>
-<div class="ttc" id="aclassrpg__os_1_1DefaultRandom_html"><div class="ttname"><a href="classrpg__os_1_1DefaultRandom.html">rpg_os::DefaultRandom</a></div><div class="ttdef"><b>Definition</b> <a href="dice__engine_8hpp_source.html#l00090">dice_engine.hpp:90</a></div></div>
-<div class="ttc" id="aclassrpg__os_1_1RulesetEngine_html"><div class="ttname"><a href="classrpg__os_1_1RulesetEngine.html">rpg_os::RulesetEngine</a></div><div class="ttdoc">The universal (dynamic) engine facade.</div><div class="ttdef"><b>Definition</b> <a href="engine_8hpp_source.html#l00053">engine.hpp:53</a></div></div>
-<div class="ttc" id="aclassrpg__os_1_1RulesetEngine_html_a623a96b8702962fa31b0baa77bde4af5"><div class="ttname"><a href="classrpg__os_1_1RulesetEngine.html#a623a96b8702962fa31b0baa77bde4af5">rpg_os::RulesetEngine::loadRulesetFromJson</a></div><div class="ttdeci">bool loadRulesetFromJson(std::string_view jsonContent)</div><div class="ttdef"><b>Definition</b> <a href="engine_8hpp_source.html#l00063">engine.hpp:63</a></div></div>
-<div class="ttc" id="aclassrpg__os_1_1RulesetEngine_html_aab57244493e289f00e4650cf1eb1cb03"><div class="ttname"><a href="classrpg__os_1_1RulesetEngine.html#aab57244493e289f00e4650cf1eb1cb03">rpg_os::RulesetEngine::createCreature</a></div><div class="ttdeci">std::shared_ptr&lt; DynamicEntity &gt; createCreature(std::string_view creatureId, Variance variance=Variance::Random)</div><div class="ttdef"><b>Definition</b> <a href="engine_8hpp_source.html#l00163">engine.hpp:163</a></div></div>
-<div class="ttc" id="aengine_8hpp_html"><div class="ttname"><a href="engine_8hpp.html">engine.hpp</a></div><div class="ttdoc">RulesetEngine facade (universal mode).</div></div>
-<div class="ttc" id="anamespacerpg__os_html_aa55b58906fac846e9841f808de5c926e"><div class="ttname"><a href="namespacerpg__os.html#aa55b58906fac846e9841f808de5c926e">rpg_os::pickVariant</a></div><div class="ttdeci">constexpr int32_t pickVariant(int32_t min, int32_t max, Variance variance, Rng &amp;rng)</div><div class="ttdef"><b>Definition</b> <a href="variance_8hpp_source.html#l00065">variance.hpp:65</a></div></div>
-<div class="ttc" id="anamespacerpg__os_html_ab870da3d65c79d59dad5920efc43dc65"><div class="ttname"><a href="namespacerpg__os.html#ab870da3d65c79d59dad5920efc43dc65">rpg_os::Variance</a></div><div class="ttdeci">Variance</div><div class="ttdef"><b>Definition</b> <a href="variance_8hpp_source.html#l00048">variance.hpp:48</a></div></div>
-<div class="ttc" id="anamespacerpg__os_html_aec9d689bf0943cb314269cc0e629ddb1"><div class="ttname"><a href="namespacerpg__os.html#aec9d689bf0943cb314269cc0e629ddb1">rpg_os::readVariantValue</a></div><div class="ttdeci">constexpr int32_t readVariantValue(const Json &amp;entry, Variance variance, Rng &amp;rng)</div><div class="ttdef"><b>Definition</b> <a href="variance_8hpp_source.html#l00131">variance.hpp:131</a></div></div>
-<div class="ttc" id="anamespacerpg__os_html_afa8b802b0bd5a50e36a895d4c7e0820d"><div class="ttname"><a href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">rpg_os::Json</a></div><div class="ttdeci">nlohmann::json Json</div><div class="ttdef"><b>Definition</b> <a href="json_8hpp_source.html#l00039">json.hpp:39</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1DefaultRandom_html"><div class="ttname"><a href="classrpg__os_1_1DefaultRandom.html">rpg_os::DefaultRandom</a></div><div class="ttdef"><b>Definition</b> <a href="dice__engine_8hpp_source.html#l00091">dice_engine.hpp:91</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1RulesetEngine_html"><div class="ttname"><a href="classrpg__os_1_1RulesetEngine.html">rpg_os::RulesetEngine</a></div><div class="ttdoc">The universal (dynamic) engine facade.</div><div class="ttdef"><b>Definition</b> <a href="engine_8hpp_source.html#l00054">engine.hpp:54</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1RulesetEngine_html_a623a96b8702962fa31b0baa77bde4af5"><div class="ttname"><a href="classrpg__os_1_1RulesetEngine.html#a623a96b8702962fa31b0baa77bde4af5">rpg_os::RulesetEngine::loadRulesetFromJson</a></div><div class="ttdeci">bool loadRulesetFromJson(std::string_view jsonContent)</div><div class="ttdef"><b>Definition</b> <a href="engine_8hpp_source.html#l00064">engine.hpp:64</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1RulesetEngine_html_aab57244493e289f00e4650cf1eb1cb03"><div class="ttname"><a href="classrpg__os_1_1RulesetEngine.html#aab57244493e289f00e4650cf1eb1cb03">rpg_os::RulesetEngine::createCreature</a></div><div class="ttdeci">std::shared_ptr&lt; DynamicEntity &gt; createCreature(std::string_view creatureId, Variance variance=Variance::Random)</div><div class="ttdef"><b>Definition</b> <a href="engine_8hpp_source.html#l00164">engine.hpp:164</a></div></div>
+<div class="ttc" id="aengine_8hpp_html"><div class="ttname"><a href="engine_8hpp.html">engine.hpp</a></div></div>
+<div class="ttc" id="anamespacerpg__os_html_aa55b58906fac846e9841f808de5c926e"><div class="ttname"><a href="namespacerpg__os.html#aa55b58906fac846e9841f808de5c926e">rpg_os::pickVariant</a></div><div class="ttdeci">constexpr int32_t pickVariant(int32_t min, int32_t max, Variance variance, Rng &amp;rng)</div><div class="ttdef"><b>Definition</b> <a href="variance_8hpp_source.html#l00066">variance.hpp:66</a></div></div>
+<div class="ttc" id="anamespacerpg__os_html_ab870da3d65c79d59dad5920efc43dc65"><div class="ttname"><a href="namespacerpg__os.html#ab870da3d65c79d59dad5920efc43dc65">rpg_os::Variance</a></div><div class="ttdeci">Variance</div><div class="ttdef"><b>Definition</b> <a href="variance_8hpp_source.html#l00049">variance.hpp:49</a></div></div>
+<div class="ttc" id="anamespacerpg__os_html_aec9d689bf0943cb314269cc0e629ddb1"><div class="ttname"><a href="namespacerpg__os.html#aec9d689bf0943cb314269cc0e629ddb1">rpg_os::readVariantValue</a></div><div class="ttdeci">constexpr int32_t readVariantValue(const Json &amp;entry, Variance variance, Rng &amp;rng)</div><div class="ttdef"><b>Definition</b> <a href="variance_8hpp_source.html#l00132">variance.hpp:132</a></div></div>
+<div class="ttc" id="anamespacerpg__os_html_afa8b802b0bd5a50e36a895d4c7e0820d"><div class="ttname"><a href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">rpg_os::Json</a></div><div class="ttdeci">nlohmann::json Json</div><div class="ttdef"><b>Definition</b> <a href="json_8hpp_source.html#l00040">json.hpp:40</a></div></div>
 <div class="ttc" id="atest__ruleset__loader_8cpp_html_a3ef0060dff335461a92da38c5eee6e2a"><div class="ttname"><a href="test__ruleset__loader_8cpp.html#a3ef0060dff335461a92da38c5eee6e2a">CHECK</a></div><div class="ttdeci">CHECK(both.licence==&quot;MIT&quot;)</div></div>
 <div class="ttc" id="atest__util_8hpp_html"><div class="ttname"><a href="test__util_8hpp.html">test_util.hpp</a></div><div class="ttdoc">Shared helpers for the rpg_os test suite.</div></div>
 <div class="ttc" id="atest__util_8hpp_html_a7c9d4cd9e80163575e6628d53c882195"><div class="ttname"><a href="test__util_8hpp.html#a7c9d4cd9e80163575e6628d53c882195">script</a></div><div class="ttdeci">ScriptedRng script(std::initializer_list&lt; int &gt; values)</div><div class="ttdef"><b>Definition</b> <a href="test__util_8hpp_source.html#l00050">test_util.hpp:50</a></div></div>

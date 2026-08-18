@@ -8,15 +8,15 @@
 <!-- Browser tab icon — copied into the output via HTML_EXTRA_FILES (favicon.png). -->
 <link rel="icon" type="image/png" href="favicon.png"/>
 <!-- BEGIN opengraph metadata -->
-<meta property="og:title" content="RPG-OS" />
-<meta property="og:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
+<meta property="og:title" content="RPG OS" />
+<meta property="og:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
 <meta property="og:url" content="https://Mundus-Mirabilis.github.io/RPG-OS/" />
 <!-- END opengraph metadata -->
 <!-- BEGIN twitter metadata -->
-<meta name="twitter:title" content="RPG-OS" />
-<meta name="twitter:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
+<meta name="twitter:title" content="RPG OS" />
+<meta name="twitter:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
 <!-- END twitter metadata -->
-<title>RPG-OS: rpg_os::CheckResolver Class Reference</title>
+<title>RPG OS: rpg_os::CheckResolver Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -55,9 +55,9 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="mundus-mirabilis_512.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">RPG-OS
+   <div id="projectname">RPG OS
    </div>
-   <div id="projectbrief">A header-only C++23 universal rule engine for tabletop role-playing games</div>
+   <div id="projectbrief">A universal, header-only C++23 rule engine for tabletop role-playing games</div>
   </td>
  </tr>
  </tbody>
@@ -141,7 +141,7 @@ Static Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Resolves checks by ruleset-declared name. </p>
 
-<p class="definition">Definition at line <a class="el" href="check__resolver_8hpp_source.html#l00032">32</a> of file <a class="el" href="check__resolver_8hpp_source.html">check_resolver.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="check__resolver_8hpp_source.html#l00033">33</a> of file <a class="el" href="check__resolver_8hpp_source.html">check_resolver.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a748e3814be7e220c7fd87f746b4113c9" name="a748e3814be7e220c7fd87f746b4113c9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a748e3814be7e220c7fd87f746b4113c9">&#9670;&#160;</a></span>resolve()</h2>
@@ -205,11 +205,11 @@ template&lt;StatProvider Actor, StatProvider Target, RandomNumberGenerator Rng&g
 <p>Resolves <code>checkTypeId</code> from <code>ruleset</code> for <code>actor</code> (and optional <code>target</code>). Throws std::invalid_argument for an unknown check type.</p>
 <dl class="section user"><dt>Why throw on an unknown name?</dt><dd>An unknown check type is a ruleset/authoring bug (a typo in a ruleset or a caller asking for a check the loaded system does not define). Failing fast with the offending name beats silently returning a "default" check that would resolve against the wrong mechanism. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="check__resolver_8hpp_source.html#l00043">43</a> of file <a class="el" href="check__resolver_8hpp_source.html">check_resolver.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="check__resolver_8hpp_source.html#l00044">44</a> of file <a class="el" href="check__resolver_8hpp_source.html">check_resolver.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ruleset__loader_8hpp_source.html#l00297">rpg_os::Ruleset::findCheckType()</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00119">rpg_os::CheckTypeDef::recipe</a>, and <a class="el" href="checks_8hpp_source.html#l00618">rpg_os::resolveCheck()</a>.</p>
+<p class="reference">References <a class="el" href="ruleset__loader_8hpp_source.html#l00298">rpg_os::Ruleset::findCheckType()</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00120">rpg_os::CheckTypeDef::recipe</a>, and <a class="el" href="checks_8hpp_source.html#l00619">rpg_os::resolveCheck()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00622">rpg_os::RulesetEngine::castSpell()</a>, <a class="el" href="engine_8hpp_source.html#l00376">rpg_os::RulesetEngine::executeCheck()</a>, and <a class="el" href="engine_8hpp_source.html#l00406">rpg_os::RulesetEngine::executeCheckEffective()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00623">rpg_os::RulesetEngine::castSpell()</a>, <a class="el" href="engine_8hpp_source.html#l00377">rpg_os::RulesetEngine::executeCheck()</a>, and <a class="el" href="engine_8hpp_source.html#l00407">rpg_os::RulesetEngine::executeCheckEffective()</a>.</p>
 
 </div>
 </div>

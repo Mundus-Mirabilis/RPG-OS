@@ -8,15 +8,15 @@
 <!-- Browser tab icon — copied into the output via HTML_EXTRA_FILES (favicon.png). -->
 <link rel="icon" type="image/png" href="favicon.png"/>
 <!-- BEGIN opengraph metadata -->
-<meta property="og:title" content="RPG-OS" />
-<meta property="og:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
+<meta property="og:title" content="RPG OS" />
+<meta property="og:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
 <meta property="og:url" content="https://Mundus-Mirabilis.github.io/RPG-OS/" />
 <!-- END opengraph metadata -->
 <!-- BEGIN twitter metadata -->
-<meta name="twitter:title" content="RPG-OS" />
-<meta name="twitter:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
+<meta name="twitter:title" content="RPG OS" />
+<meta name="twitter:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
 <!-- END twitter metadata -->
-<title>RPG-OS: rpg_os::StatProvider Concept Reference</title>
+<title>RPG OS: rpg_os::StatProvider Concept Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -55,9 +55,9 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="mundus-mirabilis_512.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">RPG-OS
+   <div id="projectname">RPG OS
    </div>
-   <div id="projectbrief">A header-only C++23 universal rule engine for tabletop role-playing games</div>
+   <div id="projectbrief">A universal, header-only C++23 rule engine for tabletop role-playing games</div>
   </td>
  </tr>
  </tbody>
@@ -130,12 +130,12 @@ $(document).ready(function(){initNavTree('conceptrpg__os_1_1StatProvider.html','
 <div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptrpg__os_1_1StatProvider.html">rpg_os::StatProvider</a> =  <span class="keyword">requires</span>(<span class="keyword">const</span> T &amp;entity, std::string_view id) {</div>
 <div class="line">  { entity.getStat(<span class="keywordtype">id</span>) } -&gt; std::integral;</div>
 <div class="line">}</div>
-<div class="ttc" id="aconceptrpg__os_1_1StatProvider_html"><div class="ttname"><a href="conceptrpg__os_1_1StatProvider.html">rpg_os::StatProvider</a></div><div class="ttdef"><b>Definition</b> <a href="concepts_8hpp_source.html#l00067">concepts.hpp:67</a></div></div>
+<div class="ttc" id="aconceptrpg__os_1_1StatProvider_html"><div class="ttname"><a href="conceptrpg__os_1_1StatProvider.html">rpg_os::StatProvider</a></div><div class="ttdef"><b>Definition</b> <a href="concepts_8hpp_source.html#l00068">concepts.hpp:68</a></div></div>
 </div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Anything that can answer "what is the current value of stat `id`?".</p>
 <dl class="section user"><dt>Why any integral type (not a fixed <code>int32_t</code>)?</dt><dd>Stat values are looked up by their ruleset id, and the algorithms only ever read them (promoting to the computation type where they combine them). That leaves the <em>storage</em> type free: the universal entity stores <code>int32_t</code> in hash maps, while generated specific-mode characters can store attributes and skills in the narrowest type that fits the ruleset's bounds (<code>uint8_t</code>, <code>int8_t</code>, ...) — a template over the stored integral type that costs nothing at runtime and shrinks the generated character objects. Both accept the same <code>std::string_view</code> key, so the shared algorithm bodies are identical for every storage width. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="concepts_8hpp_source.html#l00067">67</a> of file <a class="el" href="concepts_8hpp_source.html">concepts.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="concepts_8hpp_source.html#l00068">68</a> of file <a class="el" href="concepts_8hpp_source.html">concepts.hpp</a>.</p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

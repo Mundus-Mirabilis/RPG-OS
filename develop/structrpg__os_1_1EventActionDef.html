@@ -8,15 +8,15 @@
 <!-- Browser tab icon — copied into the output via HTML_EXTRA_FILES (favicon.png). -->
 <link rel="icon" type="image/png" href="favicon.png"/>
 <!-- BEGIN opengraph metadata -->
-<meta property="og:title" content="RPG-OS" />
-<meta property="og:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
+<meta property="og:title" content="RPG OS" />
+<meta property="og:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
 <meta property="og:url" content="https://Mundus-Mirabilis.github.io/RPG-OS/" />
 <!-- END opengraph metadata -->
 <!-- BEGIN twitter metadata -->
-<meta name="twitter:title" content="RPG-OS" />
-<meta name="twitter:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
+<meta name="twitter:title" content="RPG OS" />
+<meta name="twitter:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
 <!-- END twitter metadata -->
-<title>RPG-OS: rpg_os::EventActionDef Struct Reference</title>
+<title>RPG OS: rpg_os::EventActionDef Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -55,9 +55,9 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="mundus-mirabilis_512.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">RPG-OS
+   <div id="projectname">RPG OS
    </div>
-   <div id="projectbrief">A header-only C++23 universal rule engine for tabletop role-playing games</div>
+   <div id="projectbrief">A universal, header-only C++23 rule engine for tabletop role-playing games</div>
   </td>
  </tr>
  </tbody>
@@ -168,7 +168,7 @@ Public Attributes</h2></td></tr>
 <div class="textblock"><p>One action inside an event trigger.</p>
 <dl class="section user"><dt>Why one struct with all fields instead of per-type structs?</dt><dd>The action types are few ("modify_event_damage", "consume_resource", "apply_condition", plus the bookkeeping actions "gain_item", "remove_item", "gain_currency", "spend_currency", "gain_xp") and each uses only a couple of fields. One struct with the union of fields keeps the loader, the engine's executor, and the code generator reading from the same shape — at the cost of a few unused fields per action, which is negligible for ruleset-sized data. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00138">138</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00139">139</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="a891457979528b9f2be0ef37d7cf0939e" name="a891457979528b9f2be0ef37d7cf0939e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a891457979528b9f2be0ef37d7cf0939e">&#9670;&#160;</a></span>amount</h2>
@@ -184,7 +184,7 @@ Public Attributes</h2></td></tr>
 
 <p>amount: consumed/currency/XP amount, or item quantity </p>
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00141">141</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00142">142</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
 </div>
 </div>
@@ -202,7 +202,7 @@ Public Attributes</h2></td></tr>
 
 <p>apply_condition: condition id </p>
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00145">145</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00146">146</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
 </div>
 </div>
@@ -220,7 +220,7 @@ Public Attributes</h2></td></tr>
 
 <p>parsed damage expression </p>
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00144">144</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00145">145</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
 </div>
 </div>
@@ -238,7 +238,7 @@ Public Attributes</h2></td></tr>
 
 <p>modify_event_damage: damage expression </p>
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00143">143</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00144">144</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
 </div>
 </div>
@@ -256,7 +256,7 @@ Public Attributes</h2></td></tr>
 
 <p>gain_item / remove_item: the item id </p>
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00142">142</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00143">143</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
 </div>
 </div>
@@ -274,7 +274,7 @@ Public Attributes</h2></td></tr>
 
 <p>consume_resource: which resource </p>
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00140">140</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00141">141</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
 </div>
 </div>
@@ -292,7 +292,7 @@ Public Attributes</h2></td></tr>
 
 <p>parsed stack count expression </p>
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00147">147</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00148">148</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
 </div>
 </div>
@@ -310,7 +310,7 @@ Public Attributes</h2></td></tr>
 
 <p>apply_condition: stack count expression </p>
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00146">146</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00147">147</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
 </div>
 </div>
@@ -328,7 +328,7 @@ Public Attributes</h2></td></tr>
 
 <p>the action kind (see the file doc comment) </p>
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00139">139</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00140">140</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
 </div>
 </div>

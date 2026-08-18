@@ -8,15 +8,15 @@
 <!-- Browser tab icon — copied into the output via HTML_EXTRA_FILES (favicon.png). -->
 <link rel="icon" type="image/png" href="favicon.png"/>
 <!-- BEGIN opengraph metadata -->
-<meta property="og:title" content="RPG-OS" />
-<meta property="og:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
+<meta property="og:title" content="RPG OS" />
+<meta property="og:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
 <meta property="og:url" content="https://Mundus-Mirabilis.github.io/RPG-OS/" />
 <!-- END opengraph metadata -->
 <!-- BEGIN twitter metadata -->
-<meta name="twitter:title" content="RPG-OS" />
-<meta name="twitter:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
+<meta name="twitter:title" content="RPG OS" />
+<meta name="twitter:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
 <!-- END twitter metadata -->
-<title>RPG-OS: errors.hpp Source File</title>
+<title>RPG OS: errors.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -55,9 +55,9 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="mundus-mirabilis_512.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">RPG-OS
+   <div id="projectname">RPG OS
    </div>
-   <div id="projectbrief">A header-only C++23 universal rule engine for tabletop role-playing games</div>
+   <div id="projectbrief">A universal, header-only C++23 rule engine for tabletop role-playing games</div>
   </td>
  </tr>
  </tbody>
@@ -131,39 +131,39 @@ $(document).ready(function(){initNavTree('errors_8hpp_source.html',''); initResi
 <a href="errors_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2026 Christian Mayer and the Mundus Mirabilis contributors.</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// SPDX-License-Identifier: Apache-2.0</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacerpg__os.html">rpg_os</a> {</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="foldopen" id="foldopen00027" data-start="{" data-end="};">
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766">   27</a></span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766">BookkeepingError</a> {</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#a475606cc248fcbc80000a0ceb3b8c448a6adf97f83acf6453d4a6a4b1070f3754">None</a>,                </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766ab94b40e5c60319f4fc15e8166bd8d2af">UnknownItem</a>,         </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766aef34acf3252b0a27a9b5b0b3eae373dd">UnknownContainer</a>,    </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766ae9364046d848a745b43c8bd144ef597d">UnknownCurrency</a>,     </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766a927ab2e7bff99240a62f32cea1abc324">UnknownDenomination</a>, </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766a41b6db72fa3a5db6e5fdf39d47e767c3">UnknownCondition</a>,    </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766ab1ecdc430320983beb8bc90d62c3db51">UnknownSpell</a>,        </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766a48979b0ea0d774588fe1ef113f43387a">UnknownCostTable</a>,    </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766a261cca2ac483068d987c38cfa8fd6094">NotEnoughMoney</a>,      </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766a75dccd608eefc2f608964e1430e6dd20">SlotOccupied</a>,        </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766a23577eacdfab2acde669a2b80f876995">SlotMismatch</a>,        </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766aa02cbd2c1225951f433567e43b12d165">ItemNotOwned</a>,        </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766a4fcf3e94521b7db24bd0c3bd6e9201af">OverCapacity</a>,        </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766ae4f167d7fb73c6592711f327d3d7f8f6">NotEquipped</a>,         </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766ae34430d2f3524e9787b64b79d0ae6b97">SpellNotKnown</a>,       </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766adf78dea9b4009e6bd19816575521d083">SpellNotPrepared</a>,    </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766a7cde3b18e13aa9cb5addf7e0ff1f9f0d">NoSpellSlot</a>,         </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766ad5bad3d08f3863cfb75243ed6bef5751">InsufficientXp</a>,      </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766a2cab9bb5d931ca91165f25c1be4189c1">UnknownAffliction</a>,   </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766a8e035c9eac2ef52493607d738b571317">NoEncumbrance</a>,       </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766a143bbdad2c2cf2dd5ba6e537edd822c9">NoRuleset</a>,           </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>};</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacerpg__os.html">rpg_os</a> {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="};">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766">   28</a></span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766">BookkeepingError</a> {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#a475606cc248fcbc80000a0ceb3b8c448a6adf97f83acf6453d4a6a4b1070f3754">None</a>,                </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766ab94b40e5c60319f4fc15e8166bd8d2af">UnknownItem</a>,         </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766aef34acf3252b0a27a9b5b0b3eae373dd">UnknownContainer</a>,    </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766ae9364046d848a745b43c8bd144ef597d">UnknownCurrency</a>,     </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766a927ab2e7bff99240a62f32cea1abc324">UnknownDenomination</a>, </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766a41b6db72fa3a5db6e5fdf39d47e767c3">UnknownCondition</a>,    </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766ab1ecdc430320983beb8bc90d62c3db51">UnknownSpell</a>,        </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766a48979b0ea0d774588fe1ef113f43387a">UnknownCostTable</a>,    </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766a261cca2ac483068d987c38cfa8fd6094">NotEnoughMoney</a>,      </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766a75dccd608eefc2f608964e1430e6dd20">SlotOccupied</a>,        </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766a23577eacdfab2acde669a2b80f876995">SlotMismatch</a>,        </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766aa02cbd2c1225951f433567e43b12d165">ItemNotOwned</a>,        </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766a4fcf3e94521b7db24bd0c3bd6e9201af">OverCapacity</a>,        </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766ae4f167d7fb73c6592711f327d3d7f8f6">NotEquipped</a>,         </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766ae34430d2f3524e9787b64b79d0ae6b97">SpellNotKnown</a>,       </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766adf78dea9b4009e6bd19816575521d083">SpellNotPrepared</a>,    </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766a7cde3b18e13aa9cb5addf7e0ff1f9f0d">NoSpellSlot</a>,         </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766ad5bad3d08f3863cfb75243ed6bef5751">InsufficientXp</a>,      </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766a2cab9bb5d931ca91165f25c1be4189c1">UnknownAffliction</a>,   </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766a8e035c9eac2ef52493607d738b571317">NoEncumbrance</a>,       </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766a143bbdad2c2cf2dd5ba6e537edd822c9">NoRuleset</a>,           </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>};</div>
 </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>} <span class="comment">// namespace rpg_os</span></div>
-<div class="ttc" id="anamespacerpg__os_html"><div class="ttname"><a href="namespacerpg__os.html">rpg_os</a></div><div class="ttdef"><b>Definition</b> <a href="event__system_8hpp_source.html#l00041">event_system.hpp:41</a></div></div>
-<div class="ttc" id="anamespacerpg__os_html_a35c4b2d63f72d02169671d65591d1766"><div class="ttname"><a href="namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766">rpg_os::BookkeepingError</a></div><div class="ttdeci">BookkeepingError</div><div class="ttdef"><b>Definition</b> <a href="errors_8hpp_source.html#l00027">errors.hpp:27</a></div></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>} <span class="comment">// namespace rpg_os</span></div>
+<div class="ttc" id="anamespacerpg__os_html"><div class="ttname"><a href="namespacerpg__os.html">rpg_os</a></div><div class="ttdef"><b>Definition</b> <a href="event__system_8hpp_source.html#l00042">event_system.hpp:42</a></div></div>
+<div class="ttc" id="anamespacerpg__os_html_a35c4b2d63f72d02169671d65591d1766"><div class="ttname"><a href="namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766">rpg_os::BookkeepingError</a></div><div class="ttdeci">BookkeepingError</div><div class="ttdef"><b>Definition</b> <a href="errors_8hpp_source.html#l00028">errors.hpp:28</a></div></div>
 <div class="ttc" id="anamespacerpg__os_html_a35c4b2d63f72d02169671d65591d1766a143bbdad2c2cf2dd5ba6e537edd822c9"><div class="ttname"><a href="namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766a143bbdad2c2cf2dd5ba6e537edd822c9">rpg_os::BookkeepingError::NoRuleset</a></div><div class="ttdeci">@ NoRuleset</div><div class="ttdoc">an operation was attempted before a ruleset was loaded</div></div>
 <div class="ttc" id="anamespacerpg__os_html_a35c4b2d63f72d02169671d65591d1766a23577eacdfab2acde669a2b80f876995"><div class="ttname"><a href="namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766a23577eacdfab2acde669a2b80f876995">rpg_os::BookkeepingError::SlotMismatch</a></div><div class="ttdeci">@ SlotMismatch</div><div class="ttdoc">the item cannot go into the requested slot</div></div>
 <div class="ttc" id="anamespacerpg__os_html_a35c4b2d63f72d02169671d65591d1766a261cca2ac483068d987c38cfa8fd6094"><div class="ttname"><a href="namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766a261cca2ac483068d987c38cfa8fd6094">rpg_os::BookkeepingError::NotEnoughMoney</a></div><div class="ttdeci">@ NotEnoughMoney</div><div class="ttdoc">the payer lacks the funds</div></div>

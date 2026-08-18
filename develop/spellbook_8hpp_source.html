@@ -8,15 +8,15 @@
 <!-- Browser tab icon — copied into the output via HTML_EXTRA_FILES (favicon.png). -->
 <link rel="icon" type="image/png" href="favicon.png"/>
 <!-- BEGIN opengraph metadata -->
-<meta property="og:title" content="RPG-OS" />
-<meta property="og:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
+<meta property="og:title" content="RPG OS" />
+<meta property="og:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
 <meta property="og:url" content="https://Mundus-Mirabilis.github.io/RPG-OS/" />
 <!-- END opengraph metadata -->
 <!-- BEGIN twitter metadata -->
-<meta name="twitter:title" content="RPG-OS" />
-<meta name="twitter:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
+<meta name="twitter:title" content="RPG OS" />
+<meta name="twitter:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
 <!-- END twitter metadata -->
-<title>RPG-OS: spellbook.hpp Source File</title>
+<title>RPG OS: spellbook.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -55,9 +55,9 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="mundus-mirabilis_512.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">RPG-OS
+   <div id="projectname">RPG OS
    </div>
-   <div id="projectbrief">A header-only C++23 universal rule engine for tabletop role-playing games</div>
+   <div id="projectbrief">A universal, header-only C++23 rule engine for tabletop role-playing games</div>
   </td>
  </tr>
  </tbody>
@@ -131,176 +131,176 @@ $(document).ready(function(){initNavTree('spellbook_8hpp_source.html',''); initR
 <a href="spellbook_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2026 Christian Mayer and the Mundus Mirabilis contributors.</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// SPDX-License-Identifier: Apache-2.0</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;algorithm&gt;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;map&gt;</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;<a class="code" href="json_8hpp.html">rpg_os/common/json.hpp</a>&gt;</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;string_view&gt;</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacerpg__os.html">rpg_os</a> {</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="foldopen" id="foldopen00023" data-start="{" data-end="};">
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classrpg__os_1_1Spellbook.html">   23</a></span><span class="keyword">class </span><a class="code hl_class" href="classrpg__os_1_1Spellbook.html">Spellbook</a> {</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">public</span>:</div>
-<div class="foldopen" id="foldopen00026" data-start="{" data-end="}">
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classrpg__os_1_1Spellbook.html#a00297b79a084d795c437965652416cc4">   26</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classrpg__os_1_1Spellbook.html#a00297b79a084d795c437965652416cc4">learn</a>(std::string_view spellId) {</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="classrpg__os_1_1Spellbook.html#a651fd0ff935e37e6f4358b9885cc954d">knows</a>(spellId)) {</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>      m_known.push_back(std::string(spellId));</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    }</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  }</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;<a class="code" href="json_8hpp.html">rpg_os/common/json.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;string_view&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacerpg__os.html">rpg_os</a> {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="foldopen" id="foldopen00024" data-start="{" data-end="};">
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classrpg__os_1_1Spellbook.html">   24</a></span><span class="keyword">class </span><a class="code hl_class" href="classrpg__os_1_1Spellbook.html">Spellbook</a> {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00027" data-start="{" data-end="}">
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classrpg__os_1_1Spellbook.html#a00297b79a084d795c437965652416cc4">   27</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classrpg__os_1_1Spellbook.html#a00297b79a084d795c437965652416cc4">learn</a>(std::string_view spellId) {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="classrpg__os_1_1Spellbook.html#a651fd0ff935e37e6f4358b9885cc954d">knows</a>(spellId)) {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>      m_known.push_back(std::string(spellId));</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    }</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  }</div>
 </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="foldopen" id="foldopen00033" data-start="{" data-end="}">
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classrpg__os_1_1Spellbook.html#af9a6e6c409a93f0edc83d34355cc1d13">   33</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classrpg__os_1_1Spellbook.html#af9a6e6c409a93f0edc83d34355cc1d13">forget</a>(std::string_view spellId) {</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="classrpg__os_1_1Spellbook.html#a651fd0ff935e37e6f4358b9885cc954d">knows</a>(spellId)) {</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    }</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    m_known.erase(std::remove_if(m_known.begin(), m_known.end(),</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                                 [&amp;](<span class="keyword">const</span> std::string &amp;s) { return s == spellId; }),</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                  m_known.end());</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <a class="code hl_function" href="classrpg__os_1_1Spellbook.html#a407cc402e5401e4617458a7d5a9e1b9f">unprepare</a>(spellId);</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  }</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="foldopen" id="foldopen00034" data-start="{" data-end="}">
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classrpg__os_1_1Spellbook.html#af9a6e6c409a93f0edc83d34355cc1d13">   34</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classrpg__os_1_1Spellbook.html#af9a6e6c409a93f0edc83d34355cc1d13">forget</a>(std::string_view spellId) {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="classrpg__os_1_1Spellbook.html#a651fd0ff935e37e6f4358b9885cc954d">knows</a>(spellId)) {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    }</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    m_known.erase(std::remove_if(m_known.begin(), m_known.end(),</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                                 [&amp;](<span class="keyword">const</span> std::string &amp;s) { return s == spellId; }),</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                  m_known.end());</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <a class="code hl_function" href="classrpg__os_1_1Spellbook.html#a407cc402e5401e4617458a7d5a9e1b9f">unprepare</a>(spellId);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  }</div>
 </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="foldopen" id="foldopen00045" data-start="{" data-end="}">
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classrpg__os_1_1Spellbook.html#a014d4d9b8d4145b061eb5a1c897390ba">   45</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classrpg__os_1_1Spellbook.html#a014d4d9b8d4145b061eb5a1c897390ba">prepare</a>(std::string_view spellId) {</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="classrpg__os_1_1Spellbook.html#a651fd0ff935e37e6f4358b9885cc954d">knows</a>(spellId)) {</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    }</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="classrpg__os_1_1Spellbook.html#ae10d9927e359695cc7c0571ddd22026a">hasPrepared</a>(spellId)) {</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>      m_prepared.push_back(std::string(spellId));</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    }</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  }</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="foldopen" id="foldopen00046" data-start="{" data-end="}">
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="classrpg__os_1_1Spellbook.html#a014d4d9b8d4145b061eb5a1c897390ba">   46</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classrpg__os_1_1Spellbook.html#a014d4d9b8d4145b061eb5a1c897390ba">prepare</a>(std::string_view spellId) {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="classrpg__os_1_1Spellbook.html#a651fd0ff935e37e6f4358b9885cc954d">knows</a>(spellId)) {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    }</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="classrpg__os_1_1Spellbook.html#ae10d9927e359695cc7c0571ddd22026a">hasPrepared</a>(spellId)) {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>      m_prepared.push_back(std::string(spellId));</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  }</div>
 </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="foldopen" id="foldopen00056" data-start="{" data-end="}">
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="classrpg__os_1_1Spellbook.html#a407cc402e5401e4617458a7d5a9e1b9f">   56</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classrpg__os_1_1Spellbook.html#a407cc402e5401e4617458a7d5a9e1b9f">unprepare</a>(std::string_view spellId) {</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    m_prepared.erase(std::remove_if(m_prepared.begin(), m_prepared.end(),</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                                    [&amp;](<span class="keyword">const</span> std::string &amp;s) { return s == spellId; }),</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                     m_prepared.end());</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  }</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="foldopen" id="foldopen00057" data-start="{" data-end="}">
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classrpg__os_1_1Spellbook.html#a407cc402e5401e4617458a7d5a9e1b9f">   57</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classrpg__os_1_1Spellbook.html#a407cc402e5401e4617458a7d5a9e1b9f">unprepare</a>(std::string_view spellId) {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    m_prepared.erase(std::remove_if(m_prepared.begin(), m_prepared.end(),</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                                    [&amp;](<span class="keyword">const</span> std::string &amp;s) { return s == spellId; }),</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                     m_prepared.end());</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  }</div>
 </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="foldopen" id="foldopen00063" data-start="{" data-end="}">
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="classrpg__os_1_1Spellbook.html#a651fd0ff935e37e6f4358b9885cc954d">   63</a></span>  [[nodiscard]] <span class="keywordtype">bool</span> <a class="code hl_function" href="classrpg__os_1_1Spellbook.html#a651fd0ff935e37e6f4358b9885cc954d">knows</a>(std::string_view spellId)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> std::string &amp;s : m_known) {</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>      <span class="keywordflow">if</span> (s == spellId) {</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>      }</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    }</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  }</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="foldopen" id="foldopen00064" data-start="{" data-end="}">
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="classrpg__os_1_1Spellbook.html#a651fd0ff935e37e6f4358b9885cc954d">   64</a></span>  [[nodiscard]] <span class="keywordtype">bool</span> <a class="code hl_function" href="classrpg__os_1_1Spellbook.html#a651fd0ff935e37e6f4358b9885cc954d">knows</a>(std::string_view spellId)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> std::string &amp;s : m_known) {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>      <span class="keywordflow">if</span> (s == spellId) {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>      }</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    }</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  }</div>
 </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="foldopen" id="foldopen00073" data-start="{" data-end="}">
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="classrpg__os_1_1Spellbook.html#ae10d9927e359695cc7c0571ddd22026a">   73</a></span>  [[nodiscard]] <span class="keywordtype">bool</span> <a class="code hl_function" href="classrpg__os_1_1Spellbook.html#ae10d9927e359695cc7c0571ddd22026a">hasPrepared</a>(std::string_view spellId)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> std::string &amp;s : m_prepared) {</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>      <span class="keywordflow">if</span> (s == spellId) {</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>      }</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    }</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  }</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="foldopen" id="foldopen00074" data-start="{" data-end="}">
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="classrpg__os_1_1Spellbook.html#ae10d9927e359695cc7c0571ddd22026a">   74</a></span>  [[nodiscard]] <span class="keywordtype">bool</span> <a class="code hl_function" href="classrpg__os_1_1Spellbook.html#ae10d9927e359695cc7c0571ddd22026a">hasPrepared</a>(std::string_view spellId)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> std::string &amp;s : m_prepared) {</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>      <span class="keywordflow">if</span> (s == spellId) {</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>      }</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    }</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  }</div>
 </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
-<div class="foldopen" id="foldopen00083" data-start="{" data-end="}">
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="classrpg__os_1_1Spellbook.html#a4186727ee51b571505e5b3caca1ded29">   83</a></span>  [[nodiscard]] <span class="keyword">const</span> std::vector&lt;std::string&gt; &amp;<a class="code hl_function" href="classrpg__os_1_1Spellbook.html#a4186727ee51b571505e5b3caca1ded29">known</a>() const noexcept {</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keywordflow">return</span> m_known;</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  }</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="foldopen" id="foldopen00084" data-start="{" data-end="}">
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="classrpg__os_1_1Spellbook.html#a4186727ee51b571505e5b3caca1ded29">   84</a></span>  [[nodiscard]] <span class="keyword">const</span> std::vector&lt;std::string&gt; &amp;<a class="code hl_function" href="classrpg__os_1_1Spellbook.html#a4186727ee51b571505e5b3caca1ded29">known</a>() const noexcept {</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordflow">return</span> m_known;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  }</div>
 </div>
-<div class="foldopen" id="foldopen00087" data-start="{" data-end="}">
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="classrpg__os_1_1Spellbook.html#a15f3812d6fa1b6d15679b1244a0e5d14">   87</a></span>  [[nodiscard]] <span class="keyword">const</span> std::vector&lt;std::string&gt; &amp;<a class="code hl_function" href="classrpg__os_1_1Spellbook.html#a15f3812d6fa1b6d15679b1244a0e5d14">prepared</a>() const noexcept {</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keywordflow">return</span> m_prepared;</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  }</div>
+<div class="foldopen" id="foldopen00088" data-start="{" data-end="}">
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="classrpg__os_1_1Spellbook.html#a15f3812d6fa1b6d15679b1244a0e5d14">   88</a></span>  [[nodiscard]] <span class="keyword">const</span> std::vector&lt;std::string&gt; &amp;<a class="code hl_function" href="classrpg__os_1_1Spellbook.html#a15f3812d6fa1b6d15679b1244a0e5d14">prepared</a>() const noexcept {</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keywordflow">return</span> m_prepared;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>  }</div>
 </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
-<div class="foldopen" id="foldopen00092" data-start="{" data-end="}">
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="classrpg__os_1_1Spellbook.html#a489b55eb6cc84dd5620dd35f4031d41d">   92</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classrpg__os_1_1Spellbook.html#a489b55eb6cc84dd5620dd35f4031d41d">markSlotUsed</a>(int32_t level) {</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    ++m_slotsUsed[level];</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  }</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="foldopen" id="foldopen00093" data-start="{" data-end="}">
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="classrpg__os_1_1Spellbook.html#a489b55eb6cc84dd5620dd35f4031d41d">   93</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classrpg__os_1_1Spellbook.html#a489b55eb6cc84dd5620dd35f4031d41d">markSlotUsed</a>(int32_t level) {</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    ++m_slotsUsed[level];</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>  }</div>
 </div>
-<div class="foldopen" id="foldopen00096" data-start="{" data-end="}">
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="classrpg__os_1_1Spellbook.html#a963e3d257e12ae29f9db57ec90206a11">   96</a></span>  [[nodiscard]] int32_t <a class="code hl_function" href="classrpg__os_1_1Spellbook.html#a963e3d257e12ae29f9db57ec90206a11">slotsUsed</a>(int32_t level)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keyword">const</span> <span class="keyword">auto</span> it = m_slotsUsed.find(level);</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keywordflow">return</span> it == m_slotsUsed.end() ? 0 : it-&gt;second;</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>  }</div>
+<div class="foldopen" id="foldopen00097" data-start="{" data-end="}">
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="classrpg__os_1_1Spellbook.html#a963e3d257e12ae29f9db57ec90206a11">   97</a></span>  [[nodiscard]] int32_t <a class="code hl_function" href="classrpg__os_1_1Spellbook.html#a963e3d257e12ae29f9db57ec90206a11">slotsUsed</a>(int32_t level)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keyword">const</span> <span class="keyword">auto</span> it = m_slotsUsed.find(level);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordflow">return</span> it == m_slotsUsed.end() ? 0 : it-&gt;second;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>  }</div>
 </div>
-<div class="foldopen" id="foldopen00101" data-start="{" data-end="}">
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="classrpg__os_1_1Spellbook.html#ad883b59c3038a00cc2a90c32a3dd2c36">  101</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classrpg__os_1_1Spellbook.html#ad883b59c3038a00cc2a90c32a3dd2c36">recoverAllSlots</a>() {</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    m_slotsUsed.clear();</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>  }</div>
+<div class="foldopen" id="foldopen00102" data-start="{" data-end="}">
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="classrpg__os_1_1Spellbook.html#ad883b59c3038a00cc2a90c32a3dd2c36">  102</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classrpg__os_1_1Spellbook.html#ad883b59c3038a00cc2a90c32a3dd2c36">recoverAllSlots</a>() {</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    m_slotsUsed.clear();</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>  }</div>
 </div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
-<div class="foldopen" id="foldopen00105" data-start="{" data-end="}">
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="classrpg__os_1_1Spellbook.html#a474e6ce157a58d800ab5cd731b4a59bd">  105</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classrpg__os_1_1Spellbook.html#a474e6ce157a58d800ab5cd731b4a59bd">toJson</a>(<a class="code hl_typedef" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &amp;out)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    out = Json::object();</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    out[<span class="stringliteral">&quot;known&quot;</span>] = m_known;</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    out[<span class="stringliteral">&quot;prepared&quot;</span>] = m_prepared;</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <a class="code hl_typedef" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> used = Json::object();</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;[level, count] : m_slotsUsed) {</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>      used[std::to_string(level)] = count;</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    }</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    out[<span class="stringliteral">&quot;slots_used&quot;</span>] = used;</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>  }</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="foldopen" id="foldopen00106" data-start="{" data-end="}">
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="classrpg__os_1_1Spellbook.html#a474e6ce157a58d800ab5cd731b4a59bd">  106</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classrpg__os_1_1Spellbook.html#a474e6ce157a58d800ab5cd731b4a59bd">toJson</a>(<a class="code hl_typedef" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &amp;out)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    out = Json::object();</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    out[<span class="stringliteral">&quot;known&quot;</span>] = m_known;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    out[<span class="stringliteral">&quot;prepared&quot;</span>] = m_prepared;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <a class="code hl_typedef" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> used = Json::object();</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;[level, count] : m_slotsUsed) {</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>      used[std::to_string(level)] = count;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    }</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    out[<span class="stringliteral">&quot;slots_used&quot;</span>] = used;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>  }</div>
 </div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
-<div class="foldopen" id="foldopen00116" data-start="{" data-end="}">
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="classrpg__os_1_1Spellbook.html#a2c09c8cca46147282bb47507ffb2bd6c">  116</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classrpg__os_1_1Spellbook.html#a2c09c8cca46147282bb47507ffb2bd6c">fromJson</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &amp;in) {</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    m_known.clear();</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    m_prepared.clear();</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    m_slotsUsed.clear();</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="keywordflow">if</span> (!in.is_object()) {</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>      <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    }</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <span class="keywordflow">if</span> (in.contains(<span class="stringliteral">&quot;known&quot;</span>) &amp;&amp; in.at(<span class="stringliteral">&quot;known&quot;</span>).is_array()) {</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>      <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_typedef" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &amp;<span class="keywordtype">id</span> : in.at(<span class="stringliteral">&quot;known&quot;</span>)) {</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        m_known.push_back(<span class="keywordtype">id</span>.get&lt;std::string&gt;());</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>      }</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    }</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="keywordflow">if</span> (in.contains(<span class="stringliteral">&quot;prepared&quot;</span>) &amp;&amp; in.at(<span class="stringliteral">&quot;prepared&quot;</span>).is_array()) {</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>      <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_typedef" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &amp;<span class="keywordtype">id</span> : in.at(<span class="stringliteral">&quot;prepared&quot;</span>)) {</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        m_prepared.push_back(<span class="keywordtype">id</span>.get&lt;std::string&gt;());</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>      }</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    }</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <span class="keywordflow">if</span> (in.contains(<span class="stringliteral">&quot;slots_used&quot;</span>) &amp;&amp; in.at(<span class="stringliteral">&quot;slots_used&quot;</span>).is_object()) {</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>      <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;[level, count] : in.at(<span class="stringliteral">&quot;slots_used&quot;</span>).items()) {</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        m_slotsUsed[std::stoi(level)] = count.get&lt;int32_t&gt;();</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>      }</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    }</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>  }</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="foldopen" id="foldopen00117" data-start="{" data-end="}">
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="classrpg__os_1_1Spellbook.html#a2c09c8cca46147282bb47507ffb2bd6c">  117</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classrpg__os_1_1Spellbook.html#a2c09c8cca46147282bb47507ffb2bd6c">fromJson</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &amp;in) {</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    m_known.clear();</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    m_prepared.clear();</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    m_slotsUsed.clear();</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="keywordflow">if</span> (!in.is_object()) {</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>      <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    }</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="keywordflow">if</span> (in.contains(<span class="stringliteral">&quot;known&quot;</span>) &amp;&amp; in.at(<span class="stringliteral">&quot;known&quot;</span>).is_array()) {</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>      <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_typedef" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &amp;<span class="keywordtype">id</span> : in.at(<span class="stringliteral">&quot;known&quot;</span>)) {</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        m_known.push_back(<span class="keywordtype">id</span>.get&lt;std::string&gt;());</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>      }</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    }</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="keywordflow">if</span> (in.contains(<span class="stringliteral">&quot;prepared&quot;</span>) &amp;&amp; in.at(<span class="stringliteral">&quot;prepared&quot;</span>).is_array()) {</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>      <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_typedef" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &amp;<span class="keywordtype">id</span> : in.at(<span class="stringliteral">&quot;prepared&quot;</span>)) {</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        m_prepared.push_back(<span class="keywordtype">id</span>.get&lt;std::string&gt;());</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>      }</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    }</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    <span class="keywordflow">if</span> (in.contains(<span class="stringliteral">&quot;slots_used&quot;</span>) &amp;&amp; in.at(<span class="stringliteral">&quot;slots_used&quot;</span>).is_object()) {</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>      <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;[level, count] : in.at(<span class="stringliteral">&quot;slots_used&quot;</span>).items()) {</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        m_slotsUsed[std::stoi(level)] = count.get&lt;int32_t&gt;();</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>      }</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    }</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>  }</div>
 </div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>  std::vector&lt;std::string&gt; m_known;</div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>  std::vector&lt;std::string&gt; m_prepared;</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>  std::map&lt;int32_t, int32_t&gt; m_slotsUsed; </div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>};</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>  std::vector&lt;std::string&gt; m_known;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>  std::vector&lt;std::string&gt; m_prepared;</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>  std::map&lt;int32_t, int32_t&gt; m_slotsUsed; </div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>};</div>
 </div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>} <span class="comment">// namespace rpg_os</span></div>
-<div class="ttc" id="aclassrpg__os_1_1Spellbook_html"><div class="ttname"><a href="classrpg__os_1_1Spellbook.html">rpg_os::Spellbook</a></div><div class="ttdef"><b>Definition</b> <a href="spellbook_8hpp_source.html#l00023">spellbook.hpp:23</a></div></div>
-<div class="ttc" id="aclassrpg__os_1_1Spellbook_html_a00297b79a084d795c437965652416cc4"><div class="ttname"><a href="classrpg__os_1_1Spellbook.html#a00297b79a084d795c437965652416cc4">rpg_os::Spellbook::learn</a></div><div class="ttdeci">void learn(std::string_view spellId)</div><div class="ttdoc">Adds spellId to the known list (no-op when already known).</div><div class="ttdef"><b>Definition</b> <a href="spellbook_8hpp_source.html#l00026">spellbook.hpp:26</a></div></div>
-<div class="ttc" id="aclassrpg__os_1_1Spellbook_html_a014d4d9b8d4145b061eb5a1c897390ba"><div class="ttname"><a href="classrpg__os_1_1Spellbook.html#a014d4d9b8d4145b061eb5a1c897390ba">rpg_os::Spellbook::prepare</a></div><div class="ttdeci">bool prepare(std::string_view spellId)</div><div class="ttdoc">Marks spellId as prepared (requires knowing it); false otherwise.</div><div class="ttdef"><b>Definition</b> <a href="spellbook_8hpp_source.html#l00045">spellbook.hpp:45</a></div></div>
-<div class="ttc" id="aclassrpg__os_1_1Spellbook_html_a15f3812d6fa1b6d15679b1244a0e5d14"><div class="ttname"><a href="classrpg__os_1_1Spellbook.html#a15f3812d6fa1b6d15679b1244a0e5d14">rpg_os::Spellbook::prepared</a></div><div class="ttdeci">const std::vector&lt; std::string &gt; &amp; prepared() const noexcept</div><div class="ttdoc">Currently prepared spell ids (immutable view).</div><div class="ttdef"><b>Definition</b> <a href="spellbook_8hpp_source.html#l00087">spellbook.hpp:87</a></div></div>
-<div class="ttc" id="aclassrpg__os_1_1Spellbook_html_a2c09c8cca46147282bb47507ffb2bd6c"><div class="ttname"><a href="classrpg__os_1_1Spellbook.html#a2c09c8cca46147282bb47507ffb2bd6c">rpg_os::Spellbook::fromJson</a></div><div class="ttdeci">void fromJson(const Json &amp;in)</div><div class="ttdef"><b>Definition</b> <a href="spellbook_8hpp_source.html#l00116">spellbook.hpp:116</a></div></div>
-<div class="ttc" id="aclassrpg__os_1_1Spellbook_html_a407cc402e5401e4617458a7d5a9e1b9f"><div class="ttname"><a href="classrpg__os_1_1Spellbook.html#a407cc402e5401e4617458a7d5a9e1b9f">rpg_os::Spellbook::unprepare</a></div><div class="ttdeci">void unprepare(std::string_view spellId)</div><div class="ttdoc">Unmarks spellId as prepared.</div><div class="ttdef"><b>Definition</b> <a href="spellbook_8hpp_source.html#l00056">spellbook.hpp:56</a></div></div>
-<div class="ttc" id="aclassrpg__os_1_1Spellbook_html_a4186727ee51b571505e5b3caca1ded29"><div class="ttname"><a href="classrpg__os_1_1Spellbook.html#a4186727ee51b571505e5b3caca1ded29">rpg_os::Spellbook::known</a></div><div class="ttdeci">const std::vector&lt; std::string &gt; &amp; known() const noexcept</div><div class="ttdoc">All known spell ids (immutable view).</div><div class="ttdef"><b>Definition</b> <a href="spellbook_8hpp_source.html#l00083">spellbook.hpp:83</a></div></div>
-<div class="ttc" id="aclassrpg__os_1_1Spellbook_html_a474e6ce157a58d800ab5cd731b4a59bd"><div class="ttname"><a href="classrpg__os_1_1Spellbook.html#a474e6ce157a58d800ab5cd731b4a59bd">rpg_os::Spellbook::toJson</a></div><div class="ttdeci">void toJson(Json &amp;out) const</div><div class="ttdef"><b>Definition</b> <a href="spellbook_8hpp_source.html#l00105">spellbook.hpp:105</a></div></div>
-<div class="ttc" id="aclassrpg__os_1_1Spellbook_html_a489b55eb6cc84dd5620dd35f4031d41d"><div class="ttname"><a href="classrpg__os_1_1Spellbook.html#a489b55eb6cc84dd5620dd35f4031d41d">rpg_os::Spellbook::markSlotUsed</a></div><div class="ttdeci">void markSlotUsed(int32_t level)</div><div class="ttdoc">Marks one spell slot of level as used (vancian casting).</div><div class="ttdef"><b>Definition</b> <a href="spellbook_8hpp_source.html#l00092">spellbook.hpp:92</a></div></div>
-<div class="ttc" id="aclassrpg__os_1_1Spellbook_html_a651fd0ff935e37e6f4358b9885cc954d"><div class="ttname"><a href="classrpg__os_1_1Spellbook.html#a651fd0ff935e37e6f4358b9885cc954d">rpg_os::Spellbook::knows</a></div><div class="ttdeci">bool knows(std::string_view spellId) const</div><div class="ttdoc">Whether the spell is known.</div><div class="ttdef"><b>Definition</b> <a href="spellbook_8hpp_source.html#l00063">spellbook.hpp:63</a></div></div>
-<div class="ttc" id="aclassrpg__os_1_1Spellbook_html_a963e3d257e12ae29f9db57ec90206a11"><div class="ttname"><a href="classrpg__os_1_1Spellbook.html#a963e3d257e12ae29f9db57ec90206a11">rpg_os::Spellbook::slotsUsed</a></div><div class="ttdeci">int32_t slotsUsed(int32_t level) const</div><div class="ttdoc">How many slots of level have been used today.</div><div class="ttdef"><b>Definition</b> <a href="spellbook_8hpp_source.html#l00096">spellbook.hpp:96</a></div></div>
-<div class="ttc" id="aclassrpg__os_1_1Spellbook_html_ad883b59c3038a00cc2a90c32a3dd2c36"><div class="ttname"><a href="classrpg__os_1_1Spellbook.html#ad883b59c3038a00cc2a90c32a3dd2c36">rpg_os::Spellbook::recoverAllSlots</a></div><div class="ttdeci">void recoverAllSlots()</div><div class="ttdoc">Restores all used slots (a long rest).</div><div class="ttdef"><b>Definition</b> <a href="spellbook_8hpp_source.html#l00101">spellbook.hpp:101</a></div></div>
-<div class="ttc" id="aclassrpg__os_1_1Spellbook_html_ae10d9927e359695cc7c0571ddd22026a"><div class="ttname"><a href="classrpg__os_1_1Spellbook.html#ae10d9927e359695cc7c0571ddd22026a">rpg_os::Spellbook::hasPrepared</a></div><div class="ttdeci">bool hasPrepared(std::string_view spellId) const</div><div class="ttdoc">Whether the spell is currently prepared.</div><div class="ttdef"><b>Definition</b> <a href="spellbook_8hpp_source.html#l00073">spellbook.hpp:73</a></div></div>
-<div class="ttc" id="aclassrpg__os_1_1Spellbook_html_af9a6e6c409a93f0edc83d34355cc1d13"><div class="ttname"><a href="classrpg__os_1_1Spellbook.html#af9a6e6c409a93f0edc83d34355cc1d13">rpg_os::Spellbook::forget</a></div><div class="ttdeci">bool forget(std::string_view spellId)</div><div class="ttdoc">Removes spellId from known (and prepared) lists; false when unknown.</div><div class="ttdef"><b>Definition</b> <a href="spellbook_8hpp_source.html#l00033">spellbook.hpp:33</a></div></div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>} <span class="comment">// namespace rpg_os</span></div>
+<div class="ttc" id="aclassrpg__os_1_1Spellbook_html"><div class="ttname"><a href="classrpg__os_1_1Spellbook.html">rpg_os::Spellbook</a></div><div class="ttdef"><b>Definition</b> <a href="spellbook_8hpp_source.html#l00024">spellbook.hpp:24</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1Spellbook_html_a00297b79a084d795c437965652416cc4"><div class="ttname"><a href="classrpg__os_1_1Spellbook.html#a00297b79a084d795c437965652416cc4">rpg_os::Spellbook::learn</a></div><div class="ttdeci">void learn(std::string_view spellId)</div><div class="ttdoc">Adds spellId to the known list (no-op when already known).</div><div class="ttdef"><b>Definition</b> <a href="spellbook_8hpp_source.html#l00027">spellbook.hpp:27</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1Spellbook_html_a014d4d9b8d4145b061eb5a1c897390ba"><div class="ttname"><a href="classrpg__os_1_1Spellbook.html#a014d4d9b8d4145b061eb5a1c897390ba">rpg_os::Spellbook::prepare</a></div><div class="ttdeci">bool prepare(std::string_view spellId)</div><div class="ttdoc">Marks spellId as prepared (requires knowing it); false otherwise.</div><div class="ttdef"><b>Definition</b> <a href="spellbook_8hpp_source.html#l00046">spellbook.hpp:46</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1Spellbook_html_a15f3812d6fa1b6d15679b1244a0e5d14"><div class="ttname"><a href="classrpg__os_1_1Spellbook.html#a15f3812d6fa1b6d15679b1244a0e5d14">rpg_os::Spellbook::prepared</a></div><div class="ttdeci">const std::vector&lt; std::string &gt; &amp; prepared() const noexcept</div><div class="ttdoc">Currently prepared spell ids (immutable view).</div><div class="ttdef"><b>Definition</b> <a href="spellbook_8hpp_source.html#l00088">spellbook.hpp:88</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1Spellbook_html_a2c09c8cca46147282bb47507ffb2bd6c"><div class="ttname"><a href="classrpg__os_1_1Spellbook.html#a2c09c8cca46147282bb47507ffb2bd6c">rpg_os::Spellbook::fromJson</a></div><div class="ttdeci">void fromJson(const Json &amp;in)</div><div class="ttdef"><b>Definition</b> <a href="spellbook_8hpp_source.html#l00117">spellbook.hpp:117</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1Spellbook_html_a407cc402e5401e4617458a7d5a9e1b9f"><div class="ttname"><a href="classrpg__os_1_1Spellbook.html#a407cc402e5401e4617458a7d5a9e1b9f">rpg_os::Spellbook::unprepare</a></div><div class="ttdeci">void unprepare(std::string_view spellId)</div><div class="ttdoc">Unmarks spellId as prepared.</div><div class="ttdef"><b>Definition</b> <a href="spellbook_8hpp_source.html#l00057">spellbook.hpp:57</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1Spellbook_html_a4186727ee51b571505e5b3caca1ded29"><div class="ttname"><a href="classrpg__os_1_1Spellbook.html#a4186727ee51b571505e5b3caca1ded29">rpg_os::Spellbook::known</a></div><div class="ttdeci">const std::vector&lt; std::string &gt; &amp; known() const noexcept</div><div class="ttdoc">All known spell ids (immutable view).</div><div class="ttdef"><b>Definition</b> <a href="spellbook_8hpp_source.html#l00084">spellbook.hpp:84</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1Spellbook_html_a474e6ce157a58d800ab5cd731b4a59bd"><div class="ttname"><a href="classrpg__os_1_1Spellbook.html#a474e6ce157a58d800ab5cd731b4a59bd">rpg_os::Spellbook::toJson</a></div><div class="ttdeci">void toJson(Json &amp;out) const</div><div class="ttdef"><b>Definition</b> <a href="spellbook_8hpp_source.html#l00106">spellbook.hpp:106</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1Spellbook_html_a489b55eb6cc84dd5620dd35f4031d41d"><div class="ttname"><a href="classrpg__os_1_1Spellbook.html#a489b55eb6cc84dd5620dd35f4031d41d">rpg_os::Spellbook::markSlotUsed</a></div><div class="ttdeci">void markSlotUsed(int32_t level)</div><div class="ttdoc">Marks one spell slot of level as used (vancian casting).</div><div class="ttdef"><b>Definition</b> <a href="spellbook_8hpp_source.html#l00093">spellbook.hpp:93</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1Spellbook_html_a651fd0ff935e37e6f4358b9885cc954d"><div class="ttname"><a href="classrpg__os_1_1Spellbook.html#a651fd0ff935e37e6f4358b9885cc954d">rpg_os::Spellbook::knows</a></div><div class="ttdeci">bool knows(std::string_view spellId) const</div><div class="ttdoc">Whether the spell is known.</div><div class="ttdef"><b>Definition</b> <a href="spellbook_8hpp_source.html#l00064">spellbook.hpp:64</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1Spellbook_html_a963e3d257e12ae29f9db57ec90206a11"><div class="ttname"><a href="classrpg__os_1_1Spellbook.html#a963e3d257e12ae29f9db57ec90206a11">rpg_os::Spellbook::slotsUsed</a></div><div class="ttdeci">int32_t slotsUsed(int32_t level) const</div><div class="ttdoc">How many slots of level have been used today.</div><div class="ttdef"><b>Definition</b> <a href="spellbook_8hpp_source.html#l00097">spellbook.hpp:97</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1Spellbook_html_ad883b59c3038a00cc2a90c32a3dd2c36"><div class="ttname"><a href="classrpg__os_1_1Spellbook.html#ad883b59c3038a00cc2a90c32a3dd2c36">rpg_os::Spellbook::recoverAllSlots</a></div><div class="ttdeci">void recoverAllSlots()</div><div class="ttdoc">Restores all used slots (a long rest).</div><div class="ttdef"><b>Definition</b> <a href="spellbook_8hpp_source.html#l00102">spellbook.hpp:102</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1Spellbook_html_ae10d9927e359695cc7c0571ddd22026a"><div class="ttname"><a href="classrpg__os_1_1Spellbook.html#ae10d9927e359695cc7c0571ddd22026a">rpg_os::Spellbook::hasPrepared</a></div><div class="ttdeci">bool hasPrepared(std::string_view spellId) const</div><div class="ttdoc">Whether the spell is currently prepared.</div><div class="ttdef"><b>Definition</b> <a href="spellbook_8hpp_source.html#l00074">spellbook.hpp:74</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1Spellbook_html_af9a6e6c409a93f0edc83d34355cc1d13"><div class="ttname"><a href="classrpg__os_1_1Spellbook.html#af9a6e6c409a93f0edc83d34355cc1d13">rpg_os::Spellbook::forget</a></div><div class="ttdeci">bool forget(std::string_view spellId)</div><div class="ttdoc">Removes spellId from known (and prepared) lists; false when unknown.</div><div class="ttdef"><b>Definition</b> <a href="spellbook_8hpp_source.html#l00034">spellbook.hpp:34</a></div></div>
 <div class="ttc" id="ajson_8hpp_html"><div class="ttname"><a href="json_8hpp.html">json.hpp</a></div><div class="ttdoc">JSON value type used throughout rpg_os.</div></div>
-<div class="ttc" id="anamespacerpg__os_html"><div class="ttname"><a href="namespacerpg__os.html">rpg_os</a></div><div class="ttdef"><b>Definition</b> <a href="event__system_8hpp_source.html#l00041">event_system.hpp:41</a></div></div>
-<div class="ttc" id="anamespacerpg__os_html_afa8b802b0bd5a50e36a895d4c7e0820d"><div class="ttname"><a href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">rpg_os::Json</a></div><div class="ttdeci">nlohmann::json Json</div><div class="ttdef"><b>Definition</b> <a href="json_8hpp_source.html#l00039">json.hpp:39</a></div></div>
+<div class="ttc" id="anamespacerpg__os_html"><div class="ttname"><a href="namespacerpg__os.html">rpg_os</a></div><div class="ttdef"><b>Definition</b> <a href="event__system_8hpp_source.html#l00042">event_system.hpp:42</a></div></div>
+<div class="ttc" id="anamespacerpg__os_html_afa8b802b0bd5a50e36a895d4c7e0820d"><div class="ttname"><a href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">rpg_os::Json</a></div><div class="ttdeci">nlohmann::json Json</div><div class="ttdef"><b>Definition</b> <a href="json_8hpp_source.html#l00040">json.hpp:40</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

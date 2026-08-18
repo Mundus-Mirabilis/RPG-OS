@@ -8,15 +8,15 @@
 <!-- Browser tab icon — copied into the output via HTML_EXTRA_FILES (favicon.png). -->
 <link rel="icon" type="image/png" href="favicon.png"/>
 <!-- BEGIN opengraph metadata -->
-<meta property="og:title" content="RPG-OS" />
-<meta property="og:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
+<meta property="og:title" content="RPG OS" />
+<meta property="og:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
 <meta property="og:url" content="https://Mundus-Mirabilis.github.io/RPG-OS/" />
 <!-- END opengraph metadata -->
 <!-- BEGIN twitter metadata -->
-<meta name="twitter:title" content="RPG-OS" />
-<meta name="twitter:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
+<meta name="twitter:title" content="RPG OS" />
+<meta name="twitter:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
 <!-- END twitter metadata -->
-<title>RPG-OS: world_state.hpp Source File</title>
+<title>RPG OS: world_state.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -55,9 +55,9 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="mundus-mirabilis_512.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">RPG-OS
+   <div id="projectname">RPG OS
    </div>
-   <div id="projectbrief">A header-only C++23 universal rule engine for tabletop role-playing games</div>
+   <div id="projectbrief">A universal, header-only C++23 rule engine for tabletop role-playing games</div>
   </td>
  </tr>
  </tbody>
@@ -131,73 +131,73 @@ $(document).ready(function(){initNavTree('world__state_8hpp_source.html',''); in
 <a href="world__state_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2026 Christian Mayer and the Mundus Mirabilis contributors.</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// SPDX-License-Identifier: Apache-2.0</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;<a class="code" href="json_8hpp.html">rpg_os/common/json.hpp</a>&gt;</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;<a class="code" href="money_8hpp.html">rpg_os/core/money.hpp</a>&gt;</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacerpg__os.html">rpg_os</a> {</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="foldopen" id="foldopen00023" data-start="{" data-end="};">
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classrpg__os_1_1WorldState.html">   23</a></span><span class="keyword">class </span><a class="code hl_class" href="classrpg__os_1_1WorldState.html">WorldState</a> {</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classrpg__os_1_1WorldState.html#a2640795d2b5c5b2e9c369b578ea79471">   26</a></span>  <a class="code hl_class" href="classrpg__os_1_1Money.html">Money</a> <a class="code hl_variable" href="classrpg__os_1_1WorldState.html#a2640795d2b5c5b2e9c369b578ea79471">treasury</a>{0};</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classrpg__os_1_1WorldState.html#a0f05977e7714ac2b2e701dcfc038720b">   28</a></span>  int32_t <a class="code hl_variable" href="classrpg__os_1_1WorldState.html#a0f05977e7714ac2b2e701dcfc038720b">day</a>{0};</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="foldopen" id="foldopen00031" data-start="{" data-end="}">
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classrpg__os_1_1WorldState.html#a7d1dc82c3e4bf5e38f249c1d3d9947b6">   31</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classrpg__os_1_1WorldState.html#a7d1dc82c3e4bf5e38f249c1d3d9947b6">addToTreasury</a>(<span class="keyword">const</span> <a class="code hl_class" href="classrpg__os_1_1Money.html">Money</a> &amp;amount) {</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <a class="code hl_variable" href="classrpg__os_1_1WorldState.html#a2640795d2b5c5b2e9c369b578ea79471">treasury</a> += amount;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  }</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;<a class="code" href="json_8hpp.html">rpg_os/common/json.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;<a class="code" href="money_8hpp.html">rpg_os/core/money.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacerpg__os.html">rpg_os</a> {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="foldopen" id="foldopen00024" data-start="{" data-end="};">
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classrpg__os_1_1WorldState.html">   24</a></span><span class="keyword">class </span><a class="code hl_class" href="classrpg__os_1_1WorldState.html">WorldState</a> {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classrpg__os_1_1WorldState.html#a2640795d2b5c5b2e9c369b578ea79471">   27</a></span>  <a class="code hl_class" href="classrpg__os_1_1Money.html">Money</a> <a class="code hl_variable" href="classrpg__os_1_1WorldState.html#a2640795d2b5c5b2e9c369b578ea79471">treasury</a>{0};</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classrpg__os_1_1WorldState.html#a0f05977e7714ac2b2e701dcfc038720b">   29</a></span>  int32_t <a class="code hl_variable" href="classrpg__os_1_1WorldState.html#a0f05977e7714ac2b2e701dcfc038720b">day</a>{0};</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="foldopen" id="foldopen00032" data-start="{" data-end="}">
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classrpg__os_1_1WorldState.html#a7d1dc82c3e4bf5e38f249c1d3d9947b6">   32</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classrpg__os_1_1WorldState.html#a7d1dc82c3e4bf5e38f249c1d3d9947b6">addToTreasury</a>(<span class="keyword">const</span> <a class="code hl_class" href="classrpg__os_1_1Money.html">Money</a> &amp;amount) {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <a class="code hl_variable" href="classrpg__os_1_1WorldState.html#a2640795d2b5c5b2e9c369b578ea79471">treasury</a> += amount;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  }</div>
 </div>
-<div class="foldopen" id="foldopen00035" data-start="{" data-end="}">
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classrpg__os_1_1WorldState.html#ab04c16f77b1a5153f776f7552ad6269a">   35</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classrpg__os_1_1WorldState.html#ab04c16f77b1a5153f776f7552ad6269a">removeFromTreasury</a>(<span class="keyword">const</span> <a class="code hl_class" href="classrpg__os_1_1Money.html">Money</a> &amp;amount) {</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <a class="code hl_variable" href="classrpg__os_1_1WorldState.html#a2640795d2b5c5b2e9c369b578ea79471">treasury</a> -= amount;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  }</div>
+<div class="foldopen" id="foldopen00036" data-start="{" data-end="}">
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classrpg__os_1_1WorldState.html#ab04c16f77b1a5153f776f7552ad6269a">   36</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classrpg__os_1_1WorldState.html#ab04c16f77b1a5153f776f7552ad6269a">removeFromTreasury</a>(<span class="keyword">const</span> <a class="code hl_class" href="classrpg__os_1_1Money.html">Money</a> &amp;amount) {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <a class="code hl_variable" href="classrpg__os_1_1WorldState.html#a2640795d2b5c5b2e9c369b578ea79471">treasury</a> -= amount;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  }</div>
 </div>
-<div class="foldopen" id="foldopen00039" data-start="{" data-end="}">
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classrpg__os_1_1WorldState.html#ae5a397101e6a5658478426d60a4a0ae8">   39</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classrpg__os_1_1WorldState.html#ae5a397101e6a5658478426d60a4a0ae8">advanceDays</a>(int32_t days) {</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <a class="code hl_variable" href="classrpg__os_1_1WorldState.html#a0f05977e7714ac2b2e701dcfc038720b">day</a> += days;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  }</div>
+<div class="foldopen" id="foldopen00040" data-start="{" data-end="}">
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classrpg__os_1_1WorldState.html#ae5a397101e6a5658478426d60a4a0ae8">   40</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classrpg__os_1_1WorldState.html#ae5a397101e6a5658478426d60a4a0ae8">advanceDays</a>(int32_t days) {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <a class="code hl_variable" href="classrpg__os_1_1WorldState.html#a0f05977e7714ac2b2e701dcfc038720b">day</a> += days;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  }</div>
 </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="foldopen" id="foldopen00043" data-start="{" data-end="}">
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classrpg__os_1_1WorldState.html#a4680496d23476445cec43e1f067d6213">   43</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classrpg__os_1_1WorldState.html#a4680496d23476445cec43e1f067d6213">toJson</a>(<a class="code hl_typedef" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &amp;out)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    out = Json::object();</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    out[<span class="stringliteral">&quot;treasury&quot;</span>] = <a class="code hl_variable" href="classrpg__os_1_1WorldState.html#a2640795d2b5c5b2e9c369b578ea79471">treasury</a>.<a class="code hl_function" href="classrpg__os_1_1Money.html#a0c026c2231dea0bb01622440d99299e2">baseUnits</a>();</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    out[<span class="stringliteral">&quot;day&quot;</span>] = <a class="code hl_variable" href="classrpg__os_1_1WorldState.html#a0f05977e7714ac2b2e701dcfc038720b">day</a>;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  }</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="foldopen" id="foldopen00044" data-start="{" data-end="}">
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classrpg__os_1_1WorldState.html#a4680496d23476445cec43e1f067d6213">   44</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classrpg__os_1_1WorldState.html#a4680496d23476445cec43e1f067d6213">toJson</a>(<a class="code hl_typedef" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &amp;out)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    out = Json::object();</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    out[<span class="stringliteral">&quot;treasury&quot;</span>] = <a class="code hl_variable" href="classrpg__os_1_1WorldState.html#a2640795d2b5c5b2e9c369b578ea79471">treasury</a>.<a class="code hl_function" href="classrpg__os_1_1Money.html#a0c026c2231dea0bb01622440d99299e2">baseUnits</a>();</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    out[<span class="stringliteral">&quot;day&quot;</span>] = <a class="code hl_variable" href="classrpg__os_1_1WorldState.html#a0f05977e7714ac2b2e701dcfc038720b">day</a>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  }</div>
 </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="foldopen" id="foldopen00049" data-start="{" data-end="}">
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="classrpg__os_1_1WorldState.html#ab7426b67d4728d769eadca76230f1bc0">   49</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classrpg__os_1_1WorldState.html#ab7426b67d4728d769eadca76230f1bc0">fromJson</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &amp;in) {</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordflow">if</span> (!in.is_object()) {</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>      <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    }</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordflow">if</span> (in.contains(<span class="stringliteral">&quot;treasury&quot;</span>) &amp;&amp; in.at(<span class="stringliteral">&quot;treasury&quot;</span>).is_number_integer()) {</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>      <a class="code hl_variable" href="classrpg__os_1_1WorldState.html#a2640795d2b5c5b2e9c369b578ea79471">treasury</a> = <a class="code hl_class" href="classrpg__os_1_1Money.html">Money</a>{in.at(<span class="stringliteral">&quot;treasury&quot;</span>).get&lt;int64_t&gt;()};</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    }</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <a class="code hl_variable" href="classrpg__os_1_1WorldState.html#a0f05977e7714ac2b2e701dcfc038720b">day</a> = in.value(<span class="stringliteral">&quot;day&quot;</span>, <a class="code hl_variable" href="classrpg__os_1_1WorldState.html#a0f05977e7714ac2b2e701dcfc038720b">day</a>);</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  }</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="foldopen" id="foldopen00050" data-start="{" data-end="}">
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="classrpg__os_1_1WorldState.html#ab7426b67d4728d769eadca76230f1bc0">   50</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classrpg__os_1_1WorldState.html#ab7426b67d4728d769eadca76230f1bc0">fromJson</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &amp;in) {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordflow">if</span> (!in.is_object()) {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>      <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    }</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordflow">if</span> (in.contains(<span class="stringliteral">&quot;treasury&quot;</span>) &amp;&amp; in.at(<span class="stringliteral">&quot;treasury&quot;</span>).is_number_integer()) {</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>      <a class="code hl_variable" href="classrpg__os_1_1WorldState.html#a2640795d2b5c5b2e9c369b578ea79471">treasury</a> = <a class="code hl_class" href="classrpg__os_1_1Money.html">Money</a>{in.at(<span class="stringliteral">&quot;treasury&quot;</span>).get&lt;int64_t&gt;()};</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    }</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <a class="code hl_variable" href="classrpg__os_1_1WorldState.html#a0f05977e7714ac2b2e701dcfc038720b">day</a> = in.value(<span class="stringliteral">&quot;day&quot;</span>, <a class="code hl_variable" href="classrpg__os_1_1WorldState.html#a0f05977e7714ac2b2e701dcfc038720b">day</a>);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  }</div>
 </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>};</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>};</div>
 </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>} <span class="comment">// namespace rpg_os</span></div>
-<div class="ttc" id="aclassrpg__os_1_1Money_html"><div class="ttname"><a href="classrpg__os_1_1Money.html">rpg_os::Money</a></div><div class="ttdef"><b>Definition</b> <a href="money_8hpp_source.html#l00075">money.hpp:75</a></div></div>
-<div class="ttc" id="aclassrpg__os_1_1Money_html_a0c026c2231dea0bb01622440d99299e2"><div class="ttname"><a href="classrpg__os_1_1Money.html#a0c026c2231dea0bb01622440d99299e2">rpg_os::Money::baseUnits</a></div><div class="ttdeci">constexpr int64_t baseUnits() const noexcept</div><div class="ttdoc">The amount in base units.</div><div class="ttdef"><b>Definition</b> <a href="money_8hpp_source.html#l00082">money.hpp:82</a></div></div>
-<div class="ttc" id="aclassrpg__os_1_1WorldState_html"><div class="ttname"><a href="classrpg__os_1_1WorldState.html">rpg_os::WorldState</a></div><div class="ttdoc">Shared bookkeeping state for one campaign.</div><div class="ttdef"><b>Definition</b> <a href="world__state_8hpp_source.html#l00023">world_state.hpp:23</a></div></div>
-<div class="ttc" id="aclassrpg__os_1_1WorldState_html_a0f05977e7714ac2b2e701dcfc038720b"><div class="ttname"><a href="classrpg__os_1_1WorldState.html#a0f05977e7714ac2b2e701dcfc038720b">rpg_os::WorldState::day</a></div><div class="ttdeci">int32_t day</div><div class="ttdoc">The in-game day counter (used for effect durations and rest cadence).</div><div class="ttdef"><b>Definition</b> <a href="world__state_8hpp_source.html#l00028">world_state.hpp:28</a></div></div>
-<div class="ttc" id="aclassrpg__os_1_1WorldState_html_a2640795d2b5c5b2e9c369b578ea79471"><div class="ttname"><a href="classrpg__os_1_1WorldState.html#a2640795d2b5c5b2e9c369b578ea79471">rpg_os::WorldState::treasury</a></div><div class="ttdeci">Money treasury</div><div class="ttdoc">The party's pooled wealth (independent of any character's purse).</div><div class="ttdef"><b>Definition</b> <a href="world__state_8hpp_source.html#l00026">world_state.hpp:26</a></div></div>
-<div class="ttc" id="aclassrpg__os_1_1WorldState_html_a4680496d23476445cec43e1f067d6213"><div class="ttname"><a href="classrpg__os_1_1WorldState.html#a4680496d23476445cec43e1f067d6213">rpg_os::WorldState::toJson</a></div><div class="ttdeci">void toJson(Json &amp;out) const</div><div class="ttdef"><b>Definition</b> <a href="world__state_8hpp_source.html#l00043">world_state.hpp:43</a></div></div>
-<div class="ttc" id="aclassrpg__os_1_1WorldState_html_a7d1dc82c3e4bf5e38f249c1d3d9947b6"><div class="ttname"><a href="classrpg__os_1_1WorldState.html#a7d1dc82c3e4bf5e38f249c1d3d9947b6">rpg_os::WorldState::addToTreasury</a></div><div class="ttdeci">void addToTreasury(const Money &amp;amount)</div><div class="ttdoc">Adds amount to the treasury.</div><div class="ttdef"><b>Definition</b> <a href="world__state_8hpp_source.html#l00031">world_state.hpp:31</a></div></div>
-<div class="ttc" id="aclassrpg__os_1_1WorldState_html_ab04c16f77b1a5153f776f7552ad6269a"><div class="ttname"><a href="classrpg__os_1_1WorldState.html#ab04c16f77b1a5153f776f7552ad6269a">rpg_os::WorldState::removeFromTreasury</a></div><div class="ttdeci">void removeFromTreasury(const Money &amp;amount)</div><div class="ttdoc">Removes amount from the treasury (may go negative = party debt).</div><div class="ttdef"><b>Definition</b> <a href="world__state_8hpp_source.html#l00035">world_state.hpp:35</a></div></div>
-<div class="ttc" id="aclassrpg__os_1_1WorldState_html_ab7426b67d4728d769eadca76230f1bc0"><div class="ttname"><a href="classrpg__os_1_1WorldState.html#ab7426b67d4728d769eadca76230f1bc0">rpg_os::WorldState::fromJson</a></div><div class="ttdeci">void fromJson(const Json &amp;in)</div><div class="ttdef"><b>Definition</b> <a href="world__state_8hpp_source.html#l00049">world_state.hpp:49</a></div></div>
-<div class="ttc" id="aclassrpg__os_1_1WorldState_html_ae5a397101e6a5658478426d60a4a0ae8"><div class="ttname"><a href="classrpg__os_1_1WorldState.html#ae5a397101e6a5658478426d60a4a0ae8">rpg_os::WorldState::advanceDays</a></div><div class="ttdeci">void advanceDays(int32_t days)</div><div class="ttdoc">Advances the day counter by days.</div><div class="ttdef"><b>Definition</b> <a href="world__state_8hpp_source.html#l00039">world_state.hpp:39</a></div></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>} <span class="comment">// namespace rpg_os</span></div>
+<div class="ttc" id="aclassrpg__os_1_1Money_html"><div class="ttname"><a href="classrpg__os_1_1Money.html">rpg_os::Money</a></div><div class="ttdef"><b>Definition</b> <a href="money_8hpp_source.html#l00076">money.hpp:76</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1Money_html_a0c026c2231dea0bb01622440d99299e2"><div class="ttname"><a href="classrpg__os_1_1Money.html#a0c026c2231dea0bb01622440d99299e2">rpg_os::Money::baseUnits</a></div><div class="ttdeci">constexpr int64_t baseUnits() const noexcept</div><div class="ttdoc">The amount in base units.</div><div class="ttdef"><b>Definition</b> <a href="money_8hpp_source.html#l00083">money.hpp:83</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1WorldState_html"><div class="ttname"><a href="classrpg__os_1_1WorldState.html">rpg_os::WorldState</a></div><div class="ttdoc">Shared bookkeeping state for one campaign.</div><div class="ttdef"><b>Definition</b> <a href="world__state_8hpp_source.html#l00024">world_state.hpp:24</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1WorldState_html_a0f05977e7714ac2b2e701dcfc038720b"><div class="ttname"><a href="classrpg__os_1_1WorldState.html#a0f05977e7714ac2b2e701dcfc038720b">rpg_os::WorldState::day</a></div><div class="ttdeci">int32_t day</div><div class="ttdoc">The in-game day counter (used for effect durations and rest cadence).</div><div class="ttdef"><b>Definition</b> <a href="world__state_8hpp_source.html#l00029">world_state.hpp:29</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1WorldState_html_a2640795d2b5c5b2e9c369b578ea79471"><div class="ttname"><a href="classrpg__os_1_1WorldState.html#a2640795d2b5c5b2e9c369b578ea79471">rpg_os::WorldState::treasury</a></div><div class="ttdeci">Money treasury</div><div class="ttdoc">The party's pooled wealth (independent of any character's purse).</div><div class="ttdef"><b>Definition</b> <a href="world__state_8hpp_source.html#l00027">world_state.hpp:27</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1WorldState_html_a4680496d23476445cec43e1f067d6213"><div class="ttname"><a href="classrpg__os_1_1WorldState.html#a4680496d23476445cec43e1f067d6213">rpg_os::WorldState::toJson</a></div><div class="ttdeci">void toJson(Json &amp;out) const</div><div class="ttdef"><b>Definition</b> <a href="world__state_8hpp_source.html#l00044">world_state.hpp:44</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1WorldState_html_a7d1dc82c3e4bf5e38f249c1d3d9947b6"><div class="ttname"><a href="classrpg__os_1_1WorldState.html#a7d1dc82c3e4bf5e38f249c1d3d9947b6">rpg_os::WorldState::addToTreasury</a></div><div class="ttdeci">void addToTreasury(const Money &amp;amount)</div><div class="ttdoc">Adds amount to the treasury.</div><div class="ttdef"><b>Definition</b> <a href="world__state_8hpp_source.html#l00032">world_state.hpp:32</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1WorldState_html_ab04c16f77b1a5153f776f7552ad6269a"><div class="ttname"><a href="classrpg__os_1_1WorldState.html#ab04c16f77b1a5153f776f7552ad6269a">rpg_os::WorldState::removeFromTreasury</a></div><div class="ttdeci">void removeFromTreasury(const Money &amp;amount)</div><div class="ttdoc">Removes amount from the treasury (may go negative = party debt).</div><div class="ttdef"><b>Definition</b> <a href="world__state_8hpp_source.html#l00036">world_state.hpp:36</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1WorldState_html_ab7426b67d4728d769eadca76230f1bc0"><div class="ttname"><a href="classrpg__os_1_1WorldState.html#ab7426b67d4728d769eadca76230f1bc0">rpg_os::WorldState::fromJson</a></div><div class="ttdeci">void fromJson(const Json &amp;in)</div><div class="ttdef"><b>Definition</b> <a href="world__state_8hpp_source.html#l00050">world_state.hpp:50</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1WorldState_html_ae5a397101e6a5658478426d60a4a0ae8"><div class="ttname"><a href="classrpg__os_1_1WorldState.html#ae5a397101e6a5658478426d60a4a0ae8">rpg_os::WorldState::advanceDays</a></div><div class="ttdeci">void advanceDays(int32_t days)</div><div class="ttdoc">Advances the day counter by days.</div><div class="ttdef"><b>Definition</b> <a href="world__state_8hpp_source.html#l00040">world_state.hpp:40</a></div></div>
 <div class="ttc" id="ajson_8hpp_html"><div class="ttname"><a href="json_8hpp.html">json.hpp</a></div><div class="ttdoc">JSON value type used throughout rpg_os.</div></div>
 <div class="ttc" id="amoney_8hpp_html"><div class="ttname"><a href="money_8hpp.html">money.hpp</a></div><div class="ttdoc">Generic currency model (denominations + an amount).</div></div>
-<div class="ttc" id="anamespacerpg__os_html"><div class="ttname"><a href="namespacerpg__os.html">rpg_os</a></div><div class="ttdef"><b>Definition</b> <a href="event__system_8hpp_source.html#l00041">event_system.hpp:41</a></div></div>
-<div class="ttc" id="anamespacerpg__os_html_afa8b802b0bd5a50e36a895d4c7e0820d"><div class="ttname"><a href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">rpg_os::Json</a></div><div class="ttdeci">nlohmann::json Json</div><div class="ttdef"><b>Definition</b> <a href="json_8hpp_source.html#l00039">json.hpp:39</a></div></div>
+<div class="ttc" id="anamespacerpg__os_html"><div class="ttname"><a href="namespacerpg__os.html">rpg_os</a></div><div class="ttdef"><b>Definition</b> <a href="event__system_8hpp_source.html#l00042">event_system.hpp:42</a></div></div>
+<div class="ttc" id="anamespacerpg__os_html_afa8b802b0bd5a50e36a895d4c7e0820d"><div class="ttname"><a href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">rpg_os::Json</a></div><div class="ttdeci">nlohmann::json Json</div><div class="ttdef"><b>Definition</b> <a href="json_8hpp_source.html#l00040">json.hpp:40</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

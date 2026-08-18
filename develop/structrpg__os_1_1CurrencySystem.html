@@ -8,15 +8,15 @@
 <!-- Browser tab icon — copied into the output via HTML_EXTRA_FILES (favicon.png). -->
 <link rel="icon" type="image/png" href="favicon.png"/>
 <!-- BEGIN opengraph metadata -->
-<meta property="og:title" content="RPG-OS" />
-<meta property="og:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
+<meta property="og:title" content="RPG OS" />
+<meta property="og:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
 <meta property="og:url" content="https://Mundus-Mirabilis.github.io/RPG-OS/" />
 <!-- END opengraph metadata -->
 <!-- BEGIN twitter metadata -->
-<meta name="twitter:title" content="RPG-OS" />
-<meta name="twitter:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
+<meta name="twitter:title" content="RPG OS" />
+<meta name="twitter:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
 <!-- END twitter metadata -->
-<title>RPG-OS: rpg_os::CurrencySystem Struct Reference</title>
+<title>RPG OS: rpg_os::CurrencySystem Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -55,9 +55,9 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="mundus-mirabilis_512.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">RPG-OS
+   <div id="projectname">RPG OS
    </div>
-   <div id="projectbrief">A header-only C++23 universal rule engine for tabletop role-playing games</div>
+   <div id="projectbrief">A universal, header-only C++23 rule engine for tabletop role-playing games</div>
   </td>
  </tr>
  </tbody>
@@ -156,7 +156,7 @@ Public Attributes</h2></td></tr>
 <div class="textblock"><p>The coinage of one ruleset: a base unit plus the denominations.</p>
 <dl class="section user"><dt>Why "perBase" on each denomination?</dt><dd>It is the only number the engine needs: a conversion, a price, or a wealth figure is always stored in base units, and any denomination is that many base units. Exchange between coins is pure arithmetic on the base-unit amount. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="money_8hpp_source.html#l00043">43</a> of file <a class="el" href="money_8hpp_source.html">money.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="money_8hpp_source.html#l00044">44</a> of file <a class="el" href="money_8hpp_source.html">money.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aa0e123f6beba30045fd34ee9e3ea03a7" name="aa0e123f6beba30045fd34ee9e3ea03a7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa0e123f6beba30045fd34ee9e3ea03a7">&#9670;&#160;</a></span>find()</h2>
@@ -184,11 +184,11 @@ Public Attributes</h2></td></tr>
 
 <p>Looks up a denomination by id; nullptr when unknown. </p>
 
-<p class="definition">Definition at line <a class="el" href="money_8hpp_source.html#l00050">50</a> of file <a class="el" href="money_8hpp_source.html">money.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="money_8hpp_source.html#l00051">51</a> of file <a class="el" href="money_8hpp_source.html">money.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="money_8hpp_source.html#l00047">denominations</a>.</p>
+<p class="reference">References <a class="el" href="money_8hpp_source.html#l00048">denominations</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="money_8hpp_source.html#l00125">rpg_os::Money::fromCoins()</a>, <a class="el" href="money_8hpp_source.html#l00139">rpg_os::Money::in()</a>, and <a class="el" href="money_8hpp_source.html#l00061">valueOf()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="money_8hpp_source.html#l00126">rpg_os::Money::fromCoins()</a>, <a class="el" href="money_8hpp_source.html#l00140">rpg_os::Money::in()</a>, and <a class="el" href="money_8hpp_source.html#l00062">valueOf()</a>.</p>
 
 </div>
 </div>
@@ -227,11 +227,11 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Value in base units of <code>qty</code> of <code>denomId</code>; 0 when the denomination is unknown (so a ruleset that dropped a coin degrades to "worthless"). </p>
 
-<p class="definition">Definition at line <a class="el" href="money_8hpp_source.html#l00061">61</a> of file <a class="el" href="money_8hpp_source.html">money.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="money_8hpp_source.html#l00062">62</a> of file <a class="el" href="money_8hpp_source.html">money.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="money_8hpp_source.html#l00050">find()</a>, and <a class="el" href="money_8hpp_source.html#l00033">rpg_os::Denomination::perBase</a>.</p>
+<p class="reference">References <a class="el" href="money_8hpp_source.html#l00051">find()</a>, and <a class="el" href="money_8hpp_source.html#l00034">rpg_os::Denomination::perBase</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="money_8hpp_source.html#l00125">rpg_os::Money::fromCoins()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00758">rpg_os::generated::dnd5e::Character::fromJson()</a>, <a class="el" href="tde5e__core__static_8hpp_source.html#l01746">rpg_os::generated::tde5e::Character::fromJson()</a>, and <a class="el" href="test__bookkeeping_8cpp_source.html#l00060">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="money_8hpp_source.html#l00126">rpg_os::Money::fromCoins()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00764">rpg_os::generated::dnd5e::Character::fromJson()</a>, <a class="el" href="tde5e__core__static_8hpp_source.html#l01752">rpg_os::generated::tde5e::Character::fromJson()</a>, and <a class="el" href="test__bookkeeping_8cpp_source.html#l00060">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -250,7 +250,7 @@ Public Attributes</h2></td></tr>
 
 <p>the smallest coin, e.g. "cp" </p>
 
-<p class="definition">Definition at line <a class="el" href="money_8hpp_source.html#l00046">46</a> of file <a class="el" href="money_8hpp_source.html">money.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="money_8hpp_source.html#l00047">47</a> of file <a class="el" href="money_8hpp_source.html">money.hpp</a>.</p>
 
 </div>
 </div>
@@ -266,9 +266,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="money_8hpp_source.html#l00047">47</a> of file <a class="el" href="money_8hpp_source.html">money.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="money_8hpp_source.html#l00048">48</a> of file <a class="el" href="money_8hpp_source.html">money.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="money_8hpp_source.html#l00050">find()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="money_8hpp_source.html#l00051">find()</a>.</p>
 
 </div>
 </div>
@@ -286,9 +286,9 @@ Public Attributes</h2></td></tr>
 
 <p>e.g. "dnd_coins" </p>
 
-<p class="definition">Definition at line <a class="el" href="money_8hpp_source.html#l00044">44</a> of file <a class="el" href="money_8hpp_source.html">money.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="money_8hpp_source.html#l00045">45</a> of file <a class="el" href="money_8hpp_source.html">money.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ruleset__loader_8hpp_source.html#l00274">rpg_os::Ruleset::hasCurrency()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ruleset__loader_8hpp_source.html#l00275">rpg_os::Ruleset::hasCurrency()</a>.</p>
 
 </div>
 </div>
@@ -306,7 +306,7 @@ Public Attributes</h2></td></tr>
 
 <p>e.g. "D&amp;D Coins" </p>
 
-<p class="definition">Definition at line <a class="el" href="money_8hpp_source.html#l00045">45</a> of file <a class="el" href="money_8hpp_source.html">money.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="money_8hpp_source.html#l00046">46</a> of file <a class="el" href="money_8hpp_source.html">money.hpp</a>.</p>
 
 </div>
 </div>

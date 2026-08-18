@@ -8,15 +8,15 @@
 <!-- Browser tab icon — copied into the output via HTML_EXTRA_FILES (favicon.png). -->
 <link rel="icon" type="image/png" href="favicon.png"/>
 <!-- BEGIN opengraph metadata -->
-<meta property="og:title" content="RPG-OS" />
-<meta property="og:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
+<meta property="og:title" content="RPG OS" />
+<meta property="og:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
 <meta property="og:url" content="https://Mundus-Mirabilis.github.io/RPG-OS/" />
 <!-- END opengraph metadata -->
 <!-- BEGIN twitter metadata -->
-<meta name="twitter:title" content="RPG-OS" />
-<meta name="twitter:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
+<meta name="twitter:title" content="RPG OS" />
+<meta name="twitter:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
 <!-- END twitter metadata -->
-<title>RPG-OS: check_resolver.hpp File Reference</title>
+<title>RPG OS: check_resolver.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -55,9 +55,9 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="mundus-mirabilis_512.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">RPG-OS
+   <div id="projectname">RPG OS
    </div>
-   <div id="projectbrief">A header-only C++23 universal rule engine for tabletop role-playing games</div>
+   <div id="projectbrief">A universal, header-only C++23 rule engine for tabletop role-playing games</div>
   </td>
  </tr>
  </tbody>
@@ -123,7 +123,7 @@ $(document).ready(function(){initNavTree('check__resolver_8hpp.html',''); initRe
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a>  </div>
-  <div class="headertitle"><div class="title">check_resolver.hpp File Reference</div></div>
+  <div class="headertitle"><div class="title">check_resolver.hpp File Reference<div class="ingroups"><a class="el" href="group__rpg__os__universal.html">Universal mode — the dynamic engine</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -162,7 +162,7 @@ Namespaces</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Check resolver (universal mode). </p>
-<p>A thin runtime layer over the generic resolver in <code><a class="el" href="checks_8hpp.html" title="Generic, data-driven check resolution.">core/checks.hpp</a></code>: it looks up a named <code>check_types</code> recipe in the ruleset and dispatches through <code>resolveCheck</code>. Specific-mode generated code calls <code>resolveCheck</code> with a <code>constexpr</code> recipe directly, so no work is duplicated.</p>
+<p>A thin runtime layer over the generic resolver in <code><a class="el" href="checks_8hpp.html">core/checks.hpp</a></code>: it looks up a named <code>check_types</code> recipe in the ruleset and dispatches through <code>resolveCheck</code>. Specific-mode generated code calls <code>resolveCheck</code> with a <code>constexpr</code> recipe directly, so no work is duplicated.</p>
 <dl class="section user"><dt>Why a separate, near-empty class?</dt><dd>Keeping the name -&gt; <code>CheckRecipe</code> lookup separate from the engine facade gives the universal mode a tiny, independently testable seam: it answers exactly "given a ruleset and a check name, resolve this check" and nothing more. The engine composes it with entity creation, damage, and events. </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="check__resolver_8hpp_source.html">check_resolver.hpp</a>.</p>

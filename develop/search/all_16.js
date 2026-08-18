@@ -1,18 +1,13 @@
 var searchData=
 [
-  ['warfare_0',['warfare',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#abfbca23df3856e3e8dac4c8581064d3d',1,'rpg_os::generated::tde5e::Character']]],
-  ['weak_1',['Weak',['../namespacerpg__os.html#ab870da3d65c79d59dad5920efc43dc65a7324e3727807d95037eb19d304fd91ec',1,'rpg_os']]],
-  ['weakest_2',['Weakest',['../namespacerpg__os.html#ab870da3d65c79d59dad5920efc43dc65a983a8b4b7a68982963585846a025f565',1,'rpg_os']]],
-  ['weakest_20…_20strongest_3',['Ranges and variance (weakest … strongest)',['../index.html#autotoc_md7',1,'']]],
-  ['weight_4',['Weight',['../structrpg__os_1_1Weight.html',1,'rpg_os']]],
-  ['weightunit_5',['weightUnit',['../structrpg__os_1_1EncumbranceConfig.html#ae04966d237ec3a3f7f993bba9f9c01e2',1,'rpg_os::EncumbranceConfig']]],
-  ['willpower_6',['willpower',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a461f9e0f1fd5fa05ee08b90fa6abdeb4',1,'rpg_os::generated::tde5e::Character']]],
-  ['winnerindex_7',['winnerIndex',['../structrpg__os_1_1FightOutcome.html#a4a3e8f408ed28dd9c542715ea0d87ce4',1,'rpg_os::FightOutcome']]],
-  ['wisdom_8',['wisdom',['../classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#a5e93beecd7bd988037e81119fba28c9e',1,'rpg_os::generated::dnd5e::Character']]],
-  ['wisdommodifier_9',['wisdomModifier',['../classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#aa6f6a95543809cc9c69b947e7f16b82a',1,'rpg_os::generated::dnd5e::Character']]],
-  ['withconditionmodifiers_10',['withConditionModifiers',['../classrpg__os_1_1RulesetEngine.html#a6f990c1f0ed548c91e8f8477c02ee1a6',1,'rpg_os::RulesetEngine']]],
-  ['woodworking_11',['woodworking',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a2020cff5b40f1441a84ccc5776a40a24',1,'rpg_os::generated::tde5e::Character']]],
-  ['world_12',['world',['../classrpg__os_1_1GameSession.html#ab713f5f3935a30db03aa2d3258409e21',1,'rpg_os::GameSession::world() noexcept'],['../classrpg__os_1_1GameSession.html#a75e2c88b4bd9668331179e1b1c8c6d43',1,'rpg_os::GameSession::world() const noexcept']]],
-  ['world_5fstate_2ehpp_13',['world_state.hpp',['../world__state_8hpp.html',1,'']]],
-  ['worldstate_14',['WorldState',['../classrpg__os_1_1WorldState.html',1,'rpg_os']]]
+  ['valid_0',['valid',['../structrpg__os_1_1EntityId.html#a8ab04ecebbcef171bee29f004b1a8b2f',1,'rpg_os::EntityId']]],
+  ['validate_1',['validate',['../classrpg__os_1_1RulesetLoader.html#ac9c8667fb5c75db69532230ff49cc969',1,'rpg_os::RulesetLoader']]],
+  ['validateruleset_2',['validateRuleset',['../classrpg__os_1_1RulesetEngine.html#ab3a11d16fda03eee685c5cec3f6c901a',1,'rpg_os::RulesetEngine']]],
+  ['value_3',['value',['../structrpg__os_1_1CostTable_1_1Entry.html#a0eada2f5d177f109ae6bd6579b63f580',1,'rpg_os::CostTable::Entry::value'],['../structrpg__os_1_1StatBonus.html#ae42bb661ae939d7aa620fb7ab0055b47',1,'rpg_os::StatBonus::value'],['../structrpg__os_1_1EntityId.html#a8972983924090e7ecedac5f114ab0192',1,'rpg_os::EntityId::value'],['../structrpg__os_1_1Weight.html#a39ad2693155c3117eb1e49a61e7f572e',1,'rpg_os::Weight::value'],['../structrpg__os_1_1Modifier.html#a8e509dbc18c4713e206ae7194696a2b2',1,'rpg_os::Modifier::value']]],
+  ['value_20types_4',['Shared core — mechanics and value types',['../group__rpg__os__core.html',1,'']]],
+  ['valueof_5',['valueOf',['../structrpg__os_1_1CurrencySystem.html#ae4ffc36f86c5649e0798791b07509315',1,'rpg_os::CurrencySystem']]],
+  ['values_6',['values',['../structMapEvalContext.html#a5999837ae327b025ce84727e639eda76',1,'MapEvalContext::values'],['../structScriptedRng.html#aff6da94f666db3734a0481c7633270d6',1,'ScriptedRng::values'],['../structMockStats.html#afd6a2b6395eafeb9951960b1e976aa60',1,'MockStats::values']]],
+  ['variance_7',['Variance',['../namespacerpg__os.html#ab870da3d65c79d59dad5920efc43dc65',1,'rpg_os']]],
+  ['variance_2ehpp_8',['variance.hpp',['../variance_8hpp.html',1,'']]],
+  ['visitstacks_9',['visitStacks',['../classrpg__os_1_1Inventory.html#aa8cea0ddceddec5ea16ffe8f107c52eb',1,'rpg_os::Inventory']]]
 ];

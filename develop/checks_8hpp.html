@@ -8,15 +8,15 @@
 <!-- Browser tab icon — copied into the output via HTML_EXTRA_FILES (favicon.png). -->
 <link rel="icon" type="image/png" href="favicon.png"/>
 <!-- BEGIN opengraph metadata -->
-<meta property="og:title" content="RPG-OS" />
-<meta property="og:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
+<meta property="og:title" content="RPG OS" />
+<meta property="og:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
 <meta property="og:url" content="https://Mundus-Mirabilis.github.io/RPG-OS/" />
 <!-- END opengraph metadata -->
 <!-- BEGIN twitter metadata -->
-<meta name="twitter:title" content="RPG-OS" />
-<meta name="twitter:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
+<meta name="twitter:title" content="RPG OS" />
+<meta name="twitter:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
 <!-- END twitter metadata -->
-<title>RPG-OS: checks.hpp File Reference</title>
+<title>RPG OS: checks.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -55,9 +55,9 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="mundus-mirabilis_512.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">RPG-OS
+   <div id="projectname">RPG OS
    </div>
-   <div id="projectbrief">A header-only C++23 universal rule engine for tabletop role-playing games</div>
+   <div id="projectbrief">A universal, header-only C++23 rule engine for tabletop role-playing games</div>
   </td>
  </tr>
  </tbody>
@@ -128,9 +128,6 @@ $(document).ready(function(){initNavTree('checks_8hpp.html',''); initResizable()
   <div class="headertitle"><div class="title">checks.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-
-<p>Generic, data-driven check resolution.  
-<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;array&gt;</code><br />
 <code>#include &lt;cstddef&gt;</code><br />
 <code>#include &lt;cstdint&gt;</code><br />
@@ -264,13 +261,7 @@ Functions</h2></td></tr>
 <tr class="memitem:ac882be2ad6ea807bb910557771569803"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="structrpg__os_1_1CheckResult.html">CheckResult</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacerpg__os.html#ac882be2ad6ea807bb910557771569803">rpg_os::resolveCheck</a> (const Actor &amp;actor, const Target &amp;target, const <a class="el" href="structrpg__os_1_1CheckRecipe.html">CheckRecipe</a> &amp;recipe, const <a class="el" href="structrpg__os_1_1CheckParams.html">CheckParams</a> &amp;params, Rng &amp;rng)</td></tr>
 <tr class="separator:ac882be2ad6ea807bb910557771569803"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Generic, data-driven check resolution. </p>
-<p>A "check" is the heart of a tabletop ruleset: the engine must roll some dice and decide success, margins, and criticals. The engine deliberately knows <b>no ruleset-specific mechanisms</b> — there is no "D&amp;D roll" or "The Dark Eye talent check" anywhere in this header. Instead a check is described entirely by a <code>CheckRecipe:</code> which dice to roll, how to derive the reference value the roll is compared against, which way to compare, how to grade criticals, and how difficulty parameters are applied.</p>
-<p>The universal engine interprets the recipe at runtime (loaded from the ruleset JSON), and the generated specific-mode code calls the very same <code>resolveCheck</code> with a <code>constexpr</code> recipe, so the compiler folds the whole check into a few instructions. Adding a new game system — including one with a new combination of dice, comparison, and grading — requires only a new JSON recipe, never a change to this (or any other universal) code. </p>
-
-<p class="definition">Definition in file <a class="el" href="checks_8hpp_source.html">checks.hpp</a>.</p>
-</div></div><!-- contents -->
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

@@ -8,15 +8,15 @@
 <!-- Browser tab icon — copied into the output via HTML_EXTRA_FILES (favicon.png). -->
 <link rel="icon" type="image/png" href="favicon.png"/>
 <!-- BEGIN opengraph metadata -->
-<meta property="og:title" content="RPG-OS" />
-<meta property="og:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
+<meta property="og:title" content="RPG OS" />
+<meta property="og:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
 <meta property="og:url" content="https://Mundus-Mirabilis.github.io/RPG-OS/" />
 <!-- END opengraph metadata -->
 <!-- BEGIN twitter metadata -->
-<meta name="twitter:title" content="RPG-OS" />
-<meta name="twitter:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
+<meta name="twitter:title" content="RPG OS" />
+<meta name="twitter:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
 <!-- END twitter metadata -->
-<title>RPG-OS: rpg_os::EncumbranceConfig Struct Reference</title>
+<title>RPG OS: rpg_os::EncumbranceConfig Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -55,9 +55,9 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="mundus-mirabilis_512.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">RPG-OS
+   <div id="projectname">RPG OS
    </div>
-   <div id="projectbrief">A header-only C++23 universal rule engine for tabletop role-playing games</div>
+   <div id="projectbrief">A universal, header-only C++23 rule engine for tabletop role-playing games</div>
   </td>
  </tr>
  </tbody>
@@ -164,7 +164,7 @@ Public Attributes</h2></td></tr>
 <dl class="section user"><dt>Why a capacity <em>formula</em> and ratio <em>levels</em>?</dt><dd>Systems differ wildly in how much a hero can carry (D&amp;D: 15 × STR pounds; BRP: encumbrance points; TDE: abstract). A formula keeps the limit data-driven, and a list of ratio ceilings (carried ÷ capacity) with an attached condition is the generic shape of "encumbered at 50%, heavily
 encumbered at 100%". A ruleset without an <code>encumbrance</code> section simply has <a class="el" href="structrpg__os_1_1EncumbranceConfig.html#a0ad004c95196275d901fa6481ff8c531">enabled</a> == false and the engine reports no carrying limit. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00174">174</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00175">175</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="a99b11fb666b02afbf5d669bcb91a2154" name="a99b11fb666b02afbf5d669bcb91a2154"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a99b11fb666b02afbf5d669bcb91a2154">&#9670;&#160;</a></span>capacity</h2>
@@ -180,9 +180,9 @@ encumbered at 100%". A ruleset without an <code>encumbrance</code> section simpl
 
 <p>parsed capacity formula </p>
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00179">179</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00180">180</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l01106">rpg_os::RulesetEngine::carryingCapacity()</a>, and <a class="el" href="ruleset__loader_8hpp_source.html#l00838">rpg_os::RulesetLoader::validate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l01107">rpg_os::RulesetEngine::carryingCapacity()</a>, and <a class="el" href="ruleset__loader_8hpp_source.html#l00839">rpg_os::RulesetLoader::validate()</a>.</p>
 
 </div>
 </div>
@@ -200,9 +200,9 @@ encumbered at 100%". A ruleset without an <code>encumbrance</code> section simpl
 
 <p>capacity formula; empty = no limit </p>
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00178">178</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00179">179</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l01106">rpg_os::RulesetEngine::carryingCapacity()</a>, <a class="el" href="engine_8hpp_source.html#l01121">rpg_os::RulesetEngine::encumbranceLevel()</a>, and <a class="el" href="ruleset__loader_8hpp_source.html#l00838">rpg_os::RulesetLoader::validate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l01107">rpg_os::RulesetEngine::carryingCapacity()</a>, <a class="el" href="engine_8hpp_source.html#l01122">rpg_os::RulesetEngine::encumbranceLevel()</a>, and <a class="el" href="ruleset__loader_8hpp_source.html#l00839">rpg_os::RulesetLoader::validate()</a>.</p>
 
 </div>
 </div>
@@ -220,9 +220,9 @@ encumbered at 100%". A ruleset without an <code>encumbrance</code> section simpl
 
 <p>fallback when an item carries no weight </p>
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00177">177</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00178">178</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l01024">rpg_os::RulesetEngine::carriedWeight()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l01025">rpg_os::RulesetEngine::carriedWeight()</a>.</p>
 
 </div>
 </div>
@@ -238,9 +238,9 @@ encumbered at 100%". A ruleset without an <code>encumbrance</code> section simpl
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00175">175</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00176">176</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l01106">rpg_os::RulesetEngine::carryingCapacity()</a>, and <a class="el" href="engine_8hpp_source.html#l01121">rpg_os::RulesetEngine::encumbranceLevel()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l01107">rpg_os::RulesetEngine::carryingCapacity()</a>, and <a class="el" href="engine_8hpp_source.html#l01122">rpg_os::RulesetEngine::encumbranceLevel()</a>.</p>
 
 </div>
 </div>
@@ -256,9 +256,9 @@ encumbered at 100%". A ruleset without an <code>encumbrance</code> section simpl
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00184">184</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00185">185</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l01121">rpg_os::RulesetEngine::encumbranceLevel()</a>, and <a class="el" href="engine_8hpp_source.html#l01148">rpg_os::RulesetEngine::updateEncumbrance()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l01122">rpg_os::RulesetEngine::encumbranceLevel()</a>, and <a class="el" href="engine_8hpp_source.html#l01149">rpg_os::RulesetEngine::updateEncumbrance()</a>.</p>
 
 </div>
 </div>
@@ -276,9 +276,9 @@ encumbered at 100%". A ruleset without an <code>encumbrance</code> section simpl
 
 <p>unit used by item <code>weight</code> fields </p>
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00176">176</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00177">177</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l01024">rpg_os::RulesetEngine::carriedWeight()</a>, and <a class="el" href="engine_8hpp_source.html#l01106">rpg_os::RulesetEngine::carryingCapacity()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l01025">rpg_os::RulesetEngine::carriedWeight()</a>, and <a class="el" href="engine_8hpp_source.html#l01107">rpg_os::RulesetEngine::carryingCapacity()</a>.</p>
 
 </div>
 </div>

@@ -8,15 +8,15 @@
 <!-- Browser tab icon — copied into the output via HTML_EXTRA_FILES (favicon.png). -->
 <link rel="icon" type="image/png" href="favicon.png"/>
 <!-- BEGIN opengraph metadata -->
-<meta property="og:title" content="RPG-OS" />
-<meta property="og:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
+<meta property="og:title" content="RPG OS" />
+<meta property="og:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
 <meta property="og:url" content="https://Mundus-Mirabilis.github.io/RPG-OS/" />
 <!-- END opengraph metadata -->
 <!-- BEGIN twitter metadata -->
-<meta name="twitter:title" content="RPG-OS" />
-<meta name="twitter:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
+<meta name="twitter:title" content="RPG OS" />
+<meta name="twitter:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
 <!-- END twitter metadata -->
-<title>RPG-OS: check_resolver.hpp Source File</title>
+<title>RPG OS: check_resolver.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -55,9 +55,9 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="mundus-mirabilis_512.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">RPG-OS
+   <div id="projectname">RPG OS
    </div>
-   <div id="projectbrief">A header-only C++23 universal rule engine for tabletop role-playing games</div>
+   <div id="projectbrief">A universal, header-only C++23 rule engine for tabletop role-playing games</div>
   </td>
  </tr>
  </tbody>
@@ -131,50 +131,50 @@ $(document).ready(function(){initNavTree('check__resolver_8hpp_source.html','');
 <a href="check__resolver_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2026 Christian Mayer and the Mundus Mirabilis contributors.</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// SPDX-License-Identifier: Apache-2.0</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;<a class="code" href="checks_8hpp.html">rpg_os/core/checks.hpp</a>&gt;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;<a class="code" href="concepts_8hpp.html">rpg_os/core/concepts.hpp</a>&gt;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;<a class="code" href="dynamic__entity_8hpp.html">rpg_os/universal/dynamic_entity.hpp</a>&gt;</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;<a class="code" href="ruleset__loader_8hpp.html">rpg_os/universal/ruleset_loader.hpp</a>&gt;</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;stdexcept&gt;</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;string_view&gt;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacerpg__os.html">rpg_os</a> {</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="foldopen" id="foldopen00032" data-start="{" data-end="};">
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classrpg__os_1_1CheckResolver.html">   32</a></span><span class="keyword">class </span><a class="code hl_class" href="classrpg__os_1_1CheckResolver.html">CheckResolver</a> {</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  <span class="keyword">template</span> &lt;StatProv<span class="keywordtype">id</span>er Actor, StatProv<span class="keywordtype">id</span>er Target, RandomNumberGenerator Rng&gt;</div>
-<div class="foldopen" id="foldopen00043" data-start="{" data-end="}">
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classrpg__os_1_1CheckResolver.html#a748e3814be7e220c7fd87f746b4113c9">   43</a></span>  <span class="keyword">static</span> <a class="code hl_struct" href="structrpg__os_1_1CheckResult.html">CheckResult</a> <a class="code hl_function" href="classrpg__os_1_1CheckResolver.html#a748e3814be7e220c7fd87f746b4113c9">resolve</a>(<span class="keyword">const</span> <a class="code hl_class" href="classrpg__os_1_1Ruleset.html">Ruleset</a> &amp;ruleset, <span class="keyword">const</span> Actor &amp;actor, <span class="keyword">const</span> Target &amp;target,</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                             std::string_view checkTypeId, <span class="keyword">const</span> <a class="code hl_struct" href="structrpg__os_1_1CheckParams.html">CheckParams</a> &amp;params, Rng &amp;rng) {</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">const</span> <a class="code hl_struct" href="structrpg__os_1_1CheckTypeDef.html">CheckTypeDef</a> *def = ruleset.<a class="code hl_function" href="classrpg__os_1_1Ruleset.html#ac4345559867a0fc093f3c1cdff86e712">findCheckType</a>(checkTypeId);</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordflow">if</span> (def == <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>      <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;unknown check type &#39;&quot;</span> + std::string(checkTypeId) + <span class="stringliteral">&quot;&#39;&quot;</span>);</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    }</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespacerpg__os.html#ac882be2ad6ea807bb910557771569803">resolveCheck</a>(actor, target, def-&gt;<a class="code hl_variable" href="structrpg__os_1_1CheckTypeDef.html#a215f37b6634e92af13b6cde19e360186">recipe</a>, params, rng);</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  }</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;<a class="code" href="checks_8hpp.html">rpg_os/core/checks.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;<a class="code" href="concepts_8hpp.html">rpg_os/core/concepts.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;<a class="code" href="dynamic__entity_8hpp.html">rpg_os/universal/dynamic_entity.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;<a class="code" href="ruleset__loader_8hpp.html">rpg_os/universal/ruleset_loader.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;stdexcept&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;string_view&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacerpg__os.html">rpg_os</a> {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="foldopen" id="foldopen00033" data-start="{" data-end="};">
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classrpg__os_1_1CheckResolver.html">   33</a></span><span class="keyword">class </span><a class="code hl_class" href="classrpg__os_1_1CheckResolver.html">CheckResolver</a> {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  <span class="keyword">template</span> &lt;StatProv<span class="keywordtype">id</span>er Actor, StatProv<span class="keywordtype">id</span>er Target, RandomNumberGenerator Rng&gt;</div>
+<div class="foldopen" id="foldopen00044" data-start="{" data-end="}">
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classrpg__os_1_1CheckResolver.html#a748e3814be7e220c7fd87f746b4113c9">   44</a></span>  <span class="keyword">static</span> <a class="code hl_struct" href="structrpg__os_1_1CheckResult.html">CheckResult</a> <a class="code hl_function" href="classrpg__os_1_1CheckResolver.html#a748e3814be7e220c7fd87f746b4113c9">resolve</a>(<span class="keyword">const</span> <a class="code hl_class" href="classrpg__os_1_1Ruleset.html">Ruleset</a> &amp;ruleset, <span class="keyword">const</span> Actor &amp;actor, <span class="keyword">const</span> Target &amp;target,</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                             std::string_view checkTypeId, <span class="keyword">const</span> <a class="code hl_struct" href="structrpg__os_1_1CheckParams.html">CheckParams</a> &amp;params, Rng &amp;rng) {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keyword">const</span> <a class="code hl_struct" href="structrpg__os_1_1CheckTypeDef.html">CheckTypeDef</a> *def = ruleset.<a class="code hl_function" href="classrpg__os_1_1Ruleset.html#ac4345559867a0fc093f3c1cdff86e712">findCheckType</a>(checkTypeId);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordflow">if</span> (def == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>      <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;unknown check type &#39;&quot;</span> + std::string(checkTypeId) + <span class="stringliteral">&quot;&#39;&quot;</span>);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    }</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespacerpg__os.html#ac882be2ad6ea807bb910557771569803">resolveCheck</a>(actor, target, def-&gt;<a class="code hl_variable" href="structrpg__os_1_1CheckTypeDef.html#a215f37b6634e92af13b6cde19e360186">recipe</a>, params, rng);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  }</div>
 </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>};</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>};</div>
 </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>} <span class="comment">// namespace rpg_os</span></div>
-<div class="ttc" id="achecks_8hpp_html"><div class="ttname"><a href="checks_8hpp.html">checks.hpp</a></div><div class="ttdoc">Generic, data-driven check resolution.</div></div>
-<div class="ttc" id="aclassrpg__os_1_1CheckResolver_html"><div class="ttname"><a href="classrpg__os_1_1CheckResolver.html">rpg_os::CheckResolver</a></div><div class="ttdoc">Resolves checks by ruleset-declared name.</div><div class="ttdef"><b>Definition</b> <a href="check__resolver_8hpp_source.html#l00032">check_resolver.hpp:32</a></div></div>
-<div class="ttc" id="aclassrpg__os_1_1CheckResolver_html_a748e3814be7e220c7fd87f746b4113c9"><div class="ttname"><a href="classrpg__os_1_1CheckResolver.html#a748e3814be7e220c7fd87f746b4113c9">rpg_os::CheckResolver::resolve</a></div><div class="ttdeci">static CheckResult resolve(const Ruleset &amp;ruleset, const Actor &amp;actor, const Target &amp;target, std::string_view checkTypeId, const CheckParams &amp;params, Rng &amp;rng)</div><div class="ttdef"><b>Definition</b> <a href="check__resolver_8hpp_source.html#l00043">check_resolver.hpp:43</a></div></div>
-<div class="ttc" id="aclassrpg__os_1_1Ruleset_html"><div class="ttname"><a href="classrpg__os_1_1Ruleset.html">rpg_os::Ruleset</a></div><div class="ttdef"><b>Definition</b> <a href="ruleset__loader_8hpp_source.html#l00213">ruleset_loader.hpp:213</a></div></div>
-<div class="ttc" id="aclassrpg__os_1_1Ruleset_html_ac4345559867a0fc093f3c1cdff86e712"><div class="ttname"><a href="classrpg__os_1_1Ruleset.html#ac4345559867a0fc093f3c1cdff86e712">rpg_os::Ruleset::findCheckType</a></div><div class="ttdeci">const CheckTypeDef * findCheckType(std::string_view statId) const</div><div class="ttdoc">Finds a check type by id; returns nullptr when absent.</div><div class="ttdef"><b>Definition</b> <a href="ruleset__loader_8hpp_source.html#l00297">ruleset_loader.hpp:297</a></div></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>} <span class="comment">// namespace rpg_os</span></div>
+<div class="ttc" id="achecks_8hpp_html"><div class="ttname"><a href="checks_8hpp.html">checks.hpp</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1CheckResolver_html"><div class="ttname"><a href="classrpg__os_1_1CheckResolver.html">rpg_os::CheckResolver</a></div><div class="ttdoc">Resolves checks by ruleset-declared name.</div><div class="ttdef"><b>Definition</b> <a href="check__resolver_8hpp_source.html#l00033">check_resolver.hpp:33</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1CheckResolver_html_a748e3814be7e220c7fd87f746b4113c9"><div class="ttname"><a href="classrpg__os_1_1CheckResolver.html#a748e3814be7e220c7fd87f746b4113c9">rpg_os::CheckResolver::resolve</a></div><div class="ttdeci">static CheckResult resolve(const Ruleset &amp;ruleset, const Actor &amp;actor, const Target &amp;target, std::string_view checkTypeId, const CheckParams &amp;params, Rng &amp;rng)</div><div class="ttdef"><b>Definition</b> <a href="check__resolver_8hpp_source.html#l00044">check_resolver.hpp:44</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1Ruleset_html"><div class="ttname"><a href="classrpg__os_1_1Ruleset.html">rpg_os::Ruleset</a></div><div class="ttdef"><b>Definition</b> <a href="ruleset__loader_8hpp_source.html#l00214">ruleset_loader.hpp:214</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1Ruleset_html_ac4345559867a0fc093f3c1cdff86e712"><div class="ttname"><a href="classrpg__os_1_1Ruleset.html#ac4345559867a0fc093f3c1cdff86e712">rpg_os::Ruleset::findCheckType</a></div><div class="ttdeci">const CheckTypeDef * findCheckType(std::string_view statId) const</div><div class="ttdoc">Finds a check type by id; returns nullptr when absent.</div><div class="ttdef"><b>Definition</b> <a href="ruleset__loader_8hpp_source.html#l00298">ruleset_loader.hpp:298</a></div></div>
 <div class="ttc" id="aconcepts_8hpp_html"><div class="ttname"><a href="concepts_8hpp.html">concepts.hpp</a></div><div class="ttdoc">Core concepts that both modes (universal + specific) satisfy.</div></div>
 <div class="ttc" id="adynamic__entity_8hpp_html"><div class="ttname"><a href="dynamic__entity_8hpp.html">dynamic_entity.hpp</a></div><div class="ttdoc">Dynamic entity (universal mode).</div></div>
-<div class="ttc" id="anamespacerpg__os_html"><div class="ttname"><a href="namespacerpg__os.html">rpg_os</a></div><div class="ttdef"><b>Definition</b> <a href="event__system_8hpp_source.html#l00041">event_system.hpp:41</a></div></div>
-<div class="ttc" id="anamespacerpg__os_html_ac882be2ad6ea807bb910557771569803"><div class="ttname"><a href="namespacerpg__os.html#ac882be2ad6ea807bb910557771569803">rpg_os::resolveCheck</a></div><div class="ttdeci">constexpr CheckResult resolveCheck(const Actor &amp;actor, const Target &amp;target, const CheckRecipe &amp;recipe, const CheckParams &amp;params, Rng &amp;rng)</div><div class="ttdef"><b>Definition</b> <a href="checks_8hpp_source.html#l00618">checks.hpp:618</a></div></div>
+<div class="ttc" id="anamespacerpg__os_html"><div class="ttname"><a href="namespacerpg__os.html">rpg_os</a></div><div class="ttdef"><b>Definition</b> <a href="event__system_8hpp_source.html#l00042">event_system.hpp:42</a></div></div>
+<div class="ttc" id="anamespacerpg__os_html_ac882be2ad6ea807bb910557771569803"><div class="ttname"><a href="namespacerpg__os.html#ac882be2ad6ea807bb910557771569803">rpg_os::resolveCheck</a></div><div class="ttdeci">constexpr CheckResult resolveCheck(const Actor &amp;actor, const Target &amp;target, const CheckRecipe &amp;recipe, const CheckParams &amp;params, Rng &amp;rng)</div><div class="ttdef"><b>Definition</b> <a href="checks_8hpp_source.html#l00619">checks.hpp:619</a></div></div>
 <div class="ttc" id="aruleset__loader_8hpp_html"><div class="ttname"><a href="ruleset__loader_8hpp.html">ruleset_loader.hpp</a></div><div class="ttdoc">Ruleset loading and validation (universal / dynamic mode).</div></div>
-<div class="ttc" id="astructrpg__os_1_1CheckParams_html"><div class="ttname"><a href="structrpg__os_1_1CheckParams.html">rpg_os::CheckParams</a></div><div class="ttdef"><b>Definition</b> <a href="checks_8hpp_source.html#l00200">checks.hpp:200</a></div></div>
-<div class="ttc" id="astructrpg__os_1_1CheckResult_html"><div class="ttname"><a href="structrpg__os_1_1CheckResult.html">rpg_os::CheckResult</a></div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l00078">types.hpp:78</a></div></div>
-<div class="ttc" id="astructrpg__os_1_1CheckTypeDef_html"><div class="ttname"><a href="structrpg__os_1_1CheckTypeDef.html">rpg_os::CheckTypeDef</a></div><div class="ttdef"><b>Definition</b> <a href="ruleset__loader_8hpp_source.html#l00117">ruleset_loader.hpp:117</a></div></div>
-<div class="ttc" id="astructrpg__os_1_1CheckTypeDef_html_a215f37b6634e92af13b6cde19e360186"><div class="ttname"><a href="structrpg__os_1_1CheckTypeDef.html#a215f37b6634e92af13b6cde19e360186">rpg_os::CheckTypeDef::recipe</a></div><div class="ttdeci">CheckRecipe recipe</div><div class="ttdef"><b>Definition</b> <a href="ruleset__loader_8hpp_source.html#l00119">ruleset_loader.hpp:119</a></div></div>
+<div class="ttc" id="astructrpg__os_1_1CheckParams_html"><div class="ttname"><a href="structrpg__os_1_1CheckParams.html">rpg_os::CheckParams</a></div><div class="ttdef"><b>Definition</b> <a href="checks_8hpp_source.html#l00201">checks.hpp:201</a></div></div>
+<div class="ttc" id="astructrpg__os_1_1CheckResult_html"><div class="ttname"><a href="structrpg__os_1_1CheckResult.html">rpg_os::CheckResult</a></div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l00079">types.hpp:79</a></div></div>
+<div class="ttc" id="astructrpg__os_1_1CheckTypeDef_html"><div class="ttname"><a href="structrpg__os_1_1CheckTypeDef.html">rpg_os::CheckTypeDef</a></div><div class="ttdef"><b>Definition</b> <a href="ruleset__loader_8hpp_source.html#l00118">ruleset_loader.hpp:118</a></div></div>
+<div class="ttc" id="astructrpg__os_1_1CheckTypeDef_html_a215f37b6634e92af13b6cde19e360186"><div class="ttname"><a href="structrpg__os_1_1CheckTypeDef.html#a215f37b6634e92af13b6cde19e360186">rpg_os::CheckTypeDef::recipe</a></div><div class="ttdeci">CheckRecipe recipe</div><div class="ttdef"><b>Definition</b> <a href="ruleset__loader_8hpp_source.html#l00120">ruleset_loader.hpp:120</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

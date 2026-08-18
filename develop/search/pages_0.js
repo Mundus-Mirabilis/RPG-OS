@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['examples_0',['Examples',['../md_examples_2README.html',1,'']]]
+  ['developer_20guide_0',['Developer Guide',['../developer_guide.html',1,'']]]
 ];

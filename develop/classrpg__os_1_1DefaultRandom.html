@@ -8,15 +8,15 @@
 <!-- Browser tab icon — copied into the output via HTML_EXTRA_FILES (favicon.png). -->
 <link rel="icon" type="image/png" href="favicon.png"/>
 <!-- BEGIN opengraph metadata -->
-<meta property="og:title" content="RPG-OS" />
-<meta property="og:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
+<meta property="og:title" content="RPG OS" />
+<meta property="og:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
 <meta property="og:url" content="https://Mundus-Mirabilis.github.io/RPG-OS/" />
 <!-- END opengraph metadata -->
 <!-- BEGIN twitter metadata -->
-<meta name="twitter:title" content="RPG-OS" />
-<meta name="twitter:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
+<meta name="twitter:title" content="RPG OS" />
+<meta name="twitter:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
 <!-- END twitter metadata -->
-<title>RPG-OS: rpg_os::DefaultRandom Class Reference</title>
+<title>RPG OS: rpg_os::DefaultRandom Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -55,9 +55,9 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="mundus-mirabilis_512.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">RPG-OS
+   <div id="projectname">RPG OS
    </div>
-   <div id="projectbrief">A header-only C++23 universal rule engine for tabletop role-playing games</div>
+   <div id="projectbrief">A universal, header-only C++23 rule engine for tabletop role-playing games</div>
   </td>
  </tr>
  </tbody>
@@ -144,7 +144,7 @@ Public Member Functions</h2></td></tr>
 <dl class="section user"><dt>Why std::mt19937?</dt><dd>The Mersenne Twister is the standard "good enough" engine: fast, portable, and deterministic for a fixed seed, which is exactly the split this library needs — seeded instances replay a run bit-for-bit, unseeded instances draw from easily available entropy.</dd></dl>
 <dl class="section user"><dt>Seeding strategy</dt><dd>Default-constructed instances seed from <a class="el" href="namespacerpg__os.html#ae74c58efe66f2fe3d9cd970227f9b02e">randomSeed</a> (the OS random device, falling back to the clock), so unseeded runs differ every time — good enough for a game, and trivially upgraded by passing an explicit seed for reproducible simulations or tests. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00090">90</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00091">91</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a371ce0c7a03bf0d4f91a0e9bf7b3c398" name="a371ce0c7a03bf0d4f91a0e9bf7b3c398"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a371ce0c7a03bf0d4f91a0e9bf7b3c398">&#9670;&#160;</a></span>DefaultRandom() <span class="overload">[1/2]</span></h2>
@@ -170,7 +170,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Unseeded: seeds the engine from easily available entropy (see <a class="el" href="namespacerpg__os.html#ae74c58efe66f2fe3d9cd970227f9b02e">randomSeed</a>), so every run differs. </p>
 
-<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00094">94</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00095">95</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -200,7 +200,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Deterministic and reproducible for a fixed <code>seed</code>. </p>
 
-<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00097">97</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00098">98</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
 
 </div>
 </div>
@@ -241,7 +241,7 @@ Public Member Functions</h2></td></tr>
 <p>Returns a uniform integer in [min, max] (inclusive). The operator form is what satisfies the <code>RandomNumberGenerator</code> concept.</p>
 <dl class="section user"><dt>Why not std::uniform_int_distribution?</dt><dd><code>std::uniform_int_distribution</code> is <em>not</em> portable: for the same engine and seed it produces different sequences on libstdc++ and libc++. The engine here draws from the raw <code>std::mt19937</code> output instead, which is specified by the standard and identical on every implementation — so "explicitly seeded = exactly reproducible" also holds across a native build (libstdc++ or libc++) and the WebAssembly build (libc++). That cross-standard-library determinism is what lets the npm package's parity tests compare a seeded WASM fight with the native fight binary. The tiny modulo bias is irrelevant for a game RNG. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00112">112</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dice__engine_8hpp_source.html#l00113">113</a> of file <a class="el" href="dice__engine_8hpp_source.html">dice_engine.hpp</a>.</p>
 
 </div>
 </div>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['os_0',['RPG-OS',['../index.html',1,'']]]
+  ['os_0',['RPG OS',['../index.html',1,'']]]
 ];

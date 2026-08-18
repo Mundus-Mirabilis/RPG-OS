@@ -8,15 +8,15 @@
 <!-- Browser tab icon — copied into the output via HTML_EXTRA_FILES (favicon.png). -->
 <link rel="icon" type="image/png" href="favicon.png"/>
 <!-- BEGIN opengraph metadata -->
-<meta property="og:title" content="RPG-OS" />
-<meta property="og:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
+<meta property="og:title" content="RPG OS" />
+<meta property="og:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
 <meta property="og:url" content="https://Mundus-Mirabilis.github.io/RPG-OS/" />
 <!-- END opengraph metadata -->
 <!-- BEGIN twitter metadata -->
-<meta name="twitter:title" content="RPG-OS" />
-<meta name="twitter:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
+<meta name="twitter:title" content="RPG OS" />
+<meta name="twitter:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
 <!-- END twitter metadata -->
-<title>RPG-OS: rpg_os::Modifier Struct Reference</title>
+<title>RPG OS: rpg_os::Modifier Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -55,9 +55,9 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="mundus-mirabilis_512.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">RPG-OS
+   <div id="projectname">RPG OS
    </div>
-   <div id="projectbrief">A header-only C++23 universal rule engine for tabletop role-playing games</div>
+   <div id="projectbrief">A universal, header-only C++23 rule engine for tabletop role-playing games</div>
   </td>
  </tr>
  </tbody>
@@ -150,7 +150,7 @@ Public Attributes</h2></td></tr>
 <div class="textblock"><p>A single modifier step for one stat.</p>
 <dl class="section user"><dt>Why one struct with optional fields instead of four types?</dt><dd>The modifier set a ruleset attaches to a stat is small and heterogeneous; a single struct with the union of fields keeps the pipeline trivial and lets rulesets list mixed modifiers in one array. Only the fields relevant to a step's <a class="el" href="structrpg__os_1_1Modifier.html#a02a2b341e2f1eb6b2f59a8bff27a4167">type</a> are read, so misuse (e.g. a <code>factor</code> on an <code>Add</code>) is simply ignored rather than a hard error — consistent with how JSON rulesets are authored. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="modifier_8hpp_source.html#l00053">53</a> of file <a class="el" href="modifier_8hpp_source.html">modifier.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="modifier_8hpp_source.html#l00054">54</a> of file <a class="el" href="modifier_8hpp_source.html">modifier.hpp</a>.</p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="aaa72927fe1b4ba8e10a2bbb82d125487" name="aaa72927fe1b4ba8e10a2bbb82d125487"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aaa72927fe1b4ba8e10a2bbb82d125487">&#9670;&#160;</a></span>clampMax</h2>
@@ -166,9 +166,9 @@ Public Attributes</h2></td></tr>
 
 <p>For Clamp: inclusive upper bound. </p>
 
-<p class="definition">Definition at line <a class="el" href="modifier_8hpp_source.html#l00062">62</a> of file <a class="el" href="modifier_8hpp_source.html">modifier.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="modifier_8hpp_source.html#l00063">63</a> of file <a class="el" href="modifier_8hpp_source.html">modifier.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dynamic__entity_8hpp_source.html#l00086">rpg_os::parseModifierJson()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dynamic__entity_8hpp_source.html#l00087">rpg_os::parseModifierJson()</a>.</p>
 
 </div>
 </div>
@@ -186,9 +186,9 @@ Public Attributes</h2></td></tr>
 
 <p>For Clamp: inclusive lower bound. </p>
 
-<p class="definition">Definition at line <a class="el" href="modifier_8hpp_source.html#l00060">60</a> of file <a class="el" href="modifier_8hpp_source.html">modifier.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="modifier_8hpp_source.html#l00061">61</a> of file <a class="el" href="modifier_8hpp_source.html">modifier.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dynamic__entity_8hpp_source.html#l00086">rpg_os::parseModifierJson()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dynamic__entity_8hpp_source.html#l00087">rpg_os::parseModifierJson()</a>.</p>
 
 </div>
 </div>
@@ -206,9 +206,9 @@ Public Attributes</h2></td></tr>
 
 <p>For Multiply: the factor (1.5 == +50%). Ignored otherwise. </p>
 
-<p class="definition">Definition at line <a class="el" href="modifier_8hpp_source.html#l00058">58</a> of file <a class="el" href="modifier_8hpp_source.html">modifier.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="modifier_8hpp_source.html#l00059">59</a> of file <a class="el" href="modifier_8hpp_source.html">modifier.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dynamic__entity_8hpp_source.html#l00086">rpg_os::parseModifierJson()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dynamic__entity_8hpp_source.html#l00087">rpg_os::parseModifierJson()</a>.</p>
 
 </div>
 </div>
@@ -224,9 +224,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="modifier_8hpp_source.html#l00054">54</a> of file <a class="el" href="modifier_8hpp_source.html">modifier.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="modifier_8hpp_source.html#l00055">55</a> of file <a class="el" href="modifier_8hpp_source.html">modifier.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dynamic__entity_8hpp_source.html#l00086">rpg_os::parseModifierJson()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dynamic__entity_8hpp_source.html#l00087">rpg_os::parseModifierJson()</a>.</p>
 
 </div>
 </div>
@@ -244,9 +244,9 @@ Public Attributes</h2></td></tr>
 
 <p>For Override / Add / Clamp: the value / bound. </p>
 
-<p class="definition">Definition at line <a class="el" href="modifier_8hpp_source.html#l00056">56</a> of file <a class="el" href="modifier_8hpp_source.html">modifier.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="modifier_8hpp_source.html#l00057">57</a> of file <a class="el" href="modifier_8hpp_source.html">modifier.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="modifier_8hpp_source.html#l00077">rpg_os::applyModifierPipeline()</a>, and <a class="el" href="dynamic__entity_8hpp_source.html#l00086">rpg_os::parseModifierJson()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="modifier_8hpp_source.html#l00078">rpg_os::applyModifierPipeline()</a>, and <a class="el" href="dynamic__entity_8hpp_source.html#l00087">rpg_os::parseModifierJson()</a>.</p>
 
 </div>
 </div>

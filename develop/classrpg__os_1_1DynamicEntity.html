@@ -8,15 +8,15 @@
 <!-- Browser tab icon — copied into the output via HTML_EXTRA_FILES (favicon.png). -->
 <link rel="icon" type="image/png" href="favicon.png"/>
 <!-- BEGIN opengraph metadata -->
-<meta property="og:title" content="RPG-OS" />
-<meta property="og:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
+<meta property="og:title" content="RPG OS" />
+<meta property="og:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
 <meta property="og:url" content="https://Mundus-Mirabilis.github.io/RPG-OS/" />
 <!-- END opengraph metadata -->
 <!-- BEGIN twitter metadata -->
-<meta name="twitter:title" content="RPG-OS" />
-<meta name="twitter:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
+<meta name="twitter:title" content="RPG OS" />
+<meta name="twitter:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
 <!-- END twitter metadata -->
-<title>RPG-OS: rpg_os::DynamicEntity Class Reference</title>
+<title>RPG OS: rpg_os::DynamicEntity Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -55,9 +55,9 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="mundus-mirabilis_512.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">RPG-OS
+   <div id="projectname">RPG OS
    </div>
-   <div id="projectbrief">A header-only C++23 universal rule engine for tabletop role-playing games</div>
+   <div id="projectbrief">A universal, header-only C++23 rule engine for tabletop role-playing games</div>
   </td>
  </tr>
  </tbody>
@@ -274,7 +274,7 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p>A universal-mode entity: dynamic stats, resources, and conditions.</p>
 <dl class="section user"><dt>Why "dynamic"?</dt><dd>Unlike the generated characters, this class can represent <em>any</em> ruleset's entities at runtime. It is the workhorse of universal mode, and its flexibility (no recompilation for a new game) is traded against the compile-time guarantees of the specific mode. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00144">144</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00145">145</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a57040c42313d412e5c4c90d6301d4f99" name="a57040c42313d412e5c4c90d6301d4f99"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a57040c42313d412e5c4c90d6301d4f99">&#9670;&#160;</a></span>AppliedAffliction</h2>
@@ -289,7 +289,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Active afflictions (poisons / diseases / curses) applied to the sheet. Shared value type (see <code><a class="el" href="structrpg__os_1_1AppliedAffliction.html">rpg_os::AppliedAffliction</a></code>) so the generated characters can round-trip the same save-state shape. </p>
 
-<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00470">470</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00471">471</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
 
 </div>
 </div>
@@ -307,7 +307,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Signature of a per-entity state-change callback (see <a class="el" href="classrpg__os_1_1DynamicEntity.html#af2dfad47587f33a7d019c7bbfc15c687">setEventSink</a>). </p>
 
-<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00166">166</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00167">167</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
 
 </div>
 </div>
@@ -347,7 +347,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Creates an empty entity bound to <code>ruleset</code>. Entities start statless and are typically populated via <a class="el" href="classrpg__os_1_1DynamicEntity.html#a07317d4aed2e9be1ab790d67e542fd87">loadFromArchetype</a> afterwards. </p>
 
-<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00148">148</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00149">149</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
 
 </div>
 </div>
@@ -394,9 +394,9 @@ Public Member Functions</h2></td></tr>
 
 <p>Records an applied affliction (called by the engine's applyAffliction). </p>
 
-<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00480">480</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00481">481</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00734">rpg_os::RulesetEngine::applyAffliction()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00735">rpg_os::RulesetEngine::applyAffliction()</a>.</p>
 
 </div>
 </div>
@@ -436,9 +436,9 @@ Public Member Functions</h2></td></tr>
 <p>Adds <code>stacks</code> of a condition (stacks accumulate).</p>
 <dl class="section user"><dt>Why stacks?</dt><dd>Several rulesets model conditions that stack (multiple poison doses, or repeated applications). Counting stacks in the map keeps that information without a separate per-condition structure. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00267">267</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00268">268</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00734">rpg_os::RulesetEngine::applyAffliction()</a>, <a class="el" href="engine_8hpp_source.html#l01460">rpg_os::RulesetEngine::resolveEffects()</a>, and <a class="el" href="engine_8hpp_source.html#l01148">rpg_os::RulesetEngine::updateEncumbrance()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00735">rpg_os::RulesetEngine::applyAffliction()</a>, <a class="el" href="engine_8hpp_source.html#l01461">rpg_os::RulesetEngine::resolveEffects()</a>, and <a class="el" href="engine_8hpp_source.html#l01149">rpg_os::RulesetEngine::updateEncumbrance()</a>.</p>
 
 </div>
 </div>
@@ -468,9 +468,9 @@ Public Member Functions</h2></td></tr>
 
 <p>Marks the sheet as resistant to <code>type</code>. </p>
 
-<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00491">491</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00492">492</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l01460">rpg_os::RulesetEngine::resolveEffects()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l01461">rpg_os::RulesetEngine::resolveEffects()</a>.</p>
 
 </div>
 </div>
@@ -500,11 +500,11 @@ Public Member Functions</h2></td></tr>
 <p>Adds <code>delta</code> to Temporary Hit Points (clamped at 0; a positive delta keeps the higher of the current and new pool, matching "they don't
 stack, you keep the higher" D&amp;D rule). Emits <code>OnTempHpChanged</code> through the entity's event sink on a change. </p>
 
-<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00434">434</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00435">435</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18a57e422b0f7a15268add030e99c7f822a">rpg_os::OnTempHpChanged</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l01460">rpg_os::RulesetEngine::resolveEffects()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l01461">rpg_os::RulesetEngine::resolveEffects()</a>.</p>
 
 </div>
 </div>
@@ -533,9 +533,9 @@ stack, you keep the higher" D&amp;D rule). Emits <code>OnTempHpChanged</code> th
 </div><div class="memdoc">
 <p>Adds <code>traitId</code> to the entity's active traits (an always-on, inherent quality — a monster's Pack Tactics, a species' Darkvision, ...). </p>
 
-<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00296">296</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00297">297</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l01244">rpg_os::RulesetEngine::applyTrait()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l01245">rpg_os::RulesetEngine::applyTrait()</a>.</p>
 
 </div>
 </div>
@@ -562,7 +562,7 @@ stack, you keep the higher" D&amp;D rule). Emits <code>OnTempHpChanged</code> th
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00455">455</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00456">456</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
 
 </div>
 </div>
@@ -591,9 +591,9 @@ stack, you keep the higher" D&amp;D rule). Emits <code>OnTempHpChanged</code> th
 
 <p>The sheet's experience / advancement state. </p>
 
-<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00452">452</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00453">453</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l01769">rpg_os::RulesetEngine::gainXp()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00857">TEST_CASE()</a>, and <a class="el" href="test__bookkeeping_8cpp_source.html#l00666">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l01770">rpg_os::RulesetEngine::gainXp()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00857">TEST_CASE()</a>, and <a class="el" href="test__bookkeeping_8cpp_source.html#l00666">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -620,7 +620,7 @@ stack, you keep the higher" D&amp;D rule). Emits <code>OnTempHpChanged</code> th
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00475">475</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00476">476</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
 
 </div>
 </div>
@@ -647,9 +647,9 @@ stack, you keep the higher" D&amp;D rule). Emits <code>OnTempHpChanged</code> th
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00472">472</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00473">473</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l01835">rpg_os::RulesetEngine::cureAffliction()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00637">TEST_CASE()</a>, and <a class="el" href="dynamic__entity_8hpp_source.html#l00507">toJson()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l01836">rpg_os::RulesetEngine::cureAffliction()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00637">TEST_CASE()</a>, and <a class="el" href="dynamic__entity_8hpp_source.html#l00508">toJson()</a>.</p>
 
 </div>
 </div>
@@ -678,9 +678,9 @@ stack, you keep the higher" D&amp;D rule). Emits <code>OnTempHpChanged</code> th
 </div><div class="memdoc">
 <p>Returns a base attribute (or skill rating) value, or 0 when unset. Unlike <a class="el" href="classrpg__os_1_1DynamicEntity.html#a58c75674a46174e2ba81a2753a836e62">getStat</a> this never evaluates a derived formula — it reads only the stored base values, which is what bestiary promotion needs. </p>
 
-<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00224">224</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00225">225</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00734">rpg_os::RulesetEngine::applyAffliction()</a>, and <a class="el" href="test__rulesets_8cpp_source.html#l00029">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00735">rpg_os::RulesetEngine::applyAffliction()</a>, and <a class="el" href="test__rulesets_8cpp_source.html#l00029">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -709,11 +709,11 @@ stack, you keep the higher" D&amp;D rule). Emits <code>OnTempHpChanged</code> th
 
 <p>The capability tokens the entity has (see <a class="el" href="classrpg__os_1_1DynamicEntity.html#af55204a84610847ec2ea40151822e2d4">collectTokens</a>). </p>
 
-<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00366">366</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00367">367</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="dynamic__entity_8hpp_source.html#l00323">collectTokens()</a>.</p>
+<p class="reference">References <a class="el" href="dynamic__entity_8hpp_source.html#l00324">collectTokens()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dynamic__entity_8hpp_source.html#l00371">hasCapability()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dynamic__entity_8hpp_source.html#l00372">hasCapability()</a>.</p>
 
 </div>
 </div>
@@ -742,9 +742,9 @@ stack, you keep the higher" D&amp;D rule). Emits <code>OnTempHpChanged</code> th
 </div><div class="memdoc">
 <p>The restriction and capability tokens contributed by the entity's active conditions and traits (deduplicated, source order). Restrictions say what the entity <em>cannot</em> do ("no_action", "no_bonus_action", "no_reaction", "no_move", "no_speak", "no_concentration", "no_cast", ...); capabilities say what it <em>can</em> do (movement / senses: "swim", "climb", "breath_water", "darkvision", ...). Both are declared as string arrays on condition / trait records, so any ruleset can express its own action-economy and mobility rules without engine changes. </p>
 
-<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00323">323</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00324">324</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dynamic__entity_8hpp_source.html#l00366">capabilities()</a>, and <a class="el" href="dynamic__entity_8hpp_source.html#l00355">restrictions()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dynamic__entity_8hpp_source.html#l00367">capabilities()</a>, and <a class="el" href="dynamic__entity_8hpp_source.html#l00356">restrictions()</a>.</p>
 
 </div>
 </div>
@@ -773,9 +773,9 @@ stack, you keep the higher" D&amp;D rule). Emits <code>OnTempHpChanged</code> th
 
 <p>The raw condition -&gt; stack-count map (immutable view). </p>
 
-<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00290">290</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00291">291</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00294">rpg_os::RulesetEngine::accumulateCheckModifiers()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00295">rpg_os::RulesetEngine::accumulateCheckModifiers()</a>.</p>
 
 </div>
 </div>
@@ -805,7 +805,7 @@ stack, you keep the higher" D&amp;D rule). Emits <code>OnTempHpChanged</code> th
 
 <p>Stack count of a condition (0 when absent). </p>
 
-<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00284">284</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00285">285</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="ecs__registry_2main_8cpp_source.html#l00080">main()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00744">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01461">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00943">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01106">TEST_CASE()</a>, and <a class="el" href="test__combat__session_8cpp_source.html#l00110">TEST_CASE()</a>.</p>
 
@@ -834,7 +834,7 @@ stack, you keep the higher" D&amp;D rule). Emits <code>OnTempHpChanged</code> th
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00463">463</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00464">464</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
 
 </div>
 </div>
@@ -863,9 +863,9 @@ stack, you keep the higher" D&amp;D rule). Emits <code>OnTempHpChanged</code> th
 
 <p>The sheet's active-effect timeline (conditions with durations). </p>
 
-<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00460">460</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00461">461</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l01306">rpg_os::RulesetEngine::processOngoing()</a>, <a class="el" href="engine_8hpp_source.html#l01197">rpg_os::RulesetEngine::removeCondition()</a>, <a class="el" href="engine_8hpp_source.html#l01237">rpg_os::RulesetEngine::removeStatBonus()</a>, <a class="el" href="engine_8hpp_source.html#l01460">rpg_os::RulesetEngine::resolveEffects()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01361">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00744">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01151">TEST_CASE()</a>, <a class="el" href="engine_8hpp_source.html#l01256">rpg_os::RulesetEngine::tickEffects()</a>, and <a class="el" href="engine_8hpp_source.html#l00253">rpg_os::RulesetEngine::withConditionModifiers()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l01307">rpg_os::RulesetEngine::processOngoing()</a>, <a class="el" href="engine_8hpp_source.html#l01198">rpg_os::RulesetEngine::removeCondition()</a>, <a class="el" href="engine_8hpp_source.html#l01238">rpg_os::RulesetEngine::removeStatBonus()</a>, <a class="el" href="engine_8hpp_source.html#l01461">rpg_os::RulesetEngine::resolveEffects()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01361">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00744">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01151">TEST_CASE()</a>, <a class="el" href="engine_8hpp_source.html#l01257">rpg_os::RulesetEngine::tickEffects()</a>, and <a class="el" href="engine_8hpp_source.html#l00254">rpg_os::RulesetEngine::withConditionModifiers()</a>.</p>
 
 </div>
 </div>
@@ -893,9 +893,9 @@ stack, you keep the higher" D&amp;D rule). Emits <code>OnTempHpChanged</code> th
 </div><div class="memdoc">
 <p>The entity's unique <em>instance</em> id, distinct from <a class="el" href="classrpg__os_1_1DynamicEntity.html#a9c6fbf35cf8e5356354ff94f4a1a4a1d">id</a> (which names the archetype or creature type shared by every instance of that kind). Assigned at construction and never reused, so it can address one living character in a registry, a <a class="el" href="classrpg__os_1_1EntityHandle.html">EntityHandle</a>, or an event payload. </p>
 
-<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00161">161</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00162">162</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l01865">rpg_os::RulesetEngine::attachEntityEvents()</a>, <a class="el" href="engine_8hpp_source.html#l00622">rpg_os::RulesetEngine::castSpell()</a>, <a class="el" href="engine_8hpp_source.html#l01209">rpg_os::RulesetEngine::fireConditionChanged()</a>, <a class="el" href="test__entity__registry_8cpp_source.html#l00053">TEST_CASE()</a>, <a class="el" href="test__entity__registry_8cpp_source.html#l00064">TEST_CASE()</a>, <a class="el" href="test__entity__registry_8cpp_source.html#l00097">TEST_CASE()</a>, and <a class="el" href="engine_8hpp_source.html#l01148">rpg_os::RulesetEngine::updateEncumbrance()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l01866">rpg_os::RulesetEngine::attachEntityEvents()</a>, <a class="el" href="engine_8hpp_source.html#l00623">rpg_os::RulesetEngine::castSpell()</a>, <a class="el" href="engine_8hpp_source.html#l01210">rpg_os::RulesetEngine::fireConditionChanged()</a>, <a class="el" href="test__entity__registry_8cpp_source.html#l00053">TEST_CASE()</a>, <a class="el" href="test__entity__registry_8cpp_source.html#l00064">TEST_CASE()</a>, <a class="el" href="test__entity__registry_8cpp_source.html#l00097">TEST_CASE()</a>, and <a class="el" href="engine_8hpp_source.html#l01149">rpg_os::RulesetEngine::updateEncumbrance()</a>.</p>
 
 </div>
 </div>
@@ -922,7 +922,7 @@ stack, you keep the higher" D&amp;D rule). Emits <code>OnTempHpChanged</code> th
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00403">403</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00404">404</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
 
 </div>
 </div>
@@ -951,9 +951,9 @@ stack, you keep the higher" D&amp;D rule). Emits <code>OnTempHpChanged</code> th
 
 <p>The sheet's worn gear (slot -&gt; item). </p>
 
-<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00400">400</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00401">401</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l01024">rpg_os::RulesetEngine::carriedWeight()</a>, <a class="el" href="engine_8hpp_source.html#l00957">rpg_os::RulesetEngine::equip()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00666">TEST_CASE()</a>, and <a class="el" href="engine_8hpp_source.html#l01004">rpg_os::RulesetEngine::unequip()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l01025">rpg_os::RulesetEngine::carriedWeight()</a>, <a class="el" href="engine_8hpp_source.html#l00958">rpg_os::RulesetEngine::equip()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00666">TEST_CASE()</a>, and <a class="el" href="engine_8hpp_source.html#l01005">rpg_os::RulesetEngine::unequip()</a>.</p>
 
 </div>
 </div>
@@ -982,7 +982,7 @@ stack, you keep the higher" D&amp;D rule). Emits <code>OnTempHpChanged</code> th
 </div><div class="memdoc">
 <p>Restores the sheet from the JSON form produced by <a class="el" href="classrpg__os_1_1DynamicEntity.html#afa0a4baf891b52a71af33700cd46d574">toJson</a> (the id is kept from construction). State not present in <code>in</code> is left unchanged. </p>
 
-<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00555">555</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00556">556</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="test__bookkeeping_8cpp_source.html#l00783">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01182">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01051">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00666">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01151">TEST_CASE()</a>, and <a class="el" href="test__entity__registry_8cpp_source.html#l00097">TEST_CASE()</a>.</p>
 
@@ -1014,11 +1014,11 @@ stack, you keep the higher" D&amp;D rule). Emits <code>OnTempHpChanged</code> th
 <p>The effective value of <code>statId</code>: the raw value plus every modifier the sheet's equipped gear and active conditions contribute (through the shared modifier pipeline in <code><a class="el" href="modifier_8hpp.html" title="Modifier stack pipeline.">core/modifier.hpp</a></code>), plus any temporary stat bonuses from active effects (spells, buffs, traits).</p>
 <dl class="section user"><dt>Why not replace getStat with this?</dt><dd>Derived-stat formulas evaluate other stats and must not re-apply gear bonuses (an equipped +1 STR must not inflate STR-derived stats <em>and</em> feed back). <a class="el" href="classrpg__os_1_1DynamicEntity.html#a58c75674a46174e2ba81a2753a836e62">getStat</a> stays the raw, formula-safe value; this is the gameplay-facing number. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00386">386</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00387">387</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="modifier_8hpp_source.html#l00077">rpg_os::applyModifierPipeline()</a>, <a class="el" href="effects_8hpp_source.html#l00165">rpg_os::EffectTimeline::bonusFor()</a>, and <a class="el" href="dynamic__entity_8hpp_source.html#l00198">getStat()</a>.</p>
+<p class="reference">References <a class="el" href="modifier_8hpp_source.html#l00078">rpg_os::applyModifierPipeline()</a>, <a class="el" href="effects_8hpp_source.html#l00166">rpg_os::EffectTimeline::bonusFor()</a>, and <a class="el" href="dynamic__entity_8hpp_source.html#l00199">getStat()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dynamic__entity_8hpp_source.html#l00971">rpg_os::EffectiveStatProvider::getStat()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00930">rpg_os::EntityContext::resolve()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00447">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01182">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00666">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00145">TEST_CASE()</a>, and <a class="el" href="test__bookkeeping_8cpp_source.html#l01151">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dynamic__entity_8hpp_source.html#l00972">rpg_os::EffectiveStatProvider::getStat()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00931">rpg_os::EntityContext::resolve()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00447">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01182">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00666">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00145">TEST_CASE()</a>, and <a class="el" href="test__bookkeeping_8cpp_source.html#l01151">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -1048,11 +1048,11 @@ stack, you keep the higher" D&amp;D rule). Emits <code>OnTempHpChanged</code> th
 <p>StatProvider: returns an attribute, skill, or derived stat value.</p>
 <dl class="section user"><dt>Why derive-on-demand instead of precomputing?</dt><dd>Derived stats depend on the current base stats (a CON-draining effect changes the pool maximum). Computing on read keeps the answer always consistent with the latest mutations, at the cost of re-evaluating the formula — the intended trade-off for the dynamic mode. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00198">198</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00199">199</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ruleset__loader_8hpp_source.html#l00288">rpg_os::Ruleset::findDerivedStat()</a>.</p>
+<p class="reference">References <a class="el" href="ruleset__loader_8hpp_source.html#l00289">rpg_os::Ruleset::findDerivedStat()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00204">rpg_os::RulesetEngine::calculateStat()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00386">getEffectiveStat()</a>, <a class="el" href="engine_8hpp_source.html#l01812">rpg_os::RulesetEngine::longRest()</a>, <a class="el" href="combat_8hpp_source.html#l00252">rpg_os::makeCombatantSpecFromEntity()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00587">refreshResources()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00930">rpg_os::EntityContext::resolve()</a>, <a class="el" href="combat_8hpp_source.html#l00462">rpg_os::detail::resolveRound()</a>, <a class="el" href="combat__session_8hpp_source.html#l00148">rpg_os::CombatSession::rollInitiative()</a>, and <a class="el" href="test__bookkeeping_8cpp_source.html#l00666">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00205">rpg_os::RulesetEngine::calculateStat()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00387">getEffectiveStat()</a>, <a class="el" href="engine_8hpp_source.html#l01813">rpg_os::RulesetEngine::longRest()</a>, <a class="el" href="combat_8hpp_source.html#l00253">rpg_os::makeCombatantSpecFromEntity()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00588">refreshResources()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00931">rpg_os::EntityContext::resolve()</a>, <a class="el" href="combat_8hpp_source.html#l00463">rpg_os::detail::resolveRound()</a>, <a class="el" href="combat__session_8hpp_source.html#l00149">rpg_os::CombatSession::rollInitiative()</a>, and <a class="el" href="test__bookkeeping_8cpp_source.html#l00666">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -1082,7 +1082,7 @@ stack, you keep the higher" D&amp;D rule). Emits <code>OnTempHpChanged</code> th
 
 <p>Whether a base attribute (or skill rating) is set. </p>
 
-<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00230">230</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00231">231</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
 
 </div>
 </div>
@@ -1112,9 +1112,9 @@ stack, you keep the higher" D&amp;D rule). Emits <code>OnTempHpChanged</code> th
 
 <p>Whether the entity has the given capability (e.g. "swim"). </p>
 
-<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00371">371</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00372">372</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="dynamic__entity_8hpp_source.html#l00366">capabilities()</a>.</p>
+<p class="reference">References <a class="el" href="dynamic__entity_8hpp_source.html#l00367">capabilities()</a>.</p>
 
 </div>
 </div>
@@ -1143,9 +1143,9 @@ stack, you keep the higher" D&amp;D rule). Emits <code>OnTempHpChanged</code> th
 </div><div class="memdoc">
 <p>Whether the entity currently has the condition. A condition with stacks reduced to 0 (or removed) is treated as absent. </p>
 
-<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00278">278</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00279">279</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="test__bookkeeping_8cpp_source.html#l00637">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01051">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01486">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00666">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00943">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01106">TEST_CASE()</a>, <a class="el" href="test__combat__session_8cpp_source.html#l00110">TEST_CASE()</a>, and <a class="el" href="engine_8hpp_source.html#l01256">rpg_os::RulesetEngine::tickEffects()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="test__bookkeeping_8cpp_source.html#l00637">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01051">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01486">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00666">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00943">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01106">TEST_CASE()</a>, <a class="el" href="test__combat__session_8cpp_source.html#l00110">TEST_CASE()</a>, and <a class="el" href="engine_8hpp_source.html#l01257">rpg_os::RulesetEngine::tickEffects()</a>.</p>
 
 </div>
 </div>
@@ -1174,7 +1174,7 @@ stack, you keep the higher" D&amp;D rule). Emits <code>OnTempHpChanged</code> th
 </div><div class="memdoc">
 <p>Whether the sheet is resistant (or immune) to a damage type (e.g. "Ranged" from a magic shield). Populated by structured effects. </p>
 
-<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00487">487</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00488">488</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="test__bookkeeping_8cpp_source.html#l01051">TEST_CASE()</a>, and <a class="el" href="test__bookkeeping_8cpp_source.html#l01036">TEST_CASE()</a>.</p>
 
@@ -1206,11 +1206,11 @@ stack, you keep the higher" D&amp;D rule). Emits <code>OnTempHpChanged</code> th
 
 <p>Whether the entity is under the given restriction (e.g. "no_action"). </p>
 
-<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00360">360</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00361">361</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="dynamic__entity_8hpp_source.html#l00355">restrictions()</a>.</p>
+<p class="reference">References <a class="el" href="dynamic__entity_8hpp_source.html#l00356">restrictions()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00585">rpg_os::RulesetEngine::actionAllowed()</a>, <a class="el" href="engine_8hpp_source.html#l00622">rpg_os::RulesetEngine::castSpell()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01605">TEST_CASE()</a>, and <a class="el" href="test__bookkeeping_8cpp_source.html#l01873">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00586">rpg_os::RulesetEngine::actionAllowed()</a>, <a class="el" href="engine_8hpp_source.html#l00623">rpg_os::RulesetEngine::castSpell()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01605">TEST_CASE()</a>, and <a class="el" href="test__bookkeeping_8cpp_source.html#l01873">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -1240,7 +1240,7 @@ stack, you keep the higher" D&amp;D rule). Emits <code>OnTempHpChanged</code> th
 
 <p>Whether <code>traitId</code> is an active trait of the entity. </p>
 
-<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00306">306</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00307">307</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="test__bookkeeping_8cpp_source.html#l01182">TEST_CASE()</a>.</p>
 
@@ -1270,9 +1270,9 @@ stack, you keep the higher" D&amp;D rule). Emits <code>OnTempHpChanged</code> th
 </div><div class="memdoc">
 <p>The entity's identifier (e.g. the archetype id). Kept for diagnostics and for payloads that need to name the actor (e.g. <code>attacker_id</code>). </p>
 
-<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00153">153</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00154">154</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00861">rpg_os::RulesetEngine::addItem()</a>, <a class="el" href="engine_8hpp_source.html#l00734">rpg_os::RulesetEngine::applyAffliction()</a>, <a class="el" href="engine_8hpp_source.html#l00622">rpg_os::RulesetEngine::castSpell()</a>, <a class="el" href="engine_8hpp_source.html#l00957">rpg_os::RulesetEngine::equip()</a>, <a class="el" href="engine_8hpp_source.html#l01209">rpg_os::RulesetEngine::fireConditionChanged()</a>, <a class="el" href="engine_8hpp_source.html#l01769">rpg_os::RulesetEngine::gainXp()</a>, <a class="el" href="engine_8hpp_source.html#l01812">rpg_os::RulesetEngine::longRest()</a>, <a class="el" href="combat_8hpp_source.html#l00252">rpg_os::makeCombatantSpecFromEntity()</a>, <a class="el" href="engine_8hpp_source.html#l00899">rpg_os::RulesetEngine::pay()</a>, <a class="el" href="engine_8hpp_source.html#l00879">rpg_os::RulesetEngine::removeItem()</a>, <a class="el" href="engine_8hpp_source.html#l01082">rpg_os::RulesetEngine::removeItemFromContainer()</a>, <a class="el" href="engine_8hpp_source.html#l01276">rpg_os::RulesetEngine::runTurn()</a>, <a class="el" href="engine_8hpp_source.html#l01803">rpg_os::RulesetEngine::shortRest()</a>, <a class="el" href="test__entity__registry_8cpp_source.html#l00053">TEST_CASE()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00507">toJson()</a>, <a class="el" href="engine_8hpp_source.html#l01004">rpg_os::RulesetEngine::unequip()</a>, and <a class="el" href="engine_8hpp_source.html#l01148">rpg_os::RulesetEngine::updateEncumbrance()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00862">rpg_os::RulesetEngine::addItem()</a>, <a class="el" href="engine_8hpp_source.html#l00735">rpg_os::RulesetEngine::applyAffliction()</a>, <a class="el" href="engine_8hpp_source.html#l00623">rpg_os::RulesetEngine::castSpell()</a>, <a class="el" href="engine_8hpp_source.html#l00958">rpg_os::RulesetEngine::equip()</a>, <a class="el" href="engine_8hpp_source.html#l01210">rpg_os::RulesetEngine::fireConditionChanged()</a>, <a class="el" href="engine_8hpp_source.html#l01770">rpg_os::RulesetEngine::gainXp()</a>, <a class="el" href="engine_8hpp_source.html#l01813">rpg_os::RulesetEngine::longRest()</a>, <a class="el" href="combat_8hpp_source.html#l00253">rpg_os::makeCombatantSpecFromEntity()</a>, <a class="el" href="engine_8hpp_source.html#l00900">rpg_os::RulesetEngine::pay()</a>, <a class="el" href="engine_8hpp_source.html#l00880">rpg_os::RulesetEngine::removeItem()</a>, <a class="el" href="engine_8hpp_source.html#l01083">rpg_os::RulesetEngine::removeItemFromContainer()</a>, <a class="el" href="engine_8hpp_source.html#l01277">rpg_os::RulesetEngine::runTurn()</a>, <a class="el" href="engine_8hpp_source.html#l01804">rpg_os::RulesetEngine::shortRest()</a>, <a class="el" href="test__entity__registry_8cpp_source.html#l00053">TEST_CASE()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00508">toJson()</a>, <a class="el" href="engine_8hpp_source.html#l01005">rpg_os::RulesetEngine::unequip()</a>, and <a class="el" href="engine_8hpp_source.html#l01149">rpg_os::RulesetEngine::updateEncumbrance()</a>.</p>
 
 </div>
 </div>
@@ -1299,7 +1299,7 @@ stack, you keep the higher" D&amp;D rule). Emits <code>OnTempHpChanged</code> th
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00395">395</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00396">396</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
 
 </div>
 </div>
@@ -1328,9 +1328,9 @@ stack, you keep the higher" D&amp;D rule). Emits <code>OnTempHpChanged</code> th
 
 <p>The sheet's owned items (flat inventory). </p>
 
-<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00392">392</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00393">393</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00861">rpg_os::RulesetEngine::addItem()</a>, <a class="el" href="engine_8hpp_source.html#l01055">rpg_os::RulesetEngine::addItemToContainer()</a>, <a class="el" href="engine_8hpp_source.html#l01024">rpg_os::RulesetEngine::carriedWeight()</a>, <a class="el" href="engine_8hpp_source.html#l00957">rpg_os::RulesetEngine::equip()</a>, <a class="el" href="engine_8hpp_source.html#l00879">rpg_os::RulesetEngine::removeItem()</a>, <a class="el" href="engine_8hpp_source.html#l01082">rpg_os::RulesetEngine::removeItemFromContainer()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00783">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00857">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00744">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00666">TEST_CASE()</a>, and <a class="el" href="engine_8hpp_source.html#l01004">rpg_os::RulesetEngine::unequip()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00862">rpg_os::RulesetEngine::addItem()</a>, <a class="el" href="engine_8hpp_source.html#l01056">rpg_os::RulesetEngine::addItemToContainer()</a>, <a class="el" href="engine_8hpp_source.html#l01025">rpg_os::RulesetEngine::carriedWeight()</a>, <a class="el" href="engine_8hpp_source.html#l00958">rpg_os::RulesetEngine::equip()</a>, <a class="el" href="engine_8hpp_source.html#l00880">rpg_os::RulesetEngine::removeItem()</a>, <a class="el" href="engine_8hpp_source.html#l01083">rpg_os::RulesetEngine::removeItemFromContainer()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00783">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00857">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00744">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00666">TEST_CASE()</a>, and <a class="el" href="engine_8hpp_source.html#l01005">rpg_os::RulesetEngine::unequip()</a>.</p>
 
 </div>
 </div>
@@ -1359,11 +1359,11 @@ stack, you keep the higher" D&amp;D rule). Emits <code>OnTempHpChanged</code> th
 </div><div class="memdoc">
 <p>Loads attributes, skills, resources, and conditions from an archetype JSON record (ranged values picked at random), then (re)initializes the resource pools. This overload uses a fresh entropy-seeded RNG. </p>
 
-<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00603">603</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00604">604</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="dynamic__entity_8hpp_source.html#l00603">loadFromArchetype()</a>, and <a class="el" href="namespacerpg__os.html#ab870da3d65c79d59dad5920efc43dc65a64663f4646781c9c0110838b905daa23">rpg_os::Random</a>.</p>
+<p class="reference">References <a class="el" href="dynamic__entity_8hpp_source.html#l00604">loadFromArchetype()</a>, and <a class="el" href="namespacerpg__os.html#ab870da3d65c79d59dad5920efc43dc65a64663f4646781c9c0110838b905daa23">rpg_os::Random</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dynamic__entity_8hpp_source.html#l00603">loadFromArchetype()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01726">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00857">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00235">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01562">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01514">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01461">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01433">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00173">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01605">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01486">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00203">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01873">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01007">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00145">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00971">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01036">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00943">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00904">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01151">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01106">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00990">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00061">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00029">TEST_CASE()</a>, and <a class="el" href="test__codegen__output_8cpp_source.html#l00130">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dynamic__entity_8hpp_source.html#l00604">loadFromArchetype()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01726">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00857">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00235">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01562">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01514">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01461">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01433">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00173">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01605">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01486">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00203">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01873">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01007">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00145">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00971">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01036">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00943">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00904">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01151">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01106">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00990">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00061">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00029">TEST_CASE()</a>, and <a class="el" href="test__codegen__output_8cpp_source.html#l00130">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -1410,9 +1410,9 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 </div><div class="memdoc">
 <p>As above, but picks ranged values according to <code>variance</code> (weakest, weak, average, strong, strongest, or random) with the caller-supplied RNG. The template overload exists so deterministic tests and Monte-Carlo runs can inject a scripted/seeded RNG. </p>
 
-<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00613">613</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00614">614</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="dynamic__entity_8hpp_source.html#l00587">refreshResources()</a>.</p>
+<p class="reference">References <a class="el" href="dynamic__entity_8hpp_source.html#l00588">refreshResources()</a>.</p>
 
 </div>
 </div>
@@ -1451,11 +1451,11 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 </div><div class="memdoc">
 <p>Applies <code>delta</code> to a resource pool (clamped to its bounds); returns the amount actually applied (see <a class="el" href="structrpg__os_1_1ResourcePool.html#af3038837e8f4a53710617f74284d637d">ResourcePool::modify</a>). Missing pools are a no-op returning 0, so damage against an undeclared resource cannot crash a caller. Emits <code>OnResourceChanged</code> through the entity's event sink when the pool actually moves. </p>
 
-<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00245">245</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00246">246</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18a92aee13a1b90dc1a86e2e215959dbd5a">rpg_os::OnResourceChanged</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00734">rpg_os::RulesetEngine::applyAffliction()</a>, <a class="el" href="engine_8hpp_source.html#l00622">rpg_os::RulesetEngine::castSpell()</a>, <a class="el" href="engine_8hpp_source.html#l01812">rpg_os::RulesetEngine::longRest()</a>, <a class="el" href="engine_8hpp_source.html#l01460">rpg_os::RulesetEngine::resolveEffects()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00203">TEST_CASE()</a>, and <a class="el" href="test__bookkeeping_8cpp_source.html#l00971">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00735">rpg_os::RulesetEngine::applyAffliction()</a>, <a class="el" href="engine_8hpp_source.html#l00623">rpg_os::RulesetEngine::castSpell()</a>, <a class="el" href="engine_8hpp_source.html#l01813">rpg_os::RulesetEngine::longRest()</a>, <a class="el" href="engine_8hpp_source.html#l01461">rpg_os::RulesetEngine::resolveEffects()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00203">TEST_CASE()</a>, and <a class="el" href="test__bookkeeping_8cpp_source.html#l00971">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -1482,7 +1482,7 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00411">411</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00412">412</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
 
 </div>
 </div>
@@ -1511,9 +1511,9 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 
 <p>The sheet's wealth. </p>
 
-<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00408">408</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00409">409</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00899">rpg_os::RulesetEngine::pay()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00857">TEST_CASE()</a>, and <a class="el" href="test__bookkeeping_8cpp_source.html#l00666">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00900">rpg_os::RulesetEngine::pay()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00857">TEST_CASE()</a>, and <a class="el" href="test__bookkeeping_8cpp_source.html#l00666">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -1542,11 +1542,11 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 <p>(Re)creates the resource pools from the ruleset definitions, computing each maximum from the current stats. Newly created pools start at their full derived maximum; existing pools keep their current value while their bounds are refreshed.</p>
 <dl class="section user"><dt>Why public?</dt><dd>A sheet built by hand — a character entered into a form, restored from JSON, or otherwise never loaded from an archetype — has no pools yet. <code>createFighter</code> needs this so arbitrary characters get their hit-point pools before a fight. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00587">587</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00588">588</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="dynamic__entity_8hpp_source.html#l00198">getStat()</a>, and <a class="el" href="ruleset__loader_8hpp_source.html#l00230">rpg_os::Ruleset::resourcePools</a>.</p>
+<p class="reference">References <a class="el" href="dynamic__entity_8hpp_source.html#l00199">getStat()</a>, and <a class="el" href="ruleset__loader_8hpp_source.html#l00231">rpg_os::Ruleset::resourcePools</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dynamic__entity_8hpp_source.html#l00613">loadFromArchetype()</a>, and <a class="el" href="test__combat_8cpp_source.html#l00353">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dynamic__entity_8hpp_source.html#l00614">loadFromArchetype()</a>, and <a class="el" href="test__combat_8cpp_source.html#l00353">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -1576,9 +1576,9 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 
 <p>Removes a condition entirely. </p>
 
-<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00272">272</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00273">273</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l01197">rpg_os::RulesetEngine::removeCondition()</a>, <a class="el" href="engine_8hpp_source.html#l01256">rpg_os::RulesetEngine::tickEffects()</a>, and <a class="el" href="engine_8hpp_source.html#l01148">rpg_os::RulesetEngine::updateEncumbrance()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l01198">rpg_os::RulesetEngine::removeCondition()</a>, <a class="el" href="engine_8hpp_source.html#l01257">rpg_os::RulesetEngine::tickEffects()</a>, and <a class="el" href="engine_8hpp_source.html#l01149">rpg_os::RulesetEngine::updateEncumbrance()</a>.</p>
 
 </div>
 </div>
@@ -1608,7 +1608,7 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 
 <p>Removes the resistance to <code>type</code>. </p>
 
-<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00495">495</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00496">496</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
 
 </div>
 </div>
@@ -1638,9 +1638,9 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 
 <p>Removes <code>traitId</code> from the entity's active traits. </p>
 
-<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00301">301</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00302">302</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l01249">rpg_os::RulesetEngine::removeTrait()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l01250">rpg_os::RulesetEngine::removeTrait()</a>.</p>
 
 </div>
 </div>
@@ -1669,9 +1669,9 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 
 <p>All damage types the sheet is resistant to (immutable view). </p>
 
-<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00499">499</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00500">500</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dynamic__entity_8hpp_source.html#l00507">toJson()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dynamic__entity_8hpp_source.html#l00508">toJson()</a>.</p>
 
 </div>
 </div>
@@ -1701,9 +1701,9 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 
 <p>Current value of a resource pool, or 0 when absent. </p>
 
-<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00235">235</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00236">236</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00437">rpg_os::detail::actOnce()</a>, <a class="el" href="combat_8hpp_source.html#l00404">rpg_os::detail::attackOnce()</a>, <a class="el" href="engine_8hpp_source.html#l00622">rpg_os::RulesetEngine::castSpell()</a>, <a class="el" href="engine_8hpp_source.html#l01812">rpg_os::RulesetEngine::longRest()</a>, <a class="el" href="combat_8hpp_source.html#l00364">rpg_os::detail::pickSpell()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01726">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00857">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00744">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00235">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01562">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01514">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01433">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00173">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01605">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00203">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01007">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00971">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00904">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01106">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00990">TEST_CASE()</a>, and <a class="el" href="test__rulesets_8cpp_source.html#l00029">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00438">rpg_os::detail::actOnce()</a>, <a class="el" href="combat_8hpp_source.html#l00405">rpg_os::detail::attackOnce()</a>, <a class="el" href="engine_8hpp_source.html#l00623">rpg_os::RulesetEngine::castSpell()</a>, <a class="el" href="engine_8hpp_source.html#l01813">rpg_os::RulesetEngine::longRest()</a>, <a class="el" href="combat_8hpp_source.html#l00365">rpg_os::detail::pickSpell()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01726">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00857">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00744">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00235">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01562">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01514">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01433">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00173">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01605">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00203">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01007">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00971">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00904">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01106">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00990">TEST_CASE()</a>, and <a class="el" href="test__rulesets_8cpp_source.html#l00029">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -1732,11 +1732,11 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 
 <p>The restriction tokens in effect on the entity (see <a class="el" href="classrpg__os_1_1DynamicEntity.html#af55204a84610847ec2ea40151822e2d4">collectTokens</a>). </p>
 
-<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00355">355</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00356">356</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="dynamic__entity_8hpp_source.html#l00323">collectTokens()</a>.</p>
+<p class="reference">References <a class="el" href="dynamic__entity_8hpp_source.html#l00324">collectTokens()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dynamic__entity_8hpp_source.html#l00360">hasRestriction()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dynamic__entity_8hpp_source.html#l00361">hasRestriction()</a>.</p>
 
 </div>
 </div>
@@ -1775,11 +1775,11 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 </div><div class="memdoc">
 <p>Sets a base attribute (or skill rating) value. Emits <code>OnStatChanged</code> through the entity's event sink when the value actually changes. </p>
 
-<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00211">211</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00212">212</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18a5d7b01a14744e42aef8fe005f753cc6a">rpg_os::OnStatChanged</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00734">rpg_os::RulesetEngine::applyAffliction()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00471">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00447">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01726">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01298">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01361">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01261">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00783">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01848">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01077">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00398">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00857">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01236">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00235">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01562">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01514">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01392">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01461">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01433">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00173">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01605">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01486">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00203">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01873">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01007">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00145">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00971">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01036">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00943">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00904">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01151">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01106">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00990">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00353">TEST_CASE()</a>, and <a class="el" href="test__engine_8cpp_source.html#l00194">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00735">rpg_os::RulesetEngine::applyAffliction()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00471">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00447">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01726">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01298">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01361">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01261">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00783">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01848">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01077">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00398">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00857">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01236">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00235">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01562">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01514">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01392">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01461">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01433">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00173">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01605">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01486">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00203">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01873">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01007">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00145">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00971">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01036">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00943">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00904">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01151">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01106">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00990">TEST_CASE()</a>, <a class="el" href="test__combat_8cpp_source.html#l00353">TEST_CASE()</a>, and <a class="el" href="test__engine_8cpp_source.html#l00194">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -1809,9 +1809,9 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 <p>Sets (or clears, with an empty sink) the per-entity event sink. When set, the state-changing mutators emit granular events through it (<code>OnStatChanged</code>, <code>OnResourceChanged</code>, <code>OnTempHpChanged</code>). The engine wires this to its event bus for every entity it creates, so applications observe both engine-driven and direct sheet mutations without polling.</p>
 <dl class="section user"><dt>Why not emit from every mutator?</dt><dd>Conditions are announced by the engine's <code>applyCondition</code> / <code>removeCondition</code> (which fire <code>OnConditionChanged</code> with a rich payload and keep the timeline in sync); direct <code>addCondition</code> / <code>removeCondition</code> calls on the sheet deliberately do not emit, so the engine stays the single source of condition events. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00180">180</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00181">181</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l01865">rpg_os::RulesetEngine::attachEntityEvents()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l01866">rpg_os::RulesetEngine::attachEntityEvents()</a>.</p>
 
 </div>
 </div>
@@ -1840,7 +1840,7 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 </div><div class="memdoc">
 <p>Suppresses event emission while true. The engine sets this while restoring a saved state via <a class="el" href="classrpg__os_1_1DynamicEntity.html#aadd2644839f25c337aeb661e43ea824f">fromJson</a> so a load does not replay every state change as an event (no listener spam on a fresh session). </p>
 
-<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00187">187</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00188">188</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
 
 </div>
 </div>
@@ -1869,7 +1869,7 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 </div><div class="memdoc">
 <p>Replaces the Temporary Hit Points with <code>value</code> (never below 0). Emits <code>OnTempHpChanged</code> through the entity's event sink on a change. </p>
 
-<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00422">422</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00423">423</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18a57e422b0f7a15268add030e99c7f822a">rpg_os::OnTempHpChanged</a>.</p>
 
@@ -1898,7 +1898,7 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00447">447</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00448">448</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
 
 </div>
 </div>
@@ -1927,9 +1927,9 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 
 <p>The sheet's known / prepared spells. </p>
 
-<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00444">444</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00445">445</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l01371">rpg_os::RulesetEngine::castSpellPrepared()</a>, <a class="el" href="combat_8hpp_source.html#l00252">rpg_os::makeCombatantSpecFromEntity()</a>, <a class="el" href="engine_8hpp_source.html#l01332">rpg_os::RulesetEngine::prepareSpell()</a>, <a class="el" href="engine_8hpp_source.html#l01362">rpg_os::RulesetEngine::recoverSpellSlots()</a>, <a class="el" href="engine_8hpp_source.html#l01343">rpg_os::RulesetEngine::spellSlotsRemaining()</a>, <a class="el" href="engine_8hpp_source.html#l01352">rpg_os::RulesetEngine::spendSpellSlot()</a>, and <a class="el" href="test__bookkeeping_8cpp_source.html#l00666">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l01372">rpg_os::RulesetEngine::castSpellPrepared()</a>, <a class="el" href="combat_8hpp_source.html#l00253">rpg_os::makeCombatantSpecFromEntity()</a>, <a class="el" href="engine_8hpp_source.html#l01333">rpg_os::RulesetEngine::prepareSpell()</a>, <a class="el" href="engine_8hpp_source.html#l01363">rpg_os::RulesetEngine::recoverSpellSlots()</a>, <a class="el" href="engine_8hpp_source.html#l01344">rpg_os::RulesetEngine::spellSlotsRemaining()</a>, <a class="el" href="engine_8hpp_source.html#l01353">rpg_os::RulesetEngine::spendSpellSlot()</a>, and <a class="el" href="test__bookkeeping_8cpp_source.html#l00666">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -1957,7 +1957,7 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 </div><div class="memdoc">
 <p>Current Temporary Hit Points (a damage buffer that is consumed before the real hit-point pool; see <a class="el" href="classrpg__os_1_1RulesetEngine.html#abaf7d31b22c7e134079d1c03aa20be2e">RulesetEngine::applyDamage</a>). </p>
 
-<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00417">417</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00418">418</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="test__bookkeeping_8cpp_source.html#l00990">TEST_CASE()</a>.</p>
 
@@ -1988,11 +1988,11 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 </div><div class="memdoc">
 <p>Serializes the whole sheet (stats, resources, conditions, inventory, equipment, money, spellbook, advancement, effects) to a JSON object — the save-game form. <a class="el" href="classrpg__os_1_1DynamicEntity.html#a9c6fbf35cf8e5356354ff94f4a1a4a1d">id</a> is included but restored by the caller (it is fixed at construction). </p>
 
-<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00507">507</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00508">508</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="dynamic__entity_8hpp_source.html#l00472">afflictions()</a>, <a class="el" href="money_8hpp_source.html#l00082">rpg_os::Money::baseUnits()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00153">id()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00499">resistances()</a>, <a class="el" href="advancement_8hpp_source.html#l00042">rpg_os::Advancement::toJson()</a>, <a class="el" href="effects_8hpp_source.html#l00282">rpg_os::EffectTimeline::toJson()</a>, <a class="el" href="equipment_8hpp_source.html#l00071">rpg_os::Equipment::toJson()</a>, <a class="el" href="inventory_8hpp_source.html#l00281">rpg_os::Inventory::toJson()</a>, <a class="el" href="spellbook_8hpp_source.html#l00105">rpg_os::Spellbook::toJson()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00311">traits()</a>, and <a class="el" href="entity_8hpp_source.html#l00045">rpg_os::EntityId::value</a>.</p>
+<p class="reference">References <a class="el" href="dynamic__entity_8hpp_source.html#l00473">afflictions()</a>, <a class="el" href="money_8hpp_source.html#l00083">rpg_os::Money::baseUnits()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00154">id()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00500">resistances()</a>, <a class="el" href="advancement_8hpp_source.html#l00043">rpg_os::Advancement::toJson()</a>, <a class="el" href="effects_8hpp_source.html#l00283">rpg_os::EffectTimeline::toJson()</a>, <a class="el" href="equipment_8hpp_source.html#l00072">rpg_os::Equipment::toJson()</a>, <a class="el" href="inventory_8hpp_source.html#l00282">rpg_os::Inventory::toJson()</a>, <a class="el" href="spellbook_8hpp_source.html#l00106">rpg_os::Spellbook::toJson()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00312">traits()</a>, and <a class="el" href="entity_8hpp_source.html#l00046">rpg_os::EntityId::value</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00252">rpg_os::makeCombatantSpecFromEntity()</a>, <a class="el" href="game__session_8hpp_source.html#l00222">rpg_os::GameSession::saveState()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00783">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01051">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01151">TEST_CASE()</a>, and <a class="el" href="test__entity__registry_8cpp_source.html#l00097">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00253">rpg_os::makeCombatantSpecFromEntity()</a>, <a class="el" href="game__session_8hpp_source.html#l00223">rpg_os::GameSession::saveState()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00783">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01051">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l01151">TEST_CASE()</a>, and <a class="el" href="test__entity__registry_8cpp_source.html#l00097">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -2021,9 +2021,9 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 
 <p>The entity's active trait ids (immutable view). </p>
 
-<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00311">311</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dynamic__entity_8hpp_source.html#l00312">312</a> of file <a class="el" href="dynamic__entity_8hpp_source.html">dynamic_entity.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00294">rpg_os::RulesetEngine::accumulateCheckModifiers()</a>, <a class="el" href="engine_8hpp_source.html#l00191">rpg_os::RulesetEngine::applyTraitEffects()</a>, and <a class="el" href="dynamic__entity_8hpp_source.html#l00507">toJson()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00295">rpg_os::RulesetEngine::accumulateCheckModifiers()</a>, <a class="el" href="engine_8hpp_source.html#l00192">rpg_os::RulesetEngine::applyTraitEffects()</a>, and <a class="el" href="dynamic__entity_8hpp_source.html#l00508">toJson()</a>.</p>
 
 </div>
 </div>

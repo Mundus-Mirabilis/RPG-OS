@@ -8,15 +8,15 @@
 <!-- Browser tab icon — copied into the output via HTML_EXTRA_FILES (favicon.png). -->
 <link rel="icon" type="image/png" href="favicon.png"/>
 <!-- BEGIN opengraph metadata -->
-<meta property="og:title" content="RPG-OS" />
-<meta property="og:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
+<meta property="og:title" content="RPG OS" />
+<meta property="og:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
 <meta property="og:url" content="https://Mundus-Mirabilis.github.io/RPG-OS/" />
 <!-- END opengraph metadata -->
 <!-- BEGIN twitter metadata -->
-<meta name="twitter:title" content="RPG-OS" />
-<meta name="twitter:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
+<meta name="twitter:title" content="RPG OS" />
+<meta name="twitter:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
 <!-- END twitter metadata -->
-<title>RPG-OS: rpg_os::EntityHandle Class Reference</title>
+<title>RPG OS: rpg_os::EntityHandle Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -55,9 +55,9 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="mundus-mirabilis_512.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">RPG-OS
+   <div id="projectname">RPG OS
    </div>
-   <div id="projectbrief">A header-only C++23 universal rule engine for tabletop role-playing games</div>
+   <div id="projectbrief">A universal, header-only C++23 rule engine for tabletop role-playing games</div>
   </td>
  </tr>
  </tbody>
@@ -157,7 +157,7 @@ Public Member Functions</h2></td></tr>
 <p>A handle is created by an <a class="el" href="classrpg__os_1_1EntityRegistry.html">EntityRegistry</a> (or a <a class="el" href="classrpg__os_1_1GameSession.html">GameSession</a>) and can be copied freely. It never owns the entity, so it never has to delete anything; it only records the entity's <a class="el" href="structrpg__os_1_1EntityId.html">EntityId</a> and a <code>std::weak_ptr</code> used to check liveness and to obtain a pointer when the entity is alive.</p>
 <dl class="section user"><dt>Why store the id <em>and</em> a weak pointer?</dt><dd>The id answers "which entity is this" and stays valid forever; the weak pointer answers "is it still alive / give me access". Keeping both means a dead entity can still be <em>identified</em> in a log or an event payload even though it can no longer be dereferenced. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="entity__registry_8hpp_source.html#l00052">52</a> of file <a class="el" href="entity__registry_8hpp_source.html">entity_registry.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="entity__registry_8hpp_source.html#l00053">53</a> of file <a class="el" href="entity__registry_8hpp_source.html">entity_registry.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a4f1feb394fe72247c331d2d3c4971d79" name="a4f1feb394fe72247c331d2d3c4971d79"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4f1feb394fe72247c331d2d3c4971d79">&#9670;&#160;</a></span>EntityHandle() <span class="overload">[1/2]</span></h2>
@@ -222,7 +222,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Creates a handle for <code>id</code> backed by a weak reference to the entity. </p>
 
-<p class="definition">Definition at line <a class="el" href="entity__registry_8hpp_source.html#l00058">58</a> of file <a class="el" href="entity__registry_8hpp_source.html">entity_registry.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="entity__registry_8hpp_source.html#l00059">59</a> of file <a class="el" href="entity__registry_8hpp_source.html">entity_registry.hpp</a>.</p>
 
 </div>
 </div>
@@ -252,7 +252,7 @@ Public Member Functions</h2></td></tr>
 
 <p>The id this handle refers to (valid even after the entity is gone). </p>
 
-<p class="definition">Definition at line <a class="el" href="entity__registry_8hpp_source.html#l00079">79</a> of file <a class="el" href="entity__registry_8hpp_source.html">entity_registry.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="entity__registry_8hpp_source.html#l00080">80</a> of file <a class="el" href="entity__registry_8hpp_source.html">entity_registry.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="ecs__registry_2main_8cpp_source.html#l00080">main()</a>, <a class="el" href="test__combat__session_8cpp_source.html#l00088">TEST_CASE()</a>, <a class="el" href="test__combat__session_8cpp_source.html#l00065">TEST_CASE()</a>, <a class="el" href="test__combat__session_8cpp_source.html#l00140">TEST_CASE()</a>, <a class="el" href="test__entity__registry_8cpp_source.html#l00084">TEST_CASE()</a>, and <a class="el" href="test__entity__registry_8cpp_source.html#l00064">TEST_CASE()</a>.</p>
 
@@ -283,7 +283,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Whether the referenced entity has been destroyed. </p>
 
-<p class="definition">Definition at line <a class="el" href="entity__registry_8hpp_source.html#l00069">69</a> of file <a class="el" href="entity__registry_8hpp_source.html">entity_registry.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="entity__registry_8hpp_source.html#l00070">70</a> of file <a class="el" href="entity__registry_8hpp_source.html">entity_registry.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="test__entity__registry_8cpp_source.html#l00084">TEST_CASE()</a>, and <a class="el" href="test__entity__registry_8cpp_source.html#l00064">TEST_CASE()</a>.</p>
 
@@ -314,7 +314,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Whether this handle refers to a live entity. </p>
 
-<p class="definition">Definition at line <a class="el" href="entity__registry_8hpp_source.html#l00074">74</a> of file <a class="el" href="entity__registry_8hpp_source.html">entity_registry.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="entity__registry_8hpp_source.html#l00075">75</a> of file <a class="el" href="entity__registry_8hpp_source.html">entity_registry.hpp</a>.</p>
 
 </div>
 </div>
@@ -344,7 +344,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Handles are equal when they refer to the same entity id. </p>
 
-<p class="definition">Definition at line <a class="el" href="entity__registry_8hpp_source.html#l00084">84</a> of file <a class="el" href="entity__registry_8hpp_source.html">entity_registry.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="entity__registry_8hpp_source.html#l00085">85</a> of file <a class="el" href="entity__registry_8hpp_source.html">entity_registry.hpp</a>.</p>
 
 </div>
 </div>
@@ -372,9 +372,9 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>The live entity this handle refers to, or <code>nullptr</code> when it has been destroyed. The returned pointer is valid only while the owning registry still holds the entity. </p>
 
-<p class="definition">Definition at line <a class="el" href="entity__registry_8hpp_source.html#l00064">64</a> of file <a class="el" href="entity__registry_8hpp_source.html">entity_registry.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="entity__registry_8hpp_source.html#l00065">65</a> of file <a class="el" href="entity__registry_8hpp_source.html">entity_registry.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="combat__session_8hpp_source.html#l00212">rpg_os::CombatSession::canSpend()</a>, <a class="el" href="ecs__registry_2main_8cpp_source.html#l00080">main()</a>, <a class="el" href="combat__session_8hpp_source.html#l00195">rpg_os::CombatSession::runCurrentTurn()</a>, <a class="el" href="test__combat__session_8cpp_source.html#l00110">TEST_CASE()</a>, <a class="el" href="test__combat__session_8cpp_source.html#l00140">TEST_CASE()</a>, <a class="el" href="test__entity__registry_8cpp_source.html#l00084">TEST_CASE()</a>, and <a class="el" href="test__entity__registry_8cpp_source.html#l00064">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="combat__session_8hpp_source.html#l00213">rpg_os::CombatSession::canSpend()</a>, <a class="el" href="ecs__registry_2main_8cpp_source.html#l00080">main()</a>, <a class="el" href="combat__session_8hpp_source.html#l00196">rpg_os::CombatSession::runCurrentTurn()</a>, <a class="el" href="test__combat__session_8cpp_source.html#l00110">TEST_CASE()</a>, <a class="el" href="test__combat__session_8cpp_source.html#l00140">TEST_CASE()</a>, <a class="el" href="test__entity__registry_8cpp_source.html#l00084">TEST_CASE()</a>, and <a class="el" href="test__entity__registry_8cpp_source.html#l00064">TEST_CASE()</a>.</p>
 
 </div>
 </div>

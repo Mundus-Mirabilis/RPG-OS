@@ -8,15 +8,15 @@
 <!-- Browser tab icon — copied into the output via HTML_EXTRA_FILES (favicon.png). -->
 <link rel="icon" type="image/png" href="favicon.png"/>
 <!-- BEGIN opengraph metadata -->
-<meta property="og:title" content="RPG-OS" />
-<meta property="og:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
+<meta property="og:title" content="RPG OS" />
+<meta property="og:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
 <meta property="og:url" content="https://Mundus-Mirabilis.github.io/RPG-OS/" />
 <!-- END opengraph metadata -->
 <!-- BEGIN twitter metadata -->
-<meta name="twitter:title" content="RPG-OS" />
-<meta name="twitter:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
+<meta name="twitter:title" content="RPG OS" />
+<meta name="twitter:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
 <!-- END twitter metadata -->
-<title>RPG-OS: rpg_os::Spellbook Class Reference</title>
+<title>RPG OS: rpg_os::Spellbook Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -55,9 +55,9 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="mundus-mirabilis_512.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">RPG-OS
+   <div id="projectname">RPG OS
    </div>
-   <div id="projectbrief">A header-only C++23 universal rule engine for tabletop role-playing games</div>
+   <div id="projectbrief">A universal, header-only C++23 rule engine for tabletop role-playing games</div>
   </td>
  </tr>
  </tbody>
@@ -172,7 +172,7 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The spells a sheet knows and (where the ruleset uses preparation) has prepared. Pool-based systems (TDE, BRP) only fill the known list; vancian systems (D&amp;D) additionally track a prepared subset and per-day slot usage. </p>
 
-<p class="definition">Definition at line <a class="el" href="spellbook_8hpp_source.html#l00023">23</a> of file <a class="el" href="spellbook_8hpp_source.html">spellbook.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spellbook_8hpp_source.html#l00024">24</a> of file <a class="el" href="spellbook_8hpp_source.html">spellbook.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="af9a6e6c409a93f0edc83d34355cc1d13" name="af9a6e6c409a93f0edc83d34355cc1d13"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af9a6e6c409a93f0edc83d34355cc1d13">&#9670;&#160;</a></span>forget()</h2>
@@ -200,9 +200,9 @@ Public Member Functions</h2></td></tr>
 
 <p>Removes <code>spellId</code> from known (and prepared) lists; false when unknown. </p>
 
-<p class="definition">Definition at line <a class="el" href="spellbook_8hpp_source.html#l00033">33</a> of file <a class="el" href="spellbook_8hpp_source.html">spellbook.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spellbook_8hpp_source.html#l00034">34</a> of file <a class="el" href="spellbook_8hpp_source.html">spellbook.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="spellbook_8hpp_source.html#l00063">knows()</a>, and <a class="el" href="spellbook_8hpp_source.html#l00056">unprepare()</a>.</p>
+<p class="reference">References <a class="el" href="spellbook_8hpp_source.html#l00064">knows()</a>, and <a class="el" href="spellbook_8hpp_source.html#l00057">unprepare()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="test__bookkeeping_8cpp_source.html#l00277">TEST_CASE()</a>.</p>
 
@@ -232,9 +232,9 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="spellbook_8hpp_source.html#l00116">116</a> of file <a class="el" href="spellbook_8hpp_source.html">spellbook.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spellbook_8hpp_source.html#l00117">117</a> of file <a class="el" href="spellbook_8hpp_source.html">spellbook.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="brp__ugc__static_8hpp_source.html#l00296">rpg_os::generated::brp_ugc::Character::restoreFromJson()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00219">rpg_os::generated::dnd5e::Character::restoreFromJson()</a>, and <a class="el" href="tde5e__core__static_8hpp_source.html#l00312">rpg_os::generated::tde5e::Character::restoreFromJson()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="brp__ugc__static_8hpp_source.html#l00302">rpg_os::generated::brp_ugc::Character::restoreFromJson()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00225">rpg_os::generated::dnd5e::Character::restoreFromJson()</a>, and <a class="el" href="tde5e__core__static_8hpp_source.html#l00318">rpg_os::generated::tde5e::Character::restoreFromJson()</a>.</p>
 
 </div>
 </div>
@@ -264,9 +264,9 @@ Public Member Functions</h2></td></tr>
 
 <p>Whether the spell is currently prepared. </p>
 
-<p class="definition">Definition at line <a class="el" href="spellbook_8hpp_source.html#l00073">73</a> of file <a class="el" href="spellbook_8hpp_source.html">spellbook.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spellbook_8hpp_source.html#l00074">74</a> of file <a class="el" href="spellbook_8hpp_source.html">spellbook.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l01371">rpg_os::RulesetEngine::castSpellPrepared()</a>, <a class="el" href="spellbook_8hpp_source.html#l00045">prepare()</a>, and <a class="el" href="test__bookkeeping_8cpp_source.html#l00277">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l01372">rpg_os::RulesetEngine::castSpellPrepared()</a>, <a class="el" href="spellbook_8hpp_source.html#l00046">prepare()</a>, and <a class="el" href="test__bookkeeping_8cpp_source.html#l00277">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -295,9 +295,9 @@ Public Member Functions</h2></td></tr>
 
 <p>All known spell ids (immutable view). </p>
 
-<p class="definition">Definition at line <a class="el" href="spellbook_8hpp_source.html#l00083">83</a> of file <a class="el" href="spellbook_8hpp_source.html">spellbook.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spellbook_8hpp_source.html#l00084">84</a> of file <a class="el" href="spellbook_8hpp_source.html">spellbook.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00252">rpg_os::makeCombatantSpecFromEntity()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00253">rpg_os::makeCombatantSpecFromEntity()</a>.</p>
 
 </div>
 </div>
@@ -327,9 +327,9 @@ Public Member Functions</h2></td></tr>
 
 <p>Whether the spell is known. </p>
 
-<p class="definition">Definition at line <a class="el" href="spellbook_8hpp_source.html#l00063">63</a> of file <a class="el" href="spellbook_8hpp_source.html">spellbook.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spellbook_8hpp_source.html#l00064">64</a> of file <a class="el" href="spellbook_8hpp_source.html">spellbook.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="spellbook_8hpp_source.html#l00033">forget()</a>, <a class="el" href="spellbook_8hpp_source.html#l00026">learn()</a>, <a class="el" href="spellbook_8hpp_source.html#l00045">prepare()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00666">TEST_CASE()</a>, and <a class="el" href="test__bookkeeping_8cpp_source.html#l00277">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="spellbook_8hpp_source.html#l00034">forget()</a>, <a class="el" href="spellbook_8hpp_source.html#l00027">learn()</a>, <a class="el" href="spellbook_8hpp_source.html#l00046">prepare()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00666">TEST_CASE()</a>, and <a class="el" href="test__bookkeeping_8cpp_source.html#l00277">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -359,11 +359,11 @@ Public Member Functions</h2></td></tr>
 
 <p>Adds <code>spellId</code> to the known list (no-op when already known). </p>
 
-<p class="definition">Definition at line <a class="el" href="spellbook_8hpp_source.html#l00026">26</a> of file <a class="el" href="spellbook_8hpp_source.html">spellbook.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spellbook_8hpp_source.html#l00027">27</a> of file <a class="el" href="spellbook_8hpp_source.html">spellbook.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="spellbook_8hpp_source.html#l00063">knows()</a>.</p>
+<p class="reference">References <a class="el" href="spellbook_8hpp_source.html#l00064">knows()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="brp__ugc__static_8hpp_source.html#l02097">rpg_os::generated::brp_ugc::Character::fromJson()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00758">rpg_os::generated::dnd5e::Character::fromJson()</a>, <a class="el" href="tde5e__core__static_8hpp_source.html#l01746">rpg_os::generated::tde5e::Character::fromJson()</a>, <a class="el" href="engine_8hpp_source.html#l01332">rpg_os::RulesetEngine::prepareSpell()</a>, and <a class="el" href="test__bookkeeping_8cpp_source.html#l00277">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="brp__ugc__static_8hpp_source.html#l02103">rpg_os::generated::brp_ugc::Character::fromJson()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00764">rpg_os::generated::dnd5e::Character::fromJson()</a>, <a class="el" href="tde5e__core__static_8hpp_source.html#l01752">rpg_os::generated::tde5e::Character::fromJson()</a>, <a class="el" href="engine_8hpp_source.html#l01333">rpg_os::RulesetEngine::prepareSpell()</a>, and <a class="el" href="test__bookkeeping_8cpp_source.html#l00277">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -393,9 +393,9 @@ Public Member Functions</h2></td></tr>
 
 <p>Marks one spell slot of <code>level</code> as used (vancian casting). </p>
 
-<p class="definition">Definition at line <a class="el" href="spellbook_8hpp_source.html#l00092">92</a> of file <a class="el" href="spellbook_8hpp_source.html">spellbook.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spellbook_8hpp_source.html#l00093">93</a> of file <a class="el" href="spellbook_8hpp_source.html">spellbook.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l01352">rpg_os::RulesetEngine::spendSpellSlot()</a>, and <a class="el" href="test__bookkeeping_8cpp_source.html#l00277">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l01353">rpg_os::RulesetEngine::spendSpellSlot()</a>, and <a class="el" href="test__bookkeeping_8cpp_source.html#l00277">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -425,11 +425,11 @@ Public Member Functions</h2></td></tr>
 
 <p>Marks <code>spellId</code> as prepared (requires knowing it); false otherwise. </p>
 
-<p class="definition">Definition at line <a class="el" href="spellbook_8hpp_source.html#l00045">45</a> of file <a class="el" href="spellbook_8hpp_source.html">spellbook.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spellbook_8hpp_source.html#l00046">46</a> of file <a class="el" href="spellbook_8hpp_source.html">spellbook.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="spellbook_8hpp_source.html#l00073">hasPrepared()</a>, and <a class="el" href="spellbook_8hpp_source.html#l00063">knows()</a>.</p>
+<p class="reference">References <a class="el" href="spellbook_8hpp_source.html#l00074">hasPrepared()</a>, and <a class="el" href="spellbook_8hpp_source.html#l00064">knows()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l01332">rpg_os::RulesetEngine::prepareSpell()</a>, and <a class="el" href="test__bookkeeping_8cpp_source.html#l00277">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l01333">rpg_os::RulesetEngine::prepareSpell()</a>, and <a class="el" href="test__bookkeeping_8cpp_source.html#l00277">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -458,7 +458,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Currently prepared spell ids (immutable view). </p>
 
-<p class="definition">Definition at line <a class="el" href="spellbook_8hpp_source.html#l00087">87</a> of file <a class="el" href="spellbook_8hpp_source.html">spellbook.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spellbook_8hpp_source.html#l00088">88</a> of file <a class="el" href="spellbook_8hpp_source.html">spellbook.hpp</a>.</p>
 
 </div>
 </div>
@@ -487,9 +487,9 @@ Public Member Functions</h2></td></tr>
 
 <p>Restores all used slots (a long rest). </p>
 
-<p class="definition">Definition at line <a class="el" href="spellbook_8hpp_source.html#l00101">101</a> of file <a class="el" href="spellbook_8hpp_source.html">spellbook.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spellbook_8hpp_source.html#l00102">102</a> of file <a class="el" href="spellbook_8hpp_source.html">spellbook.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l01362">rpg_os::RulesetEngine::recoverSpellSlots()</a>, and <a class="el" href="test__bookkeeping_8cpp_source.html#l00277">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l01363">rpg_os::RulesetEngine::recoverSpellSlots()</a>, and <a class="el" href="test__bookkeeping_8cpp_source.html#l00277">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -519,9 +519,9 @@ Public Member Functions</h2></td></tr>
 
 <p>How many slots of <code>level</code> have been used today. </p>
 
-<p class="definition">Definition at line <a class="el" href="spellbook_8hpp_source.html#l00096">96</a> of file <a class="el" href="spellbook_8hpp_source.html">spellbook.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spellbook_8hpp_source.html#l00097">97</a> of file <a class="el" href="spellbook_8hpp_source.html">spellbook.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l01343">rpg_os::RulesetEngine::spellSlotsRemaining()</a>, and <a class="el" href="test__bookkeeping_8cpp_source.html#l00277">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l01344">rpg_os::RulesetEngine::spellSlotsRemaining()</a>, and <a class="el" href="test__bookkeeping_8cpp_source.html#l00277">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -549,9 +549,9 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="spellbook_8hpp_source.html#l00105">105</a> of file <a class="el" href="spellbook_8hpp_source.html">spellbook.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spellbook_8hpp_source.html#l00106">106</a> of file <a class="el" href="spellbook_8hpp_source.html">spellbook.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dynamic__entity_8hpp_source.html#l00507">rpg_os::DynamicEntity::toJson()</a>, <a class="el" href="brp__ugc__static_8hpp_source.html#l00180">rpg_os::generated::brp_ugc::Character::toJson()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00143">rpg_os::generated::dnd5e::Character::toJson()</a>, and <a class="el" href="tde5e__core__static_8hpp_source.html#l00193">rpg_os::generated::tde5e::Character::toJson()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dynamic__entity_8hpp_source.html#l00508">rpg_os::DynamicEntity::toJson()</a>, <a class="el" href="brp__ugc__static_8hpp_source.html#l00186">rpg_os::generated::brp_ugc::Character::toJson()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00149">rpg_os::generated::dnd5e::Character::toJson()</a>, and <a class="el" href="tde5e__core__static_8hpp_source.html#l00199">rpg_os::generated::tde5e::Character::toJson()</a>.</p>
 
 </div>
 </div>
@@ -581,9 +581,9 @@ Public Member Functions</h2></td></tr>
 
 <p>Unmarks <code>spellId</code> as prepared. </p>
 
-<p class="definition">Definition at line <a class="el" href="spellbook_8hpp_source.html#l00056">56</a> of file <a class="el" href="spellbook_8hpp_source.html">spellbook.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spellbook_8hpp_source.html#l00057">57</a> of file <a class="el" href="spellbook_8hpp_source.html">spellbook.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="spellbook_8hpp_source.html#l00033">forget()</a>, and <a class="el" href="test__bookkeeping_8cpp_source.html#l00277">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="spellbook_8hpp_source.html#l00034">forget()</a>, and <a class="el" href="test__bookkeeping_8cpp_source.html#l00277">TEST_CASE()</a>.</p>
 
 </div>
 </div>

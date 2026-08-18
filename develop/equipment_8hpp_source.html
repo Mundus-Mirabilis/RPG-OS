@@ -8,15 +8,15 @@
 <!-- Browser tab icon — copied into the output via HTML_EXTRA_FILES (favicon.png). -->
 <link rel="icon" type="image/png" href="favicon.png"/>
 <!-- BEGIN opengraph metadata -->
-<meta property="og:title" content="RPG-OS" />
-<meta property="og:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
+<meta property="og:title" content="RPG OS" />
+<meta property="og:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
 <meta property="og:url" content="https://Mundus-Mirabilis.github.io/RPG-OS/" />
 <!-- END opengraph metadata -->
 <!-- BEGIN twitter metadata -->
-<meta name="twitter:title" content="RPG-OS" />
-<meta name="twitter:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
+<meta name="twitter:title" content="RPG OS" />
+<meta name="twitter:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
 <!-- END twitter metadata -->
-<title>RPG-OS: equipment.hpp Source File</title>
+<title>RPG OS: equipment.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -55,9 +55,9 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="mundus-mirabilis_512.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">RPG-OS
+   <div id="projectname">RPG OS
    </div>
-   <div id="projectbrief">A header-only C++23 universal rule engine for tabletop role-playing games</div>
+   <div id="projectbrief">A universal, header-only C++23 rule engine for tabletop role-playing games</div>
   </td>
  </tr>
  </tbody>
@@ -131,106 +131,106 @@ $(document).ready(function(){initNavTree('equipment_8hpp_source.html',''); initR
 <a href="equipment_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2026 Christian Mayer and the Mundus Mirabilis contributors.</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// SPDX-License-Identifier: Apache-2.0</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;map&gt;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;<a class="code" href="json_8hpp.html">rpg_os/common/json.hpp</a>&gt;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;string_view&gt;</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacerpg__os.html">rpg_os</a> {</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="foldopen" id="foldopen00024" data-start="{" data-end="};">
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classrpg__os_1_1Equipment.html">   24</a></span><span class="keyword">class </span><a class="code hl_class" href="classrpg__os_1_1Equipment.html">Equipment</a> {</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">public</span>:</div>
-<div class="foldopen" id="foldopen00029" data-start="{" data-end="}">
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classrpg__os_1_1Equipment.html#ab2369a543d133f9fec9fbf53352218b7">   29</a></span>  [[nodiscard]] std::string <a class="code hl_function" href="classrpg__os_1_1Equipment.html#ab2369a543d133f9fec9fbf53352218b7">equip</a>(std::string_view slotId, std::string_view itemId) {</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    std::string previous;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">const</span> <span class="keyword">auto</span> it = m_slots.find(std::string(slotId));</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordflow">if</span> (it != m_slots.end()) {</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>      previous = it-&gt;second;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    }</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    m_slots[std::string(slotId)] = std::string(itemId);</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordflow">return</span> previous;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  }</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;<a class="code" href="json_8hpp.html">rpg_os/common/json.hpp</a>&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;string_view&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacerpg__os.html">rpg_os</a> {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="};">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classrpg__os_1_1Equipment.html">   25</a></span><span class="keyword">class </span><a class="code hl_class" href="classrpg__os_1_1Equipment.html">Equipment</a> {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00030" data-start="{" data-end="}">
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="classrpg__os_1_1Equipment.html#ab2369a543d133f9fec9fbf53352218b7">   30</a></span>  [[nodiscard]] std::string <a class="code hl_function" href="classrpg__os_1_1Equipment.html#ab2369a543d133f9fec9fbf53352218b7">equip</a>(std::string_view slotId, std::string_view itemId) {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    std::string previous;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keyword">const</span> <span class="keyword">auto</span> it = m_slots.find(std::string(slotId));</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordflow">if</span> (it != m_slots.end()) {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>      previous = it-&gt;second;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    }</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    m_slots[std::string(slotId)] = std::string(itemId);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordflow">return</span> previous;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  }</div>
 </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="foldopen" id="foldopen00041" data-start="{" data-end="}">
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="classrpg__os_1_1Equipment.html#a12b53d8bb4010c4140f80ad4aa0dde4c">   41</a></span>  [[nodiscard]] std::string <a class="code hl_function" href="classrpg__os_1_1Equipment.html#a12b53d8bb4010c4140f80ad4aa0dde4c">unequip</a>(std::string_view slotId) {</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keyword">const</span> <span class="keyword">auto</span> it = m_slots.find(std::string(slotId));</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordflow">if</span> (it == m_slots.end()) {</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>      <span class="keywordflow">return</span> {};</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    }</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    std::string itemId = it-&gt;second;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    m_slots.erase(it);</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordflow">return</span> itemId;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  }</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="foldopen" id="foldopen00042" data-start="{" data-end="}">
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classrpg__os_1_1Equipment.html#a12b53d8bb4010c4140f80ad4aa0dde4c">   42</a></span>  [[nodiscard]] std::string <a class="code hl_function" href="classrpg__os_1_1Equipment.html#a12b53d8bb4010c4140f80ad4aa0dde4c">unequip</a>(std::string_view slotId) {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keyword">const</span> <span class="keyword">auto</span> it = m_slots.find(std::string(slotId));</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordflow">if</span> (it == m_slots.end()) {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>      <span class="keywordflow">return</span> {};</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    }</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    std::string itemId = it-&gt;second;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    m_slots.erase(it);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordflow">return</span> itemId;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  }</div>
 </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="foldopen" id="foldopen00052" data-start="{" data-end="}">
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="classrpg__os_1_1Equipment.html#af3cfe1ca6522275d2bcfaaff8723f36f">   52</a></span>  [[nodiscard]] <span class="keywordtype">bool</span> <a class="code hl_function" href="classrpg__os_1_1Equipment.html#af3cfe1ca6522275d2bcfaaff8723f36f">isEquipped</a>(std::string_view slotId)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordflow">return</span> m_slots.find(std::string(slotId)) != m_slots.end();</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  }</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="foldopen" id="foldopen00053" data-start="{" data-end="}">
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="classrpg__os_1_1Equipment.html#af3cfe1ca6522275d2bcfaaff8723f36f">   53</a></span>  [[nodiscard]] <span class="keywordtype">bool</span> <a class="code hl_function" href="classrpg__os_1_1Equipment.html#af3cfe1ca6522275d2bcfaaff8723f36f">isEquipped</a>(std::string_view slotId)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordflow">return</span> m_slots.find(std::string(slotId)) != m_slots.end();</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  }</div>
 </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="foldopen" id="foldopen00057" data-start="{" data-end="}">
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classrpg__os_1_1Equipment.html#ad8982b372737ae35eb40165d6fd364ee">   57</a></span>  [[nodiscard]] std::string_view <a class="code hl_function" href="classrpg__os_1_1Equipment.html#ad8982b372737ae35eb40165d6fd364ee">itemIn</a>(std::string_view slotId)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">const</span> <span class="keyword">auto</span> it = m_slots.find(std::string(slotId));</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordflow">return</span> it == m_slots.end() ? std::string_view{} : std::string_view(it-&gt;second);</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  }</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="foldopen" id="foldopen00058" data-start="{" data-end="}">
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="classrpg__os_1_1Equipment.html#ad8982b372737ae35eb40165d6fd364ee">   58</a></span>  [[nodiscard]] std::string_view <a class="code hl_function" href="classrpg__os_1_1Equipment.html#ad8982b372737ae35eb40165d6fd364ee">itemIn</a>(std::string_view slotId)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keyword">const</span> <span class="keyword">auto</span> it = m_slots.find(std::string(slotId));</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordflow">return</span> it == m_slots.end() ? std::string_view{} : std::string_view(it-&gt;second);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  }</div>
 </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="foldopen" id="foldopen00063" data-start="{" data-end="}">
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="classrpg__os_1_1Equipment.html#ae334d5e07f086f6af40a4521e4f93657">   63</a></span>  [[nodiscard]] <span class="keyword">const</span> std::map&lt;std::string, std::string&gt; &amp;<a class="code hl_function" href="classrpg__os_1_1Equipment.html#ae334d5e07f086f6af40a4521e4f93657">slots</a>() const noexcept {</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordflow">return</span> m_slots;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  }</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="foldopen" id="foldopen00064" data-start="{" data-end="}">
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="classrpg__os_1_1Equipment.html#ae334d5e07f086f6af40a4521e4f93657">   64</a></span>  [[nodiscard]] <span class="keyword">const</span> std::map&lt;std::string, std::string&gt; &amp;<a class="code hl_function" href="classrpg__os_1_1Equipment.html#ae334d5e07f086f6af40a4521e4f93657">slots</a>() const noexcept {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordflow">return</span> m_slots;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  }</div>
 </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="foldopen" id="foldopen00067" data-start="{" data-end="}">
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="classrpg__os_1_1Equipment.html#a973a2ce43029fce6f41d9b3da0278bca">   67</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classrpg__os_1_1Equipment.html#a973a2ce43029fce6f41d9b3da0278bca">clear</a>() noexcept {</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    m_slots.clear();</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  }</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="foldopen" id="foldopen00068" data-start="{" data-end="}">
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="classrpg__os_1_1Equipment.html#a973a2ce43029fce6f41d9b3da0278bca">   68</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classrpg__os_1_1Equipment.html#a973a2ce43029fce6f41d9b3da0278bca">clear</a>() noexcept {</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    m_slots.clear();</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  }</div>
 </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="foldopen" id="foldopen00071" data-start="{" data-end="}">
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="classrpg__os_1_1Equipment.html#a2170fd3c76c0cf5509247f64a044d2aa">   71</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classrpg__os_1_1Equipment.html#a2170fd3c76c0cf5509247f64a044d2aa">toJson</a>(<a class="code hl_typedef" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &amp;out)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    out = Json::object();</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;[slot, item] : m_slots) {</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>      out[slot] = item;</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    }</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  }</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="foldopen" id="foldopen00072" data-start="{" data-end="}">
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="classrpg__os_1_1Equipment.html#a2170fd3c76c0cf5509247f64a044d2aa">   72</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classrpg__os_1_1Equipment.html#a2170fd3c76c0cf5509247f64a044d2aa">toJson</a>(<a class="code hl_typedef" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &amp;out)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    out = Json::object();</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;[slot, item] : m_slots) {</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>      out[slot] = item;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    }</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  }</div>
 </div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
-<div class="foldopen" id="foldopen00078" data-start="{" data-end="}">
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="classrpg__os_1_1Equipment.html#a3eddfe7bbd98d32029b1931d7db5c2ff">   78</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classrpg__os_1_1Equipment.html#a3eddfe7bbd98d32029b1931d7db5c2ff">fromJson</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &amp;in) {</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    m_slots.clear();</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordflow">if</span> (!in.is_object()) {</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>      <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    }</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;[slot, item] : in.items()) {</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>      m_slots[slot] = item.get&lt;std::string&gt;();</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    }</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  }</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="foldopen" id="foldopen00079" data-start="{" data-end="}">
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="classrpg__os_1_1Equipment.html#a3eddfe7bbd98d32029b1931d7db5c2ff">   79</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classrpg__os_1_1Equipment.html#a3eddfe7bbd98d32029b1931d7db5c2ff">fromJson</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &amp;in) {</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    m_slots.clear();</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keywordflow">if</span> (!in.is_object()) {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>      <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    }</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;[slot, item] : in.items()) {</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>      m_slots[slot] = item.get&lt;std::string&gt;();</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    }</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  }</div>
 </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  std::map&lt;std::string, std::string&gt; m_slots;</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>};</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>  std::map&lt;std::string, std::string&gt; m_slots;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>};</div>
 </div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>} <span class="comment">// namespace rpg_os</span></div>
-<div class="ttc" id="aclassrpg__os_1_1Equipment_html"><div class="ttname"><a href="classrpg__os_1_1Equipment.html">rpg_os::Equipment</a></div><div class="ttdef"><b>Definition</b> <a href="equipment_8hpp_source.html#l00024">equipment.hpp:24</a></div></div>
-<div class="ttc" id="aclassrpg__os_1_1Equipment_html_a12b53d8bb4010c4140f80ad4aa0dde4c"><div class="ttname"><a href="classrpg__os_1_1Equipment.html#a12b53d8bb4010c4140f80ad4aa0dde4c">rpg_os::Equipment::unequip</a></div><div class="ttdeci">std::string unequip(std::string_view slotId)</div><div class="ttdef"><b>Definition</b> <a href="equipment_8hpp_source.html#l00041">equipment.hpp:41</a></div></div>
-<div class="ttc" id="aclassrpg__os_1_1Equipment_html_a2170fd3c76c0cf5509247f64a044d2aa"><div class="ttname"><a href="classrpg__os_1_1Equipment.html#a2170fd3c76c0cf5509247f64a044d2aa">rpg_os::Equipment::toJson</a></div><div class="ttdeci">void toJson(Json &amp;out) const</div><div class="ttdef"><b>Definition</b> <a href="equipment_8hpp_source.html#l00071">equipment.hpp:71</a></div></div>
-<div class="ttc" id="aclassrpg__os_1_1Equipment_html_a3eddfe7bbd98d32029b1931d7db5c2ff"><div class="ttname"><a href="classrpg__os_1_1Equipment.html#a3eddfe7bbd98d32029b1931d7db5c2ff">rpg_os::Equipment::fromJson</a></div><div class="ttdeci">void fromJson(const Json &amp;in)</div><div class="ttdef"><b>Definition</b> <a href="equipment_8hpp_source.html#l00078">equipment.hpp:78</a></div></div>
-<div class="ttc" id="aclassrpg__os_1_1Equipment_html_a973a2ce43029fce6f41d9b3da0278bca"><div class="ttname"><a href="classrpg__os_1_1Equipment.html#a973a2ce43029fce6f41d9b3da0278bca">rpg_os::Equipment::clear</a></div><div class="ttdeci">void clear() noexcept</div><div class="ttdef"><b>Definition</b> <a href="equipment_8hpp_source.html#l00067">equipment.hpp:67</a></div></div>
-<div class="ttc" id="aclassrpg__os_1_1Equipment_html_ab2369a543d133f9fec9fbf53352218b7"><div class="ttname"><a href="classrpg__os_1_1Equipment.html#ab2369a543d133f9fec9fbf53352218b7">rpg_os::Equipment::equip</a></div><div class="ttdeci">std::string equip(std::string_view slotId, std::string_view itemId)</div><div class="ttdef"><b>Definition</b> <a href="equipment_8hpp_source.html#l00029">equipment.hpp:29</a></div></div>
-<div class="ttc" id="aclassrpg__os_1_1Equipment_html_ad8982b372737ae35eb40165d6fd364ee"><div class="ttname"><a href="classrpg__os_1_1Equipment.html#ad8982b372737ae35eb40165d6fd364ee">rpg_os::Equipment::itemIn</a></div><div class="ttdeci">std::string_view itemIn(std::string_view slotId) const</div><div class="ttdoc">The item id in slotId, or empty when the slot is free.</div><div class="ttdef"><b>Definition</b> <a href="equipment_8hpp_source.html#l00057">equipment.hpp:57</a></div></div>
-<div class="ttc" id="aclassrpg__os_1_1Equipment_html_ae334d5e07f086f6af40a4521e4f93657"><div class="ttname"><a href="classrpg__os_1_1Equipment.html#ae334d5e07f086f6af40a4521e4f93657">rpg_os::Equipment::slots</a></div><div class="ttdeci">const std::map&lt; std::string, std::string &gt; &amp; slots() const noexcept</div><div class="ttdoc">The full slot -&gt; item map (immutable view).</div><div class="ttdef"><b>Definition</b> <a href="equipment_8hpp_source.html#l00063">equipment.hpp:63</a></div></div>
-<div class="ttc" id="aclassrpg__os_1_1Equipment_html_af3cfe1ca6522275d2bcfaaff8723f36f"><div class="ttname"><a href="classrpg__os_1_1Equipment.html#af3cfe1ca6522275d2bcfaaff8723f36f">rpg_os::Equipment::isEquipped</a></div><div class="ttdeci">bool isEquipped(std::string_view slotId) const</div><div class="ttdoc">Whether slotId is currently filled.</div><div class="ttdef"><b>Definition</b> <a href="equipment_8hpp_source.html#l00052">equipment.hpp:52</a></div></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>} <span class="comment">// namespace rpg_os</span></div>
+<div class="ttc" id="aclassrpg__os_1_1Equipment_html"><div class="ttname"><a href="classrpg__os_1_1Equipment.html">rpg_os::Equipment</a></div><div class="ttdef"><b>Definition</b> <a href="equipment_8hpp_source.html#l00025">equipment.hpp:25</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1Equipment_html_a12b53d8bb4010c4140f80ad4aa0dde4c"><div class="ttname"><a href="classrpg__os_1_1Equipment.html#a12b53d8bb4010c4140f80ad4aa0dde4c">rpg_os::Equipment::unequip</a></div><div class="ttdeci">std::string unequip(std::string_view slotId)</div><div class="ttdef"><b>Definition</b> <a href="equipment_8hpp_source.html#l00042">equipment.hpp:42</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1Equipment_html_a2170fd3c76c0cf5509247f64a044d2aa"><div class="ttname"><a href="classrpg__os_1_1Equipment.html#a2170fd3c76c0cf5509247f64a044d2aa">rpg_os::Equipment::toJson</a></div><div class="ttdeci">void toJson(Json &amp;out) const</div><div class="ttdef"><b>Definition</b> <a href="equipment_8hpp_source.html#l00072">equipment.hpp:72</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1Equipment_html_a3eddfe7bbd98d32029b1931d7db5c2ff"><div class="ttname"><a href="classrpg__os_1_1Equipment.html#a3eddfe7bbd98d32029b1931d7db5c2ff">rpg_os::Equipment::fromJson</a></div><div class="ttdeci">void fromJson(const Json &amp;in)</div><div class="ttdef"><b>Definition</b> <a href="equipment_8hpp_source.html#l00079">equipment.hpp:79</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1Equipment_html_a973a2ce43029fce6f41d9b3da0278bca"><div class="ttname"><a href="classrpg__os_1_1Equipment.html#a973a2ce43029fce6f41d9b3da0278bca">rpg_os::Equipment::clear</a></div><div class="ttdeci">void clear() noexcept</div><div class="ttdef"><b>Definition</b> <a href="equipment_8hpp_source.html#l00068">equipment.hpp:68</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1Equipment_html_ab2369a543d133f9fec9fbf53352218b7"><div class="ttname"><a href="classrpg__os_1_1Equipment.html#ab2369a543d133f9fec9fbf53352218b7">rpg_os::Equipment::equip</a></div><div class="ttdeci">std::string equip(std::string_view slotId, std::string_view itemId)</div><div class="ttdef"><b>Definition</b> <a href="equipment_8hpp_source.html#l00030">equipment.hpp:30</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1Equipment_html_ad8982b372737ae35eb40165d6fd364ee"><div class="ttname"><a href="classrpg__os_1_1Equipment.html#ad8982b372737ae35eb40165d6fd364ee">rpg_os::Equipment::itemIn</a></div><div class="ttdeci">std::string_view itemIn(std::string_view slotId) const</div><div class="ttdoc">The item id in slotId, or empty when the slot is free.</div><div class="ttdef"><b>Definition</b> <a href="equipment_8hpp_source.html#l00058">equipment.hpp:58</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1Equipment_html_ae334d5e07f086f6af40a4521e4f93657"><div class="ttname"><a href="classrpg__os_1_1Equipment.html#ae334d5e07f086f6af40a4521e4f93657">rpg_os::Equipment::slots</a></div><div class="ttdeci">const std::map&lt; std::string, std::string &gt; &amp; slots() const noexcept</div><div class="ttdoc">The full slot -&gt; item map (immutable view).</div><div class="ttdef"><b>Definition</b> <a href="equipment_8hpp_source.html#l00064">equipment.hpp:64</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1Equipment_html_af3cfe1ca6522275d2bcfaaff8723f36f"><div class="ttname"><a href="classrpg__os_1_1Equipment.html#af3cfe1ca6522275d2bcfaaff8723f36f">rpg_os::Equipment::isEquipped</a></div><div class="ttdeci">bool isEquipped(std::string_view slotId) const</div><div class="ttdoc">Whether slotId is currently filled.</div><div class="ttdef"><b>Definition</b> <a href="equipment_8hpp_source.html#l00053">equipment.hpp:53</a></div></div>
 <div class="ttc" id="ajson_8hpp_html"><div class="ttname"><a href="json_8hpp.html">json.hpp</a></div><div class="ttdoc">JSON value type used throughout rpg_os.</div></div>
-<div class="ttc" id="anamespacerpg__os_html"><div class="ttname"><a href="namespacerpg__os.html">rpg_os</a></div><div class="ttdef"><b>Definition</b> <a href="event__system_8hpp_source.html#l00041">event_system.hpp:41</a></div></div>
-<div class="ttc" id="anamespacerpg__os_html_afa8b802b0bd5a50e36a895d4c7e0820d"><div class="ttname"><a href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">rpg_os::Json</a></div><div class="ttdeci">nlohmann::json Json</div><div class="ttdef"><b>Definition</b> <a href="json_8hpp_source.html#l00039">json.hpp:39</a></div></div>
+<div class="ttc" id="anamespacerpg__os_html"><div class="ttname"><a href="namespacerpg__os.html">rpg_os</a></div><div class="ttdef"><b>Definition</b> <a href="event__system_8hpp_source.html#l00042">event_system.hpp:42</a></div></div>
+<div class="ttc" id="anamespacerpg__os_html_afa8b802b0bd5a50e36a895d4c7e0820d"><div class="ttname"><a href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">rpg_os::Json</a></div><div class="ttdeci">nlohmann::json Json</div><div class="ttdef"><b>Definition</b> <a href="json_8hpp_source.html#l00040">json.hpp:40</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

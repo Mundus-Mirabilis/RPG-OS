@@ -8,15 +8,15 @@
 <!-- Browser tab icon — copied into the output via HTML_EXTRA_FILES (favicon.png). -->
 <link rel="icon" type="image/png" href="favicon.png"/>
 <!-- BEGIN opengraph metadata -->
-<meta property="og:title" content="RPG-OS" />
-<meta property="og:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
+<meta property="og:title" content="RPG OS" />
+<meta property="og:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
 <meta property="og:url" content="https://Mundus-Mirabilis.github.io/RPG-OS/" />
 <!-- END opengraph metadata -->
 <!-- BEGIN twitter metadata -->
-<meta name="twitter:title" content="RPG-OS" />
-<meta name="twitter:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
+<meta name="twitter:title" content="RPG OS" />
+<meta name="twitter:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
 <!-- END twitter metadata -->
-<title>RPG-OS: RPG-OS</title>
+<title>RPG OS: RPG OS</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -55,9 +55,9 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="mundus-mirabilis_512.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">RPG-OS
+   <div id="projectname">RPG OS
    </div>
-   <div id="projectbrief">A header-only C++23 universal rule engine for tabletop role-playing games</div>
+   <div id="projectbrief">A universal, header-only C++23 rule engine for tabletop role-playing games</div>
   </td>
  </tr>
  </tbody>
@@ -120,25 +120,107 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">RPG-OS </div></div>
+  <div class="headertitle"><div class="title">RPG OS </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="md_README"></a> A <b>header-only, C++23</b> universal rule engine and "operating system" for tabletop role-playing games. All rules live in ruleset-specific JSON files; the engine resolves them in two modes that share one template-based core.</p>
-<ul>
-<li><b>Universal mode (dynamic):</b> load any ruleset JSON at runtime and resolve rules generically — attribute/derived-stat calculation, d20 / 3d20 check resolution, modifier pipelines, cost tables, and event triggers. New game systems are added by writing JSON, never by recompiling.</li>
-<li><b>Specific mode (codegen):</b> <code>codegen/rpg_os_codegen.py</code> compiles a ruleset's schema into a strongly typed header with named members and methods (<code>courage()</code>, <code>baseAttack()</code>, <code>climbCheck()</code>, ...). Formulas compile to C++ and checks use <code>constexpr</code> configs — no dynamic allocation in the hot path. The generated code still loads the JSON at runtime for the data database (creatures, items, archetypes).</li>
-</ul>
+<div class="textblock"><p><a class="anchor" id="md_README"></a> </p><blockquote class="doxtable">
+<p>&zwj;The part of a tabletop RPG that survives when you take the fantasy away. </p>
+</blockquote>
+<p><b>RPG OS</b> is a universal, header-only <b>C++23</b> rule engine for tabletop role-playing games. Take any system — D&amp;D, The Dark Eye, Basic Roleplaying, or one you invented yourself — and strip away the flavour. What remains is the same mechanical skeleton every time: characters have attributes and skills, dice are rolled against thresholds, armour absorbs damage, fights are decided by repeated checks, and characters grow. That skeleton is pure bookkeeping, and it is exactly what RPG OS implements — the boring parts that support the fantasy, so you can spend your energy on the wonderful world instead (<em>mundus mirabilis</em> — a wonderful world).</p>
+<p><b>RPG OS is universal: it does not know — or care — which rule system you play.</b> Rules live in plain JSON files, and the engine reads <em>any</em> of them at runtime. It ships with three complete systems as working examples — <b>D&amp;D 5th Edition (SRD)</b>, <b>The Dark Eye 5th Edition</b>, and <b>Basic Roleplaying</b> — but adding a fourth is writing one JSON file, never touching the engine.</p>
 <div class="image">
 <img src="mundus-mirabilis-RPG_OS.png" alt=""/>
 <div class="caption">
-RPG-OS — a header-only C++23 universal rule engine for tabletop RPGs</div></div>
-    <p>Full example rulesets are provided for <b>D&amp;D 5th Edition (SRD 5.2.1)</b> and <b>The Dark Eye 5th Edition</b> in <code>rulesets/</code>. Their <code>data</code> sections are complete transcriptions of the source documents: the D&amp;D SRD ships the full bestiary (317 monsters), spell list (329 spells), all 15 conditions, all 14 sample poisons and 3 magical contagions; the TDE core rules ship its complete bestiary (10 creatures), spell list (52 spells), statuses, and poisons. The extraction is reproducible via <code>.local_ressources/extract_srd_data.py</code> and <code>.local_ressources/extract_tde_data.py</code> (they parse the PDF-extracted markdown in <code>.local_ressources/</code>; these one-off helpers are kept out of the repository).</p>
-<h1><a class="anchor" id="autotoc_md2"></a>
-Building</h1>
+RPG OS — a universal rule engine for tabletop role-playing games</div></div>
+    <h1><a class="anchor" id="autotoc_md2"></a>
+Try it: the ELO Arena</h1>
+<p>See the engine at work with zero setup. The <b>ELO Arena</b> is a live demo that runs RPG OS in your browser via WebAssembly:</p>
+<ul>
+<li>a <b>leaderboard</b> of every combatant in a ruleset, ranked by a Monte-Carlo ELO tournament — each rating comes from simulating thousands of fights,</li>
+<li>a <b>character form</b> that lets you enter an arbitrary character (no ruleset entry needed) and ranks it <em>live</em> against the top combatants,</li>
+<li><b>head-to-head</b> win probabilities between any two combatants, with an optional live 100-fight confirmation.</li>
+</ul>
+<div class="image">
+<img src="elo-arena-screenshot.png" alt=""/>
+<div class="caption">
+The ELO Arena — RPG OS compiled to WebAssembly, ranking every combatant of a ruleset</div></div>
+    <p><b>→ <a href="https://mundus-mirabilis.github.io/RPG-OS/main/demo/">Open the ELO Arena</a></b></p>
+<h1><a class="anchor" id="autotoc_md3"></a>
+What it does</h1>
+<p>RPG OS models the mechanical layer a game master or a digital tool needs:</p>
+<ul>
+<li><b>Characters</b> — attributes, derived stats (formulas), resource pools (hit points, mana, …), equipment, inventory, money, encumbrance, conditions, spells and advancement — all as data, driven by the ruleset.</li>
+<li><b>Checks</b> — d20, 3d20 and percentile resolution, covering threshold, skill-pool, opposed and resistance rolls, with advantage/disadvantage, difficulty, criticals and fumbles.</li>
+<li><b>Combat</b> — full fights between two entities (or a whole session with initiative), with attack/defence checks, damage pipelines, armour absorption and event-driven conditions.</li>
+<li><b>Bookkeeping</b> — conditions with durations, rests, spell slots or a mana pool, experience and level-ups, money and item prices.</li>
+<li><b>Spells &amp; effects</b> — structured, machine-readable spell effects (damage, conditions, healing, temporary hit points, resistances, bonus dice, ongoing per-round effects) resolved by the engine, including caster-quality (QL)-scaled formulas.</li>
+</ul>
+<p>None of this is hard-coded. Every mechanic above is described by the ruleset JSON — the engine is a generic interpreter.</p>
+<h1><a class="anchor" id="autotoc_md4"></a>
+Two ways to use it</h1>
+<p>Both modes share one template-based core, so a check resolved in one mode is byte-identical in the other (a parity test enforces this).</p>
+<h2><a class="anchor" id="autotoc_md5"></a>
+Universal mode — the dynamic engine</h2>
+<p>Load <b>any</b> ruleset JSON at runtime and resolve rules generically. No recompilation: a new game system is just a new JSON file.</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="engine_8hpp.html">rpg_os/universal/engine.hpp</a>&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_class" href="classrpg__os_1_1RulesetEngine.html">rpg_os::RulesetEngine</a> engine;</div>
+<div class="line">engine.<a class="code hl_function" href="classrpg__os_1_1RulesetEngine.html#a9cd8f8ae806dca92569139f6465ecbd5">loadRulesetFromFile</a>(<span class="stringliteral">&quot;rulesets/tde5e_core.json&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">auto</span> geron = engine.<a class="code hl_function" href="classrpg__os_1_1RulesetEngine.html#ac2768dbfde00b2d5ff041776d6ae76df">createEntity</a>(<span class="stringliteral">&quot;geron&quot;</span>);          <span class="comment">// from a named archetype</span></div>
+<div class="line">std::cout &lt;&lt; geron.getStat(<span class="stringliteral">&quot;COU&quot;</span>);                  <span class="comment">// 12</span></div>
+<div class="line">std::cout &lt;&lt; geron.getResource(<span class="stringliteral">&quot;LP&quot;</span>);               <span class="comment">// 31 = 5 + 2·CON</span></div>
+<div class="ttc" id="aclassrpg__os_1_1RulesetEngine_html"><div class="ttname"><a href="classrpg__os_1_1RulesetEngine.html">rpg_os::RulesetEngine</a></div><div class="ttdoc">The universal (dynamic) engine facade.</div><div class="ttdef"><b>Definition</b> <a href="engine_8hpp_source.html#l00054">engine.hpp:54</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1RulesetEngine_html_a9cd8f8ae806dca92569139f6465ecbd5"><div class="ttname"><a href="classrpg__os_1_1RulesetEngine.html#a9cd8f8ae806dca92569139f6465ecbd5">rpg_os::RulesetEngine::loadRulesetFromFile</a></div><div class="ttdeci">bool loadRulesetFromFile(std::string_view path)</div><div class="ttdef"><b>Definition</b> <a href="engine_8hpp_source.html#l00086">engine.hpp:86</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1RulesetEngine_html_ac2768dbfde00b2d5ff041776d6ae76df"><div class="ttname"><a href="classrpg__os_1_1RulesetEngine.html#ac2768dbfde00b2d5ff041776d6ae76df">rpg_os::RulesetEngine::createEntity</a></div><div class="ttdeci">std::shared_ptr&lt; DynamicEntity &gt; createEntity(std::string_view archetypeId)</div><div class="ttdef"><b>Definition</b> <a href="engine_8hpp_source.html#l00122">engine.hpp:122</a></div></div>
+<div class="ttc" id="aengine_8hpp_html"><div class="ttname"><a href="engine_8hpp.html">engine.hpp</a></div></div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md6"></a>
+Specific mode — generated, strongly typed code</h2>
+<p><code>codegen/rpg_os_codegen.py</code> compiles a ruleset's <em>schema</em> into a strongly typed header with named members and methods (<code>courage()</code>, <code>baseAttack()</code>, <code>climbCheck()</code>, …). Formulas compile to C++, checks use <code>constexpr</code> configs, and attributes are stored in the narrowest fitting type — no dynamic allocation in the hot path. The character data still comes from the ruleset JSON at runtime.</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="tde5e__core__static_8hpp.html">tde5e_core_static.hpp</a>&gt;</span>                    <span class="comment">// generated by the codegen</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> geron = <a class="code hl_function" href="classrpg__os_1_1generated_1_1tde5e_1_1Character.html#ab7526d06b587d16f1828630a566c06c1">rpg_os::generated::tde5e::Character::fromArchetype</a>(ruleset, <span class="stringliteral">&quot;geron&quot;</span>);</div>
+<div class="line"><a class="code hl_struct" href="structrpg__os_1_1CheckParams.html">rpg_os::CheckParams</a> params;</div>
+<div class="line"><a class="code hl_class" href="classrpg__os_1_1DefaultRandom.html">rpg_os::DefaultRandom</a> rng;</div>
+<div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> climb = geron.checkClimbing(params, rng); <span class="comment">// 3d20 vs COU/AGI/STR</span></div>
+<div class="ttc" id="aclassrpg__os_1_1DefaultRandom_html"><div class="ttname"><a href="classrpg__os_1_1DefaultRandom.html">rpg_os::DefaultRandom</a></div><div class="ttdef"><b>Definition</b> <a href="dice__engine_8hpp_source.html#l00091">dice_engine.hpp:91</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1generated_1_1tde5e_1_1Character_html_ab7526d06b587d16f1828630a566c06c1"><div class="ttname"><a href="classrpg__os_1_1generated_1_1tde5e_1_1Character.html#ab7526d06b587d16f1828630a566c06c1">rpg_os::generated::tde5e::Character::fromArchetype</a></div><div class="ttdeci">static Character fromArchetype(const rpg_os::Json &amp;rulesetJson, std::string_view id)</div><div class="ttdoc">Loads a single archetype by id; throws std::invalid_argument when missing.</div><div class="ttdef"><b>Definition</b> <a href="tde5e__core__static_8hpp_source.html#l02007">tde5e_core_static.hpp:2007</a></div></div>
+<div class="ttc" id="astructrpg__os_1_1CheckParams_html"><div class="ttname"><a href="structrpg__os_1_1CheckParams.html">rpg_os::CheckParams</a></div><div class="ttdef"><b>Definition</b> <a href="checks_8hpp_source.html#l00201">checks.hpp:201</a></div></div>
+<div class="ttc" id="atde5e__core__static_8hpp_html"><div class="ttname"><a href="tde5e__core__static_8hpp.html">tde5e_core_static.hpp</a></div><div class="ttdoc">Strongly typed The Dark Eye 5th Edition (Core Rules) class, generated from the ruleset schema by the ...</div></div>
+</div><!-- fragment --><p><b>When to use which?</b> Start with <em>universal mode</em> — it is one header, works with any ruleset, and is ideal for tools, editors, web builds and quick prototyping. Reach for <em>specific mode</em> when you want compile-time names and maximum speed on a known ruleset.</p>
+<h1><a class="anchor" id="autotoc_md7"></a>
+Also on the web — the npm package</h1>
+<p>The universal engine is compiled to <b>WebAssembly</b> and published as <a href="https://www.npmjs.com/package/@mundus-mirabilis/rpg-os"><code>@mundus-mirabilis/rpg-os</code></a> — usable in <b>Node.js</b> and the <b>browser</b>, with any ruleset JSON:</p>
+<div class="fragment"><div class="line">import { init } from &#39;@mundus-mirabilis/rpg-os&#39;;</div>
+<div class="line">const rpg = await init();</div>
+<div class="line">rpg.loadRulesetFromFile(&#39;rulesets/tde5e_core.json&#39;);  // Node; browsers fetch() the JSON</div>
+<div class="line">const geron = rpg.createEntity(&#39;geron&#39;);</div>
+<div class="line">const outcome = rpg.fight(rpg.specFromEntity(geron), rpg.specFromId(&#39;toad&#39;), { seed: 42 });</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md8"></a>
+Documentation</h1>
+<p>The full documentation is generated with Doxygen and published on GitHub Pages for every branch and release. It is split into two clearly separated paths:</p>
+<ul>
+<li><b><a href="https://mundus-mirabilis.github.io/RPG-OS/develop/user_guide.html">User Guide</a></b> — everything you need to build a game or tool on RPG OS: the universal and the generated libraries, the examples, and how to create a new ruleset JSON.</li>
+<li><b><a href="https://mundus-mirabilis.github.io/RPG-OS/develop/developer_guide.html">Developer Guide</a></b> — for people working on RPG OS itself: architecture, the shared template core, the code generator, testing and the WASM port.</li>
+<li><b><a href="https://mundus-mirabilis.github.io/RPG-OS/develop/">API reference</a></b> (Doxygen) — the complete reference for every header, class and function.</li>
+</ul>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">URL   </th><th class="markdownTableHeadNone">Content    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="https://mundus-mirabilis.github.io/RPG-OS/develop/">https://mundus-mirabilis.github.io/RPG-OS/develop/</a>   </td><td class="markdownTableBodyNone"><b>Current development</b>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a href="https://mundus-mirabilis.github.io/RPG-OS/main/">https://mundus-mirabilis.github.io/RPG-OS/main/</a>   </td><td class="markdownTableBodyNone"><b>Latest release</b>    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="https://mundus-mirabilis.github.io/RPG-OS/main/demo/">https://mundus-mirabilis.github.io/RPG-OS/main/demo/</a>   </td><td class="markdownTableBodyNone"><b>ELO Arena</b> (live demo)   </td></tr>
+</table>
+<h1><a class="anchor" id="autotoc_md9"></a>
+Building (for C++ users)</h1>
+<p>RPG OS is header-only: add <code>include/</code> and <code>generated/</code> to your include path and link nothing. With CMake, consume the <code>rpg_os::rpg_os</code> interface target:</p>
 <div class="fragment"><div class="line">cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release</div>
 <div class="line">cmake --build build</div>
 <div class="line">ctest --test-dir build --output-on-failure</div>
-</div><!-- fragment --><p>Useful options:</p>
+</div><!-- fragment --><p>Useful CMake options:</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">Option   </th><th class="markdownTableHeadNone">Default   </th><th class="markdownTableHeadNone">Effect    </th></tr>
@@ -154,86 +236,10 @@ Building</h1>
 <td class="markdownTableBodyNone"><code>RPG_OS_BUILD_DOCS</code>   </td><td class="markdownTableBodyNone"><code>ON</code>   </td><td class="markdownTableBodyNone">Render the Doxygen documentation into <code>html/</code> (gitignored)   </td></tr>
 </table>
 <p>Requires CMake ≥ 3.24 and a C++23-capable toolchain whose standard library provides <code>&lt;expected&gt;</code>: GCC ≥ 13 (libstdc++ ≥ 13), or Clang ≥ 17 with libc++ ≥ 17 (Apple clang on macOS, or <code>-stdlib=libc++</code> on Linux). Clang 17/18 with GNU libstdc++ 13 does not provide <code>&lt;expected&gt;</code> — use Clang ≥ 19 with libstdc++ instead.</p>
-<h1><a class="anchor" id="autotoc_md3"></a>
-Documentation</h1>
-<p>The <b>API reference</b> is rendered with <a href="https://www.doxygen.nl/">Doxygen</a> and the <a href="https://github.com/jothepro/doxygen-awesome-css">Doxygen Awesome</a> theme (vendored under <code>docs/doxygen-awesome/</code>). It is published on GitHub Pages for both lines of development:</p>
-<table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadNone">URL   </th><th class="markdownTableHeadNone">Content    </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><a href="https://mundus-mirabilis.github.io/RPG-OS/develop/">https://mundus-mirabilis.github.io/RPG-OS/develop/</a>   </td><td class="markdownTableBodyNone"><b>Current development</b> — the docs for the <code>develop</code> branch    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><a href="https://mundus-mirabilis.github.io/RPG-OS/main/">https://mundus-mirabilis.github.io/RPG-OS/main/</a>   </td><td class="markdownTableBodyNone"><b>Latest release</b> — the docs for the <code>main</code> branch   </td></tr>
-</table>
-<p>Release tags are additionally deployed under <code>/vX.Y.Z/</code>. Every build is rendered from the same <code>Doxyfile</code> in this repository, so the local and the published documentation are identical.</p>
-<p>Documentation generation is part of the build (<code>RPG_OS_BUILD_DOCS=ON</code> by default) and can also be triggered from VS Code via the **"Build Documentation"** task:</p>
-<div class="fragment"><div class="line">cmake --build build --target rpg_os_docs   # HTML -&gt; ./html (gitignored)</div>
-</div><!-- fragment --><p>The generated pages live in <code>html/</code> at the repository root — a gitignored directory in the source tree, never committed. The Doxygen configuration is the single <code>Doxyfile</code> at the repository root, used identically by the local build and CI. See <code>docs/README.md</code> for the full setup.</p>
-<p>Regenerating the codegen outputs:</p>
-<div class="fragment"><div class="line">python3 codegen/rpg_os_codegen.py --ruleset rulesets/dnd5e_srd.json --out generated/</div>
-<div class="line">python3 codegen/rpg_os_codegen.py --ruleset rulesets/tde5e_core.json --out generated/</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md4"></a>
-npm package &amp; live demo</h1>
-<p>The universal engine is also compiled to <b>WebAssembly</b> and published as the npm package **<code>@mundus-mirabilis/rpg-os</code>** — usable in <b>Node.js</b> and in the <b>browser</b>, with <b>any</b> ruleset JSON. The WASM binary never embeds a game's data: Node reads the JSON with <code>fs</code>, browsers fetch it, and both hand the string to the engine at runtime.</p>
-<div class="fragment"><div class="line">import { init } from &#39;@mundus-mirabilis/rpg-os&#39;;</div>
-<div class="line"> </div>
-<div class="line">const rpg = await init();                                  // loads the WASM engine</div>
-<div class="line">rpg.loadRulesetFromFile(&#39;rulesets/tde5e_core.json&#39;);       // Node: native fs</div>
-<div class="line">// browser: rpg.loadRuleset(await (await fetch(&#39;rulesets/...&#39;)).text());</div>
-<div class="line"> </div>
-<div class="line">const geron = rpg.createEntity(&#39;geron&#39;);                   // from a named archetype</div>
-<div class="line">console.log(geron.getStat(&#39;COU&#39;), geron.getResource(&#39;LP&#39;));</div>
-<div class="line"> </div>
-<div class="line">const hero = rpg.createEntityFromSheet(&#39;my_hero&#39;, { COU: 14, Attack: 12 }); // ANY character</div>
-<div class="line">const spec = rpg.specFromEntity(hero);</div>
-<div class="line">const outcome = rpg.fight(spec, rpg.specFromId(&#39;toad&#39;), { seed: 42 });      // loop for win %</div>
-</div><!-- fragment --><p>The package is built and published by CI: every push to <code>main</code> and <code>develop</code> updates a branch snapshot, and every <code>v*</code> tag publishes the release under <code>latest</code>. Consumers pick a line of development explicitly — <code>npm i @mundus-mirabilis/rpg-os</code> (release), <code>@main</code> or <code>@develop</code> (snapshots). See <code>wasm/</code> (bindings + build script) and <code>wasm/package/</code> (the package) for details, and <code>wasm/package/test/</code> for the test suite — including the seeded <b>native-vs-WASM fight parity test</b>.</p>
-<p><b>ELO Arena</b> — a live demo, deployed alongside the docs to <code>/&lt;version&gt;/demo/</code> (e.g. <a href="https://mundus-mirabilis.github.io/RPG-OS/main/demo/">https://mundus-mirabilis.github.io/RPG-OS/main/demo/</a>), shows the ELO ranking of every combatant in a ruleset (generated during CI by <code>scripts/elo_ranking.py</code>), lets you enter an arbitrary character that is ranked live in the browser via WASM, and computes head-to-head fight-win probabilities from the ELO ratings. The page always displays the currently loaded ruleset's <b>own licence</b> (the rules are not Apache-2.0) and a link to where that licence is stated. The ELO ratings stay in Python — the page only ports the small formula to JS for the interactive, serverless parts. Source in <code>web/demo/</code>; the demo is deployed by the <code>deploy-demo</code> job of <code>.github/workflows/docs.yml</code> (chained after the docs deploy, so the two gh-pages pushes never race).</p>
-<h1><a class="anchor" id="autotoc_md5"></a>
-Using the generated (specific-mode) headers</h1>
-<p>The code generator compiles a ruleset's schema into a strongly typed header. Attributes become named members, derived stats become compiled getters, and checks become named methods — while the character data still comes from the ruleset JSON at runtime:</p>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="json_8hpp.html">rpg_os/common/json.hpp</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="dice__engine_8hpp.html">rpg_os/core/dice_engine.hpp</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="tde5e__core__static_8hpp.html">tde5e_core_static.hpp</a>&gt;</span>   <span class="comment">// generated by rpg_os_codegen.py</span></div>
-<div class="line"> </div>
-<div class="line"><span class="keyword">const</span> <a class="code hl_typedef" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">rpg_os::Json</a> ruleset = rpg_os::Json::parse(file_contents);</div>
-<div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> geron = <a class="code hl_function" href="classrpg__os_1_1generated_1_1tde5e_1_1Character.html#ab7526d06b587d16f1828630a566c06c1">rpg_os::generated::tde5e::Character::fromArchetype</a>(ruleset, <span class="stringliteral">&quot;geron&quot;</span>);</div>
-<div class="line"> </div>
-<div class="line"><a class="code hl_struct" href="structrpg__os_1_1CheckParams.html">rpg_os::CheckParams</a> params;</div>
-<div class="line"><a class="code hl_class" href="classrpg__os_1_1DefaultRandom.html">rpg_os::DefaultRandom</a> rng;</div>
-<div class="line"><span class="keyword">const</span> <a class="code hl_struct" href="structrpg__os_1_1CheckResult.html">rpg_os::CheckResult</a> climb = geron.checkClimbing(params, rng); <span class="comment">// 3d20 vs COU/AGI/STR</span></div>
-<div class="ttc" id="aclassrpg__os_1_1DefaultRandom_html"><div class="ttname"><a href="classrpg__os_1_1DefaultRandom.html">rpg_os::DefaultRandom</a></div><div class="ttdef"><b>Definition</b> <a href="dice__engine_8hpp_source.html#l00090">dice_engine.hpp:90</a></div></div>
-<div class="ttc" id="aclassrpg__os_1_1generated_1_1tde5e_1_1Character_html_ab7526d06b587d16f1828630a566c06c1"><div class="ttname"><a href="classrpg__os_1_1generated_1_1tde5e_1_1Character.html#ab7526d06b587d16f1828630a566c06c1">rpg_os::generated::tde5e::Character::fromArchetype</a></div><div class="ttdeci">static Character fromArchetype(const rpg_os::Json &amp;rulesetJson, std::string_view id)</div><div class="ttdoc">Loads a single archetype by id; throws std::invalid_argument when missing.</div><div class="ttdef"><b>Definition</b> <a href="tde5e__core__static_8hpp_source.html#l02001">tde5e_core_static.hpp:2001</a></div></div>
-<div class="ttc" id="adice__engine_8hpp_html"><div class="ttname"><a href="dice__engine_8hpp.html">dice_engine.hpp</a></div><div class="ttdoc">Dice expression parsing and rolling.</div></div>
-<div class="ttc" id="ajson_8hpp_html"><div class="ttname"><a href="json_8hpp.html">json.hpp</a></div><div class="ttdoc">JSON value type used throughout rpg_os.</div></div>
-<div class="ttc" id="anamespacerpg__os_html_afa8b802b0bd5a50e36a895d4c7e0820d"><div class="ttname"><a href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">rpg_os::Json</a></div><div class="ttdeci">nlohmann::json Json</div><div class="ttdef"><b>Definition</b> <a href="json_8hpp_source.html#l00039">json.hpp:39</a></div></div>
-<div class="ttc" id="astructrpg__os_1_1CheckParams_html"><div class="ttname"><a href="structrpg__os_1_1CheckParams.html">rpg_os::CheckParams</a></div><div class="ttdef"><b>Definition</b> <a href="checks_8hpp_source.html#l00200">checks.hpp:200</a></div></div>
-<div class="ttc" id="astructrpg__os_1_1CheckResult_html"><div class="ttname"><a href="structrpg__os_1_1CheckResult.html">rpg_os::CheckResult</a></div><div class="ttdef"><b>Definition</b> <a href="types_8hpp_source.html#l00078">types.hpp:78</a></div></div>
-<div class="ttc" id="atde5e__core__static_8hpp_html"><div class="ttname"><a href="tde5e__core__static_8hpp.html">tde5e_core_static.hpp</a></div></div>
-</div><!-- fragment --><p>The same check through the universal engine produces identical results — a parity test enforces this.</p>
-<h1><a class="anchor" id="autotoc_md6"></a>
-Ruleset format, licence, and schema</h1>
-<blockquote class="doxtable">
-<p>&zwj;<b>Licensing — read this first.</b> The <em>engine code</em> in this repository is Apache-2.0, but the <b>ruleset JSON files are NOT</b>. Each ruleset is governed by <b>its own licence</b>, stated in the file's required <code>licence</code> field (e.g. <code>CC-BY-4.0</code>, or the Open RPG Creative License). Never assume a ruleset's content is Apache-2.0 — always check the <code>licence</code> field of the individual file (and, when present, the <code>licence_source</code> link) before redistributing or modifying it. The Apache-2.0 <code>LICENSE</code> file at the repository root covers only the engine code, not the rules. </p>
-</blockquote>
-<p>Every ruleset is a single JSON file validated against <a href="rulesets/ruleset.schema.json"><code>rulesets/ruleset.schema.json</code></a> (JSON Schema draft-07). The top level carries the ruleset metadata:</p>
-<div class="fragment"><div class="line">{</div>
-<div class="line">  &quot;schema_version&quot;: 1,</div>
-<div class="line">  &quot;ruleset_id&quot;: &quot;dnd5e_srd&quot;,</div>
-<div class="line">  &quot;ruleset_name&quot;: &quot;Dungeons &amp; Dragons 5th Edition (SRD 5.2.1)&quot;,</div>
-<div class="line">  &quot;source&quot;: &quot;System Reference Document 5.2.1, Wizards of the Coast (CC-BY-4.0)&quot;,</div>
-<div class="line">  &quot;licence&quot;: &quot;CC-BY-4.0&quot;,                     // required, non-empty</div>
-<div class="line">  &quot;licence_source&quot;: &quot;https://www.dndbeyond.com/srd&quot;, // optional: where the licence is stated</div>
-<div class="line">  &quot;licence_notice&quot;: &quot;...&quot;,                    // optional: verbatim notice the licence requires (e.g. ORC Notice)</div>
-<div class="line">  &quot;attribution&quot;: &quot;...&quot;,                       // optional: credit/attribution the licence requires</div>
-<div class="line">  &quot;comment&quot;: &quot;...&quot;,                           // optional free-form note</div>
-<div class="line">  &quot;namespace&quot;: &quot;rpg_os::generated::dnd5e&quot;,</div>
-<div class="line">  &quot;attributes&quot;: [ /* ... */ ],</div>
-<div class="line">  &quot;data&quot;: { /* creatures, spells, conditions, poisons, diseases, ... */ }</div>
-<div class="line">}</div>
-</div><!-- fragment --><p>The loader refuses to load a ruleset without a <code>licence</code>, and the shipped validator <code>codegen/validate_ruleset.py</code> checks every ruleset against the schema (full draft-07 validation when <code>jsonschema</code> is installed, structural fallback otherwise). CI runs it on every pull request.</p>
-<p>For licences that require it, a ruleset may also carry the verbatim <code>licence_notice</code> (e.g. the ORC Notice, mandatory when redistributing ORC-licensed content) and <code>attribution</code> (e.g. the CC-BY-4.0 or ORC attribution crediting the rights holder). Reproduce these statements when you redistribute or modify the content.</p>
-<p>The shipped rulesets and their <b>individual</b> licences (each file's <code>licence_source</code> field points to where its rights holder states that licence):</p>
+<p>The example programs are small, self-contained demos of both modes, the combat simulator and the ECS patterns — see the <a class="el" href="md_examples_2README.html">examples</a>.</p>
+<h1><a class="anchor" id="autotoc_md10"></a>
+Licences — read this</h1>
+<p>The <b>engine code</b> in this repository is <b>Apache-2.0</b>. The <b>ruleset JSON files are NOT</b>: each is governed by the licence stated in its own required <code>licence</code> field (e.g. <code>CC-BY-4.0</code>, or the Open RPG Creative License). Never assume a ruleset's content is Apache-2.0 — check the <code>licence</code> field of the individual file (and its optional <code>licence_source</code> link) before redistributing or modifying it. The ELO Arena shows the loaded ruleset's licence at runtime.</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">Ruleset   </th><th class="markdownTableHeadNone">Licence   </th><th class="markdownTableHeadNone">Licence stated at    </th></tr>
@@ -244,84 +250,29 @@ Ruleset format, licence, and schema</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone"><code>brp_ugc.json</code>   </td><td class="markdownTableBodyNone">Open RPG Creative License (ORC)   </td><td class="markdownTableBodyNone"><a href="https://www.chaosium.com/orc-license/">chaosium.com/orc-license</a>   </td></tr>
 </table>
-<h1><a class="anchor" id="autotoc_md7"></a>
-Ranges and variance (weakest … strongest)</h1>
-<p>Data records (creatures, archetypes, items, spells) may express a numeric value in three forms:</p>
-<ul>
-<li>a plain integer: <code>7</code>,</li>
-<li>a dice expression string: <code>"2d6+4"</code> (kept verbatim from the source),</li>
-<li>an explicit range object: <code>{ "min": 2, "max": 12 }</code>.</li>
-</ul>
-<p>Once a dice string is parsed it is a plain C++ object, and there are two literal forms that build one directly from source text:</p>
-<div class="fragment"><div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="namespacerpg__os_1_1dice__literals.html">rpg_os::dice_literals</a>; <span class="comment">// brings in the die-size suffixes</span></div>
-<div class="line"> </div>
-<div class="line"><span class="keyword">auto</span> attack = 1_d20;         <span class="comment">// one D20</span></div>
-<div class="line"><span class="keyword">auto</span> damage = 2_d6 + 2;      <span class="comment">// two D6 plus two</span></div>
-<div class="line"><span class="keyword">auto</span> heavy  = 3_d6 - 1_d4;   <span class="comment">// combined groups and subtraction</span></div>
-<div class="line"><span class="keyword">auto</span> weird  = <span class="stringliteral">&quot;1d7+1d23&quot;</span>_dice; <span class="comment">// unusual sizes (any ruleset dice string)</span></div>
-<div class="ttc" id="anamespacerpg__os_1_1dice__literals_html"><div class="ttname"><a href="namespacerpg__os_1_1dice__literals.html">rpg_os::dice_literals</a></div><div class="ttdef"><b>Definition</b> <a href="dice__engine_8hpp_source.html#l00376">dice_engine.hpp:376</a></div></div>
-</div><!-- fragment --><p>The <code>_dN</code> suffixes (<code>_d2</code>, <code>_d3</code>, <code>_d4</code>, <code>_d6</code>, <code>_d8</code>, <code>_d10</code>, <code>_d12</code>, <code>_d20</code>, <code>_d30</code>, <code>_d100</code>) make the common cases readable, with <code>+</code>/<code>-</code> overloads on <code><a class="el" href="classrpg__os_1_1DiceExpression.html">rpg_os::DiceExpression</a></code> folding the result into one object; the <code>_dice</code> suffix parses any dice string — the form the generated ruleset headers use, so a check's dice are parsed once at startup rather than on every roll.</p>
-<p>When a caller picks such an entry (e.g. an animal as a fight opponent) it can request a <b>variance</b> via <code><a class="el" href="namespacerpg__os.html#ab870da3d65c79d59dad5920efc43dc65">rpg_os::Variance</a></code>:</p>
-<table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadNone">Variance   </th><th class="markdownTableHeadNone">Meaning    </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><code>Random</code> (default)   </td><td class="markdownTableBodyNone">uniform over the range; dice expressions are rolled    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><code>Weakest</code>   </td><td class="markdownTableBodyNone">the minimum    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><code>Weak</code>   </td><td class="markdownTableBodyNone">random value in the lower third    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><code>Average</code>   </td><td class="markdownTableBodyNone">random value in the middle third    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><code>Strong</code>   </td><td class="markdownTableBodyNone">random value in the upper third    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><code>Strongest</code>   </td><td class="markdownTableBodyNone">the maximum   </td></tr>
-</table>
-<div class="fragment"><div class="line"><span class="comment">// Universal mode: create the goblin with minimum hit points.</span></div>
-<div class="line"><span class="keyword">auto</span> weak = engine.createCreature(<span class="stringliteral">&quot;goblin_warrior&quot;</span>, <a class="code hl_enumvalue" href="namespacerpg__os.html#ab870da3d65c79d59dad5920efc43dc65a983a8b4b7a68982963585846a025f565">rpg_os::Variance::Weakest</a>);</div>
-<div class="line"> </div>
-<div class="line"><span class="comment">// Specific mode: same selection on the generated, strongly typed character.</span></div>
-<div class="line"><span class="keyword">auto</span> monster = <a class="code hl_function" href="classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#a388b3a3fa824b2672db4fc3ae89f23d7">rpg_os::generated::dnd5e::Character::fromCreature</a>(</div>
-<div class="line">    ruleset, <span class="stringliteral">&quot;goblin_warrior&quot;</span>, <a class="code hl_enumvalue" href="namespacerpg__os.html#ab870da3d65c79d59dad5920efc43dc65a983a8b4b7a68982963585846a025f565">rpg_os::Variance::Weakest</a>, rng);</div>
-<div class="ttc" id="aclassrpg__os_1_1generated_1_1dnd5e_1_1Character_html_a388b3a3fa824b2672db4fc3ae89f23d7"><div class="ttname"><a href="classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#a388b3a3fa824b2672db4fc3ae89f23d7">rpg_os::generated::dnd5e::Character::fromCreature</a></div><div class="ttdeci">static Character fromCreature(const rpg_os::Json &amp;rulesetJson, std::string_view id)</div><div class="ttdef"><b>Definition</b> <a href="dnd5e__srd__static_8hpp_source.html#l00922">dnd5e_srd_static.hpp:922</a></div></div>
-<div class="ttc" id="anamespacerpg__os_html_ab870da3d65c79d59dad5920efc43dc65a983a8b4b7a68982963585846a025f565"><div class="ttname"><a href="namespacerpg__os.html#ab870da3d65c79d59dad5920efc43dc65a983a8b4b7a68982963585846a025f565">rpg_os::Variance::Weakest</a></div><div class="ttdeci">@ Weakest</div><div class="ttdoc">the minimum</div></div>
-</div><!-- fragment --><p><code>Variance::Weak</code> / <code>Average</code> / <code>Strong</code> draw from the lower / middle / upper third of the range at random; <code>Random</code> draws uniformly over the full range. The shared helper <code><a class="el" href="namespacerpg__os.html#aec9d689bf0943cb314269cc0e629ddb1">rpg_os::readVariantValue</a></code> (<code><a class="el" href="variance_8hpp.html" title="Variance / range selection for stat values.">include/rpg_os/core/variance.hpp</a></code>) backs both the universal engine and the generated code.</p>
-<h1><a class="anchor" id="autotoc_md8"></a>
-Project layout</h1>
-<div class="fragment"><div class="line">.</div>
-<div class="line">├── .github/workflows/ci.yml    # CI: GCC + Clang on Ubuntu/macOS + codegen sync check</div>
-<div class="line">├── .github/workflows/docs.yml  # Builds the docs and deploys them to GitHub Pages</div>
-<div class="line">├── cmake/                      # CMake helper modules (warnings, sanitizers, docs)</div>
-<div class="line">├── docs/                       # Doxygen config + vendored Doxygen Awesome theme</div>
-<div class="line">├── include/rpg_os/</div>
-<div class="line">│   ├── common/                # shared value types, JSON alias, event system</div>
-<div class="line">│   ├── core/                  # shared header-only template core (dice, math,</div>
-<div class="line">│   │                          #   modifier, cost tables, checks, entity)</div>
-<div class="line">│   ├── universal/             # dynamic mode: loader, AST evaluator, engine</div>
-<div class="line">│   ├── specific/              # runtime support for generated code</div>
-<div class="line">│   └── third_party/           # vendored headers (nlohmann/json, doctest)</div>
-<div class="line">├── src/                       # reserved (library is header-only)</div>
-<div class="line">├── codegen/                   # rpg_os_codegen.py + validate_ruleset.py</div>
-<div class="line">├── scripts/                   # elo_ranking.py (Monte Carlo ELO tournament)</div>
-<div class="line">├── rulesets/                  # dnd5e_srd.json, tde5e_core.json, ruleset.schema.json</div>
-<div class="line">├── generated/                 # committed codegen outputs</div>
-<div class="line">├── tests/                     # doctest suite</div>
-<div class="line">└── examples/                  # demo programs</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md9"></a>
-Combat simulation &amp; Monte Carlo ELO ranking</h1>
-<p><code><a class="el" href="combat_8hpp.html" title="Combat simulation helpers (universal mode).">include/rpg_os/universal/combat.hpp</a></code> runs a fight between two archetypes or bestiary entries "to the end" (attack-vs-defence check, event-driven damage pipeline with armour absorption), creating fresh entities per fight so ranged values are re-rolled every time. It is demonstrated by the <code>fight</code> example:</p>
-<div class="fragment"><div class="line">cmake --build build --target rpg_os_example_fight</div>
-<div class="line">./build/bin/rpg_os_example_fight .              # default pair (Geron vs Gotongi)</div>
-<div class="line">./build/bin/rpg_os_example_fight . irrhalk dog  # pick two combatants by id</div>
-<div class="line">./build/bin/rpg_os_example_fight . --list       # all combatants in the ruleset</div>
-</div><!-- fragment --><p>A combatant that knows spells (an archetype with <code>spells_known</code>, e.g. the TDE Magister) fights with <b>magic by default</b>: each round it casts its strongest affordable damaging spell instead of swinging a weapon, falling back to a weapon only once it is out of usable magic. Pass <code>--no-magic</code> for a pure weapon-vs-weapon comparison:</p>
-<div class="fragment"><div class="line">./build/bin/rpg_os_example_fight . magister toad        # magic (default)</div>
-<div class="line">./build/bin/rpg_os_example_fight . --no-magic magister toad</div>
-</div><!-- fragment --><p><code>scripts/elo_ranking.py</code> ranks every combatant with a Monte Carlo ELO tournament. It runs a <b>Swiss</b> pairing (each combatant plays one similar-rated opponent per round) instead of a full round-robin, so it needs only <code>O(rounds · n)</code> fights rather than <code>O(n²)</code> — and the individual fights execute in <code>--jobs</code> parallel processes:</p>
-<div class="fragment"><div class="line">python3 scripts/elo_ranking.py --jobs 8 --rounds 40 --games 10</div>
-<div class="line">python3 scripts/elo_ranking.py --no-magic  # rank physical combat only</div>
-</div><!-- fragment --><p>Every random consumer follows the same rule: <b>explicitly seeded = exactly reproducible, unseeded = varied on every run.</b> <code><a class="el" href="namespacerpg__os.html#ae74c58efe66f2fe3d9cd970227f9b02e">rpg_os::randomSeed()</a></code> draws one word of easily available entropy from the OS random device (falling back to the high-resolution clock where no device exists) — plenty for a game, where the goal is simply that no two runs are the same. A default-constructed <code><a class="el" href="classrpg__os_1_1DefaultRandom.html">rpg_os::DefaultRandom</a></code> seeds its <code>std::mt19937</code> from it, so <code>--seed N</code> replays a fight or ranking exactly, while omitting <code>--seed</code> gives a different result on every run (the ELO script prints the seed it used so a run can be reproduced by re-passing it). Callers who need stronger randomness can pass an explicit seed of their own. </p>
+<p>Each ruleset is a single JSON file validated against <a href="rulesets/ruleset.schema.json"><code>rulesets/ruleset.schema.json</code></a>. The <a href="https://mundus-mirabilis.github.io/RPG-OS/develop/user_guide.html">User Guide</a> explains the ruleset format and how to create your own.</p>
+<h1><a class="anchor" id="autotoc_md11"></a>
+Project layout (orientation)</h1>
+<div class="fragment"><div class="line">include/rpg_os/</div>
+<div class="line">├── common/       shared value types, JSON, event system</div>
+<div class="line">├── core/         shared header-only template core (checks, dice, entity, …)</div>
+<div class="line">├── universal/    dynamic mode: loader, evaluator, engine, combat</div>
+<div class="line">├── specific/     runtime support used by generated code</div>
+<div class="line">└── third_party/  vendored headers (never edit)</div>
+<div class="line">codegen/          rpg_os_codegen.py + validate_ruleset.py</div>
+<div class="line">rulesets/         the ruleset JSON files + ruleset.schema.json</div>
+<div class="line">generated/        committed codegen outputs (strongly typed headers)</div>
+<div class="line">tests/            doctest suite (incl. universal↔specific parity)</div>
+<div class="line">examples/         demo programs</div>
+<div class="line">scripts/          elo_ranking.py (Monte-Carlo ELO tournament)</div>
+<div class="line">wasm/             WebAssembly port + the @mundus-mirabilis/rpg-os npm package</div>
+<div class="line">web/demo/         the ELO Arena live demo</div>
+</div><!-- fragment --><p>The detailed layout and every internal convention live in the <a href="https://mundus-mirabilis.github.io/RPG-OS/develop/developer_guide.html">Developer Guide</a>.</p>
+<h1><a class="anchor" id="autotoc_md12"></a>
+The ELO ranking, under the hood</h1>
+<p><code>scripts/elo_ranking.py</code> ranks every combatant of a ruleset with a Monte-Carlo ELO tournament: a Swiss pairing (each combatant plays one similar-rated opponent per round, so it needs <code>O(rounds · n)</code> fights instead of <code>O(n²)</code>), executed in parallel processes. Each fight is a full <code>runFight</code> simulation in the native engine. Every random consumer follows the same rule — <em>explicitly seeded = exactly reproducible, unseeded = varied on every run</em>:</p>
+<div class="fragment"><div class="line">python3 scripts/elo_ranking.py --ruleset rulesets/dnd5e_srd.json --jobs 8 --rounds 40 --games 10</div>
+</div><!-- fragment --><p>The leaderboard on the ELO Arena page is generated by this script during CI; the page itself only ports the small ELO formula to JavaScript so it can rank your entered character live, in the browser, without a server. </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->

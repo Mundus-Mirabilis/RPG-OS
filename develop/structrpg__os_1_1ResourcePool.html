@@ -8,15 +8,15 @@
 <!-- Browser tab icon — copied into the output via HTML_EXTRA_FILES (favicon.png). -->
 <link rel="icon" type="image/png" href="favicon.png"/>
 <!-- BEGIN opengraph metadata -->
-<meta property="og:title" content="RPG-OS" />
-<meta property="og:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
+<meta property="og:title" content="RPG OS" />
+<meta property="og:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
 <meta property="og:url" content="https://Mundus-Mirabilis.github.io/RPG-OS/" />
 <!-- END opengraph metadata -->
 <!-- BEGIN twitter metadata -->
-<meta name="twitter:title" content="RPG-OS" />
-<meta name="twitter:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
+<meta name="twitter:title" content="RPG OS" />
+<meta name="twitter:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
 <!-- END twitter metadata -->
-<title>RPG-OS: rpg_os::ResourcePool Struct Reference</title>
+<title>RPG OS: rpg_os::ResourcePool Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -55,9 +55,9 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="mundus-mirabilis_512.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">RPG-OS
+   <div id="projectname">RPG OS
    </div>
-   <div id="projectbrief">A header-only C++23 universal rule engine for tabletop role-playing games</div>
+   <div id="projectbrief">A universal, header-only C++23 rule engine for tabletop role-playing games</div>
   </td>
  </tr>
  </tbody>
@@ -148,7 +148,7 @@ Public Attributes</h2></td></tr>
 <div class="textblock"><p>A tracked value clamped to [min, max], e.g. Hit Points, Astral Energy, or Endurance.</p>
 <dl class="section user"><dt>Why clamp inside the pool instead of at every call site?</dt><dd>Every ruleset in the engine clamps resources on mutation, and repeating the clamp-and-return-applied logic at every call site would invite drift between the universal engine, the generated code, and the combat loop. Encapsulating it here gives one well-tested rule: <code>modify</code> never lets the value leave the bounds and always reports what was <em>actually</em> applied, so callers can detect overkill (a dead creature being hit again) or overheal without inspecting the bounds themselves. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="entity_8hpp_source.html#l00083">83</a> of file <a class="el" href="entity_8hpp_source.html">entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="entity_8hpp_source.html#l00084">84</a> of file <a class="el" href="entity_8hpp_source.html">entity.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="af3038837e8f4a53710617f74284d637d" name="af3038837e8f4a53710617f74284d637d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af3038837e8f4a53710617f74284d637d">&#9670;&#160;</a></span>modify()</h2>
@@ -175,9 +175,9 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Applies <code>delta</code> and clamps into [min, max]. Returns the amount actually applied (callers can detect overkill or overheal). The <code>noexcept</code> reflects that this is pure integer arithmetic with no allocation; the <code>constexpr</code> lets the compiler fold constant pool arithmetic. </p>
 
-<p class="definition">Definition at line <a class="el" href="entity_8hpp_source.html#l00092">92</a> of file <a class="el" href="entity_8hpp_source.html">entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="entity_8hpp_source.html#l00093">93</a> of file <a class="el" href="entity_8hpp_source.html">entity.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="math_8hpp_source.html#l00111">rpg_os::math::clampInt()</a>, <a class="el" href="entity_8hpp_source.html#l00084">current</a>, <a class="el" href="entity_8hpp_source.html#l00086">max</a>, and <a class="el" href="entity_8hpp_source.html#l00085">min</a>.</p>
+<p class="reference">References <a class="el" href="math_8hpp_source.html#l00112">rpg_os::math::clampInt()</a>, <a class="el" href="entity_8hpp_source.html#l00085">current</a>, <a class="el" href="entity_8hpp_source.html#l00087">max</a>, and <a class="el" href="entity_8hpp_source.html#l00086">min</a>.</p>
 
 </div>
 </div>
@@ -194,9 +194,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="entity_8hpp_source.html#l00084">84</a> of file <a class="el" href="entity_8hpp_source.html">entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="entity_8hpp_source.html#l00085">85</a> of file <a class="el" href="entity_8hpp_source.html">entity.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="entity_8hpp_source.html#l00092">modify()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="entity_8hpp_source.html#l00093">modify()</a>.</p>
 
 </div>
 </div>
@@ -212,9 +212,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="entity_8hpp_source.html#l00086">86</a> of file <a class="el" href="entity_8hpp_source.html">entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="entity_8hpp_source.html#l00087">87</a> of file <a class="el" href="entity_8hpp_source.html">entity.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="entity_8hpp_source.html#l00092">modify()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="entity_8hpp_source.html#l00093">modify()</a>.</p>
 
 </div>
 </div>
@@ -230,9 +230,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="entity_8hpp_source.html#l00085">85</a> of file <a class="el" href="entity_8hpp_source.html">entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="entity_8hpp_source.html#l00086">86</a> of file <a class="el" href="entity_8hpp_source.html">entity.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="entity_8hpp_source.html#l00092">modify()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="entity_8hpp_source.html#l00093">modify()</a>.</p>
 
 </div>
 </div>

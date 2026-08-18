@@ -24,16 +24,23 @@
 */
 var NAVTREE =
 [
-  [ "RPG-OS", "index.html", [
-    [ "Building", "index.html#autotoc_md2", null ],
-    [ "Documentation", "index.html#autotoc_md3", null ],
-    [ "npm package & live demo", "index.html#autotoc_md4", null ],
-    [ "Using the generated (specific-mode) headers", "index.html#autotoc_md5", null ],
-    [ "Ruleset format, licence, and schema", "index.html#autotoc_md6", null ],
-    [ "Ranges and variance (weakest … strongest)", "index.html#autotoc_md7", null ],
-    [ "Project layout", "index.html#autotoc_md8", null ],
-    [ "Combat simulation & Monte Carlo ELO ranking", "index.html#autotoc_md9", null ],
+  [ "RPG OS", "index.html", [
+    [ "Try it: the ELO Arena", "index.html#autotoc_md2", null ],
+    [ "What it does", "index.html#autotoc_md3", null ],
+    [ "Two ways to use it", "index.html#autotoc_md4", [
+      [ "Universal mode — the dynamic engine", "index.html#autotoc_md5", null ],
+      [ "Specific mode — generated, strongly typed code", "index.html#autotoc_md6", null ]
+    ] ],
+    [ "Also on the web — the npm package", "index.html#autotoc_md7", null ],
+    [ "Documentation", "index.html#autotoc_md8", null ],
+    [ "Building (for C++ users)", "index.html#autotoc_md9", null ],
+    [ "Licences — read this", "index.html#autotoc_md10", null ],
+    [ "Project layout (orientation)", "index.html#autotoc_md11", null ],
+    [ "The ELO ranking, under the hood", "index.html#autotoc_md12", null ],
     [ "Examples", "md_examples_2README.html", null ],
+    [ "Developer Guide", "developer_guide.html", null ],
+    [ "User Guide", "user_guide.html", null ],
+    [ "Topics", "topics.html", "topics" ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -71,18 +78,17 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "advancement_8hpp.html",
-"classrpg__os_1_1DynamicEntity.html#adb312c30565ee046d574f39f8776f9f8",
-"classrpg__os_1_1GameSession.html#ae7e904d02c7b8b6fbb12704bddbee7d6",
-"classrpg__os_1_1RulesetEngine.html#a9cd8f8ae806dca92569139f6465ecbd5",
-"classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a4ac7eec8adfd00986d31397c462c5ccd",
-"classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#affe68bf3e0268a8c96fcc1871b68c10f",
-"classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a232810f3be875ea10deb69adb631d2b4",
-"classrpg__os_1_1generated_1_1tde5e_1_1Character.html#ad9d4e5b597c8c55485458e5fcce9dbe9",
-"functions_vars_v.html",
-"specific__mode_2main_8cpp.html",
-"structrpg__os_1_1EncumbranceConfig.html",
-"test__bookkeeping_8cpp.html#a2ab3999e23f6687b5dcd10fa3d28cf69",
-"test__math_8cpp.html#adb6383b689560925d75162b7f5537fd5"
+"classrpg__os_1_1DynamicEntity.html#adc10d2102b1e788db7962fe56d41dccc",
+"classrpg__os_1_1GameSession.html#aedb90be086ca6ca3c190406ae9691ebc",
+"classrpg__os_1_1RulesetEngine.html#aa20c45fa5b450fb55869e78ee58eb22b",
+"classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a4d20633c5d79b08521b9daa1132ee020",
+"classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#a0305da1452876ca4b011b7a51f8c6b9f",
+"classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a240b56f254b007e71d2ee5ef50606f09",
+"classrpg__os_1_1generated_1_1tde5e_1_1Character.html#ada86866923fe3d42ebce0b8af5d59ef0",
+"namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766a8e035c9eac2ef52493607d738b571317",
+"structrpg__os_1_1CheckRecipe.html#ab0cb9bcacf77be5e088da403d4653b2b",
+"structrpg__os_1_1NullStatProvider.html#a6ebadcd0d9ea2f3dc23236627f257e25",
+"test__combat_8cpp.html#a30aacd696176d4ff598861ed5e7d6a74"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

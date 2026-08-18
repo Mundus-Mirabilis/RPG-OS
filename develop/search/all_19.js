@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['…_20strongest_0',['Ranges and variance (weakest … strongest)',['../index.html#autotoc_md7',1,'']]]
+  ['your_20own_20ruleset_20json_0',['Creating your own ruleset JSON',['../user_guide.html#autotoc_md24',1,'']]],
+  ['your_20path_1',['The two modes — pick your path',['../user_guide.html#autotoc_md20',1,'']]]
 ];

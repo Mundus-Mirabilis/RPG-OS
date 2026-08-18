@@ -8,15 +8,15 @@
 <!-- Browser tab icon — copied into the output via HTML_EXTRA_FILES (favicon.png). -->
 <link rel="icon" type="image/png" href="favicon.png"/>
 <!-- BEGIN opengraph metadata -->
-<meta property="og:title" content="RPG-OS" />
-<meta property="og:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
+<meta property="og:title" content="RPG OS" />
+<meta property="og:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
 <meta property="og:url" content="https://Mundus-Mirabilis.github.io/RPG-OS/" />
 <!-- END opengraph metadata -->
 <!-- BEGIN twitter metadata -->
-<meta name="twitter:title" content="RPG-OS" />
-<meta name="twitter:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
+<meta name="twitter:title" content="RPG OS" />
+<meta name="twitter:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
 <!-- END twitter metadata -->
-<title>RPG-OS: concepts.hpp Source File</title>
+<title>RPG OS: concepts.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -55,9 +55,9 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="mundus-mirabilis_512.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">RPG-OS
+   <div id="projectname">RPG OS
    </div>
-   <div id="projectbrief">A header-only C++23 universal rule engine for tabletop role-playing games</div>
+   <div id="projectbrief">A universal, header-only C++23 rule engine for tabletop role-playing games</div>
   </td>
  </tr>
  </tbody>
@@ -131,45 +131,45 @@ $(document).ready(function(){initNavTree('concepts_8hpp_source.html',''); initRe
 <a href="concepts_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2026 Christian Mayer and the Mundus Mirabilis contributors.</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// SPDX-License-Identifier: Apache-2.0</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;concepts&gt;</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;string_view&gt;</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacerpg__os.html">rpg_os</a> {</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="foldopen" id="foldopen00048" data-start="{" data-end="}">
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="conceptrpg__os_1_1RandomNumberGenerator.html">   48</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptrpg__os_1_1RandomNumberGenerator.html">RandomNumberGenerator</a> = <span class="keyword">requires</span>(T &amp;rng, <span class="keywordtype">int</span> min, <span class="keywordtype">int</span> max) {</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  { rng(min, max) } -&gt; std::same_as&lt;int&gt;;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>};</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;concepts&gt;</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &lt;string_view&gt;</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacerpg__os.html">rpg_os</a> {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00049" data-start="{" data-end="}">
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="conceptrpg__os_1_1RandomNumberGenerator.html">   49</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptrpg__os_1_1RandomNumberGenerator.html">RandomNumberGenerator</a> = <span class="keyword">requires</span>(T &amp;rng, <span class="keywordtype">int</span> min, <span class="keywordtype">int</span> max) {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  { rng(min, max) } -&gt; std::same_as&lt;int&gt;;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>};</div>
 </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="foldopen" id="foldopen00067" data-start="{" data-end="}">
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="conceptrpg__os_1_1StatProvider.html">   67</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptrpg__os_1_1StatProvider.html">StatProvider</a> = <span class="keyword">requires</span>(<span class="keyword">const</span> T &amp;entity, std::string_view id) {</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  { entity.getStat(<span class="keywordtype">id</span>) } -&gt; std::integral;</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>};</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00068" data-start="{" data-end="}">
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="conceptrpg__os_1_1StatProvider.html">   68</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptrpg__os_1_1StatProvider.html">StatProvider</a> = <span class="keyword">requires</span>(<span class="keyword">const</span> T &amp;entity, std::string_view id) {</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  { entity.getStat(<span class="keywordtype">id</span>) } -&gt; std::integral;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>};</div>
 </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="foldopen" id="foldopen00082" data-start="{" data-end="};">
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="structrpg__os_1_1NullStatProvider.html">   82</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structrpg__os_1_1NullStatProvider.html">NullStatProvider</a> {</div>
-<div class="foldopen" id="foldopen00083" data-start="{" data-end="}">
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="structrpg__os_1_1NullStatProvider.html#a6ebadcd0d9ea2f3dc23236627f257e25">   83</a></span>  [[nodiscard]] int32_t <a class="code hl_function" href="structrpg__os_1_1NullStatProvider.html#a6ebadcd0d9ea2f3dc23236627f257e25">getStat</a>(std::string_view) <span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  }</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="foldopen" id="foldopen00083" data-start="{" data-end="};">
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="structrpg__os_1_1NullStatProvider.html">   83</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structrpg__os_1_1NullStatProvider.html">NullStatProvider</a> {</div>
+<div class="foldopen" id="foldopen00084" data-start="{" data-end="}">
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="structrpg__os_1_1NullStatProvider.html#a6ebadcd0d9ea2f3dc23236627f257e25">   84</a></span>  [[nodiscard]] int32_t <a class="code hl_function" href="structrpg__os_1_1NullStatProvider.html#a6ebadcd0d9ea2f3dc23236627f257e25">getStat</a>(std::string_view) <span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  }</div>
 </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>};</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>};</div>
 </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="keyword">static_assert</span>(StatProvider&lt;NullStatProvider&gt;);</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>} <span class="comment">// namespace rpg_os</span></div>
-<div class="ttc" id="aconceptrpg__os_1_1RandomNumberGenerator_html"><div class="ttname"><a href="conceptrpg__os_1_1RandomNumberGenerator.html">rpg_os::RandomNumberGenerator</a></div><div class="ttdef"><b>Definition</b> <a href="concepts_8hpp_source.html#l00048">concepts.hpp:48</a></div></div>
-<div class="ttc" id="aconceptrpg__os_1_1StatProvider_html"><div class="ttname"><a href="conceptrpg__os_1_1StatProvider.html">rpg_os::StatProvider</a></div><div class="ttdef"><b>Definition</b> <a href="concepts_8hpp_source.html#l00067">concepts.hpp:67</a></div></div>
-<div class="ttc" id="anamespacerpg__os_html"><div class="ttname"><a href="namespacerpg__os.html">rpg_os</a></div><div class="ttdef"><b>Definition</b> <a href="event__system_8hpp_source.html#l00041">event_system.hpp:41</a></div></div>
-<div class="ttc" id="astructrpg__os_1_1NullStatProvider_html"><div class="ttname"><a href="structrpg__os_1_1NullStatProvider.html">rpg_os::NullStatProvider</a></div><div class="ttdef"><b>Definition</b> <a href="concepts_8hpp_source.html#l00082">concepts.hpp:82</a></div></div>
-<div class="ttc" id="astructrpg__os_1_1NullStatProvider_html_a6ebadcd0d9ea2f3dc23236627f257e25"><div class="ttname"><a href="structrpg__os_1_1NullStatProvider.html#a6ebadcd0d9ea2f3dc23236627f257e25">rpg_os::NullStatProvider::getStat</a></div><div class="ttdeci">int32_t getStat(std::string_view) const noexcept</div><div class="ttdef"><b>Definition</b> <a href="concepts_8hpp_source.html#l00083">concepts.hpp:83</a></div></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="keyword">static_assert</span>(StatProvider&lt;NullStatProvider&gt;);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>} <span class="comment">// namespace rpg_os</span></div>
+<div class="ttc" id="aconceptrpg__os_1_1RandomNumberGenerator_html"><div class="ttname"><a href="conceptrpg__os_1_1RandomNumberGenerator.html">rpg_os::RandomNumberGenerator</a></div><div class="ttdef"><b>Definition</b> <a href="concepts_8hpp_source.html#l00049">concepts.hpp:49</a></div></div>
+<div class="ttc" id="aconceptrpg__os_1_1StatProvider_html"><div class="ttname"><a href="conceptrpg__os_1_1StatProvider.html">rpg_os::StatProvider</a></div><div class="ttdef"><b>Definition</b> <a href="concepts_8hpp_source.html#l00068">concepts.hpp:68</a></div></div>
+<div class="ttc" id="anamespacerpg__os_html"><div class="ttname"><a href="namespacerpg__os.html">rpg_os</a></div><div class="ttdef"><b>Definition</b> <a href="event__system_8hpp_source.html#l00042">event_system.hpp:42</a></div></div>
+<div class="ttc" id="astructrpg__os_1_1NullStatProvider_html"><div class="ttname"><a href="structrpg__os_1_1NullStatProvider.html">rpg_os::NullStatProvider</a></div><div class="ttdef"><b>Definition</b> <a href="concepts_8hpp_source.html#l00083">concepts.hpp:83</a></div></div>
+<div class="ttc" id="astructrpg__os_1_1NullStatProvider_html_a6ebadcd0d9ea2f3dc23236627f257e25"><div class="ttname"><a href="structrpg__os_1_1NullStatProvider.html#a6ebadcd0d9ea2f3dc23236627f257e25">rpg_os::NullStatProvider::getStat</a></div><div class="ttdeci">int32_t getStat(std::string_view) const noexcept</div><div class="ttdef"><b>Definition</b> <a href="concepts_8hpp_source.html#l00084">concepts.hpp:84</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

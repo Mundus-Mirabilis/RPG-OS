@@ -8,15 +8,15 @@
 <!-- Browser tab icon — copied into the output via HTML_EXTRA_FILES (favicon.png). -->
 <link rel="icon" type="image/png" href="favicon.png"/>
 <!-- BEGIN opengraph metadata -->
-<meta property="og:title" content="RPG-OS" />
-<meta property="og:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
+<meta property="og:title" content="RPG OS" />
+<meta property="og:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
 <meta property="og:url" content="https://Mundus-Mirabilis.github.io/RPG-OS/" />
 <!-- END opengraph metadata -->
 <!-- BEGIN twitter metadata -->
-<meta name="twitter:title" content="RPG-OS" />
-<meta name="twitter:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
+<meta name="twitter:title" content="RPG OS" />
+<meta name="twitter:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
 <!-- END twitter metadata -->
-<title>RPG-OS: main.cpp File Reference</title>
+<title>RPG OS: main.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -55,9 +55,9 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="mundus-mirabilis_512.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">RPG-OS
+   <div id="projectname">RPG OS
    </div>
-   <div id="projectbrief">A header-only C++23 universal rule engine for tabletop role-playing games</div>
+   <div id="projectbrief">A universal, header-only C++23 rule engine for tabletop role-playing games</div>
   </td>
  </tr>
  </tbody>
@@ -148,7 +148,7 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Dependency-free ECS pattern example. </p>
-<p>RPG-OS deliberately does not bundle an entity-component-system: entities are live <code><a class="el" href="classrpg__os_1_1DynamicEntity.html">rpg_os::DynamicEntity</a></code> sheets, components are whatever the application wants to store per entity, and systems are plain functions. What the library now <em>does</em> provide are the pieces an ECS needs:</p>
+<p>RPG OS deliberately does not bundle an entity-component-system: entities are live <code><a class="el" href="classrpg__os_1_1DynamicEntity.html">rpg_os::DynamicEntity</a></code> sheets, components are whatever the application wants to store per entity, and systems are plain functions. What the library now <em>does</em> provide are the pieces an ECS needs:</p>
 <ul>
 <li><code><a class="el" href="structrpg__os_1_1EntityId.html">rpg_os::EntityId</a></code> / <code><a class="el" href="classrpg__os_1_1EntityHandle.html">rpg_os::EntityHandle</a></code> — a stable identity per living sheet, so component maps can be keyed by entity and a handle safely reports "this creature died" instead of dangling,</li>
 <li><code><a class="el" href="classrpg__os_1_1GameSession.html#a388e08889593ebdc37cca399500c86a6" title="All live entities, in unspecified order.">rpg_os::GameSession::entities()</a></code> — iteration for systems, and</li>
@@ -187,7 +187,7 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ecs__registry_2main_8cpp_source.html#l00080">80</a> of file <a class="el" href="ecs__registry_2main_8cpp_source.html">ecs_registry/main.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="combat__session_8hpp_source.html#l00138">rpg_os::CombatSession::addCombatant()</a>, <a class="el" href="game__session_8hpp_source.html#l00189">rpg_os::GameSession::applyCondition()</a>, <a class="el" href="engine_8hpp_source.html#l00491">rpg_os::RulesetEngine::applyDamage()</a>, <a class="el" href="combat__session_8hpp_source.html#l00163">rpg_os::CombatSession::beginRound()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00284">rpg_os::DynamicEntity::conditionStacks()</a>, <a class="el" href="game__session_8hpp_source.html#l00083">rpg_os::GameSession::createCharacterHandle()</a>, <a class="el" href="game__session_8hpp_source.html#l00087">rpg_os::GameSession::createCreatureHandle()</a>, <a class="el" href="game__session_8hpp_source.html#l00064">rpg_os::GameSession::engine()</a>, <a class="el" href="game__session_8hpp_source.html#l00109">rpg_os::GameSession::entities()</a>, <a class="el" href="entity__registry_8hpp_source.html#l00079">rpg_os::EntityHandle::entityId()</a>, <a class="el" href="event__system_8hpp_source.html#l00117">rpg_os::EventData::getInt()</a>, <a class="el" href="event__system_8hpp_source.html#l00127">rpg_os::EventData::getString()</a>, <a class="el" href="game__session_8hpp_source.html#l00059">rpg_os::GameSession::lastError()</a>, <a class="el" href="game__session_8hpp_source.html#l00046">rpg_os::GameSession::loadRulesetFromFile()</a>, <a class="el" href="combat__session_8hpp_source.html#l00172">rpg_os::CombatSession::next()</a>, <a class="el" href="game__session_8hpp_source.html#l00122">rpg_os::GameSession::onEvent()</a>, <a class="el" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18a92aee13a1b90dc1a86e2e215959dbd5a">rpg_os::OnResourceChanged</a>, <a class="el" href="game__session_8hpp_source.html#l00101">rpg_os::GameSession::removeEntity()</a>, <a class="el" href="entity__registry_8hpp_source.html#l00064">rpg_os::EntityHandle::resolve()</a>, <a class="el" href="engine_8hpp_source.html#l01882">rpg_os::RulesetEngine::ruleset()</a>, and <a class="el" href="combat__session_8hpp_source.html#l00195">rpg_os::CombatSession::runCurrentTurn()</a>.</p>
+<p class="reference">References <a class="el" href="combat__session_8hpp_source.html#l00139">rpg_os::CombatSession::addCombatant()</a>, <a class="el" href="game__session_8hpp_source.html#l00190">rpg_os::GameSession::applyCondition()</a>, <a class="el" href="engine_8hpp_source.html#l00492">rpg_os::RulesetEngine::applyDamage()</a>, <a class="el" href="combat__session_8hpp_source.html#l00164">rpg_os::CombatSession::beginRound()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00285">rpg_os::DynamicEntity::conditionStacks()</a>, <a class="el" href="game__session_8hpp_source.html#l00084">rpg_os::GameSession::createCharacterHandle()</a>, <a class="el" href="game__session_8hpp_source.html#l00088">rpg_os::GameSession::createCreatureHandle()</a>, <a class="el" href="game__session_8hpp_source.html#l00065">rpg_os::GameSession::engine()</a>, <a class="el" href="game__session_8hpp_source.html#l00110">rpg_os::GameSession::entities()</a>, <a class="el" href="entity__registry_8hpp_source.html#l00080">rpg_os::EntityHandle::entityId()</a>, <a class="el" href="event__system_8hpp_source.html#l00118">rpg_os::EventData::getInt()</a>, <a class="el" href="event__system_8hpp_source.html#l00128">rpg_os::EventData::getString()</a>, <a class="el" href="game__session_8hpp_source.html#l00060">rpg_os::GameSession::lastError()</a>, <a class="el" href="game__session_8hpp_source.html#l00047">rpg_os::GameSession::loadRulesetFromFile()</a>, <a class="el" href="combat__session_8hpp_source.html#l00173">rpg_os::CombatSession::next()</a>, <a class="el" href="game__session_8hpp_source.html#l00123">rpg_os::GameSession::onEvent()</a>, <a class="el" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18a92aee13a1b90dc1a86e2e215959dbd5a">rpg_os::OnResourceChanged</a>, <a class="el" href="game__session_8hpp_source.html#l00102">rpg_os::GameSession::removeEntity()</a>, <a class="el" href="entity__registry_8hpp_source.html#l00065">rpg_os::EntityHandle::resolve()</a>, <a class="el" href="engine_8hpp_source.html#l01883">rpg_os::RulesetEngine::ruleset()</a>, and <a class="el" href="combat__session_8hpp_source.html#l00196">rpg_os::CombatSession::runCurrentTurn()</a>.</p>
 
 </div>
 </div>

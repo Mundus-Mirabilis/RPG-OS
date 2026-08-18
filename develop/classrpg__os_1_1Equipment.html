@@ -8,15 +8,15 @@
 <!-- Browser tab icon — copied into the output via HTML_EXTRA_FILES (favicon.png). -->
 <link rel="icon" type="image/png" href="favicon.png"/>
 <!-- BEGIN opengraph metadata -->
-<meta property="og:title" content="RPG-OS" />
-<meta property="og:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
+<meta property="og:title" content="RPG OS" />
+<meta property="og:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
 <meta property="og:url" content="https://Mundus-Mirabilis.github.io/RPG-OS/" />
 <!-- END opengraph metadata -->
 <!-- BEGIN twitter metadata -->
-<meta name="twitter:title" content="RPG-OS" />
-<meta name="twitter:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
+<meta name="twitter:title" content="RPG OS" />
+<meta name="twitter:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
 <!-- END twitter metadata -->
-<title>RPG-OS: rpg_os::Equipment Class Reference</title>
+<title>RPG OS: rpg_os::Equipment Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -55,9 +55,9 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="mundus-mirabilis_512.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">RPG-OS
+   <div id="projectname">RPG OS
    </div>
-   <div id="projectbrief">A header-only C++23 universal rule engine for tabletop role-playing games</div>
+   <div id="projectbrief">A universal, header-only C++23 rule engine for tabletop role-playing games</div>
   </td>
  </tr>
  </tbody>
@@ -156,7 +156,7 @@ Public Member Functions</h2></td></tr>
 <dl class="section user"><dt>Why slot -&gt; itemId rather than a list of "equipped" flags?</dt><dd>The ruleset already declares the legal slots (<code>equipment_slots</code>); mapping slot id to item id is the direct transcription of "what am I wearing
 where". The engine validates that an item is actually allowed in a slot before calling <a class="el" href="classrpg__os_1_1Equipment.html#ab2369a543d133f9fec9fbf53352218b7">equip</a>; this type is the dumb storage underneath. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="equipment_8hpp_source.html#l00024">24</a> of file <a class="el" href="equipment_8hpp_source.html">equipment.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="equipment_8hpp_source.html#l00025">25</a> of file <a class="el" href="equipment_8hpp_source.html">equipment.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a973a2ce43029fce6f41d9b3da0278bca" name="a973a2ce43029fce6f41d9b3da0278bca"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a973a2ce43029fce6f41d9b3da0278bca">&#9670;&#160;</a></span>clear()</h2>
@@ -181,7 +181,7 @@ where". The engine validates that an item is actually allowed in a slot before c
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="equipment_8hpp_source.html#l00067">67</a> of file <a class="el" href="equipment_8hpp_source.html">equipment.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="equipment_8hpp_source.html#l00068">68</a> of file <a class="el" href="equipment_8hpp_source.html">equipment.hpp</a>.</p>
 
 </div>
 </div>
@@ -220,9 +220,9 @@ where". The engine validates that an item is actually allowed in a slot before c
 </div><div class="memdoc">
 <p>Puts <code>itemId</code> into <code>slotId</code>, returning the item id that was previously there (empty when the slot was free). Overwriting is allowed here so the engine can decide the policy (swap vs. reject) at the call site. </p>
 
-<p class="definition">Definition at line <a class="el" href="equipment_8hpp_source.html#l00029">29</a> of file <a class="el" href="equipment_8hpp_source.html">equipment.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="equipment_8hpp_source.html#l00030">30</a> of file <a class="el" href="equipment_8hpp_source.html">equipment.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00957">rpg_os::RulesetEngine::equip()</a>, <a class="el" href="brp__ugc__static_8hpp_source.html#l02097">rpg_os::generated::brp_ugc::Character::fromJson()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00758">rpg_os::generated::dnd5e::Character::fromJson()</a>, <a class="el" href="tde5e__core__static_8hpp_source.html#l01746">rpg_os::generated::tde5e::Character::fromJson()</a>, and <a class="el" href="test__bookkeeping_8cpp_source.html#l00093">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00958">rpg_os::RulesetEngine::equip()</a>, <a class="el" href="brp__ugc__static_8hpp_source.html#l02103">rpg_os::generated::brp_ugc::Character::fromJson()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00764">rpg_os::generated::dnd5e::Character::fromJson()</a>, <a class="el" href="tde5e__core__static_8hpp_source.html#l01752">rpg_os::generated::tde5e::Character::fromJson()</a>, and <a class="el" href="test__bookkeeping_8cpp_source.html#l00093">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -250,9 +250,9 @@ where". The engine validates that an item is actually allowed in a slot before c
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="equipment_8hpp_source.html#l00078">78</a> of file <a class="el" href="equipment_8hpp_source.html">equipment.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="equipment_8hpp_source.html#l00079">79</a> of file <a class="el" href="equipment_8hpp_source.html">equipment.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="brp__ugc__static_8hpp_source.html#l00296">rpg_os::generated::brp_ugc::Character::restoreFromJson()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00219">rpg_os::generated::dnd5e::Character::restoreFromJson()</a>, and <a class="el" href="tde5e__core__static_8hpp_source.html#l00312">rpg_os::generated::tde5e::Character::restoreFromJson()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="brp__ugc__static_8hpp_source.html#l00302">rpg_os::generated::brp_ugc::Character::restoreFromJson()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00225">rpg_os::generated::dnd5e::Character::restoreFromJson()</a>, and <a class="el" href="tde5e__core__static_8hpp_source.html#l00318">rpg_os::generated::tde5e::Character::restoreFromJson()</a>.</p>
 
 </div>
 </div>
@@ -282,9 +282,9 @@ where". The engine validates that an item is actually allowed in a slot before c
 
 <p>Whether <code>slotId</code> is currently filled. </p>
 
-<p class="definition">Definition at line <a class="el" href="equipment_8hpp_source.html#l00052">52</a> of file <a class="el" href="equipment_8hpp_source.html">equipment.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="equipment_8hpp_source.html#l00053">53</a> of file <a class="el" href="equipment_8hpp_source.html">equipment.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00957">rpg_os::RulesetEngine::equip()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00093">TEST_CASE()</a>, and <a class="el" href="engine_8hpp_source.html#l01004">rpg_os::RulesetEngine::unequip()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00958">rpg_os::RulesetEngine::equip()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00093">TEST_CASE()</a>, and <a class="el" href="engine_8hpp_source.html#l01005">rpg_os::RulesetEngine::unequip()</a>.</p>
 
 </div>
 </div>
@@ -314,9 +314,9 @@ where". The engine validates that an item is actually allowed in a slot before c
 
 <p>The item id in <code>slotId</code>, or empty when the slot is free. </p>
 
-<p class="definition">Definition at line <a class="el" href="equipment_8hpp_source.html#l00057">57</a> of file <a class="el" href="equipment_8hpp_source.html">equipment.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="equipment_8hpp_source.html#l00058">58</a> of file <a class="el" href="equipment_8hpp_source.html">equipment.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00957">rpg_os::RulesetEngine::equip()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00093">TEST_CASE()</a>, and <a class="el" href="test__bookkeeping_8cpp_source.html#l00666">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00958">rpg_os::RulesetEngine::equip()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00093">TEST_CASE()</a>, and <a class="el" href="test__bookkeeping_8cpp_source.html#l00666">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -345,9 +345,9 @@ where". The engine validates that an item is actually allowed in a slot before c
 
 <p>The full slot -&gt; item map (immutable view). </p>
 
-<p class="definition">Definition at line <a class="el" href="equipment_8hpp_source.html#l00063">63</a> of file <a class="el" href="equipment_8hpp_source.html">equipment.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="equipment_8hpp_source.html#l00064">64</a> of file <a class="el" href="equipment_8hpp_source.html">equipment.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l01024">rpg_os::RulesetEngine::carriedWeight()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l01025">rpg_os::RulesetEngine::carriedWeight()</a>.</p>
 
 </div>
 </div>
@@ -375,9 +375,9 @@ where". The engine validates that an item is actually allowed in a slot before c
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="equipment_8hpp_source.html#l00071">71</a> of file <a class="el" href="equipment_8hpp_source.html">equipment.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="equipment_8hpp_source.html#l00072">72</a> of file <a class="el" href="equipment_8hpp_source.html">equipment.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dynamic__entity_8hpp_source.html#l00507">rpg_os::DynamicEntity::toJson()</a>, <a class="el" href="brp__ugc__static_8hpp_source.html#l00180">rpg_os::generated::brp_ugc::Character::toJson()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00143">rpg_os::generated::dnd5e::Character::toJson()</a>, and <a class="el" href="tde5e__core__static_8hpp_source.html#l00193">rpg_os::generated::tde5e::Character::toJson()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dynamic__entity_8hpp_source.html#l00508">rpg_os::DynamicEntity::toJson()</a>, <a class="el" href="brp__ugc__static_8hpp_source.html#l00186">rpg_os::generated::brp_ugc::Character::toJson()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00149">rpg_os::generated::dnd5e::Character::toJson()</a>, and <a class="el" href="tde5e__core__static_8hpp_source.html#l00199">rpg_os::generated::tde5e::Character::toJson()</a>.</p>
 
 </div>
 </div>
@@ -406,9 +406,9 @@ where". The engine validates that an item is actually allowed in a slot before c
 </div><div class="memdoc">
 <p>Removes the item from <code>slotId</code>, returning its id (empty when the slot was free). </p>
 
-<p class="definition">Definition at line <a class="el" href="equipment_8hpp_source.html#l00041">41</a> of file <a class="el" href="equipment_8hpp_source.html">equipment.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="equipment_8hpp_source.html#l00042">42</a> of file <a class="el" href="equipment_8hpp_source.html">equipment.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00957">rpg_os::RulesetEngine::equip()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00093">TEST_CASE()</a>, and <a class="el" href="engine_8hpp_source.html#l01004">rpg_os::RulesetEngine::unequip()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00958">rpg_os::RulesetEngine::equip()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00093">TEST_CASE()</a>, and <a class="el" href="engine_8hpp_source.html#l01005">rpg_os::RulesetEngine::unequip()</a>.</p>
 
 </div>
 </div>

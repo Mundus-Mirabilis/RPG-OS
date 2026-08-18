@@ -8,15 +8,15 @@
 <!-- Browser tab icon — copied into the output via HTML_EXTRA_FILES (favicon.png). -->
 <link rel="icon" type="image/png" href="favicon.png"/>
 <!-- BEGIN opengraph metadata -->
-<meta property="og:title" content="RPG-OS" />
-<meta property="og:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
+<meta property="og:title" content="RPG OS" />
+<meta property="og:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
 <meta property="og:url" content="https://Mundus-Mirabilis.github.io/RPG-OS/" />
 <!-- END opengraph metadata -->
 <!-- BEGIN twitter metadata -->
-<meta name="twitter:title" content="RPG-OS" />
-<meta name="twitter:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
+<meta name="twitter:title" content="RPG OS" />
+<meta name="twitter:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
 <!-- END twitter metadata -->
-<title>RPG-OS: rpg_os::RulesetLoader Class Reference</title>
+<title>RPG OS: rpg_os::RulesetLoader Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -55,9 +55,9 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="mundus-mirabilis_512.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">RPG-OS
+   <div id="projectname">RPG OS
    </div>
-   <div id="projectbrief">A header-only C++23 universal rule engine for tabletop role-playing games</div>
+   <div id="projectbrief">A universal, header-only C++23 rule engine for tabletop role-playing games</div>
   </td>
  </tr>
  </tbody>
@@ -143,7 +143,7 @@ Static Public Member Functions</h2></td></tr>
 <div class="textblock"><p>Loads and validates a ruleset JSON document.</p>
 <dl class="section user"><dt>Why a static-only class (namespace-like)?</dt><dd>Loading is a pure function of the JSON input: it has no state worth keeping in an object. A static-only interface communicates that and keeps the API trivially testable — every parse stage is independently checkable via the validation errors it raises. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00369">369</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00370">370</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a356c679bc9001608b36cace90eba79bc" name="a356c679bc9001608b36cace90eba79bc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a356c679bc9001608b36cace90eba79bc">&#9670;&#160;</a></span>load()</h2>
@@ -171,11 +171,11 @@ Static Public Member Functions</h2></td></tr>
 <p>Parses and validates <code>root</code>. Throws std::invalid_argument on any error.</p>
 <dl class="section user"><dt>Why throw instead of returning a result?</dt><dd>A ruleset that cannot be loaded is unrecoverable for the engine that hosts it; failing loudly with a descriptive message is clearer than threading an error code through every consumer. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00793">793</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00794">794</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ruleset__loader_8hpp_source.html#l00221">rpg_os::Ruleset::attribution</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00222">rpg_os::Ruleset::comment</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00245">rpg_os::Ruleset::data</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00215">rpg_os::Ruleset::id</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00218">rpg_os::Ruleset::licence</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00220">rpg_os::Ruleset::licenceNotice</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00219">rpg_os::Ruleset::licenceSource</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00216">rpg_os::Ruleset::name</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00223">rpg_os::Ruleset::ns</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00226">rpg_os::Ruleset::schemaVersion</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00217">rpg_os::Ruleset::source</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00225">rpg_os::Ruleset::spellResource</a>, and <a class="el" href="ruleset__loader_8hpp_source.html#l00838">validate()</a>.</p>
+<p class="reference">References <a class="el" href="ruleset__loader_8hpp_source.html#l00222">rpg_os::Ruleset::attribution</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00223">rpg_os::Ruleset::comment</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00246">rpg_os::Ruleset::data</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00216">rpg_os::Ruleset::id</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00219">rpg_os::Ruleset::licence</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00221">rpg_os::Ruleset::licenceNotice</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00220">rpg_os::Ruleset::licenceSource</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00217">rpg_os::Ruleset::name</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00224">rpg_os::Ruleset::ns</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00227">rpg_os::Ruleset::schemaVersion</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00218">rpg_os::Ruleset::source</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00226">rpg_os::Ruleset::spellResource</a>, and <a class="el" href="ruleset__loader_8hpp_source.html#l00839">validate()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ruleset__loader_8hpp_source.html#l00833">loadFromString()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ruleset__loader_8hpp_source.html#l00834">loadFromString()</a>.</p>
 
 </div>
 </div>
@@ -205,11 +205,11 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Parses and validates a JSON string (convenience wrapper over <a class="el" href="classrpg__os_1_1RulesetLoader.html#a356c679bc9001608b36cace90eba79bc">load</a>). </p>
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00833">833</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00834">834</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ruleset__loader_8hpp_source.html#l00793">load()</a>.</p>
+<p class="reference">References <a class="el" href="ruleset__loader_8hpp_source.html#l00794">load()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00063">rpg_os::RulesetEngine::loadRulesetFromJson()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00064">rpg_os::RulesetEngine::loadRulesetFromJson()</a>.</p>
 
 </div>
 </div>
@@ -239,11 +239,11 @@ Static Public Member Functions</h2></td></tr>
 <p>Re-validates a loaded ruleset; throws std::invalid_argument on error.</p>
 <dl class="section user"><dt>Why is validation re-runnable?</dt><dd>Loading already validates, but a ruleset may be <em>edited</em> after load (e.g. by tooling or a live-edit app). Re-running validation lets such a caller check the mutated model without re-parsing from JSON. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00838">838</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00839">839</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="namespacerpg__os.html#a031baa10011b869e066dd2a216ce55d4ae15941912a4c035ac473229ac6bf832a">rpg_os::ActorStat</a>, <a class="el" href="checks_8hpp_source.html#l00133">rpg_os::CheckRecipe::attackStat</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00228">rpg_os::Ruleset::attributes</a>, <a class="el" href="checks_8hpp_source.html#l00123">rpg_os::CheckRecipe::bonusStats</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00179">rpg_os::EncumbranceConfig::capacity</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00178">rpg_os::EncumbranceConfig::capacityText</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00232">rpg_os::Ruleset::checkTypes</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00233">rpg_os::Ruleset::costTables</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00229">rpg_os::Ruleset::derivedStats</a>, <a class="el" href="checks_8hpp_source.html#l00112">rpg_os::CheckRecipe::dice</a>, <a class="el" href="dice__engine_8hpp_source.html#l00179">rpg_os::DiceExpression::dieCount()</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00240">rpg_os::Ruleset::encumbrance</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00235">rpg_os::Ruleset::eventTriggers</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00279">rpg_os::Ruleset::findAttribute()</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00288">rpg_os::Ruleset::findDerivedStat()</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00324">rpg_os::Ruleset::hasStat()</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00061">rpg_os::AttributeDef::id</a>, <a class="el" href="expression_8hpp_source.html#l00408">rpg_os::Expression::identifiers()</a>, <a class="el" href="checks_8hpp_source.html#l00128">rpg_os::CheckRecipe::numPoolAttributes</a>, <a class="el" href="checks_8hpp_source.html#l00135">rpg_os::CheckRecipe::parryStat</a>, <a class="el" href="namespacerpg__os.html#a95eaa793f5aa7a7b28d2851594d614dcadef36b726efed529b13ba240dd331a12">rpg_os::Pool</a>, <a class="el" href="checks_8hpp_source.html#l00127">rpg_os::CheckRecipe::poolAttributes</a>, <a class="el" href="checks_8hpp_source.html#l00130">rpg_os::CheckRecipe::poolStat</a>, <a class="el" href="checks_8hpp_source.html#l00108">rpg_os::CheckRecipe::resolution</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00230">rpg_os::Ruleset::resourcePools</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00231">rpg_os::Ruleset::skills</a>, <a class="el" href="namespacerpg__os.html#a031baa10011b869e066dd2a216ce55d4aa0fe624424aad8695f9a86a5f115b641">rpg_os::TargetStat</a>, <a class="el" href="checks_8hpp_source.html#l00117">rpg_os::CheckRecipe::thresholdSource</a>, and <a class="el" href="checks_8hpp_source.html#l00120">rpg_os::CheckRecipe::thresholdStat</a>.</p>
+<p class="reference">References <a class="el" href="namespacerpg__os.html#a031baa10011b869e066dd2a216ce55d4ae15941912a4c035ac473229ac6bf832a">rpg_os::ActorStat</a>, <a class="el" href="checks_8hpp_source.html#l00134">rpg_os::CheckRecipe::attackStat</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00229">rpg_os::Ruleset::attributes</a>, <a class="el" href="checks_8hpp_source.html#l00124">rpg_os::CheckRecipe::bonusStats</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00180">rpg_os::EncumbranceConfig::capacity</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00179">rpg_os::EncumbranceConfig::capacityText</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00233">rpg_os::Ruleset::checkTypes</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00234">rpg_os::Ruleset::costTables</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00230">rpg_os::Ruleset::derivedStats</a>, <a class="el" href="checks_8hpp_source.html#l00113">rpg_os::CheckRecipe::dice</a>, <a class="el" href="dice__engine_8hpp_source.html#l00180">rpg_os::DiceExpression::dieCount()</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00241">rpg_os::Ruleset::encumbrance</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00236">rpg_os::Ruleset::eventTriggers</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00280">rpg_os::Ruleset::findAttribute()</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00289">rpg_os::Ruleset::findDerivedStat()</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00325">rpg_os::Ruleset::hasStat()</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00062">rpg_os::AttributeDef::id</a>, <a class="el" href="expression_8hpp_source.html#l00409">rpg_os::Expression::identifiers()</a>, <a class="el" href="checks_8hpp_source.html#l00129">rpg_os::CheckRecipe::numPoolAttributes</a>, <a class="el" href="checks_8hpp_source.html#l00136">rpg_os::CheckRecipe::parryStat</a>, <a class="el" href="namespacerpg__os.html#a95eaa793f5aa7a7b28d2851594d614dcadef36b726efed529b13ba240dd331a12">rpg_os::Pool</a>, <a class="el" href="checks_8hpp_source.html#l00128">rpg_os::CheckRecipe::poolAttributes</a>, <a class="el" href="checks_8hpp_source.html#l00131">rpg_os::CheckRecipe::poolStat</a>, <a class="el" href="checks_8hpp_source.html#l00109">rpg_os::CheckRecipe::resolution</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00231">rpg_os::Ruleset::resourcePools</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00232">rpg_os::Ruleset::skills</a>, <a class="el" href="namespacerpg__os.html#a031baa10011b869e066dd2a216ce55d4aa0fe624424aad8695f9a86a5f115b641">rpg_os::TargetStat</a>, <a class="el" href="checks_8hpp_source.html#l00118">rpg_os::CheckRecipe::thresholdSource</a>, and <a class="el" href="checks_8hpp_source.html#l00121">rpg_os::CheckRecipe::thresholdStat</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ruleset__loader_8hpp_source.html#l00793">load()</a>, and <a class="el" href="engine_8hpp_source.html#l00106">rpg_os::RulesetEngine::validateRuleset()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ruleset__loader_8hpp_source.html#l00794">load()</a>, and <a class="el" href="engine_8hpp_source.html#l00107">rpg_os::RulesetEngine::validateRuleset()</a>.</p>
 
 </div>
 </div>

@@ -8,15 +8,15 @@
 <!-- Browser tab icon — copied into the output via HTML_EXTRA_FILES (favicon.png). -->
 <link rel="icon" type="image/png" href="favicon.png"/>
 <!-- BEGIN opengraph metadata -->
-<meta property="og:title" content="RPG-OS" />
-<meta property="og:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
+<meta property="og:title" content="RPG OS" />
+<meta property="og:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
 <meta property="og:url" content="https://Mundus-Mirabilis.github.io/RPG-OS/" />
 <!-- END opengraph metadata -->
 <!-- BEGIN twitter metadata -->
-<meta name="twitter:title" content="RPG-OS" />
-<meta name="twitter:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
+<meta name="twitter:title" content="RPG OS" />
+<meta name="twitter:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
 <!-- END twitter metadata -->
-<title>RPG-OS: rpg_os::math Namespace Reference</title>
+<title>RPG OS: rpg_os::math Namespace Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -55,9 +55,9 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="mundus-mirabilis_512.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">RPG-OS
+   <div id="projectname">RPG OS
    </div>
-   <div id="projectbrief">A header-only C++23 universal rule engine for tabletop role-playing games</div>
+   <div id="projectbrief">A universal, header-only C++23 rule engine for tabletop role-playing games</div>
   </td>
  </tr>
  </tbody>
@@ -197,9 +197,9 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Ceils a value (matches std::ceil). See <a class="el" href="namespacerpg__os_1_1math.html#a6911032cab70db4f10158b620a3bc885">floor</a> for why it does not delegate to <code>std::ceil</code>. </p>
 
-<p class="definition">Definition at line <a class="el" href="math_8hpp_source.html#l00061">61</a> of file <a class="el" href="math_8hpp_source.html">math.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="math_8hpp_source.html#l00062">62</a> of file <a class="el" href="math_8hpp_source.html">math.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="math_8hpp_source.html#l00041">rpg_os::math::detail::trunc()</a>.</p>
+<p class="reference">References <a class="el" href="math_8hpp_source.html#l00042">rpg_os::math::detail::trunc()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="test__math_8cpp_source.html#l00018">TEST_CASE()</a>, and <a class="el" href="test__math_8cpp_source.html#l00103">TEST_CASE()</a>.</p>
 
@@ -241,7 +241,7 @@ Functions</h2></td></tr>
 
 <p>Integer ceiling division: the smallest integer &gt;= a/b (see <a class="el" href="namespacerpg__os_1_1math.html#ac8615267511359d943d641fcd44f0ebf">floorDiv</a>). </p>
 
-<p class="definition">Definition at line <a class="el" href="math_8hpp_source.html#l00150">150</a> of file <a class="el" href="math_8hpp_source.html">math.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="math_8hpp_source.html#l00151">151</a> of file <a class="el" href="math_8hpp_source.html">math.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="test__math_8cpp_source.html#l00069">TEST_CASE()</a>, <a class="el" href="test__math_8cpp_source.html#l00103">TEST_CASE()</a>, and <a class="el" href="test__math_8cpp_source.html#l00091">TEST_CASE()</a>.</p>
 
@@ -282,9 +282,9 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Non-negative ceiling division: ceil(a / b) for <code>a</code> &gt;= 0, <code>b</code> &gt; 0, as a single division (see <a class="el" href="namespacerpg__os_1_1math.html#af9250abccc3738e63d5bdb53eef3e770">floorDivN</a>). </p>
 
-<p class="definition">Definition at line <a class="el" href="math_8hpp_source.html#l00184">184</a> of file <a class="el" href="math_8hpp_source.html">math.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="math_8hpp_source.html#l00185">185</a> of file <a class="el" href="math_8hpp_source.html">math.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="brp__ugc__static_8hpp_source.html#l00431">rpg_os::generated::brp_ugc::Character::maxHitPoints()</a>, <a class="el" href="test__math_8cpp_source.html#l00103">TEST_CASE()</a>, and <a class="el" href="test__math_8cpp_source.html#l00091">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="brp__ugc__static_8hpp_source.html#l00437">rpg_os::generated::brp_ugc::Character::maxHitPoints()</a>, <a class="el" href="test__math_8cpp_source.html#l00103">TEST_CASE()</a>, and <a class="el" href="test__math_8cpp_source.html#l00091">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -330,7 +330,7 @@ Functions</h2></td></tr>
 <p>Clamps <code>value</code> into the inclusive range [lo, hi].</p>
 <dl class="section user"><dt>Why not std::clamp?</dt><dd><code>std::clamp</code> returns a <code>const</code> double&amp; to one of its arguments, which forces callers to keep temporaries alive; a by-value helper has no such lifetime subtlety and is trivially inlined. Hand-rolling the comparison also avoids the <code>NaN</code> pitfall being a silent pass-through (NaN compares false and thus returns <code>lo</code>, matching the clamp semantics rulesets want). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="math_8hpp_source.html#l00100">100</a> of file <a class="el" href="math_8hpp_source.html">math.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="math_8hpp_source.html#l00101">101</a> of file <a class="el" href="math_8hpp_source.html">math.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="test__math_8cpp_source.html#l00035">TEST_CASE()</a>.</p>
 
@@ -378,9 +378,9 @@ Functions</h2></td></tr>
 <p>Integer clamp (used by the modifier pipeline and resource limits).</p>
 <dl class="section user"><dt>Why a separate integer overload?</dt><dd>The modifier pipeline and resource pools operate on whole <code>int32_t</code> stats, not formula doubles. A dedicated overload keeps those call sites free of <code>static_cast</code> noise and preserves exact integer semantics (no rounding of fractional bounds). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="math_8hpp_source.html#l00111">111</a> of file <a class="el" href="math_8hpp_source.html">math.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="math_8hpp_source.html#l00112">112</a> of file <a class="el" href="math_8hpp_source.html">math.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="modifier_8hpp_source.html#l00077">rpg_os::applyModifierPipeline()</a>, <a class="el" href="entity_8hpp_source.html#l00092">rpg_os::ResourcePool::modify()</a>, <a class="el" href="test__math_8cpp_source.html#l00035">TEST_CASE()</a>, and <a class="el" href="test__math_8cpp_source.html#l00103">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="modifier_8hpp_source.html#l00078">rpg_os::applyModifierPipeline()</a>, <a class="el" href="entity_8hpp_source.html#l00093">rpg_os::ResourcePool::modify()</a>, <a class="el" href="test__math_8cpp_source.html#l00035">TEST_CASE()</a>, and <a class="el" href="test__math_8cpp_source.html#l00103">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -410,11 +410,11 @@ Functions</h2></td></tr>
 <p>Floors a value (matches std::floor).</p>
 <dl class="section user"><dt>Why not just return std::floor?</dt><dd>C++23 makes <code>std::floor</code> <code>constexpr</code>, but older libstdc++ (GCC &lt; 13, e.g. the clang toolchain on the CI runner) has not implemented that, so a <code>static_assert</code> on this helper would not compile there. This manual form is <code>constexpr</code> on every toolchain and matches <code>std::floor</code> exactly for all finite values in the int64 range. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="math_8hpp_source.html#l00054">54</a> of file <a class="el" href="math_8hpp_source.html">math.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="math_8hpp_source.html#l00055">55</a> of file <a class="el" href="math_8hpp_source.html">math.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="math_8hpp_source.html#l00041">rpg_os::math::detail::trunc()</a>.</p>
+<p class="reference">References <a class="el" href="math_8hpp_source.html#l00042">rpg_os::math::detail::trunc()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="modifier_8hpp_source.html#l00077">rpg_os::applyModifierPipeline()</a>, <a class="el" href="test__math_8cpp_source.html#l00018">TEST_CASE()</a>, and <a class="el" href="test__math_8cpp_source.html#l00103">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="modifier_8hpp_source.html#l00078">rpg_os::applyModifierPipeline()</a>, <a class="el" href="test__math_8cpp_source.html#l00018">TEST_CASE()</a>, and <a class="el" href="test__math_8cpp_source.html#l00103">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -455,9 +455,9 @@ Functions</h2></td></tr>
 <dl class="section user"><dt>Why a dedicated integer division?</dt><dd>The generated specific-mode code compiles formula divisions to integer arithmetic (no floating point in the hot path). A plain C++ <code>/</code> truncates toward zero, which is not floor for negatives; this helper makes <code>floor(a / b)</code> in a formula byte-identical to the universal double evaluator's <code><a class="el" href="namespacerpg__os_1_1math.html#a6911032cab70db4f10158b620a3bc885">math::floor</a>(a / b)</code>.</dd></dl>
 <dl class="section user"><dt>When can a cheaper form be used?</dt><dd><a class="el" href="classrpg__os_1_1Ruleset.html">Ruleset</a> stats are overwhelmingly non-negative (attributes and skills are stored as unsigned bytes), so most formula divisions never see a negative numerator. For those <a class="el" href="namespacerpg__os_1_1math.html#af9250abccc3738e63d5bdb53eef3e770">floorDivN</a> / <a class="el" href="namespacerpg__os_1_1math.html#a3c56c61380803b7c20b4eeb11b6b3068">ceilDivN</a> / <a class="el" href="namespacerpg__os_1_1math.html#ace8edcd4fe29f2466df53253b4d6b8b7">roundDivN</a> reduce to a single integer division. Only formulas that can legitimately go negative (e.g. D&amp;D ability modifiers like <code>(STR - 10) / 2</code>) need the general form here. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="math_8hpp_source.html#l00143">143</a> of file <a class="el" href="math_8hpp_source.html">math.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="math_8hpp_source.html#l00144">144</a> of file <a class="el" href="math_8hpp_source.html">math.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="tde5e__core__static_8hpp_source.html#l00482">rpg_os::generated::tde5e::Character::agilityBonus()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00329">rpg_os::generated::dnd5e::Character::charismaModifier()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00320">rpg_os::generated::dnd5e::Character::constitutionModifier()</a>, <a class="el" href="tde5e__core__static_8hpp_source.html#l00479">rpg_os::generated::tde5e::Character::courageBonus()</a>, <a class="el" href="tde5e__core__static_8hpp_source.html#l00485">rpg_os::generated::tde5e::Character::dexterityBonus()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00317">rpg_os::generated::dnd5e::Character::dexterityModifier()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00323">rpg_os::generated::dnd5e::Character::intelligenceModifier()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00335">rpg_os::generated::dnd5e::Character::proficiencyBonusByLevel()</a>, <a class="el" href="tde5e__core__static_8hpp_source.html#l00488">rpg_os::generated::tde5e::Character::strengthBonus()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00314">rpg_os::generated::dnd5e::Character::strengthModifier()</a>, <a class="el" href="test__math_8cpp_source.html#l00058">TEST_CASE()</a>, <a class="el" href="test__math_8cpp_source.html#l00103">TEST_CASE()</a>, <a class="el" href="test__math_8cpp_source.html#l00091">TEST_CASE()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00326">rpg_os::generated::dnd5e::Character::wisdomModifier()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="tde5e__core__static_8hpp_source.html#l00488">rpg_os::generated::tde5e::Character::agilityBonus()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00335">rpg_os::generated::dnd5e::Character::charismaModifier()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00326">rpg_os::generated::dnd5e::Character::constitutionModifier()</a>, <a class="el" href="tde5e__core__static_8hpp_source.html#l00485">rpg_os::generated::tde5e::Character::courageBonus()</a>, <a class="el" href="tde5e__core__static_8hpp_source.html#l00491">rpg_os::generated::tde5e::Character::dexterityBonus()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00323">rpg_os::generated::dnd5e::Character::dexterityModifier()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00329">rpg_os::generated::dnd5e::Character::intelligenceModifier()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00341">rpg_os::generated::dnd5e::Character::proficiencyBonusByLevel()</a>, <a class="el" href="tde5e__core__static_8hpp_source.html#l00494">rpg_os::generated::tde5e::Character::strengthBonus()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00320">rpg_os::generated::dnd5e::Character::strengthModifier()</a>, <a class="el" href="test__math_8cpp_source.html#l00058">TEST_CASE()</a>, <a class="el" href="test__math_8cpp_source.html#l00103">TEST_CASE()</a>, <a class="el" href="test__math_8cpp_source.html#l00091">TEST_CASE()</a>, and <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00332">rpg_os::generated::dnd5e::Character::wisdomModifier()</a>.</p>
 
 </div>
 </div>
@@ -497,9 +497,9 @@ Functions</h2></td></tr>
 <p>Non-negative floor division: a / b floored, valid only when <code>a</code> &gt;= 0 and <code>b</code> &gt; 0. For non-negative operands a plain C++ <code>/</code> (which truncates toward zero) already equals floor, so this is a single division with no sign handling — the fast path for ruleset stats that never go negative.</p>
 <dl class="section user"><dt>Why a separate function instead of assuming it inside floorDiv?</dt><dd>Some formulas (D&amp;D ability modifiers) do produce negative numerators; the general <a class="el" href="namespacerpg__os_1_1math.html#ac8615267511359d943d641fcd44f0ebf">floorDiv</a> keeps those exact. This variant documents and exploits the non-negativity precondition so callers who know their values are non-negative (the generated code proves it) pay nothing extra. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="math_8hpp_source.html#l00178">178</a> of file <a class="el" href="math_8hpp_source.html">math.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="math_8hpp_source.html#l00179">179</a> of file <a class="el" href="math_8hpp_source.html">math.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="tde5e__core__static_8hpp_source.html#l00494">rpg_os::generated::tde5e::Character::parrySwords()</a>, <a class="el" href="test__math_8cpp_source.html#l00103">TEST_CASE()</a>, and <a class="el" href="test__math_8cpp_source.html#l00091">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="tde5e__core__static_8hpp_source.html#l00500">rpg_os::generated::tde5e::Character::parrySwords()</a>, <a class="el" href="test__math_8cpp_source.html#l00103">TEST_CASE()</a>, and <a class="el" href="test__math_8cpp_source.html#l00091">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -539,7 +539,7 @@ Functions</h2></td></tr>
 
 <p>Maximum of two values (matches std::max). </p>
 
-<p class="definition">Definition at line <a class="el" href="math_8hpp_source.html#l00088">88</a> of file <a class="el" href="math_8hpp_source.html">math.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="math_8hpp_source.html#l00089">89</a> of file <a class="el" href="math_8hpp_source.html">math.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="test__math_8cpp_source.html#l00029">TEST_CASE()</a>.</p>
 
@@ -581,7 +581,7 @@ Functions</h2></td></tr>
 
 <p>Integer maximum (see <a class="el" href="namespacerpg__os_1_1math.html#a6abf6a94a395973026a4a64f54d279cb">minI</a>). </p>
 
-<p class="definition">Definition at line <a class="el" href="math_8hpp_source.html#l00122">122</a> of file <a class="el" href="math_8hpp_source.html">math.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="math_8hpp_source.html#l00123">123</a> of file <a class="el" href="math_8hpp_source.html">math.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="test__math_8cpp_source.html#l00103">TEST_CASE()</a>, and <a class="el" href="test__math_8cpp_source.html#l00051">TEST_CASE()</a>.</p>
 
@@ -623,7 +623,7 @@ Functions</h2></td></tr>
 
 <p>Minimum of two values (matches std::min). </p>
 
-<p class="definition">Definition at line <a class="el" href="math_8hpp_source.html#l00083">83</a> of file <a class="el" href="math_8hpp_source.html">math.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="math_8hpp_source.html#l00084">84</a> of file <a class="el" href="math_8hpp_source.html">math.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="test__math_8cpp_source.html#l00029">TEST_CASE()</a>.</p>
 
@@ -664,7 +664,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Integer minimum (matches std::min on ints, but free of the Windows min/max macro hazard and of any double conversion). </p>
 
-<p class="definition">Definition at line <a class="el" href="math_8hpp_source.html#l00117">117</a> of file <a class="el" href="math_8hpp_source.html">math.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="math_8hpp_source.html#l00118">118</a> of file <a class="el" href="math_8hpp_source.html">math.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="test__math_8cpp_source.html#l00103">TEST_CASE()</a>, and <a class="el" href="test__math_8cpp_source.html#l00051">TEST_CASE()</a>.</p>
 
@@ -695,9 +695,9 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Rounds half away from zero (matches std::round). Note this is <em>not</em> the same as "round half up" for negative values; formulas must be written with this convention in mind. See <a class="el" href="namespacerpg__os_1_1math.html#a6911032cab70db4f10158b620a3bc885">floor</a> for why it does not delegate to <code>std::round</code>. </p>
 
-<p class="definition">Definition at line <a class="el" href="math_8hpp_source.html#l00070">70</a> of file <a class="el" href="math_8hpp_source.html">math.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="math_8hpp_source.html#l00071">71</a> of file <a class="el" href="math_8hpp_source.html">math.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="math_8hpp_source.html#l00041">rpg_os::math::detail::trunc()</a>.</p>
+<p class="reference">References <a class="el" href="math_8hpp_source.html#l00042">rpg_os::math::detail::trunc()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="test__math_8cpp_source.html#l00018">TEST_CASE()</a>, and <a class="el" href="test__math_8cpp_source.html#l00103">TEST_CASE()</a>.</p>
 
@@ -738,7 +738,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Integer division rounded half away from zero (matches std::round applied to the rational a/b; see <a class="el" href="namespacerpg__os_1_1math.html#ac8615267511359d943d641fcd44f0ebf">floorDiv</a>). </p>
 
-<p class="definition">Definition at line <a class="el" href="math_8hpp_source.html#l00158">158</a> of file <a class="el" href="math_8hpp_source.html">math.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="math_8hpp_source.html#l00159">159</a> of file <a class="el" href="math_8hpp_source.html">math.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="test__math_8cpp_source.html#l00103">TEST_CASE()</a>, <a class="el" href="test__math_8cpp_source.html#l00091">TEST_CASE()</a>, and <a class="el" href="test__math_8cpp_source.html#l00079">TEST_CASE()</a>.</p>
 
@@ -779,9 +779,9 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Non-negative division rounded half away from zero: round(a / b) for <code>a</code> &gt;= 0, <code>b</code> &gt; 0, as a single division (see <a class="el" href="namespacerpg__os_1_1math.html#af9250abccc3738e63d5bdb53eef3e770">floorDivN</a>). </p>
 
-<p class="definition">Definition at line <a class="el" href="math_8hpp_source.html#l00190">190</a> of file <a class="el" href="math_8hpp_source.html">math.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="math_8hpp_source.html#l00191">191</a> of file <a class="el" href="math_8hpp_source.html">math.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="tde5e__core__static_8hpp_source.html#l00472">rpg_os::generated::tde5e::Character::dodge()</a>, <a class="el" href="tde5e__core__static_8hpp_source.html#l00475">rpg_os::generated::tde5e::Character::initiative()</a>, <a class="el" href="tde5e__core__static_8hpp_source.html#l00500">rpg_os::generated::tde5e::Character::spirit()</a>, <a class="el" href="test__math_8cpp_source.html#l00103">TEST_CASE()</a>, <a class="el" href="test__math_8cpp_source.html#l00091">TEST_CASE()</a>, and <a class="el" href="tde5e__core__static_8hpp_source.html#l00505">rpg_os::generated::tde5e::Character::toughness()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="tde5e__core__static_8hpp_source.html#l00478">rpg_os::generated::tde5e::Character::dodge()</a>, <a class="el" href="tde5e__core__static_8hpp_source.html#l00481">rpg_os::generated::tde5e::Character::initiative()</a>, <a class="el" href="tde5e__core__static_8hpp_source.html#l00506">rpg_os::generated::tde5e::Character::spirit()</a>, <a class="el" href="test__math_8cpp_source.html#l00103">TEST_CASE()</a>, <a class="el" href="test__math_8cpp_source.html#l00091">TEST_CASE()</a>, and <a class="el" href="tde5e__core__static_8hpp_source.html#l00511">rpg_os::generated::tde5e::Character::toughness()</a>.</p>
 
 </div>
 </div>
@@ -811,9 +811,9 @@ Functions</h2></td></tr>
 <p>Converts a formula result (double) to an integer stat value.</p>
 <dl class="section user"><dt>Why truncation and not rounding?</dt><dd>Formula text is expected to apply <code>floor/<code>ceil/<code>round</code> explicitly</code> where</code> a fractional result must be reduced — the ruleset author, not the engine, decides the rounding policy per stat (e.g. D&amp;D ability modifiers floor, while hit-point averages round down by convention). This helper therefore only performs the type conversion, truncating toward zero, so the engine never silently imposes a rounding rule the ruleset did not ask for. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="math_8hpp_source.html#l00203">203</a> of file <a class="el" href="math_8hpp_source.html">math.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="math_8hpp_source.html#l00204">204</a> of file <a class="el" href="math_8hpp_source.html">math.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="modifier_8hpp_source.html#l00077">rpg_os::applyModifierPipeline()</a>, <a class="el" href="engine_8hpp_source.html#l01653">rpg_os::RulesetEngine::evaluateEffectAdd()</a>, <a class="el" href="engine_8hpp_source.html#l01460">rpg_os::RulesetEngine::resolveEffects()</a>, <a class="el" href="engine_8hpp_source.html#l01688">rpg_os::RulesetEngine::resolveSave()</a>, <a class="el" href="test__math_8cpp_source.html#l00103">TEST_CASE()</a>, and <a class="el" href="test__math_8cpp_source.html#l00044">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="modifier_8hpp_source.html#l00078">rpg_os::applyModifierPipeline()</a>, <a class="el" href="engine_8hpp_source.html#l01654">rpg_os::RulesetEngine::evaluateEffectAdd()</a>, <a class="el" href="engine_8hpp_source.html#l01461">rpg_os::RulesetEngine::resolveEffects()</a>, <a class="el" href="engine_8hpp_source.html#l01689">rpg_os::RulesetEngine::resolveSave()</a>, <a class="el" href="test__math_8cpp_source.html#l00103">TEST_CASE()</a>, and <a class="el" href="test__math_8cpp_source.html#l00044">TEST_CASE()</a>.</p>
 
 </div>
 </div>

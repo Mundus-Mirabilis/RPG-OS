@@ -8,15 +8,15 @@
 <!-- Browser tab icon — copied into the output via HTML_EXTRA_FILES (favicon.png). -->
 <link rel="icon" type="image/png" href="favicon.png"/>
 <!-- BEGIN opengraph metadata -->
-<meta property="og:title" content="RPG-OS" />
-<meta property="og:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
+<meta property="og:title" content="RPG OS" />
+<meta property="og:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
 <meta property="og:url" content="https://Mundus-Mirabilis.github.io/RPG-OS/" />
 <!-- END opengraph metadata -->
 <!-- BEGIN twitter metadata -->
-<meta name="twitter:title" content="RPG-OS" />
-<meta name="twitter:description" content="A header-only, C++23 universal rule engine and operating system for tabletop role-playing games." />
+<meta name="twitter:title" content="RPG OS" />
+<meta name="twitter:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
 <!-- END twitter metadata -->
-<title>RPG-OS: rpg_os::Money Class Reference</title>
+<title>RPG OS: rpg_os::Money Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -55,9 +55,9 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="mundus-mirabilis_512.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">RPG-OS
+   <div id="projectname">RPG OS
    </div>
-   <div id="projectbrief">A header-only C++23 universal rule engine for tabletop role-playing games</div>
+   <div id="projectbrief">A universal, header-only C++23 rule engine for tabletop role-playing games</div>
   </td>
  </tr>
  </tbody>
@@ -177,7 +177,7 @@ Static Public Member Functions</h2></td></tr>
 <dl class="section user"><dt>Why store base units instead of a coin map?</dt><dd>A coin map makes arithmetic awkward (how do you add two bags?). A single base-unit integer keeps + - * and comparison trivial and exact, and the coinage is only consulted when you want a human-readable breakdown (<a class="el" href="classrpg__os_1_1Money.html#af78a521d06a320ec6db4270b15b5399f">in</a> or <a class="el" href="classrpg__os_1_1Money.html#ad495c6b03970e11d3c8316a83e62ee72">fromCoins</a>). This is the same "store the canonical value,
 render it on demand" choice the engine makes for stats. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="money_8hpp_source.html#l00075">75</a> of file <a class="el" href="money_8hpp_source.html">money.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="money_8hpp_source.html#l00076">76</a> of file <a class="el" href="money_8hpp_source.html">money.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a51edeaefa5218a0687edc90b4f316382" name="a51edeaefa5218a0687edc90b4f316382"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a51edeaefa5218a0687edc90b4f316382">&#9670;&#160;</a></span>Money() <span class="overload">[1/2]</span></h2>
@@ -232,7 +232,7 @@ render it on demand" choice the engine makes for stats. </dd></dl>
 
 <p>Builds an amount from a count of base units. </p>
 
-<p class="definition">Definition at line <a class="el" href="money_8hpp_source.html#l00080">80</a> of file <a class="el" href="money_8hpp_source.html">money.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="money_8hpp_source.html#l00081">81</a> of file <a class="el" href="money_8hpp_source.html">money.hpp</a>.</p>
 
 </div>
 </div>
@@ -262,9 +262,9 @@ render it on demand" choice the engine makes for stats. </dd></dl>
 
 <p>The amount in base units. </p>
 
-<p class="definition">Definition at line <a class="el" href="money_8hpp_source.html#l00082">82</a> of file <a class="el" href="money_8hpp_source.html">money.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="money_8hpp_source.html#l00083">83</a> of file <a class="el" href="money_8hpp_source.html">money.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00899">rpg_os::RulesetEngine::pay()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00857">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00691">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00744">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00060">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00666">TEST_CASE()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00507">rpg_os::DynamicEntity::toJson()</a>, <a class="el" href="world__state_8hpp_source.html#l00043">rpg_os::WorldState::toJson()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00143">rpg_os::generated::dnd5e::Character::toJson()</a>, and <a class="el" href="tde5e__core__static_8hpp_source.html#l00193">rpg_os::generated::tde5e::Character::toJson()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00900">rpg_os::RulesetEngine::pay()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00857">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00691">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00744">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00060">TEST_CASE()</a>, <a class="el" href="test__bookkeeping_8cpp_source.html#l00666">TEST_CASE()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00508">rpg_os::DynamicEntity::toJson()</a>, <a class="el" href="world__state_8hpp_source.html#l00044">rpg_os::WorldState::toJson()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00149">rpg_os::generated::dnd5e::Character::toJson()</a>, and <a class="el" href="tde5e__core__static_8hpp_source.html#l00199">rpg_os::generated::tde5e::Character::toJson()</a>.</p>
 
 </div>
 </div>
@@ -303,11 +303,11 @@ render it on demand" choice the engine makes for stats. </dd></dl>
 </div><div class="memdoc">
 <p>Builds an amount from a bag of coins, e.g. <code><a class="el" href="classrpg__os_1_1Money.html#ad495c6b03970e11d3c8316a83e62ee72">Money::fromCoins</a>(system, {{"gp", 2}, {"sp", 5}})</code>. Throws std::invalid_argument on an unknown denomination. </p>
 
-<p class="definition">Definition at line <a class="el" href="money_8hpp_source.html#l00125">125</a> of file <a class="el" href="money_8hpp_source.html">money.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="money_8hpp_source.html#l00126">126</a> of file <a class="el" href="money_8hpp_source.html">money.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="money_8hpp_source.html#l00050">rpg_os::CurrencySystem::find()</a>, and <a class="el" href="money_8hpp_source.html#l00061">rpg_os::CurrencySystem::valueOf()</a>.</p>
+<p class="reference">References <a class="el" href="money_8hpp_source.html#l00051">rpg_os::CurrencySystem::find()</a>, and <a class="el" href="money_8hpp_source.html#l00062">rpg_os::CurrencySystem::valueOf()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00120">rpg_os::generated::dnd5e::Character::depositCoins()</a>, <a class="el" href="tde5e__core__static_8hpp_source.html#l00170">rpg_os::generated::tde5e::Character::depositCoins()</a>, and <a class="el" href="test__bookkeeping_8cpp_source.html#l00060">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00126">rpg_os::generated::dnd5e::Character::depositCoins()</a>, <a class="el" href="tde5e__core__static_8hpp_source.html#l00176">rpg_os::generated::tde5e::Character::depositCoins()</a>, and <a class="el" href="test__bookkeeping_8cpp_source.html#l00060">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -346,11 +346,11 @@ render it on demand" choice the engine makes for stats. </dd></dl>
 </div><div class="memdoc">
 <p>How many whole <code>denomId</code> coins this amount equals (floor division). 0 when the denomination is unknown or the amount is negative. </p>
 
-<p class="definition">Definition at line <a class="el" href="money_8hpp_source.html#l00139">139</a> of file <a class="el" href="money_8hpp_source.html">money.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="money_8hpp_source.html#l00140">140</a> of file <a class="el" href="money_8hpp_source.html">money.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="money_8hpp_source.html#l00050">rpg_os::CurrencySystem::find()</a>, and <a class="el" href="money_8hpp_source.html#l00033">rpg_os::Denomination::perBase</a>.</p>
+<p class="reference">References <a class="el" href="money_8hpp_source.html#l00051">rpg_os::CurrencySystem::find()</a>, and <a class="el" href="money_8hpp_source.html#l00034">rpg_os::Denomination::perBase</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00125">rpg_os::generated::dnd5e::Character::coinAmount()</a>, <a class="el" href="tde5e__core__static_8hpp_source.html#l00175">rpg_os::generated::tde5e::Character::coinAmount()</a>, and <a class="el" href="test__bookkeeping_8cpp_source.html#l00060">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00131">rpg_os::generated::dnd5e::Character::coinAmount()</a>, <a class="el" href="tde5e__core__static_8hpp_source.html#l00181">rpg_os::generated::tde5e::Character::coinAmount()</a>, and <a class="el" href="test__bookkeeping_8cpp_source.html#l00060">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -379,9 +379,9 @@ render it on demand" choice the engine makes for stats. </dd></dl>
 
 <p>Whether the amount is negative (a debt). </p>
 
-<p class="definition">Definition at line <a class="el" href="money_8hpp_source.html#l00086">86</a> of file <a class="el" href="money_8hpp_source.html">money.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="money_8hpp_source.html#l00087">87</a> of file <a class="el" href="money_8hpp_source.html">money.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00899">rpg_os::RulesetEngine::pay()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00900">rpg_os::RulesetEngine::pay()</a>.</p>
 
 </div>
 </div>
@@ -409,7 +409,7 @@ render it on demand" choice the engine makes for stats. </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="money_8hpp_source.html#l00117">117</a> of file <a class="el" href="money_8hpp_source.html">money.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="money_8hpp_source.html#l00118">118</a> of file <a class="el" href="money_8hpp_source.html">money.hpp</a>.</p>
 
 </div>
 </div>
@@ -437,7 +437,7 @@ render it on demand" choice the engine makes for stats. </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="money_8hpp_source.html#l00103">103</a> of file <a class="el" href="money_8hpp_source.html">money.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="money_8hpp_source.html#l00104">104</a> of file <a class="el" href="money_8hpp_source.html">money.hpp</a>.</p>
 
 </div>
 </div>
@@ -465,7 +465,7 @@ render it on demand" choice the engine makes for stats. </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="money_8hpp_source.html#l00109">109</a> of file <a class="el" href="money_8hpp_source.html">money.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="money_8hpp_source.html#l00110">110</a> of file <a class="el" href="money_8hpp_source.html">money.hpp</a>.</p>
 
 </div>
 </div>
@@ -493,7 +493,7 @@ render it on demand" choice the engine makes for stats. </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="money_8hpp_source.html#l00106">106</a> of file <a class="el" href="money_8hpp_source.html">money.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="money_8hpp_source.html#l00107">107</a> of file <a class="el" href="money_8hpp_source.html">money.hpp</a>.</p>
 
 </div>
 </div>
@@ -521,7 +521,7 @@ render it on demand" choice the engine makes for stats. </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="money_8hpp_source.html#l00113">113</a> of file <a class="el" href="money_8hpp_source.html">money.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="money_8hpp_source.html#l00114">114</a> of file <a class="el" href="money_8hpp_source.html">money.hpp</a>.</p>
 
 </div>
 </div>
@@ -549,7 +549,7 @@ render it on demand" choice the engine makes for stats. </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="money_8hpp_source.html#l00091">91</a> of file <a class="el" href="money_8hpp_source.html">money.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="money_8hpp_source.html#l00092">92</a> of file <a class="el" href="money_8hpp_source.html">money.hpp</a>.</p>
 
 </div>
 </div>
@@ -577,7 +577,7 @@ render it on demand" choice the engine makes for stats. </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="money_8hpp_source.html#l00094">94</a> of file <a class="el" href="money_8hpp_source.html">money.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="money_8hpp_source.html#l00095">95</a> of file <a class="el" href="money_8hpp_source.html">money.hpp</a>.</p>
 
 </div>
 </div>
@@ -631,7 +631,7 @@ render it on demand" choice the engine makes for stats. </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="money_8hpp_source.html#l00097">97</a> of file <a class="el" href="money_8hpp_source.html">money.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="money_8hpp_source.html#l00098">98</a> of file <a class="el" href="money_8hpp_source.html">money.hpp</a>.</p>
 
 </div>
 </div>
@@ -659,7 +659,7 @@ render it on demand" choice the engine makes for stats. </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="money_8hpp_source.html#l00100">100</a> of file <a class="el" href="money_8hpp_source.html">money.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="money_8hpp_source.html#l00101">101</a> of file <a class="el" href="money_8hpp_source.html">money.hpp</a>.</p>
 
 </div>
 </div>

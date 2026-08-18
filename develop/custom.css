@@ -1,13 +1,13 @@
 /*!
- * RPG-OS customisations on top of the Doxygen Awesome theme.
+ * RPG OS customisations on top of the Doxygen Awesome theme.
  *
  * Kept deliberately small: everything structural comes from
  * doxygen-awesome.css; this file only tunes branding (the GitHub corner) and
- * a couple of visual details so the docs feel like part of the RPG-OS
+ * a couple of visual details so the docs feel like part of the RPG OS
  * repository rather than a stock Doxygen export.
  */
 
-/* --- GitHub corner (links back to the RPG-OS repository) --- */
+/* --- GitHub corner (links back to the RPG OS repository) --- */
 .github-corner svg {
     fill: var(--primary-light-color);
     color: var(--page-background-color);
