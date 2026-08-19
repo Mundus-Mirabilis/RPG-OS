@@ -127,7 +127,7 @@ $(document).ready(function(){initNavTree('developer_guide.html',''); initResizab
 <blockquote class="doxtable">
 <p>&zwj;<b>First, read the ground rules.</b> This repository has two contributor-facing documents that are deliberately <em>not</em> part of the published documentation: <a href="https://github.com/Mundus-Mirabilis/RPG-OS/blob/develop/AGENTS.md"><code>AGENTS.md</code></a> — the authoritative instruction file for LLM agents and contributors (ground rules, conventions, definition of done) — and <a href="https://github.com/Mundus-Mirabilis/RPG-OS/blob/develop/CONTRIBUTING.md"><code>CONTRIBUTING.md</code></a> (the development workflow and coding style). Everything below is the short version. </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md13"></a>
+<h2><a class="anchor" id="autotoc_md14"></a>
 Architecture in one picture</h2>
 <p>RPG OS is <b>header-only C++23</b> and consists of one shared template core that is instantiated differently by two modes:</p>
 <ul>
@@ -153,7 +153,7 @@ Architecture in one picture</h2>
 <li><b>Specific mode</b> compiles a ruleset's <em>schema</em> into a strongly typed header with named members and methods. Formulas compile to C++, checks instantiate the shared templates with <code>constexpr</code> configs. The generated code still loads the JSON at <b>runtime</b> for the <em>data</em> database.</li>
 <li>A <b>parity test</b> asserts both modes produce identical results for the same scenario — a check resolved through <code>RulesetEngine</code> equals the generated <code>Character</code>'s named method.</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md14"></a>
+<h2><a class="anchor" id="autotoc_md15"></a>
 The shared template core</h2>
 <p>The core is ruleset-agnostic by design — there is no named mechanism for any specific game anywhere in it.</p>
 <ul>
@@ -164,7 +164,7 @@ The shared template core</h2>
 <li><code><a class="el" href="math_8hpp.html" title="Shared math helpers for formula evaluation and stat arithmetic.">core/math.hpp</a></code> — <code>floor</code>/<code>ceil</code>/<code>round</code>/<code>clamp</code> used by the AST evaluator <em>and</em> generated code, plus the non-negative fast variants (<code>floorDivN</code>, <code>ceilDivN</code>, <code>roundDivN</code>).</li>
 <li><code><a class="el" href="variance_8hpp.html" title="Variance / range selection for stat values.">core/variance.hpp</a></code> — range selection (weakest … strongest / random) via <code>readVariantValue</code>.</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md15"></a>
+<h2><a class="anchor" id="autotoc_md16"></a>
 The code generator</h2>
 <p><code>codegen/rpg_os_codegen.py</code> (Python 3, standard library only) turns a ruleset into <code>generated/&lt;ruleset_id&gt;_static.hpp</code>. The outputs are <b>committed</b>; keep them in sync with the rulesets.</p>
 <ul>
@@ -175,7 +175,7 @@ The code generator</h2>
 <li><code>codegen/validate_ruleset.py</code> validates rulesets against <code>rulesets/ruleset.schema.json</code> (full draft-07 when <code>jsonschema</code> is installed, structural fallback otherwise). Run it after touching any ruleset: <code>python3 codegen/validate_ruleset.py rulesets/*.json</code>.</li>
 <li>The generator's tricky parts are documented in the code and in the repo memory (<code>/memories/repo/rpg-os.md</code>): e.g. the GCC <code>Type{{</code>-at-end-of-line parsing quirk, <code>-Wmissing-field-initializers</code> interactions, and the <code>_dice</code> literal rendering rules.</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md16"></a>
+<h2><a class="anchor" id="autotoc_md17"></a>
 Testing</h2>
 <ul>
 <li>Tests use <b>doctest</b> (<code>tests/</code>), registered with CTest.</li>
@@ -186,7 +186,7 @@ Testing</h2>
 <div class="fragment"><div class="line">cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Debug</div>
 <div class="line">cmake --build build</div>
 <div class="line">ctest --test-dir build --output-on-failure</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md17"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md18"></a>
 The WASM port &amp; npm package</h2>
 <ul>
 <li><code>wasm/bindings.cpp</code> is a flat extern "C" API over the universal engine, compiled to WASM by <code>wasm/build.sh</code> (em++). It stays host-compilable (no Emscripten headers unless <code>__EMSCRIPTEN__</code>), so <code>g++ -std=c++23 -fsyntax-only wasm/bindings.cpp</code> works as a local syntax check.</li>
@@ -194,13 +194,13 @@ The WASM port &amp; npm package</h2>
 <li>The ELO ratings stay in Python (<code>scripts/elo_ranking.py</code>); the demo only ports the small formula to JS. See <code>wasm/package/README.md</code> and <code>web/demo/README.md</code>.</li>
 <li><b>Licences</b>: the engine code is Apache-2.0, but ruleset JSON data is not — each ruleset carries its own licence (see the root <code>README.md</code> licence table and <code>docs/README.md</code>).</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md18"></a>
+<h2><a class="anchor" id="autotoc_md19"></a>
 The documentation build</h2>
 <p>The single source of truth is the **<code>Doxyfile</code>** at the repository root; it renders into <code>html/</code> (gitignored). The **<code>README.md</code>** is the front page (<code>USE_MDFILE_AS_MAINPAGE</code>); this guide and the <a class="el" href="user_guide.html">User Guide</a> are the two curated entry points.</p>
 <div class="fragment"><div class="line">cmake --build build --target rpg_os_docs     # HTML -&gt; ./html</div>
 </div><!-- fragment --><p>CI deploys the docs to GitHub Pages under versioned subfolders. The full infrastructure story — the reusable deploy workflow, the <code>VERSION</code> file that feeds <code>PROJECT_NUMBER</code>, the branding assets, and the vendored Doxygen Awesome theme — lives in <code>docs/README.md</code> and <code>docs/assets/README.md</code>.</p>
 <p>Doxygen has a few sharp edges worth knowing (they are documented in the repo memory): <code>\ref</code> inside <code>@file</code> blocks never resolves (use <code>@c</code>/backticks); <code>USE_MDFILE_AS_MAINPAGE</code> needs an explicit <code>./README.md</code> path; raw HTML <code>&lt;img&gt;</code> tags are not rewritten (use markdown image syntax); and the docs output must be cleaned before each build (<code>cmake/Doxygen.cmake</code> does this).</p>
-<h2><a class="anchor" id="autotoc_md19"></a>
+<h2><a class="anchor" id="autotoc_md20"></a>
 Conventions in 30 seconds</h2>
 <ul>
 <li><b>Licence header</b> on every file: <code>// Copyright (c) 2026 Christian Mayer and the Mundus Mirabilis contributors.</code> + <code>// SPDX-License-Identifier: Apache-2.0</code> (generated headers emit it automatically).</li>

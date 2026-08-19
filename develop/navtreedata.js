@@ -33,10 +33,11 @@ var NAVTREE =
     ] ],
     [ "Also on the web — the npm package", "index.html#autotoc_md7", null ],
     [ "Documentation", "index.html#autotoc_md8", null ],
-    [ "Building (for C++ users)", "index.html#autotoc_md9", null ],
-    [ "Licences — read this", "index.html#autotoc_md10", null ],
-    [ "Project layout (orientation)", "index.html#autotoc_md11", null ],
-    [ "The ELO ranking, under the hood", "index.html#autotoc_md12", null ],
+    [ "Versions", "index.html#autotoc_md9", null ],
+    [ "Building (for C++ users)", "index.html#autotoc_md10", null ],
+    [ "Licences — read this", "index.html#autotoc_md11", null ],
+    [ "Project layout (orientation)", "index.html#autotoc_md12", null ],
+    [ "The ELO ranking, under the hood", "index.html#autotoc_md13", null ],
     [ "Examples", "md_examples_2README.html", null ],
     [ "Developer Guide", "developer_guide.html", null ],
     [ "User Guide", "user_guide.html", null ],
@@ -86,11 +87,11 @@ var NAVTREEINDEX =
 "classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#a279902d07db099ea98007a3cb17d04ce",
 "classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a4561342a41b1c1aaf494d2b9c618ec89",
 "classrpg__os_1_1specific_1_1SheetBase.html#aacdc0bab001a054a43fc86c3ae4cb8a2",
-"namespacerpg__os.html#a776f30dd6b9dd4397bddc7cf1d81ecf4",
-"structrpg__os_1_1CheckResult.html#ad8b969dc33b1f30235c1afa229cd8891",
-"structrpg__os_1_1LevelUp.html",
-"test__conditions_8cpp.html#ab17daacc0c8cadf8f5bfe7c93c00a1f7",
-"test__types_8cpp.html"
+"namespacerpg__os.html#a6b46ef1cf31683f3c873e49ca842cab6",
+"structrpg__os_1_1CheckResult.html#ac7ab5717d50dfe471ed8fda87bda5d74",
+"structrpg__os_1_1ItemInstance.html#ad009ddafd846c78552527281c8f0f43d",
+"test__conditions_8cpp.html#a9d3be20be19a330f22bc462b11e900a8",
+"test__traits_8cpp_source.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

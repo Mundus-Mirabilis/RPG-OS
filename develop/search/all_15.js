@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['under_20the_20hood_0',['The ELO ranking, under the hood',['../index.html#autotoc_md12',1,'']]],
+  ['under_20the_20hood_0',['The ELO ranking, under the hood',['../index.html#autotoc_md13',1,'']]],
   ['unequip_1',['unequip',['../classrpg__os_1_1Equipment.html#a12b53d8bb4010c4140f80ad4aa0dde4c',1,'rpg_os::Equipment::unequip()'],['../classrpg__os_1_1RulesetEngine.html#a0920f6d63323df0e5fcbba3da924e79e',1,'rpg_os::RulesetEngine::unequip()'],['../classrpg__os_1_1GameSession.html#aafc98d37eeb7974fa5a13fe5570c806e',1,'rpg_os::GameSession::unequip()']]],
   ['unit_2',['unit',['../structrpg__os_1_1Weight.html#a2e3d085500a16da344fd4135921324cb',1,'rpg_os::Weight']]],
-  ['universal_20mode_3',['Universal mode',['../user_guide.html#autotoc_md21',1,'']]],
+  ['universal_20mode_3',['Universal mode',['../user_guide.html#autotoc_md22',1,'']]],
   ['universal_20mode_20—_20the_20dynamic_20engine_4',['universal mode — the dynamic engine',['../index.html#autotoc_md5',1,'Universal mode — the dynamic engine'],['../group__rpg__os__universal.html',1,'Universal mode — the dynamic engine']]],
   ['universal_5fmode_2fmain_2ecpp_5',['main.cpp',['../universal__mode_2main_8cpp.html',1,'']]],
   ['unknownaffliction_6',['UnknownAffliction',['../namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766a2cab9bb5d931ca91165f25c1be4189c1',1,'rpg_os']]],
@@ -20,5 +20,5 @@ var searchData=
   ['use_20it_17',['Two ways to use it',['../index.html#autotoc_md4',1,'']]],
   ['user_20guide_18',['User Guide',['../user_guide.html',1,'']]],
   ['user_2dguide_2emd_19',['user-guide.md',['../user-guide_8md.html',1,'']]],
-  ['users_20',['Building (for C++ users)',['../index.html#autotoc_md9',1,'']]]
+  ['users_20',['Building (for C++ users)',['../index.html#autotoc_md10',1,'']]]
 ];

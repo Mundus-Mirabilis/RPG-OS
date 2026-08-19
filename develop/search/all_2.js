@@ -92,7 +92,7 @@ var searchData=
   ['brpskilltechnicalskill_89',['brpSkillTechnicalSkill',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a02b89a96e13de396463e7216c14f382a',1,'rpg_os::generated::brp_ugc::Character']]],
   ['brpskillthrow_90',['brpSkillThrow',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a1947e7d421c01107e882f11a4db14a76',1,'rpg_os::generated::brp_ugc::Character']]],
   ['brpskilltrack_91',['brpSkillTrack',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a1b94d5978adc2f8589e9b42262bc0fa0',1,'rpg_os::generated::brp_ugc::Character']]],
-  ['build_92',['The documentation build',['../developer_guide.html#autotoc_md18',1,'']]],
-  ['building_20for_20c_20users_93',['Building (for C++ users)',['../index.html#autotoc_md9',1,'']]],
+  ['build_92',['The documentation build',['../developer_guide.html#autotoc_md19',1,'']]],
+  ['building_20for_20c_20users_93',['Building (for C++ users)',['../index.html#autotoc_md10',1,'']]],
   ['buy_94',['buy',['../classrpg__os_1_1RulesetEngine.html#ac12e976e2951a93fc8aacfd7b5d07cea',1,'rpg_os::RulesetEngine::buy()'],['../classrpg__os_1_1GameSession.html#a934eeec16b59c61aa39f54c1331d27a6',1,'rpg_os::GameSession::buy()']]]
 ];

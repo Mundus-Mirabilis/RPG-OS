@@ -1,7 +1,7 @@
 var searchData=
 [
   ['on_20the_20web_20—_20the_20npm_20package_0',['Also on the web — the npm package',['../index.html#autotoc_md7',1,'']]],
-  ['on_20the_20web_20—_20wasm_20and_20npm_1',['On the web — WASM and npm',['../user_guide.html#autotoc_md25',1,'']]],
+  ['on_20the_20web_20—_20wasm_20and_20npm_1',['On the web — WASM and npm',['../user_guide.html#autotoc_md26',1,'']]],
   ['onafflictionapplied_2',['OnAfflictionApplied',['../namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18ad67033bca00a2b0a8230a243a06eb5ba',1,'rpg_os']]],
   ['onaftercheckroll_3',['OnAfterCheckRoll',['../namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18a0b3c086f0b5060681307c116985c6a56',1,'rpg_os']]],
   ['onbeforecheckroll_4',['OnBeforeCheckRoll',['../namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18ab4bda534e9935d6126740b9d38997e0f',1,'rpg_os']]],
@@ -10,7 +10,7 @@ var searchData=
   ['oncurrencychanged_7',['OnCurrencyChanged',['../namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18a25df4d5e17c26458db65198292838c64',1,'rpg_os']]],
   ['ondamagecalculated_8',['OnDamageCalculated',['../namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18aa577a19f9f98a0d17bb8eec3c1d10102',1,'rpg_os']]],
   ['ondamagetaken_9',['OnDamageTaken',['../namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18a95ce917c466f63f718bd35fe03fca558',1,'rpg_os']]],
-  ['one_20picture_10',['Architecture in one picture',['../developer_guide.html#autotoc_md13',1,'']]],
+  ['one_20picture_10',['Architecture in one picture',['../developer_guide.html#autotoc_md14',1,'']]],
   ['onequipchanged_11',['OnEquipChanged',['../namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18ae0e1d7b48effa0b86dc44a9dd20f85c9',1,'rpg_os']]],
   ['onevent_12',['onEvent',['../classrpg__os_1_1GameSession.html#a0cdcc9c3cbe4702e3a2d13abb48ef7d0',1,'rpg_os::GameSession']]],
   ['ongoing_13',['ongoing',['../classrpg__os_1_1EffectTimeline.html#a730686746b82237c41a90db96298d143',1,'rpg_os::EffectTimeline']]],
@@ -39,10 +39,10 @@ var searchData=
   ['operator_3e_36',['operator&gt;',['../structrpg__os_1_1Weight.html#a95bda643509eaa979379c509a642a1f8',1,'rpg_os::Weight::operator&gt;()'],['../classrpg__os_1_1Money.html#a2ef299018c732e8ccb6a7f04cac773c8',1,'rpg_os::Money::operator&gt;(const Money &amp;o) const noexcept']]],
   ['operator_3e_3d_37',['operator&gt;=',['../classrpg__os_1_1Money.html#a2ae5273dba0771705b44b9b02cdb2b56',1,'rpg_os::Money']]],
   ['opposed_38',['Opposed',['../namespacerpg__os.html#a95eaa793f5aa7a7b28d2851594d614dca4426b14cf40eb77915f04b0a4701c0b3',1,'rpg_os']]],
-  ['orientation_39',['Project layout (orientation)',['../index.html#autotoc_md11',1,'']]],
+  ['orientation_39',['Project layout (orientation)',['../index.html#autotoc_md12',1,'']]],
   ['orienting_40',['orienting',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a49cc8daa87565f93b0f4a105ed9b9d79',1,'rpg_os::generated::tde5e::Character']]],
   ['os_41',['RPG OS',['../index.html',1,'']]],
   ['overcapacity_42',['OverCapacity',['../namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766a4fcf3e94521b7db24bd0c3bd6e9201af',1,'rpg_os']]],
   ['override_43',['Override',['../namespacerpg__os.html#aab9c315b59a58b0733ac5a30a02da3f2a6da8e67225fdcfa78c3ea5dc3154b849',1,'rpg_os']]],
-  ['own_20ruleset_20json_44',['Creating your own ruleset JSON',['../user_guide.html#autotoc_md24',1,'']]]
+  ['own_20ruleset_20json_44',['Creating your own ruleset JSON',['../user_guide.html#autotoc_md25',1,'']]]
 ];

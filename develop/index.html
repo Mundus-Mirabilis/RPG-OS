@@ -215,6 +215,17 @@ Documentation</h1>
 <td class="markdownTableBodyNone"><a href="https://mundus-mirabilis.github.io/RPG-OS/main/demo/">https://mundus-mirabilis.github.io/RPG-OS/main/demo/</a>   </td><td class="markdownTableBodyNone"><b>ELO Arena</b> (live demo)   </td></tr>
 </table>
 <h1><a class="anchor" id="autotoc_md9"></a>
+Versions</h1>
+<p>RPG OS is developed openly: <b>releases</b> are tagged <code>vX.Y.Z</code>, and the latest release is always on the **<code>main</code>** branch. <b>Development</b> happens on **<code>develop</code>** — the current state of the project, one step ahead of the latest release. The docs and the ELO Arena are built for every release and for every push to <code>main</code> and <code>develop</code>, so each version has its own live documentation and ELO ranking:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Version   </th><th class="markdownTableHeadNone">Documentation   </th><th class="markdownTableHeadNone">ELO Arena    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Latest release (<code>main</code>)   </td><td class="markdownTableBodyNone"><a href="https://mundus-mirabilis.github.io/RPG-OS/main/">docs</a>   </td><td class="markdownTableBodyNone"><a href="https://mundus-mirabilis.github.io/RPG-OS/main/demo/">ELO Arena</a>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Current development (<code>develop</code>)   </td><td class="markdownTableBodyNone"><a href="https://mundus-mirabilis.github.io/RPG-OS/develop/">docs</a>   </td><td class="markdownTableBodyNone"><a href="https://mundus-mirabilis.github.io/RPG-OS/develop/demo/">ELO Arena</a>   </td></tr>
+</table>
+<h1><a class="anchor" id="autotoc_md10"></a>
 Building (for C++ users)</h1>
 <p>RPG OS is header-only: add <code>include/</code> and <code>generated/</code> to your include path and link nothing. With CMake, consume the <code>rpg_os::rpg_os</code> interface target:</p>
 <div class="fragment"><div class="line">cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release</div>
@@ -237,7 +248,7 @@ Building (for C++ users)</h1>
 </table>
 <p>Requires CMake ≥ 3.24 and a C++23-capable toolchain whose standard library provides <code>&lt;expected&gt;</code>: GCC ≥ 13 (libstdc++ ≥ 13), or Clang ≥ 17 with libc++ ≥ 17 (Apple clang on macOS, or <code>-stdlib=libc++</code> on Linux). Clang 17/18 with GNU libstdc++ 13 does not provide <code>&lt;expected&gt;</code> — use Clang ≥ 19 with libstdc++ instead.</p>
 <p>The example programs are small, self-contained demos of both modes, the combat simulator and the ECS patterns — see the <a class="el" href="md_examples_2README.html">examples</a>.</p>
-<h1><a class="anchor" id="autotoc_md10"></a>
+<h1><a class="anchor" id="autotoc_md11"></a>
 Licences — read this</h1>
 <p>The <b>engine code</b> in this repository is <b>Apache-2.0</b>. The <b>ruleset JSON files are NOT</b>: each is governed by the licence stated in its own required <code>licence</code> field (e.g. <code>CC-BY-4.0</code>, or the Open RPG Creative License). Never assume a ruleset's content is Apache-2.0 — check the <code>licence</code> field of the individual file (and its optional <code>licence_source</code> link) before redistributing or modifying it. The ELO Arena shows the loaded ruleset's licence at runtime.</p>
 <table class="markdownTable">
@@ -251,7 +262,7 @@ Licences — read this</h1>
 <td class="markdownTableBodyNone"><code>brp_ugc.json</code>   </td><td class="markdownTableBodyNone">Open RPG Creative License (ORC)   </td><td class="markdownTableBodyNone"><a href="https://www.chaosium.com/orc-license/">chaosium.com/orc-license</a>   </td></tr>
 </table>
 <p>Each ruleset is a single JSON file validated against <a href="rulesets/ruleset.schema.json"><code>rulesets/ruleset.schema.json</code></a>. The <a href="https://mundus-mirabilis.github.io/RPG-OS/develop/user_guide.html">User Guide</a> explains the ruleset format and how to create your own.</p>
-<h1><a class="anchor" id="autotoc_md11"></a>
+<h1><a class="anchor" id="autotoc_md12"></a>
 Project layout (orientation)</h1>
 <div class="fragment"><div class="line">include/rpg_os/</div>
 <div class="line">├── common/       shared value types, JSON, event system</div>
@@ -268,7 +279,7 @@ Project layout (orientation)</h1>
 <div class="line">wasm/             WebAssembly port + the @mundus-mirabilis/rpg-os npm package</div>
 <div class="line">web/demo/         the ELO Arena live demo</div>
 </div><!-- fragment --><p>The detailed layout and every internal convention live in the <a href="https://mundus-mirabilis.github.io/RPG-OS/develop/developer_guide.html">Developer Guide</a>.</p>
-<h1><a class="anchor" id="autotoc_md12"></a>
+<h1><a class="anchor" id="autotoc_md13"></a>
 The ELO ranking, under the hood</h1>
 <p><code>scripts/elo_ranking.py</code> ranks every combatant of a ruleset with a Monte-Carlo ELO tournament: a Swiss pairing (each combatant plays one similar-rated opponent per round, so it needs <code>O(rounds · n)</code> fights instead of <code>O(n²)</code>), executed in parallel processes. Each fight is a full <code>runFight</code> simulation in the native engine. Every random consumer follows the same rule — <em>explicitly seeded = exactly reproducible, unseeded = varied on every run</em>:</p>
 <div class="fragment"><div class="line">python3 scripts/elo_ranking.py --ruleset rulesets/dnd5e_srd.json --jobs 8 --rounds 40 --games 10</div>

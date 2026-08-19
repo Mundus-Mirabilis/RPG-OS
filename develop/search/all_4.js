@@ -58,7 +58,7 @@ var searchData=
   ['dndcoins_55',['dndCoins',['../test__fixtures_8hpp.html#a45ddda6c2ff8f996e1cc76f01fa7c634',1,'test_fixtures.hpp']]],
   ['doctest_5fconfig_5fimplement_5fwith_5fmain_56',['DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN',['../test__main_8cpp.html#a623b8690a262536536a43eab2d7df03d',1,'test_main.cpp']]],
   ['documentation_57',['Documentation',['../index.html#autotoc_md8',1,'']]],
-  ['documentation_20build_58',['The documentation build',['../developer_guide.html#autotoc_md18',1,'']]],
+  ['documentation_20build_58',['The documentation build',['../developer_guide.html#autotoc_md19',1,'']]],
   ['dodge_59',['dodge',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a889a07d813a71c12e03217550af5f307',1,'rpg_os::generated::tde5e::Character::dodge()'],['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a86bbb4add55762788f2701a5cdbeee03',1,'rpg_os::generated::brp_ugc::Character::dodge']]],
   ['does_60',['What it does',['../index.html#autotoc_md3',1,'']]],
   ['doublehalve_61',['DoubleHalve',['../namespacerpg__os.html#ab545c7c57f9754a6d5b040f83bedaf52aa2224aa958f41d288d9e97e986492b36',1,'rpg_os']]],
