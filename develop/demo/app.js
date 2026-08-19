@@ -13,20 +13,13 @@
  * leaderboards into ./data/ (all three folders are gitignored here).
  */
 import { init } from './rpg-browser.js';
-import { winProbability, rankNewcomer } from './elo.js';
-
-const RULESETS = {
-  tde5e_core: { label: 'The Dark Eye 5e', file: 'tde5e_core.json' },
-  dnd5e_srd: { label: 'D&D 5e SRD', file: 'dnd5e_srd.json' },
-};
-
-const COMBAT_STATS = ['Attack', 'Parry', 'Armor_Rating', 'AC', 'Initiative'];
-// The newcomer is ranked Swiss-style against the leaderboard entries closest
-// to its current rating (see rankNewcomer in elo.js). A focus on similar
-// ratings plus more fights per opponent makes the estimate converge faster.
-const RANK_ROUNDS = 8; // how many similar-rating rounds it plays
-const RANK_OPPONENTS_PER_ROUND = 2; // opponents picked per round (closest rating)
-const GAMES_PER_OPPONENT = 30; // fights per opponent
+import { expectedScore, ELO_K, ELO_STANDARD, rankNewcomer } from './elo.js';
+import {
+  COMBAT_STATS, DEFAULT_WEAPON, GAMES_PER_OPPONENT, LIVE_FIGHTS, MAX_ROUNDS,
+  RANK_OPPONENTS_PER_ROUND, RANK_ROUNDS, RULESETS, SEED_ADD, SEED_MOD, SEED_MUL,
+  SEED_STRIDE,
+} from './constants.js';
+import { renderFightRound } from './transcript.js';
 
 const $ = (sel) => document.querySelector(sel);
 const status = $('#status');
@@ -43,7 +36,7 @@ let duelLive = null; // { winsA, winsB, draws } of the last live run for the cur
 let fightDetail = null; // transcript of the last single detailed fight for the current pair
 let formDebounce = 0;
 let leaderboardMeta = ''; // metadata line shown under the leaderboard table
-let leaderboardInitial = 1000; // ELO standard strength; the leaderboard's own anchor when known
+let leaderboardInitial = ELO_STANDARD; // the leaderboard's own anchor when known
 
 function setStatus(text, isError = false) {
   status.textContent = text;
@@ -192,13 +185,13 @@ async function loadLeaderboard(rulesetId) {
       'Run it locally and place the JSON in data/ to preview.';
     leaderboard = [];
     leaderboardMeta = '';
-    leaderboardInitial = 1000; // no leaderboard, so fall back to the ELO standard
+    leaderboardInitial = ELO_STANDARD; // no leaderboard, so fall back to the ELO standard
     return;
   }
   leaderboard = data.entries
     .map((e) => ({ ...e, name: entriesByName.get(e.id) ?? e.id }))
     .sort((a, b) => a.rank - b.rank);
-  leaderboardInitial = data.initial ?? 1000; // the leaderboard's own ELO anchor
+  leaderboardInitial = data.initial ?? ELO_STANDARD; // the leaderboard's own ELO anchor
   leaderboardMeta =
     `${data.entries.length} combatants · ${data.rounds} rounds × ${data.games_per_pair} games/pair · ` +
     `start ${leaderboardInitial} · seed ${data.seed} · champion: ${data.champion}`;
@@ -271,7 +264,7 @@ function renderLeaderboard() {
     // Win % against the reference (a single selected row, or the ranked
     // character); the reference itself therefore shows exactly 50%.
     const winPct = reference
-      ? winProbability(entry.rating, reference.rating) * 100
+      ? expectedScore(entry.rating, reference.rating) * 100
       : entry.win_pct;
 
     const pickTd = document.createElement('td');
@@ -382,7 +375,7 @@ function renderDuel() {
 
   // What the ELO ratings suggest — an estimate: individual matchups can differ
   // from it, so the live fights below are the measured result.
-  const pa = winProbability(a.rating, b.rating);
+  const pa = expectedScore(a.rating, b.rating);
   const predict = document.createElement('div');
   predict.append(label('ELO estimate'));
   predict.append(duelGrid(a, b, pa));
@@ -443,10 +436,10 @@ async function runMonteCarlo(a, b, button) {
     // Each run is a fresh Monte-Carlo sample, so re-running shows how the
     // measured result varies around the ELO estimate (fights within a run stay
     // distinct via the index, mirroring scripts/elo_ranking.py).
-    const runSeed = Math.floor(Math.random() * 0x100000000) >>> 0;
-    for (let i = 0; i < 100; i += 1) {
-      const seed = (runSeed * 1000003 + i * 31 + 13) >>> 0;
-      const outcome = rpg.fight(specA, specB, { seed, maxRounds: 1000 });
+    const runSeed = Math.floor(Math.random() * SEED_MOD) >>> 0;
+    for (let i = 0; i < LIVE_FIGHTS; i += 1) {
+      const seed = (runSeed * SEED_MUL + i * SEED_STRIDE + SEED_ADD) >>> 0;
+      const outcome = rpg.fight(specA, specB, { seed, maxRounds: MAX_ROUNDS });
       if (outcome.winner_index === 0) winsA += 1;
       else if (outcome.winner_index === 1) winsB += 1;
       else draws += 1;
@@ -474,8 +467,8 @@ async function runSingleFight(a, b, button) {
   try {
     const specA = await specForEntry(a);
     const specB = await specForEntry(b);
-    const seed = Math.floor(Math.random() * 0x100000000) >>> 0;
-    fightDetail = rpg.fightDetail(specA, specB, { seed, maxRounds: 1000 });
+    const seed = Math.floor(Math.random() * SEED_MOD) >>> 0;
+    fightDetail = rpg.fightDetail(specA, specB, { seed, maxRounds: MAX_ROUNDS });
     if (!a.isYou) specA.dispose();
     if (!b.isYou) specB.dispose();
   } catch (err) {
@@ -489,102 +482,8 @@ async function runSingleFight(a, b, button) {
 }
 
 // ---------------------------------------------------------------------------
-// single-fight transcript rendering
+// single-fight transcript rendering (renderFightRound comes from transcript.js)
 // ---------------------------------------------------------------------------
-
-/** A monospaced `.dice` badge showing one dice result (e.g. "6 6"). */
-function diceBadge(text) {
-  const span = document.createElement('span');
-  span.className = 'dice';
-  span.textContent = text;
-  return span;
-}
-
-/** " · target H → H' pool" — the hit-point change one action caused. */
-function hpChange(target, before, after, pool) {
-  const span = document.createElement('span');
-  span.className = 'fight-hp';
-  span.textContent = before === after
-    ? ` · ${target} at ${after} ${pool}`
-    : ` · ${target} ${before} → ${after} ${pool}`;
-  return span;
-}
-
-/** One action line of a round's transcript (an attack or a spell cast). */
-function renderFightAction(action, aName, bName, hpPool) {
-  const actor = action.actor === 0 ? aName : bName;
-  const target = action.target === 0 ? aName : bName;
-  const row = document.createElement('div');
-  row.className = 'fight-action';
-
-  const actorEl = document.createElement('b');
-  actorEl.textContent = actor;
-  row.append(actorEl);
-
-  if (action.kind === 'cast') {
-    row.append(' casts ');
-    const spellEl = document.createElement('b');
-    spellEl.textContent = action.spell;
-    row.append(spellEl);
-    row.append(' — check ');
-    row.append(diceBadge(action.check_dice.join(' ')));
-    row.append(action.is_hit ? ' → success' : ' → failed');
-    if (action.is_hit && action.damage > 0) {
-      row.append(' · deals ');
-      const dmgEl = document.createElement('b');
-      dmgEl.textContent = `${action.damage} damage`;
-      row.append(dmgEl);
-      if (action.cost > 0) {
-        row.append(` (cost ${action.cost} ${action.resource})`);
-      }
-    }
-    row.append(hpChange(target, action.hp_before, action.target_hp, hpPool));
-  } else {
-    row.append(' attacks ');
-    const targetEl = document.createElement('b');
-    targetEl.textContent = target;
-    row.append(targetEl);
-    row.append(' — d20 ');
-    row.append(diceBadge(action.check_dice.join(' ')));
-    if (!action.is_hit) {
-      row.append(' → miss');
-      row.append(hpChange(target, action.hp_before, action.target_hp, hpPool));
-    } else {
-      row.append(' → hit · damage ');
-      // Some bestiary attacks have a flat (0-damage) expression — no dice.
-      if (action.damage_dice.length > 0) {
-        row.append(diceBadge(action.damage_dice.join(' ')));
-        row.append(' ');
-      }
-      const dmgEl = document.createElement('b');
-      dmgEl.textContent = `= ${action.damage}`;
-      row.append(dmgEl);
-      row.append(hpChange(target, action.hp_before, action.target_hp, hpPool));
-    }
-  }
-  return row;
-}
-
-/** One round of a fight's transcript: the initiative roll and its actions. */
-function renderFightRound(round, aName, bName, hpPool) {
-  const wrap = document.createElement('div');
-  wrap.className = 'fight-round';
-
-  const head = document.createElement('div');
-  head.className = 'fight-round-head';
-  const firstName = round.goes_first === 0 ? aName : bName;
-  head.append(`Round ${round.round} — initiative `);
-  head.append(diceBadge(`${aName} d6 ${round.init_roll[0]} → ${round.init_total[0]}`));
-  head.append(document.createTextNode(' · '));
-  head.append(diceBadge(`${bName} d6 ${round.init_roll[1]} → ${round.init_total[1]}`));
-  head.append(` — ${firstName} acts first`);
-  wrap.append(head);
-
-  for (const action of round.actions) {
-    wrap.append(renderFightAction(action, aName, bName, hpPool));
-  }
-  return wrap;
-}
 
 /** The transcript of the last single fight, from the opening roll to the
  *  winner. Extremely long (draw) fights are truncated in the middle so the
@@ -686,7 +585,7 @@ function buildForm(m) {
   weaponField.innerHTML = `<span>Weapon damage</span>`;
   const weaponInput = document.createElement('input');
   weaponInput.name = 'weapon';
-  weaponInput.value = '1d6+4';
+  weaponInput.value = DEFAULT_WEAPON;
   weaponInput.setAttribute('aria-label', 'Weapon damage dice');
   weaponField.append(weaponInput);
   fields.append(weaponField);
@@ -757,7 +656,7 @@ function collectStats() {
 }
 
 function currentWeapon() {
-  return document.querySelector('#form-fields input[name="weapon"]')?.value || '1d6+4';
+  return document.querySelector('#form-fields input[name="weapon"]')?.value || DEFAULT_WEAPON;
 }
 
 /** Live readout: derived combat values of the character as typed so far. */
@@ -831,7 +730,7 @@ function renderRankResult(result) {
   box.innerHTML =
     `<div class="big">ELO ${Math.round(result.rating)}</div>` +
     `<p>Ranked Swiss-style against the ${result.opponents} leaderboard combatants ` +
-    `closest to your rating (${GAMES_PER_OPPONENT} fights each, K=32, ` +
+    `closest to your rating (${GAMES_PER_OPPONENT} fights each, K=${ELO_K}, ` +
     `start ${leaderboardInitial}): ` +
     `${result.wins}W / ${result.losses}L / ${result.draws}D. ` +
     `That places you at <b>#${rank}</b> in the table. ` +

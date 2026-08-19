@@ -10,19 +10,20 @@
  * Python version: expected = 1/(1+10^((b-a)/400)), rating += K*(score - expected).
  */
 
+/** The ELO formula's divisor (spread) and K-factor, and the standard starting
+ * strength. These mirror scripts/elo_ranking.py (--k 32, --initial 1000). */
+export const ELO_DIVISOR = 400;
+export const ELO_K = 32;
+export const ELO_STANDARD = 1000;
+
 /** Expected score of `a` against `b` (0..1) — the ELO win probability. */
 export function expectedScore(a, b) {
-  return 1 / (1 + 10 ** ((b - a) / 400));
+  return 1 / (1 + 10 ** ((b - a) / ELO_DIVISOR));
 }
 
 /** One ELO update after `score` (0, 0.5, 1) against a rated opponent. */
-export function updateRating(rating, expected, score, k = 32) {
+export function updateRating(rating, expected, score, k = ELO_K) {
   return rating + k * (score - expected);
-}
-
-/** Win probability of combatant `a` over `b` from their ELO ratings. */
-export function winProbability(a, b) {
-  return expectedScore(a, b);
 }
 
 /**
@@ -42,8 +43,8 @@ export async function rankNewcomer(rpg, spec, opponents, options = {}) {
   const gamesPerOpponent = options.gamesPerOpponent ?? 20;
   const opponentsPerRound = options.opponentsPerRound ?? 2;
   const rounds = options.rounds ?? 8;
-  const k = options.k ?? 32;
-  const initial = options.initial ?? 1000; // the ELO standard strength
+  const k = options.k ?? ELO_K;
+  const initial = options.initial ?? ELO_STANDARD; // the ELO standard strength
   const maxRounds = options.maxRounds ?? 1000;
   let rating = initial;
   let wins = 0;
@@ -67,6 +68,11 @@ export async function rankNewcomer(rpg, spec, opponents, options = {}) {
       let l = 0;
       let d = 0;
       for (let i = 0; i < gamesPerOpponent; i += 1) {
+        // The newcomer seed space: a (round, opponentsPlayed, index) LCG that is
+        // deliberately distinct from the live-fight mixing in app.js and the
+        // Python tournament seed in scripts/elo_ranking.py — each ranking path
+        // draws from its own space, so the same numeric seed never collides
+        // across the three.
         const seed = (round * 1000003 + opponentsPlayed * 31 + i * 7 + 1) >>> 0;
         const outcome = rpg.fight(spec, oppSpec, { seed, maxRounds });
         if (outcome.winner_index === 0) w += 1;

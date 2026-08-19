@@ -77,21 +77,24 @@
       "name": "Proficiency Bonus",
       "min": 2,
       "max": 6,
-      "default": 2
+      "default": 2,
+      "wide": true
     },
     {
       "id": "level",
       "name": "Level",
       "min": 1,
       "max": 20,
-      "default": 1
+      "default": 1,
+      "wide": true
     },
     {
       "id": "HitPoints_Max",
       "name": "Max Hit Points",
       "min": 1,
       "max": 1000,
-      "default": 10
+      "default": 10,
+      "wide": true
     }
   ],
   "derived_stats": [
