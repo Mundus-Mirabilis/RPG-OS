@@ -580,6 +580,19 @@ button:disabled {
   font-size: 0.85rem;
 }
 
+.fight-spells {
+  background: var(--panel-2);
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 0.85rem;
+}
+
+.fight-spells b {
+  color: var(--text);
+  font-weight: 600;
+}
+
 .fight-round-head {
   color: var(--muted);
   font-size: 0.75rem;
@@ -595,6 +608,24 @@ button:disabled {
 
 .fight-action b {
   color: var(--text);
+  font-weight: 600;
+}
+
+.fight-icon {
+  display: inline-block;
+  width: 1.4em;
+  text-align: center;
+  margin-right: 2px;
+  opacity: 0.9;
+}
+
+.fight-ok {
+  color: var(--good);
+  font-weight: 600;
+}
+
+.fight-bad {
+  color: var(--warn);
   font-weight: 600;
 }
 

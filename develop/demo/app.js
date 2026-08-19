@@ -19,7 +19,7 @@ import {
   RANK_OPPONENTS_PER_ROUND, RANK_ROUNDS, RULESETS, SEED_ADD, SEED_MOD, SEED_MUL,
   SEED_STRIDE,
 } from './constants.js';
-import { renderFightRound } from './transcript.js';
+import { renderFightRound, renderKnownSpells } from './transcript.js';
 
 const $ = (sel) => document.querySelector(sel);
 const status = $('#status');
@@ -507,14 +507,29 @@ function renderFightDetail(a, b) {
   summary.className = 'fight-summary';
   const outcome = document.createElement('b');
   outcome.className = winnerName ? 'fight-winner' : 'fight-draw';
-  outcome.textContent = winnerName
+  outcome.textContent = `${winnerName ? '🏆 ' : '🤝 '}${winnerName
     ? `${winnerName} wins in ${detail.rounds} round${detail.rounds === 1 ? '' : 's'}`
-    : `Draw after ${detail.rounds} rounds`;
+    : `Draw after ${detail.rounds} rounds`}`;
   summary.append(outcome);
+  // Each spellcaster's starting spell resource (e.g. "(AE 35)") — shown only
+  // for combatants that actually know spells, so a pure-melee creature with a
+  // dormant pool doesn't get a spurious note. The per-cast lines then show it
+  // running down.
+  const resourceId = detail.log?.resource_id;
+  const resourceNote = (index) =>
+    resourceId && detail.log?.spells?.[index]?.length > 0 && detail.log.resource_pool[index] > 0
+      ? ` (${resourceId} ${detail.log.resource_pool[index]})`
+      : '';
   summary.append(document.createTextNode(
-    ` · ${aName} ${detail.max_lp[0]} → ${detail.remaining_lp[0]} ${hpPool} · ` +
-    `${bName} ${detail.max_lp[1]} → ${detail.remaining_lp[1]} ${hpPool}`));
+    ` · ${aName} ${detail.max_lp[0]} → ${detail.remaining_lp[0]} ${hpPool}${resourceNote(0)}` +
+    ` · ${bName} ${detail.max_lp[1]} → ${detail.remaining_lp[1]} ${hpPool}${resourceNote(1)}`));
   block.append(summary);
+
+  // Which combatants are spellcasters and what they can cast (only shown when
+  // at least one side knows a spell).
+  const spells = detail.log?.spells;
+  const known = renderKnownSpells(aName, spells?.[0], bName, spells?.[1]);
+  if (known) block.append(known);
 
   const roundsEl = document.createElement('div');
   roundsEl.className = 'fight-rounds';
