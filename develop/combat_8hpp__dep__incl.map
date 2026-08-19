@@ -1,9 +1,27 @@
 <map id="combat.hpp" name="combat.hpp">
-<area shape="rect" id="Node000001" title="Combat simulation helpers (universal mode)." alt="" coords="145,5,244,31"/>
-<area shape="rect" id="Node000002" href="$fight_2main_8cpp.html" title="Fight&#45;to&#45;the&#45;end demo (universal mode)." alt="" coords="5,79,88,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="160,39,72,81,70,76,158,34"/>
-<area shape="rect" id="Node000003" href="$test__bookkeeping_8cpp.html" title="Tests for the universal bookkeeping layer." alt="" coords="113,79,277,104"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="197,44,197,79,192,79,192,44"/>
-<area shape="rect" id="Node000004" href="$test__combat_8cpp.html" title="Tests for the combat simulation helpers (include/rpg_os/universal/combat.hpp)." alt="" coords="301,79,432,104"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="236,33,340,76,338,81,234,38"/>
+<area shape="rect" id="Node000001" title="Combat simulation helpers (universal mode)." alt="" coords="581,5,680,31"/>
+<area shape="rect" id="Node000002" href="$fight_2main_8cpp.html" title="Fight&#45;to&#45;the&#45;end demo (universal mode)." alt="" coords="459,79,541,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="599,40,523,81,520,76,596,35"/>
+<area shape="rect" id="Node000003" href="$test__combat_8cpp.html" title="Tests for the combat simulation helpers (include/rpg_os/universal/combat.hpp)." alt="" coords="565,79,696,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="633,44,633,79,628,79,628,44"/>
+<area shape="rect" id="Node000004" href="$test__fixtures_8hpp.html" title="Shared fixtures for the bookkeeping test suite." alt="" coords="720,79,851,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="669,34,761,76,759,81,667,39"/>
+<area shape="rect" id="Node000005" href="$test__advancement_8cpp.html" title="Advancement, rests, and curses." alt="" coords="5,152,176,177"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="707,107,446,132,188,155,176,156,176,151,188,149,445,127,706,101"/>
+<area shape="rect" id="Node000006" href="$test__conditions_8cpp.html" title="Mechanical conditions: durations, stat/check modifiers, restrictions and capabilities." alt="" coords="201,152,349,177"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="707,107,349,156,348,151,706,102"/>
+<area shape="rect" id="Node000007" href="$test__effects_8cpp.html" title="The effect timeline: durations, stat bonuses, recurring/ongoing effects, option groups." alt="" coords="373,152,499,177"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="716,109,493,155,492,149,715,104"/>
+<area shape="rect" id="Node000008" href="$test__equipment_8cpp.html" title="Equipment slots, equipping/unequipping, and gear&#45;modified effective stats." alt="" coords="523,152,674,177"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="744,111,630,154,628,149,742,106"/>
+<area shape="rect" id="Node000009" href="$test__game__session_8cpp.html" title="The GameSession facade: sheets, world state, events, save/load." alt="" coords="698,152,873,177"/>
+<area shape="poly" id="edge8_Node000004_Node000009" title=" " alt="" coords="788,118,788,152,783,152,783,118"/>
+<area shape="rect" id="Node000010" href="$test__inventory_8cpp.html" title="Inventory stacks, nested containers, and carrying weight." alt="" coords="897,152,1039,177"/>
+<area shape="poly" id="edge9_Node000004_Node000010" title=" " alt="" coords="828,106,939,149,937,154,826,111"/>
+<area shape="rect" id="Node000011" href="$test__money_8cpp.html" title="Money, currency conversion, and the economy (prices, buying, paying)." alt="" coords="1063,152,1187,177"/>
+<area shape="poly" id="edge10_Node000004_Node000011" title=" " alt="" coords="854,104,1071,149,1070,155,853,109"/>
+<area shape="rect" id="Node000012" href="$test__spellcasting_8cpp.html" title="Spellbooks and casting: prepared pools, vancian slots, structured spell effects." alt="" coords="1211,152,1370,177"/>
+<area shape="poly" id="edge11_Node000004_Node000012" title=" " alt="" coords="865,101,1211,150,1211,155,864,106"/>
+<area shape="rect" id="Node000013" href="$test__traits_8cpp.html" title="Creature traits: stat/check modifiers, effects at creation, regeneration." alt="" coords="1395,152,1509,177"/>
+<area shape="poly" id="edge12_Node000004_Node000013" title=" " alt="" coords="865,96,1097,117,1383,149,1395,151,1394,156,1382,155,1097,123,864,102"/>
 </map>

@@ -136,133 +136,132 @@ $(document).ready(function(){initNavTree('event__system_8hpp_source.html',''); i
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &lt;functional&gt;</span></div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &lt;<a class="code" href="json_8hpp.html">rpg_os/common/json.hpp</a>&gt;</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#include &lt;<a class="code" href="types_8hpp.html">rpg_os/common/types.hpp</a>&gt;</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#include &lt;string_view&gt;</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#include &lt;utility&gt;</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="foldopen" id="foldopen00042" data-start="{" data-end="}">
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="namespacerpg__os.html">   42</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacerpg__os.html">rpg_os</a> {</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="foldopen" id="foldopen00056" data-start="{" data-end="};">
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18">   56</a></span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18">EventType</a> {</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18ab4bda534e9935d6126740b9d38997e0f">OnBeforeCheckRoll</a>,</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18a0b3c086f0b5060681307c116985c6a56">OnAfterCheckRoll</a>,</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18aa577a19f9f98a0d17bb8eec3c1d10102">OnDamageCalculated</a>,</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18a95ce917c466f63f718bd35fe03fca558">OnDamageTaken</a>,</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18adaf718659527e949aad66f1c860bbb5f">OnTurnStart</a>,</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18ad9d09877492c9df8ba92e5dba5b3caad">OnTurnEnd</a>,</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18a88ffa6f79ad32221ae4cd4733351f7f9">OnItemAdded</a>,</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18a43f8196232f6fb9f4b028cd75d46c722">OnItemRemoved</a>,</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18a25df4d5e17c26458db65198292838c64">OnCurrencyChanged</a>,</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18ae0e1d7b48effa0b86dc44a9dd20f85c9">OnEquipChanged</a>,</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18a4692df9e1af05daefdceb962dd4acce7">OnConditionChanged</a>,</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18ae4d11b996fec0cf9ce3acc1dffd5d019">OnSpellCast</a>,</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18a91195337a3284ee8662e7bfd439dc39c">OnRest</a>,</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18a77bb613d874efd18a265755b974c8e1c">OnLevelUp</a>,</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18ad67033bca00a2b0a8230a243a06eb5ba">OnAfflictionApplied</a>,</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18a5d7b01a14744e42aef8fe005f753cc6a">OnStatChanged</a>,</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18ac597c5ab23a27927df8e51d2adcb5672">OnCheckResolved</a>,</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18a92aee13a1b90dc1a86e2e215959dbd5a">OnResourceChanged</a>,</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18a57e422b0f7a15268add030e99c7f822a">OnTempHpChanged</a>,</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18a6e4587e0b371451d4486afa6acbd5b81">OnTimePassed</a>,</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>};</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#include &lt;string_view&gt;</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#include &lt;utility&gt;</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="foldopen" id="foldopen00041" data-start="{" data-end="}">
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="namespacerpg__os.html">   41</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacerpg__os.html">rpg_os</a> {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="foldopen" id="foldopen00055" data-start="{" data-end="};">
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18">   55</a></span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18">EventType</a> {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18ab4bda534e9935d6126740b9d38997e0f">OnBeforeCheckRoll</a>,</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18a0b3c086f0b5060681307c116985c6a56">OnAfterCheckRoll</a>,</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18aa577a19f9f98a0d17bb8eec3c1d10102">OnDamageCalculated</a>,</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18a95ce917c466f63f718bd35fe03fca558">OnDamageTaken</a>,</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18adaf718659527e949aad66f1c860bbb5f">OnTurnStart</a>,</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18ad9d09877492c9df8ba92e5dba5b3caad">OnTurnEnd</a>,</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18a88ffa6f79ad32221ae4cd4733351f7f9">OnItemAdded</a>,</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18a43f8196232f6fb9f4b028cd75d46c722">OnItemRemoved</a>,</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18a25df4d5e17c26458db65198292838c64">OnCurrencyChanged</a>,</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18ae0e1d7b48effa0b86dc44a9dd20f85c9">OnEquipChanged</a>,</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18a4692df9e1af05daefdceb962dd4acce7">OnConditionChanged</a>,</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18ae4d11b996fec0cf9ce3acc1dffd5d019">OnSpellCast</a>,</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18a91195337a3284ee8662e7bfd439dc39c">OnRest</a>,</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18a77bb613d874efd18a265755b974c8e1c">OnLevelUp</a>,</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18ad67033bca00a2b0a8230a243a06eb5ba">OnAfflictionApplied</a>,</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18a5d7b01a14744e42aef8fe005f753cc6a">OnStatChanged</a>,</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18ac597c5ab23a27927df8e51d2adcb5672">OnCheckResolved</a>,</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18a92aee13a1b90dc1a86e2e215959dbd5a">OnResourceChanged</a>,</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18a57e422b0f7a15268add030e99c7f822a">OnTempHpChanged</a>,</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>  <a class="code hl_enumvalue" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18a6e4587e0b371451d4486afa6acbd5b81">OnTimePassed</a>,</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>};</div>
 </div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
-<div class="foldopen" id="foldopen00111" data-start="{" data-end="};">
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="structrpg__os_1_1EventData.html">  111</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structrpg__os_1_1EventData.html">EventData</a> {</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="structrpg__os_1_1EventData.html#a7a5c5d2c5ad5091fa805266b303a9c04">  115</a></span>  <a class="code hl_typedef" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> <a class="code hl_variable" href="structrpg__os_1_1EventData.html#a7a5c5d2c5ad5091fa805266b303a9c04">payload</a>{};</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
-<div class="foldopen" id="foldopen00118" data-start="{" data-end="}">
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="structrpg__os_1_1EventData.html#a716dca820d5d878edd69c8cabaf8ef79">  118</a></span>  [[nodiscard]] int32_t <a class="code hl_function" href="structrpg__os_1_1EventData.html#a716dca820d5d878edd69c8cabaf8ef79">getInt</a>(std::string_view key, int32_t fallback = 0)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="structrpg__os_1_1EventData.html#a7a5c5d2c5ad5091fa805266b303a9c04">payload</a>.value(std::string(key), fallback);</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>  }</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="foldopen" id="foldopen00110" data-start="{" data-end="};">
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="structrpg__os_1_1EventData.html">  110</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structrpg__os_1_1EventData.html">EventData</a> {</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="structrpg__os_1_1EventData.html#a7a5c5d2c5ad5091fa805266b303a9c04">  114</a></span>  <a class="code hl_typedef" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> <a class="code hl_variable" href="structrpg__os_1_1EventData.html#a7a5c5d2c5ad5091fa805266b303a9c04">payload</a>{};</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="foldopen" id="foldopen00117" data-start="{" data-end="}">
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="structrpg__os_1_1EventData.html#a716dca820d5d878edd69c8cabaf8ef79">  117</a></span>  [[nodiscard]] int32_t <a class="code hl_function" href="structrpg__os_1_1EventData.html#a716dca820d5d878edd69c8cabaf8ef79">getInt</a>(std::string_view key, int32_t fallback = 0)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="structrpg__os_1_1EventData.html#a7a5c5d2c5ad5091fa805266b303a9c04">payload</a>.value(std::string(key), fallback);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>  }</div>
 </div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
-<div class="foldopen" id="foldopen00123" data-start="{" data-end="}">
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="structrpg__os_1_1EventData.html#a1cb203e68faf89408debf034a7b6c726">  123</a></span>  [[nodiscard]] <span class="keywordtype">bool</span> <a class="code hl_function" href="structrpg__os_1_1EventData.html#a1cb203e68faf89408debf034a7b6c726">getBool</a>(std::string_view key, <span class="keywordtype">bool</span> fallback = <span class="keyword">false</span>)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="structrpg__os_1_1EventData.html#a7a5c5d2c5ad5091fa805266b303a9c04">payload</a>.value(std::string(key), fallback);</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>  }</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="foldopen" id="foldopen00122" data-start="{" data-end="}">
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="structrpg__os_1_1EventData.html#a1cb203e68faf89408debf034a7b6c726">  122</a></span>  [[nodiscard]] <span class="keywordtype">bool</span> <a class="code hl_function" href="structrpg__os_1_1EventData.html#a1cb203e68faf89408debf034a7b6c726">getBool</a>(std::string_view key, <span class="keywordtype">bool</span> fallback = <span class="keyword">false</span>)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="structrpg__os_1_1EventData.html#a7a5c5d2c5ad5091fa805266b303a9c04">payload</a>.value(std::string(key), fallback);</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>  }</div>
 </div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
-<div class="foldopen" id="foldopen00128" data-start="{" data-end="}">
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="structrpg__os_1_1EventData.html#a3f40f9f07a1e21970d931194bcb32dfb">  128</a></span>  [[nodiscard]] std::string <a class="code hl_function" href="structrpg__os_1_1EventData.html#a3f40f9f07a1e21970d931194bcb32dfb">getString</a>(std::string_view key, std::string fallback = {}) <span class="keyword">const</span> {</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="structrpg__os_1_1EventData.html#a7a5c5d2c5ad5091fa805266b303a9c04">payload</a>.value(std::string(key), std::move(fallback));</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>  }</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="foldopen" id="foldopen00127" data-start="{" data-end="}">
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="structrpg__os_1_1EventData.html#a3f40f9f07a1e21970d931194bcb32dfb">  127</a></span>  [[nodiscard]] std::string <a class="code hl_function" href="structrpg__os_1_1EventData.html#a3f40f9f07a1e21970d931194bcb32dfb">getString</a>(std::string_view key, std::string fallback = {}) <span class="keyword">const</span> {</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="structrpg__os_1_1EventData.html#a7a5c5d2c5ad5091fa805266b303a9c04">payload</a>.value(std::string(key), std::move(fallback));</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>  }</div>
 </div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>};</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>};</div>
 </div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
-<div class="foldopen" id="foldopen00148" data-start="{" data-end="};">
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno"><a class="line" href="classrpg__os_1_1EventBus.html">  148</a></span><span class="keyword">class </span><a class="code hl_class" href="classrpg__os_1_1EventBus.html">EventBus</a> {</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno"><a class="line" href="classrpg__os_1_1EventBus.html#a083cdf91b0b9ea319a958c2760532b4f">  151</a></span>  <span class="keyword">using </span><a class="code hl_typedef" href="classrpg__os_1_1EventBus.html#a083cdf91b0b9ea319a958c2760532b4f">Callback</a> = std::function&lt;void(<span class="keyword">const</span> <a class="code hl_struct" href="structrpg__os_1_1EventData.html">EventData</a> &amp;)&gt;;</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
-<div class="foldopen" id="foldopen00156" data-start="{" data-end="}">
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno"><a class="line" href="classrpg__os_1_1EventBus.html#a647659957bfd43c84b1239c53e57c1c9">  156</a></span>  [[nodiscard]] uint64_t <a class="code hl_function" href="classrpg__os_1_1EventBus.html#a647659957bfd43c84b1239c53e57c1c9">addListener</a>(<a class="code hl_enumeration" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18">EventType</a> type, <a class="code hl_typedef" href="classrpg__os_1_1EventBus.html#a083cdf91b0b9ea319a958c2760532b4f">Callback</a> callback) {</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    <span class="keyword">const</span> uint64_t <span class="keywordtype">id</span> = m_nextId++;</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    m_listeners[type].push_back(Entry{id, std::move(callback)});</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    <span class="keywordflow">return</span> id;</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>  }</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="foldopen" id="foldopen00147" data-start="{" data-end="};">
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno"><a class="line" href="classrpg__os_1_1EventBus.html">  147</a></span><span class="keyword">class </span><a class="code hl_class" href="classrpg__os_1_1EventBus.html">EventBus</a> {</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno"><a class="line" href="classrpg__os_1_1EventBus.html#a083cdf91b0b9ea319a958c2760532b4f">  150</a></span>  <span class="keyword">using </span><a class="code hl_typedef" href="classrpg__os_1_1EventBus.html#a083cdf91b0b9ea319a958c2760532b4f">Callback</a> = std::function&lt;void(<span class="keyword">const</span> <a class="code hl_struct" href="structrpg__os_1_1EventData.html">EventData</a> &amp;)&gt;;</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
+<div class="foldopen" id="foldopen00155" data-start="{" data-end="}">
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno"><a class="line" href="classrpg__os_1_1EventBus.html#a647659957bfd43c84b1239c53e57c1c9">  155</a></span>  [[nodiscard]] uint64_t <a class="code hl_function" href="classrpg__os_1_1EventBus.html#a647659957bfd43c84b1239c53e57c1c9">addListener</a>(<a class="code hl_enumeration" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18">EventType</a> type, <a class="code hl_typedef" href="classrpg__os_1_1EventBus.html#a083cdf91b0b9ea319a958c2760532b4f">Callback</a> callback) {</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    <span class="keyword">const</span> uint64_t <span class="keywordtype">id</span> = m_nextId++;</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    m_listeners[type].push_back(Entry{id, std::move(callback)});</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    <span class="keywordflow">return</span> id;</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>  }</div>
 </div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
-<div class="foldopen" id="foldopen00165" data-start="{" data-end="}">
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno"><a class="line" href="classrpg__os_1_1EventBus.html#ac6c3973336fbe1c069b7609ef2ce9892">  165</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classrpg__os_1_1EventBus.html#ac6c3973336fbe1c069b7609ef2ce9892">removeListener</a>(uint64_t listenerId) {</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;kv : m_listeners) {</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>      <span class="keyword">auto</span> &amp;entries = kv.second;</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>      <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = entries.begin(); it != entries.end(); ++it) {</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        <span class="keywordflow">if</span> (it-&gt;id == listenerId) {</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>          entries.erase(it);</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>          <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        }</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>      }</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    }</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>  }</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
+<div class="foldopen" id="foldopen00164" data-start="{" data-end="}">
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno"><a class="line" href="classrpg__os_1_1EventBus.html#ac6c3973336fbe1c069b7609ef2ce9892">  164</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classrpg__os_1_1EventBus.html#ac6c3973336fbe1c069b7609ef2ce9892">removeListener</a>(uint64_t listenerId) {</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;kv : m_listeners) {</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>      <span class="keyword">auto</span> &amp;entries = kv.second;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>      <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = entries.begin(); it != entries.end(); ++it) {</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        <span class="keywordflow">if</span> (it-&gt;m_id == listenerId) {</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>          entries.erase(it);</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>          <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        }</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>      }</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    }</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>  }</div>
 </div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
-<div class="foldopen" id="foldopen00182" data-start="{" data-end="}">
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno"><a class="line" href="classrpg__os_1_1EventBus.html#a98789e927360b2ed4c2960a2985371a6">  182</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classrpg__os_1_1EventBus.html#a98789e927360b2ed4c2960a2985371a6">dispatch</a>(<a class="code hl_enumeration" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18">EventType</a> type, <span class="keyword">const</span> <a class="code hl_struct" href="structrpg__os_1_1EventData.html">EventData</a> &amp;data)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    <span class="keyword">const</span> <span class="keyword">auto</span> it = m_listeners.find(type);</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    <span class="keywordflow">if</span> (it == m_listeners.end()) {</div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>      <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    }</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> Entry &amp;entry : it-&gt;second) {</div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>      entry.callback(data);</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    }</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>  }</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
+<div class="foldopen" id="foldopen00181" data-start="{" data-end="}">
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno"><a class="line" href="classrpg__os_1_1EventBus.html#a98789e927360b2ed4c2960a2985371a6">  181</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classrpg__os_1_1EventBus.html#a98789e927360b2ed4c2960a2985371a6">dispatch</a>(<a class="code hl_enumeration" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18">EventType</a> type, <span class="keyword">const</span> <a class="code hl_struct" href="structrpg__os_1_1EventData.html">EventData</a> &amp;data)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    <span class="keyword">const</span> <span class="keyword">auto</span> it = m_listeners.find(type);</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    <span class="keywordflow">if</span> (it == m_listeners.end()) {</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>      <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    }</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> Entry &amp;entry : it-&gt;second) {</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>      entry.m_callback(data);</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    }</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>  }</div>
 </div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span> </div>
-<div class="foldopen" id="foldopen00193" data-start="{" data-end="}">
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno"><a class="line" href="classrpg__os_1_1EventBus.html#ad06e0bb8966fcb30944bc633e57b1747">  193</a></span>  [[nodiscard]] std::size_t <a class="code hl_function" href="classrpg__os_1_1EventBus.html#ad06e0bb8966fcb30944bc633e57b1747">listenerCount</a>(<a class="code hl_enumeration" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18">EventType</a> type)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    <span class="keyword">const</span> <span class="keyword">auto</span> it = m_listeners.find(type);</div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    <span class="keywordflow">return</span> it == m_listeners.end() ? 0 : it-&gt;second.size();</div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>  }</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
+<div class="foldopen" id="foldopen00192" data-start="{" data-end="}">
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno"><a class="line" href="classrpg__os_1_1EventBus.html#a21b5334a3fea4630bbf107ce0f09cc3c">  192</a></span>  [[nodiscard]] std::size_t <a class="code hl_function" href="classrpg__os_1_1EventBus.html#a21b5334a3fea4630bbf107ce0f09cc3c">listenerCount</a>(<a class="code hl_enumeration" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18">EventType</a> type) <span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    <span class="keyword">const</span> <span class="keyword">auto</span> it = m_listeners.find(type);</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    <span class="keywordflow">return</span> it == m_listeners.end() ? 0 : it-&gt;second.size();</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>  }</div>
 </div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span> </div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>  <span class="keyword">struct </span>Entry {</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    uint64_t id;</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    <a class="code hl_typedef" href="classrpg__os_1_1EventBus.html#a083cdf91b0b9ea319a958c2760532b4f">Callback</a> callback;</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>  };</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>  std::unordered_map&lt;EventType, std::vector&lt;Entry&gt;&gt; m_listeners;</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>  uint64_t m_nextId{1};</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>};</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span> </div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>  <span class="keyword">struct </span>Entry {</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    uint64_t m_id;</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    <a class="code hl_typedef" href="classrpg__os_1_1EventBus.html#a083cdf91b0b9ea319a958c2760532b4f">Callback</a> m_callback;</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>  };</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>  std::unordered_map&lt;EventType, std::vector&lt;Entry&gt;&gt; m_listeners;</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>  uint64_t m_nextId{1};</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>};</div>
 </div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>} <span class="comment">// namespace rpg_os</span></div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>} <span class="comment">// namespace rpg_os</span></div>
 </div>
-<div class="ttc" id="aclassrpg__os_1_1EventBus_html"><div class="ttname"><a href="classrpg__os_1_1EventBus.html">rpg_os::EventBus</a></div><div class="ttdef"><b>Definition</b> <a href="event__system_8hpp_source.html#l00148">event_system.hpp:148</a></div></div>
-<div class="ttc" id="aclassrpg__os_1_1EventBus_html_a083cdf91b0b9ea319a958c2760532b4f"><div class="ttname"><a href="classrpg__os_1_1EventBus.html#a083cdf91b0b9ea319a958c2760532b4f">rpg_os::EventBus::Callback</a></div><div class="ttdeci">std::function&lt; void(const EventData &amp;)&gt; Callback</div><div class="ttdoc">Listener callback signature.</div><div class="ttdef"><b>Definition</b> <a href="event__system_8hpp_source.html#l00151">event_system.hpp:151</a></div></div>
-<div class="ttc" id="aclassrpg__os_1_1EventBus_html_a647659957bfd43c84b1239c53e57c1c9"><div class="ttname"><a href="classrpg__os_1_1EventBus.html#a647659957bfd43c84b1239c53e57c1c9">rpg_os::EventBus::addListener</a></div><div class="ttdeci">uint64_t addListener(EventType type, Callback callback)</div><div class="ttdef"><b>Definition</b> <a href="event__system_8hpp_source.html#l00156">event_system.hpp:156</a></div></div>
-<div class="ttc" id="aclassrpg__os_1_1EventBus_html_a98789e927360b2ed4c2960a2985371a6"><div class="ttname"><a href="classrpg__os_1_1EventBus.html#a98789e927360b2ed4c2960a2985371a6">rpg_os::EventBus::dispatch</a></div><div class="ttdeci">void dispatch(EventType type, const EventData &amp;data) const</div><div class="ttdef"><b>Definition</b> <a href="event__system_8hpp_source.html#l00182">event_system.hpp:182</a></div></div>
-<div class="ttc" id="aclassrpg__os_1_1EventBus_html_ac6c3973336fbe1c069b7609ef2ce9892"><div class="ttname"><a href="classrpg__os_1_1EventBus.html#ac6c3973336fbe1c069b7609ef2ce9892">rpg_os::EventBus::removeListener</a></div><div class="ttdeci">bool removeListener(uint64_t listenerId)</div><div class="ttdef"><b>Definition</b> <a href="event__system_8hpp_source.html#l00165">event_system.hpp:165</a></div></div>
-<div class="ttc" id="aclassrpg__os_1_1EventBus_html_ad06e0bb8966fcb30944bc633e57b1747"><div class="ttname"><a href="classrpg__os_1_1EventBus.html#ad06e0bb8966fcb30944bc633e57b1747">rpg_os::EventBus::listenerCount</a></div><div class="ttdeci">std::size_t listenerCount(EventType type) const</div><div class="ttdoc">Number of listeners for a type (diagnostics / tests).</div><div class="ttdef"><b>Definition</b> <a href="event__system_8hpp_source.html#l00193">event_system.hpp:193</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1EventBus_html"><div class="ttname"><a href="classrpg__os_1_1EventBus.html">rpg_os::EventBus</a></div><div class="ttdef"><b>Definition</b> <a href="event__system_8hpp_source.html#l00147">event_system.hpp:147</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1EventBus_html_a083cdf91b0b9ea319a958c2760532b4f"><div class="ttname"><a href="classrpg__os_1_1EventBus.html#a083cdf91b0b9ea319a958c2760532b4f">rpg_os::EventBus::Callback</a></div><div class="ttdeci">std::function&lt; void(const EventData &amp;)&gt; Callback</div><div class="ttdoc">Listener callback signature.</div><div class="ttdef"><b>Definition</b> <a href="event__system_8hpp_source.html#l00150">event_system.hpp:150</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1EventBus_html_a21b5334a3fea4630bbf107ce0f09cc3c"><div class="ttname"><a href="classrpg__os_1_1EventBus.html#a21b5334a3fea4630bbf107ce0f09cc3c">rpg_os::EventBus::listenerCount</a></div><div class="ttdeci">std::size_t listenerCount(EventType type) const noexcept</div><div class="ttdoc">Number of listeners for a type (diagnostics / tests).</div><div class="ttdef"><b>Definition</b> <a href="event__system_8hpp_source.html#l00192">event_system.hpp:192</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1EventBus_html_a647659957bfd43c84b1239c53e57c1c9"><div class="ttname"><a href="classrpg__os_1_1EventBus.html#a647659957bfd43c84b1239c53e57c1c9">rpg_os::EventBus::addListener</a></div><div class="ttdeci">uint64_t addListener(EventType type, Callback callback)</div><div class="ttdef"><b>Definition</b> <a href="event__system_8hpp_source.html#l00155">event_system.hpp:155</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1EventBus_html_a98789e927360b2ed4c2960a2985371a6"><div class="ttname"><a href="classrpg__os_1_1EventBus.html#a98789e927360b2ed4c2960a2985371a6">rpg_os::EventBus::dispatch</a></div><div class="ttdeci">void dispatch(EventType type, const EventData &amp;data) const</div><div class="ttdef"><b>Definition</b> <a href="event__system_8hpp_source.html#l00181">event_system.hpp:181</a></div></div>
+<div class="ttc" id="aclassrpg__os_1_1EventBus_html_ac6c3973336fbe1c069b7609ef2ce9892"><div class="ttname"><a href="classrpg__os_1_1EventBus.html#ac6c3973336fbe1c069b7609ef2ce9892">rpg_os::EventBus::removeListener</a></div><div class="ttdeci">bool removeListener(uint64_t listenerId)</div><div class="ttdef"><b>Definition</b> <a href="event__system_8hpp_source.html#l00164">event_system.hpp:164</a></div></div>
 <div class="ttc" id="ajson_8hpp_html"><div class="ttname"><a href="json_8hpp.html">json.hpp</a></div><div class="ttdoc">JSON value type used throughout rpg_os.</div></div>
-<div class="ttc" id="anamespacerpg__os_html"><div class="ttname"><a href="namespacerpg__os.html">rpg_os</a></div><div class="ttdef"><b>Definition</b> <a href="event__system_8hpp_source.html#l00042">event_system.hpp:42</a></div></div>
-<div class="ttc" id="anamespacerpg__os_html_af3060be908d09a6c80aa2f7eb65afc18"><div class="ttname"><a href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18">rpg_os::EventType</a></div><div class="ttdeci">EventType</div><div class="ttdef"><b>Definition</b> <a href="event__system_8hpp_source.html#l00056">event_system.hpp:56</a></div></div>
+<div class="ttc" id="anamespacerpg__os_html"><div class="ttname"><a href="namespacerpg__os.html">rpg_os</a></div><div class="ttdef"><b>Definition</b> <a href="event__system_8hpp_source.html#l00041">event_system.hpp:41</a></div></div>
+<div class="ttc" id="anamespacerpg__os_html_af3060be908d09a6c80aa2f7eb65afc18"><div class="ttname"><a href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18">rpg_os::EventType</a></div><div class="ttdeci">EventType</div><div class="ttdef"><b>Definition</b> <a href="event__system_8hpp_source.html#l00055">event_system.hpp:55</a></div></div>
 <div class="ttc" id="anamespacerpg__os_html_af3060be908d09a6c80aa2f7eb65afc18a0b3c086f0b5060681307c116985c6a56"><div class="ttname"><a href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18a0b3c086f0b5060681307c116985c6a56">rpg_os::EventType::OnAfterCheckRoll</a></div><div class="ttdeci">@ OnAfterCheckRoll</div><div class="ttdoc">After a check's dice are rolled (re-rolls, reroll failures).</div></div>
 <div class="ttc" id="anamespacerpg__os_html_af3060be908d09a6c80aa2f7eb65afc18a25df4d5e17c26458db65198292838c64"><div class="ttname"><a href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18a25df4d5e17c26458db65198292838c64">rpg_os::EventType::OnCurrencyChanged</a></div><div class="ttdeci">@ OnCurrencyChanged</div><div class="ttdoc">Money changed hands (paid, received, spent, or converted).</div></div>
 <div class="ttc" id="anamespacerpg__os_html_af3060be908d09a6c80aa2f7eb65afc18a43f8196232f6fb9f4b028cd75d46c722"><div class="ttname"><a href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18a43f8196232f6fb9f4b028cd75d46c722">rpg_os::EventType::OnItemRemoved</a></div><div class="ttdeci">@ OnItemRemoved</div><div class="ttdoc">An item was removed from a sheet's inventory.</div></div>
@@ -284,12 +283,11 @@ $(document).ready(function(){initNavTree('event__system_8hpp_source.html',''); i
 <div class="ttc" id="anamespacerpg__os_html_af3060be908d09a6c80aa2f7eb65afc18ae0e1d7b48effa0b86dc44a9dd20f85c9"><div class="ttname"><a href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18ae0e1d7b48effa0b86dc44a9dd20f85c9">rpg_os::EventType::OnEquipChanged</a></div><div class="ttdeci">@ OnEquipChanged</div><div class="ttdoc">An item was equipped or unequipped (slot changed).</div></div>
 <div class="ttc" id="anamespacerpg__os_html_af3060be908d09a6c80aa2f7eb65afc18ae4d11b996fec0cf9ce3acc1dffd5d019"><div class="ttname"><a href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18ae4d11b996fec0cf9ce3acc1dffd5d019">rpg_os::EventType::OnSpellCast</a></div><div class="ttdeci">@ OnSpellCast</div><div class="ttdoc">A spell was cast.</div></div>
 <div class="ttc" id="anamespacerpg__os_html_afa8b802b0bd5a50e36a895d4c7e0820d"><div class="ttname"><a href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">rpg_os::Json</a></div><div class="ttdeci">nlohmann::json Json</div><div class="ttdef"><b>Definition</b> <a href="json_8hpp_source.html#l00040">json.hpp:40</a></div></div>
-<div class="ttc" id="astructrpg__os_1_1EventData_html"><div class="ttname"><a href="structrpg__os_1_1EventData.html">rpg_os::EventData</a></div><div class="ttdef"><b>Definition</b> <a href="event__system_8hpp_source.html#l00111">event_system.hpp:111</a></div></div>
-<div class="ttc" id="astructrpg__os_1_1EventData_html_a1cb203e68faf89408debf034a7b6c726"><div class="ttname"><a href="structrpg__os_1_1EventData.html#a1cb203e68faf89408debf034a7b6c726">rpg_os::EventData::getBool</a></div><div class="ttdeci">bool getBool(std::string_view key, bool fallback=false) const</div><div class="ttdoc">Reads a boolean field, or fallback when absent / not a boolean.</div><div class="ttdef"><b>Definition</b> <a href="event__system_8hpp_source.html#l00123">event_system.hpp:123</a></div></div>
-<div class="ttc" id="astructrpg__os_1_1EventData_html_a3f40f9f07a1e21970d931194bcb32dfb"><div class="ttname"><a href="structrpg__os_1_1EventData.html#a3f40f9f07a1e21970d931194bcb32dfb">rpg_os::EventData::getString</a></div><div class="ttdeci">std::string getString(std::string_view key, std::string fallback={}) const</div><div class="ttdoc">Reads a string field, or fallback when absent / not a string.</div><div class="ttdef"><b>Definition</b> <a href="event__system_8hpp_source.html#l00128">event_system.hpp:128</a></div></div>
-<div class="ttc" id="astructrpg__os_1_1EventData_html_a716dca820d5d878edd69c8cabaf8ef79"><div class="ttname"><a href="structrpg__os_1_1EventData.html#a716dca820d5d878edd69c8cabaf8ef79">rpg_os::EventData::getInt</a></div><div class="ttdeci">int32_t getInt(std::string_view key, int32_t fallback=0) const</div><div class="ttdoc">Reads an integer field, or fallback when absent / not an integer.</div><div class="ttdef"><b>Definition</b> <a href="event__system_8hpp_source.html#l00118">event_system.hpp:118</a></div></div>
-<div class="ttc" id="astructrpg__os_1_1EventData_html_a7a5c5d2c5ad5091fa805266b303a9c04"><div class="ttname"><a href="structrpg__os_1_1EventData.html#a7a5c5d2c5ad5091fa805266b303a9c04">rpg_os::EventData::payload</a></div><div class="ttdeci">Json payload</div><div class="ttdef"><b>Definition</b> <a href="event__system_8hpp_source.html#l00115">event_system.hpp:115</a></div></div>
-<div class="ttc" id="atypes_8hpp_html"><div class="ttname"><a href="types_8hpp.html">types.hpp</a></div><div class="ttdoc">Shared value types used by both the universal and the specific mode.</div></div>
+<div class="ttc" id="astructrpg__os_1_1EventData_html"><div class="ttname"><a href="structrpg__os_1_1EventData.html">rpg_os::EventData</a></div><div class="ttdef"><b>Definition</b> <a href="event__system_8hpp_source.html#l00110">event_system.hpp:110</a></div></div>
+<div class="ttc" id="astructrpg__os_1_1EventData_html_a1cb203e68faf89408debf034a7b6c726"><div class="ttname"><a href="structrpg__os_1_1EventData.html#a1cb203e68faf89408debf034a7b6c726">rpg_os::EventData::getBool</a></div><div class="ttdeci">bool getBool(std::string_view key, bool fallback=false) const</div><div class="ttdoc">Reads a boolean field, or fallback when absent / not a boolean.</div><div class="ttdef"><b>Definition</b> <a href="event__system_8hpp_source.html#l00122">event_system.hpp:122</a></div></div>
+<div class="ttc" id="astructrpg__os_1_1EventData_html_a3f40f9f07a1e21970d931194bcb32dfb"><div class="ttname"><a href="structrpg__os_1_1EventData.html#a3f40f9f07a1e21970d931194bcb32dfb">rpg_os::EventData::getString</a></div><div class="ttdeci">std::string getString(std::string_view key, std::string fallback={}) const</div><div class="ttdoc">Reads a string field, or fallback when absent / not a string.</div><div class="ttdef"><b>Definition</b> <a href="event__system_8hpp_source.html#l00127">event_system.hpp:127</a></div></div>
+<div class="ttc" id="astructrpg__os_1_1EventData_html_a716dca820d5d878edd69c8cabaf8ef79"><div class="ttname"><a href="structrpg__os_1_1EventData.html#a716dca820d5d878edd69c8cabaf8ef79">rpg_os::EventData::getInt</a></div><div class="ttdeci">int32_t getInt(std::string_view key, int32_t fallback=0) const</div><div class="ttdoc">Reads an integer field, or fallback when absent / not an integer.</div><div class="ttdef"><b>Definition</b> <a href="event__system_8hpp_source.html#l00117">event_system.hpp:117</a></div></div>
+<div class="ttc" id="astructrpg__os_1_1EventData_html_a7a5c5d2c5ad5091fa805266b303a9c04"><div class="ttname"><a href="structrpg__os_1_1EventData.html#a7a5c5d2c5ad5091fa805266b303a9c04">rpg_os::EventData::payload</a></div><div class="ttdeci">Json payload</div><div class="ttdef"><b>Definition</b> <a href="event__system_8hpp_source.html#l00114">event_system.hpp:114</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -149,7 +149,7 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p>A parsed formula. Immutable after construction.</p>
 <dl class="section user"><dt>Why parse eagerly in the constructor?</dt><dd>Rulesets are validated at load time. Constructing the <code><a class="el" href="classrpg__os_1_1Expression.html">Expression</a></code> (and thus parsing) immediately means a malformed formula fails the load with a precise error instead of surfacing halfway through a game session. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="expression_8hpp_source.html#l00075">75</a> of file <a class="el" href="expression_8hpp_source.html">expression.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="expression_8hpp_source.html#l00076">76</a> of file <a class="el" href="expression_8hpp_source.html">expression.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a9e20064787d9901590cb6227caaa4a97" name="a9e20064787d9901590cb6227caaa4a97"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9e20064787d9901590cb6227caaa4a97">&#9670;&#160;</a></span>Expression() <span class="overload">[1/2]</span></h2>
@@ -203,9 +203,9 @@ Public Member Functions</h2></td></tr>
 
 <p>Parses <code>text</code>; throws std::invalid_argument on a syntax error. </p>
 
-<p class="definition">Definition at line <a class="el" href="expression_8hpp_source.html#l00401">401</a> of file <a class="el" href="expression_8hpp_source.html">expression.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="expression_8hpp_source.html#l00402">402</a> of file <a class="el" href="expression_8hpp_source.html">expression.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="expression_8hpp_source.html#l00103">text()</a>.</p>
+<p class="reference">References <a class="el" href="expression_8hpp_source.html#l00104">text()</a>.</p>
 
 </div>
 </div>
@@ -236,9 +236,9 @@ Public Member Functions</h2></td></tr>
 <p>Evaluates the formula; throws std::runtime_error on an unresolved identifier, division by zero, or an arity error.</p>
 <dl class="section user"><dt>Why exceptions for evaluation errors?</dt><dd>A formula that cannot be evaluated is a data bug, not a control-flow case; failing loudly at the point of evaluation keeps the caller from silently applying a wrong derived stat. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="expression_8hpp_source.html#l00405">405</a> of file <a class="el" href="expression_8hpp_source.html">expression.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="expression_8hpp_source.html#l00406">406</a> of file <a class="el" href="expression_8hpp_source.html">expression.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l01112">rpg_os::RulesetEngine::carryingCapacity()</a>, <a class="el" href="engine_8hpp_source.html#l01659">rpg_os::RulesetEngine::evaluateEffectAdd()</a>, <a class="el" href="engine_8hpp_source.html#l01466">rpg_os::RulesetEngine::resolveEffects()</a>, <a class="el" href="engine_8hpp_source.html#l01694">rpg_os::RulesetEngine::resolveSave()</a>, <a class="el" href="test__expression_8cpp_source.html#l00136">TEST_CASE()</a>, and <a class="el" href="test__ruleset__loader_8cpp_source.html#l00158">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l01106">rpg_os::RulesetEngine::carryingCapacity()</a>, <a class="el" href="engine_8hpp_source.html#l01736">rpg_os::RulesetEngine::evaluateEffectAdd()</a>, <a class="el" href="engine_8hpp_source.html#l01574">rpg_os::RulesetEngine::resolveConditionEffect()</a>, <a class="el" href="engine_8hpp_source.html#l01771">rpg_os::RulesetEngine::resolveSave()</a>, <a class="el" href="test__expression_8cpp_source.html#l00136">TEST_CASE()</a>, and <a class="el" href="test__ruleset__loader_8cpp_source.html#l00158">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -267,9 +267,9 @@ Public Member Functions</h2></td></tr>
 <p>Every identifier referenced by the formula (deduplicated, in order of first appearance). Used for ruleset validation.</p>
 <dl class="section user"><dt>Why expose the identifier list?</dt><dd>The loader uses it to check that every referenced stat actually exists and that derived-stat graphs are acyclic — both checks need the raw identifier set without evaluating the formula. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="expression_8hpp_source.html#l00409">409</a> of file <a class="el" href="expression_8hpp_source.html">expression.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="expression_8hpp_source.html#l00410">410</a> of file <a class="el" href="expression_8hpp_source.html">expression.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="test__expression_8cpp_source.html#l00118">TEST_CASE()</a>, and <a class="el" href="ruleset__loader_8hpp_source.html#l00839">rpg_os::RulesetLoader::validate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="test__expression_8cpp_source.html#l00118">TEST_CASE()</a>, and <a class="el" href="ruleset__loader_8hpp_source.html#l00901">rpg_os::RulesetLoader::validate()</a>.</p>
 
 </div>
 </div>
@@ -298,9 +298,9 @@ Public Member Functions</h2></td></tr>
 
 <p>The original formula text. </p>
 
-<p class="definition">Definition at line <a class="el" href="expression_8hpp_source.html#l00103">103</a> of file <a class="el" href="expression_8hpp_source.html">expression.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="expression_8hpp_source.html#l00104">104</a> of file <a class="el" href="expression_8hpp_source.html">expression.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="expression_8hpp_source.html#l00401">Expression()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="expression_8hpp_source.html#l00402">Expression()</a>.</p>
 
 </div>
 </div>

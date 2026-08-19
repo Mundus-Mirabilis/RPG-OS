@@ -1,13 +1,33 @@
 <map id="world_state.hpp" name="world_state.hpp">
-<area shape="rect" id="Node000001" title="Minimal shared world bookkeeping." alt="" coords="231,5,358,31"/>
-<area shape="rect" id="Node000002" href="$game__session_8hpp.html" title="The application&#45;facing facade (&quot;OS kernel&quot;)." alt="" coords="223,79,366,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="297,44,297,79,292,79,292,44"/>
-<area shape="rect" id="Node000003" href="$ecs__registry_2main_8cpp.html" title="Dependency&#45;free ECS pattern example." alt="" coords="5,152,88,177"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="242,110,88,154,86,149,241,105"/>
-<area shape="rect" id="Node000004" href="$test__bookkeeping_8cpp.html" title="Tests for the universal bookkeeping layer." alt="" coords="113,152,277,177"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="269,114,213,154,209,150,266,110"/>
-<area shape="rect" id="Node000005" href="$test__combat__session_8cpp.html" title="Tests for the turn &amp; action&#45;economy orchestrator (rpg_os::CombatSession)." alt="" coords="301,152,488,177"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="323,110,380,150,377,154,320,114"/>
-<area shape="rect" id="Node000006" href="$test__entity__registry_8cpp.html" title="Tests for entity instance ids, handles, and the registry." alt="" coords="513,152,687,177"/>
-<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="358,104,551,149,550,154,356,110"/>
+<area shape="rect" id="Node000001" title="Minimal shared world bookkeeping." alt="" coords="529,5,655,31"/>
+<area shape="rect" id="Node000002" href="$game__session_8hpp.html" title="The application&#45;facing facade (&quot;OS kernel&quot;)." alt="" coords="434,79,577,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="569,41,521,81,518,76,566,37"/>
+<area shape="rect" id="Node000016" href="$test__world__state_8cpp.html" title="Unit tests for the shared world bookkeeping (rpg_os::WorldState)." alt="" coords="601,79,759,104"/>
+<area shape="poly" id="edge15_Node000001_Node000016" title=" " alt="" coords="618,37,667,76,664,81,615,41"/>
+<area shape="rect" id="Node000003" href="$ecs__registry_2main_8cpp.html" title="Dependency&#45;free ECS pattern example." alt="" coords="203,152,285,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="451,110,286,155,285,150,449,105"/>
+<area shape="rect" id="Node000004" href="$test__combat__session_8cpp.html" title="Tests for the turn &amp; action&#45;economy orchestrator (rpg_os::CombatSession)." alt="" coords="309,152,496,177"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="479,114,421,154,418,150,476,110"/>
+<area shape="rect" id="Node000005" href="$test__entity__registry_8cpp.html" title="Tests for entity instance ids, handles, and the registry." alt="" coords="521,152,695,177"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="535,110,593,150,590,154,532,114"/>
+<area shape="rect" id="Node000006" href="$test__fixtures_8hpp.html" title="Shared fixtures for the bookkeeping test suite." alt="" coords="720,152,851,177"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="564,105,741,149,739,154,563,110"/>
+<area shape="rect" id="Node000007" href="$test__advancement_8cpp.html" title="Advancement, rests, and curses." alt="" coords="5,225,176,251"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="707,180,445,205,188,228,176,229,176,224,188,223,445,200,706,175"/>
+<area shape="rect" id="Node000008" href="$test__conditions_8cpp.html" title="Mechanical conditions: durations, stat/check modifiers, restrictions and capabilities." alt="" coords="201,225,349,251"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="707,180,349,229,348,224,706,175"/>
+<area shape="rect" id="Node000009" href="$test__effects_8cpp.html" title="The effect timeline: durations, stat bonuses, recurring/ongoing effects, option groups." alt="" coords="373,225,499,251"/>
+<area shape="poly" id="edge8_Node000006_Node000009" title=" " alt="" coords="716,183,493,228,492,223,715,177"/>
+<area shape="rect" id="Node000010" href="$test__equipment_8cpp.html" title="Equipment slots, equipping/unequipping, and gear&#45;modified effective stats." alt="" coords="523,225,674,251"/>
+<area shape="poly" id="edge9_Node000006_Node000010" title=" " alt="" coords="744,185,630,228,628,223,742,180"/>
+<area shape="rect" id="Node000011" href="$test__game__session_8cpp.html" title="The GameSession facade: sheets, world state, events, save/load." alt="" coords="698,225,873,251"/>
+<area shape="poly" id="edge10_Node000006_Node000011" title=" " alt="" coords="788,191,788,225,783,225,783,191"/>
+<area shape="rect" id="Node000012" href="$test__inventory_8cpp.html" title="Inventory stacks, nested containers, and carrying weight." alt="" coords="897,225,1039,251"/>
+<area shape="poly" id="edge11_Node000006_Node000012" title=" " alt="" coords="828,180,939,223,937,228,826,185"/>
+<area shape="rect" id="Node000013" href="$test__money_8cpp.html" title="Money, currency conversion, and the economy (prices, buying, paying)." alt="" coords="1063,225,1187,251"/>
+<area shape="poly" id="edge12_Node000006_Node000013" title=" " alt="" coords="854,177,1071,223,1070,228,853,183"/>
+<area shape="rect" id="Node000014" href="$test__spellcasting_8cpp.html" title="Spellbooks and casting: prepared pools, vancian slots, structured spell effects." alt="" coords="1211,225,1370,251"/>
+<area shape="poly" id="edge13_Node000006_Node000014" title=" " alt="" coords="865,174,1211,223,1211,228,864,180"/>
+<area shape="rect" id="Node000015" href="$test__traits_8cpp.html" title="Creature traits: stat/check modifiers, effects at creation, regeneration." alt="" coords="1395,225,1509,251"/>
+<area shape="poly" id="edge14_Node000006_Node000015" title=" " alt="" coords="865,170,1097,191,1383,223,1395,224,1394,230,1382,228,1097,196,864,175"/>
 </map>

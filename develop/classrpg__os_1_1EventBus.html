@@ -145,15 +145,15 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac6c3973336fbe1c069b7609ef2ce9892"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98789e927360b2ed4c2960a2985371a6" id="r_a98789e927360b2ed4c2960a2985371a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1EventBus.html#a98789e927360b2ed4c2960a2985371a6">dispatch</a> (<a class="el" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18">EventType</a> type, const <a class="el" href="structrpg__os_1_1EventData.html">EventData</a> &amp;data) const</td></tr>
 <tr class="separator:a98789e927360b2ed4c2960a2985371a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad06e0bb8966fcb30944bc633e57b1747" id="r_ad06e0bb8966fcb30944bc633e57b1747"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1EventBus.html#ad06e0bb8966fcb30944bc633e57b1747">listenerCount</a> (<a class="el" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18">EventType</a> type) const</td></tr>
-<tr class="memdesc:ad06e0bb8966fcb30944bc633e57b1747"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of listeners for a type (diagnostics / tests).  <br /></td></tr>
-<tr class="separator:ad06e0bb8966fcb30944bc633e57b1747"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21b5334a3fea4630bbf107ce0f09cc3c" id="r_a21b5334a3fea4630bbf107ce0f09cc3c"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1EventBus.html#a21b5334a3fea4630bbf107ce0f09cc3c">listenerCount</a> (<a class="el" href="namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18">EventType</a> type) const noexcept</td></tr>
+<tr class="memdesc:a21b5334a3fea4630bbf107ce0f09cc3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of listeners for a type (diagnostics / tests).  <br /></td></tr>
+<tr class="separator:a21b5334a3fea4630bbf107ce0f09cc3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A simple observer: listeners register against an <code>EventType</code> and are invoked in registration order on dispatch. Removal is by a stable handle.</p>
 <dl class="section user"><dt>Why this shape?</dt><dd>It is intentionally the smallest thing that satisfies both consumers. The universal engine needs to <em>interleave</em> its JSON-driven rule triggers with user listeners (triggers first, so user callbacks observe the final, mutated payload), and application code needs to add/remove callbacks without coupling to the engine internals. Registration-order dispatch gives predictable semantics for rules that stack (e.g. two resistances), and the handle-based removal avoids the dangling-iterator pitfalls of removing by callback identity. The implementation is header-only and allocation-light so the bus can be embedded in <a class="el" href="classrpg__os_1_1RulesetEngine.html">RulesetEngine</a> without extra plumbing. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="event__system_8hpp_source.html#l00148">148</a> of file <a class="el" href="event__system_8hpp_source.html">event_system.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event__system_8hpp_source.html#l00147">147</a> of file <a class="el" href="event__system_8hpp_source.html">event_system.hpp</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a083cdf91b0b9ea319a958c2760532b4f" name="a083cdf91b0b9ea319a958c2760532b4f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a083cdf91b0b9ea319a958c2760532b4f">&#9670;&#160;</a></span>Callback</h2>
@@ -169,7 +169,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Listener callback signature. </p>
 
-<p class="definition">Definition at line <a class="el" href="event__system_8hpp_source.html#l00151">151</a> of file <a class="el" href="event__system_8hpp_source.html">event_system.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event__system_8hpp_source.html#l00150">150</a> of file <a class="el" href="event__system_8hpp_source.html">event_system.hpp</a>.</p>
 
 </div>
 </div>
@@ -209,7 +209,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Registers a listener for <code>type</code> and returns a stable handle for removal. The handle is monotonically increasing, so a listener can never be mistaken for a different one — even after others were removed. </p>
 
-<p class="definition">Definition at line <a class="el" href="event__system_8hpp_source.html#l00156">156</a> of file <a class="el" href="event__system_8hpp_source.html">event_system.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event__system_8hpp_source.html#l00155">155</a> of file <a class="el" href="event__system_8hpp_source.html">event_system.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="test__event__system_8cpp_source.html#l00018">TEST_CASE()</a>, <a class="el" href="test__event__system_8cpp_source.html#l00029">TEST_CASE()</a>, <a class="el" href="test__event__system_8cpp_source.html#l00047">TEST_CASE()</a>, and <a class="el" href="test__event__system_8cpp_source.html#l00059">TEST_CASE()</a>.</p>
 
@@ -250,14 +250,14 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Invokes all listeners registered for <code>type</code> in registration order. Dispatch is <code>const:</code> firing an event must not be able to modify the bus itself, only the payload, so concurrent readers of the listener set stay well-defined. </p>
 
-<p class="definition">Definition at line <a class="el" href="event__system_8hpp_source.html#l00182">182</a> of file <a class="el" href="event__system_8hpp_source.html">event_system.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event__system_8hpp_source.html#l00181">181</a> of file <a class="el" href="event__system_8hpp_source.html">event_system.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="test__event__system_8cpp_source.html#l00070">TEST_CASE()</a>, <a class="el" href="test__event__system_8cpp_source.html#l00018">TEST_CASE()</a>, <a class="el" href="test__event__system_8cpp_source.html#l00029">TEST_CASE()</a>, <a class="el" href="test__event__system_8cpp_source.html#l00047">TEST_CASE()</a>, and <a class="el" href="test__event__system_8cpp_source.html#l00059">TEST_CASE()</a>.</p>
 
 </div>
 </div>
-<a id="ad06e0bb8966fcb30944bc633e57b1747" name="ad06e0bb8966fcb30944bc633e57b1747"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad06e0bb8966fcb30944bc633e57b1747">&#9670;&#160;</a></span>listenerCount()</h2>
+<a id="a21b5334a3fea4630bbf107ce0f09cc3c" name="a21b5334a3fea4630bbf107ce0f09cc3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21b5334a3fea4630bbf107ce0f09cc3c">&#9670;&#160;</a></span>listenerCount()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -275,14 +275,14 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Number of listeners for a type (diagnostics / tests). </p>
 
-<p class="definition">Definition at line <a class="el" href="event__system_8hpp_source.html#l00193">193</a> of file <a class="el" href="event__system_8hpp_source.html">event_system.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event__system_8hpp_source.html#l00192">192</a> of file <a class="el" href="event__system_8hpp_source.html">event_system.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="test__event__system_8cpp_source.html#l00018">TEST_CASE()</a>.</p>
 
@@ -313,7 +313,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Removes a previously registered listener; returns false if not found. Removal is linear by handle; the listener sets are small in practice (a handful per event type), so simplicity wins over a map-of-maps. </p>
 
-<p class="definition">Definition at line <a class="el" href="event__system_8hpp_source.html#l00165">165</a> of file <a class="el" href="event__system_8hpp_source.html">event_system.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="event__system_8hpp_source.html#l00164">164</a> of file <a class="el" href="event__system_8hpp_source.html">event_system.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="test__event__system_8cpp_source.html#l00029">TEST_CASE()</a>, and <a class="el" href="test__event__system_8cpp_source.html#l00059">TEST_CASE()</a>.</p>
 

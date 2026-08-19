@@ -262,11 +262,11 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 <p>One combatant's action for a fight: prefer casting the strongest affordable damaging spell when magic is enabled and a usable spell exists, otherwise make a weapon attack. Returns true when the defender is reduced to 0 hit points.</p>
 <dl class="section user"><dt>Why does a failed casting attempt consume the action?</dt><dd>Casting is what a spellcaster does instead of swinging a weapon (in The Dark Eye a spell takes a full action), and the arcane energy is spent on the attempt even when the check fails — so a botched cast simply wastes the round. Only when <em>no</em> spell is usable (nothing known, or all spells unaffordable) does the combatant fall back to its weapon. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="combat_8hpp_source.html#l00514">514</a> of file <a class="el" href="combat_8hpp_source.html">combat.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="combat_8hpp_source.html#l00494">494</a> of file <a class="el" href="combat_8hpp_source.html">combat.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="combat_8hpp_source.html#l00089">rpg_os::FightActionLog::actorIndex</a>, <a class="el" href="combat_8hpp_source.html#l00446">attackOnce()</a>, <a class="el" href="engine_8hpp_source.html#l00613">rpg_os::RulesetEngine::castSpell()</a>, <a class="el" href="combat_8hpp_source.html#l00093">rpg_os::FightActionLog::checkDice</a>, <a class="el" href="combat_8hpp_source.html#l00096">rpg_os::FightActionLog::damage</a>, <a class="el" href="combat_8hpp_source.html#l00097">rpg_os::FightActionLog::hpBefore</a>, <a class="el" href="combat_8hpp_source.html#l00094">rpg_os::FightActionLog::isHit</a>, <a class="el" href="combat_8hpp_source.html#l00091">rpg_os::FightActionLog::kind</a>, <a class="el" href="combat_8hpp_source.html#l00406">pickSpell()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00236">rpg_os::DynamicEntity::resource()</a>, <a class="el" href="combat_8hpp_source.html#l00099">rpg_os::FightActionLog::resourceCost</a>, <a class="el" href="combat_8hpp_source.html#l00100">rpg_os::FightActionLog::resourceId</a>, <a class="el" href="combat_8hpp_source.html#l00092">rpg_os::FightActionLog::spellId</a>, <a class="el" href="combat_8hpp_source.html#l00068">rpg_os::CombatantSpec::spellIds</a>, <a class="el" href="combat_8hpp_source.html#l00098">rpg_os::FightActionLog::targetHp</a>, and <a class="el" href="combat_8hpp_source.html#l00090">rpg_os::FightActionLog::targetIndex</a>.</p>
+<p class="reference">References <a class="el" href="combat_8hpp_source.html#l00089">rpg_os::FightActionLog::actorIndex</a>, <a class="el" href="combat_8hpp_source.html#l00426">attackOnce()</a>, <a class="el" href="engine_8hpp_source.html#l00625">rpg_os::RulesetEngine::castSpell()</a>, <a class="el" href="combat_8hpp_source.html#l00093">rpg_os::FightActionLog::checkDice</a>, <a class="el" href="combat_8hpp_source.html#l00096">rpg_os::FightActionLog::damage</a>, <a class="el" href="combat_8hpp_source.html#l00097">rpg_os::FightActionLog::hpBefore</a>, <a class="el" href="combat_8hpp_source.html#l00094">rpg_os::FightActionLog::isHit</a>, <a class="el" href="combat_8hpp_source.html#l00091">rpg_os::FightActionLog::kind</a>, <a class="el" href="combat_8hpp_source.html#l00393">pickSpell()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00236">rpg_os::DynamicEntity::resource()</a>, <a class="el" href="combat_8hpp_source.html#l00099">rpg_os::FightActionLog::resourceCost</a>, <a class="el" href="combat_8hpp_source.html#l00100">rpg_os::FightActionLog::resourceId</a>, <a class="el" href="combat_8hpp_source.html#l00092">rpg_os::FightActionLog::spellId</a>, <a class="el" href="combat_8hpp_source.html#l00068">rpg_os::CombatantSpec::spellIds</a>, <a class="el" href="combat_8hpp_source.html#l00098">rpg_os::FightActionLog::targetHp</a>, and <a class="el" href="combat_8hpp_source.html#l00090">rpg_os::FightActionLog::targetIndex</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00557">resolveRound()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00537">resolveRound()</a>.</p>
 
 </div>
 </div>
@@ -472,13 +472,13 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
       </table>
 </div><div class="memdoc">
 <p>One combatant's action: resolves the attack check against the defender and, on a hit, rolls and applies the damage through the event pipeline. Returns true when the defender is reduced to 0 (or below) hit points.</p>
-<dl class="section user"><dt>Why keep this in a detail namespace?</dt><dd>It is a single round of a fight — meaningful only inside the loop below. Hiding it in <code>detail</code> keeps the public surface of the header to the reusable entry points (<a class="el" href="namespacerpg__os.html#adacf6091542317212a714e913c4badb1">makeCombatantSpec</a>, <a class="el" href="namespacerpg__os.html#a3758c1ea47b844ed9ca1d0244a1f0e1d">runFight</a>) while still making the loop readable. </dd></dl>
+<dl class="section user"><dt>Why keep this in a detail namespace?</dt><dd>It is a single round of a fight — meaningful only inside the loop below. Hiding it in <code>detail</code> keeps the public surface of the header to the reusable entry points (<a class="el" href="namespacerpg__os.html#ab89f2cfc56d374bde4142c6bf4bc96c9">makeCombatantSpec</a>, <a class="el" href="namespacerpg__os.html#a3758c1ea47b844ed9ca1d0244a1f0e1d">runFight</a>) while still making the loop readable. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="combat_8hpp_source.html#l00446">446</a> of file <a class="el" href="combat_8hpp_source.html">combat.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="combat_8hpp_source.html#l00426">426</a> of file <a class="el" href="combat_8hpp_source.html">combat.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00586">rpg_os::RulesetEngine::actionAllowed()</a>, <a class="el" href="combat_8hpp_source.html#l00089">rpg_os::FightActionLog::actorIndex</a>, <a class="el" href="engine_8hpp_source.html#l00492">rpg_os::RulesetEngine::applyDamage()</a>, <a class="el" href="combat_8hpp_source.html#l00093">rpg_os::FightActionLog::checkDice</a>, <a class="el" href="dice__engine_8hpp_source.html#l00185">rpg_os::DiceExpression::constant()</a>, <a class="el" href="combat_8hpp_source.html#l00096">rpg_os::FightActionLog::damage</a>, <a class="el" href="combat_8hpp_source.html#l00095">rpg_os::FightActionLog::damageDice</a>, <a class="el" href="dice__engine_8hpp_source.html#l00173">rpg_os::DiceExpression::dice()</a>, <a class="el" href="engine_8hpp_source.html#l00407">rpg_os::RulesetEngine::executeCheckEffective()</a>, <a class="el" href="combat_8hpp_source.html#l00097">rpg_os::FightActionLog::hpBefore</a>, <a class="el" href="combat_8hpp_source.html#l00094">rpg_os::FightActionLog::isHit</a>, <a class="el" href="types_8hpp_source.html#l00081">rpg_os::CheckResult::isSuccess</a>, <a class="el" href="combat_8hpp_source.html#l00091">rpg_os::FightActionLog::kind</a>, <a class="el" href="types_8hpp_source.html#l00094">rpg_os::CheckResult::rawDiceRolls</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00236">rpg_os::DynamicEntity::resource()</a>, <a class="el" href="dice__engine_8hpp_source.html#l00204">rpg_os::DiceExpression::roll()</a>, <a class="el" href="dice__engine_8hpp_source.html#l00218">rpg_os::DiceExpression::rollSum()</a>, <a class="el" href="combat_8hpp_source.html#l00098">rpg_os::FightActionLog::targetHp</a>, and <a class="el" href="combat_8hpp_source.html#l00090">rpg_os::FightActionLog::targetIndex</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00568">rpg_os::RulesetEngine::actionAllowed()</a>, <a class="el" href="combat_8hpp_source.html#l00089">rpg_os::FightActionLog::actorIndex</a>, <a class="el" href="engine_8hpp_source.html#l00486">rpg_os::RulesetEngine::applyDamage()</a>, <a class="el" href="combat_8hpp_source.html#l00093">rpg_os::FightActionLog::checkDice</a>, <a class="el" href="dice__engine_8hpp_source.html#l00185">rpg_os::DiceExpression::constant()</a>, <a class="el" href="combat_8hpp_source.html#l00096">rpg_os::FightActionLog::damage</a>, <a class="el" href="combat_8hpp_source.html#l00095">rpg_os::FightActionLog::damageDice</a>, <a class="el" href="dice__engine_8hpp_source.html#l00173">rpg_os::DiceExpression::dice()</a>, <a class="el" href="engine_8hpp_source.html#l00407">rpg_os::RulesetEngine::executeCheckEffective()</a>, <a class="el" href="combat_8hpp_source.html#l00097">rpg_os::FightActionLog::hpBefore</a>, <a class="el" href="combat_8hpp_source.html#l00094">rpg_os::FightActionLog::isHit</a>, <a class="el" href="types_8hpp_source.html#l00081">rpg_os::CheckResult::isSuccess</a>, <a class="el" href="combat_8hpp_source.html#l00091">rpg_os::FightActionLog::kind</a>, <a class="el" href="types_8hpp_source.html#l00094">rpg_os::CheckResult::rawDiceRolls</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00236">rpg_os::DynamicEntity::resource()</a>, <a class="el" href="dice__engine_8hpp_source.html#l00204">rpg_os::DiceExpression::roll()</a>, <a class="el" href="dice__engine_8hpp_source.html#l00218">rpg_os::DiceExpression::rollSum()</a>, <a class="el" href="combat_8hpp_source.html#l00098">rpg_os::FightActionLog::targetHp</a>, and <a class="el" href="combat_8hpp_source.html#l00090">rpg_os::FightActionLog::targetIndex</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00514">actOnce()</a>, and <a class="el" href="test__bookkeeping_8cpp_source.html#l01751">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00494">actOnce()</a>, and <a class="el" href="test__conditions_8cpp_source.html#l00339">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -541,11 +541,11 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 </div><div class="memdoc">
 <p>Fills <code>out</code> from an archetype record (a probe entity at average variance); false when the archetype cannot be created. </p>
 
-<p class="definition">Definition at line <a class="el" href="combat_8hpp_source.html#l00181">181</a> of file <a class="el" href="combat_8hpp_source.html">combat.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="combat_8hpp_source.html#l00164">164</a> of file <a class="el" href="combat_8hpp_source.html">combat.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="combat_8hpp_source.html#l00064">rpg_os::CombatantSpec::armorRating</a>, <a class="el" href="combat_8hpp_source.html#l00062">rpg_os::CombatantSpec::attackValue</a>, <a class="el" href="namespacerpg__os.html#ab870da3d65c79d59dad5920efc43dc65ab1897515d548a960afe49ecf66a29021">rpg_os::Average</a>, <a class="el" href="engine_8hpp_source.html#l00138">rpg_os::RulesetEngine::createEntityWith()</a>, <a class="el" href="combat_8hpp_source.html#l00067">rpg_os::CombatantSpec::damageExpression</a>, <a class="el" href="combat_8hpp_source.html#l00063">rpg_os::CombatantSpec::defenseValue</a>, <a class="el" href="combat_8hpp_source.html#l00059">rpg_os::CombatantSpec::id</a>, <a class="el" href="combat_8hpp_source.html#l00061">rpg_os::CombatantSpec::isArchetype</a>, <a class="el" href="combat_8hpp_source.html#l00060">rpg_os::CombatantSpec::name</a>, and <a class="el" href="combat_8hpp_source.html#l00068">rpg_os::CombatantSpec::spellIds</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00253">rpg_os::makeCombatantSpec()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00241">rpg_os::makeCombatantSpec()</a>.</p>
 
 </div>
 </div>
@@ -608,11 +608,11 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 </div><div class="memdoc">
 <p>Fills <code>out</code> from a bestiary record (a probe creature at average variance), promoting its <code>to_hit</code> / <code>dodge</code> / <code>armor_rating</code> / <code>ac</code> / <code>initiative</code> fields; false when the creature cannot be created. </p>
 
-<p class="definition">Definition at line <a class="el" href="combat_8hpp_source.html#l00205">205</a> of file <a class="el" href="combat_8hpp_source.html">combat.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="combat_8hpp_source.html#l00188">188</a> of file <a class="el" href="combat_8hpp_source.html">combat.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="combat_8hpp_source.html#l00065">rpg_os::CombatantSpec::acValue</a>, <a class="el" href="combat_8hpp_source.html#l00064">rpg_os::CombatantSpec::armorRating</a>, <a class="el" href="combat_8hpp_source.html#l00062">rpg_os::CombatantSpec::attackValue</a>, <a class="el" href="namespacerpg__os.html#ab870da3d65c79d59dad5920efc43dc65ab1897515d548a960afe49ecf66a29021">rpg_os::Average</a>, <a class="el" href="engine_8hpp_source.html#l00171">rpg_os::RulesetEngine::createCreatureWith()</a>, <a class="el" href="combat_8hpp_source.html#l00067">rpg_os::CombatantSpec::damageExpression</a>, <a class="el" href="combat_8hpp_source.html#l00063">rpg_os::CombatantSpec::defenseValue</a>, <a class="el" href="combat_8hpp_source.html#l00059">rpg_os::CombatantSpec::id</a>, <a class="el" href="combat_8hpp_source.html#l00066">rpg_os::CombatantSpec::initiativeValue</a>, <a class="el" href="combat_8hpp_source.html#l00061">rpg_os::CombatantSpec::isArchetype</a>, and <a class="el" href="combat_8hpp_source.html#l00060">rpg_os::CombatantSpec::name</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00253">rpg_os::makeCombatantSpec()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00241">rpg_os::makeCombatantSpec()</a>.</p>
 
 </div>
 </div>
@@ -727,11 +727,11 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 <p>Returns the id of the strongest affordable damaging spell <code>caster</code> can cast from <code>spellIds</code>, or an empty string when none is usable.</p>
 <dl class="section user"><dt>Why "affordable" and "damaging"?</dt><dd>A fight is a damage race: a spellcaster is only "magic" while it has a spell it can actually afford to cast and that actually hurts. The cost is read exactly as <a class="el" href="classrpg__os_1_1RulesetEngine.html#a89a4c819918ef4baaa0fb2fea02cdf3c">RulesetEngine::castSpell</a> reads it (<code>cost</code>, <code>ae_cost</code>, then <code>level</code>), so the affordability check cannot disagree with what casting would really spend. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="combat_8hpp_source.html#l00406">406</a> of file <a class="el" href="combat_8hpp_source.html">combat.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="combat_8hpp_source.html#l00393">393</a> of file <a class="el" href="combat_8hpp_source.html">combat.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00543">rpg_os::RulesetEngine::findSpell()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00236">rpg_os::DynamicEntity::resource()</a>, <a class="el" href="engine_8hpp_source.html#l01888">rpg_os::RulesetEngine::ruleset()</a>, <a class="el" href="combat_8hpp_source.html#l00375">spellAverageDamage()</a>, and <a class="el" href="ruleset__loader_8hpp_source.html#l00226">rpg_os::Ruleset::spellResource</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00525">rpg_os::RulesetEngine::findSpell()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00236">rpg_os::DynamicEntity::resource()</a>, <a class="el" href="engine_8hpp_source.html#l01965">rpg_os::RulesetEngine::ruleset()</a>, <a class="el" href="combat_8hpp_source.html#l00362">spellAverageDamage()</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00393">rpg_os::spellCost()</a>, and <a class="el" href="ruleset__loader_8hpp_source.html#l00226">rpg_os::Ruleset::spellResource</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00514">actOnce()</a>, and <a class="el" href="test__combat_8cpp_source.html#l00301">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00494">actOnce()</a>, and <a class="el" href="test__combat_8cpp_source.html#l00293">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -831,11 +831,11 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 <p>Plays one round of a fight: rolls initiative, resolves both combatants' actions in initiative order, and returns the winner's index (0 or 1) or -1 when neither combatant is reduced to 0 hit points.</p>
 <dl class="section user"><dt>Why return the winner instead of mutating the outcome?</dt><dd>Keeping the round self-contained (inputs in, winner out) lets the fight loop stay a flat read loop — no winner bookkeeping spread across the round body — and makes the per-round RNG stream easy to reason about in tests. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="combat_8hpp_source.html#l00557">557</a> of file <a class="el" href="combat_8hpp_source.html">combat.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="combat_8hpp_source.html#l00537">537</a> of file <a class="el" href="combat_8hpp_source.html">combat.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="combat_8hpp_source.html#l00514">actOnce()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00199">rpg_os::DynamicEntity::getStat()</a>, <a class="el" href="combat_8hpp_source.html#l00110">rpg_os::FightRoundLog::goesFirst</a>, <a class="el" href="combat_8hpp_source.html#l00108">rpg_os::FightRoundLog::initRoll</a>, <a class="el" href="combat_8hpp_source.html#l00107">rpg_os::FightRoundLog::initStat</a>, <a class="el" href="combat_8hpp_source.html#l00109">rpg_os::FightRoundLog::initTotal</a>, and <a class="el" href="combat_8hpp_source.html#l00106">rpg_os::FightRoundLog::round</a>.</p>
+<p class="reference">References <a class="el" href="combat_8hpp_source.html#l00494">actOnce()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00199">rpg_os::DynamicEntity::getStat()</a>, <a class="el" href="combat_8hpp_source.html#l00110">rpg_os::FightRoundLog::goesFirst</a>, <a class="el" href="combat_8hpp_source.html#l00108">rpg_os::FightRoundLog::initRoll</a>, <a class="el" href="combat_8hpp_source.html#l00107">rpg_os::FightRoundLog::initStat</a>, <a class="el" href="combat_8hpp_source.html#l00109">rpg_os::FightRoundLog::initTotal</a>, and <a class="el" href="combat_8hpp_source.html#l00106">rpg_os::FightRoundLog::round</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00617">runFightImpl()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00597">runFightImpl()</a>.</p>
 
 </div>
 </div>
@@ -997,11 +997,11 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 </div><div class="memdoc">
 <p>Shared implementation behind both <a class="el" href="namespacerpg__os.html#a3758c1ea47b844ed9ca1d0244a1f0e1d">runFight</a> overloads. <code>log</code> is optional: when non-null the fight's transcript (per-round dice and stat changes) is recorded into it; when null the fight runs exactly as before, recording nothing — so the Monte-Carlo hot path never pays for a log it does not use, and a logged fight consumes the identical RNG stream (the log only observes dice that were already being rolled). </p>
 
-<p class="definition">Definition at line <a class="el" href="combat_8hpp_source.html#l00617">617</a> of file <a class="el" href="combat_8hpp_source.html">combat.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="combat_8hpp_source.html#l00597">597</a> of file <a class="el" href="combat_8hpp_source.html">combat.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="combat_8hpp_source.html#l00333">rpg_os::createFighter()</a>, <a class="el" href="combat_8hpp_source.html#l00067">rpg_os::CombatantSpec::damageExpression</a>, <a class="el" href="combat_8hpp_source.html#l00080">rpg_os::FightOutcome::maxLp</a>, <a class="el" href="combat_8hpp_source.html#l00120">rpg_os::FightLog::maxLp</a>, <a class="el" href="combat_8hpp_source.html#l00060">rpg_os::CombatantSpec::name</a>, <a class="el" href="combat_8hpp_source.html#l00119">rpg_os::FightLog::names</a>, <a class="el" href="combat_8hpp_source.html#l00081">rpg_os::FightOutcome::remainingLp</a>, <a class="el" href="combat_8hpp_source.html#l00557">resolveRound()</a>, <a class="el" href="combat_8hpp_source.html#l00079">rpg_os::FightOutcome::rounds</a>, <a class="el" href="combat_8hpp_source.html#l00078">rpg_os::FightOutcome::winnerIndex</a>, and <a class="el" href="combat_8hpp_source.html#l00122">rpg_os::FightLog::winnerIndex</a>.</p>
+<p class="reference">References <a class="el" href="combat_8hpp_source.html#l00320">rpg_os::createFighter()</a>, <a class="el" href="combat_8hpp_source.html#l00067">rpg_os::CombatantSpec::damageExpression</a>, <a class="el" href="combat_8hpp_source.html#l00080">rpg_os::FightOutcome::maxLp</a>, <a class="el" href="combat_8hpp_source.html#l00120">rpg_os::FightLog::maxLp</a>, <a class="el" href="combat_8hpp_source.html#l00060">rpg_os::CombatantSpec::name</a>, <a class="el" href="combat_8hpp_source.html#l00119">rpg_os::FightLog::names</a>, <a class="el" href="combat_8hpp_source.html#l00081">rpg_os::FightOutcome::remainingLp</a>, <a class="el" href="combat_8hpp_source.html#l00537">resolveRound()</a>, <a class="el" href="combat_8hpp_source.html#l00079">rpg_os::FightOutcome::rounds</a>, <a class="el" href="combat_8hpp_source.html#l00078">rpg_os::FightOutcome::winnerIndex</a>, and <a class="el" href="combat_8hpp_source.html#l00122">rpg_os::FightLog::winnerIndex</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00692">rpg_os::runFight()</a>, and <a class="el" href="combat_8hpp_source.html#l00677">rpg_os::runFight()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00672">rpg_os::runFight()</a>, and <a class="el" href="combat_8hpp_source.html#l00657">rpg_os::runFight()</a>.</p>
 
 </div>
 </div>
@@ -1074,11 +1074,11 @@ template&lt;RandomNumberGenerator Rng&gt; </div>
 </div><div class="memdoc">
 <p>The expected damage of a spell record, used only to rank spells so the caster picks its strongest option. Handles both the bare <code>damage</code> field and the structured <code>effects</code> array (sums the <code>dice</code> of every damage-kind effect). A spell with no damage at all (a buff, a heal, a utility effect) ranks as zero and is never chosen as a fight action. </p>
 
-<p class="definition">Definition at line <a class="el" href="combat_8hpp_source.html#l00375">375</a> of file <a class="el" href="combat_8hpp_source.html">combat.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="combat_8hpp_source.html#l00362">362</a> of file <a class="el" href="combat_8hpp_source.html">combat.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="dice__engine_8hpp_source.html#l00193">rpg_os::DiceExpression::expectedValue()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00406">pickSpell()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00393">pickSpell()</a>.</p>
 
 </div>
 </div>

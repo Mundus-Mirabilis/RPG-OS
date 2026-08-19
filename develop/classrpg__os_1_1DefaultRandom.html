@@ -136,8 +136,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab388da26dbdab6e6cf3377ef662ccf53" id="r_ab388da26dbdab6e6cf3377ef662ccf53"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1DefaultRandom.html#ab388da26dbdab6e6cf3377ef662ccf53">DefaultRandom</a> (uint32_t seed)</td></tr>
 <tr class="memdesc:ab388da26dbdab6e6cf3377ef662ccf53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deterministic and reproducible for a fixed <code>seed</code>.  <br /></td></tr>
 <tr class="separator:ab388da26dbdab6e6cf3377ef662ccf53"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00afb530ac51d039350c39e6e5ec6168" id="r_a00afb530ac51d039350c39e6e5ec6168"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1DefaultRandom.html#a00afb530ac51d039350c39e6e5ec6168">operator()</a> (int min, int max)</td></tr>
-<tr class="separator:a00afb530ac51d039350c39e6e5ec6168"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61ef41d301947247de484b4181dabef9" id="r_a61ef41d301947247de484b4181dabef9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1DefaultRandom.html#a61ef41d301947247de484b4181dabef9">operator()</a> (int min, int max) noexcept</td></tr>
+<tr class="separator:a61ef41d301947247de484b4181dabef9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Default RNG: a std::mt19937 wrapped in a uniform [min, max] distribution. Satisfies the <code>RandomNumberGenerator</code> concept.</p>
@@ -205,8 +205,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a00afb530ac51d039350c39e6e5ec6168" name="a00afb530ac51d039350c39e6e5ec6168"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a00afb530ac51d039350c39e6e5ec6168">&#9670;&#160;</a></span>operator()()</h2>
+<a id="a61ef41d301947247de484b4181dabef9" name="a61ef41d301947247de484b4181dabef9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61ef41d301947247de484b4181dabef9">&#9670;&#160;</a></span>operator()()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -234,7 +234,7 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

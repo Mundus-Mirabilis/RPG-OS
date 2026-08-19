@@ -2,8 +2,8 @@ var searchData=
 [
   ['magicallore_0',['magicalLore',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#afdf4f5a02801c2a55ff58e61542e84e9',1,'rpg_os::generated::tde5e::Character']]],
   ['main_1',['main',['../ecs__registry_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;main.cpp'],['../universal__mode_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;main.cpp'],['../specific__mode_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;main.cpp'],['../fight_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;main.cpp'],['../ecs__entt_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;main.cpp']]],
-  ['makecombatantspec_2',['makeCombatantSpec',['../namespacerpg__os.html#adacf6091542317212a714e913c4badb1',1,'rpg_os']]],
-  ['makecombatantspecfromentity_3',['makeCombatantSpecFromEntity',['../namespacerpg__os.html#a2d74551d4f6909799240c1ea7b674856',1,'rpg_os']]],
+  ['makecombatantspec_2',['makeCombatantSpec',['../namespacerpg__os.html#ab89f2cfc56d374bde4142c6bf4bc96c9',1,'rpg_os']]],
+  ['makecombatantspecfromentity_3',['makeCombatantSpecFromEntity',['../namespacerpg__os.html#a776f30dd6b9dd4397bddc7cf1d81ecf4',1,'rpg_os']]],
   ['mapevalcontext_4',['MapEvalContext',['../structMapEvalContext.html',1,'']]],
   ['marginofsuccess_5',['marginOfSuccess',['../structrpg__os_1_1CheckResult.html#a6c8304908ea1ae78358ee2061a1f1175',1,'rpg_os::CheckResult']]],
   ['markslotused_6',['markSlotUsed',['../classrpg__os_1_1Spellbook.html#a489b55eb6cc84dd5620dd35f4031d41d',1,'rpg_os::Spellbook']]],

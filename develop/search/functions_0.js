@@ -39,12 +39,13 @@ var searchData=
   ['applycurse_36',['applycurse',['../classrpg__os_1_1RulesetEngine.html#a87dd2dad4081da2775736e783c914ab2',1,'rpg_os::RulesetEngine::applyCurse()'],['../classrpg__os_1_1GameSession.html#a4bb954113e7f832deadf1ad4391efa07',1,'rpg_os::GameSession::applyCurse()']]],
   ['applydamage_37',['applyDamage',['../classrpg__os_1_1RulesetEngine.html#abaf7d31b22c7e134079d1c03aa20be2e',1,'rpg_os::RulesetEngine']]],
   ['applymodifierpipeline_38',['applyModifierPipeline',['../namespacerpg__os.html#a87ad4f8cf7886eca2e27591884ef2bb9',1,'rpg_os']]],
-  ['applystatbonus_39',['applyStatBonus',['../classrpg__os_1_1RulesetEngine.html#aefe615f84862094de44ed33231db6834',1,'rpg_os::RulesetEngine']]],
-  ['applytrait_40',['applyTrait',['../classrpg__os_1_1RulesetEngine.html#afd49bed87e835418065c89300ab40ca2',1,'rpg_os::RulesetEngine']]],
-  ['applytraiteffects_41',['applyTraitEffects',['../classrpg__os_1_1RulesetEngine.html#afafe59241ff31cd9ffbea624c91b57da',1,'rpg_os::RulesetEngine']]],
-  ['armorclass_42',['armorClass',['../classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#a2ca7e51091ecf76196cf510d625f052b',1,'rpg_os::generated::dnd5e::Character']]],
-  ['attachentityevents_43',['attachEntityEvents',['../classrpg__os_1_1RulesetEngine.html#aa92968dd1fbb5bd56a538da8ed92ff78',1,'rpg_os::RulesetEngine']]],
-  ['attack_44',['attack',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a33351f1f684178ff743fb790761a3ac4',1,'rpg_os::generated::brp_ugc::Character']]],
-  ['attackonce_45',['attackOnce',['../namespacerpg__os_1_1detail.html#a1086db436adc670b1421da854da3ef3d',1,'rpg_os::detail']]],
-  ['attackswordssr6_46',['attackSwordsSr6',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a80275e13d05f747681a3256f3f784395',1,'rpg_os::generated::tde5e::Character']]]
+  ['applyspelleffects_39',['applySpellEffects',['../classrpg__os_1_1RulesetEngine.html#ae909b78fa198f93734d81e1785e6857b',1,'rpg_os::RulesetEngine']]],
+  ['applystatbonus_40',['applyStatBonus',['../classrpg__os_1_1RulesetEngine.html#aefe615f84862094de44ed33231db6834',1,'rpg_os::RulesetEngine']]],
+  ['applytrait_41',['applyTrait',['../classrpg__os_1_1RulesetEngine.html#afd49bed87e835418065c89300ab40ca2',1,'rpg_os::RulesetEngine']]],
+  ['applytraiteffects_42',['applyTraitEffects',['../classrpg__os_1_1RulesetEngine.html#afafe59241ff31cd9ffbea624c91b57da',1,'rpg_os::RulesetEngine']]],
+  ['armorclass_43',['armorClass',['../classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#a2ca7e51091ecf76196cf510d625f052b',1,'rpg_os::generated::dnd5e::Character']]],
+  ['attachentityevents_44',['attachEntityEvents',['../classrpg__os_1_1RulesetEngine.html#aa92968dd1fbb5bd56a538da8ed92ff78',1,'rpg_os::RulesetEngine']]],
+  ['attack_45',['attack',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a33351f1f684178ff743fb790761a3ac4',1,'rpg_os::generated::brp_ugc::Character']]],
+  ['attackonce_46',['attackOnce',['../namespacerpg__os_1_1detail.html#a1086db436adc670b1421da854da3ef3d',1,'rpg_os::detail']]],
+  ['attackswordssr6_47',['attackSwordsSr6',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a80275e13d05f747681a3256f3f784395',1,'rpg_os::generated::tde5e::Character']]]
 ];

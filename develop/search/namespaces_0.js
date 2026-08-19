@@ -8,5 +8,6 @@ var searchData=
   ['rpg_5fos_3a_3agenerated_3a_3adnd5e_5',['dnd5e',['../namespacerpg__os_1_1generated_1_1dnd5e.html',1,'rpg_os::generated']]],
   ['rpg_5fos_3a_3agenerated_3a_3atde5e_6',['tde5e',['../namespacerpg__os_1_1generated_1_1tde5e.html',1,'rpg_os::generated']]],
   ['rpg_5fos_3a_3amath_7',['math',['../namespacerpg__os_1_1math.html',1,'rpg_os']]],
-  ['rpg_5fos_3a_3amath_3a_3adetail_8',['detail',['../namespacerpg__os_1_1math_1_1detail.html',1,'rpg_os::math']]]
+  ['rpg_5fos_3a_3amath_3a_3adetail_8',['detail',['../namespacerpg__os_1_1math_1_1detail.html',1,'rpg_os::math']]],
+  ['rpg_5fos_3a_3aspecific_9',['specific',['../namespacerpg__os_1_1specific.html',1,'rpg_os']]]
 ];

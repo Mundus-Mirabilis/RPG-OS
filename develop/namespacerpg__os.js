@@ -20,6 +20,7 @@ var namespacerpg__os =
     [ "dice_literals", "namespacerpg__os_1_1dice__literals.html", null ],
     [ "generated", "namespacerpg__os_1_1generated.html", "namespacerpg__os_1_1generated" ],
     [ "math", "namespacerpg__os_1_1math.html", "namespacerpg__os_1_1math" ],
+    [ "specific", "namespacerpg__os_1_1specific.html", "namespacerpg__os_1_1specific" ],
     [ "ActionBudget", "structrpg__os_1_1ActionBudget.html", "structrpg__os_1_1ActionBudget" ],
     [ "ActiveEffect", "structrpg__os_1_1ActiveEffect.html", "structrpg__os_1_1ActiveEffect" ],
     [ "Advancement", "classrpg__os_1_1Advancement.html", "classrpg__os_1_1Advancement" ],
@@ -204,8 +205,9 @@ var namespacerpg__os =
     [ "applyModifierPipeline", "namespacerpg__os.html#a87ad4f8cf7886eca2e27591884ef2bb9", null ],
     [ "createFighter", "namespacerpg__os.html#a2ffff45a6b10310d015dd0c1d6017bc5", null ],
     [ "diceBounds", "namespacerpg__os.html#ae2d848f9064bfb4ac2a8bf655a01e135", null ],
-    [ "makeCombatantSpec", "namespacerpg__os.html#adacf6091542317212a714e913c4badb1", null ],
-    [ "makeCombatantSpecFromEntity", "namespacerpg__os.html#a2d74551d4f6909799240c1ea7b674856", null ],
+    [ "findDataRecord", "namespacerpg__os.html#a25e63ba80620090de09c290122a725b6", null ],
+    [ "makeCombatantSpec", "namespacerpg__os.html#ab89f2cfc56d374bde4142c6bf4bc96c9", null ],
+    [ "makeCombatantSpecFromEntity", "namespacerpg__os.html#a776f30dd6b9dd4397bddc7cf1d81ecf4", null ],
     [ "nextEntityId", "namespacerpg__os.html#a2dcb05ea6914e1c082e0c320ec390679", null ],
     [ "operator+", "namespacerpg__os.html#a2c9ba73f667596b8ab089577bfed0ec6", null ],
     [ "operator-", "namespacerpg__os.html#af141eb3e6be2d938ce2b9bac02b4f3a5", null ],
@@ -226,6 +228,8 @@ var namespacerpg__os =
     [ "resolveThresholdCheck", "namespacerpg__os.html#a6b46ef1cf31683f3c873e49ca842cab6", null ],
     [ "runFight", "namespacerpg__os.html#a48743ce84d41f9fdc85fac5f617d980d", null ],
     [ "runFight", "namespacerpg__os.html#a3758c1ea47b844ed9ca1d0244a1f0e1d", null ],
+    [ "spellCost", "namespacerpg__os.html#ad3d3f99f494e9348acf6bed985830635", null ],
     [ "successLevelFor", "namespacerpg__os.html#a7cc63c6411d33823547b72473c8ce523", null ],
-    [ "trimWhitespace", "namespacerpg__os.html#a7fa123c0bde9f15013f8f154e1214d41", null ]
+    [ "trimWhitespace", "namespacerpg__os.html#a7fa123c0bde9f15013f8f154e1214d41", null ],
+    [ "kDefaultWeaponDamage", "namespacerpg__os.html#a619c9eea7461d1c6b4a62b56c9057379", null ]
 ];

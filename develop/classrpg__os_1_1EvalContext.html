@@ -145,7 +145,7 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p>Resolves a formula identifier to a value.</p>
 <dl class="section user"><dt>Why an abstract resolver instead of a fixed callback?</dt><dd>The same evaluator serves several "worlds": derived stats (bare ids), combat formulas (<code>actor</code>.* vs <code>target</code>.*), event conditions (<code>event</code>.*), and environment-dependent formulas (<code>env</code>.*). Abstracting the lookup behind <code><a class="el" href="classrpg__os_1_1EvalContext.html">EvalContext</a></code> lets one evaluator work with any of them — and lets the universal engine's <a class="el" href="classrpg__os_1_1EntityContext.html">EntityContext</a> (see <a class="el" href="dynamic__entity_8hpp.html">dynamic_entity.hpp</a>) provide all of them at once. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="expression_8hpp_source.html#l00052">52</a> of file <a class="el" href="expression_8hpp_source.html">expression.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="expression_8hpp_source.html#l00053">53</a> of file <a class="el" href="expression_8hpp_source.html">expression.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab033653b6142b267af1cd44c99d5949e" name="ab033653b6142b267af1cd44c99d5949e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab033653b6142b267af1cd44c99d5949e">&#9670;&#160;</a></span>~EvalContext()</h2>

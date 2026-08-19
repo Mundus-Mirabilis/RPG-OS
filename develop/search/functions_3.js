@@ -7,7 +7,7 @@ var searchData=
   ['dexterityx5_4',['dexterityX5',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a47fb6f81467b43dbe6254022cae93916',1,'rpg_os::generated::brp_ugc::Character']]],
   ['dice_5',['dice',['../classrpg__os_1_1DiceExpression.html#a32664e3b9bd0c33419731159d67001f7',1,'rpg_os::DiceExpression']]],
   ['dicebounds_6',['diceBounds',['../namespacerpg__os.html#ae2d848f9064bfb4ac2a8bf655a01e135',1,'rpg_os']]],
-  ['diceexpression_7',['diceexpression',['../classrpg__os_1_1DiceExpression.html#aa51a70f0756cf2dd45c738c1f59e1fc2',1,'rpg_os::DiceExpression::DiceExpression(int count, int sides)'],['../classrpg__os_1_1DiceExpression.html#a028552cceafcc83a3fe5ff2b6bce1349',1,'rpg_os::DiceExpression::DiceExpression(std::string_view expression)'],['../classrpg__os_1_1DiceExpression.html#a01d44e764178c4454ef8de41e7928b8f',1,'rpg_os::DiceExpression::DiceExpression(int constant)']]],
+  ['diceexpression_7',['diceexpression',['../classrpg__os_1_1DiceExpression.html#a01d44e764178c4454ef8de41e7928b8f',1,'rpg_os::DiceExpression::DiceExpression(int constant)'],['../classrpg__os_1_1DiceExpression.html#aa51a70f0756cf2dd45c738c1f59e1fc2',1,'rpg_os::DiceExpression::DiceExpression(int count, int sides)'],['../classrpg__os_1_1DiceExpression.html#a028552cceafcc83a3fe5ff2b6bce1349',1,'rpg_os::DiceExpression::DiceExpression(std::string_view expression)']]],
   ['diecount_8',['dieCount',['../classrpg__os_1_1DiceExpression.html#a002e9dd893589f9945e5ad493142ab89',1,'rpg_os::DiceExpression']]],
   ['dispatch_9',['dispatch',['../classrpg__os_1_1EventBus.html#a98789e927360b2ed4c2960a2985371a6',1,'rpg_os::EventBus']]],
   ['dnd5eattack_10',['dnd5eAttack',['../classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#ae115066de66b981c0614ea44aee40d6a',1,'rpg_os::generated::dnd5e::Character']]],
@@ -25,6 +25,7 @@ var searchData=
   ['dnd5esaveint_22',['dnd5eSaveInt',['../classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#abaade5361f98088499d51966aa41207f',1,'rpg_os::generated::dnd5e::Character']]],
   ['dnd5esavestr_23',['dnd5eSaveStr',['../classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#a72da74a6e0ec967d4ab949358c48f329',1,'rpg_os::generated::dnd5e::Character']]],
   ['dnd5esavewis_24',['dnd5eSaveWis',['../classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#a7b55be5de0ba98429760b8496ed44cc1',1,'rpg_os::generated::dnd5e::Character']]],
-  ['dodge_25',['dodge',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a889a07d813a71c12e03217550af5f307',1,'rpg_os::generated::tde5e::Character']]],
-  ['dynamicentity_26',['DynamicEntity',['../classrpg__os_1_1DynamicEntity.html#a59e6e4d6a951e59c87e6b3b4bef10328',1,'rpg_os::DynamicEntity']]]
+  ['dndcoins_25',['dndCoins',['../test__fixtures_8hpp.html#a45ddda6c2ff8f996e1cc76f01fa7c634',1,'test_fixtures.hpp']]],
+  ['dodge_26',['dodge',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a889a07d813a71c12e03217550af5f307',1,'rpg_os::generated::tde5e::Character']]],
+  ['dynamicentity_27',['DynamicEntity',['../classrpg__os_1_1DynamicEntity.html#a59e6e4d6a951e59c87e6b3b4bef10328',1,'rpg_os::DynamicEntity']]]
 ];

@@ -12,5 +12,8 @@ var ruleset__loader_8hpp =
     [ "rpg_os::EncumbranceConfig::Level", "structrpg__os_1_1EncumbranceConfig_1_1Level.html", "structrpg__os_1_1EncumbranceConfig_1_1Level" ],
     [ "rpg_os::SpellcastingConfig", "structrpg__os_1_1SpellcastingConfig.html", "structrpg__os_1_1SpellcastingConfig" ],
     [ "rpg_os::Ruleset", "classrpg__os_1_1Ruleset.html", "classrpg__os_1_1Ruleset" ],
-    [ "rpg_os::RulesetLoader", "classrpg__os_1_1RulesetLoader.html", "classrpg__os_1_1RulesetLoader" ]
+    [ "rpg_os::RulesetLoader", "classrpg__os_1_1RulesetLoader.html", "classrpg__os_1_1RulesetLoader" ],
+    [ "findDataRecord", "ruleset__loader_8hpp.html#a25e63ba80620090de09c290122a725b6", null ],
+    [ "resolveHitPointPool", "ruleset__loader_8hpp.html#af34d585416afebd7167fec0777cf8390", null ],
+    [ "spellCost", "ruleset__loader_8hpp.html#ad3d3f99f494e9348acf6bed985830635", null ]
 ];

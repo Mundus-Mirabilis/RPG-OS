@@ -1,0 +1,869 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- Browser tab icon — copied into the output via HTML_EXTRA_FILES (favicon.png). -->
+<link rel="icon" type="image/png" href="favicon.png"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="RPG OS" />
+<meta property="og:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
+<meta property="og:url" content="https://Mundus-Mirabilis.github.io/RPG-OS/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:title" content="RPG OS" />
+<meta name="twitter:description" content="The part of a tabletop RPG that survives when you take the fantasy away — a universal, header-only C++23 rule engine. Loads any ruleset JSON." />
+<!-- END twitter metadata -->
+<title>RPG OS: rpg_os::specific::SheetBase&lt; Derived &gt; Class Template Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/Mundus-Mirabilis/RPG-OS" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="mundus-mirabilis_512.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RPG OS
+   </div>
+   <div id="projectbrief">A universal, header-only C++23 rule engine for tabletop role-playing games</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classrpg__os_1_1specific_1_1SheetBase.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="classrpg__os_1_1specific_1_1SheetBase-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">rpg_os::specific::SheetBase&lt; Derived &gt; Class Template Reference</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="sheet_8hpp_source.html">rpg_os/specific/sheet.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a8848c0b67ac111cd101725ebafcbfa34" id="r_a8848c0b67ac111cd101725ebafcbfa34"><td class="memItemLeft" align="right" valign="top">static Derived&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1specific_1_1SheetBase.html#a8848c0b67ac111cd101725ebafcbfa34">fromArchetype</a> (const <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &amp;rulesetJson, std::string_view id)</td></tr>
+<tr class="memdesc:a8848c0b67ac111cd101725ebafcbfa34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads a single archetype by id; throws std::invalid_argument when missing.  <br /></td></tr>
+<tr class="separator:a8848c0b67ac111cd101725ebafcbfa34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb5adffec52bf50446f2925c190d0361" id="r_aeb5adffec52bf50446f2925c190d0361"><td class="memTemplParams" colspan="2">template&lt;RandomNumberGenerator Rng&gt; </td></tr>
+<tr class="memitem:aeb5adffec52bf50446f2925c190d0361"><td class="memTemplItemLeft" align="right" valign="top">static Derived&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1specific_1_1SheetBase.html#aeb5adffec52bf50446f2925c190d0361">fromArchetype</a> (const <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &amp;rulesetJson, std::string_view id, <a class="el" href="namespacerpg__os.html#ab870da3d65c79d59dad5920efc43dc65">Variance</a> variance, Rng &amp;rng)</td></tr>
+<tr class="memdesc:aeb5adffec52bf50446f2925c190d0361"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads a single archetype by id, picking ranged values per <code>variance</code>.  <br /></td></tr>
+<tr class="separator:aeb5adffec52bf50446f2925c190d0361"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ccbb178f5cfa9f3514982b277bb7406" id="r_a5ccbb178f5cfa9f3514982b277bb7406"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; Derived &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1specific_1_1SheetBase.html#a5ccbb178f5cfa9f3514982b277bb7406">loadArchetypes</a> (const <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &amp;rulesetJson)</td></tr>
+<tr class="memdesc:a5ccbb178f5cfa9f3514982b277bb7406"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads every archetype record from the ruleset JSON's data section.  <br /></td></tr>
+<tr class="separator:a5ccbb178f5cfa9f3514982b277bb7406"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82bfc851b1a1e4ee95bb84249f768ff6" id="r_a82bfc851b1a1e4ee95bb84249f768ff6"><td class="memTemplParams" colspan="2">template&lt;RandomNumberGenerator Rng&gt; </td></tr>
+<tr class="memitem:a82bfc851b1a1e4ee95bb84249f768ff6"><td class="memTemplItemLeft" align="right" valign="top">static std::vector&lt; Derived &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1specific_1_1SheetBase.html#a82bfc851b1a1e4ee95bb84249f768ff6">loadArchetypes</a> (const <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &amp;rulesetJson, <a class="el" href="namespacerpg__os.html#ab870da3d65c79d59dad5920efc43dc65">Variance</a> variance, Rng &amp;rng)</td></tr>
+<tr class="memdesc:a82bfc851b1a1e4ee95bb84249f768ff6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads every archetype record, picking ranged values per <code>variance</code>.  <br /></td></tr>
+<tr class="separator:a82bfc851b1a1e4ee95bb84249f768ff6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ee8c76c15d5f592281d8bf372746719" id="r_a7ee8c76c15d5f592281d8bf372746719"><td class="memItemLeft" align="right" valign="top">static Derived&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1specific_1_1SheetBase.html#a7ee8c76c15d5f592281d8bf372746719">fromCreature</a> (const <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &amp;rulesetJson, std::string_view id)</td></tr>
+<tr class="separator:a7ee8c76c15d5f592281d8bf372746719"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6aa87e56a569d837d02b9b962dcd0e75" id="r_a6aa87e56a569d837d02b9b962dcd0e75"><td class="memTemplParams" colspan="2">template&lt;RandomNumberGenerator Rng&gt; </td></tr>
+<tr class="memitem:a6aa87e56a569d837d02b9b962dcd0e75"><td class="memTemplItemLeft" align="right" valign="top">static Derived&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1specific_1_1SheetBase.html#a6aa87e56a569d837d02b9b962dcd0e75">fromCreature</a> (const <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &amp;rulesetJson, std::string_view id, <a class="el" href="namespacerpg__os.html#ab870da3d65c79d59dad5920efc43dc65">Variance</a> variance, Rng &amp;rng)</td></tr>
+<tr class="memdesc:a6aa87e56a569d837d02b9b962dcd0e75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads a single creature by id, picking ranged values per <code>variance</code>.  <br /></td></tr>
+<tr class="separator:a6aa87e56a569d837d02b9b962dcd0e75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1f70932e4f7a96667837c2f285c5982" id="r_ac1f70932e4f7a96667837c2f285c5982"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; Derived &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1specific_1_1SheetBase.html#ac1f70932e4f7a96667837c2f285c5982">loadCreatures</a> (const <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &amp;rulesetJson)</td></tr>
+<tr class="memdesc:ac1f70932e4f7a96667837c2f285c5982"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads every creature record from the ruleset JSON's data section.  <br /></td></tr>
+<tr class="separator:ac1f70932e4f7a96667837c2f285c5982"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03630136e12b53db3c2aa1d694bec6f7" id="r_a03630136e12b53db3c2aa1d694bec6f7"><td class="memTemplParams" colspan="2">template&lt;RandomNumberGenerator Rng&gt; </td></tr>
+<tr class="memitem:a03630136e12b53db3c2aa1d694bec6f7"><td class="memTemplItemLeft" align="right" valign="top">static std::vector&lt; Derived &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1specific_1_1SheetBase.html#a03630136e12b53db3c2aa1d694bec6f7">loadCreatures</a> (const <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &amp;rulesetJson, <a class="el" href="namespacerpg__os.html#ab870da3d65c79d59dad5920efc43dc65">Variance</a> variance, Rng &amp;rng)</td></tr>
+<tr class="memdesc:a03630136e12b53db3c2aa1d694bec6f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads every creature record, picking ranged values per <code>variance</code>.  <br /></td></tr>
+<tr class="separator:a03630136e12b53db3c2aa1d694bec6f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad30ea67b7a66f1ec98308868847ba9b1" id="r_ad30ea67b7a66f1ec98308868847ba9b1"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1specific_1_1SheetBase.html#ad30ea67b7a66f1ec98308868847ba9b1">loadSection</a> (const <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &amp;rulesetJson, std::string_view section)</td></tr>
+<tr class="memdesc:ad30ea67b7a66f1ec98308868847ba9b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads every record from a named <code>data</code> section as raw JSON.  <br /></td></tr>
+<tr class="separator:ad30ea67b7a66f1ec98308868847ba9b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7faca8ff960bdcf18b14b93c5b35536" id="r_ab7faca8ff960bdcf18b14b93c5b35536"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1specific_1_1SheetBase.html#ab7faca8ff960bdcf18b14b93c5b35536">loadSpells</a> (const <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &amp;rulesetJson)</td></tr>
+<tr class="memdesc:ab7faca8ff960bdcf18b14b93c5b35536"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads every spells record from the ruleset JSON.  <br /></td></tr>
+<tr class="separator:ab7faca8ff960bdcf18b14b93c5b35536"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3985f18da94ba17d3f42c0c2c6619cd2" id="r_a3985f18da94ba17d3f42c0c2c6619cd2"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1specific_1_1SheetBase.html#a3985f18da94ba17d3f42c0c2c6619cd2">loadConditions</a> (const <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &amp;rulesetJson)</td></tr>
+<tr class="memdesc:a3985f18da94ba17d3f42c0c2c6619cd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads every conditions record from the ruleset JSON.  <br /></td></tr>
+<tr class="separator:a3985f18da94ba17d3f42c0c2c6619cd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a326973c892a44be48af82592d9f9c0bd" id="r_a326973c892a44be48af82592d9f9c0bd"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1specific_1_1SheetBase.html#a326973c892a44be48af82592d9f9c0bd">loadPoisons</a> (const <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &amp;rulesetJson)</td></tr>
+<tr class="memdesc:a326973c892a44be48af82592d9f9c0bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads every poisons record from the ruleset JSON.  <br /></td></tr>
+<tr class="separator:a326973c892a44be48af82592d9f9c0bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d658d80bc1515d48f3591bf6450eae1" id="r_a2d658d80bc1515d48f3591bf6450eae1"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1specific_1_1SheetBase.html#a2d658d80bc1515d48f3591bf6450eae1">loadDiseases</a> (const <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &amp;rulesetJson)</td></tr>
+<tr class="memdesc:a2d658d80bc1515d48f3591bf6450eae1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads every diseases record from the ruleset JSON.  <br /></td></tr>
+<tr class="separator:a2d658d80bc1515d48f3591bf6450eae1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26a25faeeca8a2f8a9510fd217a94817" id="r_a26a25faeeca8a2f8a9510fd217a94817"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1specific_1_1SheetBase.html#a26a25faeeca8a2f8a9510fd217a94817">loadItems</a> (const <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &amp;rulesetJson)</td></tr>
+<tr class="memdesc:a26a25faeeca8a2f8a9510fd217a94817"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads every items record from the ruleset JSON.  <br /></td></tr>
+<tr class="separator:a26a25faeeca8a2f8a9510fd217a94817"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20aa93f4641a3dce7527965c9df3b994" id="r_a20aa93f4641a3dce7527965c9df3b994"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1specific_1_1SheetBase.html#a20aa93f4641a3dce7527965c9df3b994">loadCurses</a> (const <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &amp;rulesetJson)</td></tr>
+<tr class="memdesc:a20aa93f4641a3dce7527965c9df3b994"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads every curses record from the ruleset JSON.  <br /></td></tr>
+<tr class="separator:a20aa93f4641a3dce7527965c9df3b994"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:aacdc0bab001a054a43fc86c3ae4cb8a2" id="r_aacdc0bab001a054a43fc86c3ae4cb8a2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1specific_1_1SheetBase.html#aacdc0bab001a054a43fc86c3ae4cb8a2">~SheetBase</a> ()=default</td></tr>
+<tr class="memdesc:aacdc0bab001a054a43fc86c3ae4cb8a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sheets are only ever used through a concrete generated type.  <br /></td></tr>
+<tr class="separator:aacdc0bab001a054a43fc86c3ae4cb8a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename Derived&gt;<br />
+class rpg_os::specific::SheetBase&lt; Derived &gt;</div><p>CRTP base for generated character sheets: implements the static loaders that every generated <code>Character</code> shares (loading archetypes, creatures and free-form data sections from the ruleset JSON at runtime).</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Derived</td><td>the generated <code>Character</code> class. It must provide a default constructor and a public <code>fromJson(const Json&amp;, Variance, Rng&amp;)</code> member.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section user"><dt>Why CRTP?</dt><dd>The loaders return the concrete sheet type and build it through its own <code>fromJson</code>, so they cannot live in a non-template base class. A CRTP base gives every generated class the identical loaders without copying the code into each generated header — the code generator emits only the ruleset-specific parts. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="sheet_8hpp_source.html#l00044">44</a> of file <a class="el" href="sheet_8hpp_source.html">sheet.hpp</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aacdc0bab001a054a43fc86c3ae4cb8a2" name="aacdc0bab001a054a43fc86c3ae4cb8a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacdc0bab001a054a43fc86c3ae4cb8a2">&#9670;&#160;</a></span>~SheetBase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Derived &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classrpg__os_1_1specific_1_1SheetBase.html">rpg_os::specific::SheetBase</a>&lt; Derived &gt;::~<a class="el" href="classrpg__os_1_1specific_1_1SheetBase.html">SheetBase</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sheets are only ever used through a concrete generated type. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a8848c0b67ac111cd101725ebafcbfa34" name="a8848c0b67ac111cd101725ebafcbfa34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8848c0b67ac111cd101725ebafcbfa34">&#9670;&#160;</a></span>fromArchetype() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Derived &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Derived <a class="el" href="classrpg__os_1_1specific_1_1SheetBase.html">rpg_os::specific::SheetBase</a>&lt; Derived &gt;::fromArchetype </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &amp;&#160;</td>
+          <td class="paramname"><em>rulesetJson</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Loads a single archetype by id; throws std::invalid_argument when missing. </p>
+
+<p class="definition">Definition at line <a class="el" href="sheet_8hpp_source.html#l00047">47</a> of file <a class="el" href="sheet_8hpp_source.html">sheet.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="sheet_8hpp_source.html#l00047">rpg_os::specific::SheetBase&lt; Derived &gt;::fromArchetype()</a>, and <a class="el" href="namespacerpg__os.html#ab870da3d65c79d59dad5920efc43dc65a64663f4646781c9c0110838b905daa23">rpg_os::Random</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="sheet_8hpp_source.html#l00047">rpg_os::specific::SheetBase&lt; Derived &gt;::fromArchetype()</a>.</p>
+
+</div>
+</div>
+<a id="aeb5adffec52bf50446f2925c190d0361" name="aeb5adffec52bf50446f2925c190d0361"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb5adffec52bf50446f2925c190d0361">&#9670;&#160;</a></span>fromArchetype() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Derived &gt; </div>
+<div class="memtemplate">
+template&lt;RandomNumberGenerator Rng&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Derived <a class="el" href="classrpg__os_1_1specific_1_1SheetBase.html">rpg_os::specific::SheetBase</a>&lt; Derived &gt;::fromArchetype </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &amp;&#160;</td>
+          <td class="paramname"><em>rulesetJson</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacerpg__os.html#ab870da3d65c79d59dad5920efc43dc65">Variance</a>&#160;</td>
+          <td class="paramname"><em>variance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Rng &amp;&#160;</td>
+          <td class="paramname"><em>rng</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Loads a single archetype by id, picking ranged values per <code>variance</code>. </p>
+
+<p class="definition">Definition at line <a class="el" href="sheet_8hpp_source.html#l00054">54</a> of file <a class="el" href="sheet_8hpp_source.html">sheet.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a7ee8c76c15d5f592281d8bf372746719" name="a7ee8c76c15d5f592281d8bf372746719"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ee8c76c15d5f592281d8bf372746719">&#9670;&#160;</a></span>fromCreature() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Derived &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Derived <a class="el" href="classrpg__os_1_1specific_1_1SheetBase.html">rpg_os::specific::SheetBase</a>&lt; Derived &gt;::fromCreature </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &amp;&#160;</td>
+          <td class="paramname"><em>rulesetJson</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Loads a single creature from data.creatures by id; throws std::invalid_argument when missing (ranged values at random). </p>
+
+<p class="definition">Definition at line <a class="el" href="sheet_8hpp_source.html#l00086">86</a> of file <a class="el" href="sheet_8hpp_source.html">sheet.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="sheet_8hpp_source.html#l00086">rpg_os::specific::SheetBase&lt; Derived &gt;::fromCreature()</a>, and <a class="el" href="namespacerpg__os.html#ab870da3d65c79d59dad5920efc43dc65a64663f4646781c9c0110838b905daa23">rpg_os::Random</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="sheet_8hpp_source.html#l00086">rpg_os::specific::SheetBase&lt; Derived &gt;::fromCreature()</a>.</p>
+
+</div>
+</div>
+<a id="a6aa87e56a569d837d02b9b962dcd0e75" name="a6aa87e56a569d837d02b9b962dcd0e75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6aa87e56a569d837d02b9b962dcd0e75">&#9670;&#160;</a></span>fromCreature() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Derived &gt; </div>
+<div class="memtemplate">
+template&lt;RandomNumberGenerator Rng&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Derived <a class="el" href="classrpg__os_1_1specific_1_1SheetBase.html">rpg_os::specific::SheetBase</a>&lt; Derived &gt;::fromCreature </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &amp;&#160;</td>
+          <td class="paramname"><em>rulesetJson</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacerpg__os.html#ab870da3d65c79d59dad5920efc43dc65">Variance</a>&#160;</td>
+          <td class="paramname"><em>variance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Rng &amp;&#160;</td>
+          <td class="paramname"><em>rng</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Loads a single creature by id, picking ranged values per <code>variance</code>. </p>
+
+<p class="definition">Definition at line <a class="el" href="sheet_8hpp_source.html#l00093">93</a> of file <a class="el" href="sheet_8hpp_source.html">sheet.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a5ccbb178f5cfa9f3514982b277bb7406" name="a5ccbb178f5cfa9f3514982b277bb7406"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ccbb178f5cfa9f3514982b277bb7406">&#9670;&#160;</a></span>loadArchetypes() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Derived &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::vector&lt; Derived &gt; <a class="el" href="classrpg__os_1_1specific_1_1SheetBase.html">rpg_os::specific::SheetBase</a>&lt; Derived &gt;::loadArchetypes </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &amp;&#160;</td>
+          <td class="paramname"><em>rulesetJson</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Loads every archetype record from the ruleset JSON's data section. </p>
+
+<p class="definition">Definition at line <a class="el" href="sheet_8hpp_source.html#l00067">67</a> of file <a class="el" href="sheet_8hpp_source.html">sheet.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="sheet_8hpp_source.html#l00067">rpg_os::specific::SheetBase&lt; Derived &gt;::loadArchetypes()</a>, and <a class="el" href="namespacerpg__os.html#ab870da3d65c79d59dad5920efc43dc65a64663f4646781c9c0110838b905daa23">rpg_os::Random</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="sheet_8hpp_source.html#l00067">rpg_os::specific::SheetBase&lt; Derived &gt;::loadArchetypes()</a>.</p>
+
+</div>
+</div>
+<a id="a82bfc851b1a1e4ee95bb84249f768ff6" name="a82bfc851b1a1e4ee95bb84249f768ff6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82bfc851b1a1e4ee95bb84249f768ff6">&#9670;&#160;</a></span>loadArchetypes() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Derived &gt; </div>
+<div class="memtemplate">
+template&lt;RandomNumberGenerator Rng&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::vector&lt; Derived &gt; <a class="el" href="classrpg__os_1_1specific_1_1SheetBase.html">rpg_os::specific::SheetBase</a>&lt; Derived &gt;::loadArchetypes </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &amp;&#160;</td>
+          <td class="paramname"><em>rulesetJson</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacerpg__os.html#ab870da3d65c79d59dad5920efc43dc65">Variance</a>&#160;</td>
+          <td class="paramname"><em>variance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Rng &amp;&#160;</td>
+          <td class="paramname"><em>rng</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Loads every archetype record, picking ranged values per <code>variance</code>. </p>
+
+<p class="definition">Definition at line <a class="el" href="sheet_8hpp_source.html#l00074">74</a> of file <a class="el" href="sheet_8hpp_source.html">sheet.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a3985f18da94ba17d3f42c0c2c6619cd2" name="a3985f18da94ba17d3f42c0c2c6619cd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3985f18da94ba17d3f42c0c2c6619cd2">&#9670;&#160;</a></span>loadConditions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Derived &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::vector&lt; <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &gt; <a class="el" href="classrpg__os_1_1specific_1_1SheetBase.html">rpg_os::specific::SheetBase</a>&lt; Derived &gt;::loadConditions </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &amp;&#160;</td>
+          <td class="paramname"><em>rulesetJson</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Loads every conditions record from the ruleset JSON. </p>
+
+<p class="definition">Definition at line <a class="el" href="sheet_8hpp_source.html#l00141">141</a> of file <a class="el" href="sheet_8hpp_source.html">sheet.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="sheet_8hpp_source.html#l00124">rpg_os::specific::SheetBase&lt; Derived &gt;::loadSection()</a>.</p>
+
+</div>
+</div>
+<a id="ac1f70932e4f7a96667837c2f285c5982" name="ac1f70932e4f7a96667837c2f285c5982"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1f70932e4f7a96667837c2f285c5982">&#9670;&#160;</a></span>loadCreatures() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Derived &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::vector&lt; Derived &gt; <a class="el" href="classrpg__os_1_1specific_1_1SheetBase.html">rpg_os::specific::SheetBase</a>&lt; Derived &gt;::loadCreatures </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &amp;&#160;</td>
+          <td class="paramname"><em>rulesetJson</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Loads every creature record from the ruleset JSON's data section. </p>
+
+<p class="definition">Definition at line <a class="el" href="sheet_8hpp_source.html#l00106">106</a> of file <a class="el" href="sheet_8hpp_source.html">sheet.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="sheet_8hpp_source.html#l00106">rpg_os::specific::SheetBase&lt; Derived &gt;::loadCreatures()</a>, and <a class="el" href="namespacerpg__os.html#ab870da3d65c79d59dad5920efc43dc65a64663f4646781c9c0110838b905daa23">rpg_os::Random</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="sheet_8hpp_source.html#l00106">rpg_os::specific::SheetBase&lt; Derived &gt;::loadCreatures()</a>.</p>
+
+</div>
+</div>
+<a id="a03630136e12b53db3c2aa1d694bec6f7" name="a03630136e12b53db3c2aa1d694bec6f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03630136e12b53db3c2aa1d694bec6f7">&#9670;&#160;</a></span>loadCreatures() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Derived &gt; </div>
+<div class="memtemplate">
+template&lt;RandomNumberGenerator Rng&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::vector&lt; Derived &gt; <a class="el" href="classrpg__os_1_1specific_1_1SheetBase.html">rpg_os::specific::SheetBase</a>&lt; Derived &gt;::loadCreatures </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &amp;&#160;</td>
+          <td class="paramname"><em>rulesetJson</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacerpg__os.html#ab870da3d65c79d59dad5920efc43dc65">Variance</a>&#160;</td>
+          <td class="paramname"><em>variance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Rng &amp;&#160;</td>
+          <td class="paramname"><em>rng</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Loads every creature record, picking ranged values per <code>variance</code>. </p>
+
+<p class="definition">Definition at line <a class="el" href="sheet_8hpp_source.html#l00113">113</a> of file <a class="el" href="sheet_8hpp_source.html">sheet.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a20aa93f4641a3dce7527965c9df3b994" name="a20aa93f4641a3dce7527965c9df3b994"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20aa93f4641a3dce7527965c9df3b994">&#9670;&#160;</a></span>loadCurses()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Derived &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::vector&lt; <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &gt; <a class="el" href="classrpg__os_1_1specific_1_1SheetBase.html">rpg_os::specific::SheetBase</a>&lt; Derived &gt;::loadCurses </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &amp;&#160;</td>
+          <td class="paramname"><em>rulesetJson</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Loads every curses record from the ruleset JSON. </p>
+
+<p class="definition">Definition at line <a class="el" href="sheet_8hpp_source.html#l00161">161</a> of file <a class="el" href="sheet_8hpp_source.html">sheet.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="sheet_8hpp_source.html#l00124">rpg_os::specific::SheetBase&lt; Derived &gt;::loadSection()</a>.</p>
+
+</div>
+</div>
+<a id="a2d658d80bc1515d48f3591bf6450eae1" name="a2d658d80bc1515d48f3591bf6450eae1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d658d80bc1515d48f3591bf6450eae1">&#9670;&#160;</a></span>loadDiseases()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Derived &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::vector&lt; <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &gt; <a class="el" href="classrpg__os_1_1specific_1_1SheetBase.html">rpg_os::specific::SheetBase</a>&lt; Derived &gt;::loadDiseases </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &amp;&#160;</td>
+          <td class="paramname"><em>rulesetJson</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Loads every diseases record from the ruleset JSON. </p>
+
+<p class="definition">Definition at line <a class="el" href="sheet_8hpp_source.html#l00151">151</a> of file <a class="el" href="sheet_8hpp_source.html">sheet.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="sheet_8hpp_source.html#l00124">rpg_os::specific::SheetBase&lt; Derived &gt;::loadSection()</a>.</p>
+
+</div>
+</div>
+<a id="a26a25faeeca8a2f8a9510fd217a94817" name="a26a25faeeca8a2f8a9510fd217a94817"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26a25faeeca8a2f8a9510fd217a94817">&#9670;&#160;</a></span>loadItems()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Derived &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::vector&lt; <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &gt; <a class="el" href="classrpg__os_1_1specific_1_1SheetBase.html">rpg_os::specific::SheetBase</a>&lt; Derived &gt;::loadItems </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &amp;&#160;</td>
+          <td class="paramname"><em>rulesetJson</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Loads every items record from the ruleset JSON. </p>
+
+<p class="definition">Definition at line <a class="el" href="sheet_8hpp_source.html#l00156">156</a> of file <a class="el" href="sheet_8hpp_source.html">sheet.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="sheet_8hpp_source.html#l00124">rpg_os::specific::SheetBase&lt; Derived &gt;::loadSection()</a>.</p>
+
+</div>
+</div>
+<a id="a326973c892a44be48af82592d9f9c0bd" name="a326973c892a44be48af82592d9f9c0bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a326973c892a44be48af82592d9f9c0bd">&#9670;&#160;</a></span>loadPoisons()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Derived &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::vector&lt; <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &gt; <a class="el" href="classrpg__os_1_1specific_1_1SheetBase.html">rpg_os::specific::SheetBase</a>&lt; Derived &gt;::loadPoisons </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &amp;&#160;</td>
+          <td class="paramname"><em>rulesetJson</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Loads every poisons record from the ruleset JSON. </p>
+
+<p class="definition">Definition at line <a class="el" href="sheet_8hpp_source.html#l00146">146</a> of file <a class="el" href="sheet_8hpp_source.html">sheet.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="sheet_8hpp_source.html#l00124">rpg_os::specific::SheetBase&lt; Derived &gt;::loadSection()</a>.</p>
+
+</div>
+</div>
+<a id="ad30ea67b7a66f1ec98308868847ba9b1" name="ad30ea67b7a66f1ec98308868847ba9b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad30ea67b7a66f1ec98308868847ba9b1">&#9670;&#160;</a></span>loadSection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Derived &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::vector&lt; <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &gt; <a class="el" href="classrpg__os_1_1specific_1_1SheetBase.html">rpg_os::specific::SheetBase</a>&lt; Derived &gt;::loadSection </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &amp;&#160;</td>
+          <td class="paramname"><em>rulesetJson</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>section</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Loads every record from a named <code>data</code> section as raw JSON. </p>
+
+<p class="definition">Definition at line <a class="el" href="sheet_8hpp_source.html#l00124">124</a> of file <a class="el" href="sheet_8hpp_source.html">sheet.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="sheet_8hpp_source.html#l00141">rpg_os::specific::SheetBase&lt; Derived &gt;::loadConditions()</a>, <a class="el" href="sheet_8hpp_source.html#l00161">rpg_os::specific::SheetBase&lt; Derived &gt;::loadCurses()</a>, <a class="el" href="sheet_8hpp_source.html#l00151">rpg_os::specific::SheetBase&lt; Derived &gt;::loadDiseases()</a>, <a class="el" href="sheet_8hpp_source.html#l00156">rpg_os::specific::SheetBase&lt; Derived &gt;::loadItems()</a>, <a class="el" href="sheet_8hpp_source.html#l00146">rpg_os::specific::SheetBase&lt; Derived &gt;::loadPoisons()</a>, and <a class="el" href="sheet_8hpp_source.html#l00136">rpg_os::specific::SheetBase&lt; Derived &gt;::loadSpells()</a>.</p>
+
+</div>
+</div>
+<a id="ab7faca8ff960bdcf18b14b93c5b35536" name="ab7faca8ff960bdcf18b14b93c5b35536"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7faca8ff960bdcf18b14b93c5b35536">&#9670;&#160;</a></span>loadSpells()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Derived &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::vector&lt; <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &gt; <a class="el" href="classrpg__os_1_1specific_1_1SheetBase.html">rpg_os::specific::SheetBase</a>&lt; Derived &gt;::loadSpells </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a> &amp;&#160;</td>
+          <td class="paramname"><em>rulesetJson</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Loads every spells record from the ruleset JSON. </p>
+
+<p class="definition">Definition at line <a class="el" href="sheet_8hpp_source.html#l00136">136</a> of file <a class="el" href="sheet_8hpp_source.html">sheet.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="sheet_8hpp_source.html#l00124">rpg_os::specific::SheetBase&lt; Derived &gt;::loadSection()</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li><a class="el" href="sheet_8hpp_source.html">sheet.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacerpg__os.html">rpg_os</a></li><li class="navelem"><a class="el" href="namespacerpg__os_1_1specific.html">specific</a></li><li class="navelem"><a class="el" href="classrpg__os_1_1specific_1_1SheetBase.html">SheetBase</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

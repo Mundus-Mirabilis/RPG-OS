@@ -12,6 +12,9 @@ var annotated_dup =
           [ "Character", "classrpg__os_1_1generated_1_1tde5e_1_1Character.html", "classrpg__os_1_1generated_1_1tde5e_1_1Character" ]
         ] ]
       ] ],
+      [ "specific", "namespacerpg__os_1_1specific.html", [
+        [ "SheetBase", "classrpg__os_1_1specific_1_1SheetBase.html", "classrpg__os_1_1specific_1_1SheetBase" ]
+      ] ],
       [ "ActionBudget", "structrpg__os_1_1ActionBudget.html", "structrpg__os_1_1ActionBudget" ],
       [ "ActiveEffect", "structrpg__os_1_1ActiveEffect.html", "structrpg__os_1_1ActiveEffect" ],
       [ "Advancement", "classrpg__os_1_1Advancement.html", "classrpg__os_1_1Advancement" ],

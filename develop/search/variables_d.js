@@ -4,6 +4,5 @@ var searchData=
   ['names_1',['names',['../structrpg__os_1_1FightLog.html#aae28501347f0575921f748e05971af95',1,'rpg_os::FightLog']]],
   ['nature_2',['nature',['../classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#a934fe094a4bccc4215663857772e778c',1,'rpg_os::generated::dnd5e::Character']]],
   ['navigate_3',['navigate',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a5dbc5682398828c351bfb01944d2e53d',1,'rpg_os::generated::brp_ugc::Character']]],
-  ['ns_4',['ns',['../classrpg__os_1_1Ruleset.html#a7dbdecd3f981fae0a7b1d936ab3a155a',1,'rpg_os::Ruleset']]],
-  ['numpoolattributes_5',['numPoolAttributes',['../structrpg__os_1_1CheckRecipe.html#a68a1055fb6c0915d1602e0d42002d353',1,'rpg_os::CheckRecipe']]]
+  ['numpoolattributes_4',['numPoolAttributes',['../structrpg__os_1_1CheckRecipe.html#a68a1055fb6c0915d1602e0d42002d353',1,'rpg_os::CheckRecipe']]]
 ];

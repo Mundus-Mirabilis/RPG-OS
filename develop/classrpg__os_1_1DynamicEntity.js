@@ -1,6 +1,5 @@
 var classrpg__os_1_1DynamicEntity =
 [
-    [ "AppliedAffliction", "classrpg__os_1_1DynamicEntity.html#a57040c42313d412e5c4c90d6301d4f99", null ],
     [ "EventSink", "classrpg__os_1_1DynamicEntity.html#abaa08177469d99dc62108f4e44420c7e", null ],
     [ "DynamicEntity", "classrpg__os_1_1DynamicEntity.html#a59e6e4d6a951e59c87e6b3b4bef10328", null ],
     [ "addAffliction", "classrpg__os_1_1DynamicEntity.html#a4b84490714ca8a4541558e0ffc6074b5", null ],

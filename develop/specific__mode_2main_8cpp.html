@@ -151,7 +151,7 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Specific mode demo: use the code-generated, strongly typed headers. </p>
-<p>Attributes are named members (<code>geron.courage</code>), derived stats are named getters with compiled formulas (<code>geron.maxLifePoints()</code>), and checks are named methods (<code>geron.checkClimbing(...)</code>) — while the character data still comes from the ruleset JSON at runtime via <code><a class="el" href="classrpg__os_1_1generated_1_1tde5e_1_1Character.html#ab7526d06b587d16f1828630a566c06c1" title="Loads a single archetype by id; throws std::invalid_argument when missing.">rpg_os::generated::tde5e::Character::fromArchetype</a></code>.</p>
+<p>Attributes are named members (<code>geron.courage</code>), derived stats are named getters with compiled formulas (<code>geron.maxLifePoints()</code>), and checks are named methods (<code>geron.checkClimbing(...)</code>) — while the character data still comes from the ruleset JSON at runtime via <code><a class="el" href="classrpg__os_1_1specific_1_1SheetBase.html#a8848c0b67ac111cd101725ebafcbfa34" title="Loads a single archetype by id; throws std::invalid_argument when missing.">rpg_os::generated::tde5e::Character::fromArchetype</a></code>.</p>
 <dl class="section user"><dt>Why this mode?</dt><dd>It shows the trade the code generator makes: the <em>schema</em> is compiled in (type-safe, allocation-free, inlineable), but the <em>data</em> is still loaded from JSON so creatures and items never need a rebuild. This is the demo counterpart to <code><a class="el" href="universal__mode_2main_8cpp.html" title="Universal mode demo: load any ruleset JSON at runtime and resolve rules generically.">examples/universal_mode/main.cpp</a></code> — both print the same numbers for the same character.</dd></dl>
 <p>Usage: <code>rpg_os_example_specific</code> [project-root] </p>
 
@@ -185,7 +185,7 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="specific__mode_2main_8cpp_source.html#l00053">53</a> of file <a class="el" href="specific__mode_2main_8cpp_source.html">specific_mode/main.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="tde5e__core__static_8hpp_source.html#l02007">rpg_os::generated::tde5e::Character::fromArchetype()</a>, <a class="el" href="dnd5e__srd__static_8hpp_source.html#l00928">rpg_os::generated::dnd5e::Character::fromCreature()</a>, <a class="el" href="types_8hpp_source.html#l00081">rpg_os::CheckResult::isSuccess</a>, <a class="el" href="types_8hpp_source.html#l00105">rpg_os::CheckResult::qualityLevel</a>, <a class="el" href="types_8hpp_source.html#l00094">rpg_os::CheckResult::rawDiceRolls</a>, and <a class="el" href="types_8hpp_source.html#l00101">rpg_os::CheckResult::remainingPool</a>.</p>
+<p class="reference">References <a class="el" href="sheet_8hpp_source.html#l00047">rpg_os::specific::SheetBase&lt; Character &gt;::fromArchetype()</a>, <a class="el" href="sheet_8hpp_source.html#l00086">rpg_os::specific::SheetBase&lt; Character &gt;::fromCreature()</a>, <a class="el" href="types_8hpp_source.html#l00081">rpg_os::CheckResult::isSuccess</a>, <a class="el" href="types_8hpp_source.html#l00105">rpg_os::CheckResult::qualityLevel</a>, <a class="el" href="types_8hpp_source.html#l00094">rpg_os::CheckResult::rawDiceRolls</a>, and <a class="el" href="types_8hpp_source.html#l00101">rpg_os::CheckResult::remainingPool</a>.</p>
 
 </div>
 </div>

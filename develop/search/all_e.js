@@ -15,7 +15,6 @@ var searchData=
   ['notequipped_12',['NotEquipped',['../namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766ae4f167d7fb73c6592711f327d3d7f8f6',1,'rpg_os']]],
   ['npm_13',['On the web — WASM and npm',['../user_guide.html#autotoc_md25',1,'']]],
   ['npm_20package_14',['npm package',['../index.html#autotoc_md7',1,'Also on the web — the npm package'],['../developer_guide.html#autotoc_md17',1,'The WASM port &amp; npm package']]],
-  ['ns_15',['ns',['../classrpg__os_1_1Ruleset.html#a7dbdecd3f981fae0a7b1d936ab3a155a',1,'rpg_os::Ruleset']]],
-  ['nullstatprovider_16',['NullStatProvider',['../structrpg__os_1_1NullStatProvider.html',1,'rpg_os']]],
-  ['numpoolattributes_17',['numPoolAttributes',['../structrpg__os_1_1CheckRecipe.html#a68a1055fb6c0915d1602e0d42002d353',1,'rpg_os::CheckRecipe']]]
+  ['nullstatprovider_15',['NullStatProvider',['../structrpg__os_1_1NullStatProvider.html',1,'rpg_os']]],
+  ['numpoolattributes_16',['numPoolAttributes',['../structrpg__os_1_1CheckRecipe.html#a68a1055fb6c0915d1602e0d42002d353',1,'rpg_os::CheckRecipe']]]
 ];

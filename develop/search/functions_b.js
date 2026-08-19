@@ -1,8 +1,8 @@
 var searchData=
 [
   ['main_0',['main',['../universal__mode_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;main.cpp'],['../specific__mode_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;main.cpp'],['../fight_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;main.cpp'],['../ecs__registry_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;main.cpp'],['../ecs__entt_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;main.cpp']]],
-  ['makecombatantspec_1',['makeCombatantSpec',['../namespacerpg__os.html#adacf6091542317212a714e913c4badb1',1,'rpg_os']]],
-  ['makecombatantspecfromentity_2',['makeCombatantSpecFromEntity',['../namespacerpg__os.html#a2d74551d4f6909799240c1ea7b674856',1,'rpg_os']]],
+  ['makecombatantspec_1',['makeCombatantSpec',['../namespacerpg__os.html#ab89f2cfc56d374bde4142c6bf4bc96c9',1,'rpg_os']]],
+  ['makecombatantspecfromentity_2',['makeCombatantSpecFromEntity',['../namespacerpg__os.html#a776f30dd6b9dd4397bddc7cf1d81ecf4',1,'rpg_os']]],
   ['markslotused_3',['markSlotUsed',['../classrpg__os_1_1Spellbook.html#a489b55eb6cc84dd5620dd35f4031d41d',1,'rpg_os::Spellbook']]],
   ['max_4',['max',['../namespacerpg__os_1_1math.html#a54dc832d91bd4b8e77331ac51e3b0db3',1,'rpg_os::math']]],
   ['maxarcaneenergy_5',['maxArcaneEnergy',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a7fd2f680a8c4a5701687d83929bf08fb',1,'rpg_os::generated::tde5e::Character']]],
