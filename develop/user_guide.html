@@ -124,7 +124,7 @@ $(document).ready(function(){initNavTree('user_guide.html',''); initResizable();
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><em>Build a game, a tool, or a virtual tabletop on top of RPG OS.</em> This guide is for everyone who wants to <b>use</b> the library — game designers, developers writing digital companions, web apps or whole VTTs. It tells you what you actually need from the API reference and points you at the right entry points. If you want to work <em>on</em> the engine itself, see the <a class="el" href="developer_guide.html">Developer Guide</a>.</p>
-<h2><a class="anchor" id="autotoc_md21"></a>
+<h2><a class="anchor" id="autotoc_md22"></a>
 The two modes — pick your path</h2>
 <p>RPG OS reads <b>ruleset JSON</b> files and interprets them; it has no built-in knowledge of any game. You use it in one of two ways:</p>
 <ol type="1">
@@ -132,7 +132,7 @@ The two modes — pick your path</h2>
 <li><b>Specific mode</b> — generated, strongly typed code. A code generator compiles a ruleset's schema into a C++ header with named members and methods. Best for performance-critical, compile-time-checked game code.</li>
 </ol>
 <p>Both modes share the same core, so results are identical. You can start in universal mode and switch to specific mode later without changing behaviour.</p>
-<h2><a class="anchor" id="autotoc_md22"></a>
+<h2><a class="anchor" id="autotoc_md23"></a>
 Universal mode</h2>
 <p>The entry point is the <code>RulesetEngine</code> class (<code><a class="el" href="engine_8hpp.html">include/rpg_os/universal/engine.hpp</a></code>). It owns everything: the loaded ruleset, entity creation, check resolution, combat and the event bus.</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="engine_8hpp.html">rpg_os/universal/engine.hpp</a>&gt;</span></div>
@@ -189,7 +189,7 @@ Universal mode</h2>
 <td class="markdownTableBodyNone"><code>CombatSession</code>   </td><td class="markdownTableBodyNone"><code><a class="el" href="combat__session_8hpp.html" title="Turn &amp; action-economy orchestrator (universal mode).">universal/combat_session.hpp</a></code>   </td><td class="markdownTableBodyNone">Initiative, turns, action budget   </td></tr>
 </table>
 <p>The engine's methods mirror a rulebook: <code>createEntity</code>, <code>createCreature</code>, <code>executeCheck</code>, <code>executeSkillCheck</code>, <code>castSpell</code>, <code>applyAffliction</code>, <code>runFight</code>, <code>buy</code>, <code>equip</code>, <code>gainXp</code>, <code>longRest</code>, … Search the reference for the operation you need — if a rulebook covers it, the engine most likely models it as data.</p>
-<h2><a class="anchor" id="autotoc_md23"></a>
+<h2><a class="anchor" id="autotoc_md24"></a>
 Specific mode (generated code)</h2>
 <p>Run the code generator on a ruleset to produce a strongly typed header:</p>
 <div class="fragment"><div class="line">python3 codegen/rpg_os_codegen.py --ruleset rulesets/tde5e_core.json --out generated/</div>
@@ -210,7 +210,7 @@ Specific mode (generated code)</h2>
 <div class="ttc" id="anamespacerpg__os_html_afa8b802b0bd5a50e36a895d4c7e0820d"><div class="ttname"><a href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">rpg_os::Json</a></div><div class="ttdeci">nlohmann::json Json</div><div class="ttdef"><b>Definition</b> <a href="json_8hpp_source.html#l00040">json.hpp:40</a></div></div>
 <div class="ttc" id="atde5e__core__static_8hpp_html"><div class="ttname"><a href="tde5e__core__static_8hpp.html">tde5e_core_static.hpp</a></div><div class="ttdoc">Strongly typed The Dark Eye 5th Edition (Core Rules) class, generated from the ruleset schema by the ...</div></div>
 </div><!-- fragment --><p>Generated code still loads the ruleset JSON at <b>runtime</b> for the data database (creatures, items, archetypes); only the <em>rules</em> are compiled. The generated headers depend only on <code>rpg_os/common</code> and <code>rpg_os/core</code> — not on the universal layer.</p>
-<h2><a class="anchor" id="autotoc_md24"></a>
+<h2><a class="anchor" id="autotoc_md25"></a>
 The examples</h2>
 <p>The <code>examples/</code> directory contains small, self-contained programs that demonstrate both modes and the surrounding patterns. Build and run them to see RPG OS in action:</p>
 <div class="fragment"><div class="line">cmake --build build</div>
@@ -221,7 +221,7 @@ The examples</h2>
 <div class="line">./build/bin/rpg_os_example_ecs_registry . # entity-component-system pattern, no deps</div>
 <div class="line">./build/bin/rpg_os_example_ecs_entt .     # the same pattern with EnTT</div>
 </div><!-- fragment --><p>See <code><a class="el" href="examples_2README_8md.html">examples/README.md</a></code> for the full list and CLI options.</p>
-<h2><a class="anchor" id="autotoc_md25"></a>
+<h2><a class="anchor" id="autotoc_md26"></a>
 Creating your own ruleset JSON</h2>
 <p>A ruleset is <b>one JSON file</b>. This is how you add a new game system — you never touch the engine. The file is validated against <a href="../rulesets/ruleset.schema.json"><code>rulesets/ruleset.schema.json</code></a> (JSON Schema draft-07).</p>
 <p>The minimal skeleton looks like this:</p>
@@ -263,10 +263,10 @@ Creating your own ruleset JSON</h2>
 <li><b>Licences are per-ruleset.</b> The <code>licence</code> field is required; add <code>licence_source</code> (a URL to where the rights holder states it), <code>licence_notice</code> (verbatim text a licence requires, e.g. the ORC Notice) and <code>attribution</code> (required credit) when they apply. The engine refuses to load a ruleset without a licence.</li>
 </ul>
 <p>Look at <code>rulesets/tde5e_core.json</code> (small and complete) and <code>rulesets/dnd5e_srd.json</code> (large) as real-world reference files.</p>
-<h2><a class="anchor" id="autotoc_md26"></a>
+<h2><a class="anchor" id="autotoc_md27"></a>
 On the web — WASM and npm</h2>
 <p>The universal engine is compiled to WebAssembly and published as <code>@mundus-mirabilis/rpg-os</code> — see the package's <a href="https://github.com/Mundus-Mirabilis/RPG-OS/blob/develop/wasm/package/README.md">README</a>. It runs in Node.js and in the browser, with any ruleset JSON loaded at runtime. The ELO Arena live demo (<a href="https://mundus-mirabilis.github.io/RPG-OS/main/demo/">https://mundus-mirabilis.github.io/RPG-OS/main/demo/</a>) is the fastest way to see what the engine can do without compiling anything.</p>
-<h2><a class="anchor" id="autotoc_md27"></a>
+<h2><a class="anchor" id="autotoc_md28"></a>
 Where to go next in the reference</h2>
 <ul>
 <li><b>Classes</b> tab — the full list of types; start with <code>RulesetEngine</code> and <code>DynamicEntity</code>.</li>

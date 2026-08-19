@@ -7,9 +7,12 @@ var structrpg__os_1_1FightActionLog =
     [ "hpBefore", "structrpg__os_1_1FightActionLog.html#a2952f234f3da0af4bd98840b58da548a", null ],
     [ "isHit", "structrpg__os_1_1FightActionLog.html#a804ef13c2ab927721e4e118b08cfa1d5", null ],
     [ "kind", "structrpg__os_1_1FightActionLog.html#a99b057da422619dd5c07ce2ccf5f8e29", null ],
+    [ "resourceAfter", "structrpg__os_1_1FightActionLog.html#abc056016c753eeacc8ea05a9583ad2aa", null ],
+    [ "resourceBefore", "structrpg__os_1_1FightActionLog.html#ad015be290bda459216e0f733bb5be090", null ],
     [ "resourceCost", "structrpg__os_1_1FightActionLog.html#a31fd2685910d83e05282416665f8cc28", null ],
     [ "resourceId", "structrpg__os_1_1FightActionLog.html#a12934179f4afc750907747f3e12c88e5", null ],
     [ "spellId", "structrpg__os_1_1FightActionLog.html#ac904e83f5fb70d8bc8aac25aef5609fc", null ],
+    [ "spellName", "structrpg__os_1_1FightActionLog.html#a561cd237358be3db64edd0a28006f033", null ],
     [ "targetHp", "structrpg__os_1_1FightActionLog.html#a1cdfa6540b4d1e6633926d28167452ad", null ],
     [ "targetIndex", "structrpg__os_1_1FightActionLog.html#a0f15e0f842fdb6fab257b935f79c75d1", null ]
 ];

@@ -2,6 +2,7 @@ var test__combat_8cpp =
 [
     [ "TEST_CASE", "test__combat_8cpp.html#a08b3b3683c19d94c3fb0b1805bc44ac0", null ],
     [ "TEST_CASE", "test__combat_8cpp.html#ad929a60ddcd2a7ccd893e68bd91c74e1", null ],
+    [ "TEST_CASE", "test__combat_8cpp.html#a2b7a77e390ca5e2b3eeff988107b4d6f", null ],
     [ "TEST_CASE", "test__combat_8cpp.html#a00413ab450ccef7129a0f884c3dca484", null ],
     [ "TEST_CASE", "test__combat_8cpp.html#a158d0b0eaa0701b160fe32ea49c6c3bf", null ],
     [ "TEST_CASE", "test__combat_8cpp.html#a5fc264f9a6c7f18baa9049cad9aa562a", null ],
@@ -19,6 +20,7 @@ var test__combat_8cpp =
     [ "TEST_CASE", "test__combat_8cpp.html#a278a28635eccb69b15bd30cfacb144a5", null ],
     [ "TEST_CASE", "test__combat_8cpp.html#ab236cfa46f5686adac62af8dd4976103", null ],
     [ "TEST_CASE", "test__combat_8cpp.html#acd690909b26e1d837ef397961f519a35", null ],
+    [ "TEST_CASE", "test__combat_8cpp.html#ab6dda3d99e53d6aaf75adf1be7117ff6", null ],
     [ "TEST_CASE", "test__combat_8cpp.html#a425ea394e70618217db5a917c6e7610e", null ],
     [ "TEST_CASE", "test__combat_8cpp.html#a5a09ec6321ca75173fa3de659d9fb5f8", null ],
     [ "TEST_CASE", "test__combat_8cpp.html#a341e4588c7e0747dc90ad7e0e0ec83c6", null ],

@@ -5,6 +5,7 @@ var structrpg__os_1_1RulesetEngine_1_1SpellResult =
     [ "check", "structrpg__os_1_1RulesetEngine_1_1SpellResult.html#a3908e0f1f34cfc6e0e391fe076c330e9", null ],
     [ "choicesRequired", "structrpg__os_1_1RulesetEngine_1_1SpellResult.html#a7aadc13d31c24f0198c51f369950920e", null ],
     [ "cost", "structrpg__os_1_1RulesetEngine_1_1SpellResult.html#a6f82ca9bcd40bc22ae78ef858b667622", null ],
+    [ "damageDice", "structrpg__os_1_1RulesetEngine_1_1SpellResult.html#ab2d642b837d6509525a1b2f3c91de9c2", null ],
     [ "denied", "structrpg__os_1_1RulesetEngine_1_1SpellResult.html#a3be89610702e023cb7b38e1b832f15d9", null ],
     [ "resourceId", "structrpg__os_1_1RulesetEngine_1_1SpellResult.html#a5a748f81ea072c54144037135a6ab786", null ]
 ];

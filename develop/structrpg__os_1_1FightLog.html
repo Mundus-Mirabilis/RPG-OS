@@ -134,6 +134,15 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:aae28501347f0575921f748e05971af95" id="r_aae28501347f0575921f748e05971af95"><td class="memItemLeft" align="right" valign="top">std::array&lt; std::string, 2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrpg__os_1_1FightLog.html#aae28501347f0575921f748e05971af95">names</a> {}</td></tr>
 <tr class="memdesc:aae28501347f0575921f748e05971af95"><td class="mdescLeft">&#160;</td><td class="mdescRight">combatant names  <br /></td></tr>
 <tr class="separator:aae28501347f0575921f748e05971af95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adec74aef4f498dbe9edc4fce6d1bc434" id="r_adec74aef4f498dbe9edc4fce6d1bc434"><td class="memItemLeft" align="right" valign="top">std::array&lt; std::vector&lt; std::string &gt;, 2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrpg__os_1_1FightLog.html#adec74aef4f498dbe9edc4fce6d1bc434">spells</a> {}</td></tr>
+<tr class="memdesc:adec74aef4f498dbe9edc4fce6d1bc434"><td class="mdescLeft">&#160;</td><td class="mdescRight">each combatant's known spells (names)  <br /></td></tr>
+<tr class="separator:adec74aef4f498dbe9edc4fce6d1bc434"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2b6f004ace6168a620870182a6218b4" id="r_ad2b6f004ace6168a620870182a6218b4"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrpg__os_1_1FightLog.html#ad2b6f004ace6168a620870182a6218b4">resourceId</a></td></tr>
+<tr class="memdesc:ad2b6f004ace6168a620870182a6218b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">the spell-resource pool id ("", "AE", ...)  <br /></td></tr>
+<tr class="separator:ad2b6f004ace6168a620870182a6218b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d95a106651abd7b7885cfffe6206c1d" id="r_a2d95a106651abd7b7885cfffe6206c1d"><td class="memItemLeft" align="right" valign="top">std::array&lt; int32_t, 2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrpg__os_1_1FightLog.html#a2d95a106651abd7b7885cfffe6206c1d">resourcePool</a> {0, 0}</td></tr>
+<tr class="memdesc:a2d95a106651abd7b7885cfffe6206c1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">each combatant's initial spell resource  <br /></td></tr>
+<tr class="separator:a2d95a106651abd7b7885cfffe6206c1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add57bec17880508f1fac32b5ea243ab7" id="r_add57bec17880508f1fac32b5ea243ab7"><td class="memItemLeft" align="right" valign="top">std::array&lt; int32_t, 2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrpg__os_1_1FightLog.html#add57bec17880508f1fac32b5ea243ab7">maxLp</a> {0, 0}</td></tr>
 <tr class="memdesc:add57bec17880508f1fac32b5ea243ab7"><td class="mdescLeft">&#160;</td><td class="mdescRight">starting hit points of both combatants  <br /></td></tr>
 <tr class="separator:add57bec17880508f1fac32b5ea243ab7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -147,7 +156,7 @@ Public Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The full transcript of one fight — the individual dice rolls and stat changes from the opening initiative roll to the final hit that decided the winner. Passed to <a class="el" href="namespacerpg__os.html#a3758c1ea47b844ed9ca1d0244a1f0e1d">runFight</a>'s <code><a class="el" href="structrpg__os_1_1FightLog.html">FightLog</a></code> overload; the plain (non-logging) overload records nothing, so Monte-Carlo loops stay fast. </p>
 
-<p class="definition">Definition at line <a class="el" href="combat_8hpp_source.html#l00118">118</a> of file <a class="el" href="combat_8hpp_source.html">combat.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="combat_8hpp_source.html#l00121">121</a> of file <a class="el" href="combat_8hpp_source.html">combat.hpp</a>.</p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="add57bec17880508f1fac32b5ea243ab7" name="add57bec17880508f1fac32b5ea243ab7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#add57bec17880508f1fac32b5ea243ab7">&#9670;&#160;</a></span>maxLp</h2>
@@ -163,9 +172,9 @@ Public Attributes</h2></td></tr>
 
 <p>starting hit points of both combatants </p>
 
-<p class="definition">Definition at line <a class="el" href="combat_8hpp_source.html#l00120">120</a> of file <a class="el" href="combat_8hpp_source.html">combat.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="combat_8hpp_source.html#l00126">126</a> of file <a class="el" href="combat_8hpp_source.html">combat.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00597">rpg_os::detail::runFightImpl()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00628">rpg_os::detail::runFightImpl()</a>.</p>
 
 </div>
 </div>
@@ -183,9 +192,49 @@ Public Attributes</h2></td></tr>
 
 <p>combatant names </p>
 
-<p class="definition">Definition at line <a class="el" href="combat_8hpp_source.html#l00119">119</a> of file <a class="el" href="combat_8hpp_source.html">combat.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="combat_8hpp_source.html#l00122">122</a> of file <a class="el" href="combat_8hpp_source.html">combat.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00597">rpg_os::detail::runFightImpl()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00628">rpg_os::detail::runFightImpl()</a>.</p>
+
+</div>
+</div>
+<a id="ad2b6f004ace6168a620870182a6218b4" name="ad2b6f004ace6168a620870182a6218b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2b6f004ace6168a620870182a6218b4">&#9670;&#160;</a></span>resourceId</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string rpg_os::FightLog::resourceId</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>the spell-resource pool id ("", "AE", ...) </p>
+
+<p class="definition">Definition at line <a class="el" href="combat_8hpp_source.html#l00124">124</a> of file <a class="el" href="combat_8hpp_source.html">combat.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00628">rpg_os::detail::runFightImpl()</a>.</p>
+
+</div>
+</div>
+<a id="a2d95a106651abd7b7885cfffe6206c1d" name="a2d95a106651abd7b7885cfffe6206c1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d95a106651abd7b7885cfffe6206c1d">&#9670;&#160;</a></span>resourcePool</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt;int32_t, 2&gt; rpg_os::FightLog::resourcePool {0, 0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>each combatant's initial spell resource </p>
+
+<p class="definition">Definition at line <a class="el" href="combat_8hpp_source.html#l00125">125</a> of file <a class="el" href="combat_8hpp_source.html">combat.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00628">rpg_os::detail::runFightImpl()</a>.</p>
 
 </div>
 </div>
@@ -203,9 +252,29 @@ Public Attributes</h2></td></tr>
 
 <p>per-round detail </p>
 
-<p class="definition">Definition at line <a class="el" href="combat_8hpp_source.html#l00121">121</a> of file <a class="el" href="combat_8hpp_source.html">combat.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="combat_8hpp_source.html#l00127">127</a> of file <a class="el" href="combat_8hpp_source.html">combat.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="test__combat_8cpp_source.html#l00173">TEST_CASE()</a>.</p>
+
+</div>
+</div>
+<a id="adec74aef4f498dbe9edc4fce6d1bc434" name="adec74aef4f498dbe9edc4fce6d1bc434"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adec74aef4f498dbe9edc4fce6d1bc434">&#9670;&#160;</a></span>spells</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt;std::vector&lt;std::string&gt;, 2&gt; rpg_os::FightLog::spells {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>each combatant's known spells (names) </p>
+
+<p class="definition">Definition at line <a class="el" href="combat_8hpp_source.html#l00123">123</a> of file <a class="el" href="combat_8hpp_source.html">combat.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00628">rpg_os::detail::runFightImpl()</a>.</p>
 
 </div>
 </div>
@@ -223,9 +292,9 @@ Public Attributes</h2></td></tr>
 
 <p>0, 1, or -1 (draw) </p>
 
-<p class="definition">Definition at line <a class="el" href="combat_8hpp_source.html#l00122">122</a> of file <a class="el" href="combat_8hpp_source.html">combat.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="combat_8hpp_source.html#l00128">128</a> of file <a class="el" href="combat_8hpp_source.html">combat.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00597">rpg_os::detail::runFightImpl()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00628">rpg_os::detail::runFightImpl()</a>.</p>
 
 </div>
 </div>

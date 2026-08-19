@@ -5,7 +5,7 @@ var searchData=
   ['nature_2',['nature',['../classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#a934fe094a4bccc4215663857772e778c',1,'rpg_os::generated::dnd5e::Character']]],
   ['navigate_3',['navigate',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a5dbc5682398828c351bfb01944d2e53d',1,'rpg_os::generated::brp_ugc::Character']]],
   ['next_4',['next',['../classrpg__os_1_1CombatSession.html#a87e12aba6c800f37140f4b214df70905',1,'rpg_os::CombatSession']]],
-  ['next_20in_20the_20reference_5',['Where to go next in the reference',['../user_guide.html#autotoc_md27',1,'']]],
+  ['next_20in_20the_20reference_5',['Where to go next in the reference',['../user_guide.html#autotoc_md28',1,'']]],
   ['nextentityid_6',['nextEntityId',['../namespacerpg__os.html#a2dcb05ea6914e1c082e0c320ec390679',1,'rpg_os']]],
   ['noencumbrance_7',['NoEncumbrance',['../namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766a8e035c9eac2ef52493607d738b571317',1,'rpg_os']]],
   ['none_8',['none',['../namespacerpg__os.html#a475606cc248fcbc80000a0ceb3b8c448a6adf97f83acf6453d4a6a4b1070f3754',1,'rpg_os::None'],['../namespacerpg__os.html#a77f98d725fb2409a3e02d40f5772f3bca6adf97f83acf6453d4a6a4b1070f3754',1,'rpg_os::None'],['../namespacerpg__os.html#ab545c7c57f9754a6d5b040f83bedaf52a6adf97f83acf6453d4a6a4b1070f3754',1,'rpg_os::None'],['../namespacerpg__os.html#a2fe23abe4211557387324614b880a9bca6adf97f83acf6453d4a6a4b1070f3754',1,'rpg_os::None'],['../namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766a6adf97f83acf6453d4a6a4b1070f3754',1,'rpg_os::None']]],
@@ -13,7 +13,7 @@ var searchData=
   ['nospellslot_10',['NoSpellSlot',['../namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766a7cde3b18e13aa9cb5addf7e0ff1f9f0d',1,'rpg_os']]],
   ['notenoughmoney_11',['NotEnoughMoney',['../namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766a261cca2ac483068d987c38cfa8fd6094',1,'rpg_os']]],
   ['notequipped_12',['NotEquipped',['../namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766ae4f167d7fb73c6592711f327d3d7f8f6',1,'rpg_os']]],
-  ['npm_13',['On the web — WASM and npm',['../user_guide.html#autotoc_md26',1,'']]],
+  ['npm_13',['On the web — WASM and npm',['../user_guide.html#autotoc_md27',1,'']]],
   ['npm_20package_14',['npm package',['../index.html#autotoc_md7',1,'Also on the web — the npm package'],['../developer_guide.html#autotoc_md18',1,'The WASM port &amp; npm package']]],
   ['nullstatprovider_15',['NullStatProvider',['../structrpg__os_1_1NullStatProvider.html',1,'rpg_os']]],
   ['numpoolattributes_16',['numPoolAttributes',['../structrpg__os_1_1CheckRecipe.html#a68a1055fb6c0915d1602e0d42002d353',1,'rpg_os::CheckRecipe']]]

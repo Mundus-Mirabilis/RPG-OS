@@ -43,7 +43,7 @@ var searchData=
   ['all_40',['all',['../classrpg__os_1_1EntityRegistry.html#a6c0b774326773140aa0289d68e1d2264',1,'rpg_os::EntityRegistry']]],
   ['also_20on_20the_20web_20—_20the_20npm_20package_41',['Also on the web — the npm package',['../index.html#autotoc_md7',1,'']]],
   ['amount_42',['amount',['../structrpg__os_1_1EventActionDef.html#a891457979528b9f2be0ef37d7cf0939e',1,'rpg_os::EventActionDef']]],
-  ['and_20npm_43',['On the web — WASM and npm',['../user_guide.html#autotoc_md26',1,'']]],
+  ['and_20npm_43',['On the web — WASM and npm',['../user_guide.html#autotoc_md27',1,'']]],
   ['and_20value_20types_44',['Shared core — mechanics and value types',['../group__rpg__os__core.html',1,'']]],
   ['animalhandling_45',['animalHandling',['../classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#a5737e1af31bb15a2f971dfa70d15f5e1',1,'rpg_os::generated::dnd5e::Character']]],
   ['animallore_46',['animalLore',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a000aee8eb8462859bf0d1b0e6ca80054',1,'rpg_os::generated::tde5e::Character']]],

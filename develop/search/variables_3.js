@@ -2,7 +2,7 @@ var searchData=
 [
   ['damage_0',['damage',['../structrpg__os_1_1FightActionLog.html#aaf221b85eb0c3d69159da2fd0ab8125d',1,'rpg_os::FightActionLog']]],
   ['damagedealt_1',['damageDealt',['../structrpg__os_1_1RulesetEngine_1_1EffectsResult.html#afddc10cd35489e005c63fe7a3c3a0bb5',1,'rpg_os::RulesetEngine::EffectsResult']]],
-  ['damagedice_2',['damageDice',['../structrpg__os_1_1FightActionLog.html#ac7ce2ce4ee45f333b7fbc0b65173d86b',1,'rpg_os::FightActionLog']]],
+  ['damagedice_2',['damagedice',['../structrpg__os_1_1FightActionLog.html#ac7ce2ce4ee45f333b7fbc0b65173d86b',1,'rpg_os::FightActionLog::damageDice'],['../structrpg__os_1_1RulesetEngine_1_1SpellResult.html#ab2d642b837d6509525a1b2f3c91de9c2',1,'rpg_os::RulesetEngine::SpellResult::damageDice'],['../structrpg__os_1_1RulesetEngine_1_1EffectsResult.html#a6d714de443aec3a50f0501557644b0cb',1,'rpg_os::RulesetEngine::EffectsResult::damageDice']]],
   ['damageexpression_3',['damageExpression',['../structrpg__os_1_1CombatantSpec.html#a4498b86989d28cb87ad3bee6e11b8ee9',1,'rpg_os::CombatantSpec']]],
   ['dancing_4',['dancing',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a38d51a21e0aac3d3d0b025daf9761ce2',1,'rpg_os::generated::tde5e::Character']]],
   ['data_5',['data',['../classrpg__os_1_1Ruleset.html#aae40260fe242930ce65091de5e18bbb7',1,'rpg_os::Ruleset']]],

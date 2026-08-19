@@ -1,7 +1,7 @@
 var searchData=
 [
   ['on_20the_20web_20—_20the_20npm_20package_0',['Also on the web — the npm package',['../index.html#autotoc_md7',1,'']]],
-  ['on_20the_20web_20—_20wasm_20and_20npm_1',['On the web — WASM and npm',['../user_guide.html#autotoc_md26',1,'']]],
+  ['on_20the_20web_20—_20wasm_20and_20npm_1',['On the web — WASM and npm',['../user_guide.html#autotoc_md27',1,'']]],
   ['onafflictionapplied_2',['OnAfflictionApplied',['../namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18ad67033bca00a2b0a8230a243a06eb5ba',1,'rpg_os']]],
   ['onaftercheckroll_3',['OnAfterCheckRoll',['../namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18a0b3c086f0b5060681307c116985c6a56',1,'rpg_os']]],
   ['onbeforecheckroll_4',['OnBeforeCheckRoll',['../namespacerpg__os.html#af3060be908d09a6c80aa2f7eb65afc18ab4bda534e9935d6126740b9d38997e0f',1,'rpg_os']]],
@@ -44,5 +44,5 @@ var searchData=
   ['os_41',['RPG OS',['../index.html',1,'']]],
   ['overcapacity_42',['OverCapacity',['../namespacerpg__os.html#a35c4b2d63f72d02169671d65591d1766a4fcf3e94521b7db24bd0c3bd6e9201af',1,'rpg_os']]],
   ['override_43',['Override',['../namespacerpg__os.html#aab9c315b59a58b0733ac5a30a02da3f2a6da8e67225fdcfa78c3ea5dc3154b849',1,'rpg_os']]],
-  ['own_20ruleset_20json_44',['Creating your own ruleset JSON',['../user_guide.html#autotoc_md25',1,'']]]
+  ['own_20ruleset_20json_44',['Creating your own ruleset JSON',['../user_guide.html#autotoc_md26',1,'']]]
 ];
