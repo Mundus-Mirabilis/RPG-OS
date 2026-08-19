@@ -11,6 +11,64 @@
       "problemMatcher": [],
       "group": "build",
       "detail": "Render the Doxygen + Doxygen Awesome HTML docs into ./html (gitignored). Runs the rpg_os_docs CMake target so any IDE or terminal can use the same command."
+    },
+    {
+      "label": "Build Web Demo (WASM + rulesets)",
+      "type": "shell",
+      "command": "mkdir -p web/demo/wasm web/demo/rulesets && wasm/build.sh && cp wasm/package/dist/rpg-os-universal.{js,wasm} web/demo/wasm/ && cp rulesets/dnd5e_srd.json rulesets/tde5e_core.json web/demo/rulesets/",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [],
+      "group": "build",
+      "detail": "Build the universal engine to WASM (wasm/build.sh — requires the Emscripten SDK on PATH) and copy the WASM module + rulesets into web/demo/ (gitignored)."
+    },
+    {
+      "label": "Generate Web Demo leaderboards",
+      "type": "shell",
+      "command": "mkdir -p web/demo/data && cmake --build build --target rpg_os_example_fight && python3 scripts/elo_ranking.py --ruleset rulesets/dnd5e_srd.json --seed 20260817 --rounds 40 --games 20 --jobs 4 --initial 1000 --json web/demo/data/dnd5e_srd_elo.json && python3 scripts/elo_ranking.py --ruleset rulesets/tde5e_core.json --seed 20260817 --rounds 40 --games 20 --jobs 4 --initial 1000 --json web/demo/data/tde5e_core_elo.json",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [],
+      "group": "build",
+      "detail": "Build the native fight binary and generate the ELO leaderboards into web/demo/data/ (gitignored; same fixed seed/flags as CI). Optional — the demo still loads without them."
+    },
+    {
+      "label": "Serve Web Demo",
+      "type": "shell",
+      "command": "python3 -m http.server -d web/demo 8000",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "web-demo",
+        "pattern": [
+          {
+            "regexp": "^$"
+          }
+        ],
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "Serving HTTP",
+          "endsPattern": "Keyboard interrupt|Address already in use|OSError"
+        }
+      },
+      "group": "test",
+      "detail": "Serve the ELO Arena demo at http://localhost:8000 (background task — fetch() needs http, not file://). Build the assets first, then stop it from the terminal."
+    },
+    {
+      "label": "Run Web Demo",
+      "dependsOn": [
+        "Build Web Demo (WASM + rulesets)",
+        "Generate Web Demo leaderboards",
+        "Serve Web Demo"
+      ],
+      "dependsOrder": "sequence",
+      "group": "test",
+      "problemMatcher": [],
+      "detail": "One click: build the WASM assets + rulesets, generate the ELO leaderboards, then serve the demo at http://localhost:8000 (background). Requires the Emscripten SDK on PATH for the WASM build."
     }
   ]
 }

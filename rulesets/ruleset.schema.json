@@ -691,7 +691,8 @@
             }
           }
         },
-        "traits": { "type": "array", "items": { "type": "string" }, "description": "Ids of traits the creature has (see data.traits), e.g. ['pack_tactics', 'keen_smell']. The engine applies the referenced traits' check/stat modifiers to the creature automatically." }
+        "traits": { "type": "array", "items": { "type": "string" }, "description": "Ids of traits the creature has (see data.traits), e.g. ['pack_tactics', 'keen_smell']. The engine applies the referenced traits' check/stat modifiers to the creature automatically." },
+        "spells": { "type": "array", "items": { "type": "string" }, "description": "Ids of spells the creature can cast in a fight (e.g. a dragon's innate spellcasting). The combat simulator prefers casting the strongest affordable damaging spell over a weapon attack, exactly as it does for archetypes." }
       }
     },
     "afflictionRecord": {

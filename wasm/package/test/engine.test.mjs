@@ -145,7 +145,66 @@ test('fightDetail returns the full transcript and matches the plain fight', () =
   }
 });
 
+test("fightDetail names the spells and lists each combatant's known spells", () => {
+  rpg.loadRulesetFromFile(tdePath);
+  const magus = rpg.specFromId('magister');
+  const toad = rpg.specFromId('toad');
+  const detail = rpg.fightDetail(magus, toad, { seed: 42, maxRounds: 100 });
+
+  // The transcript header lists each combatant's known spells (human names)
+  // and their starting spell resource.
+  assert.deepEqual(detail.log.spells[0].sort(), ['Fulminictus', 'Ignifaxius', "Witch’s Claws"].sort());
+  assert.deepEqual(detail.log.spells[1], []); // the toad knows no spells
+  assert.equal(detail.log.resource_id, 'AE');
+  assert.ok(detail.log.resource_pool[0] > 0); // the magister's Astral Energy
+  assert.ok(detail.log.resource_pool[1] >= 0);
+
+  // Every cast action carries the human-readable spell name (not just the id)
+  // and shows the spell-resource pool running down.
+  const casts = detail.log.rounds.flatMap((r) => r.actions).filter((a) => a.kind === 'cast');
+  assert.ok(casts.length >= 1, 'the magister should cast at least once');
+  for (const cast of casts) {
+    assert.equal(cast.spell_name, 'Fulminictus'); // strongest damaging spell
+    assert.ok(cast.spell.length > 0);
+    assert.ok(cast.check_dice.length >= 1); // TDE rolls a casting check
+    assert.ok(cast.resource.length > 0); // TDE spends AE
+    assert.ok(cast.cost >= 4);
+    assert.equal(cast.resource, 'AE');
+    assert.ok(cast.resource_before > cast.resource_after); // the pool depletes
+    assert.equal(cast.resource_before - cast.resource_after, cast.cost);
+  }
+});
+
+test('a D&D bestiary spellcaster casts its spells (dragons, liches, ...)', () => {
+  rpg.loadRulesetFromFile(dndPath);
+  const dragon = rpg.specFromId('ancient_gold_dragon');
+  const rat = rpg.specFromId('giant_rat');
+  const detail = rpg.fightDetail(dragon, rat, { seed: 1, maxRounds: 20 });
+
+  // The dragon's innate spellcasting is carried onto its combatant spec and
+  // shown in the transcript header; the rat is pure melee. D&D has no spell
+  // resource, so no pool is reported.
+  assert.ok(detail.log.spells[0].length >= 3);
+  assert.ok(detail.log.spells[0].includes('Flame Strike'));
+  assert.deepEqual(detail.log.spells[1], []);
+  assert.equal(detail.log.resource_id, '');
+  assert.deepEqual(detail.log.resource_pool, [0, 0]);
+
+  // The dragon prefers casting over its weapon, and the cast carries the
+  // spell name plus the rolled damage dice (D&D spells have no cast check and
+  // no spell-resource cost to report).
+  const first = detail.log.rounds[0].actions[0];
+  assert.equal(first.kind, 'cast');
+  assert.equal(first.spell_name, 'Flame Strike');
+  assert.ok(first.damage_dice.length >= 1);
+  assert.equal(first.check_dice.length, 0); // no casting check in D&D
+  assert.equal(first.resource, '');
+  assert.equal(first.resource_before, 0);
+  assert.equal(first.resource_after, 0);
+});
+
 test('a hand-built character beats a toad (arbitrary sheet fights)', () => {
+  rpg.loadRulesetFromFile(tdePath);
   const hero = rpg.createEntityFromSheet('my_hero', {
     COU: 14, AGI: 15, CON: 13, Attack: 12, Parry: 8, Armor_Rating: 3, Initiative: 12,
   });

@@ -98,6 +98,7 @@ rpg_os::Json fightActionToJson(const rpg_os::FightActionLog &action) {
   out["target"] = action.targetIndex;
   out["kind"] = action.kind;
   out["spell"] = action.spellId;
+  out["spell_name"] = action.spellName;
   out["check_dice"] = diceToJson(action.checkDice);
   out["is_hit"] = action.isHit;
   out["damage_dice"] = diceToJson(action.damageDice);
@@ -106,6 +107,8 @@ rpg_os::Json fightActionToJson(const rpg_os::FightActionLog &action) {
   out["target_hp"] = action.targetHp;
   out["cost"] = action.resourceCost;
   out["resource"] = action.resourceId;
+  out["resource_before"] = action.resourceBefore;
+  out["resource_after"] = action.resourceAfter;
   return out;
 }
 
@@ -133,6 +136,17 @@ rpg_os::Json fightLogToJson(const rpg_os::FightLog &log) {
     names.push_back(name);
   }
   out["names"] = names;
+  rpg_os::Json spells = rpg_os::Json::array();
+  for (const std::vector<std::string> &combatantSpells : log.spells) {
+    rpg_os::Json ids = rpg_os::Json::array();
+    for (const std::string &spell : combatantSpells) {
+      ids.push_back(spell);
+    }
+    spells.push_back(std::move(ids));
+  }
+  out["spells"] = spells;
+  out["resource_id"] = log.resourceId;
+  out["resource_pool"] = {log.resourcePool[0], log.resourcePool[1]};
   out["max_lp"] = {log.maxLp[0], log.maxLp[1]};
   out["winner_index"] = log.winnerIndex;
   rpg_os::Json rounds = rpg_os::Json::array();
@@ -489,10 +503,14 @@ RPG_OS_WASM_EXPORT const char *rpg_os_fight(void *engine, void *spec_a, void *sp
 /// round, from the opening initiative roll to the final hit that decided the
 /// winner. Takes the same arguments as @ref rpg_os_fight; the returned JSON is
 /// that of @ref rpg_os_fight with an added @c hp_pool field and a @c log
-/// object (`{names, max_lp, winner_index, rounds:[{round, init_stat,
-/// init_roll, init_total, goes_first, actions:[{actor, target, kind, spell,
-/// check_dice, is_hit, damage_dice, damage, hp_before, target_hp, cost,
-/// resource}]}]}`).
+/// object (`{names, spells, resource_id, resource_pool, max_lp, winner_index,
+/// rounds:[{round, init_stat, init_roll, init_total, goes_first, actions:
+/// [{actor, target, kind, spell, spell_name, check_dice, is_hit, damage_dice,
+/// damage, hp_before, target_hp, cost, resource, resource_before,
+/// resource_after}]}]}`). `spells` lists each combatant's known spells
+/// (human-readable names); `resource_id`/`resource_pool` are the spell-resource
+/// pool and each combatant's starting value in it, so the transcript can show
+/// magic running down during the fight.
 /// The transcript is observation-only: the same seed produces the same fight
 /// as @ref rpg_os_fight.
 RPG_OS_WASM_EXPORT const char *rpg_os_fight_detail(void *engine, void *spec_a, void *spec_b,

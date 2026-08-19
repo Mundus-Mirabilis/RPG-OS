@@ -38,12 +38,27 @@ via `needs`, so the two gh-pages pushes can never race).
    replays a single fight dice by dice: every round's initiative roll, each
    combatant's attack/cast with its individual dice (attack + parry, the
    casting check, the damage dice), the hit-point changes they caused, and a
-   summary of who won and in how many rounds. Spell casts show the casting
-   check and the actual damage dealt (a failed check fizzles — the round is
-   spent with no effect, exactly as the engine resolves it). Each single fight
-   also draws fresh dice, so re-running it shows a different possible fight.
-   Long draw fights are truncated in the middle (first and last rounds) to
-   stay readable.
+   summary of who won and in how many rounds. Spell casts are shown in full:
+   the **spell's name** (e.g. "Fulminictus", not its id), the casting-check
+   dice, the spell's own damage dice, the actual damage dealt, and — because
+   a spell resource is a pool that runs down during a fight (e.g. The Dark
+   Eye's **Astral Energy**) — the pool depleting with every cast, e.g.
+   `· AE 35 → 27`, including on a failed check that still spends the round and
+   the resource (the fizzle), exactly as the engine resolves it. The summary
+   line shows each spellcaster's starting pool (e.g. `(AE 35)`), so you can
+   see when the mage finally runs dry and falls back to its weapon. Above the
+   rounds, a line lists **each combatant's known spells**, so you can see who
+   is a spellcaster and what it can cast before the dice start rolling.
+   Unicode icons make each line scannable at a glance: `⚔️`/`✨` open an
+   attack/cast, `✅`/`❌` mark hit/success vs miss/failure, and `🏆`/`🤝`
+   mark the winner or a draw. Spellcasting creatures now really cast: D&D
+   bestiary spellcasters (dragons, liches, hags, ...) carry the `spells` from
+   their innate spellcasting and prefer their strongest damaging spell over a
+   weapon attack, so D&D fights show magic too (D&D has no spell-resource
+   pool, so no `AE`-style numbers appear there). Each single fight also draws
+   fresh dice, so re-running it shows a different possible fight. Long draw
+   fights are truncated in the middle (first and last rounds) to stay
+   readable.
 
 The currently loaded ruleset's **own licence** is shown in a dedicated box at
 the bottom of the page (read from `rpg.meta()` at runtime, so it always matches
@@ -94,3 +109,11 @@ python3 -m http.server -d web/demo 8000
 
 This is exactly what the `deploy-demo` job of the CI `docs.yml` workflow
 automates (after the docs deploy, so ordering is guaranteed).
+
+In VS Code the same flow is one click: the **"Run Web Demo"** task
+(`.vscode/tasks.json`) builds the WASM assets + rulesets, generates the
+leaderboards and starts the server; the **"Debug Web Demo"** launch
+configuration (F5, while the "Serve Web Demo" task is running) opens the page
+in a browser with the JS debugger attached. See the
+[Developer Guide](../../docs/guides/developer-guide.md), "Running the web
+demo locally".

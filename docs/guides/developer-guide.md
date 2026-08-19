@@ -145,6 +145,49 @@ ctest --test-dir build --output-on-failure
   each ruleset carries its own licence (see the root `README.md` licence
   table and `docs/README.md`).
 
+### Running the web demo locally
+
+The **ELO Arena** demo (`web/demo/`) is a static, no-build page: the universal
+engine runs in the browser through the WASM module. To debug or test it on
+your machine the WASM module, the rulesets and (optionally) the ELO
+leaderboards must be present under `web/demo/` — all three folders are
+gitignored and normally produced by CI:
+
+1. **Build the WASM module + copy the assets** — `wasm/build.sh` requires the
+   Emscripten SDK on PATH (it prints a helpful error when `em++` is missing):
+   ```sh
+   wasm/build.sh
+   cp wasm/package/dist/rpg-os-universal.{js,wasm} web/demo/wasm/
+   cp rulesets/dnd5e_srd.json rulesets/tde5e_core.json web/demo/rulesets/
+   ```
+2. **Generate the ELO leaderboards** (optional — without them the page loads
+   with a "Leaderboard not found" note, but the rankings and the head-to-head
+   panel need them). Same fixed seed and flags as CI:
+   ```sh
+   cmake --build build --target rpg_os_example_fight
+   python3 scripts/elo_ranking.py --ruleset rulesets/dnd5e_srd.json \
+     --seed 20260817 --rounds 40 --games 20 --jobs 4 --initial 1000 \
+     --json web/demo/data/dnd5e_srd_elo.json
+   python3 scripts/elo_ranking.py --ruleset rulesets/tde5e_core.json \
+     --seed 20260817 --rounds 40 --games 20 --jobs 4 --initial 1000 \
+     --json web/demo/data/tde5e_core_elo.json
+   ```
+3. **Serve the folder** — `fetch()` needs http, not `file://`:
+   ```sh
+   python3 -m http.server -d web/demo 8000
+   # open http://localhost:8000
+   ```
+
+In VS Code all of this is one click: **Terminal → Run Task… → "Run Web Demo"**
+builds the assets and the leaderboards, then starts the server (a background
+task) — open [http://localhost:8000](http://localhost:8000) to use the page.
+For a fast page-only debug pass, run "Build Web Demo (WASM + rulesets)" and
+"Serve Web Demo" instead and skip the leaderboards. To debug the page in the
+browser, press **F5** ("Debug Web Demo", `.vscode/launch.json`) while the
+"Serve Web Demo" task is running — it launches Chrome at the served URL with
+the JS debugger attached. The step-by-step breakdown and the CI parity live
+in `web/demo/README.md`.
+
 ## The documentation build
 
 The single source of truth is the **`Doxyfile`** at the repository root; it

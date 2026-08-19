@@ -114,6 +114,7 @@ public:
                                {
                                    rpg_os::Denomination{"cp", "Copper", "CP", 1},
                                    rpg_os::Denomination{"sp", "Silver", "SP", 10},
+                                   rpg_os::Denomination{"ep", "Electrum", "EP", 50},
                                    rpg_os::Denomination{"gp", "Gold", "GP", 100},
                                    rpg_os::Denomination{"pp", "Platinum", "PP", 1000},
                                }};

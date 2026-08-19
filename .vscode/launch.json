@@ -1,0 +1,17 @@
+{
+  // Debug the ELO Arena web demo in the browser.
+  // Requires the "Serve Web Demo" task (.vscode/tasks.json) to be running,
+  // i.e. `python3 -m http.server -d web/demo 8000` on http://localhost:8000.
+  // Press F5 with this configuration selected; it launches Chrome at the
+  // served URL with the JS debugger attached.
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Web Demo",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:8000",
+      "webRoot": "${workspaceFolder}/web/demo"
+    }
+  ]
+}

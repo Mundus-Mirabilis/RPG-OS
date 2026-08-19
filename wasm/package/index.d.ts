@@ -59,11 +59,13 @@ export interface FightActionLog {
   kind: string;
   /** The spell id (kind === "cast", else ""). */
   spell: string;
+  /** The human-readable spell name (kind === "cast", else ""). */
+  spell_name: string;
   /** The attack/parry or casting-check dice (raw). */
   check_dice: number[];
   /** The attack landed / the cast resolved. */
   is_hit: boolean;
-  /** Raw damage dice (weapon attacks only). */
+  /** Raw damage dice (weapon attacks and spell damage). */
   damage_dice: number[];
   /** Hit points removed from the target (the actual loss; >= 0). */
   damage: number;
@@ -75,6 +77,10 @@ export interface FightActionLog {
   cost: number;
   /** The pool the cost came from ("", "AE", ...). */
   resource: string;
+  /** The caster's spell-resource pool before the cast (0 when the ruleset has none). */
+  resource_before: number;
+  /** The caster's spell-resource pool after the cast (0 when the ruleset has none). */
+  resource_after: number;
 }
 
 /** One round of a fight as recorded in a `FightLog`. */
@@ -97,6 +103,12 @@ export interface FightRoundLog {
 export interface FightLog {
   /** Combatant names. */
   names: [string, string];
+  /** Each combatant's known spells (human-readable names), in combatant order. */
+  spells: [string[], string[]];
+  /** The spell-resource pool id (e.g. "AE"), "" when the ruleset has none. */
+  resource_id: string;
+  /** Each combatant's starting spell-resource value (0 when the ruleset has none). */
+  resource_pool: [number, number];
   /** Starting hit points of both combatants. */
   max_lp: [number, number];
   /** 0, 1, or -1 (draw). */

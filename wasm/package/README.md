@@ -99,7 +99,7 @@ const hero = rpg.createEntityFromSheet('my_hero', {
 | `rpg.check(checkType, actor, target?, opts?)` | Resolves a named check. |
 | `rpg.specFromId(id, weapon?)` / `rpg.specFromEntity(entity, weapon?)` | Build a combatant. |
 | `rpg.fight(specA, specB, opts?)` | Runs one fight; loop it for Monte-Carlo win probabilities. |
-| `rpg.fightDetail(specA, specB, opts?)` | Runs one fight and returns its full transcript — every round's dice rolls and hit-point changes, from the opening initiative roll to the final hit. |
+| `rpg.fightDetail(specA, specB, opts?)` | Runs one fight and returns its full transcript — every round's dice rolls and hit-point changes, from the opening initiative roll to the final hit. Each cast action carries the spell's human-readable `spell_name`, its rolled `damage_dice`, and the spell-resource pool running down (`resource_before`/`resource_after`); `log.spells` lists each combatant's known spells and `log.resource_id`/`log.resource_pool` the starting spell resource. |
 | `rpg.dispose()` | Releases the engine and all handles. |
 
 ## Rulesets

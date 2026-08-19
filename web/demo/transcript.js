@@ -25,6 +25,43 @@ export function hpChange(target, before, after, pool) {
   return span;
 }
 
+/** "name — spells: X, Y" line per spellcasting combatant, or null when
+ *  neither knows a spell. Shown above the rounds so the reader can see who is
+ *  a spellcaster and what it can cast before the dice start rolling. */
+export function renderKnownSpells(aName, aSpells, bName, bSpells) {
+  const wrap = document.createElement('div');
+  wrap.className = 'fight-spells';
+  const add = (name, spells) => {
+    if (!spells || spells.length === 0) return;
+    const line = document.createElement('div');
+    const who = document.createElement('b');
+    who.textContent = name;
+    line.append(who, ' — spells: ', spells.join(', '));
+    wrap.append(line);
+  };
+  add(aName, aSpells);
+  add(bName, bSpells);
+  return wrap.childNodes.length > 0 ? wrap : null;
+}
+
+/** The icon that opens an action line: ⚔️ a weapon attack, ✨ a spell cast. */
+const ACTION_ICONS = { attack: '⚔️', cast: '✨' };
+
+/** "✅ hit" / "❌ miss" — the outcome marker after the arrow. */
+function outcomeBadge(ok, word) {
+  const span = document.createElement('span');
+  span.className = ok ? 'fight-ok' : 'fight-bad';
+  span.textContent = `${ok ? '✅' : '❌'} ${word}`;
+  return span;
+}
+
+/** " · AE 35 → 27" — how the caster's spell-resource pool was spent, or "". */
+function resourceChange(action) {
+  return action.resource && action.resource_before !== action.resource_after
+    ? ` · ${action.resource} ${action.resource_before} → ${action.resource_after}`
+    : '';
+}
+
 /** One action line of a round's transcript (an attack or a spell cast). */
 export function renderFightAction(action, aName, bName, hpPool) {
   const actor = action.actor === 0 ? aName : bName;
@@ -32,26 +69,49 @@ export function renderFightAction(action, aName, bName, hpPool) {
   const row = document.createElement('div');
   row.className = 'fight-action';
 
+  const icon = document.createElement('span');
+  icon.className = 'fight-icon';
+  icon.textContent = ACTION_ICONS[action.kind] ?? '•';
+  row.append(icon);
+
   const actorEl = document.createElement('b');
   actorEl.textContent = actor;
   row.append(actorEl);
 
   if (action.kind === 'cast') {
+    const spellName = action.spell_name || action.spell;
+    const res = resourceChange(action);
     row.append(' casts ');
     const spellEl = document.createElement('b');
-    spellEl.textContent = action.spell;
+    spellEl.textContent = spellName;
     row.append(spellEl);
-    row.append(' — check ');
-    row.append(diceBadge(action.check_dice.join(' ')));
-    row.append(action.is_hit ? ' → success' : ' → failed');
-    if (action.is_hit && action.damage > 0) {
-      row.append(' · deals ');
-      const dmgEl = document.createElement('b');
-      dmgEl.textContent = `${action.damage} damage`;
-      row.append(dmgEl);
-      if (action.cost > 0) {
-        row.append(` (cost ${action.cost} ${action.resource})`);
+    // A casting check only exists when the ruleset declares one (TDE's 3d20
+    // pool); D&D-style spells resolve without a check, so no dice and no
+    // success arrow are shown there.
+    if (action.check_dice.length > 0) {
+      row.append(' — check ');
+      row.append(diceBadge(action.check_dice.join(' ')));
+      row.append(' ');
+      row.append(outcomeBadge(action.is_hit, action.is_hit ? 'success' : 'failed'));
+    }
+    if (action.is_hit) {
+      if (action.damage > 0) {
+        row.append(' · ');
+        // Some effects deal flat (0-damage-expression) damage — no dice.
+        if (action.damage_dice.length > 0) {
+          row.append(diceBadge(action.damage_dice.join(' ')));
+          row.append(' ');
+        }
+        row.append('deals ');
+        const dmgEl = document.createElement('b');
+        dmgEl.textContent = `${action.damage} damage`;
+        row.append(dmgEl);
       }
+      // The resource is spent on the attempt too, so a fizzle still costs.
+      if (res) row.append(res);
+    } else {
+      // A failed casting check (dice shown above) still spends the resource.
+      if (res) row.append(res);
     }
     row.append(hpChange(target, action.hp_before, action.target_hp, hpPool));
   } else {
@@ -61,11 +121,12 @@ export function renderFightAction(action, aName, bName, hpPool) {
     row.append(targetEl);
     row.append(' — d20 ');
     row.append(diceBadge(action.check_dice.join(' ')));
+    row.append(' ');
+    row.append(outcomeBadge(action.is_hit, action.is_hit ? 'hit' : 'miss'));
     if (!action.is_hit) {
-      row.append(' → miss');
       row.append(hpChange(target, action.hp_before, action.target_hp, hpPool));
     } else {
-      row.append(' → hit · damage ');
+      row.append(' · damage ');
       // Some bestiary attacks have a flat (0-damage) expression — no dice.
       if (action.damage_dice.length > 0) {
         row.append(diceBadge(action.damage_dice.join(' ')));

@@ -553,6 +553,7 @@ public:
     std::string resourceId;   ///< the resource pool the cost was drawn from
     std::string denied;       ///< why the cast was refused ("", "no_action", "no_cast", ...)
     std::vector<std::string> choicesRequired; ///< option-group ids needing a caller selection
+    std::vector<int32_t> damageDice;          ///< raw damage dice rolled by the spell's effects
   };
 
   /// Whether `entity` may take the given action ("action", "bonus_action",
@@ -603,10 +604,27 @@ public:
                                                    rng, qualityLevel, selections);
       result.appliedDamage = effects.damageDealt;
       result.choicesRequired = effects.choicesRequired;
+      result.damageDice = effects.damageDice;
     } else if (spell->contains("damage")) {
       // `applyDamage` reports the (negative) pool delta, so negate it into the
-      // positive "damage dealt" the caller expects.
-      const int32_t damage = readVariantValue(spell->at("damage"), Variance::Random, rng);
+      // positive "damage dealt" the caller expects. The dice are recorded the
+      // same observation-only way as the effects path.
+      const Json &damageJson = spell->at("damage");
+      int32_t damage = 0;
+      if (damageJson.is_string()) {
+        const DiceExpression diceExpr(damageJson.get<std::string>());
+        const std::vector<int> rolled = diceExpr.roll(rng);
+        damage = diceExpr.constant();
+        const auto &groups = diceExpr.dice();
+        for (std::size_t g = 0, i = 0; g < groups.size(); ++g) {
+          for (int j = 0; j < groups[g].count; ++j, ++i) {
+            damage += groups[g].sign * rolled[i];
+            result.damageDice.push_back(rolled[i]);
+          }
+        }
+      } else {
+        damage = readVariantValue(damageJson, Variance::Random, rng);
+      }
       const std::string hitPool = resolveHitPointPoolId();
       if (!hitPool.empty()) {
         result.appliedDamage = -applyDamage(actor, *target, hitPool, damage);
@@ -1421,6 +1439,7 @@ public:
     int32_t savesPassed{0};                   ///< how many saves the target passed
     int32_t statBonusesApplied{0};            ///< how many temporary stat bonuses landed
     std::vector<std::string> choicesRequired; ///< option-group ids needing a caller selection
+    std::vector<int32_t> damageDice;          ///< raw damage dice rolled by the effects (in order)
   };
 
   /// Resolves a batch of structured effects (the `effects` array on spells,
@@ -1533,8 +1552,28 @@ public:
     if (!effect.contains("dice")) {
       return false;
     }
-    int32_t final =
-        static_cast<int32_t>(readVariantValue(effect.at("dice"), Variance::Random, rng));
+    // A dice expression is rolled explicitly so the individual dice can be
+    // reported on the result (a fight transcript narrates them). This is
+    // observation-only: roll() consumes exactly the RNG stream rollSum()
+    // would, so a call that records dice and one that only sums stay
+    // byte-identical (pinned by the combat tests). Plain numbers and range
+    // objects keep their generic readVariantValue path (no dice to record).
+    int32_t final = 0;
+    const Json &diceJson = effect.at("dice");
+    if (diceJson.is_string()) {
+      const DiceExpression diceExpr(diceJson.get<std::string>());
+      const std::vector<int> rolled = diceExpr.roll(rng);
+      final = diceExpr.constant();
+      const auto &groups = diceExpr.dice();
+      for (std::size_t g = 0, i = 0; g < groups.size(); ++g) {
+        for (int j = 0; j < groups[g].count; ++j, ++i) {
+          final += groups[g].sign * rolled[i];
+          result.damageDice.push_back(rolled[i]);
+        }
+      }
+    } else {
+      final = static_cast<int32_t>(readVariantValue(diceJson, Variance::Random, rng));
+    }
     if (effect.contains("add")) {
       final += evaluateEffectAdd(source, &target, effect.at("add"), qualityLevel);
     }

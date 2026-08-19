@@ -219,16 +219,30 @@ TEST_CASE("combat: a logged mage fight records the cast action and its dice") {
   CHECK(action.actorIndex == 0);
   CHECK(action.kind == "cast");
   CHECK(action.spellId == "fulminictus");
+  CHECK(action.spellName == "Fulminictus"); // the human-readable name, not the id
   CHECK(action.isHit);
   CHECK(action.checkDice == std::vector<int32_t>({1, 1, 1}));
   // The spell rolls full damage, but the recorded `damage` is the clamped
   // hit-point loss the target actually took (SpellResult::appliedDamage):
   // the toad has only 2 LP, so it loses exactly 2 despite the overkill.
+  CHECK(action.damageDice == std::vector<int32_t>({6, 6})); // the 2d6 roll
   CHECK(action.damage == 2);
   CHECK(action.hpBefore == 2); // the toad starts at its 2 LP
   CHECK(action.targetHp == 0); // the toad is reduced to 0 LP
   CHECK(action.resourceId == "AE");
   CHECK(action.resourceCost == 8); // Fulminictus costs 8 AE
+  // The spell resource is a pool that depletes with every cast: the mage
+  // starts at its full 35 AE (20 + INT 15) and the 8-AE cast leaves 27.
+  CHECK(action.resourceBefore == 35);
+  CHECK(action.resourceAfter == 27);
+  // The transcript header lists each combatant's known spells by name, and
+  // their starting spell resource.
+  REQUIRE(log.spells[0].size() == 3);
+  CHECK(log.spells[0][0] == "Fulminictus");
+  CHECK(log.spells[1].empty()); // the toad knows no spells
+  CHECK(log.resourceId == "AE");
+  CHECK(log.resourcePool[0] == 35); // the mage's full Astral Energy
+  CHECK(log.resourcePool[1] == 32); // the toad also has AE (20 + INT 12), but no spells
 }
 
 TEST_CASE("combat: maxRounds guard ends a helpless fight as a draw") {
@@ -288,6 +302,22 @@ TEST_CASE("combat: a mage archetype spec carries its known spells") {
         magus.spellIds.end());
   CHECK(std::find(magus.spellIds.begin(), magus.spellIds.end(), "ignifaxius") !=
         magus.spellIds.end());
+}
+
+TEST_CASE("combat: pickSpell ignores non-damaging spells even with a stale damage field") {
+  rpg_os::RulesetEngine engine;
+  REQUIRE(engine.loadRulesetFromFile(rulesetPath("dnd5e_srd.json")));
+  // The sphinx knows only non-damaging spells (detect, buffs, resists). Its
+  // `heroes_feast` carries a stale bare `damage: "2d10"` next to its real
+  // effects (a resist) — pickSpell must not treat it as a damaging spell, or
+  // the sphinx would waste every turn casting it and never attack.
+  rpg_os::CombatantSpec sphinx;
+  REQUIRE(rpg_os::makeCombatantSpec(engine, "sphinx_of_valor", sphinx));
+  CHECK_FALSE(sphinx.spellIds.empty());
+  rpg_os::DefaultRandom rng(7);
+  auto fighter = rpg_os::createFighter(engine, sphinx, rng);
+  REQUIRE(fighter != nullptr);
+  CHECK(rpg_os::detail::pickSpell(engine, *fighter, sphinx.spellIds).empty());
 }
 
 TEST_CASE("combat: pickSpell ranks spells by affordability and expected damage") {
@@ -404,6 +434,53 @@ TEST_CASE("combat: dnd5e attack-vs-AC resolves to the end") {
   CHECK(outcome.rounds == 1);
   CHECK(outcome.remainingLp[0] == 8); // the winner's 8 HP untouched
   CHECK(outcome.remainingLp[1] == 0); // the loser at 0 HP
+}
+
+TEST_CASE("combat: a bestiary spellcaster's spells are carried and cast in a fight") {
+  rpg_os::RulesetEngine engine;
+  REQUIRE(engine.loadRulesetFromFile(rulesetPath("dnd5e_srd.json")));
+  rpg_os::CombatantSpec dragon;
+  REQUIRE(rpg_os::makeCombatantSpec(engine, "ancient_gold_dragon", dragon));
+  CHECK_FALSE(dragon.isArchetype);
+  // The dragon's `spells` array (its innate spellcasting) is carried by the spec.
+  CHECK_FALSE(dragon.spellIds.empty());
+  CHECK(std::find(dragon.spellIds.begin(), dragon.spellIds.end(), "flame_strike") !=
+        dragon.spellIds.end());
+  CHECK(std::find(dragon.spellIds.begin(), dragon.spellIds.end(), "guiding_bolt") !=
+        dragon.spellIds.end());
+
+  rpg_os::CombatantSpec rat;
+  REQUIRE(rpg_os::makeCombatantSpec(engine, "giant_rat", rat));
+  CHECK(rat.spellIds.empty()); // the rat is pure melee
+
+  // Scripted D&D fight: the dragon wins initiative (4 + 16 vs 5 + 3), casts
+  // its strongest damaging spell (Flame Strike, 5d6), and the rat's 7 hit
+  // points are gone in one round. RNG: both creatures' average hit points
+  // (0..177, 0..3), both initiative rolls, the 5d6 spell damage, and the
+  // rat's DEX save.
+  auto rng = script({50, 2, 4, 5, 6, 1, 2, 3, 4, 11});
+  rpg_os::FightLog log;
+  const rpg_os::FightOutcome outcome =
+      rpg_os::runFight(engine, dragon, rat, "dnd5e_attack", "HP", 20, rng, true, log);
+  CHECK(outcome.winnerIndex == 0);
+  CHECK(outcome.rounds == 1);
+  REQUIRE(log.rounds.size() == 1);
+  REQUIRE(log.rounds[0].actions.size() == 1);
+
+  const rpg_os::FightActionLog &action = log.rounds[0].actions[0];
+  CHECK(action.kind == "cast");
+  CHECK(action.spellId == "flame_strike");
+  CHECK(action.spellName == "Flame Strike");
+  CHECK(action.isHit); // D&D spells have no casting check — the cast resolves
+  CHECK(action.damageDice == std::vector<int32_t>({6, 1, 2, 3, 4}));
+  CHECK(action.damage > 0);
+  CHECK(action.hpBefore > 0);
+  CHECK(action.targetHp == 0); // the rat is reduced to 0 HP
+  // The transcript header lists the dragon's spells by name, the rat's empty.
+  CHECK(log.spells[0].size() == dragon.spellIds.size());
+  CHECK(std::find(log.spells[0].begin(), log.spells[0].end(), "Flame Strike") !=
+        log.spells[0].end());
+  CHECK(log.spells[1].empty());
 }
 
 TEST_CASE("combat: a spec built from an entity sheet fights like the same character from an id") {
