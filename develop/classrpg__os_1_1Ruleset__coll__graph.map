@@ -1,11 +1,13 @@
 <map id="rpg_os::Ruleset" name="rpg_os::Ruleset">
-<area shape="rect" id="Node000001" title=" " alt="" coords="250,181,373,207"/>
-<area shape="rect" id="Node000002" href="$structrpg__os_1_1CurrencySystem.html" title=" " alt="" coords="5,93,185,119"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="129,123,198,155,270,179,268,184,196,160,127,127"/>
-<area shape="rect" id="Node000003" href="$structrpg__os_1_1EncumbranceConfig.html" title=" " alt="" coords="210,93,413,119"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="314,133,314,181,309,181,309,133"/>
-<area shape="rect" id="Node000004" href="$classrpg__os_1_1Expression.html" title=" " alt="" coords="239,5,383,31"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="314,45,314,93,309,93,309,45"/>
-<area shape="rect" id="Node000005" href="$structrpg__os_1_1SpellcastingConfig.html" title=" " alt="" coords="437,93,631,119"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="495,126,411,160,345,184,343,179,409,155,493,121"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="645,80,768,105"/>
+<area shape="rect" id="Node000002" href="$structrpg__os_1_1CurrencySystem.html" title=" " alt="" coords="297,5,477,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="491,27,556,38,622,54,681,78,679,82,621,59,555,43,490,32"/>
+<area shape="rect" id="Node000003" href="$structrpg__os_1_1EncumbranceConfig.html" title=" " alt="" coords="285,55,488,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="502,74,645,85,645,91,502,79"/>
+<area shape="rect" id="Node000004" href="$classrpg__os_1_1Expression.html" title=" " alt="" coords="5,55,149,80"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="163,65,285,65,285,70,163,70"/>
+<area shape="rect" id="Node000005" href="$structrpg__os_1_1SpellcastingConfig.html" title=" " alt="" coords="290,104,483,129"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="497,117,559,115,621,110,659,103,660,108,622,115,559,121,497,122"/>
+<area shape="rect" id="Node000006" href="$structrpg__os_1_1MovementConfig.html" title="The ruleset&#39;s optional movement rules." alt="" coords="295,153,479,179"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="492,160,556,152,620,137,656,121,686,103,688,108,658,126,622,142,557,157,493,165"/>
 </map>

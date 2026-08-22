@@ -6,7 +6,7 @@ var searchData=
   ['acvalue_3',['acValue',['../structrpg__os_1_1CombatantSpec.html#a613c8bdfa0e6f096593db01e43a5bf10',1,'rpg_os::CombatantSpec']]],
   ['advancement_4',['advancement',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a5d62380fe0b7554ae6d607dba2ee41b7',1,'rpg_os::generated::brp_ugc::Character::advancement'],['../classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#a1f8f421be063840adaf7fde8ed203603',1,'rpg_os::generated::dnd5e::Character::advancement'],['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a0e143c2f1bdb3757b1649ee02ff893b7',1,'rpg_os::generated::tde5e::Character::advancement']]],
   ['advantage_5',['advantage',['../structrpg__os_1_1CheckParams.html#afa09a3f957211c987596a707639595a6',1,'rpg_os::CheckParams']]],
-  ['afflictions_6',['afflictions',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#ab0c66daac02539da646702f3ab4c0a05',1,'rpg_os::generated::brp_ugc::Character::afflictions'],['../classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#a9bb482ea666c0cf3eb3d8b87d69cec17',1,'rpg_os::generated::dnd5e::Character::afflictions'],['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a7b9ee284882e282858f6fb9ad9042b48',1,'rpg_os::generated::tde5e::Character::afflictions']]],
+  ['afflictions_6',['afflictions',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a7b9ee284882e282858f6fb9ad9042b48',1,'rpg_os::generated::tde5e::Character::afflictions'],['../classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#a9bb482ea666c0cf3eb3d8b87d69cec17',1,'rpg_os::generated::dnd5e::Character::afflictions'],['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#ab0c66daac02539da646702f3ab4c0a05',1,'rpg_os::generated::brp_ugc::Character::afflictions']]],
   ['agility_7',['agility',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a475d5674f6ed87cbd921853e9c194cfd',1,'rpg_os::generated::tde5e::Character']]],
   ['alchemy_8',['alchemy',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#acaa5db3c7de96eec9521656294e1b9ce',1,'rpg_os::generated::tde5e::Character']]],
   ['amount_9',['amount',['../structrpg__os_1_1EventActionDef.html#a891457979528b9f2be0ef37d7cf0939e',1,'rpg_os::EventActionDef']]],
@@ -24,9 +24,12 @@ var searchData=
   ['artisticability_21',['artisticAbility',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a856a5c6f5d374ce5b0a40c49299adcc2',1,'rpg_os::generated::tde5e::Character']]],
   ['astronomy_22',['astronomy',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#ae09aec27081fb198323874e4bdf690b9',1,'rpg_os::generated::tde5e::Character']]],
   ['athletics_23',['athletics',['../classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#aacaee9fdecd04b895577ee5a72e51802',1,'rpg_os::generated::dnd5e::Character']]],
-  ['attackstat_24',['attackStat',['../structrpg__os_1_1CheckRecipe.html#a5f15be8199f9bfc6ffae167409805bc2',1,'rpg_os::CheckRecipe']]],
-  ['attackvalue_25',['attackValue',['../structrpg__os_1_1CombatantSpec.html#ad03596128293f53c4305d793cf0ca36b',1,'rpg_os::CombatantSpec']]],
-  ['attributes_26',['attributes',['../structrpg__os_1_1SkillDef.html#a525cb335c9dee0d63b101bc65a489e8a',1,'rpg_os::SkillDef::attributes'],['../classrpg__os_1_1Ruleset.html#abbb6a9f154f5aace74e3d9a351ccc38e',1,'rpg_os::Ruleset::attributes']]],
-  ['attribution_27',['attribution',['../classrpg__os_1_1Ruleset.html#a37c17d70392d84278fba809c25b2c20d',1,'rpg_os::Ruleset']]],
-  ['autofail_28',['autoFail',['../structrpg__os_1_1CheckParams.html#a5a27bdb3888cf673271f6f9ba81e47d8',1,'rpg_os::CheckParams']]]
+  ['atitemslimit_24',['atItemsLimit',['../structrpg__os_1_1InventoryStatus.html#a7a37daa7fe84ea49de46f4502beeac05',1,'rpg_os::InventoryStatus']]],
+  ['atsizelimit_25',['atSizeLimit',['../structrpg__os_1_1InventoryStatus.html#acef2e9b6439fa6c6c9c0e8053efba9e4',1,'rpg_os::InventoryStatus']]],
+  ['attackstat_26',['attackStat',['../structrpg__os_1_1CheckRecipe.html#a5f15be8199f9bfc6ffae167409805bc2',1,'rpg_os::CheckRecipe']]],
+  ['attackvalue_27',['attackValue',['../structrpg__os_1_1CombatantSpec.html#ad03596128293f53c4305d793cf0ca36b',1,'rpg_os::CombatantSpec']]],
+  ['attributes_28',['attributes',['../structrpg__os_1_1SkillDef.html#a525cb335c9dee0d63b101bc65a489e8a',1,'rpg_os::SkillDef::attributes'],['../classrpg__os_1_1Ruleset.html#abbb6a9f154f5aace74e3d9a351ccc38e',1,'rpg_os::Ruleset::attributes']]],
+  ['attribution_29',['attribution',['../classrpg__os_1_1Ruleset.html#a37c17d70392d84278fba809c25b2c20d',1,'rpg_os::Ruleset']]],
+  ['atweightlimit_30',['atWeightLimit',['../structrpg__os_1_1InventoryStatus.html#a73014f48a515df946dc680fe2127a001',1,'rpg_os::InventoryStatus']]],
+  ['autofail_31',['autoFail',['../structrpg__os_1_1CheckParams.html#a5a27bdb3888cf673271f6f9ba81e47d8',1,'rpg_os::CheckParams']]]
 ];

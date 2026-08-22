@@ -9,7 +9,7 @@ var searchData=
   ['web_20—_20the_20npm_20package_6',['Also on the web — the npm package',['../index.html#autotoc_md7',1,'']]],
   ['web_20—_20wasm_20and_20npm_7',['On the web — WASM and npm',['../user_guide.html#autotoc_md27',1,'']]],
   ['web_20demo_20locally_8',['Running the web demo locally',['../developer_guide.html#autotoc_md19',1,'']]],
-  ['weight_9',['Weight',['../structrpg__os_1_1Weight.html',1,'rpg_os']]],
+  ['weight_9',['weight',['../structrpg__os_1_1CarriedLoad.html#a5e819ffe6795ab18485c3a49bf2ec41c',1,'rpg_os::CarriedLoad::weight'],['../structrpg__os_1_1CarryingCapacity.html#ae732f4bd802dd1bf1bc482f55d17a950',1,'rpg_os::CarryingCapacity::weight'],['../structrpg__os_1_1Weight.html',1,'rpg_os::Weight']]],
   ['weightunit_10',['weightUnit',['../structrpg__os_1_1EncumbranceConfig.html#ae04966d237ec3a3f7f993bba9f9c01e2',1,'rpg_os::EncumbranceConfig']]],
   ['what_20it_20does_11',['What it does',['../index.html#autotoc_md3',1,'']]],
   ['where_20to_20go_20next_20in_20the_20reference_12',['Where to go next in the reference',['../user_guide.html#autotoc_md28',1,'']]],
@@ -19,7 +19,7 @@ var searchData=
   ['wisdommodifier_16',['wisdomModifier',['../classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#aa6f6a95543809cc9c69b947e7f16b82a',1,'rpg_os::generated::dnd5e::Character']]],
   ['withconditionmodifiers_17',['withConditionModifiers',['../classrpg__os_1_1RulesetEngine.html#a6f990c1f0ed548c91e8f8477c02ee1a6',1,'rpg_os::RulesetEngine']]],
   ['woodworking_18',['woodworking',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a2020cff5b40f1441a84ccc5776a40a24',1,'rpg_os::generated::tde5e::Character']]],
-  ['world_19',['world',['../classrpg__os_1_1GameSession.html#ab713f5f3935a30db03aa2d3258409e21',1,'rpg_os::GameSession::world() noexcept'],['../classrpg__os_1_1GameSession.html#a75e2c88b4bd9668331179e1b1c8c6d43',1,'rpg_os::GameSession::world() const noexcept']]],
+  ['world_19',['world',['../classrpg__os_1_1GameSession.html#a75e2c88b4bd9668331179e1b1c8c6d43',1,'rpg_os::GameSession::world() const noexcept'],['../classrpg__os_1_1GameSession.html#ab713f5f3935a30db03aa2d3258409e21',1,'rpg_os::GameSession::world() noexcept']]],
   ['world_5fstate_2ehpp_20',['world_state.hpp',['../world__state_8hpp.html',1,'']]],
   ['worldstate_21',['WorldState',['../classrpg__os_1_1WorldState.html',1,'rpg_os']]]
 ];

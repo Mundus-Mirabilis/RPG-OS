@@ -20,7 +20,8 @@ var searchData=
   ['goesfirst_17',['goesFirst',['../structrpg__os_1_1FightRoundLog.html#a9f4cd5d1ca1bb464d11b0c8946e4ea9b',1,'rpg_os::FightRoundLog']]],
   ['gradethresholdresult_18',['gradeThresholdResult',['../namespacerpg__os_1_1detail.html#a1ebb0ebc515a1e899240e12886768985',1,'rpg_os::detail']]],
   ['grading_19',['grading',['../structrpg__os_1_1CheckRecipe.html#ad66589845d44fd0c60f035e6039b18c5',1,'rpg_os::CheckRecipe::grading'],['../namespacerpg__os.html#a77f98d725fb2409a3e02d40f5772f3bc',1,'rpg_os::Grading']]],
-  ['grapple_20',['grapple',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a7d4fa29d95edcfb0a5af62fab2c15341',1,'rpg_os::generated::brp_ugc::Character']]],
-  ['greaterequal_21',['GreaterEqual',['../namespacerpg__os.html#a4ede194e1af239829344bcfe6bf5791fa758b05d899def79c9eb864ad4f96be1f',1,'rpg_os']]],
-  ['guide_22',['guide',['../developer_guide.html',1,'Developer Guide'],['../user_guide.html',1,'User Guide']]]
+  ['grants_20',['grants',['../structrpg__os_1_1TerrainItemEffect.html#aec51daaffbce60962f4d3ade3fdc9cc2',1,'rpg_os::TerrainItemEffect']]],
+  ['grapple_21',['grapple',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a7d4fa29d95edcfb0a5af62fab2c15341',1,'rpg_os::generated::brp_ugc::Character']]],
+  ['greaterequal_22',['GreaterEqual',['../namespacerpg__os.html#a4ede194e1af239829344bcfe6bf5791fa758b05d899def79c9eb864ad4f96be1f',1,'rpg_os']]],
+  ['guide_23',['guide',['../developer_guide.html',1,'Developer Guide'],['../user_guide.html',1,'User Guide']]]
 ];

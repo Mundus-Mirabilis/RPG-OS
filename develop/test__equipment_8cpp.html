@@ -147,14 +147,62 @@ Functions</h2></td></tr>
 <tr class="separator:afb091734bf919655fe52d12b02a1785c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a027cf3aafd1cba89ca07d1e0eac3bcb0" id="r_a027cf3aafd1cba89ca07d1e0eac3bcb0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__equipment_8cpp.html#a027cf3aafd1cba89ca07d1e0eac3bcb0">TEST_CASE</a> (&quot;bookkeeping: effective armour reduces damage in the pipeline&quot;)</td></tr>
 <tr class="separator:a027cf3aafd1cba89ca07d1e0eac3bcb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfbb40e5f2a6e9822e9aa3b75e63083e" id="r_adfbb40e5f2a6e9822e9aa3b75e63083e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__equipment_8cpp.html#adfbb40e5f2a6e9822e9aa3b75e63083e">TEST_CASE</a> (&quot;bookkeeping: an equipped item's formula modifier resolves against the wearer&quot;)</td></tr>
+<tr class="separator:adfbb40e5f2a6e9822e9aa3b75e63083e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cd09c274a43140732b873cce682a486" id="r_a0cd09c274a43140732b873cce682a486"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__equipment_8cpp.html#a0cd09c274a43140732b873cce682a486">TEST_CASE</a> (&quot;bookkeeping: D&amp;D armour items modify effective AC from their records&quot;)</td></tr>
+<tr class="separator:a0cd09c274a43140732b873cce682a486"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Equipment slots, equipping/unequipping, and gear-modified effective stats. </p>
 
 <p class="definition">Definition in file <a class="el" href="test__equipment_8cpp_source.html">test_equipment.cpp</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a id="adfbb40e5f2a6e9822e9aa3b75e63083e" name="adfbb40e5f2a6e9822e9aa3b75e63083e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfbb40e5f2a6e9822e9aa3b75e63083e">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[1/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;bookkeeping: an equipped item's formula modifier resolves against the wearer&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="test__equipment_8cpp_source.html#l00091">91</a> of file <a class="el" href="test__equipment_8cpp_source.html">test_equipment.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="test__ruleset__loader_8cpp.html#a3ef0060dff335461a92da38c5eee6e2a">CHECK()</a>, <a class="el" href="equipment_8hpp_source.html#l00030">rpg_os::Equipment::equip()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00447">rpg_os::DynamicEntity::equipment()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00433">rpg_os::DynamicEntity::getEffectiveStat()</a>, <a class="el" href="engine_8hpp_source.html#l00065">rpg_os::RulesetEngine::loadRulesetFromJson()</a>, <a class="el" href="engine_8hpp_source.html#l02450">rpg_os::RulesetEngine::ruleset()</a>, and <a class="el" href="dynamic__entity_8hpp_source.html#l00213">rpg_os::DynamicEntity::setBaseAttribute()</a>.</p>
+
+</div>
+</div>
+<a id="a0cd09c274a43140732b873cce682a486" name="a0cd09c274a43140732b873cce682a486"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cd09c274a43140732b873cce682a486">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[2/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;bookkeeping: D&amp;D armour items modify effective AC from their records&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="test__equipment_8cpp_source.html#l00151">151</a> of file <a class="el" href="test__equipment_8cpp_source.html">test_equipment.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="test__ruleset__loader_8cpp.html#a3ef0060dff335461a92da38c5eee6e2a">CHECK()</a>, <a class="el" href="equipment_8hpp_source.html#l00030">rpg_os::Equipment::equip()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00447">rpg_os::DynamicEntity::equipment()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00433">rpg_os::DynamicEntity::getEffectiveStat()</a>, <a class="el" href="engine_8hpp_source.html#l00087">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="engine_8hpp_source.html#l02450">rpg_os::RulesetEngine::ruleset()</a>, <a class="el" href="test__util_8hpp_source.html#l00056">rulesetPath()</a>, and <a class="el" href="dynamic__entity_8hpp_source.html#l00213">rpg_os::DynamicEntity::setBaseAttribute()</a>.</p>
+
+</div>
+</div>
 <a id="a027cf3aafd1cba89ca07d1e0eac3bcb0" name="a027cf3aafd1cba89ca07d1e0eac3bcb0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a027cf3aafd1cba89ca07d1e0eac3bcb0">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[1/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a027cf3aafd1cba89ca07d1e0eac3bcb0">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[3/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -171,12 +219,12 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="test__equipment_8cpp_source.html#l00070">70</a> of file <a class="el" href="test__equipment_8cpp_source.html">test_equipment.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00486">rpg_os::RulesetEngine::applyDamage()</a>, <a class="el" href="test__ruleset__loader_8cpp.html#a3ef0060dff335461a92da38c5eee6e2a">CHECK()</a>, <a class="el" href="engine_8hpp_source.html#l00122">rpg_os::RulesetEngine::createEntity()</a>, <a class="el" href="engine_8hpp_source.html#l00086">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="engine_8hpp_source.html#l02004">rpg_os::RulesetEngine::ruleset()</a>, <a class="el" href="test__util_8hpp_source.html#l00056">rulesetPath()</a>, and <a class="el" href="engine_8hpp_source.html#l01022">rpg_os::RulesetEngine::unequip()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00487">rpg_os::RulesetEngine::applyDamage()</a>, <a class="el" href="test__ruleset__loader_8cpp.html#a3ef0060dff335461a92da38c5eee6e2a">CHECK()</a>, <a class="el" href="engine_8hpp_source.html#l00123">rpg_os::RulesetEngine::createEntity()</a>, <a class="el" href="engine_8hpp_source.html#l00087">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="engine_8hpp_source.html#l02450">rpg_os::RulesetEngine::ruleset()</a>, <a class="el" href="test__util_8hpp_source.html#l00056">rulesetPath()</a>, and <a class="el" href="engine_8hpp_source.html#l01023">rpg_os::RulesetEngine::unequip()</a>.</p>
 
 </div>
 </div>
 <a id="ae675cd1a61ce47012f8fb621ff857f10" name="ae675cd1a61ce47012f8fb621ff857f10"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae675cd1a61ce47012f8fb621ff857f10">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[2/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae675cd1a61ce47012f8fb621ff857f10">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[4/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -193,12 +241,12 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="test__equipment_8cpp_source.html#l00022">22</a> of file <a class="el" href="test__equipment_8cpp_source.html">test_equipment.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00879">rpg_os::RulesetEngine::addItem()</a>, <a class="el" href="test__ruleset__loader_8cpp.html#a3ef0060dff335461a92da38c5eee6e2a">CHECK()</a>, <a class="el" href="engine_8hpp_source.html#l00122">rpg_os::RulesetEngine::createEntity()</a>, <a class="el" href="engine_8hpp_source.html#l00975">rpg_os::RulesetEngine::equip()</a>, <a class="el" href="engine_8hpp_source.html#l00086">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="test__util_8hpp_source.html#l00056">rulesetPath()</a>, and <a class="el" href="engine_8hpp_source.html#l01022">rpg_os::RulesetEngine::unequip()</a>.</p>
+<p class="reference">References <a class="el" href="engine_8hpp_source.html#l00880">rpg_os::RulesetEngine::addItem()</a>, <a class="el" href="test__ruleset__loader_8cpp.html#a3ef0060dff335461a92da38c5eee6e2a">CHECK()</a>, <a class="el" href="engine_8hpp_source.html#l00123">rpg_os::RulesetEngine::createEntity()</a>, <a class="el" href="engine_8hpp_source.html#l00976">rpg_os::RulesetEngine::equip()</a>, <a class="el" href="engine_8hpp_source.html#l00087">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="test__util_8hpp_source.html#l00056">rulesetPath()</a>, and <a class="el" href="engine_8hpp_source.html#l01023">rpg_os::RulesetEngine::unequip()</a>.</p>
 
 </div>
 </div>
 <a id="a30664635869f131657af3d8e8422f25a" name="a30664635869f131657af3d8e8422f25a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a30664635869f131657af3d8e8422f25a">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[3/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a30664635869f131657af3d8e8422f25a">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[5/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -220,7 +268,7 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a id="afb091734bf919655fe52d12b02a1785c" name="afb091734bf919655fe52d12b02a1785c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afb091734bf919655fe52d12b02a1785c">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[4/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#afb091734bf919655fe52d12b02a1785c">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[6/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -237,7 +285,7 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="test__equipment_8cpp_source.html#l00054">54</a> of file <a class="el" href="test__equipment_8cpp_source.html">test_equipment.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="test__ruleset__loader_8cpp.html#a3ef0060dff335461a92da38c5eee6e2a">CHECK()</a>, <a class="el" href="engine_8hpp_source.html#l00122">rpg_os::RulesetEngine::createEntity()</a>, <a class="el" href="engine_8hpp_source.html#l00975">rpg_os::RulesetEngine::equip()</a>, <a class="el" href="engine_8hpp_source.html#l00086">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="test__util_8hpp_source.html#l00056">rulesetPath()</a>, and <a class="el" href="engine_8hpp_source.html#l01022">rpg_os::RulesetEngine::unequip()</a>.</p>
+<p class="reference">References <a class="el" href="test__ruleset__loader_8cpp.html#a3ef0060dff335461a92da38c5eee6e2a">CHECK()</a>, <a class="el" href="engine_8hpp_source.html#l00123">rpg_os::RulesetEngine::createEntity()</a>, <a class="el" href="engine_8hpp_source.html#l00976">rpg_os::RulesetEngine::equip()</a>, <a class="el" href="engine_8hpp_source.html#l00087">rpg_os::RulesetEngine::loadRulesetFromFile()</a>, <a class="el" href="test__util_8hpp_source.html#l00056">rulesetPath()</a>, and <a class="el" href="engine_8hpp_source.html#l01023">rpg_os::RulesetEngine::unequip()</a>.</p>
 
 </div>
 </div>

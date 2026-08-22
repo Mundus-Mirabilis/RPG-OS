@@ -1,6 +1,7 @@
 var dir_1efe6f00596d3cac8c1c93129e66f402 =
 [
     [ "advancement.hpp", "advancement_8hpp.html", "advancement_8hpp" ],
+    [ "capacity.hpp", "capacity_8hpp.html", "capacity_8hpp" ],
     [ "checks.hpp", "checks_8hpp.html", "checks_8hpp" ],
     [ "concepts.hpp", "concepts_8hpp.html", "concepts_8hpp" ],
     [ "cost_table.hpp", "cost__table_8hpp.html", "cost__table_8hpp" ],

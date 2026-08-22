@@ -4,6 +4,7 @@ var group__rpg__os__core =
     [ "json.hpp", "json_8hpp.html", null ],
     [ "types.hpp", "types_8hpp.html", null ],
     [ "advancement.hpp", "advancement_8hpp.html", null ],
+    [ "capacity.hpp", "capacity_8hpp.html", null ],
     [ "concepts.hpp", "concepts_8hpp.html", null ],
     [ "cost_table.hpp", "cost__table_8hpp.html", null ],
     [ "dice_engine.hpp", "dice__engine_8hpp.html", null ],

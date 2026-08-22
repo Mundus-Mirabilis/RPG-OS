@@ -1,33 +1,35 @@
 <map id="world_state.hpp" name="world_state.hpp">
-<area shape="rect" id="Node000001" title="Minimal shared world bookkeeping." alt="" coords="529,5,655,31"/>
-<area shape="rect" id="Node000002" href="$game__session_8hpp.html" title="The application&#45;facing facade (&quot;OS kernel&quot;)." alt="" coords="434,79,577,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="569,41,521,81,518,76,566,37"/>
-<area shape="rect" id="Node000016" href="$test__world__state_8cpp.html" title="Unit tests for the shared world bookkeeping (rpg_os::WorldState)." alt="" coords="601,79,759,104"/>
-<area shape="poly" id="edge15_Node000001_Node000016" title=" " alt="" coords="618,37,667,76,664,81,615,41"/>
-<area shape="rect" id="Node000003" href="$ecs__registry_2main_8cpp.html" title="Dependency&#45;free ECS pattern example." alt="" coords="203,152,285,177"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="451,110,286,155,285,150,449,105"/>
-<area shape="rect" id="Node000004" href="$test__combat__session_8cpp.html" title="Tests for the turn &amp; action&#45;economy orchestrator (rpg_os::CombatSession)." alt="" coords="309,152,496,177"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="479,114,421,154,418,150,476,110"/>
-<area shape="rect" id="Node000005" href="$test__entity__registry_8cpp.html" title="Tests for entity instance ids, handles, and the registry." alt="" coords="521,152,695,177"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="535,110,593,150,590,154,532,114"/>
-<area shape="rect" id="Node000006" href="$test__fixtures_8hpp.html" title="Shared fixtures for the bookkeeping test suite." alt="" coords="720,152,851,177"/>
-<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="564,105,741,149,739,154,563,110"/>
+<area shape="rect" id="Node000001" title="Minimal shared world bookkeeping." alt="" coords="619,5,746,31"/>
+<area shape="rect" id="Node000002" href="$game__session_8hpp.html" title="The application&#45;facing facade (&quot;OS kernel&quot;)." alt="" coords="525,79,667,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="660,41,612,81,608,76,657,37"/>
+<area shape="rect" id="Node000017" href="$test__world__state_8cpp.html" title="Unit tests for the shared world bookkeeping (rpg_os::WorldState)." alt="" coords="692,79,849,104"/>
+<area shape="poly" id="edge16_Node000001_Node000017" title=" " alt="" coords="709,37,758,76,755,81,706,41"/>
+<area shape="rect" id="Node000003" href="$ecs__registry_2main_8cpp.html" title="Dependency&#45;free ECS pattern example." alt="" coords="293,152,376,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="541,110,377,155,375,150,540,105"/>
+<area shape="rect" id="Node000004" href="$test__combat__session_8cpp.html" title="Tests for the turn &amp; action&#45;economy orchestrator (rpg_os::CombatSession)." alt="" coords="400,152,587,177"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="570,114,512,154,509,150,567,110"/>
+<area shape="rect" id="Node000005" href="$test__entity__registry_8cpp.html" title="Tests for entity instance ids, handles, and the registry." alt="" coords="611,152,786,177"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="625,110,683,150,680,154,622,114"/>
+<area shape="rect" id="Node000006" href="$test__fixtures_8hpp.html" title="Shared fixtures for the bookkeeping test suite." alt="" coords="811,152,941,177"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="655,105,831,149,830,154,653,110"/>
 <area shape="rect" id="Node000007" href="$test__advancement_8cpp.html" title="Advancement, rests, and curses." alt="" coords="5,225,176,251"/>
-<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="707,180,445,205,188,228,176,229,176,224,188,223,445,200,706,175"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="797,180,625,196,490,205,357,214,188,228,176,229,176,224,188,223,357,208,490,200,624,191,797,175"/>
 <area shape="rect" id="Node000008" href="$test__conditions_8cpp.html" title="Mechanical conditions: durations, stat/check modifiers, restrictions and capabilities." alt="" coords="201,225,349,251"/>
-<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="707,180,349,229,348,224,706,175"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="797,180,577,205,362,228,349,230,349,224,361,223,577,199,796,175"/>
 <area shape="rect" id="Node000009" href="$test__effects_8cpp.html" title="The effect timeline: durations, stat bonuses, recurring/ongoing effects, option groups." alt="" coords="373,225,499,251"/>
-<area shape="poly" id="edge8_Node000006_Node000009" title=" " alt="" coords="716,183,493,228,492,223,715,177"/>
+<area shape="poly" id="edge8_Node000006_Node000009" title=" " alt="" coords="798,181,499,229,498,224,797,176"/>
 <area shape="rect" id="Node000010" href="$test__equipment_8cpp.html" title="Equipment slots, equipping/unequipping, and gear&#45;modified effective stats." alt="" coords="523,225,674,251"/>
-<area shape="poly" id="edge9_Node000006_Node000010" title=" " alt="" coords="744,185,630,228,628,223,742,180"/>
+<area shape="poly" id="edge9_Node000006_Node000010" title=" " alt="" coords="819,183,644,228,643,223,817,178"/>
 <area shape="rect" id="Node000011" href="$test__game__session_8cpp.html" title="The GameSession facade: sheets, world state, events, save/load." alt="" coords="698,225,873,251"/>
-<area shape="poly" id="edge10_Node000006_Node000011" title=" " alt="" coords="788,191,788,225,783,225,783,191"/>
+<area shape="poly" id="edge10_Node000006_Node000011" title=" " alt="" coords="852,188,802,227,799,223,849,184"/>
 <area shape="rect" id="Node000012" href="$test__inventory_8cpp.html" title="Inventory stacks, nested containers, and carrying weight." alt="" coords="897,225,1039,251"/>
-<area shape="poly" id="edge11_Node000006_Node000012" title=" " alt="" coords="828,180,939,223,937,228,826,185"/>
+<area shape="poly" id="edge11_Node000006_Node000012" title=" " alt="" coords="903,183,955,223,951,227,900,188"/>
 <area shape="rect" id="Node000013" href="$test__money_8cpp.html" title="Money, currency conversion, and the economy (prices, buying, paying)." alt="" coords="1063,225,1187,251"/>
-<area shape="poly" id="edge12_Node000006_Node000013" title=" " alt="" coords="854,177,1071,223,1070,228,853,183"/>
-<area shape="rect" id="Node000014" href="$test__spellcasting_8cpp.html" title="Spellbooks and casting: prepared pools, vancian slots, structured spell effects." alt="" coords="1211,225,1370,251"/>
-<area shape="poly" id="edge13_Node000006_Node000014" title=" " alt="" coords="865,174,1211,223,1211,228,864,180"/>
-<area shape="rect" id="Node000015" href="$test__traits_8cpp.html" title="Creature traits: stat/check modifiers, effects at creation, regeneration." alt="" coords="1395,225,1509,251"/>
-<area shape="poly" id="edge14_Node000006_Node000015" title=" " alt="" coords="865,170,1097,191,1383,223,1395,224,1394,230,1382,228,1097,196,864,175"/>
+<area shape="poly" id="edge12_Node000006_Node000013" title=" " alt="" coords="930,179,1086,223,1084,228,929,184"/>
+<area shape="rect" id="Node000014" href="$test__movement_8cpp.html" title="Terrain&#45;aware movement and the surrounding&#39;s effect on a sheet." alt="" coords="1212,225,1364,251"/>
+<area shape="poly" id="edge13_Node000006_Node000014" title=" " alt="" coords="956,177,1222,223,1221,228,955,182"/>
+<area shape="rect" id="Node000015" href="$test__spellcasting_8cpp.html" title="Spellbooks and casting: prepared pools, vancian slots, structured spell effects." alt="" coords="1389,225,1547,251"/>
+<area shape="poly" id="edge14_Node000006_Node000015" title=" " alt="" coords="955,173,1376,223,1389,224,1388,229,1376,228,955,178"/>
+<area shape="rect" id="Node000016" href="$test__traits_8cpp.html" title="Creature traits: stat/check modifiers, effects at creation, regeneration." alt="" coords="1572,225,1687,251"/>
+<area shape="poly" id="edge15_Node000006_Node000016" title=" " alt="" coords="955,168,1224,188,1560,223,1572,224,1572,230,1560,228,1223,194,955,174"/>
 </map>

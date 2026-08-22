@@ -33,6 +33,7 @@ var classrpg__os_1_1DynamicEntity =
     [ "id", "classrpg__os_1_1DynamicEntity.html#a9c6fbf35cf8e5356354ff94f4a1a4a1d", null ],
     [ "inventory", "classrpg__os_1_1DynamicEntity.html#ab61c40ebdf0e64803960336884c652f2", null ],
     [ "inventory", "classrpg__os_1_1DynamicEntity.html#ab9577c7e1095d7f2c6a9b8c8362474ad", null ],
+    [ "itemTerrainStatus", "classrpg__os_1_1DynamicEntity.html#a4678b1f1f0e6f852087c967f72e307bf", null ],
     [ "loadFromArchetype", "classrpg__os_1_1DynamicEntity.html#a07317d4aed2e9be1ab790d67e542fd87", null ],
     [ "loadFromArchetype", "classrpg__os_1_1DynamicEntity.html#a0d9943d71fa944cede681ebe511d7700", null ],
     [ "modifyResource", "classrpg__os_1_1DynamicEntity.html#a88bd9431036e2b74bc66ef608ecaf7aa", null ],
@@ -49,9 +50,11 @@ var classrpg__os_1_1DynamicEntity =
     [ "setEventSink", "classrpg__os_1_1DynamicEntity.html#af2dfad47587f33a7d019c7bbfc15c687", null ],
     [ "setEventsSuppressed", "classrpg__os_1_1DynamicEntity.html#a1522f9e2ae2dadaba32d7361729f2b3c", null ],
     [ "setTemporaryHitPoints", "classrpg__os_1_1DynamicEntity.html#aac0c0f9b03887856c838c94af1134c08", null ],
+    [ "setTerrain", "classrpg__os_1_1DynamicEntity.html#ae10d987d1a859bcf6df6d80bc84ebbaa", null ],
     [ "spellbook", "classrpg__os_1_1DynamicEntity.html#addf6f1d7777d20a2ae1ff6396fdf84e4", null ],
     [ "spellbook", "classrpg__os_1_1DynamicEntity.html#a8a44709ee787786fbdf26621cef692f0", null ],
     [ "temporaryHitPoints", "classrpg__os_1_1DynamicEntity.html#a7d7e24819980cd162548e5bf9e42c312", null ],
+    [ "terrain", "classrpg__os_1_1DynamicEntity.html#a82940e57fcf291d55a92d30622f44981", null ],
     [ "toJson", "classrpg__os_1_1DynamicEntity.html#afa0a4baf891b52a71af33700cd46d574", null ],
     [ "traits", "classrpg__os_1_1DynamicEntity.html#afd704d54328882caf44c4065c919d3e9", null ]
 ];

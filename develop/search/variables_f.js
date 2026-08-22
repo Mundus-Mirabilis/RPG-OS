@@ -16,11 +16,12 @@ var searchData=
   ['plantlore_13',['plantLore',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a240b56f254b007e71d2ee5ef50606f09',1,'rpg_os::generated::tde5e::Character']]],
   ['poolattributes_14',['poolAttributes',['../structrpg__os_1_1CheckRecipe.html#ae5edaa891b2a6c53753224e756c75ae6',1,'rpg_os::CheckRecipe']]],
   ['poolstat_15',['poolStat',['../structrpg__os_1_1CheckRecipe.html#a0d7b3a640c57f3fa828875e3e60fc033',1,'rpg_os::CheckRecipe']]],
-  ['power_16',['power',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#afb23d51e7e7e86afede0e72c4cd405ae',1,'rpg_os::generated::brp_ugc::Character']]],
-  ['powerpoints_17',['powerPoints',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#aaf552b011ef0cc3091b503476ba57957',1,'rpg_os::generated::brp_ugc::Character']]],
-  ['preparefood_18',['prepareFood',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a59e6a456811d0200ddc1b3ba6fa2c737',1,'rpg_os::generated::tde5e::Character']]],
-  ['previousitemid_19',['previousItemId',['../structrpg__os_1_1RulesetEngine_1_1EquipResult.html#a8f38941678a0a1260ef5589773a59290',1,'rpg_os::RulesetEngine::EquipResult']]],
-  ['proficiencybonus_20',['proficiencyBonus',['../classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#af89bdf6c914b9e0e7a52b2899a0953a8',1,'rpg_os::generated::dnd5e::Character']]],
-  ['projection_21',['projection',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a51c0a025e886fec7b03faf6d8c78d6fd',1,'rpg_os::generated::brp_ugc::Character']]],
-  ['psychotherapy_22',['psychotherapy',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a36ffc0a4d228ac8eef1972fd2554fd10',1,'rpg_os::generated::brp_ugc::Character']]]
+  ['possible_16',['possible',['../structrpg__os_1_1TerrainModeRule.html#ab48e69f5af5f3dacbd63d556588d677a',1,'rpg_os::TerrainModeRule::possible'],['../structrpg__os_1_1MovementOption.html#a34ce13303d0f853f9d1e6212565e6171',1,'rpg_os::MovementOption::possible'],['../structrpg__os_1_1MovementOutcome.html#ac5961b3efabcacc0b2f5856128ddbf0d',1,'rpg_os::MovementOutcome::possible']]],
+  ['power_17',['power',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#afb23d51e7e7e86afede0e72c4cd405ae',1,'rpg_os::generated::brp_ugc::Character']]],
+  ['powerpoints_18',['powerPoints',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#aaf552b011ef0cc3091b503476ba57957',1,'rpg_os::generated::brp_ugc::Character']]],
+  ['preparefood_19',['prepareFood',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a59e6a456811d0200ddc1b3ba6fa2c737',1,'rpg_os::generated::tde5e::Character']]],
+  ['previousitemid_20',['previousItemId',['../structrpg__os_1_1RulesetEngine_1_1EquipResult.html#a8f38941678a0a1260ef5589773a59290',1,'rpg_os::RulesetEngine::EquipResult']]],
+  ['proficiencybonus_21',['proficiencyBonus',['../classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#af89bdf6c914b9e0e7a52b2899a0953a8',1,'rpg_os::generated::dnd5e::Character']]],
+  ['projection_22',['projection',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a51c0a025e886fec7b03faf6d8c78d6fd',1,'rpg_os::generated::brp_ugc::Character']]],
+  ['psychotherapy_23',['psychotherapy',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a36ffc0a4d228ac8eef1972fd2554fd10',1,'rpg_os::generated::brp_ugc::Character']]]
 ];

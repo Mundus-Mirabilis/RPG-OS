@@ -132,7 +132,7 @@ $(document).ready(function(){initNavTree('classrpg__os_1_1Ruleset.html',''); ini
 <div class="dynheader">
 Collaboration diagram for rpg_os::Ruleset:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classrpg__os_1_1Ruleset__coll__graph.svg" width="636" height="212"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classrpg__os_1_1Ruleset__coll__graph.svg" width="100%" height="438"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -220,6 +220,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a899f7fae21c17be738920b45d391662c" id="r_a899f7fae21c17be738920b45d391662c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structrpg__os_1_1SpellcastingConfig.html">SpellcastingConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1Ruleset.html#a899f7fae21c17be738920b45d391662c">spellcasting</a></td></tr>
 <tr class="memdesc:a899f7fae21c17be738920b45d391662c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optional spell-casting configuration (vancian slots).  <br /></td></tr>
 <tr class="separator:a899f7fae21c17be738920b45d391662c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae100e98c779a9d130b304bc84c04e4b0" id="r_ae100e98c779a9d130b304bc84c04e4b0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structrpg__os_1_1MovementConfig.html">MovementConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1Ruleset.html#ae100e98c779a9d130b304bc84c04e4b0">movement</a></td></tr>
+<tr class="memdesc:ae100e98c779a9d130b304bc84c04e4b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optional terrain-aware movement rules (see <a class="el" href="movement_8hpp.html" title="Terrain-aware movement and the surrounding&#39;s effect on a sheet.">movement.hpp</a>).  <br /></td></tr>
+<tr class="separator:ae100e98c779a9d130b304bc84c04e4b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae40260fe242930ce65091de5e18bbb7" id="r_aae40260fe242930ce65091de5e18bbb7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacerpg__os.html#afa8b802b0bd5a50e36a895d4c7e0820d">Json</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrpg__os_1_1Ruleset.html#aae40260fe242930ce65091de5e18bbb7">data</a> {}</td></tr>
 <tr class="memdesc:aae40260fe242930ce65091de5e18bbb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The raw <code>data</code> section (archetypes, items, creatures) as JSON.  <br /></td></tr>
 <tr class="separator:aae40260fe242930ce65091de5e18bbb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -229,7 +232,7 @@ Public Attributes</h2></td></tr>
 <dl class="section user"><dt>Why a plain data class instead of hidden state?</dt><dd>A <a class="el" href="classrpg__os_1_1Ruleset.html">Ruleset</a> is a pure value: everything the engine or the code generator needs is publicly readable. Making it a plain aggregate avoids an accessor layer that would add nothing, and lets the universal engine, the loader, and the code generator share it without ceremony.</dd></dl>
 <dl class="section user"><dt>Lookup methods return raw pointers instead of optional/iterators</dt><dd>The lookup set is small and linear scans are fine at load/validation time; returning <code>nullptr</code> for "absent" keeps call sites terse and lets the engine distinguish "known, value 0" from "unknown". </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00214">214</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00227">227</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a15d99cb8f3a844390bdae61f5d25df9c" name="a15d99cb8f3a844390bdae61f5d25df9c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a15d99cb8f3a844390bdae61f5d25df9c">&#9670;&#160;</a></span>findAttribute()</h2>
@@ -257,11 +260,11 @@ Public Attributes</h2></td></tr>
 
 <p>Finds an attribute by id; returns nullptr when absent. </p>
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00280">280</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00295">295</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ruleset__loader_8hpp_source.html#l00229">attributes</a>.</p>
+<p class="reference">References <a class="el" href="ruleset__loader_8hpp_source.html#l00242">attributes</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00752">rpg_os::RulesetEngine::applyAffliction()</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00325">hasStat()</a>, and <a class="el" href="ruleset__loader_8hpp_source.html#l00901">rpg_os::RulesetLoader::validate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00753">rpg_os::RulesetEngine::applyAffliction()</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00340">hasStat()</a>, and <a class="el" href="ruleset__loader_8hpp_source.html#l01005">rpg_os::RulesetLoader::validate()</a>.</p>
 
 </div>
 </div>
@@ -291,11 +294,11 @@ Public Attributes</h2></td></tr>
 
 <p>Finds a check type by id; returns nullptr when absent. </p>
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00298">298</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00313">313</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ruleset__loader_8hpp_source.html#l00233">checkTypes</a>.</p>
+<p class="reference">References <a class="el" href="ruleset__loader_8hpp_source.html#l00246">checkTypes</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00653">rpg_os::RulesetEngine::castSpell()</a>, and <a class="el" href="check__resolver_8hpp_source.html#l00044">rpg_os::CheckResolver::resolve()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00654">rpg_os::RulesetEngine::castSpell()</a>, and <a class="el" href="check__resolver_8hpp_source.html#l00044">rpg_os::CheckResolver::resolve()</a>.</p>
 
 </div>
 </div>
@@ -325,9 +328,9 @@ Public Attributes</h2></td></tr>
 
 <p>Finds a cost table by id; returns nullptr when absent. </p>
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00316">316</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00331">331</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ruleset__loader_8hpp_source.html#l00234">costTables</a>.</p>
+<p class="reference">References <a class="el" href="ruleset__loader_8hpp_source.html#l00247">costTables</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="test__rulesets_8cpp_source.html#l00021">TEST_CASE()</a>.</p>
 
@@ -359,11 +362,11 @@ Public Attributes</h2></td></tr>
 
 <p>Finds a derived stat by id; returns nullptr when absent. </p>
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00289">289</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00304">304</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ruleset__loader_8hpp_source.html#l00230">derivedStats</a>.</p>
+<p class="reference">References <a class="el" href="ruleset__loader_8hpp_source.html#l00243">derivedStats</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="dynamic__entity_8hpp_source.html#l00199">rpg_os::DynamicEntity::getStat()</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00325">hasStat()</a>, and <a class="el" href="ruleset__loader_8hpp_source.html#l00901">rpg_os::RulesetLoader::validate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="dynamic__entity_8hpp_source.html#l00200">rpg_os::DynamicEntity::getStat()</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00340">hasStat()</a>, and <a class="el" href="ruleset__loader_8hpp_source.html#l01005">rpg_os::RulesetLoader::validate()</a>.</p>
 
 </div>
 </div>
@@ -393,11 +396,11 @@ Public Attributes</h2></td></tr>
 
 <p>Finds a skill by id; returns nullptr when absent. </p>
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00307">307</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00322">322</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ruleset__loader_8hpp_source.html#l00232">skills</a>.</p>
+<p class="reference">References <a class="el" href="ruleset__loader_8hpp_source.html#l00245">skills</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00445">rpg_os::RulesetEngine::executeSkillCheck()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00446">rpg_os::RulesetEngine::executeSkillCheck()</a>.</p>
 
 </div>
 </div>
@@ -426,11 +429,11 @@ Public Attributes</h2></td></tr>
 
 <p>Whether the ruleset declares a currency system (i.e. has money). </p>
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00275">275</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00290">290</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ruleset__loader_8hpp_source.html#l00239">currencySystem</a>, and <a class="el" href="money_8hpp_source.html#l00045">rpg_os::CurrencySystem::id</a>.</p>
+<p class="reference">References <a class="el" href="ruleset__loader_8hpp_source.html#l00252">currencySystem</a>, and <a class="el" href="money_8hpp_source.html#l00045">rpg_os::CurrencySystem::id</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00833">rpg_os::RulesetEngine::hasCurrency()</a>, and <a class="el" href="engine_8hpp_source.html#l00846">rpg_os::RulesetEngine::itemPrice()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00834">rpg_os::RulesetEngine::hasCurrency()</a>, and <a class="el" href="engine_8hpp_source.html#l00847">rpg_os::RulesetEngine::itemPrice()</a>.</p>
 
 </div>
 </div>
@@ -459,11 +462,11 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Whether <code>statId</code> names a known stat (attribute, derived stat, or skill). Skills are counted here because the pool of a talent check is a stat the resolver must be able to read. </p>
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00325">325</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00340">340</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ruleset__loader_8hpp_source.html#l00280">findAttribute()</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00289">findDerivedStat()</a>, and <a class="el" href="ruleset__loader_8hpp_source.html#l00232">skills</a>.</p>
+<p class="reference">References <a class="el" href="ruleset__loader_8hpp_source.html#l00295">findAttribute()</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00304">findDerivedStat()</a>, and <a class="el" href="ruleset__loader_8hpp_source.html#l00245">skills</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00752">rpg_os::RulesetEngine::applyAffliction()</a>, and <a class="el" href="ruleset__loader_8hpp_source.html#l00901">rpg_os::RulesetLoader::validate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00753">rpg_os::RulesetEngine::applyAffliction()</a>, and <a class="el" href="ruleset__loader_8hpp_source.html#l01005">rpg_os::RulesetLoader::validate()</a>.</p>
 
 </div>
 </div>
@@ -493,11 +496,11 @@ Public Attributes</h2></td></tr>
 
 <p>Whether <code>conditionId</code> names a condition in the ruleset's <code>data.conditions</code>. </p>
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00349">349</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00364">364</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ruleset__loader_8hpp_source.html#l00246">data</a>.</p>
+<p class="reference">References <a class="el" href="ruleset__loader_8hpp_source.html#l00261">data</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00752">rpg_os::RulesetEngine::applyAffliction()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00753">rpg_os::RulesetEngine::applyAffliction()</a>.</p>
 
 </div>
 </div>
@@ -527,11 +530,11 @@ Public Attributes</h2></td></tr>
 
 <p>Whether <code>poolId</code> names one of the ruleset's resource pools. </p>
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00340">340</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00355">355</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ruleset__loader_8hpp_source.html#l00231">resourcePools</a>.</p>
+<p class="reference">References <a class="el" href="ruleset__loader_8hpp_source.html#l00244">resourcePools</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00752">rpg_os::RulesetEngine::applyAffliction()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00753">rpg_os::RulesetEngine::applyAffliction()</a>.</p>
 
 </div>
 </div>
@@ -548,9 +551,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00229">229</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00242">242</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ruleset__loader_8hpp_source.html#l00280">findAttribute()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00197">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00021">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00068">TEST_CASE()</a>, and <a class="el" href="ruleset__loader_8hpp_source.html#l00901">rpg_os::RulesetLoader::validate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ruleset__loader_8hpp_source.html#l00295">findAttribute()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00197">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00021">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00068">TEST_CASE()</a>, and <a class="el" href="ruleset__loader_8hpp_source.html#l01005">rpg_os::RulesetLoader::validate()</a>.</p>
 
 </div>
 </div>
@@ -568,9 +571,9 @@ Public Attributes</h2></td></tr>
 
 <p>optional attribution/credit statement the licence requires </p>
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00222">222</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00235">235</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ruleset__loader_8hpp_source.html#l00856">rpg_os::RulesetLoader::load()</a>, <a class="el" href="test__ruleset__loader_8cpp_source.html#l00259">TEST_CASE()</a>, and <a class="el" href="test__rulesets_8cpp_source.html#l00120">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ruleset__loader_8hpp_source.html#l00959">rpg_os::RulesetLoader::load()</a>, <a class="el" href="test__ruleset__loader_8cpp_source.html#l00259">TEST_CASE()</a>, and <a class="el" href="test__rulesets_8cpp_source.html#l00120">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -586,9 +589,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00233">233</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00246">246</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ruleset__loader_8hpp_source.html#l00298">findCheckType()</a>, <a class="el" href="combat_8hpp_source.html#l00141">rpg_os::resolveAttackCheckType()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00197">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00021">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00068">TEST_CASE()</a>, and <a class="el" href="ruleset__loader_8hpp_source.html#l00901">rpg_os::RulesetLoader::validate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ruleset__loader_8hpp_source.html#l00313">findCheckType()</a>, <a class="el" href="combat_8hpp_source.html#l00141">rpg_os::resolveAttackCheckType()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00197">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00021">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00068">TEST_CASE()</a>, and <a class="el" href="ruleset__loader_8hpp_source.html#l01005">rpg_os::RulesetLoader::validate()</a>.</p>
 
 </div>
 </div>
@@ -606,9 +609,9 @@ Public Attributes</h2></td></tr>
 
 <p>optional free-form note for the ruleset author </p>
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00223">223</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00236">236</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ruleset__loader_8hpp_source.html#l00856">rpg_os::RulesetLoader::load()</a>, <a class="el" href="test__ruleset__loader_8cpp_source.html#l00259">TEST_CASE()</a>, and <a class="el" href="test__rulesets_8cpp_source.html#l00120">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ruleset__loader_8hpp_source.html#l00959">rpg_os::RulesetLoader::load()</a>, <a class="el" href="test__ruleset__loader_8cpp_source.html#l00259">TEST_CASE()</a>, and <a class="el" href="test__rulesets_8cpp_source.html#l00120">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -624,9 +627,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00234">234</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00247">247</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ruleset__loader_8hpp_source.html#l00316">findCostTable()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00197">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00021">TEST_CASE()</a>, and <a class="el" href="ruleset__loader_8hpp_source.html#l00901">rpg_os::RulesetLoader::validate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ruleset__loader_8hpp_source.html#l00331">findCostTable()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00197">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00021">TEST_CASE()</a>, and <a class="el" href="ruleset__loader_8hpp_source.html#l01005">rpg_os::RulesetLoader::validate()</a>.</p>
 
 </div>
 </div>
@@ -644,9 +647,9 @@ Public Attributes</h2></td></tr>
 
 <p>namespace used by the code generator </p>
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00224">224</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00237">237</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ruleset__loader_8hpp_source.html#l00856">rpg_os::RulesetLoader::load()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ruleset__loader_8hpp_source.html#l00959">rpg_os::RulesetLoader::load()</a>.</p>
 
 </div>
 </div>
@@ -664,9 +667,9 @@ Public Attributes</h2></td></tr>
 
 <p>The ruleset's coinage; an empty <code>id</code> means it has no money. </p>
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00239">239</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00252">252</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00838">rpg_os::RulesetEngine::currencySystem()</a>, and <a class="el" href="ruleset__loader_8hpp_source.html#l00275">hasCurrency()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00839">rpg_os::RulesetEngine::currencySystem()</a>, and <a class="el" href="ruleset__loader_8hpp_source.html#l00290">hasCurrency()</a>.</p>
 
 </div>
 </div>
@@ -684,9 +687,9 @@ Public Attributes</h2></td></tr>
 
 <p>The raw <code>data</code> section (archetypes, items, creatures) as JSON. </p>
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00246">246</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00261">261</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00171">rpg_os::RulesetEngine::createCreatureWith()</a>, <a class="el" href="engine_8hpp_source.html#l00138">rpg_os::RulesetEngine::createEntityWith()</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00369">rpg_os::findDataRecord()</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00349">isCondition()</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00856">rpg_os::RulesetLoader::load()</a>, <a class="el" href="combat_8hpp_source.html#l00258">rpg_os::makeCombatantSpec()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00327">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00148">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00120">TEST_CASE()</a>, and <a class="el" href="test__rulesets_8cpp_source.html#l00164">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00172">rpg_os::RulesetEngine::createCreatureWith()</a>, <a class="el" href="engine_8hpp_source.html#l00139">rpg_os::RulesetEngine::createEntityWith()</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00384">rpg_os::findDataRecord()</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00364">isCondition()</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00959">rpg_os::RulesetLoader::load()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00327">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00148">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00120">TEST_CASE()</a>, and <a class="el" href="test__rulesets_8cpp_source.html#l00164">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -702,9 +705,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00230">230</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00243">243</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ruleset__loader_8hpp_source.html#l00289">findDerivedStat()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00197">TEST_CASE()</a>, and <a class="el" href="ruleset__loader_8hpp_source.html#l00901">rpg_os::RulesetLoader::validate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ruleset__loader_8hpp_source.html#l00304">findDerivedStat()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00197">TEST_CASE()</a>, and <a class="el" href="ruleset__loader_8hpp_source.html#l01005">rpg_os::RulesetLoader::validate()</a>.</p>
 
 </div>
 </div>
@@ -722,9 +725,9 @@ Public Attributes</h2></td></tr>
 
 <p>Optional carrying / encumbrance rules. </p>
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00241">241</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00254">254</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l01042">rpg_os::RulesetEngine::carriedWeight()</a>, and <a class="el" href="ruleset__loader_8hpp_source.html#l00901">rpg_os::RulesetLoader::validate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l01075">rpg_os::RulesetEngine::carriedWeight()</a>, <a class="el" href="engine_8hpp_source.html#l01061">rpg_os::RulesetEngine::itemSize()</a>, <a class="el" href="engine_8hpp_source.html#l01041">rpg_os::RulesetEngine::itemWeight()</a>, and <a class="el" href="ruleset__loader_8hpp_source.html#l01005">rpg_os::RulesetLoader::validate()</a>.</p>
 
 </div>
 </div>
@@ -740,9 +743,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00235">235</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00248">248</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00975">rpg_os::RulesetEngine::equip()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="engine_8hpp_source.html#l00976">rpg_os::RulesetEngine::equip()</a>.</p>
 
 </div>
 </div>
@@ -758,9 +761,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00236">236</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00249">249</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ruleset__loader_8hpp_source.html#l00901">rpg_os::RulesetLoader::validate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ruleset__loader_8hpp_source.html#l01005">rpg_os::RulesetLoader::validate()</a>.</p>
 
 </div>
 </div>
@@ -776,9 +779,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00216">216</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00229">229</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ruleset__loader_8hpp_source.html#l00856">rpg_os::RulesetLoader::load()</a>, <a class="el" href="test__engine_8cpp_source.html#l00240">TEST_CASE()</a>, and <a class="el" href="test__engine_8cpp_source.html#l00107">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ruleset__loader_8hpp_source.html#l00959">rpg_os::RulesetLoader::load()</a>, <a class="el" href="test__engine_8cpp_source.html#l00240">TEST_CASE()</a>, and <a class="el" href="test__engine_8cpp_source.html#l00107">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -796,9 +799,9 @@ Public Attributes</h2></td></tr>
 
 <p>licence governing the ruleset content (required) </p>
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00219">219</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00232">232</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ruleset__loader_8hpp_source.html#l00856">rpg_os::RulesetLoader::load()</a>, <a class="el" href="test__ruleset__loader_8cpp_source.html#l00259">TEST_CASE()</a>, and <a class="el" href="test__rulesets_8cpp_source.html#l00120">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ruleset__loader_8hpp_source.html#l00959">rpg_os::RulesetLoader::load()</a>, <a class="el" href="test__ruleset__loader_8cpp_source.html#l00259">TEST_CASE()</a>, and <a class="el" href="test__rulesets_8cpp_source.html#l00120">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -816,9 +819,9 @@ Public Attributes</h2></td></tr>
 
 <p>optional verbatim notice the licence requires (e.g. ORC Notice) </p>
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00221">221</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00234">234</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ruleset__loader_8hpp_source.html#l00856">rpg_os::RulesetLoader::load()</a>, <a class="el" href="test__ruleset__loader_8cpp_source.html#l00259">TEST_CASE()</a>, and <a class="el" href="test__rulesets_8cpp_source.html#l00120">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ruleset__loader_8hpp_source.html#l00959">rpg_os::RulesetLoader::load()</a>, <a class="el" href="test__ruleset__loader_8cpp_source.html#l00259">TEST_CASE()</a>, and <a class="el" href="test__rulesets_8cpp_source.html#l00120">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -836,9 +839,27 @@ Public Attributes</h2></td></tr>
 
 <p>optional URL where the rights holder states the licence </p>
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00220">220</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00233">233</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ruleset__loader_8hpp_source.html#l00856">rpg_os::RulesetLoader::load()</a>, <a class="el" href="test__ruleset__loader_8cpp_source.html#l00259">TEST_CASE()</a>, and <a class="el" href="test__rulesets_8cpp_source.html#l00120">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ruleset__loader_8hpp_source.html#l00959">rpg_os::RulesetLoader::load()</a>, <a class="el" href="test__ruleset__loader_8cpp_source.html#l00259">TEST_CASE()</a>, and <a class="el" href="test__rulesets_8cpp_source.html#l00120">TEST_CASE()</a>.</p>
+
+</div>
+</div>
+<a id="ae100e98c779a9d130b304bc84c04e4b0" name="ae100e98c779a9d130b304bc84c04e4b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae100e98c779a9d130b304bc84c04e4b0">&#9670;&#160;</a></span>movement</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structrpg__os_1_1MovementConfig.html">MovementConfig</a> rpg_os::Ruleset::movement</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Optional terrain-aware movement rules (see <a class="el" href="movement_8hpp.html" title="Terrain-aware movement and the surrounding&#39;s effect on a sheet.">movement.hpp</a>). </p>
+
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00258">258</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
 </div>
 </div>
@@ -854,9 +875,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00217">217</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00230">230</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ruleset__loader_8hpp_source.html#l00856">rpg_os::RulesetLoader::load()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ruleset__loader_8hpp_source.html#l00959">rpg_os::RulesetLoader::load()</a>.</p>
 
 </div>
 </div>
@@ -872,9 +893,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00231">231</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00244">244</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ruleset__loader_8hpp_source.html#l00340">isResourcePool()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00586">rpg_os::DynamicEntity::refreshResources()</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00414">rpg_os::resolveHitPointPool()</a>, and <a class="el" href="ruleset__loader_8hpp_source.html#l00901">rpg_os::RulesetLoader::validate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ruleset__loader_8hpp_source.html#l00355">isResourcePool()</a>, <a class="el" href="dynamic__entity_8hpp_source.html#l00634">rpg_os::DynamicEntity::refreshResources()</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00429">rpg_os::resolveHitPointPool()</a>, and <a class="el" href="ruleset__loader_8hpp_source.html#l01005">rpg_os::RulesetLoader::validate()</a>.</p>
 
 </div>
 </div>
@@ -890,9 +911,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00227">227</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00240">240</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ruleset__loader_8hpp_source.html#l00856">rpg_os::RulesetLoader::load()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ruleset__loader_8hpp_source.html#l00959">rpg_os::RulesetLoader::load()</a>.</p>
 
 </div>
 </div>
@@ -908,9 +929,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00232">232</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00245">245</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ruleset__loader_8hpp_source.html#l00307">findSkill()</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00325">hasStat()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00197">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00021">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00068">TEST_CASE()</a>, and <a class="el" href="ruleset__loader_8hpp_source.html#l00901">rpg_os::RulesetLoader::validate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ruleset__loader_8hpp_source.html#l00322">findSkill()</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00340">hasStat()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00197">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00021">TEST_CASE()</a>, <a class="el" href="test__rulesets_8cpp_source.html#l00068">TEST_CASE()</a>, and <a class="el" href="ruleset__loader_8hpp_source.html#l01005">rpg_os::RulesetLoader::validate()</a>.</p>
 
 </div>
 </div>
@@ -926,9 +947,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00218">218</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00231">231</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ruleset__loader_8hpp_source.html#l00856">rpg_os::RulesetLoader::load()</a>, and <a class="el" href="test__rulesets_8cpp_source.html#l00120">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ruleset__loader_8hpp_source.html#l00959">rpg_os::RulesetLoader::load()</a>, and <a class="el" href="test__rulesets_8cpp_source.html#l00120">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -946,7 +967,7 @@ Public Attributes</h2></td></tr>
 
 <p>Optional spell-casting configuration (vancian slots). </p>
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00243">243</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00256">256</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
 </div>
 </div>
@@ -964,9 +985,9 @@ Public Attributes</h2></td></tr>
 
 <p>resource pool that spell casting draws its cost from (empty = none) </p>
 
-<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00226">226</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ruleset__loader_8hpp_source.html#l00239">239</a> of file <a class="el" href="ruleset__loader_8hpp_source.html">ruleset_loader.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00514">rpg_os::detail::actOnce()</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00856">rpg_os::RulesetLoader::load()</a>, <a class="el" href="combat_8hpp_source.html#l00413">rpg_os::detail::pickSpell()</a>, and <a class="el" href="combat_8hpp_source.html#l00628">rpg_os::detail::runFightImpl()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="combat_8hpp_source.html#l00550">rpg_os::detail::actOnce()</a>, <a class="el" href="ruleset__loader_8hpp_source.html#l00959">rpg_os::RulesetLoader::load()</a>, <a class="el" href="combat_8hpp_source.html#l00449">rpg_os::detail::pickSpell()</a>, and <a class="el" href="combat_8hpp_source.html#l00664">rpg_os::detail::runFightImpl()</a>.</p>
 
 </div>
 </div>

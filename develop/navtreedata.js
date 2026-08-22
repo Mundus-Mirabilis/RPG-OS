@@ -80,18 +80,19 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "advancement_8hpp.html",
-"classrpg__os_1_1DynamicEntity.html#adcfda1f77bef92daa69a53c3f6f6eb61",
-"classrpg__os_1_1GameSession.html#af609f5e3703e55ec446e48a713b2c576",
-"classrpg__os_1_1RulesetEngine.html#a960bb14e213fc799650e5f1c87db9e35",
-"classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a4d20633c5d79b08521b9daa1132ee020",
-"classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#a279902d07db099ea98007a3cb17d04ce",
-"classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a4561342a41b1c1aaf494d2b9c618ec89",
-"classrpg__os_1_1specific_1_1SheetBase.html#aacdc0bab001a054a43fc86c3ae4cb8a2",
-"namespacerpg__os.html#a6b46ef1cf31683f3c873e49ca842cab6",
-"structrpg__os_1_1CheckResult.html#ac7ab5717d50dfe471ed8fda87bda5d74",
-"structrpg__os_1_1FightRoundLog.html#a9f4cd5d1ca1bb464d11b0c8946e4ea9b",
+"classrpg__os_1_1DynamicEntity.html#adb312c30565ee046d574f39f8776f9f8",
+"classrpg__os_1_1GameSession.html#aae0963a66f0b1e151fe7c8739d7cad02",
+"classrpg__os_1_1RulesetEngine.html#a5ca06062604ac06fe307ae7db13c2010",
+"classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a1b28af90e6040acca367893c1a689a7d",
+"classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#ad291ce4d41f0d9175eeec3a44127109f",
+"classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a0e143c2f1bdb3757b1649ee02ff893b7",
+"classrpg__os_1_1generated_1_1tde5e_1_1Character.html#abfbca23df3856e3e8dac4c8581064d3d",
+"index.html#autotoc_md2",
+"structrpg__os_1_1AttributeDef.html#a2ccc298dd35bfef6b43075742b1dd704",
+"structrpg__os_1_1EncumbranceConfig_1_1Level.html#ad2345c15b88dbc55834ad905e8c173b2",
+"structrpg__os_1_1MovementStatus.html#ae5dc8c7c85aaf236d7be222f2929a105",
 "test__combat_8cpp.html#ab6dda3d99e53d6aaf75adf1be7117ff6",
-"test__spellcasting_8cpp.html#ab0d0aa0700bbf8aac1bf30db924d9843"
+"test__rulesets_8cpp.html#a6d75f4356308fa2a62c60a91d81adde0"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

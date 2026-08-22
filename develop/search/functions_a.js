@@ -17,9 +17,10 @@ var searchData=
   ['loadrulesetfromfile_14',['loadrulesetfromfile',['../classrpg__os_1_1RulesetEngine.html#a9cd8f8ae806dca92569139f6465ecbd5',1,'rpg_os::RulesetEngine::loadRulesetFromFile()'],['../classrpg__os_1_1GameSession.html#a5cf7c8c932edd8af04d032b0c5c94e2e',1,'rpg_os::GameSession::loadRulesetFromFile()']]],
   ['loadrulesetfromjson_15',['loadrulesetfromjson',['../classrpg__os_1_1RulesetEngine.html#a623a96b8702962fa31b0baa77bde4af5',1,'rpg_os::RulesetEngine::loadRulesetFromJson()'],['../classrpg__os_1_1GameSession.html#a21157c8fe4ce56835d42ff70d4f79b46',1,'rpg_os::GameSession::loadRulesetFromJson()']]],
   ['loadsection_16',['loadSection',['../classrpg__os_1_1specific_1_1SheetBase.html#ad30ea67b7a66f1ec98308868847ba9b1',1,'rpg_os::specific::SheetBase']]],
-  ['loadspells_17',['loadSpells',['../classrpg__os_1_1specific_1_1SheetBase.html#ab7faca8ff960bdcf18b14b93c5b35536',1,'rpg_os::specific::SheetBase']]],
-  ['loadstate_18',['loadState',['../classrpg__os_1_1GameSession.html#a52f1e6b89dbef7ceb15b0aea9fe5ffe5',1,'rpg_os::GameSession']]],
-  ['loadvalid_19',['loadValid',['../test__ruleset__loader_8cpp.html#a9c4a35094e56bc6299ffe241306406df',1,'test_ruleset_loader.cpp']]],
-  ['longrest_20',['longrest',['../classrpg__os_1_1RulesetEngine.html#a787dfd97d74b3b5aa5184ed88a426092',1,'rpg_os::RulesetEngine::longRest()'],['../classrpg__os_1_1GameSession.html#af609f5e3703e55ec446e48a713b2c576',1,'rpg_os::GameSession::longRest()']]],
-  ['lookup_21',['lookup',['../classrpg__os_1_1CostTable.html#a9fca7993b37d41cbf8450512fad8ca16',1,'rpg_os::CostTable']]]
+  ['loadspeedfactor_17',['loadSpeedFactor',['../classrpg__os_1_1RulesetEngine.html#ae920b53cef5ecf3aad1b6965f5004d36',1,'rpg_os::RulesetEngine']]],
+  ['loadspells_18',['loadSpells',['../classrpg__os_1_1specific_1_1SheetBase.html#ab7faca8ff960bdcf18b14b93c5b35536',1,'rpg_os::specific::SheetBase']]],
+  ['loadstate_19',['loadState',['../classrpg__os_1_1GameSession.html#a52f1e6b89dbef7ceb15b0aea9fe5ffe5',1,'rpg_os::GameSession']]],
+  ['loadvalid_20',['loadValid',['../test__ruleset__loader_8cpp.html#a9c4a35094e56bc6299ffe241306406df',1,'test_ruleset_loader.cpp']]],
+  ['longrest_21',['longrest',['../classrpg__os_1_1RulesetEngine.html#a787dfd97d74b3b5aa5184ed88a426092',1,'rpg_os::RulesetEngine::longRest()'],['../classrpg__os_1_1GameSession.html#af609f5e3703e55ec446e48a713b2c576',1,'rpg_os::GameSession::longRest()']]],
+  ['lookup_22',['lookup',['../classrpg__os_1_1CostTable.html#a9fca7993b37d41cbf8450512fad8ca16',1,'rpg_os::CostTable']]]
 ];

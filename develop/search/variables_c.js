@@ -7,7 +7,7 @@ var searchData=
   ['max_4',['max',['../structrpg__os_1_1ResourcePool.html#a7bf368cc1d3af674ada0830abd202e32',1,'rpg_os::ResourcePool']]],
   ['maxhitpoints_5',['maxHitPoints',['../classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#a279902d07db099ea98007a3cb17d04ce',1,'rpg_os::generated::dnd5e::Character']]],
   ['maxlp_6',['maxlp',['../structrpg__os_1_1FightOutcome.html#af744bd1aecf0a2a1562721a07dbe0c00',1,'rpg_os::FightOutcome::maxLp'],['../structrpg__os_1_1FightLog.html#add57bec17880508f1fac32b5ea243ab7',1,'rpg_os::FightLog::maxLp']]],
-  ['maxratio_7',['maxRatio',['../structrpg__os_1_1EncumbranceConfig_1_1Level.html#ad2345c15b88dbc55834ad905e8c173b2',1,'rpg_os::EncumbranceConfig::Level']]],
+  ['maxratio_7',['maxratio',['../structrpg__os_1_1LoadSpeedLevel.html#a1ce9db3cba1e26f50b0351b1be9679b1',1,'rpg_os::LoadSpeedLevel::maxRatio'],['../structrpg__os_1_1EncumbranceConfig_1_1Level.html#ad2345c15b88dbc55834ad905e8c173b2',1,'rpg_os::EncumbranceConfig::Level::maxRatio']]],
   ['maxstat_8',['maxStat',['../structrpg__os_1_1ResourcePoolDef.html#ad893c86301df3f0a28dfbb41f8f55f95',1,'rpg_os::ResourcePoolDef']]],
   ['maxvalue_9',['maxValue',['../structrpg__os_1_1AttributeDef.html#a08cb7b1c94730bc14ffbd56c7bb0e305',1,'rpg_os::AttributeDef']]],
   ['mechanics_10',['mechanics',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a19c55ce6d3651ed98a17a6b0effb441c',1,'rpg_os::generated::tde5e::Character']]],
@@ -17,8 +17,11 @@ var searchData=
   ['min_14',['min',['../structrpg__os_1_1ResourcePool.html#a864391a687a468e50e12558b44df1327',1,'rpg_os::ResourcePool']]],
   ['minvalue_15',['minvalue',['../structrpg__os_1_1AttributeDef.html#a2ccc298dd35bfef6b43075742b1dd704',1,'rpg_os::AttributeDef::minValue'],['../structrpg__os_1_1ResourcePoolDef.html#af73f1d131c80e28bb3914845cc5d31a7',1,'rpg_os::ResourcePoolDef::minValue']]],
   ['missileweapon_16',['missileWeapon',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a60bc399cbffae13edcc5edf1c5d3f75f',1,'rpg_os::generated::brp_ugc::Character']]],
-  ['money_17',['money',['../classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#ab59b68d218e521503dc390d21f8531e4',1,'rpg_os::generated::dnd5e::Character::money'],['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a8a1b20352e914ba16b838ddf6347b955',1,'rpg_os::generated::tde5e::Character::money']]],
-  ['movement_18',['movement',['../structrpg__os_1_1ActionBudget.html#a18644c5d57995c3297cdf11a2db53289',1,'rpg_os::ActionBudget']]],
-  ['music_19',['music',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a3cbba4020786dd3a50918864f9d4d847',1,'rpg_os::generated::tde5e::Character']]],
-  ['mythslegends_20',['mythsLegends',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a9da1a5eb657be9cedc2a63806072b3a8',1,'rpg_os::generated::tde5e::Character']]]
+  ['modeid_17',['modeid',['../structrpg__os_1_1MovementOption.html#a8cf3d0e1f4e8d55d86b9c4f870ed0f85',1,'rpg_os::MovementOption::modeId'],['../structrpg__os_1_1MovementOutcome.html#ade97b1a2afc182bc23b50a6b0fdd36e1',1,'rpg_os::MovementOutcome::modeId']]],
+  ['modename_18',['modeName',['../structrpg__os_1_1MovementOption.html#a625ec67f3dd1b126d1011d1b4db6ee1f',1,'rpg_os::MovementOption']]],
+  ['modes_19',['modes',['../structrpg__os_1_1TerrainDef.html#afdc84571699af39ac1e5c0b3c045b62a',1,'rpg_os::TerrainDef::modes'],['../structrpg__os_1_1MovementConfig.html#a1898e3d0e645aed76bb618f2df4d2a52',1,'rpg_os::MovementConfig::modes']]],
+  ['money_20',['money',['../classrpg__os_1_1generated_1_1dnd5e_1_1Character.html#ab59b68d218e521503dc390d21f8531e4',1,'rpg_os::generated::dnd5e::Character::money'],['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a8a1b20352e914ba16b838ddf6347b955',1,'rpg_os::generated::tde5e::Character::money']]],
+  ['movement_21',['movement',['../structrpg__os_1_1ActionBudget.html#a18644c5d57995c3297cdf11a2db53289',1,'rpg_os::ActionBudget::movement'],['../classrpg__os_1_1Ruleset.html#ae100e98c779a9d130b304bc84c04e4b0',1,'rpg_os::Ruleset::movement']]],
+  ['music_22',['music',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a3cbba4020786dd3a50918864f9d4d847',1,'rpg_os::generated::tde5e::Character']]],
+  ['mythslegends_23',['mythsLegends',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a9da1a5eb657be9cedc2a63806072b3a8',1,'rpg_os::generated::tde5e::Character']]]
 ];

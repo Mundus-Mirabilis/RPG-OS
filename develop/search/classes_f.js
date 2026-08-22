@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['weight_0',['Weight',['../structrpg__os_1_1Weight.html',1,'rpg_os']]],
-  ['worldstate_1',['WorldState',['../classrpg__os_1_1WorldState.html',1,'rpg_os']]]
+  ['terraindef_0',['TerrainDef',['../structrpg__os_1_1TerrainDef.html',1,'rpg_os']]],
+  ['terrainitemeffect_1',['TerrainItemEffect',['../structrpg__os_1_1TerrainItemEffect.html',1,'rpg_os']]],
+  ['terrainmoderule_2',['TerrainModeRule',['../structrpg__os_1_1TerrainModeRule.html',1,'rpg_os']]]
 ];

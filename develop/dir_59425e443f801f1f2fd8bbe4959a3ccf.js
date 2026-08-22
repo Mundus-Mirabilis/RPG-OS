@@ -25,6 +25,7 @@ var dir_59425e443f801f1f2fd8bbe4959a3ccf =
     [ "test_math.cpp", "test__math_8cpp.html", "test__math_8cpp" ],
     [ "test_modifier.cpp", "test__modifier_8cpp.html", "test__modifier_8cpp" ],
     [ "test_money.cpp", "test__money_8cpp.html", "test__money_8cpp" ],
+    [ "test_movement.cpp", "test__movement_8cpp.html", "test__movement_8cpp" ],
     [ "test_ruleset_loader.cpp", "test__ruleset__loader_8cpp.html", "test__ruleset__loader_8cpp" ],
     [ "test_rulesets.cpp", "test__rulesets_8cpp.html", "test__rulesets_8cpp" ],
     [ "test_smoke.cpp", "test__smoke_8cpp.html", "test__smoke_8cpp" ],

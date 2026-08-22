@@ -25,6 +25,7 @@ var classrpg__os_1_1Ruleset =
     [ "licence", "classrpg__os_1_1Ruleset.html#a4ce985e69e7f8e09d68b6f1c1d556412", null ],
     [ "licenceNotice", "classrpg__os_1_1Ruleset.html#a79e88489b802c17604813b6166d1a01b", null ],
     [ "licenceSource", "classrpg__os_1_1Ruleset.html#a34a9660a05e9dfd3f8db417909588433", null ],
+    [ "movement", "classrpg__os_1_1Ruleset.html#ae100e98c779a9d130b304bc84c04e4b0", null ],
     [ "name", "classrpg__os_1_1Ruleset.html#a3134c896032208daacd37c5a59515cec", null ],
     [ "resourcePools", "classrpg__os_1_1Ruleset.html#ac6d7b06fb3418d0fef60e9caa9fe1fcb", null ],
     [ "schemaVersion", "classrpg__os_1_1Ruleset.html#a69c1f61072069d159a74b90f00cd60ce", null ],

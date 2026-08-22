@@ -9,6 +9,8 @@ var errors_8hpp =
       [ "UnknownCondition", "errors_8hpp.html#a35c4b2d63f72d02169671d65591d1766a41b6db72fa3a5db6e5fdf39d47e767c3", null ],
       [ "UnknownSpell", "errors_8hpp.html#a35c4b2d63f72d02169671d65591d1766ab1ecdc430320983beb8bc90d62c3db51", null ],
       [ "UnknownCostTable", "errors_8hpp.html#a35c4b2d63f72d02169671d65591d1766a48979b0ea0d774588fe1ef113f43387a", null ],
+      [ "UnknownMode", "errors_8hpp.html#a35c4b2d63f72d02169671d65591d1766a0dceec92253fea03d73c2ff68e1dfb1f", null ],
+      [ "UnknownTerrain", "errors_8hpp.html#a35c4b2d63f72d02169671d65591d1766a7da611f34dde726836006e8a6000685d", null ],
       [ "NotEnoughMoney", "errors_8hpp.html#a35c4b2d63f72d02169671d65591d1766a261cca2ac483068d987c38cfa8fd6094", null ],
       [ "SlotOccupied", "errors_8hpp.html#a35c4b2d63f72d02169671d65591d1766a75dccd608eefc2f608964e1430e6dd20", null ],
       [ "SlotMismatch", "errors_8hpp.html#a35c4b2d63f72d02169671d65591d1766a23577eacdfab2acde669a2b80f876995", null ],

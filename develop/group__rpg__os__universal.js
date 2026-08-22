@@ -7,6 +7,7 @@ var group__rpg__os__universal =
     [ "entity_registry.hpp", "entity__registry_8hpp.html", null ],
     [ "expression.hpp", "expression_8hpp.html", null ],
     [ "game_session.hpp", "game__session_8hpp.html", null ],
+    [ "movement.hpp", "movement_8hpp.html", null ],
     [ "ruleset_loader.hpp", "ruleset__loader_8hpp.html", null ],
     [ "world_state.hpp", "world__state_8hpp.html", null ]
 ];

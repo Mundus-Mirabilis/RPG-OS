@@ -46,7 +46,7 @@
   </g>
 </defs>
 <script type="application/ecmascript">
-var viewWidth = 1780;
+var viewWidth = 1844;
 var viewHeight = 137;
 var sectionId = 'dynsection-1';
 </script>
@@ -243,30 +243,12 @@ var sectionId = 'dynsection-1';
 </a>
 </g>
 </g>
-<!-- Node21 -->
-<g id="Node000021" class="node">
-<title>Node21</title>
-<g id="a_Node000021"><a xlink:href="test__rulesets_8cpp.html" target="_top" xlink:title="Tests that load the real shipped rulesets (the rulesets/ JSON files).">
-<polygon fill="white" stroke="#666666" points="1396,-74 1296,-74 1296,-55 1396,-55 1396,-74"/>
-<text text-anchor="middle" x="1346" y="-62" font-family="Helvetica,sans-Serif" font-size="10.00">test_rulesets.cpp</text>
-</a>
-</g>
-</g>
-<!-- Node1&#45;&gt;Node21 -->
-<g id="edge20_Node000001_Node000021" class="edge">
-<title>Node1&#45;&gt;Node21</title>
-<g id="a_edge20_Node000001_Node000021"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M852.7,-114.84C939.92,-108.11 1128.49,-92.71 1287,-74 1289.88,-73.66 1292.83,-73.29 1295.81,-72.91"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="852.28,-111.36 842.57,-115.62 852.81,-118.34 852.28,-111.36"/>
-</a>
-</g>
-</g>
 <!-- Node22 -->
 <g id="Node000022" class="node">
 <title>Node22</title>
-<g id="a_Node000022"><a xlink:href="test__variance_8cpp.html" target="_top" xlink:title="Tests for variance / range selection (rpg_os::Variance, rpg_os::readVariantValue).">
-<polygon fill="white" stroke="#666666" points="1517.5,-74 1414.5,-74 1414.5,-55 1517.5,-55 1517.5,-74"/>
-<text text-anchor="middle" x="1466" y="-62" font-family="Helvetica,sans-Serif" font-size="10.00">test_variance.cpp</text>
+<g id="a_Node000022"><a xlink:href="test__rulesets_8cpp.html" target="_top" xlink:title="Tests that load the real shipped rulesets (the rulesets/ JSON files).">
+<polygon fill="white" stroke="#666666" points="1396,-74 1296,-74 1296,-55 1396,-55 1396,-74"/>
+<text text-anchor="middle" x="1346" y="-62" font-family="Helvetica,sans-Serif" font-size="10.00">test_rulesets.cpp</text>
 </a>
 </g>
 </g>
@@ -274,6 +256,24 @@ var sectionId = 'dynsection-1';
 <g id="edge21_Node000001_Node000022" class="edge">
 <title>Node1&#45;&gt;Node22</title>
 <g id="a_edge21_Node000001_Node000022"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M852.7,-114.84C939.92,-108.11 1128.49,-92.71 1287,-74 1289.88,-73.66 1292.83,-73.29 1295.81,-72.91"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="852.28,-111.36 842.57,-115.62 852.81,-118.34 852.28,-111.36"/>
+</a>
+</g>
+</g>
+<!-- Node23 -->
+<g id="Node000023" class="node">
+<title>Node23</title>
+<g id="a_Node000023"><a xlink:href="test__variance_8cpp.html" target="_top" xlink:title="Tests for variance / range selection (rpg_os::Variance, rpg_os::readVariantValue).">
+<polygon fill="white" stroke="#666666" points="1517.5,-74 1414.5,-74 1414.5,-55 1517.5,-55 1517.5,-74"/>
+<text text-anchor="middle" x="1466" y="-62" font-family="Helvetica,sans-Serif" font-size="10.00">test_variance.cpp</text>
+</a>
+</g>
+</g>
+<!-- Node1&#45;&gt;Node23 -->
+<g id="edge22_Node000001_Node000023" class="edge">
+<title>Node1&#45;&gt;Node23</title>
+<g id="a_edge22_Node000001_Node000023"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M852.8,-115.96C955.27,-110.38 1200.31,-95.82 1405,-74 1408.08,-73.67 1411.25,-73.31 1414.44,-72.92"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="852.55,-112.47 842.75,-116.5 852.92,-119.46 852.55,-112.47"/>
 </a>
@@ -283,8 +283,8 @@ var sectionId = 'dynsection-1';
 <g id="Node000012" class="node">
 <title>Node12</title>
 <g id="a_Node000012"><a xlink:href="test__advancement_8cpp.html" target="_top" xlink:title="Advancement, rests, and curses.">
-<polygon fill="white" stroke="#666666" points="772,-19 644,-19 644,0 772,0 772,-19"/>
-<text text-anchor="middle" x="708" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">test_advancement.cpp</text>
+<polygon fill="white" stroke="#666666" points="703,-19 575,-19 575,0 703,0 703,-19"/>
+<text text-anchor="middle" x="639" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">test_advancement.cpp</text>
 </a>
 </g>
 </g>
@@ -292,8 +292,8 @@ var sectionId = 'dynsection-1';
 <g id="edge11_Node000011_Node000012" class="edge">
 <title>Node11&#45;&gt;Node12</title>
 <g id="a_edge11_Node000011_Node000012"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M1170,-54.94C996.48,-34.47 950.92,-36.73 781,-19 778.08,-18.7 775.1,-18.38 772.08,-18.05"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="1169.63,-58.42 1179.98,-56.13 1170.46,-51.47 1169.63,-58.42"/>
+<path fill="none" stroke="#63b8ff" d="M1169.84,-54.95C965.94,-32.36 912.38,-38.52 712,-19 709.08,-18.72 706.09,-18.41 703.08,-18.1"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="1169.66,-58.45 1179.98,-56.08 1170.43,-51.49 1169.66,-58.45"/>
 </a>
 </g>
 </g>
@@ -301,8 +301,8 @@ var sectionId = 'dynsection-1';
 <g id="Node000013" class="node">
 <title>Node13</title>
 <g id="a_Node000013"><a xlink:href="test__conditions_8cpp.html" target="_top" xlink:title="Mechanical conditions: durations, stat/check modifiers, restrictions and capabilities.">
-<polygon fill="white" stroke="#666666" points="901.5,-19 790.5,-19 790.5,0 901.5,0 901.5,-19"/>
-<text text-anchor="middle" x="846" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">test_conditions.cpp</text>
+<polygon fill="white" stroke="#666666" points="832.5,-19 721.5,-19 721.5,0 832.5,0 832.5,-19"/>
+<text text-anchor="middle" x="777" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">test_conditions.cpp</text>
 </a>
 </g>
 </g>
@@ -310,8 +310,8 @@ var sectionId = 'dynsection-1';
 <g id="edge12_Node000011_Node000013" class="edge">
 <title>Node11&#45;&gt;Node13</title>
 <g id="a_edge12_Node000011_Node000013"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M1169.93,-54.86C1069.36,-40.64 964.15,-26.37 901.52,-17.94"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="1169.56,-58.34 1179.96,-56.28 1170.55,-51.41 1169.56,-58.34"/>
+<path fill="none" stroke="#63b8ff" d="M1169.71,-54.88C1023.38,-36.33 984.77,-36.14 842,-19 838.95,-18.63 835.82,-18.25 832.66,-17.86"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="1169.61,-58.39 1179.97,-56.19 1170.49,-51.45 1169.61,-58.39"/>
 </a>
 </g>
 </g>
@@ -319,8 +319,8 @@ var sectionId = 'dynsection-1';
 <g id="Node000014" class="node">
 <title>Node14</title>
 <g id="a_Node000014"><a xlink:href="test__effects_8cpp.html" target="_top" xlink:title="The effect timeline: durations, stat bonuses, recurring/ongoing effects, option groups.">
-<polygon fill="white" stroke="#666666" points="1014,-19 920,-19 920,0 1014,0 1014,-19"/>
-<text text-anchor="middle" x="967" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">test_effects.cpp</text>
+<polygon fill="white" stroke="#666666" points="945,-19 851,-19 851,0 945,0 945,-19"/>
+<text text-anchor="middle" x="898" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">test_effects.cpp</text>
 </a>
 </g>
 </g>
@@ -328,8 +328,8 @@ var sectionId = 'dynsection-1';
 <g id="edge13_Node000011_Node000014" class="edge">
 <title>Node11&#45;&gt;Node14</title>
 <g id="a_edge13_Node000011_Node000014"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M1176.8,-52.94C1127.69,-43.01 1055.07,-28.31 1009.42,-19.08"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="1176.41,-56.43 1186.91,-54.98 1177.8,-49.57 1176.41,-56.43"/>
+<path fill="none" stroke="#63b8ff" d="M1169.82,-54.02C1105.53,-43.73 1004.14,-27.49 945.05,-18.03"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="1169.38,-57.5 1179.8,-55.62 1170.48,-50.59 1169.38,-57.5"/>
 </a>
 </g>
 </g>
@@ -337,8 +337,8 @@ var sectionId = 'dynsection-1';
 <g id="Node000015" class="node">
 <title>Node15</title>
 <g id="a_Node000015"><a xlink:href="test__equipment_8cpp.html" target="_top" xlink:title="Equipment slots, equipping/unequipping, and gear&#45;modified effective stats.">
-<polygon fill="white" stroke="#666666" points="1145.5,-19 1032.5,-19 1032.5,0 1145.5,0 1145.5,-19"/>
-<text text-anchor="middle" x="1089" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">test_equipment.cpp</text>
+<polygon fill="white" stroke="#666666" points="1076.5,-19 963.5,-19 963.5,0 1076.5,0 1076.5,-19"/>
+<text text-anchor="middle" x="1020" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">test_equipment.cpp</text>
 </a>
 </g>
 </g>
@@ -346,8 +346,8 @@ var sectionId = 'dynsection-1';
 <g id="edge14_Node000011_Node000015" class="edge">
 <title>Node11&#45;&gt;Node15</title>
 <g id="a_edge14_Node000011_Node000015"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M1197.09,-51.42C1171.12,-41.59 1135.08,-27.95 1111.9,-19.17"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="1195.92,-54.72 1206.51,-54.98 1198.39,-48.17 1195.92,-54.72"/>
+<path fill="none" stroke="#63b8ff" d="M1185.63,-52.5C1146.49,-42.58 1089.72,-28.18 1053.84,-19.08"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="1184.87,-55.92 1195.42,-54.98 1186.59,-49.13 1184.87,-55.92"/>
 </a>
 </g>
 </g>
@@ -355,8 +355,8 @@ var sectionId = 'dynsection-1';
 <g id="Node000016" class="node">
 <title>Node16</title>
 <g id="a_Node000016"><a xlink:href="test__game__session_8cpp.html" target="_top" xlink:title="The GameSession facade: sheets, world state, events, save/load.">
-<polygon fill="white" stroke="#666666" points="1294.5,-19 1163.5,-19 1163.5,0 1294.5,0 1294.5,-19"/>
-<text text-anchor="middle" x="1229" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">test_game_session.cpp</text>
+<polygon fill="white" stroke="#666666" points="1225.5,-19 1094.5,-19 1094.5,0 1225.5,0 1225.5,-19"/>
+<text text-anchor="middle" x="1160" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">test_game_session.cpp</text>
 </a>
 </g>
 </g>
@@ -364,8 +364,8 @@ var sectionId = 'dynsection-1';
 <g id="edge15_Node000011_Node000016" class="edge">
 <title>Node11&#45;&gt;Node16</title>
 <g id="a_edge15_Node000011_Node000016"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M1229,-44.66C1229,-35.93 1229,-25.99 1229,-19.09"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="1225.5,-44.75 1229,-54.75 1232.5,-44.75 1225.5,-44.75"/>
+<path fill="none" stroke="#63b8ff" d="M1209.96,-48.88C1197.54,-39.34 1181.76,-27.21 1171.29,-19.17"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="1207.85,-51.67 1217.91,-54.98 1212.12,-46.12 1207.85,-51.67"/>
 </a>
 </g>
 </g>
@@ -373,8 +373,8 @@ var sectionId = 'dynsection-1';
 <g id="Node000017" class="node">
 <title>Node17</title>
 <g id="a_Node000017"><a xlink:href="test__inventory_8cpp.html" target="_top" xlink:title="Inventory stacks, nested containers, and carrying weight.">
-<polygon fill="white" stroke="#666666" points="1419,-19 1313,-19 1313,0 1419,0 1419,-19"/>
-<text text-anchor="middle" x="1366" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">test_inventory.cpp</text>
+<polygon fill="white" stroke="#666666" points="1350,-19 1244,-19 1244,0 1350,0 1350,-19"/>
+<text text-anchor="middle" x="1297" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">test_inventory.cpp</text>
 </a>
 </g>
 </g>
@@ -382,8 +382,8 @@ var sectionId = 'dynsection-1';
 <g id="edge16_Node000011_Node000017" class="edge">
 <title>Node11&#45;&gt;Node17</title>
 <g id="a_edge16_Node000011_Node000017"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M1260.56,-51.29C1285.95,-41.47 1321,-27.91 1343.59,-19.17"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="1259.08,-48.11 1251.01,-54.98 1261.6,-54.64 1259.08,-48.11"/>
+<path fill="none" stroke="#63b8ff" d="M1248.12,-48.6C1260.3,-39.11 1275.66,-27.13 1285.88,-19.17"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="1245.66,-46.08 1239.93,-54.98 1249.96,-51.6 1245.66,-46.08"/>
 </a>
 </g>
 </g>
@@ -391,8 +391,8 @@ var sectionId = 'dynsection-1';
 <g id="Node000018" class="node">
 <title>Node18</title>
 <g id="a_Node000018"><a xlink:href="test__money_8cpp.html" target="_top" xlink:title="Money, currency conversion, and the economy (prices, buying, paying).">
-<polygon fill="white" stroke="#666666" points="1530.5,-19 1437.5,-19 1437.5,0 1530.5,0 1530.5,-19"/>
-<text text-anchor="middle" x="1484" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">test_money.cpp</text>
+<polygon fill="white" stroke="#666666" points="1461.5,-19 1368.5,-19 1368.5,0 1461.5,0 1461.5,-19"/>
+<text text-anchor="middle" x="1415" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">test_money.cpp</text>
 </a>
 </g>
 </g>
@@ -400,17 +400,17 @@ var sectionId = 'dynsection-1';
 <g id="edge17_Node000011_Node000018" class="edge">
 <title>Node11&#45;&gt;Node18</title>
 <g id="a_edge17_Node000011_Node000018"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M1279.8,-52.94C1327.6,-43.01 1398.29,-28.31 1442.71,-19.08"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="1279.05,-49.52 1269.97,-54.98 1280.47,-56.38 1279.05,-49.52"/>
+<path fill="none" stroke="#63b8ff" d="M1268.71,-52.18C1303.5,-42.27 1353.29,-28.08 1384.88,-19.08"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="1267.54,-48.88 1258.88,-54.98 1269.46,-55.61 1267.54,-48.88"/>
 </a>
 </g>
 </g>
 <!-- Node19 -->
 <g id="Node000019" class="node">
 <title>Node19</title>
-<g id="a_Node000019"><a xlink:href="test__spellcasting_8cpp.html" target="_top" xlink:title="Spellbooks and casting: prepared pools, vancian slots, structured spell effects.">
-<polygon fill="white" stroke="#666666" points="1667.5,-19 1548.5,-19 1548.5,0 1667.5,0 1667.5,-19"/>
-<text text-anchor="middle" x="1608" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">test_spellcasting.cpp</text>
+<g id="a_Node000019"><a xlink:href="test__movement_8cpp.html" target="_top" xlink:title="Terrain&#45;aware movement and the surrounding&#39;s effect on a sheet.">
+<polygon fill="white" stroke="#666666" points="1594,-19 1480,-19 1480,0 1594,0 1594,-19"/>
+<text text-anchor="middle" x="1537" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">test_movement.cpp</text>
 </a>
 </g>
 </g>
@@ -418,17 +418,17 @@ var sectionId = 'dynsection-1';
 <g id="edge18_Node000011_Node000019" class="edge">
 <title>Node11&#45;&gt;Node19</title>
 <g id="a_edge18_Node000011_Node000019"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M1288.02,-54.86C1385.04,-41.05 1485.89,-27.17 1548.23,-18.65"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="1287.45,-51.41 1278.04,-56.29 1288.44,-58.34 1287.45,-51.41"/>
+<path fill="none" stroke="#63b8ff" d="M1288.24,-53.31C1346.13,-43.34 1433.23,-28.36 1487.52,-19.01"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="1287.41,-49.9 1278.14,-55.04 1288.59,-56.8 1287.41,-49.9"/>
 </a>
 </g>
 </g>
 <!-- Node20 -->
 <g id="Node000020" class="node">
 <title>Node20</title>
-<g id="a_Node000020"><a xlink:href="test__traits_8cpp.html" target="_top" xlink:title="Creature traits: stat/check modifiers, effects at creation, regeneration.">
-<polygon fill="white" stroke="#666666" points="1772,-19 1686,-19 1686,0 1772,0 1772,-19"/>
-<text text-anchor="middle" x="1729" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">test_traits.cpp</text>
+<g id="a_Node000020"><a xlink:href="test__spellcasting_8cpp.html" target="_top" xlink:title="Spellbooks and casting: prepared pools, vancian slots, structured spell effects.">
+<polygon fill="white" stroke="#666666" points="1731.5,-19 1612.5,-19 1612.5,0 1731.5,0 1731.5,-19"/>
+<text text-anchor="middle" x="1672" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">test_spellcasting.cpp</text>
 </a>
 </g>
 </g>
@@ -436,8 +436,26 @@ var sectionId = 'dynsection-1';
 <g id="edge19_Node000011_Node000020" class="edge">
 <title>Node11&#45;&gt;Node20</title>
 <g id="a_edge19_Node000011_Node000020"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M1288,-54.95C1461.54,-34.61 1507.54,-40.64 1677,-19 1679.9,-18.63 1682.89,-18.22 1685.9,-17.78"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="1287.54,-51.48 1278.02,-56.13 1288.37,-58.43 1287.54,-51.48"/>
+<path fill="none" stroke="#63b8ff" d="M1288.33,-54.86C1428.89,-36.69 1465.92,-35.25 1603,-19 1606,-18.64 1609.07,-18.28 1612.16,-17.9"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="1287.5,-51.44 1278.03,-56.2 1288.4,-58.38 1287.5,-51.44"/>
+</a>
+</g>
+</g>
+<!-- Node21 -->
+<g id="Node000021" class="node">
+<title>Node21</title>
+<g id="a_Node000021"><a xlink:href="test__traits_8cpp.html" target="_top" xlink:title="Creature traits: stat/check modifiers, effects at creation, regeneration.">
+<polygon fill="white" stroke="#666666" points="1836,-19 1750,-19 1750,0 1836,0 1836,-19"/>
+<text text-anchor="middle" x="1793" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">test_traits.cpp</text>
+</a>
+</g>
+</g>
+<!-- Node11&#45;&gt;Node21 -->
+<g id="edge20_Node000011_Node000021" class="edge">
+<title>Node11&#45;&gt;Node21</title>
+<g id="a_edge20_Node000011_Node000021"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M1288.05,-54.96C1489.85,-32.66 1543.3,-42.96 1741,-19 1743.91,-18.65 1746.9,-18.25 1749.91,-17.83"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="1287.57,-51.49 1278.02,-56.08 1288.35,-58.45 1287.57,-51.49"/>
 </a>
 </g>
 </g>

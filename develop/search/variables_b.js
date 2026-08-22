@@ -12,6 +12,8 @@ var searchData=
   ['lifepoints_9',['lifePoints',['../classrpg__os_1_1generated_1_1tde5e_1_1Character.html#a0a7cbefc410619b13e6b3f38d8d43dc6',1,'rpg_os::generated::tde5e::Character']]],
   ['listen_10',['listen',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#aba07c0a2214965058fa64a10e5bea6f8',1,'rpg_os::generated::brp_ugc::Character']]],
   ['literacy_11',['literacy',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a542e100e7d0d95d849ea3ee905acace9',1,'rpg_os::generated::brp_ugc::Character']]],
-  ['logdescription_12',['logDescription',['../structrpg__os_1_1CheckResult.html#a831ae9f7244cdba1785d2034fbd7be8b',1,'rpg_os::CheckResult']]],
-  ['luck_13',['luck',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a443deaea0c1ad3483038658bf10824ab',1,'rpg_os::generated::brp_ugc::Character']]]
+  ['loadlevels_12',['loadLevels',['../structrpg__os_1_1MovementConfig.html#a24487c4dfce81769870817fd7b7498a2',1,'rpg_os::MovementConfig']]],
+  ['loadreducesspeed_13',['loadReducesSpeed',['../structrpg__os_1_1MovementStatus.html#ae5dc8c7c85aaf236d7be222f2929a105',1,'rpg_os::MovementStatus']]],
+  ['logdescription_14',['logDescription',['../structrpg__os_1_1CheckResult.html#a831ae9f7244cdba1785d2034fbd7be8b',1,'rpg_os::CheckResult']]],
+  ['luck_15',['luck',['../classrpg__os_1_1generated_1_1brp__ugc_1_1Character.html#a443deaea0c1ad3483038658bf10824ab',1,'rpg_os::generated::brp_ugc::Character']]]
 ];
