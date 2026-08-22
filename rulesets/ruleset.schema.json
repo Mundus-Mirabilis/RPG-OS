@@ -77,12 +77,16 @@
 
     "encumbrance": {
       "type": "object",
-      "description": "Optional carrying rules. The capacity is a formula over stats (e.g. '15 * STR'); levels map carried/capacity ratios to a condition applied to the carrier. Without this section the engine reports no carrying limit.",
+      "description": "Optional carrying rules. Three independent capacity axes may be declared, each as a formula over stats (e.g. '15 * STR'): 'capacity' (weight), 'size_capacity' (volume / slots), and 'item_capacity' (plain item count). Levels map carried/capacity ratios to a condition applied to the carrier. Without this section the engine reports no carrying limit; an undeclared axis has no limit.",
       "additionalProperties": false,
       "properties": {
         "weight_unit": { "type": "string", "description": "Unit used by item 'weight' fields, e.g. 'lb'." },
         "default_weight": { "type": "number", "description": "Fallback weight for items without a 'weight' field." },
-        "capacity": { "type": "string", "description": "Capacity formula over stats, e.g. '15 * STR'." },
+        "capacity": { "type": "string", "description": "Weight capacity formula over stats, e.g. '15 * STR'." },
+        "size_unit": { "type": "string", "description": "Unit used by item 'size' fields, e.g. 'slot' or 'cu. ft.'." },
+        "default_item_size": { "type": "number", "description": "Fallback size for items without a 'size' field." },
+        "size_capacity": { "type": "string", "description": "Size (volume/slot) capacity formula over stats; empty = no size limit." },
+        "item_capacity": { "type": "string", "description": "Item-count capacity formula over stats; empty = no item-count limit." },
         "levels": {
           "type": "array",
           "items": {
@@ -107,6 +111,83 @@
           "type": "object",
           "additionalProperties": { "type": "integer" },
           "description": "Vancian schedule: spell level -> slots per day."
+        }
+      }
+    },
+
+    "movement": {
+      "type": "object",
+      "description": "Optional terrain-aware movement rules: named movement modes (walk, swim, fly, climb, ...) with a base speed formula, and named terrains / surroundings (land, water, snow, ...) that multiply each mode's speed, may forbid a mode or require a capability, change how exhausting it is, and decide whether the mover can rest / regenerate there. The carried load can slow every mode through ratio -> factor steps. Without this section the engine reports movement as unconstrained (every mode possible, no exhaustion, full regeneration).",
+      "additionalProperties": false,
+      "properties": {
+        "default_terrain": { "type": "string", "description": "Terrain id used when a sheet has no current terrain (defaults to the first declared terrain)." },
+        "modes": {
+          "type": "object",
+          "description": "The movement modes of the system, keyed by id.",
+          "additionalProperties": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "name": { "type": "string", "description": "Human-readable mode name." },
+              "speed": { "type": "string", "description": "Base speed: a stat id (e.g. 'Speed'), a formula over stats, or a constant (e.g. '30')." },
+              "factor": { "type": "number", "description": "The mode's own speed multiplier (e.g. climb at half walking speed = 0.5). Default 1." },
+              "exhaustion": { "type": "number", "description": "Base fatigue cost per distance unit. Default 0." }
+            }
+          }
+        },
+        "terrains": {
+          "type": "object",
+          "description": "The surroundings, keyed by id.",
+          "additionalProperties": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "name": { "type": "string" },
+              "description": { "type": "string" },
+              "regeneration": { "type": "string", "enum": ["normal", "none", "half"], "description": "How resting works here: 'normal' (default) restores fully, 'none' restores nothing (a long rest does not regenerate pools), 'half' restores half." },
+              "modes": {
+                "type": "object",
+                "description": "Per-mode behaviour in this terrain, keyed by mode id. A mode without an entry is possible at full speed with no extra cost.",
+                "additionalProperties": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "factor": { "type": "number", "description": "Multiplier on the mode's speed here. Default 1." },
+                    "cost_factor": { "type": "number", "description": "Multiplier on the mode's exhaustion here. Default 1." },
+                    "possible": { "type": "boolean", "description": "Whether the mode works here at all. Default true." },
+                    "requires": { "type": "string", "description": "Capability the mover must have for the mode to be possible here (e.g. 'breath_water' to walk in deep water). Default '' = no requirement." }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "exhaustion": {
+          "type": "object",
+          "description": "Optional fatigue model: which resource pool movement drains and how much per distance unit.",
+          "additionalProperties": false,
+          "properties": {
+            "pool": { "type": "string", "description": "Resource pool id drained by movement ('' = no pool, exhaustion is reported but not enforced)." },
+            "per_distance": { "type": "number", "description": "Base fatigue cost per distance unit (multiplied by the mode's and terrain's exhaustion/cost factors). Default 1." }
+          }
+        },
+        "load": {
+          "type": "object",
+          "description": "Optional speed reduction from the carried load: carried/capacity ratio steps each with a speed factor.",
+          "additionalProperties": false,
+          "properties": {
+            "levels": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "max_ratio": { "type": "number", "description": "Carried/capacity ratio ceiling for this step." },
+                  "factor": { "type": "number", "description": "Speed multiplier while at or under this ratio." }
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -308,7 +389,9 @@
       "description": "The data database: archetypes, items, creatures, spells, conditions, poisons, diseases. All numeric values may be ranges.",
       "properties": {
         "archetypes": { "type": "array", "items": { "$ref": "#/definitions/creatureRecord" } },
-        "items": { "type": "array", "items": { "$ref": "#/definitions/creatureRecord" } },
+        "items": { "type": "array", "items": { "$ref": "#/definitions/itemRecord" }, "description": "The gear database (weapons, armor, containers, magic items, ...). The engine reads item records from here: damage for weapon attacks, slot for equipping, modifiers for equipped effects, weight/cost for encumbrance and money, capacity for containers, terrain for per-surrounding behaviour." },
+        "weapons": { "type": "array", "items": { "$ref": "#/definitions/itemRecord" }, "description": "Optional: weapon-class items (a sub-view of data.items). The engine reads gear from data.items; this array is a convenience classification and must stay consistent with it." },
+        "armor": { "type": "array", "items": { "$ref": "#/definitions/itemRecord" }, "description": "Optional: armor-class items (a sub-view of data.items). See the note on data.weapons." },
         "creatures": { "type": "array", "items": { "$ref": "#/definitions/creatureRecord" } },
         "spells": {
           "type": "array",
@@ -674,6 +757,61 @@
         "speed": { "type": "string" },
         "slot": { "type": "string", "description": "Item-only: the equipment slot this item fits (e.g. 'weapon_hand'); empty when it is not worn." },
         "weight": { "oneOf": [{ "type": "string" }, { "type": "number" }], "description": "Item-only: weight, e.g. '2 lb.' or a number in the encumbrance weight unit." },
+        "size": { "oneOf": [{ "type": "string" }, { "type": "number" }], "description": "Creatures: the size category ('Medium', 'Huge', ...). Items: the size in the encumbrance 'size_unit' (volume / slots) as a number; the ruleset's 'default_item_size' applies when absent. The engine reads a numeric size on items and ignores the string category." },
+        "capacity": {
+          "type": "object",
+          "description": "Item-only (containers): how much this container can hold inside it, per capacity axis. Each axis is optional; an axis of 0 (or absent) means that axis is unlimited. The engine reports whether an item fits via canAddToContainer.",
+          "additionalProperties": false,
+          "properties": {
+            "weight": { "type": "number", "description": "Weight limit of the container's contents." },
+            "size": { "type": "number", "description": "Size limit of the container's contents." },
+            "items": { "type": "integer", "description": "Item-count limit of the container's contents." }
+          }
+        },
+        "terrain": {
+          "type": "object",
+          "description": "Item-only: how the item behaves in each terrain / surrounding, keyed by terrain id (see the movement section). Applied automatically from the sheet's current terrain: 'unusable'/'ruined' affect any carried instance, 'grants' adds capabilities to the *wearer* while equipped, 'check_modifiers'/'stat_modifiers' apply per-terrain modifiers.",
+          "additionalProperties": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "unusable": { "type": "boolean", "description": "The item cannot be used in this terrain (e.g. a torch underwater)." },
+              "ruined": { "type": "boolean", "description": "The item is ruined by this terrain (reported via the item's terrain status)." },
+              "grants": { "type": "array", "items": { "type": "string" }, "description": "Capabilities the item grants its wearer in this terrain (e.g. 'breath_water' for a water-breathing amulet in water)." },
+              "check_modifiers": {
+                "type": "array",
+                "description": "Optional per-terrain check modifiers, same shape as condition check_modifiers.",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "properties": {
+                    "scope": { "type": "string" },
+                    "bonus": { "type": "integer" },
+                    "per_stack": { "type": "boolean" },
+                    "bonus_dice": { "type": "string" },
+                    "mode": { "type": "string", "enum": ["none", "advantage", "disadvantage", "auto_fail"] },
+                    "side": { "type": "string", "enum": ["actor", "target"] }
+                  }
+                }
+              },
+              "stat_modifiers": {
+                "type": "array",
+                "description": "Optional per-terrain stat modifiers, same shape as item modifiers (with 'stat').",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "properties": {
+                    "stat": { "type": "string" },
+                    "type": { "type": "string", "enum": ["add", "override", "multiply", "clamp"] },
+                    "value": { "description": "add/override value, or multiply factor." },
+                    "clamp_min": { "type": "integer" },
+                    "clamp_max": { "type": "integer" }
+                  }
+                }
+              }
+            }
+          }
+        },
         "value": { "oneOf": [{ "type": "string" }, { "type": "number" }], "description": "Item-only: price, e.g. '150 GP' or a number in base currency units." },
         "attributes": { "type": "object", "additionalProperties": { "$ref": "#/definitions/variantValue" } },
         "skills": { "type": "object", "additionalProperties": { "$ref": "#/definitions/variantValue" } },
@@ -694,6 +832,43 @@
         "traits": { "type": "array", "items": { "type": "string" }, "description": "Ids of traits the creature has (see data.traits), e.g. ['pack_tactics', 'keen_smell']. The engine applies the referenced traits' check/stat modifiers to the creature automatically." },
         "spells": { "type": "array", "items": { "type": "string" }, "description": "Ids of spells the creature can cast in a fight (e.g. a dragon's innate spellcasting). The combat simulator prefers casting the strongest affordable damaging spell over a weapon attack, exactly as it does for archetypes." }
       }
+    },
+    "itemRecord": {
+      "allOf": [
+        { "$ref": "#/definitions/creatureRecord" },
+        {
+          "type": "object",
+          "description": "A data.items record: a weapon, armor, container, or other gear. All fields are optional; the engine reads the ones it can enforce and treats the rest as informational. IMPORTANT: a weapon's `damage` is a bare dice expression (e.g. '1d8') — the damage type lives in its own `damage_type` field, never glued into the dice string. Equipped effects go through `modifiers`, whose value/factor/bounds may be a number or a formula string evaluated against the wearer (e.g. D&D medium armour '10 + min(DEX_mod, 2) + 4').",
+          "properties": {
+            "damage": { "anyOf": [{ "$ref": "#/definitions/variantValue" }, { "type": "string" }], "description": "Weapon: the damage dice/constant, e.g. '1d8' or '1'. A pure dice expression — no damage type (BRP-style records may carry a modifier suffix such as '1d3+dm')." },
+            "damage_type": { "type": "string", "description": "Weapon: the damage type (Bludgeoning / Piercing / Slashing / ...), separate from `damage`." },
+            "properties": { "oneOf": [{ "type": "array", "items": { "type": "string" } }, { "type": "string" }], "description": "Weapon: the property keywords (Finesse, Light, Reach, Two-Handed, Thrown, Ammunition, Heavy, Versatile, ...) as an array (prose allowed only where a record is a descriptive magic item)." },
+            "range": { "oneOf": [{ "type": "object", "additionalProperties": false, "properties": { "normal": { "type": "integer" }, "long": { "type": "integer" } } }, { "type": "number" }, { "type": "string" }], "description": "Weapon: thrown / ammunition ranges in feet as {normal, long}; other rulesets may express a single numeric range." },
+            "versatile_damage": { "type": "string", "description": "Weapon: the two-handed damage die of a Versatile weapon (e.g. '1d10')." },
+            "ammunition": { "type": "string", "description": "Weapon: the ammunition type an Ammunition weapon takes (arrow / bolt / bullet / needle)." },
+            "mastery": { "type": "string", "description": "Weapon: the weapon-mastery keyword (Cleave / Graze / Nick / Push / Sap / Slow / Topple / Vex)." },
+            "cost": { "oneOf": [{ "type": "string" }, { "type": "number" }], "description": "Price, e.g. '2 SP' (parsed against the currencies denominations) or a number in base units. Mirrors `value`." },
+            "strength_req": { "type": "integer", "description": "Armor: the Strength score required to wear it without a speed penalty; 0 when none." },
+            "stealth_disadvantage": { "type": "boolean", "description": "Armor: whether wearing it gives disadvantage on Stealth checks." },
+            "modifiers": {
+              "type": "array",
+              "description": "Effects applied to the wearer's effective stats while equipped (armor's AC, a ring's +1, ...). Same shape as condition stat_modifiers but with `target_stat` instead of `stat`; `value`/`factor`/clamp bounds may be a formula string resolved against the wearer.",
+              "items": {
+                "type": "object",
+                "additionalProperties": true,
+                "properties": {
+                  "target_stat": { "type": "string" },
+                  "type": { "type": "string", "enum": ["add", "override", "multiply", "clamp"] },
+                  "value": { "description": "add/override value, or multiply factor — a number or a formula string." },
+                  "factor": { "description": "multiply factor — a number or a formula string." },
+                  "clamp_min": { "description": "clamp lower bound — a number or a formula string." },
+                  "clamp_max": { "description": "clamp upper bound — a number or a formula string." }
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "afflictionRecord": {
       "type": "object",

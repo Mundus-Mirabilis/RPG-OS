@@ -139,7 +139,7 @@ TEST_CASE("generated dnd5e: attack check matches the universal engine (parity)")
   fighter.hitPoints = 12;
 
   auto rng = script({10}); // 10 + STR_mod(3) + prof(2) = 15 >= AC 12
-  const CheckResult specific = fighter.dnd5eAttackMelee(fighter, CheckParams{}, rng);
+  const CheckResult specific = fighter.attackMelee(fighter, CheckParams{}, rng);
   CHECK(specific.isSuccess);
   CHECK(specific.marginOfSuccess == 3);
 
@@ -241,7 +241,7 @@ TEST_CASE("generated brp_ugc: skill checks match the universal engine (parity)")
   const BrpCharacter human = BrpCharacter::fromArchetype(ruleset, "average_human");
 
   auto rng = script({5}); // Brawl 25 / 5 = 5 -> Special
-  const CheckResult specific = human.brpSkillBrawl(CheckParams{}, rng);
+  const CheckResult specific = human.skillBrawl(CheckParams{}, rng);
   CHECK(specific.isSuccess);
   CHECK(specific.successLevel == rpg_os::SuccessLevel::Special);
   CHECK(specific.marginOfSuccess == 20);
@@ -266,7 +266,7 @@ TEST_CASE("generated brp_ugc: resistance rolls match the universal engine (parit
 
   // Equal POW (11 vs 11): chance 50; roll 40 succeeds.
   auto rng = script({40});
-  const CheckResult specific = human.brpResistancePow(human, CheckParams{}, rng);
+  const CheckResult specific = human.resistancePow(human, CheckParams{}, rng);
   CHECK(specific.isSuccess);
 
   rpg_os::RulesetEngine engine;
@@ -286,7 +286,7 @@ TEST_CASE("generated brp_ugc: opposed combat matches the universal engine (parit
 
   // Attack 2 is Critical (2 <= ceil(25/20)); parry 10 is Success -> hit.
   auto rng = script({2, 10});
-  const CheckResult specific = human.brpCombat(human, CheckParams{}, rng);
+  const CheckResult specific = human.combat(human, CheckParams{}, rng);
   CHECK(specific.isSuccess);
   CHECK(specific.successLevel == rpg_os::SuccessLevel::Critical);
 
@@ -416,12 +416,14 @@ TEST_CASE("generated tde5e: toJson/restoreFromJson round-trips living state") {
   geron.inventory.add(rpg_os::ItemInstance{"dagger", 2, {}});
   geron.money = rpg_os::Money{1000};
   geron.spellbook.learn("fulminictus");
+  geron.terrain = "water";
 
   rpg_os::Json save;
   geron.toJson(save);
   CHECK(save["resources"]["LP"] == 20);
   CHECK(save["conditions"]["pain"] == 2);
   CHECK(save["temp_hp"] == 5);
+  CHECK(save["terrain"] == "water");
 
   // A fresh character restores the exact living state.
   TdeCharacter restored;
@@ -435,6 +437,7 @@ TEST_CASE("generated tde5e: toJson/restoreFromJson round-trips living state") {
   CHECK(restored.inventory.count("dagger") == 2);
   CHECK(restored.money.baseUnits() == 1000);
   CHECK(restored.spellbook.knows("fulminictus"));
+  CHECK(restored.terrain == "water");
   bool painDuration = false;
   for (const rpg_os::ActiveEffect &effect : restored.effects.effects()) {
     if (effect.conditionId == "pain" && effect.remaining == 2) {
@@ -451,6 +454,7 @@ TEST_CASE("generated tde5e: generated save restores into the universal engine (p
   geron.tempHitPoints = 5;
   geron.conditions["pain"] = 2;
   geron.resistances.insert("Fire");
+  geron.terrain = "land";
   rpg_os::Json save;
   geron.toJson(save);
 
@@ -468,4 +472,5 @@ TEST_CASE("generated tde5e: generated save restores into the universal engine (p
   CHECK(universal->conditionStacks("pain") == 2);
   CHECK(universal->hasResistance("Fire"));
   CHECK(universal->getStat("COU") == 12);
+  CHECK(universal->terrain() == "land");
 }

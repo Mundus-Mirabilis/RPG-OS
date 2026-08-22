@@ -132,7 +132,11 @@ convert it to `STATIC`. Only tests and examples compile executables.
   `makeCombatantSpecFromEntity(engine, entity, weapon, out)` derives combat
   values from ANY `DynamicEntity` — a character with no ruleset entry (e.g.
   one entered into a form) is fully supported. `DynamicEntity::refreshResources`
-  is public so hand-built sheets get their resource pools.
+  is public so hand-built sheets get their resource pools. **The weapon a
+  character actually has equipped is the one it fights with**: the spec
+  builders resolve the equipped item's `damage` expression (an explicit
+  caller-provided weapon string overrides; the default longsword is only a
+  fallback for weapon-less characters).
 
 ## Shared template core
 
@@ -194,11 +198,24 @@ mode:
   `equipment_slots`, `event_triggers`, `data`. **Optional bookkeeping
   sections** (each is opt-in — a ruleset without one simply does not use that
   feature): `currencies` (denominations with `per_base` values in the
-  `base_unit`; enables `Money`/`itemPrice`/`buy`), `encumbrance` (a `capacity`
-  stat formula + ratio `levels` with an optional condition per level),
-  `spellcasting` (`style` `pool`/`slots`; vancian per-day `slots` per spell
-  level). The bookkeeping layer (inventory, equipment, conditions with
-  durations, advancement, rests, curses) is universal and data-driven;
+  `base_unit`; enables `Money`/`itemPrice`/`buy`), `encumbrance` (up to three
+  independent capacity axes as stat formulas — `capacity` weight, `size_capacity`
+  volume/slots, `item_capacity` count — plus ratio `levels` with an optional
+  condition per level; the engine reports what a sheet carries via
+  `carriedLoad`, its limits via `capacity`, the per-axis status via
+  `inventoryStatus`, and whether an item fits via `canCarry`; an item record
+  may declare a numeric `size` and, for containers, a `capacity`
+  `{"weight","size","items"}` that `addItemToContainer` enforces with
+  `OverCapacity`), `spellcasting` (`style` `pool`/`slots`; vancian per-day
+  `slots` per spell level), and `movement` (named movement modes with a base
+  speed formula, named terrains that multiply per-mode speed / forbid a mode
+  or require a capability / change exhaustion / set `regeneration`
+  `normal`/`none`/`half`, an optional exhaustion `pool` drained by `move`, and
+  `load` ratio→factor steps that slow a loaded carrier — see `movementStatus`,
+  `movementSpeed`, `canRegenerate`, `move`; a ruleset without `movement` is
+  unconstrained). The bookkeeping layer (inventory, equipment, conditions with
+  durations, advancement, rests, curses, movement) is universal and
+  data-driven;
   `data.conditions` may carry `stat_modifiers` (per-stack stat changes) and
   `check_modifiers` (per-check flat bonuses, advantage/disadvantage,
   auto-failure, and/or bonus dice, matched by scope — a check type id, a
@@ -214,7 +231,13 @@ mode:
   helpers, which refuse the action before any resource is spent) and
   `capabilities` (what it *can* do — movement/senses like `swim`, `climb`,
   `breath_water`, `darkvision`, `see_invisible`; queried via
-  `DynamicEntity::hasCapability`/`capabilities`). Casting requires the
+  `DynamicEntity::hasCapability`/`capabilities`). The surrounding can affect
+  items too: a sheet has a current `terrain` (`DynamicEntity::setTerrain`),
+  and an item record may carry a `terrain` object keyed by terrain id with
+  `unusable`/`ruined` (reported per item via `itemTerrainStatus`) and `grants`
+  — capabilities the *wearer* gains automatically in that terrain (an amulet
+  that grants `breath_water` in water), which is what makes a terrain's
+  movement-mode `requires` requirement satisfiable. Casting requires the
   standard action, so `no_action` also blocks `cast` (an explicit `no_cast`
   is reported as the reason when present). The shipped D&D conditions carry
   these restrictions (incapacitated blocks action/bonus/reaction; paralyzed,
@@ -257,8 +280,10 @@ mode:
   is extracted into these structured fields is removed from the entry's
   `description`, which the engine never reads. The D&D ruleset's `data`
   section carries only the machine-readable sections the engine consumes
-  (`creatures`, `spells`, `items`, `conditions`, `traits`, `poisons`,
-  `weapons`, `armor`); raw SRD reference text (rulebook chapters, class
+  (`creatures`, `spells`, `items`, `conditions`, `traits`, `poisons`); the
+  `weapons` / `armor` arrays are optional classification sub-views of
+  `data.items` (the engine reads gear from `items`), so keep them in sync;
+  raw SRD reference text (rulebook chapters, class
   features, magic items, glossary, species, backgrounds, feats) is *not*
   embedded — it lives in the source `.local_ressources/DnD/` extraction and
   is modeled as structured rules when the engine gains a mechanism for it.
@@ -283,6 +308,27 @@ mode:
   Range/stat values are resolved per `rpg_os::Variance` (weakest / weak /
   average / strong / strongest / random) via `rpg_os::readVariantValue`
   (`include/rpg_os/core/variance.hpp`).
+- **Item records** (`data.items` — weapons, armor, containers, magic items)
+  are the engine's gear source. A **weapon** declares `damage` as a *bare
+  dice expression* (`"1d8"` — **never** `"1d8 Bludgeoning"`; the damage
+  type lives in its own `damage_type` field), a `slot` (`weapon_hand`), a
+  `properties` array of keywords (Finesse / Light / Reach / Two-Handed /
+  Thrown / Ammunition / ...), an optional `range` (`{"normal","long"}`
+  feet), `versatile_damage`, `ammunition`, and a `mastery` keyword. An
+  **armor** item declares a `slot` (`body_armor` / `shield`), a `modifiers`
+  array carrying its AC effect, a numeric `strength_req`, and
+  `stealth_disadvantage`. Equipped-item `modifiers` apply to the wearer's
+  effective stats (`DynamicEntity::getEffectiveStat`) and a modifier's
+  `value`/`factor`/clamp bounds may be a **formula string evaluated against
+  the wearer** — e.g. D&D medium armour caps its Dexterity contribution with
+  `"10 + min(DEX_mod, 2) + 4"`. `weight` (`"2 lb."`) and `cost` (`"2 SP"`)
+  are kept verbatim from the source; the engine parses them at runtime
+  (`parseWeightValue` / `parsePriceString`). Containers declare a `capacity`
+  object `{"weight","size","items"}` that `addItemToContainer` enforces.
+  **Combat uses the weapon a combatant actually has equipped**: the spec
+  builders resolve the equipped item's `damage`, and `validate_ruleset.py`
+  flags a `damage` string that embeds its damage type — the exact regression
+  that would silently make a weapon's real damage unused in fights.
 - Adding a system = adding a JSON file; do not change engine code for it.
 
 ## Code conventions

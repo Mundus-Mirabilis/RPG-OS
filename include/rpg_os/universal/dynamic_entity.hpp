@@ -42,6 +42,7 @@
 #include <rpg_os/core/spellbook.hpp>
 #include <rpg_os/core/variance.hpp>
 #include <rpg_os/universal/expression.hpp>
+#include <rpg_os/universal/movement.hpp>
 #include <rpg_os/universal/ruleset_loader.hpp>
 #include <string>
 #include <string_view>
@@ -363,15 +364,60 @@ public:
         restrictions(), [token](const std::string &restriction) { return restriction == token; });
   }
 
-  /// The capability tokens the entity has (see @ref collectTokens).
+  /// The capability tokens the entity has: from active conditions and traits
+  /// (see @ref collectTokens) plus — when a current terrain is set — the
+  /// `grants` of every *equipped* (worn) item whose record's `terrain`
+  /// section has an entry for that terrain. So "this amulet lets you breathe
+  /// underwater" is applied automatically the moment the character is in
+  /// water, and a terrain that requires a capability for a movement mode
+  /// (e.g. walking in deep water needs "breath_water") becomes possible when
+  /// the right item is worn. A passive grant needs the item to be worn, not
+  /// merely carried; terrain *harm* (unusable / ruined) still applies to any
+  /// carried instance.
   [[nodiscard]] std::vector<std::string> capabilities() const {
-    return collectTokens("capabilities");
+    std::vector<std::string> out = collectTokens("capabilities");
+    if (m_terrain.empty()) {
+      return out;
+    }
+    const auto addToken = [&out](const std::string &token) {
+      if (std::find(out.begin(), out.end(), token) == out.end()) {
+        out.push_back(token);
+      }
+    };
+    for (const auto &[slot, itemId] : m_equipment.slots()) {
+      const TerrainItemEffect effect = itemTerrainEffect(itemId);
+      for (const std::string &grant : effect.grants) {
+        addToken(grant);
+      }
+    }
+    return out;
   }
 
   /// Whether the entity has the given capability (e.g. "swim").
   [[nodiscard]] bool hasCapability(std::string_view token) const {
     return std::ranges::any_of(
         capabilities(), [token](const std::string &capability) { return capability == token; });
+  }
+
+  /// The entity's current terrain / surrounding id ("" = none set; the engine
+  /// falls back to the ruleset's default terrain). Changing it automatically
+  /// changes which item terrain effects apply and which movement modes are
+  /// possible.
+  [[nodiscard]] const std::string &terrain() const noexcept {
+    return m_terrain;
+  }
+  /// Sets the entity's current terrain / surrounding ("" clears it back to
+  /// the ruleset default).
+  void setTerrain(std::string_view terrainId) {
+    m_terrain = std::string(terrainId);
+  }
+
+  /// The terrain-dependent behaviour of `itemId` in the entity's current
+  /// terrain (see @ref TerrainItemEffect): whether the item is unusable /
+  /// ruined here and what capabilities it grants. All-off when the entity has
+  /// no current terrain or the item declares no entry for it.
+  [[nodiscard]] TerrainItemEffect itemTerrainStatus(std::string_view itemId) const {
+    return itemTerrainEffect(itemId);
   }
 
   /// The effective value of `statId`: the raw value plus every modifier the
@@ -508,6 +554,7 @@ public:
     out["id"] = m_id;
     out["entity_id"] = m_entityId.value;
     out["stats"] = m_stats;
+    out["terrain"] = m_terrain;
     Json resources = Json::object();
     for (const auto &[id, pool] : m_resources) {
       resources[id] = pool.current;
@@ -571,6 +618,7 @@ public:
     restoreEffects(in);
     restoreAfflictions(in);
     restoreResistances(in);
+    restoreTerrain(in);
   }
 
   /// (Re)creates the resource pools from the ruleset definitions, computing
@@ -722,6 +770,12 @@ private:
       }
     }
   }
+  /// Restores the current terrain / surrounding.
+  void restoreTerrain(const Json &in) {
+    if (in.contains("terrain") && in.at("terrain").is_string()) {
+      m_terrain = in.at("terrain").get<std::string>();
+    }
+  }
 
   // ---- archetype-loading helpers (see @ref loadFromArchetype) ---------------
   /// Loads attribute values (ranged values picked per `variance`).
@@ -821,22 +875,129 @@ private:
     }
   }
 
+  /// Resolves a modifier numeric `value` (in `mod` under `key`) that may be a
+  /// plain number or a formula string evaluated against this entity. A formula
+  /// is compiled once per text (cached) and evaluated against the wearer's own
+  /// stats, so a gear modifier can depend on the wearer — D&D medium armour
+  /// caps its Dexterity contribution as `"10 + min(DEX_mod, 2) + 4"`. An
+  /// absent, non-numeric, or unresolvable value degrades to `fallback` rather
+  /// than throwing — consistent with how the engine treats unexpected rule
+  /// fields.
+  [[nodiscard]] int32_t resolveModifierNumber(const Json &mod, std::string_view key,
+                                              int32_t fallback, const EntityContext &ctx) const {
+    const auto it = mod.find(std::string(key));
+    if (it == mod.end()) {
+      return fallback;
+    }
+    const Json &value = *it;
+    if (value.is_number()) {
+      return value.get<int32_t>();
+    }
+    if (value.is_string()) {
+      const std::string text = value.get<std::string>();
+      auto cit = m_formulaCache.find(text);
+      if (cit == m_formulaCache.end()) {
+        try {
+          cit = m_formulaCache.emplace(text, rpg_os::Expression(text)).first;
+        } catch (const std::exception &) {
+          return fallback; // malformed formula: ignore, like other misuse
+        }
+      }
+      try {
+        return math::toStat(cit->second.evaluate(ctx));
+      } catch (const std::exception &) {
+        return fallback; // unresolvable identifier / division by zero
+      }
+    }
+    return fallback;
+  }
+
+  /// As @ref resolveModifierNumber, but for a multiplier (`factor`) kept as a
+  /// double.
+  [[nodiscard]] double resolveModifierFactor(const Json &mod, std::string_view key, double fallback,
+                                             const EntityContext &ctx) const {
+    const auto it = mod.find(std::string(key));
+    if (it == mod.end()) {
+      return fallback;
+    }
+    const Json &value = *it;
+    if (value.is_number()) {
+      return value.get<double>();
+    }
+    if (value.is_string()) {
+      const std::string text = value.get<std::string>();
+      auto cit = m_formulaCache.find(text);
+      if (cit == m_formulaCache.end()) {
+        try {
+          cit = m_formulaCache.emplace(text, rpg_os::Expression(text)).first;
+        } catch (const std::exception &) {
+          return fallback;
+        }
+      }
+      try {
+        return cit->second.evaluate(ctx);
+      } catch (const std::exception &) {
+        return fallback;
+      }
+    }
+    return fallback;
+  }
+
   /// Appends the modifiers a single data record contributes to `statId`: gear
   /// `modifiers` (stat field `target_stat`) and condition / trait
   /// `stat_modifiers` (stat field `stat`) share one shape — an array of
   /// modifier objects — so one helper serves all three. `stackScale` multiplies
   /// Add modifiers (a condition's per-stack modifiers scale with its stacks).
-  static void appendRecordModifiers(std::vector<Modifier> &result, const Json *record,
-                                    std::string_view arrayField, std::string_view statField,
-                                    std::string_view statId, int32_t stackScale = 1) {
+  ///
+  /// @par Numeric vs formula values
+  /// A modifier's `value` / `factor` / clamp bounds may be a plain number or a
+  /// formula string resolved against the *wearer* (see @ref
+  /// resolveModifierNumber). Numeric modifiers take the shared
+  /// @ref parseModifierJson fast path; any string-valued field switches to the
+  /// type-aware path so the formula is evaluated, never left as a raw string.
+  void appendRecordModifiers(std::vector<Modifier> &result, const EntityContext &ctx,
+                             const Json *record, std::string_view arrayField,
+                             std::string_view statField, std::string_view statId,
+                             int32_t stackScale = 1) const {
     if (record == nullptr || !record->contains(arrayField) || !record->at(arrayField).is_array()) {
       return;
     }
+    const auto hasFormulaField = [](const Json &mod) {
+      for (const char *key : {"value", "factor", "clamp_min", "clamp_max", "min", "max"}) {
+        if (mod.contains(key) && mod.at(key).is_string()) {
+          return true;
+        }
+      }
+      return false;
+    };
     for (const Json &mod : record->at(arrayField)) {
       if (mod.value(statField, "") != statId) {
         continue;
       }
-      Modifier parsed = parseModifierJson(mod);
+      Modifier parsed;
+      if (!hasFormulaField(mod)) {
+        parsed = parseModifierJson(mod); // numeric fast path
+      } else {
+        const std::string type = mod.value("type", "add");
+        if (type == "override") {
+          parsed.type = ModifierType::Override;
+          parsed.value = resolveModifierNumber(mod, "value", 0, ctx);
+        } else if (type == "multiply") {
+          parsed.type = ModifierType::Multiply;
+          parsed.factor = mod.contains("factor")
+                              ? resolveModifierFactor(mod, "factor", 1.0, ctx)
+                              : static_cast<double>(resolveModifierNumber(mod, "value", 1, ctx));
+        } else if (type == "clamp") {
+          parsed.type = ModifierType::Clamp;
+          parsed.clampMin =
+              resolveModifierNumber(mod, mod.contains("clamp_min") ? "clamp_min" : "min", 0, ctx);
+          parsed.clampMax =
+              resolveModifierNumber(mod, mod.contains("clamp_max") ? "clamp_max" : "max", 0, ctx);
+        } else { // "add"
+          parsed.type = ModifierType::Add;
+          parsed.value = resolveModifierNumber(mod, "value", 0, ctx);
+        }
+      }
       if (stackScale != 1 && parsed.type == ModifierType::Add) {
         parsed.value *= stackScale;
       }
@@ -850,20 +1011,23 @@ private:
   /// (Fear I-IV in The Dark Eye is "-1 per level on checks").
   [[nodiscard]] std::vector<Modifier> modifiersFor(std::string_view statId) const {
     std::vector<Modifier> result;
+    // One context for the whole sweep: formula-valued modifiers resolve against
+    // this entity, and reusing the context avoids rebuilding it per record.
+    const EntityContext ctx(*this, nullptr, Json::object(), Json::object());
     for (const auto &[slot, itemId] : m_equipment.slots()) {
-      appendRecordModifiers(result, findDataRecord("items", itemId), "modifiers", "target_stat",
-                            statId);
+      appendRecordModifiers(result, ctx, findDataRecord("items", itemId), "modifiers",
+                            "target_stat", statId);
     }
     for (const auto &[conditionId, stacks] : m_conditions) {
       if (stacks <= 0) {
         continue;
       }
-      appendRecordModifiers(result, findDataRecord("conditions", conditionId), "stat_modifiers",
-                            "stat", statId, stacks);
+      appendRecordModifiers(result, ctx, findDataRecord("conditions", conditionId),
+                            "stat_modifiers", "stat", statId, stacks);
     }
     for (const std::string &traitId : m_traits) {
-      appendRecordModifiers(result, findDataRecord("traits", traitId), "stat_modifiers", "stat",
-                            statId);
+      appendRecordModifiers(result, ctx, findDataRecord("traits", traitId), "stat_modifiers",
+                            "stat", statId);
     }
     return result;
   }
@@ -872,6 +1036,34 @@ private:
   /// ...) — the sheet-side twin of the engine's record finders.
   [[nodiscard]] const Json *findDataRecord(std::string_view section, std::string_view id) const {
     return rpg_os::findDataRecord(*m_ruleset, section, id);
+  }
+
+  /// The terrain behaviour of `itemId` in the entity's current terrain (from
+  /// the item record's `terrain` object). All-off when no terrain is set or
+  /// the item declares no entry for the current terrain.
+  [[nodiscard]] TerrainItemEffect itemTerrainEffect(std::string_view itemId) const {
+    TerrainItemEffect effect;
+    if (m_terrain.empty()) {
+      return effect;
+    }
+    const Json *item = findDataRecord("items", itemId);
+    if (item == nullptr || !item->contains("terrain") || !item->at("terrain").is_object()) {
+      return effect;
+    }
+    const Json &terrainSection = item->at("terrain");
+    const auto it = terrainSection.find(m_terrain);
+    if (it == terrainSection.end() || !it->is_object()) {
+      return effect;
+    }
+    const Json &entry = *it;
+    effect.unusable = entry.value("unusable", false);
+    effect.ruined = entry.value("ruined", false);
+    if (entry.contains("grants") && entry.at("grants").is_array()) {
+      for (const Json &token : entry.at("grants")) {
+        effect.grants.push_back(token.get<std::string>());
+      }
+    }
+    return effect;
   }
 
   /// Evaluates a derived-stat formula for this entity (no target / env).
@@ -915,6 +1107,11 @@ private:
   EffectTimeline m_effects;
   std::vector<AppliedAffliction> m_afflictions;
   std::unordered_set<std::string> m_resistances;
+  /// Compiled formula modifiers, cached per formula text so the (small, fixed)
+  /// set of formulas a ruleset uses is parsed once per entity instead of once
+  /// per check. Mutable: populated lazily from @ref getEffectiveStat.
+  mutable std::unordered_map<std::string, rpg_os::Expression> m_formulaCache;
+  std::string m_terrain; ///< current terrain / surrounding ("" = ruleset default)
 };
 
 inline bool EntityContext::resolve(std::string_view path, double &out) const {

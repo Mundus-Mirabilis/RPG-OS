@@ -83,7 +83,7 @@ int main(int argc, char **argv) {
   rpg_os::CheckParams attackParams;
   rpg_os::DefaultRandom attackRng;
   // A generated check method taking the target as a StatProvider argument.
-  const rpg_os::CheckResult attack = fighter.dnd5eAttackMelee(fighter, attackParams, attackRng);
+  const rpg_os::CheckResult attack = fighter.attackMelee(fighter, attackParams, attackRng);
   std::cout << "Melee attack vs AC " << fighter.armorClass() << ": "
             << (attack.isSuccess ? "hit" : "miss") << " (roll "
             << (attack.rawDiceRolls.empty() ? 0 : attack.rawDiceRolls.front()) << ")\n";

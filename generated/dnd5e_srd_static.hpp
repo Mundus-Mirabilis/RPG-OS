@@ -139,6 +139,7 @@ public:
   std::unordered_set<std::string> resistances;
   std::vector<rpg_os::AppliedAffliction> afflictions;
   std::unordered_set<std::string> traits;
+  std::string terrain; // current terrain / surrounding ("" = ruleset default)
 
   // ---- save / load (snapshot the living sheet, not a ruleset record) ----
   /// Serializes the character's current living state — attributes, skills,
@@ -180,6 +181,7 @@ public:
     rpg_os::Json resources = rpg_os::Json::object();
     resources["HP"] = hitPoints;
     out["resources"] = resources;
+    out["terrain"] = terrain;
     out["conditions"] = conditions;
     rpg_os::Json traitsJson = rpg_os::Json::array();
     for (const auto &traitId : traits) {
@@ -269,6 +271,9 @@ public:
     if (in.contains("resources") && in.at("resources").is_object()) {
       const rpg_os::Json &resources = in.at("resources");
       hitPoints = resources.value("HP", hitPoints);
+    }
+    if (in.contains("terrain") && in.at("terrain").is_string()) {
+      terrain = in.at("terrain").get<std::string>();
     }
     if (in.contains("conditions") && in.at("conditions").is_object()) {
       conditions = in.at("conditions").get<std::unordered_map<std::string, int32_t>>();
@@ -420,8 +425,8 @@ public:
   // ---- named checks (from check_types) ----
   /// Named check 'dnd5e_attack_melee' (see the ruleset's check_types).
   template <rpg_os::StatProvider Target, rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult
-  dnd5eAttackMelee(const Target &target, const rpg_os::CheckParams &params, Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult attackMelee(const Target &target,
+                                                const rpg_os::CheckParams &params, Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d20,
@@ -443,7 +448,7 @@ public:
   /// Named check 'dnd5e_attack_ranged' (see the ruleset's check_types).
   template <rpg_os::StatProvider Target, rpg_os::RandomNumberGenerator Rng>
   [[nodiscard]] rpg_os::CheckResult
-  dnd5eAttackRanged(const Target &target, const rpg_os::CheckParams &params, Rng &rng) const {
+  attackRanged(const Target &target, const rpg_os::CheckParams &params, Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d20,
@@ -464,8 +469,8 @@ public:
 
   /// Named check 'dnd5e_attack' (see the ruleset's check_types).
   template <rpg_os::StatProvider Target, rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult dnd5eAttack(const Target &target,
-                                                const rpg_os::CheckParams &params, Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult attack(const Target &target, const rpg_os::CheckParams &params,
+                                           Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d20,
@@ -486,8 +491,7 @@ public:
 
   /// Named check 'dnd5e_check_str' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult dnd5eCheckStr(const rpg_os::CheckParams &params,
-                                                  Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult checkStr(const rpg_os::CheckParams &params, Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d20,
@@ -507,8 +511,7 @@ public:
 
   /// Named check 'dnd5e_check_dex' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult dnd5eCheckDex(const rpg_os::CheckParams &params,
-                                                  Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult checkDex(const rpg_os::CheckParams &params, Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d20,
@@ -528,8 +531,7 @@ public:
 
   /// Named check 'dnd5e_check_con' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult dnd5eCheckCon(const rpg_os::CheckParams &params,
-                                                  Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult checkCon(const rpg_os::CheckParams &params, Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d20,
@@ -549,8 +551,7 @@ public:
 
   /// Named check 'dnd5e_check_int' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult dnd5eCheckInt(const rpg_os::CheckParams &params,
-                                                  Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult checkInt(const rpg_os::CheckParams &params, Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d20,
@@ -570,8 +571,7 @@ public:
 
   /// Named check 'dnd5e_check_wis' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult dnd5eCheckWis(const rpg_os::CheckParams &params,
-                                                  Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult checkWis(const rpg_os::CheckParams &params, Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d20,
@@ -591,8 +591,7 @@ public:
 
   /// Named check 'dnd5e_check_cha' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult dnd5eCheckCha(const rpg_os::CheckParams &params,
-                                                  Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult checkCha(const rpg_os::CheckParams &params, Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d20,
@@ -612,8 +611,7 @@ public:
 
   /// Named check 'dnd5e_save_str' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult dnd5eSaveStr(const rpg_os::CheckParams &params,
-                                                 Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult saveStr(const rpg_os::CheckParams &params, Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d20,
@@ -633,8 +631,7 @@ public:
 
   /// Named check 'dnd5e_save_dex' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult dnd5eSaveDex(const rpg_os::CheckParams &params,
-                                                 Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult saveDex(const rpg_os::CheckParams &params, Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d20,
@@ -654,8 +651,7 @@ public:
 
   /// Named check 'dnd5e_save_con' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult dnd5eSaveCon(const rpg_os::CheckParams &params,
-                                                 Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult saveCon(const rpg_os::CheckParams &params, Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d20,
@@ -675,8 +671,7 @@ public:
 
   /// Named check 'dnd5e_save_int' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult dnd5eSaveInt(const rpg_os::CheckParams &params,
-                                                 Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult saveInt(const rpg_os::CheckParams &params, Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d20,
@@ -696,8 +691,7 @@ public:
 
   /// Named check 'dnd5e_save_wis' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult dnd5eSaveWis(const rpg_os::CheckParams &params,
-                                                 Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult saveWis(const rpg_os::CheckParams &params, Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d20,
@@ -717,8 +711,7 @@ public:
 
   /// Named check 'dnd5e_save_cha' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult dnd5eSaveCha(const rpg_os::CheckParams &params,
-                                                 Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult saveCha(const rpg_os::CheckParams &params, Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d20,

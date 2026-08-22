@@ -40,6 +40,7 @@
 #include <rpg_os/core/cost_table.hpp>
 #include <rpg_os/core/money.hpp>
 #include <rpg_os/universal/expression.hpp>
+#include <rpg_os/universal/movement.hpp>
 #include <string>
 #include <string_view>
 #include <unordered_map>
@@ -172,12 +173,24 @@ struct EventTriggerDef {
 /// attached condition is the generic shape of "encumbered at 50%, heavily
 /// encumbered at 100%". A ruleset without an `encumbrance` section simply has
 /// @ref enabled == false and the engine reports no carrying limit.
+///
+/// @par Three capacity axes
+/// Weight is the classic limit, but a rule system may also constrain what a
+/// hero carries by *size* (volume / slots — a backpack holds so many cubic
+/// feet) or by plain *item count* (a quiver holds N arrows). All three are
+/// optional formulas; an absent axis has no limit.
 struct EncumbranceConfig {
   bool enabled{false};
   std::string weightUnit{"lb"};  ///< unit used by item `weight` fields
   double defaultItemWeight{0.0}; ///< fallback when an item carries no weight
-  std::string capacityText;      ///< capacity formula; empty = no limit
-  Expression capacity;           ///< parsed capacity formula
+  std::string capacityText;      ///< weight capacity formula; empty = no limit
+  Expression capacity;           ///< parsed weight capacity formula
+  std::string sizeUnit{"size"};  ///< unit used by item `size` fields
+  double defaultItemSize{0.0};   ///< fallback when an item carries no size
+  std::string sizeCapacityText;  ///< size capacity formula; empty = no limit
+  Expression sizeCapacity;       ///< parsed size capacity formula
+  std::string itemCapacityText;  ///< item-count capacity formula; empty = no limit
+  Expression itemCapacity;       ///< parsed item-count capacity formula
   struct Level {
     double maxRatio{1.0};    ///< carried/capacity ceiling for this level
     std::string conditionId; ///< condition applied at this level ("" = none)
@@ -241,6 +254,8 @@ public:
   EncumbranceConfig encumbrance;
   /// Optional spell-casting configuration (vancian slots).
   SpellcastingConfig spellcasting;
+  /// Optional terrain-aware movement rules (see movement.hpp).
+  MovementConfig movement;
 
   /// The raw `data` section (archetypes, items, creatures) as JSON.
   Json data{};
@@ -465,6 +480,7 @@ private:
   static void parseCurrencies(const Json &obj, Ruleset &out);
   static void parseEncumbrance(const Json &obj, Ruleset &out);
   static void parseSpellcasting(const Json &obj, Ruleset &out);
+  static void parseMovement(const Json &obj, Ruleset &out);
   static CheckRecipe parseRecipe(const Json &obj, std::string_view checkId);
   static EventType parseTrigger(std::string_view trigger);
 
@@ -827,6 +843,16 @@ inline void RulesetLoader::parseEncumbrance(const Json &obj, Ruleset &out) {
   if (!out.encumbrance.capacityText.empty()) {
     out.encumbrance.capacity = Expression(out.encumbrance.capacityText);
   }
+  out.encumbrance.sizeUnit = enc.value("size_unit", "size");
+  out.encumbrance.defaultItemSize = enc.value("default_item_size", 0.0);
+  out.encumbrance.sizeCapacityText = enc.value("size_capacity", "");
+  if (!out.encumbrance.sizeCapacityText.empty()) {
+    out.encumbrance.sizeCapacity = Expression(out.encumbrance.sizeCapacityText);
+  }
+  out.encumbrance.itemCapacityText = enc.value("item_capacity", "");
+  if (!out.encumbrance.itemCapacityText.empty()) {
+    out.encumbrance.itemCapacity = Expression(out.encumbrance.itemCapacityText);
+  }
   if (enc.contains("levels") && enc.at("levels").is_array()) {
     for (const Json &level : enc.at("levels")) {
       EncumbranceConfig::Level l;
@@ -850,6 +876,83 @@ inline void RulesetLoader::parseSpellcasting(const Json &obj, Ruleset &out) {
     for (const auto &[level, count] : sc.at("slots").items()) {
       out.spellcasting.slots[std::stoi(level)] = count.get<int32_t>();
     }
+  }
+}
+
+inline void RulesetLoader::parseMovement(const Json &obj, Ruleset &out) {
+  if (!obj.contains("movement")) {
+    return;
+  }
+  const Json &mov = obj.at("movement");
+  require(mov.is_object(), "'movement' must be an object");
+  MovementConfig &config = out.movement;
+  config.defaultTerrain = mov.value("default_terrain", "");
+  if (mov.contains("modes") && mov.at("modes").is_object()) {
+    for (const auto &[modeId, modeJson] : mov.at("modes").items()) {
+      require(modeJson.is_object(), "'movement.modes.<id>' must be an object");
+      MovementModeDef mode;
+      mode.id = modeId;
+      mode.name = modeJson.value("name", modeId);
+      mode.speedText = modeJson.value("speed", "");
+      if (!mode.speedText.empty()) {
+        mode.speed = Expression(mode.speedText);
+      }
+      mode.factor = modeJson.value("factor", 1.0);
+      mode.exhaustion = modeJson.value("exhaustion", 0.0);
+      config.modes[modeId] = std::move(mode);
+    }
+  }
+  if (mov.contains("terrains") && mov.at("terrains").is_object()) {
+    for (const auto &[terrainId, terrainJson] : mov.at("terrains").items()) {
+      require(terrainJson.is_object(), "'movement.terrains.<id>' must be an object");
+      TerrainDef terrain;
+      terrain.id = terrainId;
+      terrain.name = terrainJson.value("name", terrainId);
+      terrain.description = terrainJson.value("description", "");
+      terrain.regeneration = terrainJson.value("regeneration", "normal");
+      require(terrain.regeneration == "normal" || terrain.regeneration == "none" ||
+                  terrain.regeneration == "half",
+              "'movement.terrains.<id>.regeneration' must be 'normal', 'none', or 'half'");
+      if (terrainJson.contains("modes") && terrainJson.at("modes").is_object()) {
+        for (const auto &[modeId, ruleJson] : terrainJson.at("modes").items()) {
+          require(ruleJson.is_object(), "'movement.terrains.<id>.modes.<mode>' must be an object");
+          TerrainModeRule rule;
+          rule.speedFactor = ruleJson.value("factor", 1.0);
+          rule.costFactor = ruleJson.value("cost_factor", 1.0);
+          rule.possible = ruleJson.value("possible", true);
+          rule.requiresCapability = ruleJson.value("requires", "");
+          terrain.modes[modeId] = std::move(rule);
+        }
+      }
+      config.terrains[terrainId] = std::move(terrain);
+    }
+  }
+  if (mov.contains("exhaustion") && mov.at("exhaustion").is_object()) {
+    const Json &exhaustion = mov.at("exhaustion");
+    config.exhaustionPool = exhaustion.value("pool", "");
+    config.exhaustionPerDistance = exhaustion.value("per_distance", 1.0);
+  }
+  if (mov.contains("load") && mov.at("load").is_object()) {
+    const Json &load = mov.at("load");
+    if (load.contains("levels") && load.at("levels").is_array()) {
+      for (const Json &level : load.at("levels")) {
+        LoadSpeedLevel l;
+        l.maxRatio = level.value("max_ratio", 1.0);
+        l.factor = level.value("factor", 1.0);
+        config.loadLevels.push_back(std::move(l));
+      }
+    }
+  }
+  // A ruleset with a movement section always has a terrain to move in: an
+  // implicit "land" when none is declared, and a default terrain id.
+  if (config.terrains.empty()) {
+    TerrainDef implicit;
+    implicit.id = "land";
+    implicit.name = "Land";
+    config.terrains["land"] = std::move(implicit);
+  }
+  if (config.defaultTerrain.empty()) {
+    config.defaultTerrain = config.terrains.begin()->first;
   }
 }
 
@@ -885,6 +988,7 @@ inline Ruleset RulesetLoader::load(const Json &root) {
   parseCurrencies(root, out);
   parseEncumbrance(root, out);
   parseSpellcasting(root, out);
+  parseMovement(root, out);
   if (root.contains("data")) {
     out.data = root.at("data");
   }

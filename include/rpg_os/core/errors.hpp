@@ -34,6 +34,8 @@ enum class BookkeepingError {
   UnknownCondition,    ///< no condition record with that id
   UnknownSpell,        ///< no spell record with that id
   UnknownCostTable,    ///< no cost table with that id
+  UnknownMode,         ///< no movement mode with that id
+  UnknownTerrain,      ///< no terrain with that id
   NotEnoughMoney,      ///< the payer lacks the funds
   SlotOccupied,        ///< an item is already equipped in the slot
   SlotMismatch,        ///< the item cannot go into the requested slot

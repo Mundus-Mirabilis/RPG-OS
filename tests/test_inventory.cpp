@@ -96,3 +96,195 @@ TEST_CASE("bookkeeping: containers hold items (bag-in-bags)") {
   CHECK(restored.inventory().countIn("backpack", "club") == 1);
   CHECK(restored.inventory().totalCount("club") == 3);
 }
+
+TEST_CASE("bookkeeping: carried load reports weight, size, and item count") {
+  const std::string rulesetJson = R"({
+    "schema_version": 1, "ruleset_id": "mini", "licence": "test",
+    "attributes": [{"id": "STR", "name": "Strength", "min": 1, "max": 30, "default": 10}],
+    "encumbrance": {
+      "weight_unit": "lb", "default_weight": 1.0, "capacity": "15 * STR",
+      "size_unit": "slot", "default_item_size": 1.0, "size_capacity": "10",
+      "item_capacity": "5", "levels": []
+    },
+    "data": {
+      "items": [
+        {"id": "heavy_box", "name": "Heavy Box", "weight": "20 lb.", "size": 3},
+        {"id": "light_box", "name": "Light Box"}
+      ]
+    }
+  })";
+  RulesetEngine engine;
+  REQUIRE(engine.loadRulesetFromJson(rulesetJson));
+  const auto &ruleset = engine.ruleset();
+  DynamicEntity sheet(ruleset, "test");
+  sheet.setBaseAttribute("STR", 10);
+
+  auto load = engine.carriedLoad(sheet);
+  CHECK(load.weight == doctest::Approx(0.0));
+  CHECK(load.size == doctest::Approx(0.0));
+  CHECK(load.items == 0);
+
+  REQUIRE(engine.addItem(sheet, "heavy_box", 1).has_value());
+  REQUIRE(engine.addItem(sheet, "light_box", 2).has_value());
+  load = engine.carriedLoad(sheet);
+  CHECK(load.weight == doctest::Approx(22.0)); // 20 + 2 * 1
+  CHECK(load.size == doctest::Approx(5.0));    // 3 + 2 * 1 (default size 1)
+  CHECK(load.items == 3);
+
+  const auto cap = engine.capacity(sheet);
+  CHECK(cap.enabled);
+  CHECK(cap.weight == doctest::Approx(150.0)); // 15 * 10
+  CHECK(cap.size == doctest::Approx(10.0));
+  CHECK(cap.items == 5);
+
+  const auto status = engine.inventoryStatus(sheet);
+  CHECK_FALSE(status.full());
+  CHECK_FALSE(status.overWeight);
+  CHECK_FALSE(status.overSize);
+  CHECK_FALSE(status.overItems);
+}
+
+TEST_CASE("bookkeeping: canCarry rejects when any axis overflows") {
+  const std::string rulesetJson = R"({
+    "schema_version": 1, "ruleset_id": "mini", "licence": "test",
+    "attributes": [{"id": "STR", "name": "Strength", "min": 1, "max": 30, "default": 10}],
+    "encumbrance": {
+      "weight_unit": "lb", "default_weight": 1.0, "capacity": "15 * STR",
+      "size_unit": "slot", "default_item_size": 1.0, "size_capacity": "10",
+      "item_capacity": "5", "levels": []
+    },
+    "data": {
+      "items": [
+        {"id": "heavy_box", "name": "Heavy Box", "weight": "20 lb.", "size": 3},
+        {"id": "light_box", "name": "Light Box", "weight": "1 lb.", "size": 1}
+      ]
+    }
+  })";
+  RulesetEngine engine;
+  REQUIRE(engine.loadRulesetFromJson(rulesetJson));
+  const auto &ruleset = engine.ruleset();
+  DynamicEntity sheet(ruleset, "test");
+  sheet.setBaseAttribute("STR", 10);
+
+  // 7 heavy boxes: weight 140 lb <= 150, but size 21 > 10 -> size overflow.
+  auto ok = engine.canCarry(sheet, "heavy_box", 7);
+  REQUIRE(ok.has_value());
+  CHECK_FALSE(*ok);
+  // 3 heavy boxes fit on every axis.
+  ok = engine.canCarry(sheet, "heavy_box", 3);
+  CHECK(*ok);
+  // 5 light boxes = exactly the item limit (still allowed).
+  ok = engine.canCarry(sheet, "light_box", 5);
+  CHECK(*ok);
+  // 6 light boxes -> item-count overflow.
+  ok = engine.canCarry(sheet, "light_box", 6);
+  CHECK_FALSE(*ok);
+  // unknown item -> UnknownItem
+  CHECK(engine.canCarry(sheet, "nope", 1).error() == BookkeepingError::UnknownItem);
+}
+
+TEST_CASE("bookkeeping: inventoryStatus reports the over-limit axis") {
+  const std::string rulesetJson = R"({
+    "schema_version": 1, "ruleset_id": "mini", "licence": "test",
+    "attributes": [{"id": "STR", "name": "Strength", "min": 1, "max": 30, "default": 10}],
+    "encumbrance": {
+      "weight_unit": "lb", "default_weight": 1.0, "capacity": "15 * STR",
+      "size_unit": "slot", "default_item_size": 1.0, "size_capacity": "10",
+      "item_capacity": "5", "levels": []
+    },
+    "data": {
+      "items": [{"id": "light_box", "name": "Light Box", "weight": "1 lb.", "size": 1}]
+    }
+  })";
+  RulesetEngine engine;
+  REQUIRE(engine.loadRulesetFromJson(rulesetJson));
+  const auto &ruleset = engine.ruleset();
+  DynamicEntity sheet(ruleset, "test");
+  sheet.setBaseAttribute("STR", 10);
+
+  for (int i = 0; i < 6; ++i) {
+    REQUIRE(engine.addItem(sheet, "light_box", 1).has_value());
+  }
+  const auto status = engine.inventoryStatus(sheet);
+  CHECK(status.carried.items == 6);
+  CHECK(status.overItems);
+  CHECK(status.full());
+  // a sheet over its item limit cannot add more boxes
+  CHECK_FALSE(*engine.canCarry(sheet, "light_box", 1));
+}
+
+TEST_CASE("bookkeeping: containers have their own capacity (weight/size/count)") {
+  const std::string rulesetJson = R"({
+    "schema_version": 1, "ruleset_id": "mini", "licence": "test",
+    "attributes": [{"id": "STR", "name": "Strength", "min": 1, "max": 30, "default": 10}],
+    "encumbrance": {
+      "weight_unit": "lb", "default_weight": 1.0, "capacity": "15 * STR",
+      "size_unit": "slot", "default_item_size": 1.0, "levels": []
+    },
+    "data": {
+      "items": [
+        {"id": "backpack", "name": "Backpack", "weight": "5 lb.", "size": 1,
+         "capacity": {"weight": 30, "size": 6, "items": 5}},
+        {"id": "club", "name": "Club", "weight": "2 lb.", "size": 1}
+      ]
+    }
+  })";
+  RulesetEngine engine;
+  REQUIRE(engine.loadRulesetFromJson(rulesetJson));
+  const auto &ruleset = engine.ruleset();
+  DynamicEntity sheet(ruleset, "test");
+  sheet.setBaseAttribute("STR", 10);
+
+  const auto cap = engine.containerCapacity("backpack");
+  REQUIRE(cap.has_value());
+  CHECK(cap->weight == doctest::Approx(30.0));
+  CHECK(cap->size == doctest::Approx(6.0));
+  CHECK(cap->items == 5);
+  CHECK(cap->enabled);
+  CHECK(engine.containerCapacity("nope").error() == BookkeepingError::UnknownItem);
+  // a non-container item declares no capacity
+  const auto clubCap = engine.containerCapacity("club");
+  REQUIRE(clubCap.has_value());
+  CHECK_FALSE(clubCap->enabled);
+
+  REQUIRE(engine.addItem(sheet, "backpack", 1).has_value());
+  // 16 clubs = 32 lb > 30 weight -> reject
+  CHECK_FALSE(*engine.canAddToContainer(sheet, "backpack", "club", 16));
+  // 7 clubs = size 7 > 6 -> reject
+  CHECK_FALSE(*engine.canAddToContainer(sheet, "backpack", "club", 7));
+  // 6 clubs = 12 lb, size 6, items 6 > 5 -> reject by count
+  CHECK_FALSE(*engine.canAddToContainer(sheet, "backpack", "club", 6));
+  // 5 clubs fit exactly on every axis
+  CHECK(*engine.canAddToContainer(sheet, "backpack", "club", 5));
+  REQUIRE(engine.addItemToContainer(sheet, "backpack", "club", 5).has_value());
+  // the container is now full: one more club cannot fit
+  CHECK_FALSE(*engine.canAddToContainer(sheet, "backpack", "club", 1));
+  // ...and adding it is refused with OverCapacity
+  CHECK(engine.addItemToContainer(sheet, "backpack", "club", 1).error() ==
+        BookkeepingError::OverCapacity);
+  CHECK(sheet.inventory().countIn("backpack", "club") == 5);
+  // containerLoad reports what is inside
+  const auto cl = engine.containerLoad(sheet, "backpack");
+  CHECK(cl.items == 5);
+  CHECK(cl.weight == doctest::Approx(10.0));
+  CHECK(cl.size == doctest::Approx(5.0));
+}
+
+TEST_CASE("bookkeeping: no encumbrance rules means unlimited carrying") {
+  const std::string rulesetJson = R"({
+    "schema_version": 1, "ruleset_id": "mini", "licence": "test",
+    "attributes": [{"id": "STR", "name": "Strength", "min": 1, "max": 30, "default": 10}],
+    "data": {"items": [{"id": "box", "name": "Box", "weight": "10 lb."}]}
+  })";
+  RulesetEngine engine;
+  REQUIRE(engine.loadRulesetFromJson(rulesetJson));
+  const auto &ruleset = engine.ruleset();
+  DynamicEntity sheet(ruleset, "test");
+  sheet.setBaseAttribute("STR", 10);
+
+  const auto cap = engine.capacity(sheet);
+  CHECK_FALSE(cap.enabled);
+  const auto status = engine.inventoryStatus(sheet);
+  CHECK_FALSE(status.full());
+  CHECK(*engine.canCarry(sheet, "box", 1000));
+}

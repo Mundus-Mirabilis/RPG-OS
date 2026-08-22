@@ -1578,6 +1578,32 @@
       ]
     }
   ],
+  "movement": {
+    "default_terrain": "land",
+    "modes": {
+      "walk": {"name": "Walk", "speed": "8", "exhaustion": 0},
+      "swim": {"name": "Swim", "speed": "4", "exhaustion": 2},
+      "climb": {"name": "Climb", "speed": "4", "exhaustion": 2}
+    },
+    "terrains": {
+      "land": {
+        "name": "Land",
+        "modes": {
+          "walk": {"factor": 1.0},
+          "swim": {"factor": 1.0, "possible": false},
+          "climb": {"factor": 1.0}
+        }
+      },
+      "water": {
+        "name": "Water",
+        "modes": {
+          "walk": {"factor": 0.5},
+          "swim": {"factor": 1.0},
+          "climb": {"factor": 1.0, "possible": false}
+        }
+      }
+    }
+  },
   "data": {
     "archetypes": [
       {

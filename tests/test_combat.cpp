@@ -370,9 +370,9 @@ TEST_CASE("combat: magic can be disabled for a pure weapon comparison") {
   rpg_os::CombatantSpec toad;
   REQUIRE(rpg_os::makeCombatantSpec(engine, "toad", toad));
 
-  // With magic disabled the same mage swings its weapon: it wins initiative
-  // (6), rolls a critical attack (1) the toad fails to parry (20), and deals
-  // 1d6+4 -> 10, killing the toad in one round.
+  // With magic disabled the same mage swings its dagger (1d6+1): it wins
+  // initiative (6), rolls a critical attack (1) the toad fails to parry (20),
+  // and rolls maximum damage 1d6+1 -> 7, killing the toad in one round.
   auto rng = script({6, 1, 1, 20, 6});
   const rpg_os::FightOutcome outcome =
       rpg_os::runFight(engine, magus, toad, "tde_attack", "LP", 100, rng, false);
@@ -558,4 +558,38 @@ TEST_CASE("combat: a hand-built character with no ruleset entry can fight") {
   CHECK(outcome.rounds == 1);
   CHECK(outcome.remainingLp[0] > 0); // hero untouched (the toad never acts)
   CHECK(outcome.remainingLp[1] <= 0);
+}
+
+TEST_CASE("combat: a spec built from an entity uses its equipped weapon's damage") {
+  rpg_os::RulesetEngine engine;
+  REQUIRE(engine.loadRulesetFromFile(rulesetPath("dnd5e_srd.json")));
+
+  // A hand-built D&D fighter wielding a greatclub (1d8 Bludgeoning in the
+  // SRD; the engine must use the weapon's real 1d8 dice, not the generic
+  // default longsword the caller falls back to).
+  rpg_os::DynamicEntity hero(engine.ruleset(), "my_hero");
+  hero.setBaseAttribute("STR", 15);
+  (void)hero.equipment().equip("weapon_hand", "greatclub");
+
+  // Default weapon (auto): the equipped weapon's damage wins.
+  rpg_os::CombatantSpec spec;
+  REQUIRE(rpg_os::makeCombatantSpecFromEntity(engine, hero, spec));
+  CHECK(spec.damageExpression == "1d8");
+
+  // An explicit caller weapon still overrides (the caller is choosing a
+  // different weapon for this character).
+  rpg_os::CombatantSpec overrideSpec;
+  REQUIRE(rpg_os::makeCombatantSpecFromEntity(engine, hero, overrideSpec, "2d6"));
+  CHECK(overrideSpec.damageExpression == "2d6");
+}
+
+TEST_CASE("combat: an archetype spec uses the weapon it is equipped with") {
+  rpg_os::RulesetEngine engine;
+  REQUIRE(engine.loadRulesetFromFile(rulesetPath("tde5e_core.json")));
+
+  // The magister's starting equipment is a dagger (1d6+1), not the default
+  // longsword the caller would fall back to — its real weapon must win.
+  rpg_os::CombatantSpec magus;
+  REQUIRE(rpg_os::makeCombatantSpec(engine, "magister", magus));
+  CHECK(magus.damageExpression == "1d6+1");
 }

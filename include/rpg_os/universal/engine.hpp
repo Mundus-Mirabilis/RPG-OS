@@ -33,6 +33,7 @@
 #include <rpg_os/common/event_system.hpp>
 #include <rpg_os/common/json.hpp>
 #include <rpg_os/common/types.hpp>
+#include <rpg_os/core/capacity.hpp>
 #include <rpg_os/core/checks.hpp>
 #include <rpg_os/core/dice_engine.hpp>
 #include <rpg_os/core/errors.hpp>
@@ -1035,40 +1036,70 @@ public:
     return {};
   }
 
+  /// Per-unit weight of `itemId` from its record's `weight` field (parsed),
+  /// or the ruleset's default item weight when the record carries none.
+  [[nodiscard]] double itemWeight(std::string_view itemId) const {
+    const EncumbranceConfig &cfg = m_ruleset.encumbrance;
+    double unit = cfg.defaultItemWeight;
+    const Json *item = findItem(itemId);
+    if (item != nullptr && item->contains("weight")) {
+      const Json &weightField = item->at("weight");
+      if (weightField.is_number()) {
+        unit = weightField.get<double>();
+      } else if (weightField.is_string()) {
+        const double parsed = parseWeightValue(weightField.get<std::string>());
+        if (parsed >= 0.0) {
+          unit = parsed;
+        }
+      }
+    }
+    return unit;
+  }
+
+  /// Per-unit size of `itemId` from its record's `size` field, or the
+  /// ruleset's default item size when the record carries none.
+  [[nodiscard]] double itemSize(std::string_view itemId) const {
+    const EncumbranceConfig &cfg = m_ruleset.encumbrance;
+    double unit = cfg.defaultItemSize;
+    const Json *item = findItem(itemId);
+    if (item != nullptr && item->contains("size") && item->at("size").is_number()) {
+      unit = item->at("size").get<double>();
+    }
+    return unit;
+  }
+
   /// Total weight the sheet carries: every flat item, everything inside
   /// containers (bag-in-bags, visited recursively), plus equipped gear. Each
   /// item's weight comes from its record's `weight` field (parsed) or the
   /// ruleset's default.
   [[nodiscard]] Weight carriedWeight(const DynamicEntity &sheet) const {
-    const EncumbranceConfig &cfg = m_ruleset.encumbrance;
-    Weight total{0.0, cfg.weightUnit};
-    const auto addWeight = [&](std::string_view itemId, int32_t quantity) {
-      double unit = cfg.defaultItemWeight;
-      const Json *item = findItem(itemId);
-      if (item != nullptr && item->contains("weight")) {
-        const Json &weightField = item->at("weight");
-        if (weightField.is_number()) {
-          unit = weightField.get<double>();
-        } else if (weightField.is_string()) {
-          const double parsed = parseWeightValue(weightField.get<std::string>());
-          if (parsed >= 0.0) {
-            unit = parsed;
-          }
-        }
-      }
-      total.value += unit * quantity;
+    return Weight{carriedLoad(sheet).weight, m_ruleset.encumbrance.weightUnit};
+  }
+
+  /// How much the sheet carries across all three capacity axes (weight, size,
+  /// item count): every flat item, everything inside containers (visited
+  /// recursively), plus equipped gear. Weight and size come from each item
+  /// record's `weight` / `size` field (or the ruleset defaults); the item
+  /// count is the sum of all quantities.
+  [[nodiscard]] CarriedLoad carriedLoad(const DynamicEntity &sheet) const {
+    CarriedLoad load;
+    const auto addItem = [&](std::string_view itemId, int32_t quantity) {
+      load.weight += itemWeight(itemId) * quantity;
+      load.size += itemSize(itemId) * quantity;
+      load.items += quantity;
     };
     sheet.inventory().visitStacks(
-        [&](const ItemInstance &stack) { addWeight(stack.itemId, stack.quantity); });
+        [&](const ItemInstance &stack) { addItem(stack.itemId, stack.quantity); });
     for (const auto &[slot, itemId] : sheet.equipment().slots()) {
-      addWeight(itemId, 1);
+      addItem(itemId, 1);
     }
-    return total;
+    return load;
   }
 
   /// Adds `quantity` of `itemId` into the container `containerItemId` (which
   /// must be carried as a single unit). UnknownContainer / UnknownItem
-  /// otherwise. Fires OnItemAdded.
+  /// otherwise; a container that declares a `capacity` refuses items that
+  /// would overflow it with OverCapacity. Fires OnItemAdded.
   [[nodiscard]] std::expected<void, BookkeepingError>
   addItemToContainer(DynamicEntity &sheet, std::string_view containerItemId,
                      std::string_view itemId, int32_t quantity = 1) {
@@ -1080,6 +1111,13 @@ public:
     }
     if (sheet.inventory().count(containerItemId) != 1) {
       return std::unexpected(BookkeepingError::UnknownContainer);
+    }
+    auto fits = canAddToContainer(sheet, containerItemId, itemId, quantity);
+    if (!fits) {
+      return std::unexpected(fits.error());
+    }
+    if (!*fits) {
+      return std::unexpected(BookkeepingError::OverCapacity);
     }
     if (!sheet.inventory().putInto(containerItemId,
                                    ItemInstance{std::string(itemId), quantity, {}})) {
@@ -1190,6 +1228,386 @@ public:
       }
     }
     return {};
+  }
+
+  /// The sheet's carrying limits across all three axes (weight / size / item
+  /// count), from the ruleset's `encumbrance` section. An axis with no rule
+  /// is 0 (unlimited); @ref CarryingCapacity::enabled is false when the
+  /// ruleset declares no carrying rules at all.
+  [[nodiscard]] CarryingCapacity capacity(const DynamicEntity &sheet) const {
+    const EncumbranceConfig &cfg = m_ruleset.encumbrance;
+    CarryingCapacity cap;
+    if (!cfg.enabled) {
+      return cap;
+    }
+    const Json emptyEnv = Json::object();
+    const Json emptyParams = Json::object();
+    const EntityContext context(sheet, nullptr, emptyEnv, emptyParams);
+    if (!cfg.capacityText.empty()) {
+      cap.weight = cfg.capacity.evaluate(context);
+    }
+    if (!cfg.sizeCapacityText.empty()) {
+      cap.size = cfg.sizeCapacity.evaluate(context);
+    }
+    if (!cfg.itemCapacityText.empty()) {
+      cap.items = static_cast<int32_t>(cfg.itemCapacity.evaluate(context));
+    }
+    cap.enabled =
+        !cfg.capacityText.empty() || !cfg.sizeCapacityText.empty() || !cfg.itemCapacityText.empty();
+    return cap;
+  }
+
+  /// The sheet's current carrying status: what it carries, its limits, and
+  /// which (if any) axis is at or over its limit.
+  [[nodiscard]] InventoryStatus inventoryStatus(const DynamicEntity &sheet) const {
+    InventoryStatus status;
+    status.carried = carriedLoad(sheet);
+    status.capacity = capacity(sheet);
+    const double weightLimit = status.capacity.weight;
+    const double sizeLimit = status.capacity.size;
+    const int32_t itemLimit = status.capacity.items;
+    status.overWeight = weightLimit > 0.0 && status.carried.weight > weightLimit;
+    status.overSize = sizeLimit > 0.0 && status.carried.size > sizeLimit;
+    status.overItems = itemLimit > 0 && status.carried.items > itemLimit;
+    status.atWeightLimit = weightLimit > 0.0 && status.carried.weight >= weightLimit;
+    status.atSizeLimit = sizeLimit > 0.0 && status.carried.size >= sizeLimit;
+    status.atItemsLimit = itemLimit > 0 && status.carried.items >= itemLimit;
+    return status;
+  }
+
+  /// Whether adding `quantity` of `itemId` would stay within every carrying
+  /// limit (weight, size, item count) of `sheet`. UnknownItem when the item
+  /// is not in the data database; a ruleset without carrying rules always
+  /// allows.
+  [[nodiscard]] std::expected<bool, BookkeepingError>
+  canCarry(const DynamicEntity &sheet, std::string_view itemId, int32_t quantity = 1) const {
+    if (!m_loaded) {
+      return std::unexpected(BookkeepingError::NoRuleset);
+    }
+    if (findItem(itemId) == nullptr) {
+      return std::unexpected(BookkeepingError::UnknownItem);
+    }
+    const InventoryStatus status = inventoryStatus(sheet);
+    if (!status.capacity.enabled) {
+      return true;
+    }
+    const double addedWeight = itemWeight(itemId) * quantity;
+    const double addedSize = itemSize(itemId) * quantity;
+    const bool overWeight = status.capacity.weight > 0.0 &&
+                            status.carried.weight + addedWeight > status.capacity.weight;
+    const bool overSize =
+        status.capacity.size > 0.0 && status.carried.size + addedSize > status.capacity.size;
+    const bool overItems =
+        status.capacity.items > 0 && status.carried.items + quantity > status.capacity.items;
+    return !overWeight && !overSize && !overItems;
+  }
+
+  /// The carrying limits declared by the container item `containerItemId`
+  /// (its `capacity` field). UnknownItem when the item is unknown; an item
+  /// without a `capacity` field is not a limited container
+  /// (@ref CarryingCapacity::enabled == false).
+  [[nodiscard]] std::expected<CarryingCapacity, BookkeepingError>
+  containerCapacity(std::string_view containerItemId) const {
+    if (!m_loaded) {
+      return std::unexpected(BookkeepingError::NoRuleset);
+    }
+    const Json *item = findItem(containerItemId);
+    if (item == nullptr) {
+      return std::unexpected(BookkeepingError::UnknownItem);
+    }
+    CarryingCapacity cap;
+    if (!item->contains("capacity") || !item->at("capacity").is_object()) {
+      return cap;
+    }
+    const Json &capacityField = item->at("capacity");
+    cap.weight = capacityField.value("weight", 0.0);
+    cap.size = capacityField.value("size", 0.0);
+    cap.items = capacityField.value("items", 0);
+    cap.enabled = cap.weight > 0.0 || cap.size > 0.0 || cap.items > 0;
+    return cap;
+  }
+
+  /// How much is currently stored inside the container `containerItemId`
+  /// (weight / size / item count of its contents, nested containers walked
+  /// recursively). An absent container returns an empty load.
+  [[nodiscard]] CarriedLoad containerLoad(const DynamicEntity &sheet,
+                                          std::string_view containerItemId) const {
+    CarriedLoad load;
+    const std::vector<ItemInstance> *contents = sheet.inventory().contentsOf(containerItemId);
+    if (contents == nullptr) {
+      return load;
+    }
+    const auto addItem = [&](auto &&self, const ItemInstance &stack) -> void {
+      load.weight += itemWeight(stack.itemId) * stack.quantity;
+      load.size += itemSize(stack.itemId) * stack.quantity;
+      load.items += stack.quantity;
+      for (const ItemInstance &nested : stack.contents) {
+        self(self, nested);
+      }
+    };
+    for (const ItemInstance &stack : *contents) {
+      addItem(addItem, stack);
+    }
+    return load;
+  }
+
+  /// Whether adding `quantity` of `itemId` inside the container
+  /// `containerItemId` would stay within the container's own capacity
+  /// (weight / size / item count). UnknownItem / UnknownContainer for
+  /// unknown item or (non-single-unit) container; a container without a
+  /// `capacity` field always accepts.
+  [[nodiscard]] std::expected<bool, BookkeepingError>
+  canAddToContainer(const DynamicEntity &sheet, std::string_view containerItemId,
+                    std::string_view itemId, int32_t quantity = 1) const {
+    if (!m_loaded) {
+      return std::unexpected(BookkeepingError::NoRuleset);
+    }
+    if (findItem(itemId) == nullptr) {
+      return std::unexpected(BookkeepingError::UnknownItem);
+    }
+    if (sheet.inventory().count(containerItemId) != 1) {
+      return std::unexpected(BookkeepingError::UnknownContainer);
+    }
+    auto cap = containerCapacity(containerItemId);
+    if (!cap) {
+      return std::unexpected(cap.error());
+    }
+    if (!cap->enabled) {
+      return true;
+    }
+    const CarriedLoad inside = containerLoad(sheet, containerItemId);
+    const double addedWeight = itemWeight(itemId) * quantity;
+    const double addedSize = itemSize(itemId) * quantity;
+    const bool overWeight = cap->weight > 0.0 && inside.weight + addedWeight > cap->weight;
+    const bool overSize = cap->size > 0.0 && inside.size + addedSize > cap->size;
+    const bool overItems = cap->items > 0 && inside.items + quantity > cap->items;
+    return !overWeight && !overSize && !overItems;
+  }
+
+  // ------------------------------------------------------------------------
+  // Bookkeeping: movement & terrain
+  // ------------------------------------------------------------------------
+
+  /// The ruleset's movement configuration (empty when it declares no movement
+  /// rules — movement is then unconstrained: every mode possible, no
+  /// exhaustion, full regeneration).
+  [[nodiscard]] const MovementConfig &movementConfig() const noexcept {
+    return m_ruleset.movement;
+  }
+
+  /// Whether the loaded ruleset declares any movement rules.
+  [[nodiscard]] bool hasMovement() const noexcept {
+    return !m_ruleset.movement.modes.empty();
+  }
+
+  /// Looks up a terrain by id; nullptr when unknown. The empty id resolves to
+  /// the ruleset's default terrain (nullptr when the ruleset has no movement).
+  [[nodiscard]] const TerrainDef *findTerrain(std::string_view terrainId) const {
+    const MovementConfig &mov = m_ruleset.movement;
+    if (mov.terrains.empty()) {
+      return nullptr;
+    }
+    const std::string id = terrainId.empty() ? mov.defaultTerrain : std::string(terrainId);
+    const auto it = mov.terrains.find(id);
+    return it == mov.terrains.end() ? nullptr : &it->second;
+  }
+
+  /// The terrain id in effect for `sheet`: its declared current terrain, else
+  /// the ruleset's default terrain ("" when the ruleset has no movement).
+  [[nodiscard]] std::string effectiveTerrain(const DynamicEntity &sheet) const {
+    if (!sheet.terrain().empty()) {
+      return sheet.terrain();
+    }
+    return m_ruleset.movement.defaultTerrain;
+  }
+
+  /// The base speed of movement mode `modeId` evaluated against `sheet`
+  /// (before terrain and load multipliers). 0 when unconstrained or the mode
+  /// is unknown.
+  [[nodiscard]] double baseMovementSpeed(const DynamicEntity &sheet,
+                                         std::string_view modeId) const {
+    const MovementConfig &mov = m_ruleset.movement;
+    const auto it = mov.modes.find(std::string(modeId));
+    if (it == mov.modes.end()) {
+      return 0.0;
+    }
+    const Json emptyEnv = Json::object();
+    const Json emptyParams = Json::object();
+    const EntityContext context(sheet, nullptr, emptyEnv, emptyParams);
+    return it->second.speed.evaluate(context);
+  }
+
+  /// The speed factor the carried load applies to every movement mode: from
+  /// the movement section's `load.levels` (carried/capacity ratio -> factor),
+  /// 1.0 when the ruleset has no carrying rules or no load steps.
+  [[nodiscard]] double loadSpeedFactor(const DynamicEntity &sheet) const {
+    const MovementConfig &mov = m_ruleset.movement;
+    if (mov.loadLevels.empty()) {
+      return 1.0;
+    }
+    auto capacity = carryingCapacity(sheet);
+    if (!capacity || capacity->value <= 0.0) {
+      return 1.0;
+    }
+    const double ratio = carriedWeight(sheet).value / capacity->value;
+    double factor = mov.loadLevels.back().factor;
+    for (const LoadSpeedLevel &level : mov.loadLevels) {
+      if (ratio <= level.maxRatio) {
+        factor = level.factor;
+        break;
+      }
+    }
+    return factor;
+  }
+
+  /// One movement option for `sheet` in `modeId` within `terrainId` (empty =
+  /// the sheet's effective terrain): effective speed (base x mode factor x
+  /// terrain factor x load factor), whether the mode is possible here (a
+  /// terrain may forbid it or require a capability), and the per-unit
+  /// exhaustion cost. UnknownMode / UnknownTerrain for ids the ruleset does
+  /// not declare; when the ruleset has no movement rules at all, any mode is
+  /// possible, unconstrained (speed 0), and free of exhaustion.
+  [[nodiscard]] std::expected<MovementOption, BookkeepingError>
+  movementSpeed(const DynamicEntity &sheet, std::string_view modeId,
+                std::string_view terrainId = {}) const {
+    if (!m_loaded) {
+      return std::unexpected(BookkeepingError::NoRuleset);
+    }
+    const MovementConfig &mov = m_ruleset.movement;
+    if (mov.modes.empty()) {
+      return MovementOption{
+          std::string(modeId), std::string(modeId), 0.0, 0.0, true, {}, 0.0, true};
+    }
+    const TerrainDef *terrain = findTerrain(terrainId);
+    if (terrain == nullptr) {
+      return std::unexpected(BookkeepingError::UnknownTerrain);
+    }
+    const auto modeIt = mov.modes.find(std::string(modeId));
+    if (modeIt == mov.modes.end()) {
+      return std::unexpected(BookkeepingError::UnknownMode);
+    }
+    const MovementModeDef &mode = modeIt->second;
+    MovementOption option;
+    option.modeId = mode.id;
+    option.modeName = mode.name;
+    option.baseSpeed = baseMovementSpeed(sheet, mode.id);
+    const TerrainModeRule *rule = nullptr;
+    const auto ruleIt = terrain->modes.find(mode.id);
+    if (ruleIt != terrain->modes.end()) {
+      rule = &ruleIt->second;
+    }
+    const double terrainFactor = rule != nullptr ? rule->speedFactor : 1.0;
+    const double costFactor = rule != nullptr ? rule->costFactor : 1.0;
+    option.speed = option.baseSpeed * mode.factor * terrainFactor * loadSpeedFactor(sheet);
+    option.exhaustionPerUnit = mov.exhaustionPerDistance * mode.exhaustion * costFactor;
+    option.regeneration = terrain->regeneration != "none";
+    if (rule != nullptr && !rule->possible) {
+      option.possible = false;
+      option.reason = "not possible in " + terrain->id;
+    } else if (rule != nullptr && !rule->requiresCapability.empty() &&
+               !sheet.hasCapability(rule->requiresCapability)) {
+      option.possible = false;
+      option.reason = "requires " + rule->requiresCapability;
+    }
+    return option;
+  }
+
+  /// Every movement option for `sheet` in `terrainId` (empty = effective
+  /// terrain), one per declared mode. UnknownTerrain for an undeclared
+  /// terrain; when the ruleset has no movement rules, a single unconstrained
+  /// "walk" option is returned.
+  [[nodiscard]] std::expected<MovementStatus, BookkeepingError>
+  movementStatus(const DynamicEntity &sheet, std::string_view terrainId = {}) const {
+    if (!m_loaded) {
+      return std::unexpected(BookkeepingError::NoRuleset);
+    }
+    const MovementConfig &mov = m_ruleset.movement;
+    MovementStatus status;
+    status.terrainId = terrainId.empty() ? effectiveTerrain(sheet) : std::string(terrainId);
+    status.loadReducesSpeed = loadSpeedFactor(sheet) < 1.0;
+    if (mov.modes.empty()) {
+      MovementOption walk;
+      walk.modeId = "walk";
+      walk.modeName = "Walk";
+      status.options.push_back(std::move(walk));
+      return status;
+    }
+    if (findTerrain(status.terrainId) == nullptr) {
+      return std::unexpected(BookkeepingError::UnknownTerrain);
+    }
+    for (const auto &[modeId, mode] : mov.modes) {
+      auto option = movementSpeed(sheet, modeId, status.terrainId);
+      if (option) {
+        status.options.push_back(*option);
+      }
+    }
+    return status;
+  }
+
+  /// The exhaustion cost to move `distance` in `modeId` in `terrainId`
+  /// (empty = effective terrain): distance x the mode's per-unit cost after
+  /// the terrain's cost multiplier. 0 when the ruleset has no movement rules.
+  [[nodiscard]] std::expected<double, BookkeepingError>
+  movementCost(const DynamicEntity &sheet, std::string_view modeId, double distance,
+               std::string_view terrainId = {}) const {
+    auto option = movementSpeed(sheet, modeId, terrainId);
+    if (!option) {
+      return std::unexpected(option.error());
+    }
+    return option->exhaustionPerUnit * distance;
+  }
+
+  /// Whether `sheet` can rest / regenerate in `terrainId` (empty = effective
+  /// terrain): true unless the terrain declares `regeneration` "none" (a long
+  /// rest restores nothing there) or "half" (it restores half). Always true
+  /// when the ruleset has no movement rules.
+  [[nodiscard]] bool canRegenerate(const DynamicEntity &sheet,
+                                   std::string_view terrainId = {}) const {
+    const MovementConfig &mov = m_ruleset.movement;
+    if (mov.modes.empty()) {
+      return true;
+    }
+    const std::string id = terrainId.empty() ? effectiveTerrain(sheet) : std::string(terrainId);
+    const TerrainDef *terrain = findTerrain(id);
+    if (terrain == nullptr) {
+      return true;
+    }
+    return terrain->regeneration != "none";
+  }
+
+  /// Moves `sheet` `distance` in `modeId` within `terrainId` (empty =
+  /// effective terrain): reports the outcome (distance, speed, time, total
+  /// exhaustion) and drains the exhaustion pool declared in the movement
+  /// section (clamped at 0; no pool declared = no deduction). Returns an
+  /// error when the mode is not possible in the terrain.
+  [[nodiscard]] std::expected<MovementOutcome, BookkeepingError>
+  move(DynamicEntity &sheet, std::string_view modeId, double distance,
+       std::string_view terrainId = {}) const {
+    if (!m_loaded) {
+      return std::unexpected(BookkeepingError::NoRuleset);
+    }
+    const std::string usedTerrain =
+        terrainId.empty() ? effectiveTerrain(sheet) : std::string(terrainId);
+    auto option = movementSpeed(sheet, modeId, usedTerrain);
+    if (!option) {
+      return std::unexpected(option.error());
+    }
+    MovementOutcome outcome;
+    outcome.modeId = option->modeId;
+    outcome.terrainId = usedTerrain;
+    outcome.distance = distance;
+    outcome.speed = option->speed;
+    outcome.exhaustion = option->exhaustionPerUnit * distance;
+    outcome.possible = option->possible;
+    outcome.reason = option->reason;
+    if (option->speed > 0.0) {
+      outcome.timeUnits = distance / option->speed;
+    }
+    if (outcome.possible && !m_ruleset.movement.exhaustionPool.empty()) {
+      (void)sheet.modifyResource(m_ruleset.movement.exhaustionPool,
+                                 -static_cast<int32_t>(outcome.exhaustion));
+    }
+    return outcome;
   }
 
   // ------------------------------------------------------------------------
@@ -1929,12 +2347,40 @@ public:
     fireEvent(EventType::OnRest, data, sheet, nullptr, Json{});
   }
 
-  /// A long rest: fully restores every resource pool, recovers spell slots,
-  /// and ends timed conditions (effects whose duration expired).
+  /// The regeneration scale of the terrain `sheet` is in: 1.0 (normal),
+  /// 0.5 (half), or 0.0 (none) — the fraction of a long rest's resource
+  /// restoration that applies there. Always 1.0 when the ruleset has no
+  /// movement rules or the terrain is unknown.
+  [[nodiscard]] double terrainRegenerationScale(const DynamicEntity &sheet,
+                                                std::string_view terrainId = {}) const {
+    const MovementConfig &mov = m_ruleset.movement;
+    if (mov.modes.empty()) {
+      return 1.0;
+    }
+    const std::string id = terrainId.empty() ? effectiveTerrain(sheet) : std::string(terrainId);
+    const TerrainDef *terrain = findTerrain(id);
+    if (terrain == nullptr) {
+      return 1.0;
+    }
+    if (terrain->regeneration == "none") {
+      return 0.0;
+    }
+    if (terrain->regeneration == "half") {
+      return 0.5;
+    }
+    return 1.0;
+  }
+
+  /// A long rest: restores every resource pool, recovers spell slots, and
+  /// ends timed conditions (effects whose duration expired). The terrain the
+  /// sheet is in may block or halve regeneration ("none" / "half" — see
+  /// @ref canRegenerate); the ruleset's default terrain always restores fully.
   void longRest(DynamicEntity &sheet) {
+    const double regen = terrainRegenerationScale(sheet);
     for (const ResourcePoolDef &def : m_ruleset.resourcePools) {
       const int32_t max = sheet.getStat(def.maxStat);
-      (void)sheet.modifyResource(def.id, max - sheet.resource(def.id));
+      const int32_t missing = max - sheet.resource(def.id);
+      (void)sheet.modifyResource(def.id, static_cast<int32_t>(missing * regen));
     }
     recoverSpellSlots(sheet);
     tickEffects(sheet);

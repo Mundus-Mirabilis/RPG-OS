@@ -24,6 +24,8 @@ TEST_CASE("errors: every bookkeeping error code is distinct") {
                                              BookkeepingError::UnknownCondition,
                                              BookkeepingError::UnknownSpell,
                                              BookkeepingError::UnknownCostTable,
+                                             BookkeepingError::UnknownMode,
+                                             BookkeepingError::UnknownTerrain,
                                              BookkeepingError::NotEnoughMoney,
                                              BookkeepingError::SlotOccupied,
                                              BookkeepingError::SlotMismatch,

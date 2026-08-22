@@ -30,8 +30,10 @@
 #include <cstdint>
 #include <memory>
 #include <rpg_os/common/event_system.hpp>
+#include <rpg_os/core/capacity.hpp>
 #include <rpg_os/universal/engine.hpp>
 #include <rpg_os/universal/entity_registry.hpp>
+#include <rpg_os/universal/movement.hpp>
 #include <rpg_os/universal/world_state.hpp>
 #include <string>
 #include <string_view>
@@ -173,6 +175,32 @@ public:
   [[nodiscard]] Weight carriedWeight(const DynamicEntity &sheet) const {
     return m_engine.carriedWeight(sheet);
   }
+  [[nodiscard]] CarriedLoad carriedLoad(const DynamicEntity &sheet) const {
+    return m_engine.carriedLoad(sheet);
+  }
+  [[nodiscard]] CarryingCapacity capacity(const DynamicEntity &sheet) const {
+    return m_engine.capacity(sheet);
+  }
+  [[nodiscard]] InventoryStatus inventoryStatus(const DynamicEntity &sheet) const {
+    return m_engine.inventoryStatus(sheet);
+  }
+  [[nodiscard]] std::expected<bool, BookkeepingError>
+  canCarry(const DynamicEntity &sheet, std::string_view itemId, int32_t quantity = 1) const {
+    return m_engine.canCarry(sheet, itemId, quantity);
+  }
+  [[nodiscard]] std::expected<CarryingCapacity, BookkeepingError>
+  containerCapacity(std::string_view containerItemId) const {
+    return m_engine.containerCapacity(containerItemId);
+  }
+  [[nodiscard]] CarriedLoad containerLoad(const DynamicEntity &sheet,
+                                          std::string_view containerItemId) const {
+    return m_engine.containerLoad(sheet, containerItemId);
+  }
+  [[nodiscard]] std::expected<bool, BookkeepingError>
+  canAddToContainer(const DynamicEntity &sheet, std::string_view containerItemId,
+                    std::string_view itemId, int32_t quantity = 1) const {
+    return m_engine.canAddToContainer(sheet, containerItemId, itemId, quantity);
+  }
   [[nodiscard]] std::expected<Weight, BookkeepingError>
   carryingCapacity(const DynamicEntity &sheet) const {
     return m_engine.carryingCapacity(sheet);
@@ -184,6 +212,40 @@ public:
   [[nodiscard]] std::expected<void, BookkeepingError>
   updateEncumbrance(DynamicEntity &sheet) const {
     return m_engine.updateEncumbrance(sheet);
+  }
+
+  // ---- movement & terrain -----------------------------------------------
+  [[nodiscard]] bool hasMovement() const noexcept {
+    return m_engine.hasMovement();
+  }
+  [[nodiscard]] const MovementConfig &movementConfig() const noexcept {
+    return m_engine.movementConfig();
+  }
+  [[nodiscard]] std::string effectiveTerrain(const DynamicEntity &sheet) const {
+    return m_engine.effectiveTerrain(sheet);
+  }
+  [[nodiscard]] std::expected<MovementStatus, BookkeepingError>
+  movementStatus(const DynamicEntity &sheet, std::string_view terrainId = {}) const {
+    return m_engine.movementStatus(sheet, terrainId);
+  }
+  [[nodiscard]] std::expected<MovementOption, BookkeepingError>
+  movementSpeed(const DynamicEntity &sheet, std::string_view modeId,
+                std::string_view terrainId = {}) const {
+    return m_engine.movementSpeed(sheet, modeId, terrainId);
+  }
+  [[nodiscard]] std::expected<double, BookkeepingError>
+  movementCost(const DynamicEntity &sheet, std::string_view modeId, double distance,
+               std::string_view terrainId = {}) const {
+    return m_engine.movementCost(sheet, modeId, distance, terrainId);
+  }
+  [[nodiscard]] bool canRegenerate(const DynamicEntity &sheet,
+                                   std::string_view terrainId = {}) const {
+    return m_engine.canRegenerate(sheet, terrainId);
+  }
+  [[nodiscard]] std::expected<MovementOutcome, BookkeepingError>
+  move(DynamicEntity &sheet, std::string_view modeId, double distance,
+       std::string_view terrainId = {}) const {
+    return m_engine.move(sheet, modeId, distance, terrainId);
   }
 
   // ---- conditions & effects ---------------------------------------------

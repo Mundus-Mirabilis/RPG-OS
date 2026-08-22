@@ -163,7 +163,39 @@ struct FightLog {
   return {};
 }
 
+/// The default weapon damage for combatants that carry no weapon of their own
+/// (a generic longsword, 1d6+4). The WASM bindings and the JS demo wrappers
+/// mirror this default; keep them in sync.
+constexpr std::string_view kDefaultWeaponDamage = "1d6+4";
+
 namespace detail {
+
+/// Resolves the damage expression a combatant actually wields: the weapon it
+/// has equipped (an item whose record carries a `damage` dice expression). An
+/// explicit caller-provided `weaponDamage` is the caller's choice and wins; an
+/// empty string means "use the character's own weapon", falling back to the
+/// engine's default longsword when nothing is equipped.
+///
+/// @par Why does the character's own weapon win over a bare default?
+/// A combatant's damage must come from the weapon it actually uses: an
+/// entity/archetype with a greatclub (1d8) equipped must fight with 1d8, not
+/// the generic 1d6+4 longsword a caller would otherwise fall back to. Only an
+/// explicit weapon string overrides the sheet — that is the caller choosing a
+/// different weapon on purpose.
+[[nodiscard]] inline std::string resolveWeaponDamage(const RulesetEngine &engine,
+                                                     const DynamicEntity &entity,
+                                                     std::string_view weaponDamage) {
+  if (!weaponDamage.empty()) {
+    return std::string(weaponDamage);
+  }
+  for (const auto &[slot, itemId] : entity.equipment().slots()) {
+    const Json *item = engine.findDataRecord("items", itemId);
+    if (item != nullptr && item->contains("damage") && item->at("damage").is_string()) {
+      return item->at("damage").get<std::string>();
+    }
+  }
+  return std::string(kDefaultWeaponDamage);
+}
 
 /// Fills `out` from an archetype record (a probe entity at average variance);
 /// false when the archetype cannot be created.
@@ -181,7 +213,9 @@ namespace detail {
   out.attackValue = probe->getStat("Attack");
   out.defenseValue = probe->getStat("Parry");
   out.armorRating = probe->baseAttribute("Armor_Rating");
-  out.damageExpression = std::string(weaponDamage);
+  // The archetype's own starting weapon (its equipped `damage` item) wins;
+  // an explicit caller weapon overrides, the default longsword is the fallback.
+  out.damageExpression = resolveWeaponDamage(engine, *probe, weaponDamage);
   // An archetype's `spells_known` were loaded into the probe's spellbook;
   // copy them so the fight loop can cast magic for this combatant.
   out.spellIds = probe->spellbook().known();
@@ -206,7 +240,9 @@ namespace detail {
   out.acValue = entry.value("ac", 0);
   out.initiativeValue = entry.value("initiative", 0);
   out.attackValue = 0;
-  out.damageExpression = std::string(weaponDamage);
+  // Fallback until the bestiary's own `attacks` override it below: a creature
+  // with equipment uses its equipped weapon, else the caller's/default damage.
+  out.damageExpression = resolveWeaponDamage(engine, *probe, weaponDamage);
   if (entry.contains("attacks") && entry.at("attacks").is_array()) {
     int32_t bestToHit = -1;
     for (const Json &attack : entry.at("attacks")) {
@@ -240,15 +276,12 @@ namespace detail {
 
 } // namespace detail
 
-/// The default weapon damage for combatants that carry no weapon of their own
-/// (a generic longsword, 1d6+4). The WASM bindings and the JS demo wrappers
-/// mirror this default; keep them in sync.
-constexpr std::string_view kDefaultWeaponDamage = "1d6+4";
-
 /// Builds a `CombatantSpec` for `id` (archetype first, then bestiary entry).
-/// `weaponDamage` is used for archetypes (default: a longsword) and for
-/// bestiary entries that have no natural attack defined. Returns false when
-/// `id` does not exist in the ruleset's data section.
+/// `weaponDamage` is an optional override; when empty (the default) the spec
+/// uses the combatant's *own* weapon — an archetype's starting equipment, a
+/// bestiary entry's `attacks[].damage`, or the default longsword as the last
+/// resort. Returns false when `id` does not exist in the ruleset's data
+/// section.
 ///
 /// @par Why probe with average variance?
 /// The spec needs *representative* combat values, not a random roll (a single
@@ -257,7 +290,7 @@ constexpr std::string_view kDefaultWeaponDamage = "1d6+4";
 /// while still reflecting the entry's real numbers.
 [[nodiscard]] inline bool makeCombatantSpec(RulesetEngine &engine, std::string_view id,
                                             CombatantSpec &out,
-                                            std::string_view weaponDamage = kDefaultWeaponDamage) {
+                                            std::string_view weaponDamage = {}) {
   const Ruleset &ruleset = engine.ruleset();
   if (!ruleset.data.is_object()) {
     return false;
@@ -296,9 +329,10 @@ constexpr std::string_view kDefaultWeaponDamage = "1d6+4";
 /// from, so the spec must carry the sheet itself; the combat values
 /// (`Attack`, `Parry`, `Armor_Rating`, `AC`, `Initiative`) are captured too,
 /// so callers can inspect the spec without a live entity.
-[[nodiscard]] inline bool
-makeCombatantSpecFromEntity(RulesetEngine &engine, const DynamicEntity &entity, CombatantSpec &out,
-                            std::string_view weaponDamage = kDefaultWeaponDamage) {
+[[nodiscard]] inline bool makeCombatantSpecFromEntity(RulesetEngine &engine,
+                                                      const DynamicEntity &entity,
+                                                      CombatantSpec &out,
+                                                      std::string_view weaponDamage = {}) {
   out.id = entity.id();
   out.name = entity.id();
   // Resolve a human-readable name when the sheet happens to be a known
@@ -316,7 +350,9 @@ makeCombatantSpecFromEntity(RulesetEngine &engine, const DynamicEntity &entity, 
   out.armorRating = entity.getStat("Armor_Rating");
   out.acValue = entity.getStat("AC");
   out.initiativeValue = entity.getStat("Initiative");
-  out.damageExpression = std::string(weaponDamage);
+  // The sheet's equipped weapon is the one it actually wields; an explicit
+  // caller weapon overrides, the default longsword is the fallback.
+  out.damageExpression = detail::resolveWeaponDamage(engine, entity, weaponDamage);
   out.spellIds = entity.spellbook().known();
   entity.toJson(out.sheet);
   return true;

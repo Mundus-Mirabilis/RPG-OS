@@ -89,6 +89,27 @@ def pascal_case(text: str) -> str:
     return name
 
 
+def check_method_name(ruleset_id: str, check_id: str) -> str:
+    """The C++ method name for a check-type id, with the redundant ruleset
+    prefix stripped.
+
+    Every generated check method already lives inside the per-ruleset
+    namespace (rpg_os::generated::<ruleset>), so carrying the ruleset prefix
+    again in the method name ('dnd5e_attack_melee' -> 'dnd5eAttackMelee') is
+    pure bloat. The prefix is the check id's first underscore-token when it is
+    also a prefix of the ruleset id — 'dnd5e' < 'dnd5e_srd', 'tde' <
+    'tde5e_core', 'brp' < 'brp_ugc' — so 'dnd5e_attack_melee' becomes
+    'attackMelee' and 'tde_attack' becomes 'attack'. A check id without such a
+    ruleset prefix is kept verbatim ('attack_melee' stays 'attackMelee').
+    """
+    first = check_id.split("_", 1)[0]
+    if first and ruleset_id.startswith(first):
+        rest = check_id[len(first):]
+        if rest.startswith("_") and len(rest) > 1:
+            return camel_case(rest[1:])
+    return camel_case(check_id)
+
+
 # Check-recipe enum strings -> rpg_os C++ enumerator names, shared by
 # _recipe_init so every mapping lives in exactly one place.
 _RECIPE_ENUMS = {
@@ -804,6 +825,7 @@ class Generator:
             "  std::unordered_set<std::string> resistances;",
             "  std::vector<rpg_os::AppliedAffliction> afflictions;",
             "  std::unordered_set<std::string> traits;",
+            "  std::string terrain;  // current terrain / surrounding (\"\" = ruleset default)",
         ]
 
     def _to_json(self) -> list[str]:
@@ -837,6 +859,7 @@ class Generator:
                 lines.append(f'    resources["{r["id"]}"] = {self._member(r["id"], r.get("name"))};')
             lines.append('    out["resources"] = resources;')
         lines += [
+            '    out["terrain"] = terrain;',
             '    out["conditions"] = conditions;',
             "    rpg_os::Json traitsJson = rpg_os::Json::array();",
             "    for (const auto& traitId : traits) { traitsJson.push_back(traitId); }",
@@ -906,6 +929,9 @@ class Generator:
                 lines.append(f'      {self._member(r["id"], r.get("name"))} = resources.value("{r["id"]}", {self._member(r["id"], r.get("name"))});')
             lines.append("    }")
         lines += [
+            "    if (in.contains(\"terrain\") && in.at(\"terrain\").is_string()) {",
+            "      terrain = in.at(\"terrain\").get<std::string>();",
+            "    }",
             "    if (in.contains(\"conditions\") && in.at(\"conditions\").is_object()) {",
             "      conditions = in.at(\"conditions\").get<std::unordered_map<std::string, int32_t>>();",
             "    }",
@@ -1026,8 +1052,11 @@ class Generator:
 
     def _check_methods(self) -> list[str]:
         lines = ["", "  // ---- named checks (from check_types) ----"]
+        ruleset_id = self.rs.get("ruleset_id", "")
         for cid, cfg in self.checks.items():
-            method = camel_case(cid)
+            # The methods already live in the per-ruleset namespace, so the
+            # ruleset prefix in the check id is stripped (see check_method_name).
+            method = check_method_name(ruleset_id, cid)
             init_lines, needs_target = self._recipe_init(cfg)
             lines.append(f"  /// Named check '{cid}' (see the ruleset's check_types).")
             if needs_target:

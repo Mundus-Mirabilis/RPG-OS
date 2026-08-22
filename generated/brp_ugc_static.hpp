@@ -150,6 +150,7 @@ public:
   std::unordered_set<std::string> resistances;
   std::vector<rpg_os::AppliedAffliction> afflictions;
   std::unordered_set<std::string> traits;
+  std::string terrain; // current terrain / surrounding ("" = ruleset default)
 
   // ---- save / load (snapshot the living sheet, not a ruleset record) ----
   /// Serializes the character's current living state — attributes, skills,
@@ -232,6 +233,7 @@ public:
     resources["HP"] = hitPoints;
     resources["PP"] = powerPoints;
     out["resources"] = resources;
+    out["terrain"] = terrain;
     out["conditions"] = conditions;
     rpg_os::Json traitsJson = rpg_os::Json::array();
     for (const auto &traitId : traits) {
@@ -363,6 +365,9 @@ public:
       const rpg_os::Json &resources = in.at("resources");
       hitPoints = resources.value("HP", hitPoints);
       powerPoints = resources.value("PP", powerPoints);
+    }
+    if (in.contains("terrain") && in.at("terrain").is_string()) {
+      terrain = in.at("terrain").get<std::string>();
     }
     if (in.contains("conditions") && in.at("conditions").is_object()) {
       conditions = in.at("conditions").get<std::unordered_map<std::string, int32_t>>();
@@ -617,7 +622,7 @@ public:
   // ---- named checks (from check_types) ----
   /// Named check 'brp_check_str' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpCheckStr(const rpg_os::CheckParams &params, Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult checkStr(const rpg_os::CheckParams &params, Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -635,7 +640,7 @@ public:
 
   /// Named check 'brp_check_con' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpCheckCon(const rpg_os::CheckParams &params, Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult checkCon(const rpg_os::CheckParams &params, Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -653,7 +658,7 @@ public:
 
   /// Named check 'brp_check_siz' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpCheckSiz(const rpg_os::CheckParams &params, Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult checkSiz(const rpg_os::CheckParams &params, Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -671,7 +676,7 @@ public:
 
   /// Named check 'brp_check_int' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpCheckInt(const rpg_os::CheckParams &params, Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult checkInt(const rpg_os::CheckParams &params, Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -689,7 +694,7 @@ public:
 
   /// Named check 'brp_check_pow' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpCheckPow(const rpg_os::CheckParams &params, Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult checkPow(const rpg_os::CheckParams &params, Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -707,7 +712,7 @@ public:
 
   /// Named check 'brp_check_dex' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpCheckDex(const rpg_os::CheckParams &params, Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult checkDex(const rpg_os::CheckParams &params, Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -725,7 +730,7 @@ public:
 
   /// Named check 'brp_check_app' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpCheckApp(const rpg_os::CheckParams &params, Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult checkApp(const rpg_os::CheckParams &params, Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -743,7 +748,7 @@ public:
 
   /// Named check 'brp_check_edu' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpCheckEdu(const rpg_os::CheckParams &params, Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult checkEdu(const rpg_os::CheckParams &params, Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -761,8 +766,7 @@ public:
 
   /// Named check 'brp_check_luck' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpCheckLuck(const rpg_os::CheckParams &params,
-                                                 Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult checkLuck(const rpg_os::CheckParams &params, Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -780,8 +784,7 @@ public:
 
   /// Named check 'brp_check_sanity' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpCheckSanity(const rpg_os::CheckParams &params,
-                                                   Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult checkSanity(const rpg_os::CheckParams &params, Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -799,8 +802,8 @@ public:
 
   /// Named check 'brp_skill_artillery' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpSkillArtillery(const rpg_os::CheckParams &params,
-                                                      Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult skillArtillery(const rpg_os::CheckParams &params,
+                                                   Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -818,8 +821,7 @@ public:
 
   /// Named check 'brp_skill_brawl' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpSkillBrawl(const rpg_os::CheckParams &params,
-                                                  Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult skillBrawl(const rpg_os::CheckParams &params, Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -837,8 +839,8 @@ public:
 
   /// Named check 'brp_skill_energy_weapon' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpSkillEnergyWeapon(const rpg_os::CheckParams &params,
-                                                         Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult skillEnergyWeapon(const rpg_os::CheckParams &params,
+                                                      Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -856,8 +858,8 @@ public:
 
   /// Named check 'brp_skill_firearm' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpSkillFirearm(const rpg_os::CheckParams &params,
-                                                    Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult skillFirearm(const rpg_os::CheckParams &params,
+                                                 Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -875,8 +877,8 @@ public:
 
   /// Named check 'brp_skill_grapple' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpSkillGrapple(const rpg_os::CheckParams &params,
-                                                    Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult skillGrapple(const rpg_os::CheckParams &params,
+                                                 Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -894,8 +896,8 @@ public:
 
   /// Named check 'brp_skill_heavy_weapon' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpSkillHeavyWeapon(const rpg_os::CheckParams &params,
-                                                        Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult skillHeavyWeapon(const rpg_os::CheckParams &params,
+                                                     Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -913,8 +915,8 @@ public:
 
   /// Named check 'brp_skill_martial_arts' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpSkillMartialArts(const rpg_os::CheckParams &params,
-                                                        Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult skillMartialArts(const rpg_os::CheckParams &params,
+                                                     Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -932,8 +934,8 @@ public:
 
   /// Named check 'brp_skill_melee_weapon' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpSkillMeleeWeapon(const rpg_os::CheckParams &params,
-                                                        Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult skillMeleeWeapon(const rpg_os::CheckParams &params,
+                                                     Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -951,8 +953,8 @@ public:
 
   /// Named check 'brp_skill_missile_weapon' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpSkillMissileWeapon(const rpg_os::CheckParams &params,
-                                                          Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult skillMissileWeapon(const rpg_os::CheckParams &params,
+                                                       Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -970,8 +972,7 @@ public:
 
   /// Named check 'brp_skill_parry' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpSkillParry(const rpg_os::CheckParams &params,
-                                                  Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult skillParry(const rpg_os::CheckParams &params, Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -989,8 +990,7 @@ public:
 
   /// Named check 'brp_skill_shield' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpSkillShield(const rpg_os::CheckParams &params,
-                                                   Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult skillShield(const rpg_os::CheckParams &params, Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -1008,8 +1008,8 @@ public:
 
   /// Named check 'brp_skill_bargain' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpSkillBargain(const rpg_os::CheckParams &params,
-                                                    Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult skillBargain(const rpg_os::CheckParams &params,
+                                                 Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -1027,8 +1027,8 @@ public:
 
   /// Named check 'brp_skill_command' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpSkillCommand(const rpg_os::CheckParams &params,
-                                                    Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult skillCommand(const rpg_os::CheckParams &params,
+                                                 Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -1046,8 +1046,8 @@ public:
 
   /// Named check 'brp_skill_disguise' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpSkillDisguise(const rpg_os::CheckParams &params,
-                                                     Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult skillDisguise(const rpg_os::CheckParams &params,
+                                                  Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -1065,8 +1065,8 @@ public:
 
   /// Named check 'brp_skill_etiquette' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpSkillEtiquette(const rpg_os::CheckParams &params,
-                                                      Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult skillEtiquette(const rpg_os::CheckParams &params,
+                                                   Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -1084,8 +1084,8 @@ public:
 
   /// Named check 'brp_skill_fast_talk' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpSkillFastTalk(const rpg_os::CheckParams &params,
-                                                     Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult skillFastTalk(const rpg_os::CheckParams &params,
+                                                  Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -1103,8 +1103,8 @@ public:
 
   /// Named check 'brp_skill_language' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpSkillLanguage(const rpg_os::CheckParams &params,
-                                                     Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult skillLanguage(const rpg_os::CheckParams &params,
+                                                  Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -1122,8 +1122,8 @@ public:
 
   /// Named check 'brp_skill_perform' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpSkillPerform(const rpg_os::CheckParams &params,
-                                                    Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult skillPerform(const rpg_os::CheckParams &params,
+                                                 Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -1141,8 +1141,8 @@ public:
 
   /// Named check 'brp_skill_persuade' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpSkillPersuade(const rpg_os::CheckParams &params,
-                                                     Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult skillPersuade(const rpg_os::CheckParams &params,
+                                                  Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -1160,8 +1160,7 @@ public:
 
   /// Named check 'brp_skill_status' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpSkillStatus(const rpg_os::CheckParams &params,
-                                                   Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult skillStatus(const rpg_os::CheckParams &params, Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -1179,8 +1178,7 @@ public:
 
   /// Named check 'brp_skill_teach' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpSkillTeach(const rpg_os::CheckParams &params,
-                                                  Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult skillTeach(const rpg_os::CheckParams &params, Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -1198,7 +1196,7 @@ public:
 
   /// Named check 'brp_skill_art' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpSkillArt(const rpg_os::CheckParams &params, Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult skillArt(const rpg_os::CheckParams &params, Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -1216,8 +1214,7 @@ public:
 
   /// Named check 'brp_skill_craft' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpSkillCraft(const rpg_os::CheckParams &params,
-                                                  Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult skillCraft(const rpg_os::CheckParams &params, Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -1235,8 +1232,8 @@ public:
 
   /// Named check 'brp_skill_demolition' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpSkillDemolition(const rpg_os::CheckParams &params,
-                                                       Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult skillDemolition(const rpg_os::CheckParams &params,
+                                                    Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -1254,8 +1251,8 @@ public:
 
   /// Named check 'brp_skill_fine_manipulation' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpSkillFineManipulation(const rpg_os::CheckParams &params,
-                                                             Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult skillFineManipulation(const rpg_os::CheckParams &params,
+                                                          Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -1273,8 +1270,8 @@ public:
 
   /// Named check 'brp_skill_heavy_machine' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpSkillHeavyMachine(const rpg_os::CheckParams &params,
-                                                         Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult skillHeavyMachine(const rpg_os::CheckParams &params,
+                                                      Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -1292,8 +1289,7 @@ public:
 
   /// Named check 'brp_skill_repair' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpSkillRepair(const rpg_os::CheckParams &params,
-                                                   Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult skillRepair(const rpg_os::CheckParams &params, Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -1311,8 +1307,8 @@ public:
 
   /// Named check 'brp_skill_sleight_of_hand' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpSkillSleightOfHand(const rpg_os::CheckParams &params,
-                                                          Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult skillSleightOfHand(const rpg_os::CheckParams &params,
+                                                       Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -1330,8 +1326,8 @@ public:
 
   /// Named check 'brp_skill_appraise' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpSkillAppraise(const rpg_os::CheckParams &params,
-                                                     Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult skillAppraise(const rpg_os::CheckParams &params,
+                                                  Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -1349,8 +1345,8 @@ public:
 
   /// Named check 'brp_skill_first_aid' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpSkillFirstAid(const rpg_os::CheckParams &params,
-                                                     Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult skillFirstAid(const rpg_os::CheckParams &params,
+                                                  Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -1368,8 +1364,7 @@ public:
 
   /// Named check 'brp_skill_gaming' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpSkillGaming(const rpg_os::CheckParams &params,
-                                                   Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult skillGaming(const rpg_os::CheckParams &params, Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -1387,8 +1382,8 @@ public:
 
   /// Named check 'brp_skill_knowledge' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpSkillKnowledge(const rpg_os::CheckParams &params,
-                                                      Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult skillKnowledge(const rpg_os::CheckParams &params,
+                                                   Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -1406,8 +1401,8 @@ public:
 
   /// Named check 'brp_skill_literacy' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpSkillLiteracy(const rpg_os::CheckParams &params,
-                                                     Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult skillLiteracy(const rpg_os::CheckParams &params,
+                                                  Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -1425,8 +1420,8 @@ public:
 
   /// Named check 'brp_skill_medicine' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpSkillMedicine(const rpg_os::CheckParams &params,
-                                                     Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult skillMedicine(const rpg_os::CheckParams &params,
+                                                  Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -1444,8 +1439,8 @@ public:
 
   /// Named check 'brp_skill_psychotherapy' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpSkillPsychotherapy(const rpg_os::CheckParams &params,
-                                                          Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult skillPsychotherapy(const rpg_os::CheckParams &params,
+                                                       Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -1463,8 +1458,8 @@ public:
 
   /// Named check 'brp_skill_science' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpSkillScience(const rpg_os::CheckParams &params,
-                                                    Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult skillScience(const rpg_os::CheckParams &params,
+                                                 Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -1482,8 +1477,8 @@ public:
 
   /// Named check 'brp_skill_strategy' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpSkillStrategy(const rpg_os::CheckParams &params,
-                                                     Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult skillStrategy(const rpg_os::CheckParams &params,
+                                                  Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -1501,8 +1496,8 @@ public:
 
   /// Named check 'brp_skill_technical_skill' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpSkillTechnicalSkill(const rpg_os::CheckParams &params,
-                                                           Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult skillTechnicalSkill(const rpg_os::CheckParams &params,
+                                                        Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -1520,8 +1515,8 @@ public:
 
   /// Named check 'brp_skill_insight' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpSkillInsight(const rpg_os::CheckParams &params,
-                                                    Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult skillInsight(const rpg_os::CheckParams &params,
+                                                 Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -1539,8 +1534,7 @@ public:
 
   /// Named check 'brp_skill_listen' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpSkillListen(const rpg_os::CheckParams &params,
-                                                   Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult skillListen(const rpg_os::CheckParams &params, Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -1558,8 +1552,8 @@ public:
 
   /// Named check 'brp_skill_navigate' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpSkillNavigate(const rpg_os::CheckParams &params,
-                                                     Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult skillNavigate(const rpg_os::CheckParams &params,
+                                                  Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -1577,8 +1571,8 @@ public:
 
   /// Named check 'brp_skill_research' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpSkillResearch(const rpg_os::CheckParams &params,
-                                                     Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult skillResearch(const rpg_os::CheckParams &params,
+                                                  Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -1596,8 +1590,7 @@ public:
 
   /// Named check 'brp_skill_sense' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpSkillSense(const rpg_os::CheckParams &params,
-                                                  Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult skillSense(const rpg_os::CheckParams &params, Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -1615,8 +1608,7 @@ public:
 
   /// Named check 'brp_skill_spot' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpSkillSpot(const rpg_os::CheckParams &params,
-                                                 Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult skillSpot(const rpg_os::CheckParams &params, Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -1634,8 +1626,7 @@ public:
 
   /// Named check 'brp_skill_track' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpSkillTrack(const rpg_os::CheckParams &params,
-                                                  Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult skillTrack(const rpg_os::CheckParams &params, Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -1653,8 +1644,7 @@ public:
 
   /// Named check 'brp_skill_climb' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpSkillClimb(const rpg_os::CheckParams &params,
-                                                  Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult skillClimb(const rpg_os::CheckParams &params, Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -1672,8 +1662,7 @@ public:
 
   /// Named check 'brp_skill_dodge' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpSkillDodge(const rpg_os::CheckParams &params,
-                                                  Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult skillDodge(const rpg_os::CheckParams &params, Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -1691,8 +1680,7 @@ public:
 
   /// Named check 'brp_skill_drive' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpSkillDrive(const rpg_os::CheckParams &params,
-                                                  Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult skillDrive(const rpg_os::CheckParams &params, Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -1710,7 +1698,7 @@ public:
 
   /// Named check 'brp_skill_fly' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpSkillFly(const rpg_os::CheckParams &params, Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult skillFly(const rpg_os::CheckParams &params, Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -1728,8 +1716,7 @@ public:
 
   /// Named check 'brp_skill_hide' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpSkillHide(const rpg_os::CheckParams &params,
-                                                 Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult skillHide(const rpg_os::CheckParams &params, Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -1747,8 +1734,7 @@ public:
 
   /// Named check 'brp_skill_jump' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpSkillJump(const rpg_os::CheckParams &params,
-                                                 Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult skillJump(const rpg_os::CheckParams &params, Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -1766,8 +1752,7 @@ public:
 
   /// Named check 'brp_skill_pilot' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpSkillPilot(const rpg_os::CheckParams &params,
-                                                  Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult skillPilot(const rpg_os::CheckParams &params, Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -1785,8 +1770,8 @@ public:
 
   /// Named check 'brp_skill_projection' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpSkillProjection(const rpg_os::CheckParams &params,
-                                                       Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult skillProjection(const rpg_os::CheckParams &params,
+                                                    Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -1804,8 +1789,7 @@ public:
 
   /// Named check 'brp_skill_ride' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpSkillRide(const rpg_os::CheckParams &params,
-                                                 Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult skillRide(const rpg_os::CheckParams &params, Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -1823,8 +1807,8 @@ public:
 
   /// Named check 'brp_skill_stealth' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpSkillStealth(const rpg_os::CheckParams &params,
-                                                    Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult skillStealth(const rpg_os::CheckParams &params,
+                                                 Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -1842,8 +1826,7 @@ public:
 
   /// Named check 'brp_skill_swim' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpSkillSwim(const rpg_os::CheckParams &params,
-                                                 Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult skillSwim(const rpg_os::CheckParams &params, Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -1861,8 +1844,7 @@ public:
 
   /// Named check 'brp_skill_throw' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpSkillThrow(const rpg_os::CheckParams &params,
-                                                  Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult skillThrow(const rpg_os::CheckParams &params, Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d100,
@@ -1881,7 +1863,7 @@ public:
   /// Named check 'brp_resistance_str' (see the ruleset's check_types).
   template <rpg_os::StatProvider Target, rpg_os::RandomNumberGenerator Rng>
   [[nodiscard]] rpg_os::CheckResult
-  brpResistanceStr(const Target &target, const rpg_os::CheckParams &params, Rng &rng) const {
+  resistanceStr(const Target &target, const rpg_os::CheckParams &params, Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Resistance,
         .dice = 1_d100,
@@ -1901,7 +1883,7 @@ public:
   /// Named check 'brp_resistance_con' (see the ruleset's check_types).
   template <rpg_os::StatProvider Target, rpg_os::RandomNumberGenerator Rng>
   [[nodiscard]] rpg_os::CheckResult
-  brpResistanceCon(const Target &target, const rpg_os::CheckParams &params, Rng &rng) const {
+  resistanceCon(const Target &target, const rpg_os::CheckParams &params, Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Resistance,
         .dice = 1_d100,
@@ -1921,7 +1903,7 @@ public:
   /// Named check 'brp_resistance_siz' (see the ruleset's check_types).
   template <rpg_os::StatProvider Target, rpg_os::RandomNumberGenerator Rng>
   [[nodiscard]] rpg_os::CheckResult
-  brpResistanceSiz(const Target &target, const rpg_os::CheckParams &params, Rng &rng) const {
+  resistanceSiz(const Target &target, const rpg_os::CheckParams &params, Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Resistance,
         .dice = 1_d100,
@@ -1941,7 +1923,7 @@ public:
   /// Named check 'brp_resistance_int' (see the ruleset's check_types).
   template <rpg_os::StatProvider Target, rpg_os::RandomNumberGenerator Rng>
   [[nodiscard]] rpg_os::CheckResult
-  brpResistanceInt(const Target &target, const rpg_os::CheckParams &params, Rng &rng) const {
+  resistanceInt(const Target &target, const rpg_os::CheckParams &params, Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Resistance,
         .dice = 1_d100,
@@ -1961,7 +1943,7 @@ public:
   /// Named check 'brp_resistance_pow' (see the ruleset's check_types).
   template <rpg_os::StatProvider Target, rpg_os::RandomNumberGenerator Rng>
   [[nodiscard]] rpg_os::CheckResult
-  brpResistancePow(const Target &target, const rpg_os::CheckParams &params, Rng &rng) const {
+  resistancePow(const Target &target, const rpg_os::CheckParams &params, Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Resistance,
         .dice = 1_d100,
@@ -1981,7 +1963,7 @@ public:
   /// Named check 'brp_resistance_dex' (see the ruleset's check_types).
   template <rpg_os::StatProvider Target, rpg_os::RandomNumberGenerator Rng>
   [[nodiscard]] rpg_os::CheckResult
-  brpResistanceDex(const Target &target, const rpg_os::CheckParams &params, Rng &rng) const {
+  resistanceDex(const Target &target, const rpg_os::CheckParams &params, Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Resistance,
         .dice = 1_d100,
@@ -2001,7 +1983,7 @@ public:
   /// Named check 'brp_resistance_app' (see the ruleset's check_types).
   template <rpg_os::StatProvider Target, rpg_os::RandomNumberGenerator Rng>
   [[nodiscard]] rpg_os::CheckResult
-  brpResistanceApp(const Target &target, const rpg_os::CheckParams &params, Rng &rng) const {
+  resistanceApp(const Target &target, const rpg_os::CheckParams &params, Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Resistance,
         .dice = 1_d100,
@@ -2021,7 +2003,7 @@ public:
   /// Named check 'brp_resistance_edu' (see the ruleset's check_types).
   template <rpg_os::StatProvider Target, rpg_os::RandomNumberGenerator Rng>
   [[nodiscard]] rpg_os::CheckResult
-  brpResistanceEdu(const Target &target, const rpg_os::CheckParams &params, Rng &rng) const {
+  resistanceEdu(const Target &target, const rpg_os::CheckParams &params, Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Resistance,
         .dice = 1_d100,
@@ -2040,8 +2022,8 @@ public:
 
   /// Named check 'brp_combat' (see the ruleset's check_types).
   template <rpg_os::StatProvider Target, rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult brpCombat(const Target &target,
-                                              const rpg_os::CheckParams &params, Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult combat(const Target &target, const rpg_os::CheckParams &params,
+                                           Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Opposed,
         .dice = 1_d100,

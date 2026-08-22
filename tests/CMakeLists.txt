@@ -41,6 +41,7 @@ add_executable(rpg_os_tests
   test_game_session.cpp
   test_check_resolver.cpp
   test_world_state.cpp
+  test_movement.cpp
   test_types.cpp
   test_errors.cpp
 )

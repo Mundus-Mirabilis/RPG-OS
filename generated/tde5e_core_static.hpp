@@ -183,6 +183,7 @@ public:
   std::unordered_set<std::string> resistances;
   std::vector<rpg_os::AppliedAffliction> afflictions;
   std::unordered_set<std::string> traits;
+  std::string terrain; // current terrain / surrounding ("" = ruleset default)
 
   // ---- save / load (snapshot the living sheet, not a ruleset record) ----
   /// Serializes the character's current living state — attributes, skills,
@@ -267,6 +268,7 @@ public:
     resources["AE"] = arcaneEnergy;
     resources["KP"] = karmaPoints;
     out["resources"] = resources;
+    out["terrain"] = terrain;
     out["conditions"] = conditions;
     rpg_os::Json traitsJson = rpg_os::Json::array();
     for (const auto &traitId : traits) {
@@ -412,6 +414,9 @@ public:
       lifePoints = resources.value("LP", lifePoints);
       arcaneEnergy = resources.value("AE", arcaneEnergy);
       karmaPoints = resources.value("KP", karmaPoints);
+    }
+    if (in.contains("terrain") && in.at("terrain").is_string()) {
+      terrain = in.at("terrain").get<std::string>();
     }
     if (in.contains("conditions") && in.at("conditions").is_object()) {
       conditions = in.at("conditions").get<std::unordered_map<std::string, int32_t>>();
@@ -681,8 +686,7 @@ public:
   // ---- named checks (from check_types) ----
   /// Named check 'tde_attribute' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult tdeAttribute(const rpg_os::CheckParams &params,
-                                                 Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult attribute(const rpg_os::CheckParams &params, Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Threshold,
         .dice = 1_d20,
@@ -704,7 +708,7 @@ public:
 
   /// Named check 'tde_talent' (see the ruleset's check_types).
   template <rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult tdeTalent(const rpg_os::CheckParams &params, Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult talent(const rpg_os::CheckParams &params, Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Pool,
         .dice = 3_d20,
@@ -724,8 +728,8 @@ public:
 
   /// Named check 'tde_attack' (see the ruleset's check_types).
   template <rpg_os::StatProvider Target, rpg_os::RandomNumberGenerator Rng>
-  [[nodiscard]] rpg_os::CheckResult tdeAttack(const Target &target,
-                                              const rpg_os::CheckParams &params, Rng &rng) const {
+  [[nodiscard]] rpg_os::CheckResult attack(const Target &target, const rpg_os::CheckParams &params,
+                                           Rng &rng) const {
     static const rpg_os::CheckRecipe recipe{
         .resolution = rpg_os::Resolution::Opposed,
         .dice = 1_d20,

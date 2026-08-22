@@ -99,6 +99,38 @@ def structural_check(doc, errors):
     return errors
 
 
+# Damage-type keywords that must live in an item's `damage_type` field, never
+# glued into its `damage` dice string ("1d8 Bludgeoning" is a bug; the engine's
+# dice parser would reject it and the combat sim would ignore the weapon's real
+# damage). Guards the convention documented in AGENTS.md and the schema.
+_DAMAGE_TYPES = (
+    "Bludgeoning", "Piercing", "Slashing", "Acid", "Cold", "Fire", "Force",
+    "Lightning", "Necrotic", "Poison", "Psychic", "Radiant", "Thunder",
+)
+
+
+def check_item_damage(doc, errors):
+    """Flags item records whose `damage` string embeds its damage type."""
+    data = doc.get("data")
+    if not isinstance(data, dict):
+        return errors
+    for section in ("items", "weapons", "armor"):
+        for idx, item in enumerate(data.get(section, [])):
+            if not isinstance(item, dict):
+                continue
+            dmg = item.get("damage")
+            if not isinstance(dmg, str) or isinstance(dmg, bool):
+                continue
+            for keyword in _DAMAGE_TYPES:
+                if keyword in dmg:
+                    errors.append(
+                        f"data.{section}[{idx}].damage: embeds damage type "
+                        f"{keyword!r} — keep the dice in `damage` and put the "
+                        f"type in `damage_type`")
+                    break
+    return errors
+
+
 def validate(path: Path):
     doc = json.loads(path.read_text())
     schema = json.loads(SCHEMA_PATH.read_text())
@@ -110,6 +142,7 @@ def validate(path: Path):
         errors = [f"{'/'.join(map(str, e.absolute_path))}: {e.message}" for e in validator.iter_errors(doc)]
     except ImportError:
         structural_check(doc, errors)
+    check_item_damage(doc, errors)
     return errors
 
 
