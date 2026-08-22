@@ -28,6 +28,20 @@ via `needs`, so the two gh-pages pushes can never race).
    rating converge quickly — starting from the ELO standard strength **1000**.
    A default/average character therefore lands at the standard strength. The
    JS ELO formula (`elo.js`, a port of the Python formula) updates the rating.
+   A **class selector** (rulesets that ship archetypes, e.g. The Dark Eye)
+   pre-fills attributes, skills, and spells from a ruleset archetype as a
+   starting point that you then edit to match your own character. A **spell
+   picker** lists every spell in the ruleset (searchable, and filterable by
+   class/tradition where the ruleset provides it): tick the spells your
+   character knows and it really casts them in the test fights — the fight
+   simulator prefers its strongest affordable damaging spell, spends the
+   spell-resource pool per cast (e.g. `AE 35 → 27`), and falls back to its
+   weapon only when it has no affordable damaging spell left. Only *damaging*
+   spells are ever cast in a fight, so those are listed first and marked (the
+   rest stay dimmed). For pool-based rulesets (TDE, BRP) an optional
+   spell-resource override lets you enter your real pool (e.g. your AE)
+   instead of the derived maximum; D&D has no spell-resource pool and casts
+   freely.
 3. **Head to head** — tick two rows; an **ELO estimate** of the win probability
    is shown (from the ratings — an estimate, because individual matchups can
    be matchup-specific), with a live 100-fight Monte-Carlo measurement running

@@ -224,8 +224,10 @@ export class RpgOs {
     }
   }
 
-  /** Builds a combatant from a named archetype or bestiary entry. */
-  specFromId(id, weapon = '1d6+4') {
+  /** Builds a combatant from a named archetype or bestiary entry.
+   *  `weapon` is an optional override; when empty the engine resolves the
+   *  combatant's own equipped weapon (falling back to the default longsword). */
+  specFromId(id, weapon = '') {
     const idPtr = alloc(this._m, id);
     const wPtr = alloc(this._m, weapon);
     try {
@@ -238,8 +240,10 @@ export class RpgOs {
     }
   }
 
-  /** Builds a combatant from a live entity (any character can fight). */
-  specFromEntity(entity, weapon = '1d6+4') {
+  /** Builds a combatant from a live entity (any character can fight).
+   *  `weapon` is an optional override; when empty the engine uses the
+   *  entity's equipped weapon (falling back to the default longsword). */
+  specFromEntity(entity, weapon = '') {
     if (!entity || !entity._ptr) throw new Error('specFromEntity needs a live Entity');
     const wPtr = alloc(this._m, weapon);
     try {

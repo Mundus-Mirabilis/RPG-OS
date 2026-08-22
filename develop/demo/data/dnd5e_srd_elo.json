@@ -10,27 +10,27 @@
     {
       "rank": 1,
       "id": "lich",
-      "rating": 1252.2,
+      "rating": 1252.0,
       "games": 800,
-      "wins": 661,
+      "wins": 649,
       "draws": 0,
-      "losses": 139,
-      "win_pct": 82.6
+      "losses": 151,
+      "win_pct": 81.1
     },
     {
       "rank": 2,
       "id": "ancient_silver_dragon",
-      "rating": 1237.4,
+      "rating": 1225.7,
       "games": 800,
-      "wins": 563,
+      "wins": 555,
       "draws": 0,
-      "losses": 237,
-      "win_pct": 70.4
+      "losses": 245,
+      "win_pct": 69.4
     },
     {
       "rank": 3,
       "id": "tarrasque",
-      "rating": 1225.9,
+      "rating": 1218.6,
       "games": 800,
       "wins": 556,
       "draws": 0,
@@ -39,8 +39,18 @@
     },
     {
       "rank": 4,
+      "id": "ancient_red_dragon",
+      "rating": 1195.5,
+      "games": 800,
+      "wins": 522,
+      "draws": 0,
+      "losses": 278,
+      "win_pct": 65.2
+    },
+    {
+      "rank": 5,
       "id": "kraken",
-      "rating": 1190.8,
+      "rating": 1185.1,
       "games": 800,
       "wins": 518,
       "draws": 0,
@@ -48,49 +58,49 @@
       "win_pct": 64.8
     },
     {
-      "rank": 5,
-      "id": "pit_fiend",
-      "rating": 1173.2,
-      "games": 800,
-      "wins": 509,
-      "draws": 0,
-      "losses": 291,
-      "win_pct": 63.6
-    },
-    {
       "rank": 6,
       "id": "archmage",
-      "rating": 1172.2,
+      "rating": 1181.3,
       "games": 800,
-      "wins": 508,
+      "wins": 512,
       "draws": 0,
-      "losses": 292,
-      "win_pct": 63.5
+      "losses": 288,
+      "win_pct": 64.0
     },
     {
       "rank": 7,
-      "id": "ancient_red_dragon",
-      "rating": 1164.0,
+      "id": "dragon_turtle",
+      "rating": 1169.1,
       "games": 800,
-      "wins": 498,
+      "wins": 506,
       "draws": 0,
-      "losses": 302,
-      "win_pct": 62.2
+      "losses": 294,
+      "win_pct": 63.2
     },
     {
       "rank": 8,
       "id": "ancient_gold_dragon",
-      "rating": 1162.9,
+      "rating": 1167.7,
       "games": 800,
-      "wins": 500,
+      "wins": 510,
       "draws": 0,
-      "losses": 300,
-      "win_pct": 62.5
+      "losses": 290,
+      "win_pct": 63.8
     },
     {
       "rank": 9,
-      "id": "dragon_turtle",
-      "rating": 1154.7,
+      "id": "balor",
+      "rating": 1162.9,
+      "games": 800,
+      "wins": 504,
+      "draws": 0,
+      "losses": 296,
+      "win_pct": 63.0
+    },
+    {
+      "rank": 10,
+      "id": "ancient_white_dragon",
+      "rating": 1156.0,
       "games": 800,
       "wins": 497,
       "draws": 0,
@@ -98,9 +108,29 @@
       "win_pct": 62.1
     },
     {
-      "rank": 10,
+      "rank": 11,
+      "id": "adult_red_dragon",
+      "rating": 1148.8,
+      "games": 800,
+      "wins": 492,
+      "draws": 0,
+      "losses": 308,
+      "win_pct": 61.5
+    },
+    {
+      "rank": 12,
       "id": "purple_worm",
-      "rating": 1138.8,
+      "rating": 1143.1,
+      "games": 800,
+      "wins": 490,
+      "draws": 0,
+      "losses": 310,
+      "win_pct": 61.2
+    },
+    {
+      "rank": 13,
+      "id": "roc",
+      "rating": 1139.3,
       "games": 800,
       "wins": 487,
       "draws": 0,
@@ -108,19 +138,9 @@
       "win_pct": 60.9
     },
     {
-      "rank": 11,
-      "id": "balor",
-      "rating": 1137.7,
-      "games": 800,
-      "wins": 488,
-      "draws": 0,
-      "losses": 312,
-      "win_pct": 61.0
-    },
-    {
-      "rank": 12,
-      "id": "ancient_white_dragon",
-      "rating": 1136.3,
+      "rank": 14,
+      "id": "pit_fiend",
+      "rating": 1136.9,
       "games": 800,
       "wins": 485,
       "draws": 0,
@@ -128,9 +148,19 @@
       "win_pct": 60.6
     },
     {
-      "rank": 13,
-      "id": "roc",
-      "rating": 1129.8,
+      "rank": 15,
+      "id": "iron_golem",
+      "rating": 1132.0,
+      "games": 800,
+      "wins": 482,
+      "draws": 0,
+      "losses": 318,
+      "win_pct": 60.2
+    },
+    {
+      "rank": 16,
+      "id": "ancient_black_dragon",
+      "rating": 1131.1,
       "games": 800,
       "wins": 481,
       "draws": 0,
@@ -138,39 +168,29 @@
       "win_pct": 60.1
     },
     {
-      "rank": 14,
-      "id": "ancient_bronze_dragon",
-      "rating": 1126.2,
-      "games": 800,
-      "wins": 479,
-      "draws": 0,
-      "losses": 321,
-      "win_pct": 59.9
-    },
-    {
-      "rank": 15,
-      "id": "adult_red_dragon",
-      "rating": 1125.5,
-      "games": 800,
-      "wins": 478,
-      "draws": 0,
-      "losses": 322,
-      "win_pct": 59.8
-    },
-    {
-      "rank": 16,
-      "id": "ancient_black_dragon",
-      "rating": 1123.8,
-      "games": 800,
-      "wins": 476,
-      "draws": 0,
-      "losses": 324,
-      "win_pct": 59.5
-    },
-    {
       "rank": 17,
-      "id": "iron_golem",
-      "rating": 1123.3,
+      "id": "ancient_bronze_dragon",
+      "rating": 1129.6,
+      "games": 800,
+      "wins": 480,
+      "draws": 0,
+      "losses": 320,
+      "win_pct": 60.0
+    },
+    {
+      "rank": 18,
+      "id": "ancient_blue_dragon",
+      "rating": 1126.6,
+      "games": 800,
+      "wins": 480,
+      "draws": 0,
+      "losses": 320,
+      "win_pct": 60.0
+    },
+    {
+      "rank": 19,
+      "id": "ancient_copper_dragon",
+      "rating": 1122.5,
       "games": 800,
       "wins": 477,
       "draws": 0,
@@ -178,9 +198,9 @@
       "win_pct": 59.6
     },
     {
-      "rank": 18,
-      "id": "unicorn",
-      "rating": 1120.0,
+      "rank": 20,
+      "id": "ancient_green_dragon",
+      "rating": 1120.7,
       "games": 800,
       "wins": 475,
       "draws": 0,
@@ -188,9 +208,39 @@
       "win_pct": 59.4
     },
     {
-      "rank": 19,
-      "id": "ancient_blue_dragon",
-      "rating": 1115.5,
+      "rank": 21,
+      "id": "tyrannosaurus_rex",
+      "rating": 1120.6,
+      "games": 800,
+      "wins": 475,
+      "draws": 0,
+      "losses": 325,
+      "win_pct": 59.4
+    },
+    {
+      "rank": 22,
+      "id": "sphinx_of_valor",
+      "rating": 1120.3,
+      "games": 800,
+      "wins": 476,
+      "draws": 0,
+      "losses": 324,
+      "win_pct": 59.5
+    },
+    {
+      "rank": 23,
+      "id": "remorhaz",
+      "rating": 1118.5,
+      "games": 800,
+      "wins": 474,
+      "draws": 0,
+      "losses": 326,
+      "win_pct": 59.2
+    },
+    {
+      "rank": 24,
+      "id": "efreeti",
+      "rating": 1117.6,
       "games": 800,
       "wins": 473,
       "draws": 0,
@@ -198,9 +248,49 @@
       "win_pct": 59.1
     },
     {
-      "rank": 20,
-      "id": "ancient_brass_dragon",
-      "rating": 1106.5,
+      "rank": 25,
+      "id": "fire_giant",
+      "rating": 1114.3,
+      "games": 800,
+      "wins": 472,
+      "draws": 0,
+      "losses": 328,
+      "win_pct": 59.0
+    },
+    {
+      "rank": 26,
+      "id": "adult_gold_dragon",
+      "rating": 1110.4,
+      "games": 800,
+      "wins": 469,
+      "draws": 0,
+      "losses": 331,
+      "win_pct": 58.6
+    },
+    {
+      "rank": 27,
+      "id": "stone_golem",
+      "rating": 1110.3,
+      "games": 800,
+      "wins": 469,
+      "draws": 0,
+      "losses": 331,
+      "win_pct": 58.6
+    },
+    {
+      "rank": 28,
+      "id": "behir",
+      "rating": 1110.0,
+      "games": 800,
+      "wins": 469,
+      "draws": 0,
+      "losses": 331,
+      "win_pct": 58.6
+    },
+    {
+      "rank": 29,
+      "id": "nalfeshnee",
+      "rating": 1107.4,
       "games": 800,
       "wins": 467,
       "draws": 0,
@@ -208,9 +298,9 @@
       "win_pct": 58.4
     },
     {
-      "rank": 21,
-      "id": "ancient_copper_dragon",
-      "rating": 1105.7,
+      "rank": 30,
+      "id": "rakshasa",
+      "rating": 1106.3,
       "games": 800,
       "wins": 466,
       "draws": 0,
@@ -218,109 +308,69 @@
       "win_pct": 58.2
     },
     {
-      "rank": 22,
-      "id": "efreeti",
-      "rating": 1103.8,
-      "games": 800,
-      "wins": 465,
-      "draws": 0,
-      "losses": 335,
-      "win_pct": 58.1
-    },
-    {
-      "rank": 23,
-      "id": "sphinx_of_valor",
-      "rating": 1103.0,
-      "games": 800,
-      "wins": 464,
-      "draws": 0,
-      "losses": 336,
-      "win_pct": 58.0
-    },
-    {
-      "rank": 24,
-      "id": "fire_giant",
-      "rating": 1101.8,
-      "games": 800,
-      "wins": 464,
-      "draws": 0,
-      "losses": 336,
-      "win_pct": 58.0
-    },
-    {
-      "rank": 25,
-      "id": "remorhaz",
-      "rating": 1101.6,
-      "games": 800,
-      "wins": 463,
-      "draws": 0,
-      "losses": 337,
-      "win_pct": 57.9
-    },
-    {
-      "rank": 26,
-      "id": "behir",
-      "rating": 1098.0,
-      "games": 800,
-      "wins": 461,
-      "draws": 0,
-      "losses": 339,
-      "win_pct": 57.6
-    },
-    {
-      "rank": 27,
-      "id": "adult_gold_dragon",
-      "rating": 1097.7,
-      "games": 800,
-      "wins": 461,
-      "draws": 0,
-      "losses": 339,
-      "win_pct": 57.6
-    },
-    {
-      "rank": 28,
-      "id": "stone_golem",
-      "rating": 1097.5,
-      "games": 800,
-      "wins": 461,
-      "draws": 0,
-      "losses": 339,
-      "win_pct": 57.6
-    },
-    {
-      "rank": 29,
-      "id": "ice_devil",
-      "rating": 1097.3,
-      "games": 800,
-      "wins": 461,
-      "draws": 0,
-      "losses": 339,
-      "win_pct": 57.6
-    },
-    {
-      "rank": 30,
-      "id": "ancient_green_dragon",
-      "rating": 1096.9,
-      "games": 800,
-      "wins": 461,
-      "draws": 0,
-      "losses": 339,
-      "win_pct": 57.6
-    },
-    {
       "rank": 31,
-      "id": "rakshasa",
-      "rating": 1094.1,
+      "id": "ice_devil",
+      "rating": 1105.9,
       "games": 800,
-      "wins": 459,
+      "wins": 466,
       "draws": 0,
-      "losses": 341,
-      "win_pct": 57.4
+      "losses": 334,
+      "win_pct": 58.2
     },
     {
       "rank": 32,
+      "id": "young_gold_dragon",
+      "rating": 1105.1,
+      "games": 800,
+      "wins": 466,
+      "draws": 0,
+      "losses": 334,
+      "win_pct": 58.2
+    },
+    {
+      "rank": 33,
+      "id": "adult_blue_dragon",
+      "rating": 1101.7,
+      "games": 800,
+      "wins": 464,
+      "draws": 0,
+      "losses": 336,
+      "win_pct": 58.0
+    },
+    {
+      "rank": 34,
+      "id": "spirit_naga",
+      "rating": 1098.9,
+      "games": 800,
+      "wins": 462,
+      "draws": 0,
+      "losses": 338,
+      "win_pct": 57.8
+    },
+    {
+      "rank": 35,
+      "id": "unicorn",
+      "rating": 1098.8,
+      "games": 800,
+      "wins": 461,
+      "draws": 0,
+      "losses": 339,
+      "win_pct": 57.6
+    },
+    {
+      "rank": 36,
+      "id": "ancient_brass_dragon",
+      "rating": 1096.8,
+      "games": 800,
+      "wins": 461,
+      "draws": 0,
+      "losses": 339,
+      "win_pct": 57.6
+    },
+    {
+      "rank": 37,
       "id": "horned_devil",
-      "rating": 1094.0,
+      "rating": 1094.5,
       "games": 800,
       "wins": 459,
       "draws": 0,
@@ -328,9 +378,49 @@
       "win_pct": 57.4
     },
     {
-      "rank": 33,
-      "id": "tyrannosaurus_rex",
+      "rank": 38,
+      "id": "adult_copper_dragon",
+      "rating": 1093.6,
+      "games": 800,
+      "wins": 458,
+      "draws": 0,
+      "losses": 342,
+      "win_pct": 57.2
+    },
+    {
+      "rank": 39,
+      "id": "adult_white_dragon",
+      "rating": 1092.8,
+      "games": 800,
+      "wins": 458,
+      "draws": 0,
+      "losses": 342,
+      "win_pct": 57.2
+    },
+    {
+      "rank": 40,
+      "id": "djinni",
+      "rating": 1092.6,
+      "games": 800,
+      "wins": 458,
+      "draws": 0,
+      "losses": 342,
+      "win_pct": 57.2
+    },
+    {
+      "rank": 41,
+      "id": "stone_giant",
       "rating": 1092.1,
+      "games": 800,
+      "wins": 458,
+      "draws": 0,
+      "losses": 342,
+      "win_pct": 57.2
+    },
+    {
+      "rank": 42,
+      "id": "marilith",
+      "rating": 1091.3,
       "games": 800,
       "wins": 457,
       "draws": 0,
@@ -338,9 +428,9 @@
       "win_pct": 57.1
     },
     {
-      "rank": 34,
-      "id": "adult_white_dragon",
-      "rating": 1089.4,
+      "rank": 43,
+      "id": "erinyes",
+      "rating": 1089.3,
       "games": 800,
       "wins": 456,
       "draws": 0,
@@ -348,9 +438,9 @@
       "win_pct": 57.0
     },
     {
-      "rank": 35,
-      "id": "young_silver_dragon",
-      "rating": 1088.4,
+      "rank": 44,
+      "id": "young_red_dragon",
+      "rating": 1088.2,
       "games": 800,
       "wins": 455,
       "draws": 0,
@@ -358,18 +448,8 @@
       "win_pct": 56.9
     },
     {
-      "rank": 36,
-      "id": "stone_giant",
-      "rating": 1088.3,
-      "games": 800,
-      "wins": 455,
-      "draws": 0,
-      "losses": 345,
-      "win_pct": 56.9
-    },
-    {
-      "rank": 37,
-      "id": "frost_giant",
+      "rank": 45,
+      "id": "giant_ape",
       "rating": 1088.0,
       "games": 800,
       "wins": 455,
@@ -378,9 +458,9 @@
       "win_pct": 56.9
     },
     {
-      "rank": 38,
-      "id": "adult_bronze_dragon",
-      "rating": 1086.5,
+      "rank": 46,
+      "id": "adult_green_dragon",
+      "rating": 1086.6,
       "games": 800,
       "wins": 454,
       "draws": 0,
@@ -388,9 +468,19 @@
       "win_pct": 56.8
     },
     {
-      "rank": 39,
-      "id": "nalfeshnee",
-      "rating": 1085.1,
+      "rank": 47,
+      "id": "sphinx_of_lore",
+      "rating": 1086.1,
+      "games": 800,
+      "wins": 454,
+      "draws": 0,
+      "losses": 346,
+      "win_pct": 56.8
+    },
+    {
+      "rank": 48,
+      "id": "adult_bronze_dragon",
+      "rating": 1085.3,
       "games": 800,
       "wins": 453,
       "draws": 0,
@@ -398,9 +488,19 @@
       "win_pct": 56.6
     },
     {
-      "rank": 40,
-      "id": "spirit_naga",
-      "rating": 1082.7,
+      "rank": 49,
+      "id": "solar",
+      "rating": 1085.0,
+      "games": 800,
+      "wins": 453,
+      "draws": 0,
+      "losses": 347,
+      "win_pct": 56.6
+    },
+    {
+      "rank": 50,
+      "id": "young_silver_dragon",
+      "rating": 1083.4,
       "games": 800,
       "wins": 452,
       "draws": 0,
@@ -408,109 +508,89 @@
       "win_pct": 56.5
     },
     {
-      "rank": 41,
-      "id": "young_gold_dragon",
-      "rating": 1081.9,
-      "games": 800,
-      "wins": 451,
-      "draws": 0,
-      "losses": 349,
-      "win_pct": 56.4
-    },
-    {
-      "rank": 42,
-      "id": "mage",
-      "rating": 1081.4,
-      "games": 800,
-      "wins": 451,
-      "draws": 0,
-      "losses": 349,
-      "win_pct": 56.4
-    },
-    {
-      "rank": 43,
-      "id": "adult_blue_dragon",
-      "rating": 1077.8,
-      "games": 800,
-      "wins": 448,
-      "draws": 0,
-      "losses": 352,
-      "win_pct": 56.0
-    },
-    {
-      "rank": 44,
-      "id": "marilith",
-      "rating": 1077.7,
-      "games": 800,
-      "wins": 448,
-      "draws": 0,
-      "losses": 352,
-      "win_pct": 56.0
-    },
-    {
-      "rank": 45,
-      "id": "sphinx_of_lore",
-      "rating": 1076.9,
-      "games": 800,
-      "wins": 448,
-      "draws": 0,
-      "losses": 352,
-      "win_pct": 56.0
-    },
-    {
-      "rank": 46,
-      "id": "young_red_dragon",
-      "rating": 1076.3,
-      "games": 800,
-      "wins": 448,
-      "draws": 0,
-      "losses": 352,
-      "win_pct": 56.0
-    },
-    {
-      "rank": 47,
-      "id": "adult_copper_dragon",
-      "rating": 1075.5,
-      "games": 800,
-      "wins": 447,
-      "draws": 0,
-      "losses": 353,
-      "win_pct": 55.9
-    },
-    {
-      "rank": 48,
-      "id": "roper",
-      "rating": 1075.4,
-      "games": 800,
-      "wins": 447,
-      "draws": 0,
-      "losses": 353,
-      "win_pct": 55.9
-    },
-    {
-      "rank": 49,
-      "id": "erinyes",
-      "rating": 1075.1,
-      "games": 800,
-      "wins": 447,
-      "draws": 0,
-      "losses": 353,
-      "win_pct": 55.9
-    },
-    {
-      "rank": 50,
-      "id": "djinni",
-      "rating": 1074.8,
-      "games": 800,
-      "wins": 447,
-      "draws": 0,
-      "losses": 353,
-      "win_pct": 55.9
-    },
-    {
       "rank": 51,
-      "id": "adult_black_dragon",
-      "rating": 1073.9,
+      "id": "frost_giant",
+      "rating": 1083.2,
+      "games": 800,
+      "wins": 452,
+      "draws": 0,
+      "losses": 348,
+      "win_pct": 56.5
+    },
+    {
+      "rank": 52,
+      "id": "treant",
+      "rating": 1082.3,
+      "games": 800,
+      "wins": 451,
+      "draws": 0,
+      "losses": 349,
+      "win_pct": 56.4
+    },
+    {
+      "rank": 53,
+      "id": "young_bronze_dragon",
+      "rating": 1081.8,
+      "games": 800,
+      "wins": 451,
+      "draws": 0,
+      "losses": 349,
+      "win_pct": 56.4
+    },
+    {
+      "rank": 54,
+      "id": "bone_devil",
+      "rating": 1078.9,
+      "games": 800,
+      "wins": 449,
+      "draws": 0,
+      "losses": 351,
+      "win_pct": 56.1
+    },
+    {
+      "rank": 55,
+      "id": "mammoth",
+      "rating": 1078.4,
+      "games": 800,
+      "wins": 449,
+      "draws": 0,
+      "losses": 351,
+      "win_pct": 56.1
+    },
+    {
+      "rank": 56,
+      "id": "glabrezu",
+      "rating": 1078.1,
+      "games": 800,
+      "wins": 449,
+      "draws": 0,
+      "losses": 351,
+      "win_pct": 56.1
+    },
+    {
+      "rank": 57,
+      "id": "gorgon",
+      "rating": 1077.2,
+      "games": 800,
+      "wins": 448,
+      "draws": 0,
+      "losses": 352,
+      "win_pct": 56.0
+    },
+    {
+      "rank": 58,
+      "id": "deva",
+      "rating": 1075.6,
+      "games": 800,
+      "wins": 447,
+      "draws": 0,
+      "losses": 353,
+      "win_pct": 55.9
+    },
+    {
+      "rank": 59,
+      "id": "young_blue_dragon",
+      "rating": 1073.7,
       "games": 800,
       "wins": 446,
       "draws": 0,
@@ -518,19 +598,49 @@
       "win_pct": 55.8
     },
     {
-      "rank": 52,
-      "id": "treant",
-      "rating": 1072.3,
+      "rank": 60,
+      "id": "hill_giant",
+      "rating": 1073.6,
       "games": 800,
-      "wins": 445,
+      "wins": 446,
       "draws": 0,
-      "losses": 355,
-      "win_pct": 55.6
+      "losses": 354,
+      "win_pct": 55.8
     },
     {
-      "rank": 53,
+      "rank": 61,
+      "id": "vampire",
+      "rating": 1073.2,
+      "games": 800,
+      "wins": 446,
+      "draws": 0,
+      "losses": 354,
+      "win_pct": 55.8
+    },
+    {
+      "rank": 62,
+      "id": "giant_shark",
+      "rating": 1073.1,
+      "games": 800,
+      "wins": 446,
+      "draws": 0,
+      "losses": 354,
+      "win_pct": 55.8
+    },
+    {
+      "rank": 63,
       "id": "werebear",
-      "rating": 1071.9,
+      "rating": 1073.1,
+      "games": 800,
+      "wins": 446,
+      "draws": 0,
+      "losses": 354,
+      "win_pct": 55.8
+    },
+    {
+      "rank": 64,
+      "id": "roper",
+      "rating": 1072.1,
       "games": 800,
       "wins": 445,
       "draws": 0,
@@ -538,29 +648,9 @@
       "win_pct": 55.6
     },
     {
-      "rank": 54,
-      "id": "giant_ape",
-      "rating": 1070.1,
-      "games": 800,
-      "wins": 444,
-      "draws": 0,
-      "losses": 356,
-      "win_pct": 55.5
-    },
-    {
-      "rank": 55,
-      "id": "young_blue_dragon",
-      "rating": 1069.8,
-      "games": 800,
-      "wins": 444,
-      "draws": 0,
-      "losses": 356,
-      "win_pct": 55.5
-    },
-    {
-      "rank": 56,
-      "id": "druid",
-      "rating": 1068.4,
+      "rank": 65,
+      "id": "hydra",
+      "rating": 1069.2,
       "games": 800,
       "wins": 443,
       "draws": 0,
@@ -568,9 +658,39 @@
       "win_pct": 55.4
     },
     {
-      "rank": 57,
-      "id": "gorgon",
-      "rating": 1067.5,
+      "rank": 66,
+      "id": "young_copper_dragon",
+      "rating": 1069.1,
+      "games": 800,
+      "wins": 443,
+      "draws": 0,
+      "losses": 357,
+      "win_pct": 55.4
+    },
+    {
+      "rank": 67,
+      "id": "wyvern",
+      "rating": 1068.7,
+      "games": 800,
+      "wins": 443,
+      "draws": 0,
+      "losses": 357,
+      "win_pct": 55.4
+    },
+    {
+      "rank": 68,
+      "id": "druid",
+      "rating": 1068.3,
+      "games": 800,
+      "wins": 443,
+      "draws": 0,
+      "losses": 357,
+      "win_pct": 55.4
+    },
+    {
+      "rank": 69,
+      "id": "xorn",
+      "rating": 1067.3,
       "games": 800,
       "wins": 442,
       "draws": 0,
@@ -578,38 +698,58 @@
       "win_pct": 55.2
     },
     {
-      "rank": 58,
-      "id": "triceratops",
-      "rating": 1063.4,
+      "rank": 70,
+      "id": "invisible_stalker",
+      "rating": 1066.9,
       "games": 800,
-      "wins": 440,
+      "wins": 442,
       "draws": 0,
-      "losses": 360,
-      "win_pct": 55.0
+      "losses": 358,
+      "win_pct": 55.2
     },
     {
-      "rank": 59,
-      "id": "aboleth",
-      "rating": 1061.4,
+      "rank": 71,
+      "id": "giant_crocodile",
+      "rating": 1066.4,
       "games": 800,
-      "wins": 438,
+      "wins": 442,
       "draws": 0,
-      "losses": 362,
-      "win_pct": 54.8
+      "losses": 358,
+      "win_pct": 55.2
     },
     {
-      "rank": 60,
-      "id": "giant_shark",
-      "rating": 1061.4,
+      "rank": 72,
+      "id": "young_brass_dragon",
+      "rating": 1062.7,
       "games": 800,
-      "wins": 438,
+      "wins": 439,
       "draws": 0,
-      "losses": 362,
-      "win_pct": 54.8
+      "losses": 361,
+      "win_pct": 54.9
     },
     {
-      "rank": 61,
-      "id": "bone_devil",
+      "rank": 73,
+      "id": "earth_elemental",
+      "rating": 1062.6,
+      "games": 800,
+      "wins": 439,
+      "draws": 0,
+      "losses": 361,
+      "win_pct": 54.9
+    },
+    {
+      "rank": 74,
+      "id": "mage",
+      "rating": 1062.2,
+      "games": 800,
+      "wins": 439,
+      "draws": 0,
+      "losses": 361,
+      "win_pct": 54.9
+    },
+    {
+      "rank": 75,
+      "id": "shield_guardian",
       "rating": 1061.0,
       "games": 800,
       "wins": 438,
@@ -618,8 +758,8 @@
       "win_pct": 54.8
     },
     {
-      "rank": 62,
-      "id": "killer_whale",
+      "rank": 76,
+      "id": "hippopotamus",
       "rating": 1060.9,
       "games": 800,
       "wins": 438,
@@ -628,28 +768,38 @@
       "win_pct": 54.8
     },
     {
-      "rank": 63,
-      "id": "shield_guardian",
-      "rating": 1060.4,
-      "games": 800,
-      "wins": 438,
-      "draws": 0,
-      "losses": 362,
-      "win_pct": 54.8
-    },
-    {
-      "rank": 64,
-      "id": "earth_elemental",
+      "rank": 77,
+      "id": "aboleth",
       "rating": 1060.1,
       "games": 800,
-      "wins": 438,
+      "wins": 437,
       "draws": 0,
-      "losses": 362,
-      "win_pct": 54.8
+      "losses": 363,
+      "win_pct": 54.6
     },
     {
-      "rank": 65,
-      "id": "young_copper_dragon",
+      "rank": 78,
+      "id": "young_green_dragon",
+      "rating": 1060.0,
+      "games": 800,
+      "wins": 437,
+      "draws": 0,
+      "losses": 363,
+      "win_pct": 54.6
+    },
+    {
+      "rank": 79,
+      "id": "bulette",
+      "rating": 1059.4,
+      "games": 800,
+      "wins": 437,
+      "draws": 0,
+      "losses": 363,
+      "win_pct": 54.6
+    },
+    {
+      "rank": 80,
+      "id": "water_elemental",
       "rating": 1059.3,
       "games": 800,
       "wins": 437,
@@ -658,9 +808,29 @@
       "win_pct": 54.6
     },
     {
-      "rank": 66,
-      "id": "invisible_stalker",
-      "rating": 1058.2,
+      "rank": 81,
+      "id": "triceratops",
+      "rating": 1058.9,
+      "games": 800,
+      "wins": 437,
+      "draws": 0,
+      "losses": 363,
+      "win_pct": 54.6
+    },
+    {
+      "rank": 82,
+      "id": "tough_boss",
+      "rating": 1058.6,
+      "games": 800,
+      "wins": 437,
+      "draws": 0,
+      "losses": 363,
+      "win_pct": 54.6
+    },
+    {
+      "rank": 83,
+      "id": "drider",
+      "rating": 1057.7,
       "games": 800,
       "wins": 436,
       "draws": 0,
@@ -668,9 +838,9 @@
       "win_pct": 54.5
     },
     {
-      "rank": 67,
-      "id": "young_bronze_dragon",
-      "rating": 1057.8,
+      "rank": 84,
+      "id": "hezrou",
+      "rating": 1057.6,
       "games": 800,
       "wins": 436,
       "draws": 0,
@@ -678,19 +848,9 @@
       "win_pct": 54.5
     },
     {
-      "rank": 68,
-      "id": "mammoth",
-      "rating": 1057.0,
-      "games": 800,
-      "wins": 436,
-      "draws": 0,
-      "losses": 364,
-      "win_pct": 54.5
-    },
-    {
-      "rank": 69,
-      "id": "young_brass_dragon",
-      "rating": 1055.6,
+      "rank": 85,
+      "id": "dryad",
+      "rating": 1056.7,
       "games": 800,
       "wins": 435,
       "draws": 0,
@@ -698,77 +858,27 @@
       "win_pct": 54.4
     },
     {
-      "rank": 70,
-      "id": "hydra",
-      "rating": 1055.1,
+      "rank": 86,
+      "id": "storm_giant",
+      "rating": 1056.6,
       "games": 800,
-      "wins": 434,
+      "wins": 435,
       "draws": 0,
-      "losses": 366,
-      "win_pct": 54.2
+      "losses": 365,
+      "win_pct": 54.4
     },
     {
-      "rank": 71,
-      "id": "young_green_dragon",
-      "rating": 1054.9,
+      "rank": 87,
+      "id": "clay_golem",
+      "rating": 1056.3,
       "games": 800,
-      "wins": 434,
+      "wins": 435,
       "draws": 0,
-      "losses": 366,
-      "win_pct": 54.2
+      "losses": 365,
+      "win_pct": 54.4
     },
     {
-      "rank": 72,
-      "id": "bulette",
-      "rating": 1054.7,
-      "games": 800,
-      "wins": 434,
-      "draws": 0,
-      "losses": 366,
-      "win_pct": 54.2
-    },
-    {
-      "rank": 73,
-      "id": "oni",
-      "rating": 1054.2,
-      "games": 800,
-      "wins": 434,
-      "draws": 0,
-      "losses": 366,
-      "win_pct": 54.2
-    },
-    {
-      "rank": 74,
-      "id": "wyvern",
-      "rating": 1054.1,
-      "games": 800,
-      "wins": 434,
-      "draws": 0,
-      "losses": 366,
-      "win_pct": 54.2
-    },
-    {
-      "rank": 75,
-      "id": "giant_crocodile",
-      "rating": 1054.0,
-      "games": 800,
-      "wins": 434,
-      "draws": 0,
-      "losses": 366,
-      "win_pct": 54.2
-    },
-    {
-      "rank": 76,
-      "id": "hill_giant",
-      "rating": 1053.9,
-      "games": 800,
-      "wins": 434,
-      "draws": 0,
-      "losses": 366,
-      "win_pct": 54.2
-    },
-    {
-      "rank": 77,
+      "rank": 88,
       "id": "adult_brass_dragon",
       "rating": 1052.8,
       "games": 800,
@@ -778,9 +888,49 @@
       "win_pct": 54.1
     },
     {
-      "rank": 78,
-      "id": "drider",
-      "rating": 1049.9,
+      "rank": 89,
+      "id": "flesh_golem",
+      "rating": 1052.8,
+      "games": 800,
+      "wins": 433,
+      "draws": 0,
+      "losses": 367,
+      "win_pct": 54.1
+    },
+    {
+      "rank": 90,
+      "id": "planetar",
+      "rating": 1052.2,
+      "games": 800,
+      "wins": 433,
+      "draws": 0,
+      "losses": 367,
+      "win_pct": 54.1
+    },
+    {
+      "rank": 91,
+      "id": "young_black_dragon",
+      "rating": 1052.1,
+      "games": 800,
+      "wins": 432,
+      "draws": 0,
+      "losses": 368,
+      "win_pct": 54.0
+    },
+    {
+      "rank": 92,
+      "id": "ettin",
+      "rating": 1051.6,
+      "games": 800,
+      "wins": 432,
+      "draws": 0,
+      "losses": 368,
+      "win_pct": 54.0
+    },
+    {
+      "rank": 93,
+      "id": "adult_silver_dragon",
+      "rating": 1049.3,
       "games": 800,
       "wins": 431,
       "draws": 0,
@@ -788,39 +938,9 @@
       "win_pct": 53.9
     },
     {
-      "rank": 79,
-      "id": "solar",
-      "rating": 1049.8,
-      "games": 800,
-      "wins": 431,
-      "draws": 0,
-      "losses": 369,
-      "win_pct": 53.9
-    },
-    {
-      "rank": 80,
-      "id": "young_white_dragon",
-      "rating": 1049.5,
-      "games": 800,
-      "wins": 431,
-      "draws": 0,
-      "losses": 369,
-      "win_pct": 53.9
-    },
-    {
-      "rank": 81,
-      "id": "adult_green_dragon",
-      "rating": 1048.2,
-      "games": 800,
-      "wins": 420,
-      "draws": 20,
-      "losses": 360,
-      "win_pct": 52.5
-    },
-    {
-      "rank": 82,
-      "id": "deva",
-      "rating": 1048.0,
+      "rank": 94,
+      "id": "vrock",
+      "rating": 1048.6,
       "games": 800,
       "wins": 430,
       "draws": 0,
@@ -828,9 +948,9 @@
       "win_pct": 53.8
     },
     {
-      "rank": 83,
-      "id": "xorn",
-      "rating": 1047.5,
+      "rank": 95,
+      "id": "troll",
+      "rating": 1047.9,
       "games": 800,
       "wins": 430,
       "draws": 0,
@@ -838,9 +958,9 @@
       "win_pct": 53.8
     },
     {
-      "rank": 84,
-      "id": "hezrou",
-      "rating": 1046.4,
+      "rank": 96,
+      "id": "air_elemental",
+      "rating": 1047.4,
       "games": 800,
       "wins": 429,
       "draws": 0,
@@ -848,8 +968,38 @@
       "win_pct": 53.6
     },
     {
-      "rank": 85,
-      "id": "vampire",
+      "rank": 97,
+      "id": "salamander",
+      "rating": 1046.7,
+      "games": 800,
+      "wins": 429,
+      "draws": 0,
+      "losses": 371,
+      "win_pct": 53.6
+    },
+    {
+      "rank": 98,
+      "id": "guard_captain",
+      "rating": 1046.6,
+      "games": 800,
+      "wins": 429,
+      "draws": 0,
+      "losses": 371,
+      "win_pct": 53.6
+    },
+    {
+      "rank": 99,
+      "id": "oni",
+      "rating": 1045.9,
+      "games": 800,
+      "wins": 429,
+      "draws": 0,
+      "losses": 371,
+      "win_pct": 53.6
+    },
+    {
+      "rank": 100,
+      "id": "wereboar",
       "rating": 1045.7,
       "games": 800,
       "wins": 429,
@@ -858,9 +1008,9 @@
       "win_pct": 53.6
     },
     {
-      "rank": 86,
-      "id": "young_black_dragon",
-      "rating": 1045.4,
+      "rank": 101,
+      "id": "young_white_dragon",
+      "rating": 1044.6,
       "games": 800,
       "wins": 428,
       "draws": 0,
@@ -868,9 +1018,9 @@
       "win_pct": 53.5
     },
     {
-      "rank": 87,
-      "id": "flesh_golem",
-      "rating": 1045.2,
+      "rank": 102,
+      "id": "red_dragon_wyrmling",
+      "rating": 1044.5,
       "games": 800,
       "wins": 428,
       "draws": 0,
@@ -878,8 +1028,48 @@
       "win_pct": 53.5
     },
     {
-      "rank": 88,
-      "id": "succubus",
+      "rank": 103,
+      "id": "pirate_captain",
+      "rating": 1044.4,
+      "games": 800,
+      "wins": 428,
+      "draws": 0,
+      "losses": 372,
+      "win_pct": 53.5
+    },
+    {
+      "rank": 104,
+      "id": "gladiator",
+      "rating": 1043.6,
+      "games": 800,
+      "wins": 427,
+      "draws": 0,
+      "losses": 373,
+      "win_pct": 53.4
+    },
+    {
+      "rank": 105,
+      "id": "medusa",
+      "rating": 1043.4,
+      "games": 800,
+      "wins": 427,
+      "draws": 0,
+      "losses": 373,
+      "win_pct": 53.4
+    },
+    {
+      "rank": 106,
+      "id": "half_dragon",
+      "rating": 1043.2,
+      "games": 800,
+      "wins": 427,
+      "draws": 0,
+      "losses": 373,
+      "win_pct": 53.4
+    },
+    {
+      "rank": 107,
+      "id": "green_hag",
       "rating": 1043.1,
       "games": 800,
       "wins": 427,
@@ -888,9 +1078,9 @@
       "win_pct": 53.4
     },
     {
-      "rank": 89,
-      "id": "guard_captain",
-      "rating": 1042.9,
+      "rank": 108,
+      "id": "archelon",
+      "rating": 1043.1,
       "games": 800,
       "wins": 427,
       "draws": 0,
@@ -898,9 +1088,19 @@
       "win_pct": 53.4
     },
     {
-      "rank": 90,
-      "id": "pirate_captain",
-      "rating": 1041.4,
+      "rank": 109,
+      "id": "killer_whale",
+      "rating": 1042.7,
+      "games": 800,
+      "wins": 427,
+      "draws": 0,
+      "losses": 373,
+      "win_pct": 53.4
+    },
+    {
+      "rank": 110,
+      "id": "otyugh",
+      "rating": 1042.3,
       "games": 800,
       "wins": 426,
       "draws": 0,
@@ -908,39 +1108,9 @@
       "win_pct": 53.2
     },
     {
-      "rank": 91,
-      "id": "glabrezu",
-      "rating": 1040.3,
-      "games": 800,
-      "wins": 425,
-      "draws": 0,
-      "losses": 375,
-      "win_pct": 53.1
-    },
-    {
-      "rank": 92,
-      "id": "water_elemental",
-      "rating": 1040.1,
-      "games": 800,
-      "wins": 425,
-      "draws": 0,
-      "losses": 375,
-      "win_pct": 53.1
-    },
-    {
-      "rank": 93,
-      "id": "adult_silver_dragon",
-      "rating": 1039.8,
-      "games": 800,
-      "wins": 425,
-      "draws": 0,
-      "losses": 375,
-      "win_pct": 53.1
-    },
-    {
-      "rank": 94,
-      "id": "gladiator",
-      "rating": 1038.7,
+      "rank": 111,
+      "id": "adult_black_dragon",
+      "rating": 1039.0,
       "games": 800,
       "wins": 424,
       "draws": 0,
@@ -948,9 +1118,9 @@
       "win_pct": 53.0
     },
     {
-      "rank": 95,
-      "id": "salamander",
-      "rating": 1038.3,
+      "rank": 112,
+      "id": "bugbear_stalker",
+      "rating": 1038.9,
       "games": 800,
       "wins": 424,
       "draws": 0,
@@ -958,8 +1128,38 @@
       "win_pct": 53.0
     },
     {
-      "rank": 96,
-      "id": "dryad",
+      "rank": 113,
+      "id": "chain_devil",
+      "rating": 1038.5,
+      "games": 800,
+      "wins": 424,
+      "draws": 0,
+      "losses": 376,
+      "win_pct": 53.0
+    },
+    {
+      "rank": 114,
+      "id": "succubus",
+      "rating": 1036.2,
+      "games": 800,
+      "wins": 423,
+      "draws": 0,
+      "losses": 377,
+      "win_pct": 52.9
+    },
+    {
+      "rank": 115,
+      "id": "vampire_spawn",
+      "rating": 1035.6,
+      "games": 800,
+      "wins": 422,
+      "draws": 0,
+      "losses": 378,
+      "win_pct": 52.8
+    },
+    {
+      "rank": 116,
+      "id": "fire_elemental",
       "rating": 1035.5,
       "games": 800,
       "wins": 422,
@@ -968,9 +1168,9 @@
       "win_pct": 52.8
     },
     {
-      "rank": 97,
-      "id": "planetar",
-      "rating": 1035.2,
+      "rank": 117,
+      "id": "elephant",
+      "rating": 1035.3,
       "games": 800,
       "wins": 422,
       "draws": 0,
@@ -978,8 +1178,18 @@
       "win_pct": 52.8
     },
     {
-      "rank": 98,
-      "id": "clay_golem",
+      "rank": 118,
+      "id": "chimera",
+      "rating": 1035.0,
+      "games": 800,
+      "wins": 422,
+      "draws": 0,
+      "losses": 378,
+      "win_pct": 52.8
+    },
+    {
+      "rank": 119,
+      "id": "owlbear",
       "rating": 1034.7,
       "games": 800,
       "wins": 422,
@@ -988,9 +1198,9 @@
       "win_pct": 52.8
     },
     {
-      "rank": 99,
-      "id": "half_dragon",
-      "rating": 1034.7,
+      "rank": 120,
+      "id": "ogre_zombie",
+      "rating": 1034.5,
       "games": 800,
       "wins": 422,
       "draws": 0,
@@ -998,59 +1208,29 @@
       "win_pct": 52.8
     },
     {
-      "rank": 100,
+      "rank": 121,
+      "id": "werewolf",
+      "rating": 1033.2,
+      "games": 800,
+      "wins": 421,
+      "draws": 0,
+      "losses": 379,
+      "win_pct": 52.6
+    },
+    {
+      "rank": 122,
+      "id": "warrior_veteran",
+      "rating": 1031.6,
+      "games": 800,
+      "wins": 420,
+      "draws": 0,
+      "losses": 380,
+      "win_pct": 52.5
+    },
+    {
+      "rank": 123,
       "id": "barbed_devil",
-      "rating": 1033.7,
-      "games": 800,
-      "wins": 421,
-      "draws": 0,
-      "losses": 379,
-      "win_pct": 52.6
-    },
-    {
-      "rank": 101,
-      "id": "guardian_naga",
-      "rating": 1033.6,
-      "games": 800,
-      "wins": 421,
-      "draws": 0,
-      "losses": 379,
-      "win_pct": 52.6
-    },
-    {
-      "rank": 102,
-      "id": "medusa",
-      "rating": 1033.6,
-      "games": 800,
-      "wins": 421,
-      "draws": 0,
-      "losses": 379,
-      "win_pct": 52.6
-    },
-    {
-      "rank": 103,
-      "id": "troll",
-      "rating": 1031.2,
-      "games": 800,
-      "wins": 420,
-      "draws": 0,
-      "losses": 380,
-      "win_pct": 52.5
-    },
-    {
-      "rank": 104,
-      "id": "winter_wolf",
-      "rating": 1031.2,
-      "games": 800,
-      "wins": 420,
-      "draws": 0,
-      "losses": 380,
-      "win_pct": 52.5
-    },
-    {
-      "rank": 105,
-      "id": "air_elemental",
-      "rating": 1031.1,
+      "rating": 1031.0,
       "games": 800,
       "wins": 419,
       "draws": 0,
@@ -1058,19 +1238,39 @@
       "win_pct": 52.4
     },
     {
-      "rank": 106,
-      "id": "archelon",
+      "rank": 124,
+      "id": "winter_wolf",
+      "rating": 1030.2,
+      "games": 800,
+      "wins": 419,
+      "draws": 0,
+      "losses": 381,
+      "win_pct": 52.4
+    },
+    {
+      "rank": 125,
+      "id": "rhinoceros",
+      "rating": 1029.9,
+      "games": 800,
+      "wins": 419,
+      "draws": 0,
+      "losses": 381,
+      "win_pct": 52.4
+    },
+    {
+      "rank": 126,
+      "id": "ghost",
       "rating": 1029.6,
       "games": 800,
-      "wins": 419,
+      "wins": 418,
       "draws": 0,
-      "losses": 381,
-      "win_pct": 52.4
+      "losses": 382,
+      "win_pct": 52.2
     },
     {
-      "rank": 107,
-      "id": "storm_giant",
-      "rating": 1029.5,
+      "rank": 127,
+      "id": "minotaur_of_baphomet",
+      "rating": 1028.5,
       "games": 800,
       "wins": 418,
       "draws": 0,
@@ -1078,29 +1278,9 @@
       "win_pct": 52.2
     },
     {
-      "rank": 108,
-      "id": "chimera",
-      "rating": 1029.3,
-      "games": 800,
-      "wins": 418,
-      "draws": 0,
-      "losses": 382,
-      "win_pct": 52.2
-    },
-    {
-      "rank": 109,
-      "id": "werewolf",
-      "rating": 1028.2,
-      "games": 800,
-      "wins": 418,
-      "draws": 0,
-      "losses": 382,
-      "win_pct": 52.2
-    },
-    {
-      "rank": 110,
-      "id": "green_hag",
-      "rating": 1027.7,
+      "rank": 128,
+      "id": "chuul",
+      "rating": 1027.8,
       "games": 800,
       "wins": 417,
       "draws": 0,
@@ -1108,8 +1288,18 @@
       "win_pct": 52.1
     },
     {
-      "rank": 111,
-      "id": "vrock",
+      "rank": 129,
+      "id": "shambling_mound",
+      "rating": 1027.4,
+      "games": 800,
+      "wins": 417,
+      "draws": 0,
+      "losses": 383,
+      "win_pct": 52.1
+    },
+    {
+      "rank": 130,
+      "id": "giant_constrictor_snake",
       "rating": 1026.8,
       "games": 800,
       "wins": 417,
@@ -1118,8 +1308,18 @@
       "win_pct": 52.1
     },
     {
-      "rank": 112,
-      "id": "weretiger",
+      "rank": 131,
+      "id": "allosaurus",
+      "rating": 1025.9,
+      "games": 800,
+      "wins": 416,
+      "draws": 0,
+      "losses": 384,
+      "win_pct": 52.0
+    },
+    {
+      "rank": 132,
+      "id": "nightmare",
       "rating": 1025.5,
       "games": 800,
       "wins": 416,
@@ -1128,9 +1328,29 @@
       "win_pct": 52.0
     },
     {
-      "rank": 113,
-      "id": "chain_devil",
-      "rating": 1024.0,
+      "rank": 133,
+      "id": "ankylosaurus",
+      "rating": 1025.3,
+      "games": 800,
+      "wins": 416,
+      "draws": 0,
+      "losses": 384,
+      "win_pct": 52.0
+    },
+    {
+      "rank": 134,
+      "id": "weretiger",
+      "rating": 1025.2,
+      "games": 800,
+      "wins": 416,
+      "draws": 0,
+      "losses": 384,
+      "win_pct": 52.0
+    },
+    {
+      "rank": 135,
+      "id": "gold_dragon_wyrmling",
+      "rating": 1023.4,
       "games": 800,
       "wins": 415,
       "draws": 0,
@@ -1138,9 +1358,9 @@
       "win_pct": 51.9
     },
     {
-      "rank": 114,
-      "id": "otyugh",
-      "rating": 1023.9,
+      "rank": 136,
+      "id": "assassin",
+      "rating": 1022.9,
       "games": 800,
       "wins": 415,
       "draws": 0,
@@ -1148,19 +1368,9 @@
       "win_pct": 51.9
     },
     {
-      "rank": 115,
-      "id": "nightmare",
-      "rating": 1023.8,
-      "games": 800,
-      "wins": 415,
-      "draws": 0,
-      "losses": 385,
-      "win_pct": 51.9
-    },
-    {
-      "rank": 116,
-      "id": "elephant",
-      "rating": 1023.1,
+      "rank": 137,
+      "id": "wraith",
+      "rating": 1022.4,
       "games": 800,
       "wins": 414,
       "draws": 0,
@@ -1168,9 +1378,9 @@
       "win_pct": 51.8
     },
     {
-      "rank": 117,
-      "id": "tough_boss",
-      "rating": 1022.2,
+      "rank": 138,
+      "id": "doppelganger",
+      "rating": 1022.3,
       "games": 800,
       "wins": 414,
       "draws": 0,
@@ -1178,19 +1388,9 @@
       "win_pct": 51.8
     },
     {
-      "rank": 118,
-      "id": "ettin",
-      "rating": 1021.9,
-      "games": 800,
-      "wins": 414,
-      "draws": 0,
-      "losses": 386,
-      "win_pct": 51.8
-    },
-    {
-      "rank": 119,
-      "id": "hippopotamus",
-      "rating": 1021.4,
+      "rank": 139,
+      "id": "cloaker",
+      "rating": 1020.6,
       "games": 800,
       "wins": 413,
       "draws": 0,
@@ -1198,9 +1398,9 @@
       "win_pct": 51.6
     },
     {
-      "rank": 120,
-      "id": "shambling_mound",
-      "rating": 1021.0,
+      "rank": 140,
+      "id": "guardian_naga",
+      "rating": 1020.5,
       "games": 800,
       "wins": 413,
       "draws": 0,
@@ -1208,9 +1408,9 @@
       "win_pct": 51.6
     },
     {
-      "rank": 121,
-      "id": "awakened_tree",
-      "rating": 1020.7,
+      "rank": 141,
+      "id": "cloud_giant",
+      "rating": 1019.9,
       "games": 800,
       "wins": 413,
       "draws": 0,
@@ -1218,9 +1418,29 @@
       "win_pct": 51.6
     },
     {
-      "rank": 122,
-      "id": "chuul",
-      "rating": 1018.2,
+      "rank": 142,
+      "id": "ochre_jelly",
+      "rating": 1018.9,
+      "games": 800,
+      "wins": 412,
+      "draws": 0,
+      "losses": 388,
+      "win_pct": 51.5
+    },
+    {
+      "rank": 143,
+      "id": "knight",
+      "rating": 1018.7,
+      "games": 800,
+      "wins": 412,
+      "draws": 0,
+      "losses": 388,
+      "win_pct": 51.5
+    },
+    {
+      "rank": 144,
+      "id": "saber_toothed_tiger",
+      "rating": 1018.0,
       "games": 800,
       "wins": 411,
       "draws": 0,
@@ -1228,9 +1448,19 @@
       "win_pct": 51.4
     },
     {
-      "rank": 123,
+      "rank": 145,
+      "id": "ankheg",
+      "rating": 1017.8,
+      "games": 800,
+      "wins": 411,
+      "draws": 0,
+      "losses": 389,
+      "win_pct": 51.4
+    },
+    {
+      "rank": 146,
       "id": "black_pudding",
-      "rating": 1017.9,
+      "rating": 1017.5,
       "games": 800,
       "wins": 411,
       "draws": 0,
@@ -1238,48 +1468,8 @@
       "win_pct": 51.4
     },
     {
-      "rank": 124,
-      "id": "owlbear",
-      "rating": 1016.6,
-      "games": 800,
-      "wins": 410,
-      "draws": 0,
-      "losses": 390,
-      "win_pct": 51.2
-    },
-    {
-      "rank": 125,
-      "id": "fire_elemental",
-      "rating": 1016.5,
-      "games": 800,
-      "wins": 410,
-      "draws": 0,
-      "losses": 390,
-      "win_pct": 51.2
-    },
-    {
-      "rank": 126,
-      "id": "bugbear_stalker",
-      "rating": 1016.4,
-      "games": 800,
-      "wins": 410,
-      "draws": 0,
-      "losses": 390,
-      "win_pct": 51.2
-    },
-    {
-      "rank": 127,
-      "id": "bearded_devil",
-      "rating": 1016.3,
-      "games": 800,
-      "wins": 410,
-      "draws": 0,
-      "losses": 390,
-      "win_pct": 51.2
-    },
-    {
-      "rank": 128,
-      "id": "rhinoceros",
+      "rank": 147,
+      "id": "swarm_of_crawling_claws",
       "rating": 1015.9,
       "games": 800,
       "wins": 410,
@@ -1288,9 +1478,9 @@
       "win_pct": 51.2
     },
     {
-      "rank": 129,
-      "id": "ghost",
-      "rating": 1015.4,
+      "rank": 148,
+      "id": "plesiosaurus",
+      "rating": 1015.9,
       "games": 800,
       "wins": 410,
       "draws": 0,
@@ -1298,9 +1488,9 @@
       "win_pct": 51.2
     },
     {
-      "rank": 130,
-      "id": "blue_dragon_wyrmling",
-      "rating": 1014.3,
+      "rank": 149,
+      "id": "minotaur_skeleton",
+      "rating": 1014.8,
       "games": 800,
       "wins": 409,
       "draws": 0,
@@ -1308,8 +1498,38 @@
       "win_pct": 51.1
     },
     {
-      "rank": 131,
-      "id": "minotaur_of_baphomet",
+      "rank": 150,
+      "id": "ogre",
+      "rating": 1014.6,
+      "games": 800,
+      "wins": 409,
+      "draws": 0,
+      "losses": 391,
+      "win_pct": 51.1
+    },
+    {
+      "rank": 151,
+      "id": "silver_dragon_wyrmling",
+      "rating": 1014.4,
+      "games": 800,
+      "wins": 409,
+      "draws": 0,
+      "losses": 391,
+      "win_pct": 51.1
+    },
+    {
+      "rank": 152,
+      "id": "blue_dragon_wyrmling",
+      "rating": 1014.4,
+      "games": 800,
+      "wins": 409,
+      "draws": 0,
+      "losses": 391,
+      "win_pct": 51.1
+    },
+    {
+      "rank": 153,
+      "id": "hunter_shark",
       "rating": 1014.2,
       "games": 800,
       "wins": 409,
@@ -1318,9 +1538,9 @@
       "win_pct": 51.1
     },
     {
-      "rank": 132,
-      "id": "wereboar",
-      "rating": 1012.9,
+      "rank": 154,
+      "id": "manticore",
+      "rating": 1013.1,
       "games": 800,
       "wins": 408,
       "draws": 0,
@@ -1328,29 +1548,9 @@
       "win_pct": 51.0
     },
     {
-      "rank": 133,
-      "id": "red_dragon_wyrmling",
-      "rating": 1012.7,
-      "games": 800,
-      "wins": 408,
-      "draws": 0,
-      "losses": 392,
-      "win_pct": 51.0
-    },
-    {
-      "rank": 134,
-      "id": "assassin",
-      "rating": 1012.1,
-      "games": 800,
-      "wins": 408,
-      "draws": 0,
-      "losses": 392,
-      "win_pct": 51.0
-    },
-    {
-      "rank": 135,
-      "id": "swarm_of_crawling_claws",
-      "rating": 1011.4,
+      "rank": 155,
+      "id": "centaur_trooper",
+      "rating": 1011.9,
       "games": 800,
       "wins": 407,
       "draws": 0,
@@ -1358,8 +1558,18 @@
       "win_pct": 50.9
     },
     {
-      "rank": 136,
-      "id": "ankylosaurus",
+      "rank": 156,
+      "id": "hell_hound",
+      "rating": 1011.6,
+      "games": 800,
+      "wins": 407,
+      "draws": 0,
+      "losses": 393,
+      "win_pct": 50.9
+    },
+    {
+      "rank": 157,
+      "id": "awakened_tree",
       "rating": 1011.2,
       "games": 800,
       "wins": 407,
@@ -1368,8 +1578,48 @@
       "win_pct": 50.9
     },
     {
-      "rank": 137,
-      "id": "wraith",
+      "rank": 158,
+      "id": "wererat",
+      "rating": 1011.2,
+      "games": 800,
+      "wins": 407,
+      "draws": 0,
+      "losses": 393,
+      "win_pct": 50.9
+    },
+    {
+      "rank": 159,
+      "id": "azer_sentinel",
+      "rating": 1011.1,
+      "games": 800,
+      "wins": 407,
+      "draws": 0,
+      "losses": 393,
+      "win_pct": 50.9
+    },
+    {
+      "rank": 160,
+      "id": "merrow",
+      "rating": 1011.1,
+      "games": 800,
+      "wins": 407,
+      "draws": 0,
+      "losses": 393,
+      "win_pct": 50.9
+    },
+    {
+      "rank": 161,
+      "id": "mimic",
+      "rating": 1011.0,
+      "games": 800,
+      "wins": 407,
+      "draws": 0,
+      "losses": 393,
+      "win_pct": 50.9
+    },
+    {
+      "rank": 162,
+      "id": "giant_hyena",
       "rating": 1010.9,
       "games": 800,
       "wins": 407,
@@ -1378,9 +1628,9 @@
       "win_pct": 50.9
     },
     {
-      "rank": 138,
-      "id": "ogre_zombie",
-      "rating": 1009.9,
+      "rank": 163,
+      "id": "grick",
+      "rating": 1010.5,
       "games": 800,
       "wins": 406,
       "draws": 0,
@@ -1388,9 +1638,9 @@
       "win_pct": 50.8
     },
     {
-      "rank": 139,
-      "id": "ogre",
-      "rating": 1009.0,
+      "rank": 164,
+      "id": "basilisk",
+      "rating": 1010.2,
       "games": 800,
       "wins": 406,
       "draws": 0,
@@ -1398,9 +1648,19 @@
       "win_pct": 50.8
     },
     {
-      "rank": 140,
-      "id": "knight",
-      "rating": 1008.2,
+      "rank": 165,
+      "id": "bearded_devil",
+      "rating": 1009.8,
+      "games": 800,
+      "wins": 406,
+      "draws": 0,
+      "losses": 394,
+      "win_pct": 50.8
+    },
+    {
+      "rank": 166,
+      "id": "gelatinous_cube",
+      "rating": 1008.3,
       "games": 800,
       "wins": 405,
       "draws": 0,
@@ -1408,9 +1668,9 @@
       "win_pct": 50.6
     },
     {
-      "rank": 141,
-      "id": "cloud_giant",
-      "rating": 1007.8,
+      "rank": 167,
+      "id": "pegasus",
+      "rating": 1008.3,
       "games": 800,
       "wins": 405,
       "draws": 0,
@@ -1418,9 +1678,49 @@
       "win_pct": 50.6
     },
     {
-      "rank": 142,
-      "id": "hell_hound",
-      "rating": 1006.3,
+      "rank": 168,
+      "id": "griffon",
+      "rating": 1008.1,
+      "games": 800,
+      "wins": 405,
+      "draws": 0,
+      "losses": 395,
+      "win_pct": 50.6
+    },
+    {
+      "rank": 169,
+      "id": "will_o_wisp",
+      "rating": 1008.0,
+      "games": 800,
+      "wins": 405,
+      "draws": 0,
+      "losses": 395,
+      "win_pct": 50.6
+    },
+    {
+      "rank": 170,
+      "id": "phase_spider",
+      "rating": 1007.6,
+      "games": 800,
+      "wins": 405,
+      "draws": 0,
+      "losses": 395,
+      "win_pct": 50.6
+    },
+    {
+      "rank": 171,
+      "id": "giant_octopus",
+      "rating": 1007.3,
+      "games": 800,
+      "wins": 405,
+      "draws": 0,
+      "losses": 395,
+      "win_pct": 50.6
+    },
+    {
+      "rank": 172,
+      "id": "berserker",
+      "rating": 1006.9,
       "games": 800,
       "wins": 404,
       "draws": 0,
@@ -1428,9 +1728,9 @@
       "win_pct": 50.5
     },
     {
-      "rank": 143,
-      "id": "plesiosaurus",
-      "rating": 1006.1,
+      "rank": 173,
+      "id": "mummy_lord",
+      "rating": 1006.8,
       "games": 800,
       "wins": 404,
       "draws": 0,
@@ -1438,9 +1738,9 @@
       "win_pct": 50.5
     },
     {
-      "rank": 144,
-      "id": "warrior_veteran",
-      "rating": 1005.8,
+      "rank": 174,
+      "id": "polar_bear",
+      "rating": 1006.0,
       "games": 800,
       "wins": 404,
       "draws": 0,
@@ -1448,29 +1748,9 @@
       "win_pct": 50.5
     },
     {
-      "rank": 145,
-      "id": "cloaker",
-      "rating": 1005.8,
-      "games": 800,
-      "wins": 404,
-      "draws": 0,
-      "losses": 396,
-      "win_pct": 50.5
-    },
-    {
-      "rank": 146,
-      "id": "saber_toothed_tiger",
-      "rating": 1005.8,
-      "games": 800,
-      "wins": 404,
-      "draws": 0,
-      "losses": 396,
-      "win_pct": 50.5
-    },
-    {
-      "rank": 147,
-      "id": "doppelganger",
-      "rating": 1004.9,
+      "rank": 175,
+      "id": "swarm_of_venomous_snakes",
+      "rating": 1004.5,
       "games": 800,
       "wins": 403,
       "draws": 0,
@@ -1478,8 +1758,58 @@
       "win_pct": 50.4
     },
     {
-      "rank": 148,
-      "id": "allosaurus",
+      "rank": 176,
+      "id": "giant_elk",
+      "rating": 1004.3,
+      "games": 800,
+      "wins": 403,
+      "draws": 0,
+      "losses": 397,
+      "win_pct": 50.4
+    },
+    {
+      "rank": 177,
+      "id": "vampire_familiar",
+      "rating": 1004.2,
+      "games": 800,
+      "wins": 403,
+      "draws": 0,
+      "losses": 397,
+      "win_pct": 50.4
+    },
+    {
+      "rank": 178,
+      "id": "night_hag",
+      "rating": 1004.0,
+      "games": 800,
+      "wins": 387,
+      "draws": 20,
+      "losses": 393,
+      "win_pct": 48.4
+    },
+    {
+      "rank": 179,
+      "id": "gargoyle",
+      "rating": 1003.3,
+      "games": 800,
+      "wins": 402,
+      "draws": 0,
+      "losses": 398,
+      "win_pct": 50.2
+    },
+    {
+      "rank": 180,
+      "id": "tiger",
+      "rating": 1003.2,
+      "games": 800,
+      "wins": 402,
+      "draws": 0,
+      "losses": 398,
+      "win_pct": 50.2
+    },
+    {
+      "rank": 181,
+      "id": "ettercap",
       "rating": 1003.1,
       "games": 800,
       "wins": 402,
@@ -1488,48 +1818,8 @@
       "win_pct": 50.2
     },
     {
-      "rank": 149,
-      "id": "giant_constrictor_snake",
-      "rating": 1003.0,
-      "games": 800,
-      "wins": 402,
-      "draws": 0,
-      "losses": 398,
-      "win_pct": 50.2
-    },
-    {
-      "rank": 150,
-      "id": "night_hag",
-      "rating": 1001.7,
-      "games": 800,
-      "wins": 381,
-      "draws": 40,
-      "losses": 379,
-      "win_pct": 47.6
-    },
-    {
-      "rank": 151,
-      "id": "vampire_spawn",
-      "rating": 1001.6,
-      "games": 800,
-      "wins": 401,
-      "draws": 0,
-      "losses": 399,
-      "win_pct": 50.1
-    },
-    {
-      "rank": 152,
-      "id": "griffon",
-      "rating": 1000.5,
-      "games": 800,
-      "wins": 400,
-      "draws": 0,
-      "losses": 400,
-      "win_pct": 50.0
-    },
-    {
-      "rank": 153,
-      "id": "silver_dragon_wyrmling",
+      "rank": 182,
+      "id": "sea_hag",
       "rating": 1000.0,
       "games": 800,
       "wins": 400,
@@ -1538,39 +1828,19 @@
       "win_pct": 50.0
     },
     {
-      "rank": 154,
-      "id": "gargoyle",
-      "rating": 998.9,
-      "games": 800,
-      "wins": 399,
-      "draws": 0,
-      "losses": 401,
-      "win_pct": 49.9
-    },
-    {
-      "rank": 155,
-      "id": "sea_hag",
-      "rating": 998.7,
-      "games": 800,
-      "wins": 399,
-      "draws": 0,
-      "losses": 401,
-      "win_pct": 49.9
-    },
-    {
-      "rank": 156,
-      "id": "will_o_wisp",
-      "rating": 998.7,
-      "games": 800,
-      "wins": 399,
-      "draws": 0,
-      "losses": 401,
-      "win_pct": 49.9
-    },
-    {
-      "rank": 157,
+      "rank": 183,
       "id": "green_dragon_wyrmling",
-      "rating": 997.9,
+      "rating": 999.5,
+      "games": 800,
+      "wins": 400,
+      "draws": 0,
+      "losses": 400,
+      "win_pct": 50.0
+    },
+    {
+      "rank": 184,
+      "id": "quasit",
+      "rating": 998.5,
       "games": 800,
       "wins": 399,
       "draws": 0,
@@ -1578,8 +1848,8 @@
       "win_pct": 49.9
     },
     {
-      "rank": 158,
-      "id": "gold_dragon_wyrmling",
+      "rank": 185,
+      "id": "mummy",
       "rating": 997.4,
       "games": 800,
       "wins": 398,
@@ -1588,18 +1858,8 @@
       "win_pct": 49.8
     },
     {
-      "rank": 159,
-      "id": "hobgoblin_captain",
-      "rating": 997.2,
-      "games": 800,
-      "wins": 398,
-      "draws": 0,
-      "losses": 402,
-      "win_pct": 49.8
-    },
-    {
-      "rank": 160,
-      "id": "phase_spider",
+      "rank": 186,
+      "id": "bronze_dragon_wyrmling",
       "rating": 997.0,
       "games": 800,
       "wins": 398,
@@ -1608,9 +1868,9 @@
       "win_pct": 49.8
     },
     {
-      "rank": 161,
-      "id": "manticore",
-      "rating": 996.6,
+      "rank": 187,
+      "id": "tough",
+      "rating": 996.7,
       "games": 800,
       "wins": 398,
       "draws": 0,
@@ -1618,9 +1878,9 @@
       "win_pct": 49.8
     },
     {
-      "rank": 162,
-      "id": "wererat",
-      "rating": 996.4,
+      "rank": 188,
+      "id": "bandit_captain",
+      "rating": 996.7,
       "games": 800,
       "wins": 398,
       "draws": 0,
@@ -1628,9 +1888,9 @@
       "win_pct": 49.8
     },
     {
-      "rank": 163,
-      "id": "ankheg",
-      "rating": 995.4,
+      "rank": 189,
+      "id": "animated_rug_of_smothering",
+      "rating": 995.5,
       "games": 800,
       "wins": 397,
       "draws": 0,
@@ -1638,9 +1898,9 @@
       "win_pct": 49.6
     },
     {
-      "rank": 164,
-      "id": "berserker",
-      "rating": 995.2,
+      "rank": 190,
+      "id": "hobgoblin_captain",
+      "rating": 995.5,
       "games": 800,
       "wins": 397,
       "draws": 0,
@@ -1648,9 +1908,9 @@
       "win_pct": 49.6
     },
     {
-      "rank": 165,
-      "id": "azer_sentinel",
-      "rating": 994.0,
+      "rank": 191,
+      "id": "white_dragon_wyrmling",
+      "rating": 993.5,
       "games": 800,
       "wins": 396,
       "draws": 0,
@@ -1658,58 +1918,38 @@
       "win_pct": 49.5
     },
     {
-      "rank": 166,
-      "id": "basilisk",
-      "rating": 992.6,
+      "rank": 192,
+      "id": "worg",
+      "rating": 993.3,
       "games": 800,
-      "wins": 395,
+      "wins": 396,
       "draws": 0,
-      "losses": 405,
-      "win_pct": 49.4
+      "losses": 404,
+      "win_pct": 49.5
     },
     {
-      "rank": 167,
-      "id": "gelatinous_cube",
-      "rating": 992.6,
+      "rank": 193,
+      "id": "pirate",
+      "rating": 991.1,
       "games": 800,
-      "wins": 395,
+      "wins": 394,
       "draws": 0,
-      "losses": 405,
-      "win_pct": 49.4
+      "losses": 406,
+      "win_pct": 49.2
     },
     {
-      "rank": 168,
-      "id": "pegasus",
-      "rating": 992.2,
+      "rank": 194,
+      "id": "dire_wolf",
+      "rating": 990.7,
       "games": 800,
-      "wins": 395,
+      "wins": 394,
       "draws": 0,
-      "losses": 405,
-      "win_pct": 49.4
+      "losses": 406,
+      "win_pct": 49.2
     },
     {
-      "rank": 169,
-      "id": "mummy",
-      "rating": 991.3,
-      "games": 800,
-      "wins": 395,
-      "draws": 0,
-      "losses": 405,
-      "win_pct": 49.4
-    },
-    {
-      "rank": 170,
-      "id": "vampire_familiar",
-      "rating": 991.3,
-      "games": 800,
-      "wins": 395,
-      "draws": 0,
-      "losses": 405,
-      "win_pct": 49.4
-    },
-    {
-      "rank": 171,
-      "id": "giant_elk",
+      "rank": 195,
+      "id": "ghast",
       "rating": 990.1,
       "games": 800,
       "wins": 394,
@@ -1718,9 +1958,9 @@
       "win_pct": 49.2
     },
     {
-      "rank": 172,
-      "id": "hunter_shark",
-      "rating": 989.9,
+      "rank": 196,
+      "id": "lion",
+      "rating": 990.0,
       "games": 800,
       "wins": 394,
       "draws": 0,
@@ -1728,38 +1968,8 @@
       "win_pct": 49.2
     },
     {
-      "rank": 173,
-      "id": "giant_scorpion",
-      "rating": 989.1,
-      "games": 800,
-      "wins": 393,
-      "draws": 0,
-      "losses": 407,
-      "win_pct": 49.1
-    },
-    {
-      "rank": 174,
+      "rank": 197,
       "id": "giant_boar",
-      "rating": 989.0,
-      "games": 800,
-      "wins": 393,
-      "draws": 0,
-      "losses": 407,
-      "win_pct": 49.1
-    },
-    {
-      "rank": 175,
-      "id": "minotaur_skeleton",
-      "rating": 988.9,
-      "games": 800,
-      "wins": 393,
-      "draws": 0,
-      "losses": 407,
-      "win_pct": 49.1
-    },
-    {
-      "rank": 176,
-      "id": "grick",
       "rating": 988.8,
       "games": 800,
       "wins": 393,
@@ -1768,9 +1978,9 @@
       "win_pct": 49.1
     },
     {
-      "rank": 177,
-      "id": "polar_bear",
-      "rating": 988.8,
+      "rank": 198,
+      "id": "warhorse_skeleton",
+      "rating": 988.4,
       "games": 800,
       "wins": 393,
       "draws": 0,
@@ -1778,19 +1988,9 @@
       "win_pct": 49.1
     },
     {
-      "rank": 178,
-      "id": "ochre_jelly",
-      "rating": 988.5,
-      "games": 800,
-      "wins": 393,
-      "draws": 0,
-      "losses": 407,
-      "win_pct": 49.1
-    },
-    {
-      "rank": 179,
-      "id": "giant_octopus",
-      "rating": 988.0,
+      "rank": 199,
+      "id": "swarm_of_piranhas",
+      "rating": 987.6,
       "games": 800,
       "wins": 392,
       "draws": 0,
@@ -1798,9 +1998,9 @@
       "win_pct": 49.0
     },
     {
-      "rank": 180,
-      "id": "centaur_trooper",
-      "rating": 987.1,
+      "rank": 200,
+      "id": "gnoll_warrior",
+      "rating": 987.4,
       "games": 800,
       "wins": 392,
       "draws": 0,
@@ -1808,18 +2008,48 @@
       "win_pct": 49.0
     },
     {
-      "rank": 181,
-      "id": "mummy_lord",
-      "rating": 985.4,
+      "rank": 201,
+      "id": "hobgoblin_warrior",
+      "rating": 987.3,
       "games": 800,
-      "wins": 381,
-      "draws": 20,
-      "losses": 399,
-      "win_pct": 47.6
+      "wins": 392,
+      "draws": 0,
+      "losses": 408,
+      "win_pct": 49.0
     },
     {
-      "rank": 182,
-      "id": "giant_hyena",
+      "rank": 202,
+      "id": "rust_monster",
+      "rating": 987.2,
+      "games": 800,
+      "wins": 392,
+      "draws": 0,
+      "losses": 408,
+      "win_pct": 49.0
+    },
+    {
+      "rank": 203,
+      "id": "giant_spider",
+      "rating": 985.8,
+      "games": 800,
+      "wins": 391,
+      "draws": 0,
+      "losses": 409,
+      "win_pct": 48.9
+    },
+    {
+      "rank": 204,
+      "id": "cultist_fanatic",
+      "rating": 985.6,
+      "games": 800,
+      "wins": 391,
+      "draws": 0,
+      "losses": 409,
+      "win_pct": 48.9
+    },
+    {
+      "rank": 205,
+      "id": "bugbear_warrior",
       "rating": 985.2,
       "games": 800,
       "wins": 391,
@@ -1828,9 +2058,19 @@
       "win_pct": 48.9
     },
     {
-      "rank": 183,
-      "id": "black_dragon_wyrmling",
-      "rating": 984.4,
+      "rank": 206,
+      "id": "giant_scorpion",
+      "rating": 984.7,
+      "games": 800,
+      "wins": 391,
+      "draws": 0,
+      "losses": 409,
+      "win_pct": 48.9
+    },
+    {
+      "rank": 207,
+      "id": "animated_flying_sword",
+      "rating": 984.6,
       "games": 800,
       "wins": 390,
       "draws": 0,
@@ -1838,8 +2078,18 @@
       "win_pct": 48.8
     },
     {
-      "rank": 184,
-      "id": "giant_vulture",
+      "rank": 208,
+      "id": "copper_dragon_wyrmling",
+      "rating": 984.3,
+      "games": 800,
+      "wins": 390,
+      "draws": 0,
+      "losses": 410,
+      "win_pct": 48.8
+    },
+    {
+      "rank": 209,
+      "id": "wight",
       "rating": 984.0,
       "games": 800,
       "wins": 390,
@@ -1848,9 +2098,9 @@
       "win_pct": 48.8
     },
     {
-      "rank": 185,
-      "id": "swarm_of_venomous_snakes",
-      "rating": 983.9,
+      "rank": 210,
+      "id": "imp",
+      "rating": 984.0,
       "games": 800,
       "wins": 390,
       "draws": 0,
@@ -1858,38 +2108,8 @@
       "win_pct": 48.8
     },
     {
-      "rank": 186,
-      "id": "bugbear_warrior",
-      "rating": 983.8,
-      "games": 800,
-      "wins": 390,
-      "draws": 0,
-      "losses": 410,
-      "win_pct": 48.8
-    },
-    {
-      "rank": 187,
-      "id": "pirate",
-      "rating": 983.5,
-      "games": 800,
-      "wins": 390,
-      "draws": 0,
-      "losses": 410,
-      "win_pct": 48.8
-    },
-    {
-      "rank": 188,
-      "id": "bronze_dragon_wyrmling",
-      "rating": 983.0,
-      "games": 800,
-      "wins": 389,
-      "draws": 0,
-      "losses": 411,
-      "win_pct": 48.6
-    },
-    {
-      "rank": 189,
-      "id": "animated_armor",
+      "rank": 211,
+      "id": "gibbering_mouther",
       "rating": 982.9,
       "games": 800,
       "wins": 389,
@@ -1898,9 +2118,9 @@
       "win_pct": 48.6
     },
     {
-      "rank": 190,
-      "id": "wight",
-      "rating": 982.5,
+      "rank": 212,
+      "id": "giant_vulture",
+      "rating": 982.6,
       "games": 800,
       "wins": 389,
       "draws": 0,
@@ -1908,8 +2128,8 @@
       "win_pct": 48.6
     },
     {
-      "rank": 191,
-      "id": "tiger",
+      "rank": 213,
+      "id": "giant_seahorse",
       "rating": 982.4,
       "games": 800,
       "wins": 389,
@@ -1918,9 +2138,99 @@
       "win_pct": 48.6
     },
     {
-      "rank": 192,
-      "id": "lion",
-      "rating": 979.0,
+      "rank": 214,
+      "id": "warhorse",
+      "rating": 982.3,
+      "games": 800,
+      "wins": 389,
+      "draws": 0,
+      "losses": 411,
+      "win_pct": 48.6
+    },
+    {
+      "rank": 215,
+      "id": "blink_dog",
+      "rating": 982.2,
+      "games": 800,
+      "wins": 389,
+      "draws": 0,
+      "losses": 411,
+      "win_pct": 48.6
+    },
+    {
+      "rank": 216,
+      "id": "brass_dragon_wyrmling",
+      "rating": 982.1,
+      "games": 800,
+      "wins": 389,
+      "draws": 0,
+      "losses": 411,
+      "win_pct": 48.6
+    },
+    {
+      "rank": 217,
+      "id": "giant_owl",
+      "rating": 981.8,
+      "games": 800,
+      "wins": 389,
+      "draws": 0,
+      "losses": 411,
+      "win_pct": 48.6
+    },
+    {
+      "rank": 218,
+      "id": "giant_bat",
+      "rating": 981.7,
+      "games": 800,
+      "wins": 389,
+      "draws": 0,
+      "losses": 411,
+      "win_pct": 48.6
+    },
+    {
+      "rank": 219,
+      "id": "death_dog",
+      "rating": 981.4,
+      "games": 800,
+      "wins": 388,
+      "draws": 0,
+      "losses": 412,
+      "win_pct": 48.5
+    },
+    {
+      "rank": 220,
+      "id": "spy",
+      "rating": 981.2,
+      "games": 800,
+      "wins": 388,
+      "draws": 0,
+      "losses": 412,
+      "win_pct": 48.5
+    },
+    {
+      "rank": 221,
+      "id": "couatl",
+      "rating": 980.6,
+      "games": 800,
+      "wins": 378,
+      "draws": 20,
+      "losses": 402,
+      "win_pct": 47.2
+    },
+    {
+      "rank": 222,
+      "id": "ape",
+      "rating": 980.4,
+      "games": 800,
+      "wins": 388,
+      "draws": 0,
+      "losses": 412,
+      "win_pct": 48.5
+    },
+    {
+      "rank": 223,
+      "id": "animated_armor",
+      "rating": 979.8,
       "games": 800,
       "wins": 387,
       "draws": 0,
@@ -1928,8 +2238,8 @@
       "win_pct": 48.4
     },
     {
-      "rank": 193,
-      "id": "merrow",
+      "rank": 224,
+      "id": "giant_toad",
       "rating": 978.8,
       "games": 800,
       "wins": 387,
@@ -1938,9 +2248,9 @@
       "win_pct": 48.4
     },
     {
-      "rank": 194,
-      "id": "animated_rug_of_smothering",
-      "rating": 978.2,
+      "rank": 225,
+      "id": "satyr",
+      "rating": 978.1,
       "games": 800,
       "wins": 386,
       "draws": 0,
@@ -1948,9 +2258,9 @@
       "win_pct": 48.2
     },
     {
-      "rank": 195,
-      "id": "mimic",
-      "rating": 978.2,
+      "rank": 226,
+      "id": "reef_shark",
+      "rating": 976.8,
       "games": 800,
       "wins": 386,
       "draws": 0,
@@ -1958,19 +2268,9 @@
       "win_pct": 48.2
     },
     {
-      "rank": 196,
-      "id": "bandit_captain",
-      "rating": 977.1,
-      "games": 800,
-      "wins": 386,
-      "draws": 0,
-      "losses": 414,
-      "win_pct": 48.2
-    },
-    {
-      "rank": 197,
-      "id": "warhorse_skeleton",
-      "rating": 976.5,
+      "rank": 227,
+      "id": "harpy",
+      "rating": 976.3,
       "games": 800,
       "wins": 385,
       "draws": 0,
@@ -1978,9 +2278,9 @@
       "win_pct": 48.1
     },
     {
-      "rank": 198,
-      "id": "copper_dragon_wyrmling",
-      "rating": 976.2,
+      "rank": 228,
+      "id": "goblin_boss",
+      "rating": 975.9,
       "games": 800,
       "wins": 385,
       "draws": 0,
@@ -1988,9 +2288,69 @@
       "win_pct": 48.1
     },
     {
-      "rank": 199,
+      "rank": 229,
+      "id": "hippogriff",
+      "rating": 975.9,
+      "games": 800,
+      "wins": 385,
+      "draws": 0,
+      "losses": 415,
+      "win_pct": 48.1
+    },
+    {
+      "rank": 230,
+      "id": "brown_bear",
+      "rating": 975.9,
+      "games": 800,
+      "wins": 385,
+      "draws": 0,
+      "losses": 415,
+      "win_pct": 48.1
+    },
+    {
+      "rank": 231,
+      "id": "ghoul",
+      "rating": 974.8,
+      "games": 800,
+      "wins": 384,
+      "draws": 0,
+      "losses": 416,
+      "win_pct": 48.0
+    },
+    {
+      "rank": 232,
+      "id": "black_dragon_wyrmling",
+      "rating": 974.6,
+      "games": 800,
+      "wins": 384,
+      "draws": 0,
+      "losses": 416,
+      "win_pct": 48.0
+    },
+    {
+      "rank": 233,
+      "id": "magmin",
+      "rating": 974.2,
+      "games": 800,
+      "wins": 384,
+      "draws": 0,
+      "losses": 416,
+      "win_pct": 48.0
+    },
+    {
+      "rank": 234,
       "id": "incubus",
-      "rating": 973.7,
+      "rating": 972.5,
+      "games": 800,
+      "wins": 373,
+      "draws": 20,
+      "losses": 407,
+      "win_pct": 46.6
+    },
+    {
+      "rank": 235,
+      "id": "giant_eagle",
+      "rating": 972.3,
       "games": 800,
       "wins": 383,
       "draws": 0,
@@ -1998,48 +2358,18 @@
       "win_pct": 47.9
     },
     {
-      "rank": 200,
-      "id": "rust_monster",
-      "rating": 972.8,
+      "rank": 236,
+      "id": "lamia",
+      "rating": 971.5,
       "games": 800,
-      "wins": 383,
-      "draws": 0,
-      "losses": 417,
-      "win_pct": 47.9
+      "wins": 362,
+      "draws": 40,
+      "losses": 398,
+      "win_pct": 45.2
     },
     {
-      "rank": 201,
-      "id": "brass_dragon_wyrmling",
-      "rating": 972.6,
-      "games": 800,
-      "wins": 383,
-      "draws": 0,
-      "losses": 417,
-      "win_pct": 47.9
-    },
-    {
-      "rank": 202,
-      "id": "dire_wolf",
-      "rating": 972.6,
-      "games": 800,
-      "wins": 383,
-      "draws": 0,
-      "losses": 417,
-      "win_pct": 47.9
-    },
-    {
-      "rank": 203,
-      "id": "gibbering_mouther",
-      "rating": 971.3,
-      "games": 800,
-      "wins": 382,
-      "draws": 0,
-      "losses": 418,
-      "win_pct": 47.8
-    },
-    {
-      "rank": 204,
-      "id": "giant_toad",
+      "rank": 237,
+      "id": "giant_lizard",
       "rating": 971.2,
       "games": 800,
       "wins": 382,
@@ -2048,9 +2378,9 @@
       "win_pct": 47.8
     },
     {
-      "rank": 205,
-      "id": "hobgoblin_warrior",
-      "rating": 970.6,
+      "rank": 238,
+      "id": "sphinx_of_wonder",
+      "rating": 971.0,
       "games": 800,
       "wins": 382,
       "draws": 0,
@@ -2058,9 +2388,9 @@
       "win_pct": 47.8
     },
     {
-      "rank": 206,
+      "rank": 239,
       "id": "darkmantle",
-      "rating": 970.3,
+      "rating": 970.0,
       "games": 800,
       "wins": 381,
       "draws": 0,
@@ -2068,9 +2398,9 @@
       "win_pct": 47.6
     },
     {
-      "rank": 207,
-      "id": "lamia",
-      "rating": 969.8,
+      "rank": 240,
+      "id": "gray_ooze",
+      "rating": 969.5,
       "games": 800,
       "wins": 381,
       "draws": 0,
@@ -2078,9 +2408,9 @@
       "win_pct": 47.6
     },
     {
-      "rank": 208,
-      "id": "worg",
-      "rating": 969.8,
+      "rank": 241,
+      "id": "sprite",
+      "rating": 969.4,
       "games": 800,
       "wins": 381,
       "draws": 0,
@@ -2088,28 +2418,18 @@
       "win_pct": 47.6
     },
     {
-      "rank": 209,
-      "id": "satyr",
-      "rating": 969.3,
+      "rank": 242,
+      "id": "axe_beak",
+      "rating": 968.6,
       "games": 800,
-      "wins": 381,
+      "wins": 380,
       "draws": 0,
-      "losses": 419,
-      "win_pct": 47.6
+      "losses": 420,
+      "win_pct": 47.5
     },
     {
-      "rank": 210,
-      "id": "swarm_of_piranhas",
-      "rating": 968.8,
-      "games": 800,
-      "wins": 381,
-      "draws": 0,
-      "losses": 419,
-      "win_pct": 47.6
-    },
-    {
-      "rank": 211,
-      "id": "ghast",
+      "rank": 243,
+      "id": "riding_horse",
       "rating": 968.2,
       "games": 800,
       "wins": 380,
@@ -2118,9 +2438,9 @@
       "win_pct": 47.5
     },
     {
-      "rank": 212,
-      "id": "ettercap",
-      "rating": 968.1,
+      "rank": 244,
+      "id": "dust_mephit",
+      "rating": 968.2,
       "games": 800,
       "wins": 380,
       "draws": 0,
@@ -2128,8 +2448,48 @@
       "win_pct": 47.5
     },
     {
-      "rank": 213,
-      "id": "goblin_boss",
+      "rank": 245,
+      "id": "merfolk_skirmisher",
+      "rating": 967.7,
+      "games": 800,
+      "wins": 380,
+      "draws": 0,
+      "losses": 420,
+      "win_pct": 47.5
+    },
+    {
+      "rank": 246,
+      "id": "wolf",
+      "rating": 967.6,
+      "games": 800,
+      "wins": 380,
+      "draws": 0,
+      "losses": 420,
+      "win_pct": 47.5
+    },
+    {
+      "rank": 247,
+      "id": "black_bear",
+      "rating": 967.5,
+      "games": 800,
+      "wins": 380,
+      "draws": 0,
+      "losses": 420,
+      "win_pct": 47.5
+    },
+    {
+      "rank": 248,
+      "id": "pteranodon",
+      "rating": 967.1,
+      "games": 800,
+      "wins": 379,
+      "draws": 0,
+      "losses": 421,
+      "win_pct": 47.4
+    },
+    {
+      "rank": 249,
+      "id": "cockatrice",
       "rating": 966.8,
       "games": 800,
       "wins": 379,
@@ -2138,9 +2498,9 @@
       "win_pct": 47.4
     },
     {
-      "rank": 214,
-      "id": "swarm_of_insects",
-      "rating": 966.4,
+      "rank": 250,
+      "id": "skeleton",
+      "rating": 966.6,
       "games": 800,
       "wins": 379,
       "draws": 0,
@@ -2148,9 +2508,9 @@
       "win_pct": 47.4
     },
     {
-      "rank": 215,
-      "id": "white_dragon_wyrmling",
-      "rating": 966.0,
+      "rank": 251,
+      "id": "giant_wasp",
+      "rating": 965.9,
       "games": 800,
       "wins": 379,
       "draws": 0,
@@ -2158,9 +2518,9 @@
       "win_pct": 47.4
     },
     {
-      "rank": 216,
-      "id": "death_dog",
-      "rating": 965.4,
+      "rank": 252,
+      "id": "giant_rat",
+      "rating": 965.2,
       "games": 800,
       "wins": 378,
       "draws": 0,
@@ -2168,9 +2528,9 @@
       "win_pct": 47.2
     },
     {
-      "rank": 217,
-      "id": "cultist_fanatic",
-      "rating": 965.0,
+      "rank": 253,
+      "id": "giant_goat",
+      "rating": 965.1,
       "games": 800,
       "wins": 378,
       "draws": 0,
@@ -2178,8 +2538,18 @@
       "win_pct": 47.2
     },
     {
-      "rank": 218,
-      "id": "quasit",
+      "rank": 254,
+      "id": "constrictor_snake",
+      "rating": 964.9,
+      "games": 800,
+      "wins": 378,
+      "draws": 0,
+      "losses": 422,
+      "win_pct": 47.2
+    },
+    {
+      "rank": 255,
+      "id": "shadow",
       "rating": 964.8,
       "games": 800,
       "wins": 378,
@@ -2188,9 +2558,9 @@
       "win_pct": 47.2
     },
     {
-      "rank": 219,
-      "id": "giant_owl",
-      "rating": 964.6,
+      "rank": 256,
+      "id": "troll_limb",
+      "rating": 964.8,
       "games": 800,
       "wins": 378,
       "draws": 0,
@@ -2198,8 +2568,8 @@
       "win_pct": 47.2
     },
     {
-      "rank": 220,
-      "id": "tough",
+      "rank": 257,
+      "id": "ice_mephit",
       "rating": 964.5,
       "games": 800,
       "wins": 378,
@@ -2208,9 +2578,19 @@
       "win_pct": 47.2
     },
     {
-      "rank": 221,
-      "id": "harpy",
-      "rating": 963.1,
+      "rank": 258,
+      "id": "swarm_of_insects",
+      "rating": 964.1,
+      "games": 800,
+      "wins": 378,
+      "draws": 0,
+      "losses": 422,
+      "win_pct": 47.2
+    },
+    {
+      "rank": 259,
+      "id": "crocodile",
+      "rating": 963.4,
       "games": 800,
       "wins": 377,
       "draws": 0,
@@ -2218,59 +2598,49 @@
       "win_pct": 47.1
     },
     {
-      "rank": 222,
-      "id": "giant_seahorse",
-      "rating": 962.4,
+      "rank": 260,
+      "id": "giant_wolf_spider",
+      "rating": 962.2,
       "games": 800,
-      "wins": 377,
+      "wins": 376,
       "draws": 0,
-      "losses": 423,
-      "win_pct": 47.1
+      "losses": 424,
+      "win_pct": 47.0
     },
     {
-      "rank": 223,
-      "id": "gnoll_warrior",
-      "rating": 960.7,
+      "rank": 261,
+      "id": "specter",
+      "rating": 961.8,
       "games": 800,
-      "wins": 375,
+      "wins": 376,
       "draws": 0,
-      "losses": 425,
-      "win_pct": 46.9
+      "losses": 424,
+      "win_pct": 47.0
     },
     {
-      "rank": 224,
-      "id": "gray_ooze",
-      "rating": 960.3,
+      "rank": 262,
+      "id": "giant_crab",
+      "rating": 961.5,
       "games": 800,
-      "wins": 375,
+      "wins": 376,
       "draws": 0,
-      "losses": 425,
-      "win_pct": 46.9
+      "losses": 424,
+      "win_pct": 47.0
     },
     {
-      "rank": 225,
-      "id": "troll_limb",
-      "rating": 960.2,
+      "rank": 263,
+      "id": "giant_centipede",
+      "rating": 961.0,
       "games": 800,
-      "wins": 375,
+      "wins": 376,
       "draws": 0,
-      "losses": 425,
-      "win_pct": 46.9
+      "losses": 424,
+      "win_pct": 47.0
     },
     {
-      "rank": 226,
-      "id": "warhorse",
-      "rating": 959.6,
-      "games": 800,
-      "wins": 375,
-      "draws": 0,
-      "losses": 425,
-      "win_pct": 46.9
-    },
-    {
-      "rank": 227,
-      "id": "reef_shark",
-      "rating": 959.5,
+      "rank": 264,
+      "id": "sahuagin_warrior",
+      "rating": 960.1,
       "games": 800,
       "wins": 375,
       "draws": 0,
@@ -2278,19 +2648,29 @@
       "win_pct": 46.9
     },
     {
-      "rank": 228,
-      "id": "giant_spider",
-      "rating": 959.3,
-      "games": 800,
-      "wins": 375,
-      "draws": 0,
-      "losses": 425,
-      "win_pct": 46.9
-    },
-    {
-      "rank": 229,
+      "rank": 265,
       "id": "draft_horse",
-      "rating": 958.6,
+      "rating": 960.0,
+      "games": 800,
+      "wins": 375,
+      "draws": 0,
+      "losses": 425,
+      "win_pct": 46.9
+    },
+    {
+      "rank": 266,
+      "id": "giant_venomous_snake",
+      "rating": 959.9,
+      "games": 800,
+      "wins": 375,
+      "draws": 0,
+      "losses": 425,
+      "win_pct": 46.9
+    },
+    {
+      "rank": 267,
+      "id": "scout",
+      "rating": 958.4,
       "games": 800,
       "wins": 374,
       "draws": 0,
@@ -2298,8 +2678,8 @@
       "win_pct": 46.8
     },
     {
-      "rank": 230,
-      "id": "imp",
+      "rank": 268,
+      "id": "guard",
       "rating": 958.1,
       "games": 800,
       "wins": 374,
@@ -2308,9 +2688,19 @@
       "win_pct": 46.8
     },
     {
-      "rank": 231,
-      "id": "sphinx_of_wonder",
-      "rating": 956.8,
+      "rank": 269,
+      "id": "camel",
+      "rating": 957.8,
+      "games": 800,
+      "wins": 374,
+      "draws": 0,
+      "losses": 426,
+      "win_pct": 46.8
+    },
+    {
+      "rank": 270,
+      "id": "warrior_infantry",
+      "rating": 957.6,
       "games": 800,
       "wins": 373,
       "draws": 0,
@@ -2318,8 +2708,8 @@
       "win_pct": 46.6
     },
     {
-      "rank": 232,
-      "id": "giant_wasp",
+      "rank": 271,
+      "id": "kobold_warrior",
       "rating": 956.7,
       "games": 800,
       "wins": 373,
@@ -2328,29 +2718,9 @@
       "win_pct": 46.6
     },
     {
-      "rank": 233,
-      "id": "giant_eagle",
-      "rating": 956.5,
-      "games": 800,
-      "wins": 373,
-      "draws": 0,
-      "losses": 427,
-      "win_pct": 46.6
-    },
-    {
-      "rank": 234,
-      "id": "giant_goat",
-      "rating": 956.1,
-      "games": 800,
-      "wins": 373,
-      "draws": 0,
-      "losses": 427,
-      "win_pct": 46.6
-    },
-    {
-      "rank": 235,
-      "id": "giant_bat",
-      "rating": 955.1,
+      "rank": 272,
+      "id": "panther",
+      "rating": 955.8,
       "games": 800,
       "wins": 372,
       "draws": 0,
@@ -2358,9 +2728,9 @@
       "win_pct": 46.5
     },
     {
-      "rank": 236,
-      "id": "hippogriff",
-      "rating": 954.8,
+      "rank": 273,
+      "id": "pony",
+      "rating": 955.7,
       "games": 800,
       "wins": 372,
       "draws": 0,
@@ -2368,9 +2738,19 @@
       "win_pct": 46.5
     },
     {
-      "rank": 237,
-      "id": "spy",
-      "rating": 954.3,
+      "rank": 274,
+      "id": "goblin_warrior",
+      "rating": 955.6,
+      "games": 800,
+      "wins": 372,
+      "draws": 0,
+      "losses": 428,
+      "win_pct": 46.5
+    },
+    {
+      "rank": 275,
+      "id": "swarm_of_ravens",
+      "rating": 953.3,
       "games": 800,
       "wins": 371,
       "draws": 0,
@@ -2378,9 +2758,9 @@
       "win_pct": 46.4
     },
     {
-      "rank": 238,
-      "id": "ghoul",
-      "rating": 953.6,
+      "rank": 276,
+      "id": "giant_weasel",
+      "rating": 953.2,
       "games": 800,
       "wins": 371,
       "draws": 0,
@@ -2388,9 +2768,9 @@
       "win_pct": 46.4
     },
     {
-      "rank": 239,
-      "id": "blink_dog",
-      "rating": 953.5,
+      "rank": 277,
+      "id": "elk",
+      "rating": 952.9,
       "games": 800,
       "wins": 371,
       "draws": 0,
@@ -2398,9 +2778,9 @@
       "win_pct": 46.4
     },
     {
-      "rank": 240,
-      "id": "animated_flying_sword",
-      "rating": 952.8,
+      "rank": 278,
+      "id": "mule",
+      "rating": 952.3,
       "games": 800,
       "wins": 370,
       "draws": 0,
@@ -2408,8 +2788,18 @@
       "win_pct": 46.2
     },
     {
-      "rank": 241,
-      "id": "brown_bear",
+      "rank": 279,
+      "id": "giant_frog",
+      "rating": 951.8,
+      "games": 800,
+      "wins": 370,
+      "draws": 0,
+      "losses": 430,
+      "win_pct": 46.2
+    },
+    {
+      "rank": 280,
+      "id": "dretch",
       "rating": 950.7,
       "games": 800,
       "wins": 369,
@@ -2418,9 +2808,19 @@
       "win_pct": 46.1
     },
     {
-      "rank": 242,
-      "id": "axe_beak",
-      "rating": 949.1,
+      "rank": 281,
+      "id": "swarm_of_bats",
+      "rating": 949.7,
+      "games": 800,
+      "wins": 369,
+      "draws": 0,
+      "losses": 431,
+      "win_pct": 46.1
+    },
+    {
+      "rank": 282,
+      "id": "cultist",
+      "rating": 949.4,
       "games": 800,
       "wins": 368,
       "draws": 0,
@@ -2428,8 +2828,28 @@
       "win_pct": 46.0
     },
     {
-      "rank": 243,
-      "id": "shadow",
+      "rank": 283,
+      "id": "noble",
+      "rating": 949.2,
+      "games": 800,
+      "wins": 368,
+      "draws": 0,
+      "losses": 432,
+      "win_pct": 46.0
+    },
+    {
+      "rank": 284,
+      "id": "priest_acolyte",
+      "rating": 949.0,
+      "games": 800,
+      "wins": 368,
+      "draws": 0,
+      "losses": 432,
+      "win_pct": 46.0
+    },
+    {
+      "rank": 285,
+      "id": "violet_fungus",
       "rating": 948.9,
       "games": 800,
       "wins": 368,
@@ -2438,8 +2858,8 @@
       "win_pct": 46.0
     },
     {
-      "rank": 244,
-      "id": "sprite",
+      "rank": 286,
+      "id": "giant_badger",
       "rating": 948.4,
       "games": 800,
       "wins": 368,
@@ -2448,18 +2868,18 @@
       "win_pct": 46.0
     },
     {
-      "rank": 245,
-      "id": "constrictor_snake",
-      "rating": 948.3,
+      "rank": 287,
+      "id": "zombie",
+      "rating": 947.0,
       "games": 800,
-      "wins": 368,
+      "wins": 367,
       "draws": 0,
-      "losses": 432,
-      "win_pct": 46.0
+      "losses": 433,
+      "win_pct": 45.9
     },
     {
-      "rank": 246,
-      "id": "giant_frog",
+      "rank": 288,
+      "id": "pseudodragon",
       "rating": 946.9,
       "games": 800,
       "wins": 367,
@@ -2468,47 +2888,7 @@
       "win_pct": 45.9
     },
     {
-      "rank": 247,
-      "id": "panther",
-      "rating": 946.9,
-      "games": 800,
-      "wins": 367,
-      "draws": 0,
-      "losses": 433,
-      "win_pct": 45.9
-    },
-    {
-      "rank": 248,
-      "id": "giant_lizard",
-      "rating": 946.7,
-      "games": 800,
-      "wins": 367,
-      "draws": 0,
-      "losses": 433,
-      "win_pct": 45.9
-    },
-    {
-      "rank": 249,
-      "id": "giant_venomous_snake",
-      "rating": 946.6,
-      "games": 800,
-      "wins": 367,
-      "draws": 0,
-      "losses": 433,
-      "win_pct": 45.9
-    },
-    {
-      "rank": 250,
-      "id": "specter",
-      "rating": 945.9,
-      "games": 800,
-      "wins": 366,
-      "draws": 0,
-      "losses": 434,
-      "win_pct": 45.8
-    },
-    {
-      "rank": 251,
+      "rank": 289,
       "id": "grimlock",
       "rating": 945.9,
       "games": 800,
@@ -2518,9 +2898,9 @@
       "win_pct": 45.8
     },
     {
-      "rank": 252,
-      "id": "skeleton",
-      "rating": 945.6,
+      "rank": 290,
+      "id": "venomous_snake",
+      "rating": 945.1,
       "games": 800,
       "wins": 366,
       "draws": 0,
@@ -2528,139 +2908,99 @@
       "win_pct": 45.8
     },
     {
-      "rank": 253,
-      "id": "scout",
-      "rating": 945.5,
-      "games": 800,
-      "wins": 366,
-      "draws": 0,
-      "losses": 434,
-      "win_pct": 45.8
-    },
-    {
-      "rank": 254,
-      "id": "wolf",
-      "rating": 945.4,
-      "games": 800,
-      "wins": 366,
-      "draws": 0,
-      "losses": 434,
-      "win_pct": 45.8
-    },
-    {
-      "rank": 255,
-      "id": "magmin",
-      "rating": 944.0,
-      "games": 800,
-      "wins": 365,
-      "draws": 0,
-      "losses": 435,
-      "win_pct": 45.6
-    },
-    {
-      "rank": 256,
-      "id": "ape",
-      "rating": 943.9,
-      "games": 800,
-      "wins": 365,
-      "draws": 0,
-      "losses": 435,
-      "win_pct": 45.6
-    },
-    {
-      "rank": 257,
-      "id": "black_bear",
-      "rating": 943.5,
-      "games": 800,
-      "wins": 365,
-      "draws": 0,
-      "losses": 435,
-      "win_pct": 45.6
-    },
-    {
-      "rank": 258,
-      "id": "giant_badger",
-      "rating": 942.7,
-      "games": 800,
-      "wins": 364,
-      "draws": 0,
-      "losses": 436,
-      "win_pct": 45.5
-    },
-    {
-      "rank": 259,
-      "id": "crocodile",
-      "rating": 942.5,
-      "games": 800,
-      "wins": 364,
-      "draws": 0,
-      "losses": 436,
-      "win_pct": 45.5
-    },
-    {
-      "rank": 260,
-      "id": "sahuagin_warrior",
-      "rating": 942.0,
-      "games": 800,
-      "wins": 364,
-      "draws": 0,
-      "losses": 436,
-      "win_pct": 45.5
-    },
-    {
-      "rank": 261,
-      "id": "pteranodon",
-      "rating": 941.0,
-      "games": 800,
-      "wins": 363,
-      "draws": 0,
-      "losses": 437,
-      "win_pct": 45.4
-    },
-    {
-      "rank": 262,
-      "id": "pseudodragon",
-      "rating": 940.9,
-      "games": 800,
-      "wins": 363,
-      "draws": 0,
-      "losses": 437,
-      "win_pct": 45.4
-    },
-    {
-      "rank": 263,
-      "id": "riding_horse",
-      "rating": 940.4,
-      "games": 800,
-      "wins": 363,
-      "draws": 0,
-      "losses": 437,
-      "win_pct": 45.4
-    },
-    {
-      "rank": 264,
-      "id": "swarm_of_ravens",
-      "rating": 939.4,
-      "games": 800,
-      "wins": 362,
-      "draws": 0,
-      "losses": 438,
-      "win_pct": 45.2
-    },
-    {
-      "rank": 265,
-      "id": "giant_wolf_spider",
-      "rating": 939.4,
-      "games": 800,
-      "wins": 362,
-      "draws": 0,
-      "losses": 438,
-      "win_pct": 45.2
-    },
-    {
-      "rank": 266,
+      "rank": 291,
       "id": "magma_mephit",
-      "rating": 939.0,
+      "rating": 944.1,
+      "games": 800,
+      "wins": 365,
+      "draws": 0,
+      "losses": 435,
+      "win_pct": 45.6
+    },
+    {
+      "rank": 292,
+      "id": "bandit",
+      "rating": 943.8,
+      "games": 800,
+      "wins": 365,
+      "draws": 0,
+      "losses": 435,
+      "win_pct": 45.6
+    },
+    {
+      "rank": 293,
+      "id": "steam_mephit",
+      "rating": 943.8,
+      "games": 800,
+      "wins": 365,
+      "draws": 0,
+      "losses": 435,
+      "win_pct": 45.6
+    },
+    {
+      "rank": 294,
+      "id": "boar",
+      "rating": 943.8,
+      "games": 800,
+      "wins": 365,
+      "draws": 0,
+      "losses": 435,
+      "win_pct": 45.6
+    },
+    {
+      "rank": 295,
+      "id": "octopus",
+      "rating": 943.2,
+      "games": 800,
+      "wins": 365,
+      "draws": 0,
+      "losses": 435,
+      "win_pct": 45.6
+    },
+    {
+      "rank": 296,
+      "id": "stirge",
+      "rating": 942.9,
+      "games": 800,
+      "wins": 364,
+      "draws": 0,
+      "losses": 436,
+      "win_pct": 45.5
+    },
+    {
+      "rank": 297,
+      "id": "homunculus",
+      "rating": 942.6,
+      "games": 800,
+      "wins": 364,
+      "draws": 0,
+      "losses": 436,
+      "win_pct": 45.5
+    },
+    {
+      "rank": 298,
+      "id": "eagle",
+      "rating": 941.1,
+      "games": 800,
+      "wins": 363,
+      "draws": 0,
+      "losses": 437,
+      "win_pct": 45.4
+    },
+    {
+      "rank": 299,
+      "id": "blood_hawk",
+      "rating": 940.2,
+      "games": 800,
+      "wins": 363,
+      "draws": 0,
+      "losses": 437,
+      "win_pct": 45.4
+    },
+    {
+      "rank": 300,
+      "id": "flying_snake",
+      "rating": 939.5,
       "games": 800,
       "wins": 362,
       "draws": 0,
@@ -2668,9 +3008,19 @@
       "win_pct": 45.2
     },
     {
-      "rank": 267,
-      "id": "elk",
-      "rating": 938.3,
+      "rank": 301,
+      "id": "shrieker_fungus",
+      "rating": 938.7,
+      "games": 800,
+      "wins": 362,
+      "draws": 0,
+      "losses": 438,
+      "win_pct": 45.2
+    },
+    {
+      "rank": 302,
+      "id": "awakened_shrub",
+      "rating": 938.5,
       "games": 800,
       "wins": 361,
       "draws": 0,
@@ -2678,9 +3028,9 @@
       "win_pct": 45.1
     },
     {
-      "rank": 268,
-      "id": "guard",
-      "rating": 937.8,
+      "rank": 303,
+      "id": "swarm_of_rats",
+      "rating": 937.4,
       "games": 800,
       "wins": 361,
       "draws": 0,
@@ -2688,9 +3038,9 @@
       "win_pct": 45.1
     },
     {
-      "rank": 269,
-      "id": "merfolk_skirmisher",
-      "rating": 937.3,
+      "rank": 304,
+      "id": "piranha",
+      "rating": 937.0,
       "games": 800,
       "wins": 361,
       "draws": 0,
@@ -2698,9 +3048,9 @@
       "win_pct": 45.1
     },
     {
-      "rank": 270,
-      "id": "priest_acolyte",
-      "rating": 936.5,
+      "rank": 305,
+      "id": "lemure",
+      "rating": 936.4,
       "games": 800,
       "wins": 360,
       "draws": 0,
@@ -2708,18 +3058,58 @@
       "win_pct": 45.0
     },
     {
-      "rank": 271,
-      "id": "priest",
-      "rating": 935.6,
+      "rank": 306,
+      "id": "baboon",
+      "rating": 936.2,
       "games": 800,
-      "wins": 340,
-      "draws": 40,
-      "losses": 420,
-      "win_pct": 42.5
+      "wins": 360,
+      "draws": 0,
+      "losses": 440,
+      "win_pct": 45.0
     },
     {
-      "rank": 272,
-      "id": "warrior_infantry",
+      "rank": 307,
+      "id": "deer",
+      "rating": 935.8,
+      "games": 800,
+      "wins": 360,
+      "draws": 0,
+      "losses": 440,
+      "win_pct": 45.0
+    },
+    {
+      "rank": 308,
+      "id": "mastiff",
+      "rating": 935.4,
+      "games": 800,
+      "wins": 360,
+      "draws": 0,
+      "losses": 440,
+      "win_pct": 45.0
+    },
+    {
+      "rank": 309,
+      "id": "hawk",
+      "rating": 935.4,
+      "games": 800,
+      "wins": 360,
+      "draws": 0,
+      "losses": 440,
+      "win_pct": 45.0
+    },
+    {
+      "rank": 310,
+      "id": "raven",
+      "rating": 935.2,
+      "games": 800,
+      "wins": 357,
+      "draws": 0,
+      "losses": 443,
+      "win_pct": 44.6
+    },
+    {
+      "rank": 311,
+      "id": "hyena",
       "rating": 934.1,
       "games": 800,
       "wins": 359,
@@ -2728,49 +3118,9 @@
       "win_pct": 44.9
     },
     {
-      "rank": 273,
-      "id": "goblin_warrior",
-      "rating": 933.9,
-      "games": 800,
-      "wins": 359,
-      "draws": 0,
-      "losses": 441,
-      "win_pct": 44.9
-    },
-    {
-      "rank": 274,
-      "id": "noble",
-      "rating": 933.1,
-      "games": 800,
-      "wins": 358,
-      "draws": 0,
-      "losses": 442,
-      "win_pct": 44.8
-    },
-    {
-      "rank": 275,
-      "id": "dust_mephit",
-      "rating": 933.0,
-      "games": 800,
-      "wins": 358,
-      "draws": 0,
-      "losses": 442,
-      "win_pct": 44.8
-    },
-    {
-      "rank": 276,
-      "id": "pony",
-      "rating": 932.4,
-      "games": 800,
-      "wins": 358,
-      "draws": 0,
-      "losses": 442,
-      "win_pct": 44.8
-    },
-    {
-      "rank": 277,
-      "id": "camel",
-      "rating": 932.1,
+      "rank": 312,
+      "id": "badger",
+      "rating": 930.9,
       "games": 800,
       "wins": 357,
       "draws": 0,
@@ -2778,9 +3128,9 @@
       "win_pct": 44.6
     },
     {
-      "rank": 278,
-      "id": "giant_weasel",
-      "rating": 931.9,
+      "rank": 313,
+      "id": "frog",
+      "rating": 930.7,
       "games": 800,
       "wins": 357,
       "draws": 0,
@@ -2788,9 +3138,9 @@
       "win_pct": 44.6
     },
     {
-      "rank": 279,
-      "id": "giant_crab",
-      "rating": 931.2,
+      "rank": 314,
+      "id": "seahorse",
+      "rating": 930.7,
       "games": 800,
       "wins": 357,
       "draws": 0,
@@ -2798,18 +3148,18 @@
       "win_pct": 44.6
     },
     {
-      "rank": 280,
-      "id": "bandit",
-      "rating": 929.6,
+      "rank": 315,
+      "id": "commoner",
+      "rating": 930.0,
       "games": 800,
-      "wins": 356,
+      "wins": 352,
       "draws": 0,
-      "losses": 444,
-      "win_pct": 44.5
+      "losses": 448,
+      "win_pct": 44.0
     },
     {
-      "rank": 281,
-      "id": "swarm_of_rats",
+      "rank": 316,
+      "id": "goblin_minion",
       "rating": 929.5,
       "games": 800,
       "wins": 356,
@@ -2818,9 +3168,9 @@
       "win_pct": 44.5
     },
     {
-      "rank": 282,
-      "id": "swarm_of_bats",
-      "rating": 928.8,
+      "rank": 317,
+      "id": "vulture",
+      "rating": 928.7,
       "games": 800,
       "wins": 356,
       "draws": 0,
@@ -2828,9 +3178,9 @@
       "win_pct": 44.5
     },
     {
-      "rank": 283,
-      "id": "cockatrice",
-      "rating": 928.6,
+      "rank": 318,
+      "id": "cat",
+      "rating": 928.4,
       "games": 800,
       "wins": 355,
       "draws": 0,
@@ -2838,9 +3188,49 @@
       "win_pct": 44.4
     },
     {
-      "rank": 284,
-      "id": "mule",
-      "rating": 926.2,
+      "rank": 319,
+      "id": "giant_fire_beetle",
+      "rating": 928.2,
+      "games": 800,
+      "wins": 355,
+      "draws": 0,
+      "losses": 445,
+      "win_pct": 44.4
+    },
+    {
+      "rank": 320,
+      "id": "crab",
+      "rating": 928.1,
+      "games": 800,
+      "wins": 355,
+      "draws": 0,
+      "losses": 445,
+      "win_pct": 44.4
+    },
+    {
+      "rank": 321,
+      "id": "rat",
+      "rating": 927.8,
+      "games": 800,
+      "wins": 355,
+      "draws": 0,
+      "losses": 445,
+      "win_pct": 44.4
+    },
+    {
+      "rank": 322,
+      "id": "goat",
+      "rating": 927.5,
+      "games": 800,
+      "wins": 355,
+      "draws": 0,
+      "losses": 445,
+      "win_pct": 44.4
+    },
+    {
+      "rank": 323,
+      "id": "spider",
+      "rating": 925.9,
       "games": 800,
       "wins": 354,
       "draws": 0,
@@ -2848,39 +3238,9 @@
       "win_pct": 44.2
     },
     {
-      "rank": 285,
-      "id": "blood_hawk",
-      "rating": 926.2,
-      "games": 800,
-      "wins": 354,
-      "draws": 0,
-      "losses": 446,
-      "win_pct": 44.2
-    },
-    {
-      "rank": 286,
-      "id": "boar",
-      "rating": 926.1,
-      "games": 800,
-      "wins": 354,
-      "draws": 0,
-      "losses": 446,
-      "win_pct": 44.2
-    },
-    {
-      "rank": 287,
-      "id": "kobold_warrior",
-      "rating": 925.8,
-      "games": 800,
-      "wins": 354,
-      "draws": 0,
-      "losses": 446,
-      "win_pct": 44.2
-    },
-    {
-      "rank": 288,
-      "id": "steam_mephit",
-      "rating": 923.6,
+      "rank": 324,
+      "id": "weasel",
+      "rating": 925.3,
       "games": 800,
       "wins": 352,
       "draws": 0,
@@ -2888,9 +3248,29 @@
       "win_pct": 44.0
     },
     {
-      "rank": 289,
-      "id": "goblin_minion",
-      "rating": 923.6,
+      "rank": 325,
+      "id": "lizard",
+      "rating": 924.8,
+      "games": 800,
+      "wins": 346,
+      "draws": 0,
+      "losses": 454,
+      "win_pct": 43.2
+    },
+    {
+      "rank": 326,
+      "id": "jackal",
+      "rating": 924.6,
+      "games": 800,
+      "wins": 353,
+      "draws": 0,
+      "losses": 447,
+      "win_pct": 44.1
+    },
+    {
+      "rank": 327,
+      "id": "owl",
+      "rating": 923.1,
       "games": 800,
       "wins": 352,
       "draws": 0,
@@ -2898,59 +3278,9 @@
       "win_pct": 44.0
     },
     {
-      "rank": 290,
-      "id": "giant_rat",
-      "rating": 923.2,
-      "games": 800,
-      "wins": 352,
-      "draws": 0,
-      "losses": 448,
-      "win_pct": 44.0
-    },
-    {
-      "rank": 291,
-      "id": "ice_mephit",
-      "rating": 923.2,
-      "games": 800,
-      "wins": 352,
-      "draws": 0,
-      "losses": 448,
-      "win_pct": 44.0
-    },
-    {
-      "rank": 292,
-      "id": "violet_fungus",
-      "rating": 922.6,
-      "games": 800,
-      "wins": 352,
-      "draws": 0,
-      "losses": 448,
-      "win_pct": 44.0
-    },
-    {
-      "rank": 293,
-      "id": "giant_centipede",
-      "rating": 922.6,
-      "games": 800,
-      "wins": 352,
-      "draws": 0,
-      "losses": 448,
-      "win_pct": 44.0
-    },
-    {
-      "rank": 294,
-      "id": "zombie",
-      "rating": 922.5,
-      "games": 800,
-      "wins": 352,
-      "draws": 0,
-      "losses": 448,
-      "win_pct": 44.0
-    },
-    {
-      "rank": 295,
-      "id": "mastiff",
-      "rating": 922.0,
+      "rank": 328,
+      "id": "boon_of_irresistible_offense",
+      "rating": 921.3,
       "games": 800,
       "wins": 351,
       "draws": 0,
@@ -2958,9 +3288,29 @@
       "win_pct": 43.9
     },
     {
-      "rank": 296,
-      "id": "dretch",
-      "rating": 919.0,
+      "rank": 329,
+      "id": "ability_score_improvement",
+      "rating": 921.1,
+      "games": 800,
+      "wins": 351,
+      "draws": 0,
+      "losses": 449,
+      "win_pct": 43.9
+    },
+    {
+      "rank": 330,
+      "id": "dragonborn",
+      "rating": 920.1,
+      "games": 800,
+      "wins": 350,
+      "draws": 0,
+      "losses": 450,
+      "win_pct": 43.8
+    },
+    {
+      "rank": 331,
+      "id": "two_weapon_fighting",
+      "rating": 918.6,
       "games": 800,
       "wins": 349,
       "draws": 0,
@@ -2968,8 +3318,28 @@
       "win_pct": 43.6
     },
     {
-      "rank": 297,
-      "id": "cultist",
+      "rank": 332,
+      "id": "defense",
+      "rating": 916.8,
+      "games": 800,
+      "wins": 348,
+      "draws": 0,
+      "losses": 452,
+      "win_pct": 43.5
+    },
+    {
+      "rank": 333,
+      "id": "alert",
+      "rating": 916.0,
+      "games": 800,
+      "wins": 347,
+      "draws": 0,
+      "losses": 453,
+      "win_pct": 43.4
+    },
+    {
+      "rank": 334,
+      "id": "bat",
       "rating": 915.2,
       "games": 800,
       "wins": 347,
@@ -2978,9 +3348,9 @@
       "win_pct": 43.4
     },
     {
-      "rank": 298,
-      "id": "flying_snake",
-      "rating": 914.2,
+      "rank": 335,
+      "id": "life_domain",
+      "rating": 915.1,
       "games": 800,
       "wins": 347,
       "draws": 0,
@@ -2988,9 +3358,19 @@
       "win_pct": 43.4
     },
     {
-      "rank": 299,
-      "id": "stirge",
-      "rating": 914.1,
+      "rank": 336,
+      "id": "feat_origin",
+      "rating": 914.7,
+      "games": 800,
+      "wins": 347,
+      "draws": 0,
+      "losses": 453,
+      "win_pct": 43.4
+    },
+    {
+      "rank": 337,
+      "id": "fiend_patron",
+      "rating": 914.2,
       "games": 800,
       "wins": 346,
       "draws": 0,
@@ -2998,8 +3378,28 @@
       "win_pct": 43.2
     },
     {
-      "rank": 300,
-      "id": "venomous_snake",
+      "rank": 338,
+      "id": "tiefling",
+      "rating": 914.0,
+      "games": 800,
+      "wins": 346,
+      "draws": 0,
+      "losses": 454,
+      "win_pct": 43.2
+    },
+    {
+      "rank": 339,
+      "id": "rogue",
+      "rating": 913.2,
+      "games": 800,
+      "wins": 346,
+      "draws": 0,
+      "losses": 454,
+      "win_pct": 43.2
+    },
+    {
+      "rank": 340,
+      "id": "dwarf",
       "rating": 913.0,
       "games": 800,
       "wins": 346,
@@ -3008,9 +3408,29 @@
       "win_pct": 43.2
     },
     {
-      "rank": 301,
-      "id": "eagle",
-      "rating": 912.2,
+      "rank": 341,
+      "id": "scorpion",
+      "rating": 913.0,
+      "games": 800,
+      "wins": 346,
+      "draws": 0,
+      "losses": 454,
+      "win_pct": 43.2
+    },
+    {
+      "rank": 342,
+      "id": "bard",
+      "rating": 913.0,
+      "games": 800,
+      "wins": 347,
+      "draws": 0,
+      "losses": 453,
+      "win_pct": 43.4
+    },
+    {
+      "rank": 343,
+      "id": "wizard",
+      "rating": 912.7,
       "games": 800,
       "wins": 345,
       "draws": 0,
@@ -3018,9 +3438,159 @@
       "win_pct": 43.1
     },
     {
-      "rank": 302,
-      "id": "shrieker_fungus",
-      "rating": 906.6,
+      "rank": 344,
+      "id": "boon_of_combat_prowess",
+      "rating": 912.7,
+      "games": 800,
+      "wins": 345,
+      "draws": 0,
+      "losses": 455,
+      "win_pct": 43.1
+    },
+    {
+      "rank": 345,
+      "id": "paladin",
+      "rating": 911.9,
+      "games": 800,
+      "wins": 345,
+      "draws": 0,
+      "losses": 455,
+      "win_pct": 43.1
+    },
+    {
+      "rank": 346,
+      "id": "halfling",
+      "rating": 911.9,
+      "games": 800,
+      "wins": 346,
+      "draws": 0,
+      "losses": 454,
+      "win_pct": 43.2
+    },
+    {
+      "rank": 347,
+      "id": "criminal",
+      "rating": 911.8,
+      "games": 800,
+      "wins": 345,
+      "draws": 0,
+      "losses": 455,
+      "win_pct": 43.1
+    },
+    {
+      "rank": 348,
+      "id": "acolyte",
+      "rating": 911.5,
+      "games": 800,
+      "wins": 345,
+      "draws": 0,
+      "losses": 455,
+      "win_pct": 43.1
+    },
+    {
+      "rank": 349,
+      "id": "monk",
+      "rating": 910.8,
+      "games": 800,
+      "wins": 344,
+      "draws": 0,
+      "losses": 456,
+      "win_pct": 43.0
+    },
+    {
+      "rank": 350,
+      "id": "ranger",
+      "rating": 910.5,
+      "games": 800,
+      "wins": 344,
+      "draws": 0,
+      "losses": 456,
+      "win_pct": 43.0
+    },
+    {
+      "rank": 351,
+      "id": "path_of_the_berserker",
+      "rating": 909.5,
+      "games": 800,
+      "wins": 343,
+      "draws": 0,
+      "losses": 457,
+      "win_pct": 42.9
+    },
+    {
+      "rank": 352,
+      "id": "boon_of_the_night_spirit",
+      "rating": 908.9,
+      "games": 800,
+      "wins": 343,
+      "draws": 0,
+      "losses": 457,
+      "win_pct": 42.9
+    },
+    {
+      "rank": 353,
+      "id": "magic_initiate",
+      "rating": 908.9,
+      "games": 800,
+      "wins": 343,
+      "draws": 0,
+      "losses": 457,
+      "win_pct": 42.9
+    },
+    {
+      "rank": 354,
+      "id": "gnome",
+      "rating": 908.8,
+      "games": 800,
+      "wins": 343,
+      "draws": 0,
+      "losses": 457,
+      "win_pct": 42.9
+    },
+    {
+      "rank": 355,
+      "id": "great_weapon_fighting",
+      "rating": 908.8,
+      "games": 800,
+      "wins": 343,
+      "draws": 0,
+      "losses": 457,
+      "win_pct": 42.9
+    },
+    {
+      "rank": 356,
+      "id": "druid_class",
+      "rating": 908.5,
+      "games": 800,
+      "wins": 343,
+      "draws": 0,
+      "losses": 457,
+      "win_pct": 42.9
+    },
+    {
+      "rank": 357,
+      "id": "boon_of_dimensional_travel",
+      "rating": 907.6,
+      "games": 800,
+      "wins": 342,
+      "draws": 0,
+      "losses": 458,
+      "win_pct": 42.8
+    },
+    {
+      "rank": 358,
+      "id": "draconic_sorcery",
+      "rating": 907.5,
+      "games": 800,
+      "wins": 342,
+      "draws": 0,
+      "losses": 458,
+      "win_pct": 42.8
+    },
+    {
+      "rank": 359,
+      "id": "sorcerer",
+      "rating": 905.1,
       "games": 800,
       "wins": 341,
       "draws": 0,
@@ -3028,29 +3598,9 @@
       "win_pct": 42.6
     },
     {
-      "rank": 303,
-      "id": "couatl",
-      "rating": 905.3,
-      "games": 800,
-      "wins": 341,
-      "draws": 0,
-      "losses": 459,
-      "win_pct": 42.6
-    },
-    {
-      "rank": 304,
-      "id": "piranha",
-      "rating": 905.2,
-      "games": 800,
-      "wins": 341,
-      "draws": 0,
-      "losses": 459,
-      "win_pct": 42.6
-    },
-    {
-      "rank": 305,
-      "id": "octopus",
-      "rating": 904.0,
+      "rank": 360,
+      "id": "warrior_of_the_open_hand",
+      "rating": 904.5,
       "games": 800,
       "wins": 340,
       "draws": 0,
@@ -3058,19 +3608,29 @@
       "win_pct": 42.5
     },
     {
-      "rank": 306,
-      "id": "weasel",
+      "rank": 361,
+      "id": "champion",
+      "rating": 903.9,
+      "games": 800,
+      "wins": 341,
+      "draws": 0,
+      "losses": 459,
+      "win_pct": 42.6
+    },
+    {
+      "rank": 362,
+      "id": "priest",
       "rating": 903.8,
       "games": 800,
-      "wins": 339,
-      "draws": 0,
-      "losses": 461,
-      "win_pct": 42.4
+      "wins": 330,
+      "draws": 20,
+      "losses": 450,
+      "win_pct": 41.2
     },
     {
-      "rank": 307,
-      "id": "badger",
-      "rating": 902.3,
+      "rank": 363,
+      "id": "soldier",
+      "rating": 903.1,
       "games": 800,
       "wins": 339,
       "draws": 0,
@@ -3078,9 +3638,9 @@
       "win_pct": 42.4
     },
     {
-      "rank": 308,
-      "id": "homunculus",
-      "rating": 902.1,
+      "rank": 364,
+      "id": "archery",
+      "rating": 902.6,
       "games": 800,
       "wins": 339,
       "draws": 0,
@@ -3088,9 +3648,39 @@
       "win_pct": 42.4
     },
     {
-      "rank": 309,
-      "id": "lemure",
-      "rating": 900.8,
+      "rank": 365,
+      "id": "hunter",
+      "rating": 902.4,
+      "games": 800,
+      "wins": 339,
+      "draws": 0,
+      "losses": 461,
+      "win_pct": 42.4
+    },
+    {
+      "rank": 366,
+      "id": "boon_of_truesight",
+      "rating": 902.4,
+      "games": 800,
+      "wins": 339,
+      "draws": 0,
+      "losses": 461,
+      "win_pct": 42.4
+    },
+    {
+      "rank": 367,
+      "id": "boon_of_fate",
+      "rating": 902.2,
+      "games": 800,
+      "wins": 339,
+      "draws": 0,
+      "losses": 461,
+      "win_pct": 42.4
+    },
+    {
+      "rank": 368,
+      "id": "human",
+      "rating": 901.2,
       "games": 800,
       "wins": 338,
       "draws": 0,
@@ -3098,9 +3688,19 @@
       "win_pct": 42.2
     },
     {
-      "rank": 310,
-      "id": "awakened_shrub",
-      "rating": 900.1,
+      "rank": 369,
+      "id": "fighter",
+      "rating": 900.4,
+      "games": 800,
+      "wins": 338,
+      "draws": 0,
+      "losses": 462,
+      "win_pct": 42.2
+    },
+    {
+      "rank": 370,
+      "id": "background",
+      "rating": 899.6,
       "games": 800,
       "wins": 337,
       "draws": 0,
@@ -3108,9 +3708,9 @@
       "win_pct": 42.1
     },
     {
-      "rank": 311,
-      "id": "hyena",
-      "rating": 899.4,
+      "rank": 371,
+      "id": "skilled",
+      "rating": 898.8,
       "games": 800,
       "wins": 337,
       "draws": 0,
@@ -3118,38 +3718,38 @@
       "win_pct": 42.1
     },
     {
-      "rank": 312,
-      "id": "deer",
-      "rating": 898.6,
+      "rank": 372,
+      "id": "oath_of_devotion",
+      "rating": 897.9,
       "games": 800,
-      "wins": 337,
+      "wins": 336,
       "draws": 0,
-      "losses": 463,
-      "win_pct": 42.1
+      "losses": 464,
+      "win_pct": 42.0
     },
     {
-      "rank": 313,
-      "id": "vulture",
-      "rating": 896.3,
+      "rank": 373,
+      "id": "circle_of_the_land",
+      "rating": 897.3,
       "games": 800,
-      "wins": 335,
+      "wins": 336,
       "draws": 0,
-      "losses": 465,
-      "win_pct": 41.9
+      "losses": 464,
+      "win_pct": 42.0
     },
     {
-      "rank": 314,
-      "id": "cat",
-      "rating": 896.0,
+      "rank": 374,
+      "id": "savage_attacker",
+      "rating": 894.6,
       "games": 800,
-      "wins": 335,
+      "wins": 334,
       "draws": 0,
-      "losses": 465,
-      "win_pct": 41.9
+      "losses": 466,
+      "win_pct": 41.8
     },
     {
-      "rank": 315,
-      "id": "hawk",
+      "rank": 375,
+      "id": "cleric",
       "rating": 892.6,
       "games": 800,
       "wins": 333,
@@ -3158,9 +3758,9 @@
       "win_pct": 41.6
     },
     {
-      "rank": 316,
-      "id": "spider",
-      "rating": 891.3,
+      "rank": 376,
+      "id": "evoker",
+      "rating": 891.9,
       "games": 800,
       "wins": 332,
       "draws": 0,
@@ -3168,9 +3768,29 @@
       "win_pct": 41.5
     },
     {
-      "rank": 317,
-      "id": "crab",
-      "rating": 889.8,
+      "rank": 377,
+      "id": "orc",
+      "rating": 891.1,
+      "games": 800,
+      "wins": 332,
+      "draws": 0,
+      "losses": 468,
+      "win_pct": 41.5
+    },
+    {
+      "rank": 378,
+      "id": "goliath",
+      "rating": 891.0,
+      "games": 800,
+      "wins": 332,
+      "draws": 0,
+      "losses": 468,
+      "win_pct": 41.5
+    },
+    {
+      "rank": 379,
+      "id": "warlock",
+      "rating": 890.2,
       "games": 800,
       "wins": 331,
       "draws": 0,
@@ -3178,19 +3798,9 @@
       "win_pct": 41.4
     },
     {
-      "rank": 318,
-      "id": "giant_fire_beetle",
-      "rating": 889.2,
-      "games": 800,
-      "wins": 331,
-      "draws": 0,
-      "losses": 469,
-      "win_pct": 41.4
-    },
-    {
-      "rank": 319,
-      "id": "raven",
-      "rating": 888.2,
+      "rank": 380,
+      "id": "thief",
+      "rating": 887.4,
       "games": 800,
       "wins": 330,
       "draws": 0,
@@ -3198,19 +3808,9 @@
       "win_pct": 41.2
     },
     {
-      "rank": 320,
-      "id": "frog",
-      "rating": 886.2,
-      "games": 800,
-      "wins": 330,
-      "draws": 0,
-      "losses": 470,
-      "win_pct": 41.2
-    },
-    {
-      "rank": 321,
-      "id": "lizard",
-      "rating": 885.8,
+      "rank": 381,
+      "id": "boon_of_spell_recall",
+      "rating": 886.6,
       "games": 800,
       "wins": 329,
       "draws": 0,
@@ -3218,94 +3818,54 @@
       "win_pct": 41.1
     },
     {
-      "rank": 322,
-      "id": "bat",
-      "rating": 885.3,
+      "rank": 382,
+      "id": "sage",
+      "rating": 886.1,
       "games": 800,
-      "wins": 328,
+      "wins": 329,
       "draws": 0,
-      "losses": 472,
-      "win_pct": 41.0
+      "losses": 471,
+      "win_pct": 41.1
     },
     {
-      "rank": 323,
-      "id": "commoner",
-      "rating": 884.7,
+      "rank": 383,
+      "id": "college_of_lore",
+      "rating": 879.0,
       "games": 800,
-      "wins": 319,
+      "wins": 325,
       "draws": 0,
-      "losses": 481,
-      "win_pct": 39.9
+      "losses": 475,
+      "win_pct": 40.6
     },
     {
-      "rank": 324,
-      "id": "jackal",
-      "rating": 882.3,
+      "rank": 384,
+      "id": "barbarian",
+      "rating": 865.9,
       "games": 800,
-      "wins": 327,
+      "wins": 202,
       "draws": 0,
-      "losses": 473,
-      "win_pct": 40.9
+      "losses": 598,
+      "win_pct": 25.2
     },
     {
-      "rank": 325,
-      "id": "goat",
-      "rating": 881.4,
+      "rank": 385,
+      "id": "grappler",
+      "rating": 861.7,
       "games": 800,
-      "wins": 326,
+      "wins": 313,
       "draws": 0,
-      "losses": 474,
-      "win_pct": 40.8
+      "losses": 487,
+      "win_pct": 39.1
     },
     {
-      "rank": 326,
-      "id": "baboon",
-      "rating": 878.9,
+      "rank": 386,
+      "id": "elf",
+      "rating": 851.9,
       "games": 800,
-      "wins": 324,
+      "wins": 307,
       "draws": 0,
-      "losses": 476,
-      "win_pct": 40.5
-    },
-    {
-      "rank": 327,
-      "id": "owl",
-      "rating": 873.0,
-      "games": 800,
-      "wins": 321,
-      "draws": 0,
-      "losses": 479,
-      "win_pct": 40.1
-    },
-    {
-      "rank": 328,
-      "id": "seahorse",
-      "rating": 864.0,
-      "games": 800,
-      "wins": 311,
-      "draws": 0,
-      "losses": 489,
-      "win_pct": 38.9
-    },
-    {
-      "rank": 329,
-      "id": "scorpion",
-      "rating": 854.7,
-      "games": 800,
-      "wins": 286,
-      "draws": 0,
-      "losses": 514,
-      "win_pct": 35.8
-    },
-    {
-      "rank": 330,
-      "id": "rat",
-      "rating": 840.4,
-      "games": 800,
-      "wins": 207,
-      "draws": 0,
-      "losses": 593,
-      "win_pct": 25.9
+      "losses": 493,
+      "win_pct": 38.4
     }
   ]
 }

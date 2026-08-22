@@ -37,6 +37,9 @@ let fightDetail = null; // transcript of the last single detailed fight for the 
 let formDebounce = 0;
 let leaderboardMeta = ''; // metadata line shown under the leaderboard table
 let leaderboardInitial = ELO_STANDARD; // the leaderboard's own anchor when known
+let rulesetData = null; // parsed copy of the loaded ruleset JSON (for the pickers)
+let archetypes = []; // [{id, name, attributes, skills, spells_known}] — the "class" selector
+let spells = []; // [{id, name, levelTag, costTag, damageTag, damaging, classes, traditions}]
 
 function setStatus(text, isError = false) {
   status.textContent = text;
@@ -159,6 +162,16 @@ async function loadRuleset(id) {
     const rulesetJson = await (await fetch(`rulesets/${cfg.file}`)).text();
     rpg.loadRuleset(rulesetJson);
     meta = rpg.meta();
+    // The engine is the source of truth for resolution; the pickers (the
+    // class selector and the spell list) are built from a parsed copy of the
+    // very same JSON the engine just loaded.
+    try {
+      rulesetData = JSON.parse(rulesetJson);
+    } catch {
+      rulesetData = null;
+    }
+    archetypes = (rulesetData?.data?.archetypes ?? []).map(archetypeSummary);
+    spells = (rulesetData?.data?.spells ?? []).map(spellSummary);
     renderLicence();
     const entries = rpg.entries();
     entriesByName = new Map(entries.map((e) => [e.id, e.name]));
@@ -566,6 +579,34 @@ function buildForm(m) {
   const fields = $('#form-fields');
   fields.innerHTML = '';
 
+  // Class (archetype) selector: pre-fills attributes/skills/spells from a
+  // ruleset archetype as a starting point ("Custom character" to edit freely).
+  // Rulesets without archetypes (D&D) skip this and only get the spell picker.
+  if (archetypes.length > 0) {
+    const classHeading = document.createElement('h3');
+    classHeading.textContent = 'Class';
+    fields.append(classHeading);
+    const classField = document.createElement('label');
+    classField.className = 'stat-field';
+    const classLabel = document.createElement('span');
+    classLabel.textContent = 'Start from an archetype (edit freely after)';
+    const classSelect = document.createElement('select');
+    classSelect.name = 'class';
+    const custom = document.createElement('option');
+    custom.value = '';
+    custom.textContent = 'Custom character';
+    classSelect.append(custom);
+    for (const arch of archetypes) {
+      const opt = document.createElement('option');
+      opt.value = arch.id;
+      opt.textContent = arch.name;
+      classSelect.append(opt);
+    }
+    classSelect.addEventListener('change', () => applyArchetype(classSelect.value));
+    classField.append(classLabel, classSelect);
+    fields.append(classField);
+  }
+
   // Attributes
   const attrsHeading = document.createElement('h3');
   attrsHeading.textContent = 'Attributes';
@@ -591,6 +632,12 @@ function buildForm(m) {
   details.append(skillsGrid);
   fields.append(details);
 
+  // Spells (collapsible picker): which spells the character knows. Only
+  // damaging spells are actually cast by the fight simulator, so those are
+  // listed first and marked; the others are still selectable (a known-but-
+  // never-cast spell is still part of the sheet).
+  buildSpellPicker(fields);
+
   // Combat: weapon + derived readout + optional overrides.
   const combatHeading = document.createElement('h3');
   combatHeading.textContent = 'Combat';
@@ -611,17 +658,14 @@ function buildForm(m) {
   overrides.className = 'grid';
   overrides.id = 'combat-overrides';
   for (const stat of COMBAT_STATS) {
-    const wrap = document.createElement('label');
-    wrap.className = 'stat-field';
-    const label = document.createElement('span');
-    label.textContent = stat;
-    const input = document.createElement('input');
-    input.type = 'number';
-    input.name = `combat:${stat}`;
-    input.placeholder = 'auto';
-    input.setAttribute('aria-label', `${stat} (optional override)`);
-    wrap.append(label, input);
-    overrides.append(wrap);
+    overrides.append(overrideInput(`combat:${stat}`, stat, `${stat} (optional override)`));
+  }
+  // Optional spell-resource override (e.g. a TDE mage's real AE, not just the
+  // derived maximum). Without it the sheet starts at the derived pool.
+  const spellResource = meta?.spell_resource;
+  if (spellResource) {
+    overrides.append(overrideInput(`resource:${spellResource}`, spellResource,
+      `${spellResource} (optional override)`));
   }
   fields.append(overrides);
 
@@ -654,6 +698,226 @@ function statInput(key, labelText, value, min, max) {
   return wrap;
 }
 
+/** An optional (blank = auto) numeric override field. */
+function overrideInput(name, labelText, ariaLabel) {
+  const wrap = document.createElement('label');
+  wrap.className = 'stat-field';
+  const label = document.createElement('span');
+  label.textContent = labelText;
+  const input = document.createElement('input');
+  input.type = 'number';
+  input.name = name;
+  input.placeholder = 'auto';
+  input.setAttribute('aria-label', ariaLabel);
+  wrap.append(label, input);
+  return wrap;
+}
+
+/** An archetype ("class") shaped for the form's pre-fill. */
+function archetypeSummary(arch) {
+  return {
+    id: arch.id,
+    name: arch.name ?? arch.id,
+    attributes: arch.attributes ?? {},
+    skills: arch.skills ?? {},
+    spells_known: arch.spells_known ?? [],
+  };
+}
+
+/** The spells a character can know, shaped for the picker. Mirrors the
+ *  engine's spellAverageDamage (combat.hpp): only `effects[].kind ===
+ *  "damage"` dice count — a spell with no damage is never cast in a fight,
+ *  so it is marked as non-damaging. */
+function spellSummary(spell) {
+  let damageDice = null;
+  if (Array.isArray(spell.effects) && spell.effects.length > 0) {
+    const dmg = spell.effects.find((e) => e && e.kind === 'damage' && e.dice != null);
+    damageDice = dmg ? dmg.dice : null;
+  } else if (spell.damage != null) {
+    damageDice = spell.damage;
+  }
+  const level = spell.level ?? '';
+  const cost = spell.cost ?? spell.ae_cost ?? '';
+  return {
+    id: spell.id,
+    name: spell.name ?? spell.id,
+    levelTag: level !== '' ? ` · L${level}` : '',
+    costTag: cost !== '' ? ` · ${cost}` : '',
+    damageTag: damageDice != null ? ` · ${damageDice}` : '',
+    damaging: damageDice != null,
+    classes: spell.classes ?? [],
+    traditions: spell.traditions ?? [],
+  };
+}
+
+/** Ids of the spells currently checked in the form. */
+function knownSpellIds() {
+  return [...document.querySelectorAll('#form-fields input[name^="spell:"]:checked')]
+    .map((cb) => cb.name.slice(cb.name.indexOf(':') + 1));
+}
+
+/** Distinct classes (D&D) or traditions (TDE) the ruleset's spells carry —
+ *  the group filter options for the spell picker. */
+function spellGroups() {
+  const groups = new Set();
+  for (const s of spells) {
+    for (const g of (s.classes ?? []).concat(s.traditions ?? [])) groups.add(g);
+  }
+  return [...groups].sort();
+}
+
+/** The "Spells" section of the form: a searchable/filterable checkbox list of
+ *  every spell in the ruleset, plus a note that only damaging spells are cast
+ *  by the fight simulator (the engine's pickSpell only ever chooses spells
+ *  that deal damage and are affordable). */
+function buildSpellPicker(fields) {
+  if (spells.length === 0) return; // ruleset has no spells → pure melee
+  const details = document.createElement('details');
+  details.className = 'skills spells';
+  const summary = document.createElement('summary');
+  summary.textContent = `Spells (${knownSpellIds().length} selected)`;
+  details.append(summary);
+
+  const hint = document.createElement('p');
+  hint.className = 'hint spell-hint';
+  hint.textContent = 'Known spells of your character — only damaging spells are cast in test fights.';
+  details.append(hint);
+
+  const filterRow = document.createElement('div');
+  filterRow.className = 'spell-filters';
+  const filter = document.createElement('input');
+  filter.type = 'search';
+  filter.className = 'spell-filter';
+  filter.placeholder = 'Filter spells…';
+  filter.setAttribute('aria-label', 'Filter spells');
+  filterRow.append(filter);
+
+  // A class/tradition filter when the spells carry one (D&D classes, TDE
+  // traditions) — keeps a large spell list manageable.
+  const groups = spellGroups();
+  let groupSelect = null;
+  if (groups.length > 1) {
+    groupSelect = document.createElement('select');
+    groupSelect.className = 'spell-group';
+    const all = document.createElement('option');
+    all.value = '';
+    all.textContent = 'All';
+    groupSelect.append(all);
+    for (const g of groups) {
+      const opt = document.createElement('option');
+      opt.value = g;
+      opt.textContent = g;
+      groupSelect.append(opt);
+    }
+    filterRow.append(groupSelect);
+  }
+  details.append(filterRow);
+
+  const grid = document.createElement('div');
+  grid.className = 'grid spells-grid';
+  for (const s of [...spells].sort((a, b) => Number(b.damaging) - Number(a.damaging))) {
+    const label = document.createElement('label');
+    label.className = 'spell-item';
+    label.dataset.damaging = s.damaging ? '1' : '0';
+    label.dataset.group = (s.classes ?? []).concat(s.traditions ?? []).join('|');
+    const cb = document.createElement('input');
+    cb.type = 'checkbox';
+    cb.name = `spell:${s.id}`;
+    const span = document.createElement('span');
+    span.textContent = `${s.name}${s.levelTag}${s.costTag}${s.damageTag}`;
+    label.append(cb, span);
+    grid.append(label);
+  }
+  details.append(grid);
+
+  // Filtering: the text filter matches the spell's label; the group select
+  // narrows to a class (D&D) or tradition (TDE).
+  const applyFilter = () => {
+    const text = filter.value.trim().toLowerCase();
+    const group = groupSelect ? groupSelect.value : '';
+    for (const item of grid.querySelectorAll('.spell-item')) {
+      const matchesText = !text || item.textContent.toLowerCase().includes(text);
+      const matchesGroup = !group || (item.dataset.group ?? '').split('|').includes(group);
+      item.hidden = !(matchesText && matchesGroup);
+    }
+  };
+  filter.addEventListener('input', applyFilter);
+  groupSelect?.addEventListener('change', applyFilter);
+
+  // Keep the count and the derived readout fresh when spells are picked.
+  grid.addEventListener('change', () => {
+    summary.textContent = `Spells (${knownSpellIds().length} selected)`;
+    refreshDerived();
+  });
+
+  fields.append(details);
+}
+
+/** Pre-fills the form (attributes, skills, spells) from an archetype; a
+ *  "Custom character" selection (empty id) leaves the form as it is.
+ *  D&D archetypes are class shells without attributes/skills/spells_known, so
+ *  the optional fields are guarded (selecting one just leaves the form as-is). */
+function applyArchetype(id) {
+  const arch = archetypes.find((a) => a.id === id);
+  if (!arch) return;
+  const set = (prefix, values) => {
+    for (const [key, value] of Object.entries(values ?? {})) {
+      const input = document.querySelector(`#form-fields input[name="${prefix}:${key}"]`);
+      if (input) input.value = value;
+    }
+  };
+  set('attr', arch.attributes);
+  set('skill', arch.skills);
+  const known = arch.spells_known ?? [];
+  for (const cb of document.querySelectorAll('#form-fields input[name^="spell:"]')) {
+    cb.checked = known.includes(cb.name.slice(cb.name.indexOf(':') + 1));
+  }
+  const spellSummaryEl = document.querySelector('.spells summary');
+  if (spellSummaryEl) spellSummaryEl.textContent = `Spells (${knownSpellIds().length} selected)`;
+  refreshDerived();
+}
+
+/** The derived maximum of a resource pool (e.g. TDE's AE = 20 + INT), read
+ *  from a fresh probe entity — a new pool starts at its full derived maximum,
+ *  so getResource returns the cap the engine will enforce on any spend. */
+function derivedResourceMax(pool) {
+  try {
+    const probe = rpg.createEntityFromSheet('probe', { stats: collectStats() });
+    const max = probe.getResource(pool);
+    probe.dispose();
+    return max;
+  } catch {
+    return Number.MAX_SAFE_INTEGER;
+  }
+}
+
+/** The full sheet a ranked character is built from: the collected stats, the
+ *  selected spells as a spellbook (so makeCombatantSpecFromEntity sees them),
+ *  and an optional spell-resource override (e.g. a TDE mage's actual AE). */
+function collectSheet() {
+  const stats = collectStats();
+  const sheet = { stats };
+  const known = knownSpellIds();
+  if (known.length > 0) {
+    sheet.spellbook = { known };
+  }
+  const resource = meta?.spell_resource;
+  if (resource) {
+    const input = document.querySelector(`#form-fields input[name="resource:${resource}"]`);
+    if (input && input.value.trim() !== '') {
+      const value = Number(input.value);
+      if (!Number.isNaN(value)) {
+        // The pool is clamped to its derived maximum on any spend, so an
+        // override above it would read as a confusing "AE 60 → 35" in the
+        // transcript. Clamp it up front to what the engine will actually
+        // let the sheet have.
+        sheet.resources = { [resource]: Math.max(0, Math.min(value, derivedResourceMax(resource))) };
+      }
+    }
+  }
+  return sheet;
+}
+
 function collectStats() {
   const stats = {};
   for (const input of document.querySelectorAll('#form-fields input[name^="attr:"], #form-fields input[name^="skill:"]')) {
@@ -674,20 +938,23 @@ function currentWeapon() {
   return document.querySelector('#form-fields input[name="weapon"]')?.value || DEFAULT_WEAPON;
 }
 
-/** Live readout: derived combat values of the character as typed so far. */
+/** Live readout: derived combat values (and spell resource) of the character
+ *  as typed so far. */
 function refreshDerived() {
   const readout = $('#combat-readout');
   if (!readout || !rpg) return;
   try {
-    const stats = collectStats();
-    const probe = rpg.createEntityFromSheet('probe', stats);
+    const probe = rpg.createEntityFromSheet('probe', collectSheet());
     const hpPool = meta.resource_pools[0]?.id;
     const values = COMBAT_STATS.map((s) => {
       const v = probe.getStat(s);
       return `<b>${s}</b> ${v}`;
     });
     const hp = hpPool ? `<b>${hpPool}</b> ${probe.getResource(hpPool)}` : '';
-    readout.innerHTML = `Derived: ${values.join(' · ')}${hp ? ` · ${hp}` : ''}`;
+    const sr = meta?.spell_resource;
+    const res = sr ? `<b>${sr}</b> ${probe.getResource(sr)}` : '';
+    readout.innerHTML =
+      `Derived: ${values.join(' · ')}${hp ? ` · ${hp}` : ''}${res ? ` · ${res}` : ''}`;
     probe.dispose();
   } catch (err) {
     readout.textContent = 'Enter attributes to see derived combat values.';
@@ -702,8 +969,7 @@ async function rankCharacter(event) {
   progress.hidden = false;
   try {
     you?.spec?.dispose();
-    const stats = collectStats();
-    const entity = rpg.createEntityFromSheet('you', stats);
+    const entity = rpg.createEntityFromSheet('you', collectSheet());
     const spec = rpg.specFromEntity(entity, currentWeapon());
     entity.dispose();
 

@@ -364,7 +364,8 @@ table.leaderboard {
   text-overflow: ellipsis;
 }
 
-.stat-field input {
+.stat-field input,
+.stat-field select {
   background: var(--panel-2);
   color: var(--text);
   border: 1px solid var(--border);
@@ -374,9 +375,81 @@ table.leaderboard {
   width: 100%;
 }
 
-.stat-field input:focus {
+.stat-field input:focus,
+.stat-field select:focus {
   outline: 2px solid var(--accent);
   outline-offset: 1px;
+}
+
+/* ---- spell picker ---- */
+
+.spell-hint {
+  margin: 2px 0 8px;
+}
+
+.spell-filters {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.spell-filters .spell-filter {
+  flex: 1;
+  background: var(--panel-2);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 5px 8px;
+  font-size: 0.9rem;
+}
+
+.spell-filters .spell-group {
+  flex: 0 0 auto;
+  max-width: 180px;
+  background: var(--panel-2);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 5px 8px;
+  font-size: 0.9rem;
+}
+
+.spells-grid {
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 6px;
+}
+
+.spell-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  padding: 3px 6px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.spell-item:hover {
+  background: var(--panel-2);
+}
+
+.spell-item input[type="checkbox"] {
+  accent-color: var(--accent);
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* Damaging spells (the ones the fight simulator actually casts) are shown in
+   full text; non-damaging ones are dimmed so the combat-relevant picks stand
+   out at a glance. */
+.spell-item[data-damaging="1"] span {
+  color: var(--text);
+}
+
+.spell-item[data-damaging="0"] span {
+  color: var(--muted);
 }
 
 details.skills {
