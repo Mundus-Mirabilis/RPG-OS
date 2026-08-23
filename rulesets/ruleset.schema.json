@@ -744,6 +744,37 @@
         "attack": { "$ref": "#/definitions/attackDef", "description": "Optional attack roll the source makes against the target (alternative to a save). On a hit the damage/condition applies; a miss applies nothing (or half damage for damage effects)." }
       }
     },
+    "movementSpeedValue": {
+      "anyOf": [
+        { "type": "number", "description": "Base speed in the ruleset's distance unit." },
+        { "type": "object", "additionalProperties": false, "properties": { "value": { "type": "number", "description": "Base speed in the ruleset's distance unit." }, "hover": { "type": "boolean", "description": "Fly speeds that can hover (D&D '(hover)')." } } }
+      ]
+    },
+    "movementSpeedEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "mode": { "type": "string", "description": "Movement mode id (walk, swim, fly, climb, burrow, ...)." },
+        "value": { "type": "number", "description": "Base speed in the ruleset's distance unit." },
+        "hover": { "type": "boolean", "description": "Fly speeds that can hover." }
+      }
+    },
+    "senseValue": {
+      "anyOf": [
+        { "type": "number", "description": "Sense range in the ruleset's distance unit." },
+        { "type": "object", "additionalProperties": false, "properties": { "range": { "type": "number", "description": "Sense range." }, "note": { "type": "string", "description": "Optional qualifier (e.g. 'unimpeded by magical darkness')." } } }
+      ]
+    },
+    "senseEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "sense": { "type": "string", "description": "Sense id (blindsight, darkvision, tremorsense, truesight, ...)." },
+        "name": { "type": "string", "description": "Human-readable sense name." },
+        "range": { "type": "number", "description": "Sense range in the ruleset's distance unit." },
+        "note": { "type": "string", "description": "Optional qualifier (e.g. 'unimpeded by magical darkness')." }
+      }
+    },
     "creatureRecord": {
       "type": "object",
       "required": ["id"],
@@ -754,7 +785,23 @@
         "size": { "type": "string" },
         "type": { "type": "string" },
         "ac": { "$ref": "#/definitions/variantValue" },
-        "speed": { "type": "string" },
+        "speed": {
+          "description": "The creature's movement speeds. Preferred structured form is an object mapping movement-mode id -> base speed (value is a number or an object {'value': N, 'hover': true}); an array of {'mode','value','hover'} entries is also accepted. A legacy prose stat-block string (e.g. '40 ft., Fly 80 ft., Swim 40 ft.') is accepted and parsed best-effort.",
+          "anyOf": [
+            { "type": "string" },
+            { "type": "object", "additionalProperties": { "$ref": "#/definitions/movementSpeedValue" } },
+            { "type": "array", "items": { "$ref": "#/definitions/movementSpeedEntry" } }
+          ]
+        },
+        "senses": {
+          "description": "The creature's senses. Preferred structured form is an object mapping sense id -> range (value is a number or an object {'range': N, 'note': '...'}); an array of {'sense','range','note'} entries is also accepted. A legacy prose stat-block string (e.g. 'Blindsight 30 ft., Darkvision 120 ft.; Passive Perception 20') is accepted and parsed best-effort.",
+          "anyOf": [
+            { "type": "string" },
+            { "type": "object", "additionalProperties": { "$ref": "#/definitions/senseValue" } },
+            { "type": "array", "items": { "$ref": "#/definitions/senseEntry" } }
+          ]
+        },
+        "passive_perception": { "type": "integer", "description": "The creature's passive Perception score (10 + Perception modifier)." },
         "slot": { "type": "string", "description": "Item-only: the equipment slot this item fits (e.g. 'weapon_hand'); empty when it is not worn." },
         "weight": { "oneOf": [{ "type": "string" }, { "type": "number" }], "description": "Item-only: weight, e.g. '2 lb.' or a number in the encumbrance weight unit." },
         "size": { "oneOf": [{ "type": "string" }, { "type": "number" }], "description": "Creatures: the size category ('Medium', 'Huge', ...). Items: the size in the encumbrance 'size_unit' (volume / slots) as a number; the ruleset's 'default_item_size' applies when absent. The engine reads a numeric size on items and ignores the string category." },

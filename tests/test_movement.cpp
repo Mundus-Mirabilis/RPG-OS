@@ -7,6 +7,8 @@
  */
 #include "test_fixtures.hpp"
 
+#include <algorithm>
+
 using rpg_os::MovementOption;
 using rpg_os::MovementStatus;
 using rpg_os::TerrainItemEffect;
@@ -307,4 +309,214 @@ TEST_CASE("movement: the shipped D&D ruleset drives movement from its data") {
 
   // Land regeneration is normal.
   CHECK(dnd.canRegenerate(sheet, "land"));
+}
+
+namespace {
+/// A mini ruleset carrying a creature record with structured movement/senses.
+inline std::string creatureRuleset() {
+  return R"({
+    "schema_version": 1, "ruleset_id": "mini", "licence": "test",
+    "attributes": [{"id": "STR", "name": "Strength", "min": 1, "max": 30, "default": 10}],
+    "resource_pools": [{"id": "HP", "name": "Hit Points", "max_stat": "STR", "min": 0}],
+    "movement": {
+      "default_terrain": "land",
+      "modes": {
+        "walk": {"name": "Walk", "speed": "30", "exhaustion": 0},
+        "swim": {"name": "Swim", "speed": "20", "exhaustion": 2},
+        "fly":  {"name": "Fly", "speed": "60", "exhaustion": 1}
+      },
+      "terrains": {
+        "land": {"name": "Land",
+                 "modes": {"walk": {"factor": 1.0}, "swim": {"factor": 1.0}, "fly": {"factor": 1.0}}}
+      }
+    },
+    "data": {
+      "creatures": [
+        {"id": "dragon", "name": "Dragon",
+         "speed": {"walk": 40, "fly": {"value": 90, "hover": true}, "swim": 40},
+         "senses": {"blindsight": 30, "darkvision": 120,
+                     "truesight": {"range": 60, "note": "sees all"}},
+         "passive_perception": 18}
+      ]
+    }
+  })";
+}
+} // namespace
+
+TEST_CASE("movement: a creature's own speed overrides the ruleset mode") {
+  RulesetEngine engine;
+  REQUIRE(engine.loadRulesetFromJson(creatureRuleset()));
+  auto creature = engine.createCreature("dragon", rpg_os::Variance::Average);
+  REQUIRE(creature != nullptr);
+
+  // walk on land uses the creature's 40 (the ruleset mode is 30).
+  const auto walk = engine.movementSpeed(*creature, "walk", "land");
+  REQUIRE(walk.has_value());
+  CHECK(walk->baseSpeed == doctest::Approx(40.0));
+  CHECK(walk->speed == doctest::Approx(40.0));
+
+  // A mode the creature does not declare falls back to the ruleset mode.
+  // (climb is not in this mini ruleset, so it is an UnknownMode even though
+  // the creature has its own modes.)
+  CHECK(engine.movementSpeed(*creature, "climb", "land").error() == BookkeepingError::UnknownMode);
+
+  // The creature's own movement modes are listed in movementStatus.
+  const auto status = engine.movementStatus(*creature, "land");
+  REQUIRE(status.has_value());
+  CHECK(status->options.size() == 3);
+}
+
+TEST_CASE("movement: hover in a creature's fly speed is preserved") {
+  RulesetEngine engine;
+  REQUIRE(engine.loadRulesetFromJson(creatureRuleset()));
+  auto creature = engine.createCreature("dragon", rpg_os::Variance::Average);
+  REQUIRE(creature != nullptr);
+
+  const auto &speeds = creature->movementSpeeds();
+  const auto it = speeds.find("fly");
+  REQUIRE(it != speeds.end());
+  CHECK(it->second.value == doctest::Approx(90.0));
+  CHECK(it->second.hover);
+  // walk is a plain number (no hover).
+  CHECK_FALSE(speeds.at("walk").hover);
+}
+
+TEST_CASE("movement: senses are queryable and fold into capabilities") {
+  RulesetEngine engine;
+  REQUIRE(engine.loadRulesetFromJson(creatureRuleset()));
+  auto creature = engine.createCreature("dragon", rpg_os::Variance::Average);
+  REQUIRE(creature != nullptr);
+
+  CHECK(creature->hasSense("darkvision"));
+  const auto *darkvision = creature->findSense("darkvision");
+  REQUIRE(darkvision != nullptr);
+  CHECK(darkvision->range == doctest::Approx(120.0));
+  CHECK_FALSE(creature->hasSense("tremorsense"));
+  CHECK(creature->passivePerception() == 18);
+
+  // A sense with a note keeps its note and range.
+  const auto *truesight = creature->findSense("truesight");
+  REQUIRE(truesight != nullptr);
+  CHECK(truesight->range == doctest::Approx(60.0));
+  CHECK(truesight->note == "sees all");
+
+  // Senses are also capabilities (so a terrain can require "darkvision").
+  CHECK(creature->hasCapability("darkvision"));
+}
+
+TEST_CASE("movement: creature movement/senses round-trip through the save form") {
+  RulesetEngine engine;
+  REQUIRE(engine.loadRulesetFromJson(creatureRuleset()));
+  auto creature = engine.createCreature("dragon", rpg_os::Variance::Average);
+  REQUIRE(creature != nullptr);
+
+  rpg_os::Json saved;
+  creature->toJson(saved);
+  DynamicEntity restored(engine.ruleset(), "restored");
+  restored.fromJson(saved);
+  CHECK(restored.movementSpeed("walk") == doctest::Approx(40.0));
+  CHECK(restored.movementSpeed("fly") == doctest::Approx(90.0));
+  CHECK(restored.hasSense("blindsight"));
+  CHECK(restored.passivePerception() == 18);
+}
+
+TEST_CASE("movement: legacy prose speed/senses are parsed best-effort") {
+  const std::string rulesetJson = R"({
+    "schema_version": 1, "ruleset_id": "mini", "licence": "test",
+    "attributes": [{"id": "STR", "name": "Strength", "min": 1, "max": 30, "default": 10}],
+    "resource_pools": [{"id": "HP", "name": "Hit Points", "max_stat": "STR", "min": 0}],
+    "movement": {
+      "default_terrain": "land",
+      "modes": {
+        "walk": {"name": "Walk", "speed": "30", "exhaustion": 0},
+        "swim": {"name": "Swim", "speed": "20", "exhaustion": 2},
+        "fly":  {"name": "Fly", "speed": "60", "exhaustion": 1}
+      },
+      "terrains": {
+        "land": {"name": "Land",
+                 "modes": {"walk": {"factor": 1.0}, "swim": {"factor": 1.0}, "fly": {"factor": 1.0}}}
+      }
+    },
+    "data": {
+      "creatures": [
+        {"id": "young_dragon", "name": "Young Dragon",
+         "speed": "40 ft., Fly 80 ft., Swim 40 ft.",
+         "senses": "Blindsight 30 ft., Darkvision 120 ft.; Passive Perception 18"}
+      ]
+    }
+  })";
+  RulesetEngine engine;
+  REQUIRE(engine.loadRulesetFromJson(rulesetJson));
+  auto creature = engine.createCreature("young_dragon", rpg_os::Variance::Average);
+  REQUIRE(creature != nullptr);
+
+  CHECK(creature->movementSpeed("walk") == doctest::Approx(40.0));
+  CHECK(creature->movementSpeed("fly") == doctest::Approx(80.0));
+  CHECK(creature->movementSpeed("swim") == doctest::Approx(40.0));
+  CHECK(creature->hasSense("darkvision"));
+  CHECK(creature->findSense("darkvision")->range == doctest::Approx(120.0));
+  CHECK(creature->passivePerception() == 18);
+
+  const auto walk = engine.movementSpeed(*creature, "walk", "land");
+  REQUIRE(walk.has_value());
+  CHECK(walk->baseSpeed == doctest::Approx(40.0));
+}
+
+TEST_CASE("movement: the shipped D&D ruleset exposes creature speed and senses") {
+  RulesetEngine dnd;
+  REQUIRE(dnd.loadRulesetFromFile(rulesetPath("dnd5e_srd.json")));
+  auto dragon = dnd.createCreature("young_black_dragon", rpg_os::Variance::Average);
+  REQUIRE(dragon != nullptr);
+
+  const auto walk = dnd.movementSpeed(*dragon, "walk", "land");
+  REQUIRE(walk.has_value());
+  CHECK(walk->baseSpeed == doctest::Approx(40.0));
+  CHECK(walk->speed == doctest::Approx(40.0));
+
+  CHECK(dragon->hasMovementSpeed("fly"));
+  CHECK(dragon->movementSpeed("fly") == doctest::Approx(80.0));
+  CHECK(dragon->hasMovementSpeed("swim"));
+  CHECK_FALSE(dragon->hasMovementSpeed("burrow"));
+
+  CHECK(dragon->hasSense("blindsight"));
+  CHECK(dragon->findSense("darkvision")->range == doctest::Approx(120.0));
+  CHECK_FALSE(dragon->hasSense("tremorsense"));
+  CHECK(dragon->passivePerception() == 0); // the stat block lists no passive Perception
+
+  auto ancient = dnd.createCreature("ancient_black_dragon", rpg_os::Variance::Average);
+  REQUIRE(ancient != nullptr);
+  CHECK(ancient->passivePerception() == 26);
+  CHECK(ancient->hasCapability("darkvision"));
+
+  auto elemental = dnd.createCreature("air_elemental", rpg_os::Variance::Average);
+  REQUIRE(elemental != nullptr);
+  const auto &speeds = elemental->movementSpeeds();
+  const auto it = speeds.find("fly");
+  REQUIRE(it != speeds.end());
+  CHECK(it->second.hover);
+}
+
+TEST_CASE("movement: a creature mode the ruleset does not declare is queryable") {
+  // The Dark Eye ruleset declares walk/swim/climb (no fly), but the irrhalk
+  // bestiary entry has an air speed. The engine synthesizes the missing mode
+  // so the creature's own speed is still reported.
+  RulesetEngine tde;
+  REQUIRE(tde.loadRulesetFromFile(rulesetPath("tde5e_core.json")));
+  auto irrhalk = tde.createCreature("irrhalk", rpg_os::Variance::Average);
+  REQUIRE(irrhalk != nullptr);
+  CHECK(irrhalk->hasMovementSpeed("fly"));
+
+  const auto fly = tde.movementSpeed(*irrhalk, "fly", "land");
+  REQUIRE(fly.has_value());
+  CHECK(fly->modeId == "fly");
+  CHECK(fly->baseSpeed == doctest::Approx(36.0));
+  CHECK(fly->speed == doctest::Approx(36.0));
+
+  // The creature's own modes are listed even though fly is not a rule mode.
+  const auto status = tde.movementStatus(*irrhalk, "land");
+  REQUIRE(status.has_value());
+  const auto it = std::find_if(status->options.begin(), status->options.end(),
+                               [](const MovementOption &o) { return o.modeId == "fly"; });
+  REQUIRE(it != status->options.end());
+  CHECK(it->baseSpeed == doctest::Approx(36.0));
 }

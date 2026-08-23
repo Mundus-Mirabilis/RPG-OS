@@ -308,6 +308,25 @@ mode:
   Range/stat values are resolved per `rpg_os::Variance` (weakest / weak /
   average / strong / strongest / random) via `rpg_os::readVariantValue`
   (`include/rpg_os/core/variance.hpp`).
+- **Creature movement & senses** are machine-readable, not prose. A bestiary
+  entry declares `speed` as an object mapping movement-mode id → base speed
+  (a number, or `{"value": N, "hover": true}` for a fly speed that can hover),
+  e.g. `"speed": {"walk": 40, "fly": 80, "swim": 40}` — the bare stat-block
+  number is the `walk` mode. It declares `senses` as an object mapping sense
+  id → range (a number, or `{"range": N, "note": "..."}`), plus an optional
+  `passive_perception` integer, e.g.
+  `"senses": {"blindsight": 30, "darkvision": 120}`, `"passive_perception": 16`.
+  The engine prefers the creature's own speed over the ruleset's movement-mode
+  formula (`RulesetEngine::baseMovementSpeed`), reports it via
+  `movementSpeed`/`movementStatus`, and a mode the ruleset does not declare is
+  still queryable (synthesized at full speed). The senses are exposed via
+  `DynamicEntity::senses`/`hasSense`/`findSense`/`passivePerception` and folded
+  into `capabilities()`, so `hasCapability("darkvision")` is true for a
+  creature whose stat block lists it. Legacy prose strings (`"40 ft., Fly
+  80 ft., Swim 40 ft."`, `"Blindsight 30 ft., Darkvision 120 ft.; Passive
+  Perception 20"`) are accepted and parsed best-effort, but the shipped
+  rulesets use the structured form; `validate_ruleset.py` flags a malformed
+  structured `speed`/`senses`.
 - **Item records** (`data.items` — weapons, armor, containers, magic items)
   are the engine's gear source. A **weapon** declares `damage` as a *bare
   dice expression* (`"1d8"` — **never** `"1d8 Bludgeoning"`; the damage

@@ -1426,6 +1426,11 @@ public:
   /// is unknown.
   [[nodiscard]] double baseMovementSpeed(const DynamicEntity &sheet,
                                          std::string_view modeId) const {
+    // A sheet's own declared movement speed (a creature's stat-block speed)
+    // takes precedence over the ruleset's default mode formula.
+    if (sheet.hasMovementSpeed(modeId)) {
+      return sheet.movementSpeed(modeId);
+    }
     const MovementConfig &mov = m_ruleset.movement;
     const auto it = mov.modes.find(std::string(modeId));
     if (it == mov.modes.end()) {
@@ -1474,7 +1479,7 @@ public:
       return std::unexpected(BookkeepingError::NoRuleset);
     }
     const MovementConfig &mov = m_ruleset.movement;
-    if (mov.modes.empty()) {
+    if (mov.modes.empty() && !sheet.hasMovementSpeed(modeId)) {
       return MovementOption{
           std::string(modeId), std::string(modeId), 0.0, 0.0, true, {}, 0.0, true};
     }
@@ -1483,23 +1488,38 @@ public:
       return std::unexpected(BookkeepingError::UnknownTerrain);
     }
     const auto modeIt = mov.modes.find(std::string(modeId));
-    if (modeIt == mov.modes.end()) {
+    if (modeIt == mov.modes.end() && !sheet.hasMovementSpeed(modeId)) {
       return std::unexpected(BookkeepingError::UnknownMode);
     }
-    const MovementModeDef &mode = modeIt->second;
+    // A movement mode the ruleset does not declare but the creature does (e.g.
+    // a bestiary entry that flies in a ruleset without a fly mode) uses a
+    // synthesized default (full speed, no base exhaustion) so its own speed is
+    // still queryable through the terrain rules.
+    MovementModeDef synthesized;
+    const MovementModeDef *mode = &synthesized;
+    if (modeIt != mov.modes.end()) {
+      mode = &modeIt->second;
+    } else {
+      synthesized.id = std::string(modeId);
+      synthesized.name = std::string(modeId);
+      synthesized.speedText = "0";
+      synthesized.speed = Expression("0");
+      synthesized.factor = 1.0;
+      synthesized.exhaustion = 0.0;
+    }
     MovementOption option;
-    option.modeId = mode.id;
-    option.modeName = mode.name;
-    option.baseSpeed = baseMovementSpeed(sheet, mode.id);
+    option.modeId = mode->id;
+    option.modeName = mode->name;
+    option.baseSpeed = baseMovementSpeed(sheet, mode->id);
     const TerrainModeRule *rule = nullptr;
-    const auto ruleIt = terrain->modes.find(mode.id);
+    const auto ruleIt = terrain->modes.find(mode->id);
     if (ruleIt != terrain->modes.end()) {
       rule = &ruleIt->second;
     }
     const double terrainFactor = rule != nullptr ? rule->speedFactor : 1.0;
     const double costFactor = rule != nullptr ? rule->costFactor : 1.0;
-    option.speed = option.baseSpeed * mode.factor * terrainFactor * loadSpeedFactor(sheet);
-    option.exhaustionPerUnit = mov.exhaustionPerDistance * mode.exhaustion * costFactor;
+    option.speed = option.baseSpeed * mode->factor * terrainFactor * loadSpeedFactor(sheet);
+    option.exhaustionPerUnit = mov.exhaustionPerDistance * mode->exhaustion * costFactor;
     option.regeneration = terrain->regeneration != "none";
     if (rule != nullptr && !rule->possible) {
       option.possible = false;
@@ -1535,7 +1555,19 @@ public:
     if (findTerrain(status.terrainId) == nullptr) {
       return std::unexpected(BookkeepingError::UnknownTerrain);
     }
+    // List every rule-declared mode plus any mode the sheet declares for
+    // itself (a creature's stat-block speed may use a mode the ruleset does
+    // not define, e.g. fly in a ruleset without a fly mode).
+    std::vector<std::string> modeIds;
     for (const auto &[modeId, mode] : mov.modes) {
+      modeIds.push_back(modeId);
+    }
+    for (const auto &[modeId, speed] : sheet.movementSpeeds()) {
+      if (mov.modes.find(modeId) == mov.modes.end()) {
+        modeIds.push_back(modeId);
+      }
+    }
+    for (const std::string &modeId : modeIds) {
       auto option = movementSpeed(sheet, modeId, status.terrainId);
       if (option) {
         status.options.push_back(*option);

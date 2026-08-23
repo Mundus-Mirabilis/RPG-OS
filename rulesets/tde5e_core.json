@@ -1226,7 +1226,7 @@
         "id": "gotongi",
         "name": "Gotongi",
         "dodge": 9,
-        "speed": "12",
+        "speed": {"walk": 12},
         "armor_rating": 0,
         "ini": "15+1D6",
         "attributes": {
@@ -1253,7 +1253,7 @@
         "id": "heshthot",
         "name": "Heshthot",
         "dodge": 7,
-        "speed": "9",
+        "speed": {"walk": 9},
         "armor_rating": 2,
         "ini": "15+1D6",
         "attributes": {
@@ -1292,7 +1292,7 @@
         "id": "irrhalk",
         "name": "Irrhalk",
         "dodge": 9,
-        "speed": "12/36 (ground/air)",
+        "speed": {"walk": 12, "fly": 36},
         "armor_rating": 4,
         "ini": "18+1D6",
         "attributes": {
@@ -1325,7 +1325,7 @@
         "id": "fire_djinni",
         "name": "Fire Djinni",
         "dodge": 8,
-        "speed": "10",
+        "speed": {"walk": 10},
         "armor_rating": 2,
         "ini": "16+1D6",
         "attributes": {
@@ -1352,7 +1352,7 @@
         "id": "fire_spirit",
         "name": "Fire Spirit",
         "dodge": 6,
-        "speed": "8",
+        "speed": {"walk": 8},
         "armor_rating": 0,
         "ini": "13+1D6",
         "attributes": {
@@ -1379,7 +1379,7 @@
         "id": "dog",
         "name": "Dog (Mixed-breed)",
         "dodge": 7,
-        "speed": "12",
+        "speed": {"walk": 12},
         "armor_rating": 0,
         "ini": "13+1D6",
         "attributes": {
@@ -1406,7 +1406,7 @@
         "id": "horse",
         "name": "Horse (Warunker)",
         "dodge": 7,
-        "speed": "12",
+        "speed": {"walk": 12},
         "armor_rating": 0,
         "ini": "13+1D6",
         "attributes": {
@@ -1445,7 +1445,7 @@
         "id": "toad",
         "name": "Toad (Kosh Toad)",
         "dodge": 4,
-        "speed": "1",
+        "speed": {"walk": 1},
         "armor_rating": 0,
         "ini": "12+1D6",
         "attributes": {
@@ -1472,7 +1472,7 @@
         "id": "cat",
         "name": "Cat (Barn Cat)",
         "dodge": 7,
-        "speed": "10",
+        "speed": {"walk": 10},
         "armor_rating": 0,
         "ini": "13+1D6",
         "attributes": {
@@ -1505,7 +1505,7 @@
         "id": "raven",
         "name": "Raven (Coal Raven)",
         "dodge": 5,
-        "speed": "2/16 (ground/air)",
+        "speed": {"walk": 2, "fly": 16},
         "armor_rating": 0,
         "ini": "11+1D6",
         "attributes": {
@@ -1531,7 +1531,7 @@
         "id": "staff_serpent",
         "name": "Staff Serpent",
         "dodge": 6,
-        "speed": "2",
+        "speed": {"walk": 2},
         "armor_rating": 1,
         "ini": "14+1D6",
         "attributes": {

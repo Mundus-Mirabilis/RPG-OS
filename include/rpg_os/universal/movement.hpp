@@ -112,4 +112,13 @@ struct TerrainItemEffect {
   std::vector<std::string> grants; ///< capabilities the item grants here
 };
 
+/// A single creature-declared movement mode (its stat-block speed). The
+/// `mode` id refers to a movement mode from the ruleset's `movement.modes`
+/// (walk, swim, fly, ...); a creature without its own entry uses the mode's
+/// default formula from the movement section.
+struct MovementSpeed {
+  double value{0.0}; ///< base speed in the ruleset's distance unit (0 = none)
+  bool hover{false}; ///< e.g. a D&D fly speed "(hover)" — can stay aloft
+};
+
 } // namespace rpg_os

@@ -30,6 +30,7 @@
 #include <algorithm>
 #include <cstdint>
 #include <functional>
+#include <map>
 #include <rpg_os/common/event_system.hpp>
 #include <rpg_os/common/json.hpp>
 #include <rpg_os/core/advancement.hpp>
@@ -44,6 +45,7 @@
 #include <rpg_os/universal/expression.hpp>
 #include <rpg_os/universal/movement.hpp>
 #include <rpg_os/universal/ruleset_loader.hpp>
+#include <rpg_os/universal/senses.hpp>
 #include <string>
 #include <string_view>
 #include <unordered_map>
@@ -376,14 +378,21 @@ public:
   /// carried instance.
   [[nodiscard]] std::vector<std::string> capabilities() const {
     std::vector<std::string> out = collectTokens("capabilities");
-    if (m_terrain.empty()) {
-      return out;
-    }
     const auto addToken = [&out](const std::string &token) {
       if (std::find(out.begin(), out.end(), token) == out.end()) {
         out.push_back(token);
       }
     };
+    // A creature's declared senses are also capabilities — "darkvision",
+    // "blindsight", "tremorsense", "truesight" — so hasCapability("darkvision")
+    // is true for a creature whose stat block lists it, and a movement mode
+    // that requires such a capability becomes possible automatically.
+    for (const auto &[senseId, sense] : m_senses) {
+      addToken(senseId);
+    }
+    if (m_terrain.empty()) {
+      return out;
+    }
     for (const auto &[slot, itemId] : m_equipment.slots()) {
       const TerrainItemEffect effect = itemTerrainEffect(itemId);
       for (const std::string &grant : effect.grants) {
@@ -545,6 +554,46 @@ public:
     return m_resistances;
   }
 
+  /// The creature-declared movement modes (mode id -> speed), populated from
+  /// a bestiary record's structured `speed`. Empty for a hand-built sheet or
+  /// an archetype (which uses the ruleset's mode formulas).
+  [[nodiscard]] const std::map<std::string, MovementSpeed> &movementSpeeds() const noexcept {
+    return m_movement;
+  }
+
+  /// Whether the sheet declares its own base speed for movement mode `modeId`.
+  [[nodiscard]] bool hasMovementSpeed(std::string_view modeId) const {
+    return m_movement.find(std::string(modeId)) != m_movement.end();
+  }
+
+  /// The sheet's own base speed for `modeId` (0 when it declares none).
+  [[nodiscard]] double movementSpeed(std::string_view modeId) const {
+    const auto it = m_movement.find(std::string(modeId));
+    return it == m_movement.end() ? 0.0 : it->second.value;
+  }
+
+  /// The creature-declared senses (sense id -> sense), populated from a
+  /// bestiary record's structured `senses`. Empty for a hand-built sheet.
+  [[nodiscard]] const std::map<std::string, Sense> &senses() const noexcept {
+    return m_senses;
+  }
+
+  /// Whether the sheet declares sense `senseId` (e.g. "darkvision").
+  [[nodiscard]] bool hasSense(std::string_view senseId) const {
+    return m_senses.find(std::string(senseId)) != m_senses.end();
+  }
+
+  /// The declared sense by id, or nullptr when the sheet has no such sense.
+  [[nodiscard]] const Sense *findSense(std::string_view senseId) const {
+    const auto it = m_senses.find(std::string(senseId));
+    return it == m_senses.end() ? nullptr : &it->second;
+  }
+
+  /// The creature-declared passive Perception score (0 when not stated).
+  [[nodiscard]] int32_t passivePerception() const noexcept {
+    return m_passivePerception;
+  }
+
   /// Serializes the whole sheet (stats, resources, conditions, inventory,
   /// equipment, money, spellbook, advancement, effects) to a JSON object —
   /// the save-game form. @ref id is included but restored by the caller
@@ -594,6 +643,26 @@ public:
       resistances.push_back(type);
     }
     out["resistances"] = resistances;
+    Json movementSpeeds = Json::object();
+    for (const auto &[mode, speed] : m_movement) {
+      if (speed.hover) {
+        movementSpeeds[mode] = {{"value", speed.value}, {"hover", true}};
+      } else {
+        movementSpeeds[mode] = speed.value;
+      }
+    }
+    out["movement_speeds"] = movementSpeeds;
+    Json sensesJson = Json::object();
+    for (const auto &[id, sense] : m_senses) {
+      Json entry = Json::object();
+      entry["range"] = sense.range;
+      if (!sense.note.empty()) {
+        entry["note"] = sense.note;
+      }
+      sensesJson[id] = entry;
+    }
+    out["senses"] = sensesJson;
+    out["passive_perception"] = m_passivePerception;
   }
 
   /// Restores the sheet from the JSON form produced by @ref toJson (the id is
@@ -619,6 +688,8 @@ public:
     restoreAfflictions(in);
     restoreResistances(in);
     restoreTerrain(in);
+    restoreMovement(in);
+    restoreSenses(in);
   }
 
   /// (Re)creates the resource pools from the ruleset definitions, computing
@@ -669,6 +740,8 @@ public:
     loadSpellsKnown(archetype);
     loadXp(archetype);
     loadLevel(archetype);
+    loadMovement(archetype);
+    loadSenses(archetype);
   }
 
 private:
@@ -776,6 +849,43 @@ private:
       m_terrain = in.at("terrain").get<std::string>();
     }
   }
+  /// Restores the creature-declared movement speeds (may be absent).
+  void restoreMovement(const Json &in) {
+    if (!in.contains("movement_speeds") || !in.at("movement_speeds").is_object()) {
+      return;
+    }
+    for (const auto &[modeId, value] : in.at("movement_speeds").items()) {
+      MovementSpeed entry;
+      if (value.is_object()) {
+        entry.value = value.value("value", 0.0);
+        entry.hover = value.value("hover", false);
+      } else if (value.is_number()) {
+        entry.value = value.get<double>();
+      }
+      m_movement[modeId] = entry;
+    }
+  }
+  /// Restores the creature-declared senses and passive Perception (may be
+  /// absent).
+  void restoreSenses(const Json &in) {
+    if (in.contains("senses") && in.at("senses").is_object()) {
+      for (const auto &[senseId, value] : in.at("senses").items()) {
+        Sense sense;
+        sense.id = senseId;
+        sense.name = senseId;
+        if (value.is_object()) {
+          sense.range = value.value("range", 0.0);
+          sense.note = value.value("note", "");
+        } else if (value.is_number()) {
+          sense.range = value.get<double>();
+        }
+        m_senses[senseId] = std::move(sense);
+      }
+    }
+    if (in.contains("passive_perception") && in.at("passive_perception").is_number_integer()) {
+      m_passivePerception = in.at("passive_perception").get<int32_t>();
+    }
+  }
 
   // ---- archetype-loading helpers (see @ref loadFromArchetype) ---------------
   /// Loads attribute values (ranged values picked per `variance`).
@@ -872,6 +982,254 @@ private:
   void loadLevel(const Json &archetype) {
     if (archetype.contains("level")) {
       m_advancement.level = archetype.at("level").get<int32_t>();
+    }
+  }
+  /// Loads the creature's own movement speeds from a structured `speed` field
+  /// (an object mapping movement-mode id -> base speed, where the value is a
+  /// number or an object `{"value": N, "hover": true}`), from an array of
+  /// `{"mode","value","hover"}` entries, or — as a fallback — from the legacy
+  /// prose stat-block string (e.g. "40 ft., Fly 80 ft., Swim 40 ft.").
+  void loadMovement(const Json &archetype) {
+    if (!archetype.contains("speed")) {
+      return;
+    }
+    const Json &speed = archetype.at("speed");
+    if (speed.is_object()) {
+      for (const auto &[modeId, value] : speed.items()) {
+        MovementSpeed entry;
+        if (value.is_object()) {
+          entry.value = value.value("value", 0.0);
+          entry.hover = value.value("hover", false);
+        } else if (value.is_number()) {
+          entry.value = value.get<double>();
+        }
+        m_movement[modeId] = entry;
+      }
+      return;
+    }
+    if (speed.is_array()) {
+      for (const Json &entry : speed) {
+        if (!entry.is_object()) {
+          continue;
+        }
+        const std::string mode = entry.value("mode", "walk");
+        MovementSpeed parsed;
+        if (entry.contains("value")) {
+          const Json &value = entry.at("value");
+          if (value.is_object()) {
+            parsed.value = value.value("value", 0.0);
+            parsed.hover = value.value("hover", false);
+          } else if (value.is_number()) {
+            parsed.value = value.get<double>();
+          }
+        }
+        parsed.hover = entry.value("hover", parsed.hover);
+        m_movement[mode] = parsed;
+      }
+      return;
+    }
+    if (speed.is_string()) {
+      parseProseMovement(speed.get<std::string>());
+      return;
+    }
+    if (speed.is_number()) {
+      m_movement["walk"] = MovementSpeed{speed.get<double>(), false};
+    }
+  }
+  /// Best-effort parser for the legacy D&D-style movement string ("40 ft.,
+  /// Fly 80 ft., Swim 40 ft."). A bare number is the walk speed; a named
+  /// segment ("Fly 80 ft.") sets that mode; an "(hover)" suffix sets hover.
+  void parseProseMovement(const std::string &text) {
+    std::size_t start = 0;
+    while (start <= text.size()) {
+      const std::size_t comma = text.find(',', start);
+      const std::string raw =
+          text.substr(start, comma == std::string::npos ? std::string::npos : comma - start);
+      parseProseMovementSegment(raw);
+      if (comma == std::string::npos) {
+        break;
+      }
+      start = comma + 1;
+    }
+  }
+  void parseProseMovementSegment(const std::string &raw) {
+    std::string text = trimWhitespace(raw);
+    if (text.empty()) {
+      return;
+    }
+    bool hover = false;
+    const std::size_t paren = text.find('(');
+    if (paren != std::string::npos) {
+      hover = text.find("hover") != std::string::npos;
+      text = text.substr(0, paren);
+    }
+    std::string mode = "walk";
+    for (const char *candidate : {"walk", "swim", "fly", "climb", "burrow", "ground", "air"}) {
+      if (lowercase(text).starts_with(candidate)) {
+        if (std::string_view(candidate) == "ground") {
+          mode = "walk";
+        } else if (std::string_view(candidate) == "air") {
+          mode = "fly";
+        } else {
+          mode = candidate;
+        }
+        text = text.substr(std::string_view(candidate).size());
+        break;
+      }
+    }
+    text = trimWhitespace(text);
+    std::size_t i = 0;
+    while (i < text.size() && ((text[i] >= '0' && text[i] <= '9') || text[i] == '.')) {
+      ++i;
+    }
+    if (i == 0) {
+      return;
+    }
+    double value = 0.0;
+    try {
+      value = std::stod(text.substr(0, i));
+    } catch (const std::exception &) {
+      return;
+    }
+    m_movement[mode] = MovementSpeed{value, hover};
+  }
+  /// Loads the creature's declared senses from a structured `senses` field
+  /// (an object mapping sense id -> range, where the value is a number or an
+  /// object `{"range": N, "note": "..."}`), from an array of
+  /// `{"sense","range","note"}` entries, or — as a fallback — from the legacy
+  /// prose stat-block string (e.g. "Blindsight 30 ft., Darkvision 120 ft.;
+  /// Passive Perception 20"). Also loads the creature's `passive_perception`.
+  void loadSenses(const Json &archetype) {
+    if (archetype.contains("passive_perception") &&
+        archetype.at("passive_perception").is_number_integer()) {
+      m_passivePerception = archetype.at("passive_perception").get<int32_t>();
+    }
+    if (!archetype.contains("senses")) {
+      return;
+    }
+    const Json &senses = archetype.at("senses");
+    if (senses.is_object()) {
+      for (const auto &[senseId, value] : senses.items()) {
+        Sense sense;
+        sense.id = senseId;
+        sense.name = senseId;
+        if (value.is_object()) {
+          sense.range = value.value("range", 0.0);
+          sense.note = value.value("note", "");
+        } else if (value.is_number()) {
+          sense.range = value.get<double>();
+        } else if (value.is_string()) {
+          sense.note = value.get<std::string>();
+        }
+        m_senses[senseId] = std::move(sense);
+      }
+      return;
+    }
+    if (senses.is_array()) {
+      for (const Json &entry : senses) {
+        if (!entry.is_object()) {
+          continue;
+        }
+        Sense sense;
+        sense.id = entry.value("sense", "");
+        sense.name = entry.value("name", sense.id);
+        sense.range = entry.value("range", 0.0);
+        sense.note = entry.value("note", "");
+        if (!sense.id.empty()) {
+          m_senses[sense.id] = std::move(sense);
+        }
+      }
+      return;
+    }
+    if (senses.is_string()) {
+      parseProseSenses(senses.get<std::string>());
+    }
+  }
+  /// Best-effort parser for the legacy D&D-style senses string: senses
+  /// separated by ',' (or ';'), and a trailing "Passive Perception N".
+  void parseProseSenses(const std::string &text) {
+    std::size_t start = 0;
+    while (start <= text.size()) {
+      const std::size_t semi = text.find(';', start);
+      const std::string part =
+          text.substr(start, semi == std::string::npos ? std::string::npos : semi - start);
+      parseProseSensesPart(part);
+      if (semi == std::string::npos) {
+        break;
+      }
+      start = semi + 1;
+    }
+  }
+  void parseProseSensesPart(const std::string &raw) {
+    const std::string part = trimWhitespace(raw);
+    if (part.empty()) {
+      return;
+    }
+    const std::string kPassive = "Passive Perception";
+    if (const std::size_t pp = part.find(kPassive); pp != std::string::npos) {
+      const std::string after = trimWhitespace(part.substr(pp + kPassive.size()));
+      std::size_t i = 0;
+      while (i < after.size() && after[i] >= '0' && after[i] <= '9') {
+        ++i;
+      }
+      if (i > 0) {
+        try {
+          m_passivePerception = std::stoi(after.substr(0, i));
+        } catch (const std::exception &) {
+        }
+      }
+      return;
+    }
+    std::size_t start = 0;
+    while (start <= part.size()) {
+      const std::size_t comma = part.find(',', start);
+      const std::string seg =
+          part.substr(start, comma == std::string::npos ? std::string::npos : comma - start);
+      parseProseSenseSegment(seg);
+      if (comma == std::string::npos) {
+        break;
+      }
+      start = comma + 1;
+    }
+  }
+  void parseProseSenseSegment(const std::string &raw) {
+    std::string seg = trimWhitespace(raw);
+    if (seg.empty()) {
+      return;
+    }
+    std::string note;
+    const std::size_t paren = seg.find('(');
+    if (paren != std::string::npos) {
+      const std::size_t close = seg.find(')', paren);
+      if (close != std::string::npos) {
+        note = seg.substr(paren + 1, close - paren - 1);
+        seg = seg.substr(0, paren);
+      }
+    }
+    const std::size_t space = seg.find(' ');
+    if (space == std::string::npos) {
+      return;
+    }
+    const std::string name = seg.substr(0, space);
+    const std::string rest = trimWhitespace(seg.substr(space + 1));
+    std::size_t i = 0;
+    while (i < rest.size() && ((rest[i] >= '0' && rest[i] <= '9') || rest[i] == '.')) {
+      ++i;
+    }
+    double range = 0.0;
+    if (i > 0) {
+      try {
+        range = std::stod(rest.substr(0, i));
+      } catch (const std::exception &) {
+      }
+    }
+    Sense sense;
+    sense.id = lowercase(name);
+    sense.name = name;
+    sense.range = range;
+    sense.note = note;
+    if (!sense.id.empty()) {
+      m_senses[sense.id] = std::move(sense);
     }
   }
 
@@ -1089,6 +1447,27 @@ private:
     m_eventSink(type, payload);
   }
 
+  /// Trims leading/trailing whitespace from a copy of `s`.
+  [[nodiscard]] static std::string trimWhitespace(std::string s) {
+    const auto isSpace = [](char c) { return c == ' ' || c == '\t' || c == '\r' || c == '\n'; };
+    while (!s.empty() && isSpace(s.front())) {
+      s.erase(s.begin());
+    }
+    while (!s.empty() && isSpace(s.back())) {
+      s.pop_back();
+    }
+    return s;
+  }
+  /// Returns a lowercase copy of `s` (ASCII only — the ruleset ids are ASCII).
+  [[nodiscard]] static std::string lowercase(std::string s) {
+    for (char &c : s) {
+      if (c >= 'A' && c <= 'Z') {
+        c = static_cast<char>(c - 'A' + 'a');
+      }
+    }
+    return s;
+  }
+
   const Ruleset *m_ruleset;
   std::string m_id;
   EntityId m_entityId{};
@@ -1112,6 +1491,14 @@ private:
   /// per check. Mutable: populated lazily from @ref getEffectiveStat.
   mutable std::unordered_map<std::string, rpg_os::Expression> m_formulaCache;
   std::string m_terrain; ///< current terrain / surrounding ("" = ruleset default)
+  /// The creature-declared movement speeds (mode id -> speed). Empty unless a
+  /// bestiary record's `speed` was loaded (see @ref loadMovement).
+  std::map<std::string, MovementSpeed> m_movement;
+  /// The creature-declared senses (sense id -> sense). Empty unless a bestiary
+  /// record's `senses` was loaded (see @ref loadSenses).
+  std::map<std::string, Sense> m_senses;
+  /// The creature-declared passive Perception score (0 when not stated).
+  int32_t m_passivePerception{0};
 };
 
 inline bool EntityContext::resolve(std::string_view path, double &out) const {

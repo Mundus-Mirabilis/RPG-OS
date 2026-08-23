@@ -131,6 +131,64 @@ def check_item_damage(doc, errors):
     return errors
 
 
+def check_creature_movement_senses(doc, errors):
+    """Validates creature `speed`/`senses` are machine-readable.
+
+    The engine parses a structured object (mapping mode/sense id -> value) or
+    array (of {'mode','value',...} / {'sense','range',...} entries), and
+    best-effort parses a legacy prose string. A malformed structured value
+    would silently produce nothing, so this flags anything that is neither a
+    string nor a well-formed object/array.
+    """
+    data = doc.get("data")
+    if not isinstance(data, dict) or not isinstance(data.get("creatures"), list):
+        return errors
+    for idx, c in enumerate(data["creatures"]):
+        if not isinstance(c, dict):
+            continue
+        speed = c.get("speed")
+        if isinstance(speed, dict):
+            for mode, v in speed.items():
+                if isinstance(v, dict):
+                    if not isinstance(v.get("value"), (int, float)) or isinstance(v.get("value"), bool):
+                        errors.append(f"data.creatures[{idx}].speed.{mode}.value: must be a number")
+                elif not isinstance(v, (int, float)) or isinstance(v, bool):
+                    errors.append(
+                        f"data.creatures[{idx}].speed.{mode}: must be a number or an object")
+        elif isinstance(speed, list):
+            for j, entry in enumerate(speed):
+                if not isinstance(entry, dict) or not isinstance(entry.get("mode"), str):
+                    errors.append(
+                        f"data.creatures[{idx}].speed[{j}]: must be an object with a string 'mode'")
+                elif not isinstance(entry.get("value"), (int, float)) or isinstance(entry.get("value"), bool):
+                    errors.append(
+                        f"data.creatures[{idx}].speed[{j}].value: must be a number")
+        elif speed is not None and not isinstance(speed, str):
+            errors.append(f"data.creatures[{idx}].speed: must be a string, object, or array")
+        senses = c.get("senses")
+        if isinstance(senses, dict):
+            for sense, v in senses.items():
+                if isinstance(v, dict):
+                    if not isinstance(v.get("range"), (int, float)) or isinstance(v.get("range"), bool):
+                        errors.append(f"data.creatures[{idx}].senses.{sense}.range: must be a number")
+                elif not isinstance(v, (int, float)) or isinstance(v, bool):
+                    errors.append(
+                        f"data.creatures[{idx}].senses.{sense}: must be a number or an object")
+        elif isinstance(senses, list):
+            for j, entry in enumerate(senses):
+                if not isinstance(entry, dict) or not isinstance(entry.get("sense"), str):
+                    errors.append(
+                        f"data.creatures[{idx}].senses[{j}]: must be an object with a string 'sense'")
+                elif not isinstance(entry.get("range"), (int, float)) or isinstance(entry.get("range"), bool):
+                    errors.append(
+                        f"data.creatures[{idx}].senses[{j}].range: must be a number")
+        elif senses is not None and not isinstance(senses, str):
+            errors.append(f"data.creatures[{idx}].senses: must be a string, object, or array")
+        if "passive_perception" in c and not isinstance(c.get("passive_perception"), int):
+            errors.append(f"data.creatures[{idx}].passive_perception: must be an integer")
+    return errors
+
+
 def validate(path: Path):
     doc = json.loads(path.read_text())
     schema = json.loads(SCHEMA_PATH.read_text())
@@ -143,6 +201,7 @@ def validate(path: Path):
     except ImportError:
         structural_check(doc, errors)
     check_item_damage(doc, errors)
+    check_creature_movement_senses(doc, errors)
     return errors
 
 
